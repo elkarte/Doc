@@ -1,0 +1,966 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="generator" content="ApiGen 2.8.0">
+
+	<title>Class Mentions_Controller | ElkArte Documentation</title>
+
+	<script type="text/javascript" src="resources/combined.js?3648714599"></script>
+	<script type="text/javascript" src="elementlist.js?3850865134"></script>
+	<link rel="stylesheet" type="text/css" media="all" href="resources/bootstrap.min.css?260161822">
+	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?2015443609">
+
+</head>
+
+<body>
+	<div id="navigation" class="navbar navbar-fixed-top">
+		<div class="navbar-inner">
+			<div class="container">
+				<a href="index.html" class="brand">ElkArte Documentation</a>
+				<div class="nav-collapse">
+					<ul class="nav">
+						<li>
+							<a href="package-Mentions.html" title="Summary of Mentions"><span>Package</span></a>
+						</li>
+						<li class="active">
+<span>Class</span>						</li>
+
+						<li class="divider-vertical"></li>
+
+						<li>
+							<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+						</li>
+						<li>
+							<a href="todo.html" title="Todo list"><span>Todo</span></a>
+						</li>
+
+
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="left">
+	<div id="menu">
+		<form id="search" class="form-search">
+			<input type="hidden" name="cx" value="">
+			<input type="hidden" name="ie" value="UTF-8">
+			<input type="text" name="q" class="search-query" placeholder="Search">
+		</form>
+
+
+		<div id="groups">
+			<h3>Packages</h3>
+			<ul>
+				<li><a href="package-Attachments.html">Attachments</a>
+						</li>
+				<li><a href="package-Authorization.html">Authorization</a>
+						</li>
+				<li class="active"><a href="package-Mentions.html">Mentions</a>
+						</li>
+				<li><a href="package-None.html">None</a>
+						</li>
+			</ul>
+		</div>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li class="active"><a href="class-Mentions_Controller.html">Mentions_Controller</a></li>
+			</ul>
+
+
+
+
+
+			<h3>Functions</h3>
+			<ul>
+				<li><a href="function-addMentions.html">addMentions</a></li>
+				<li><a href="function-changeMentionStatus.html">changeMentionStatus</a></li>
+				<li><a href="function-countUserMentions.html">countUserMentions</a></li>
+				<li><a href="function-findMemberMention.html">findMemberMention</a></li>
+				<li><a href="function-getUserMentions.html">getUserMentions</a></li>
+				<li><a href="function-rlikeMentions.html">rlikeMentions</a></li>
+				<li><a href="function-toggleMentionsAccessibility.html">toggleMentionsAccessibility</a></li>
+				<li><a href="function-toggleMentionsApproval.html">toggleMentionsApproval</a></li>
+				<li><a href="function-toggleMentionsVisibility.html">toggleMentionsVisibility</a></li>
+				<li><a href="function-updateMentionMenuCount.html">updateMentionMenuCount</a></li>
+				<li><a href="function-validate_ownmention.html">validate_ownmention</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+	<div id="rightInner">
+<div id="content" class="class">
+	<h1>Class Mentions_Controller</h1>
+
+
+	<div class="description">
+	
+<p>Mentions_Controller Class: Add mention notificaions for various actions such
+as liking a post, adding a buddy, @ calling a member in a post</p>
+
+	</div>
+
+	<dl class="tree well">
+		<dd style="padding-left:0px">
+			<a href="class-Action_Controller.html"><span>Action_Controller</span></a>
+			
+			
+			
+		</dd>
+		<dd style="padding-left:30px">
+			<img src="resources/inherit.png" alt="Extended by">
+<b><span>Mentions_Controller</span></b>			
+			
+			
+		</dd>
+	</dl>
+
+
+
+
+
+
+
+
+	<div class="alert alert-info">
+		
+		
+		
+		<b>Package:</b> <a href="package-Mentions.html">Mentions</a><br>
+
+				<b>Copyright:</b>
+				ElkArte Forum contributors<br>
+				<b>License:</b>
+				<a href="BSD">http://opensource.org/licenses/BSD-3-Clause</a><br>
+		<b>Located at</b> <a href="source-class-Mentions_Controller.html#17-652" title="Go to source code">sources/controllers/Mentions.controller.php</a><br>
+	</div>
+
+
+
+		<h2>Methods summary</h2>
+		<table class="summary table table-bordered table-striped" id="methods">
+		<tr data-order="__construct" id="___construct">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#___construct">#</a>
+			<code><a href="source-class-Mentions_Controller.html#90-128" title="Go to source code">__construct</a>( )</code>
+
+			<div class="description short">
+				
+<p>Start things up, what else does a constructor do</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Start things up, what else does a constructor do</p>
+
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="pre_dispatch" id="_pre_dispatch">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_pre_dispatch">#</a>
+			<code><a href="source-class-Mentions_Controller.html#130-149" title="Go to source code">pre_dispatch</a>( )</code>
+
+			<div class="description short">
+				
+<p>Set up the data for the mention based on what was requested This function is
+called before the flow is redirected to action_index().</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Set up the data for the mention based on what was requested This function is
+called before the flow is redirected to action_index().</p>
+
+
+
+
+
+
+
+					<h4>Overrides</h4>
+					<div class="list"><code><a href="class-Action_Controller.html#_pre_dispatch">Action_Controller::pre_dispatch</a></code></div>
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="action_index" id="_action_index">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_action_index">#</a>
+			<code><a href="source-class-Mentions_Controller.html#151-159" title="Go to source code">action_index</a>( )</code>
+
+			<div class="description short">
+				
+<p>The default action is to show the list of mentions This allows
+?action=mention to be forwarded to action_list()</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>The default action is to show the list of mentions This allows
+?action=mention to be forwarded to action_list()</p>
+
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="action_list" id="_action_list">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_action_list">#</a>
+			<code><a href="source-class-Mentions_Controller.html#161-321" title="Go to source code">action_list</a>( )</code>
+
+			<div class="description short">
+				
+<p>Creates a list of mentions for the user Allows them to mark them read or
+unread Can sort the various forms of mentions, likes or @mentions</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Creates a list of mentions for the user Allows them to mark them read or
+unread Can sort the various forms of mentions, likes or @mentions</p>
+
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="list_getMentionCount" id="_list_getMentionCount">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_list_getMentionCount">#</a>
+			<code><a href="source-class-Mentions_Controller.html#323-333" title="Go to source code">list_getMentionCount</a>( <span>boolean <var>$all</var></span>, <span>string <var>$type</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Callback for createList(), Returns the number of mentions of $type that a
+member has</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Callback for createList(), Returns the number of mentions of $type that a
+member has</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$all</var></dt>
+						<dd><code>boolean</code><br>$all : if true counts all the mentions, otherwise only the unread</dd>
+						<dt><var>$type</var></dt>
+						<dd><code>string</code><br>$type : the type of mention</dd>
+					</dl></div>
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="list_loadMentions" id="_list_loadMentions">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_list_loadMentions">#</a>
+			<code><a href="source-class-Mentions_Controller.html#335-385" title="Go to source code">list_loadMentions</a>( <span>integer <var>$start</var></span>, <span>integer <var>$limit</var></span>, <span>string <var>$sort</var></span>, <span>boolean <var>$all</var></span>, <span>string <var>$type</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Callback for createList(), Returns the mentions of a give type (like/mention)
+&amp; (unread or all)</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Callback for createList(), Returns the mentions of a give type (like/mention)
+&amp; (unread or all)</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$start</var></dt>
+						<dd><code>integer</code><br>$start start list number</dd>
+						<dt><var>$limit</var></dt>
+						<dd><code>integer</code><br>$limit how many to show on a page</dd>
+						<dt><var>$sort</var></dt>
+						<dd><code>string</code><br>$sort which direction are we showing this</dd>
+						<dt><var>$all</var></dt>
+						<dd><code>boolean</code><br>$all : if true load all the mentions or type, otherwise only the unread</dd>
+						<dt><var>$type</var></dt>
+						<dd><code>string</code><br>$type : the type of mention</dd>
+					</dl></div>
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="prepareMentionMessage" id="_prepareMentionMessage">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_prepareMentionMessage">#</a>
+			<code><a href="source-class-Mentions_Controller.html#387-456" title="Go to source code">prepareMentionMessage</a>( <span>mixed[] <var>&amp; $mentions</var></span>, <span>string <var>$type</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Callback used to prepare the mention message for mentions, likes, removed
+likes and buddies</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Callback used to prepare the mention message for mentions, likes, removed
+likes and buddies</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$mentions</var></dt>
+						<dd><code>mixed[]</code><br>$mentions : Mentions retrieved from the database by getUserMentions</dd>
+						<dt><var>$type</var></dt>
+						<dd><code>string</code><br>$type : the type of the mention</dd>
+					</dl></div>
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="action_add" id="_action_add">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_action_add">#</a>
+			<code><a href="source-class-Mentions_Controller.html#458-476" title="Go to source code">action_add</a>( )</code>
+
+			<div class="description short">
+				
+<p>We will we will notify you</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>We will we will notify you</p>
+
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="action_rlike" id="_action_rlike">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_action_rlike">#</a>
+			<code><a href="source-class-Mentions_Controller.html#478-496" title="Go to source code">action_rlike</a>( )</code>
+
+			<div class="description short">
+				
+<p>Politley remove a mention when a post like is taken back</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Politley remove a mention when a post like is taken back</p>
+
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="setData" id="_setData">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_setData">#</a>
+			<code><a href="source-class-Mentions_Controller.html#498-522" title="Go to source code">setData</a>( <span>mixed[] <var>$data</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Sets the specifics of a mention call in this instance</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Sets the specifics of a mention call in this instance</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$data</var></dt>
+						<dd><code>mixed[]</code><br>$data must contain uid, type and msg at a minimum</dd>
+					</dl></div>
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="action_markread" id="_action_markread">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_action_markread">#</a>
+			<code><a href="source-class-Mentions_Controller.html#524-540" title="Go to source code">action_markread</a>( )</code>
+
+			<div class="description short">
+				
+<p>Did you read the mention? Then let's move it to the graveyard. Used in
+Display.controller.php, it may be merged to action_updatestatus though that
+would require to add an optional parameter to avoid the redirect</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Did you read the mention? Then let's move it to the graveyard. Used in
+Display.controller.php, it may be merged to action_updatestatus though that
+would require to add an optional parameter to avoid the redirect</p>
+
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="action_updatestatus" id="_action_updatestatus">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_action_updatestatus">#</a>
+			<code><a href="source-class-Mentions_Controller.html#542-574" title="Go to source code">action_updatestatus</a>( )</code>
+
+			<div class="description short">
+				
+<p>Updating the status from the listing?</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Updating the status from the listing?</p>
+
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="_buildUrl" id="__buildUrl">
+
+			<td class="attributes"><code>
+				 protected 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#__buildUrl">#</a>
+			<code><a href="source-class-Mentions_Controller.html#576-586" title="Go to source code">_buildUrl</a>( )</code>
+
+			<div class="description short">
+				
+<p>Builds the link back so you return to the right list of mentions</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Builds the link back so you return to the right list of mentions</p>
+
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="_isAccessible" id="__isAccessible">
+
+			<td class="attributes"><code>
+				 protected 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#__isAccessible">#</a>
+			<code><a href="source-class-Mentions_Controller.html#588-610" title="Go to source code">_isAccessible</a>( )</code>
+
+			<div class="description short">
+				
+<p>Check if the user can access the mention</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Check if the user can access the mention</p>
+
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="_isValid" id="__isValid">
+
+			<td class="attributes"><code>
+				 protected 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#__isValid">#</a>
+			<code><a href="source-class-Mentions_Controller.html#612-651" title="Go to source code">_isValid</a>( )</code>
+
+			<div class="description short">
+				
+<p>Check if the user can do what he is supposed to do, and validates the
+input</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Check if the user can do what he is supposed to do, and validates the
+input</p>
+
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		</table>
+
+
+
+		<h3>Magic methods summary</h3>
+
+
+
+
+
+
+
+
+		<h2>Properties summary</h2>
+		<table class="summary table table-bordered table-striped" id="properties">
+		<tr data-order="_known_mentions" id="$_known_mentions">
+			<td class="attributes"><code>
+				protected  
+				array
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-Mentions_Controller.html#25-30" title="Go to source code"><var>$_known_mentions</var></a>
+			</td>
+			<td class="description"><div>
+				<a href="#$_known_mentions" class="anchor">#</a>
+
+				<div class="description short">
+					
+<p>Will hold all available mention types</p>
+
+				</div>
+
+				<div class="description detailed hidden">
+					
+<p>Will hold all available mention types</p>
+
+
+				</div>
+			</div></td>
+		</tr>
+		<tr data-order="_known_status" id="$_known_status">
+			<td class="attributes"><code>
+				protected  
+				array
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-Mentions_Controller.html#32-38" title="Go to source code"><var>$_known_status</var></a>
+			</td>
+			<td class="description"><div>
+				<a href="#$_known_status" class="anchor">#</a>
+
+				<div class="description short">
+					
+<p>Will hold all available mention status 'new' =&gt; 0, 'read' =&gt; 1,
+'deleted' =&gt; 2, 'unapproved' =&gt; 3,</p>
+
+				</div>
+
+				<div class="description detailed hidden">
+					
+<p>Will hold all available mention status 'new' =&gt; 0, 'read' =&gt; 1,
+'deleted' =&gt; 2, 'unapproved' =&gt; 3,</p>
+
+
+				</div>
+			</div></td>
+		</tr>
+		<tr data-order="_validator" id="$_validator">
+			<td class="attributes"><code>
+				protected  
+				object
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-Mentions_Controller.html#40-45" title="Go to source code"><var>$_validator</var></a>
+			</td>
+			<td class="description"><div>
+				<a href="#$_validator" class="anchor">#</a>
+
+				<div class="description short">
+					
+<p>Holds the instance of the data validation class</p>
+
+				</div>
+
+				<div class="description detailed hidden">
+					
+<p>Holds the instance of the data validation class</p>
+
+
+				</div>
+			</div></td>
+		</tr>
+		<tr data-order="_data" id="$_data">
+			<td class="attributes"><code>
+				protected  
+				array
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-Mentions_Controller.html#47-52" title="Go to source code"><var>$_data</var></a>
+			</td>
+			<td class="description"><div>
+				<a href="#$_data" class="anchor">#</a>
+
+				<div class="description short">
+					
+<p>Holds the passed data for this instance, is passed through the validator</p>
+
+				</div>
+
+				<div class="description detailed hidden">
+					
+<p>Holds the passed data for this instance, is passed through the validator</p>
+
+
+				</div>
+			</div></td>
+		</tr>
+		<tr data-order="_callbacks" id="$_callbacks">
+			<td class="attributes"><code>
+				protected  
+				array
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-Mentions_Controller.html#54-60" title="Go to source code"><var>$_callbacks</var></a>
+			</td>
+			<td class="description"><div>
+				<a href="#$_callbacks" class="anchor">#</a>
+
+				<div class="description short">
+					
+<p>A set of functions that will be called passing the mentions retrieved from
+the db Are originally stored in $_known_mentions</p>
+
+				</div>
+
+				<div class="description detailed hidden">
+					
+<p>A set of functions that will be called passing the mentions retrieved from
+the db Are originally stored in $_known_mentions</p>
+
+
+				</div>
+			</div></td>
+		</tr>
+		<tr data-order="_type" id="$_type">
+			<td class="attributes"><code>
+				protected  
+				string
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-Mentions_Controller.html#62-67" title="Go to source code"><var>$_type</var></a>
+			</td>
+			<td class="description"><div>
+				<a href="#$_type" class="anchor">#</a>
+
+				<div class="description short">
+					
+<p>The type of the mention we are looking at (if empty means all of them)</p>
+
+				</div>
+
+				<div class="description detailed hidden">
+					
+<p>The type of the mention we are looking at (if empty means all of them)</p>
+
+
+				</div>
+			</div></td>
+		</tr>
+		<tr data-order="_url_param" id="$_url_param">
+			<td class="attributes"><code>
+				protected  
+				string
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-Mentions_Controller.html#69-74" title="Go to source code"><var>$_url_param</var></a>
+			</td>
+			<td class="description"><div>
+				<a href="#$_url_param" class="anchor">#</a>
+
+				<div class="description short">
+					
+<p>The url of the display mentions button (all, unread, etc)</p>
+
+				</div>
+
+				<div class="description detailed hidden">
+					
+<p>The url of the display mentions button (all, unread, etc)</p>
+
+
+				</div>
+			</div></td>
+		</tr>
+		<tr data-order="_page" id="$_page">
+			<td class="attributes"><code>
+				protected  
+				integer
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-Mentions_Controller.html#76-81" title="Go to source code"><var>$_page</var></a>
+			</td>
+			<td class="description"><div>
+				<a href="#$_page" class="anchor">#</a>
+
+				<div class="description short">
+					
+<p>Used for pagenation, keeps track of the current start point</p>
+
+				</div>
+
+				<div class="description detailed hidden">
+					
+<p>Used for pagenation, keeps track of the current start point</p>
+
+
+				</div>
+			</div></td>
+		</tr>
+		<tr data-order="_all" id="$_all">
+			<td class="attributes"><code>
+				protected  
+				boolean
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-Mentions_Controller.html#83-88" title="Go to source code"><var>$_all</var></a>
+			</td>
+			<td class="description"><div>
+				<a href="#$_all" class="anchor">#</a>
+
+				<div class="description short">
+					
+<p>Determine if we are looking only at unread mentions or any kind of</p>
+
+				</div>
+
+				<div class="description detailed hidden">
+					
+<p>Determine if we are looking only at unread mentions or any kind of</p>
+
+
+				</div>
+			</div></td>
+		</tr>
+		</table>
+
+
+
+
+
+
+</div>
+	</div>
+
+	<div id="footer">
+		ElkArte Documentation API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+	</div>
+</div>
+</body>
+</html>
