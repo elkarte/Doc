@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-	<meta name="generator" content="ApiGen 2.8.0">
-	<meta name="robots" content="noindex">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="generator" content="ApiGen 2.8.0" />
+	<meta name="robots" content="noindex" />
 
 	<title>File sources/subs/Post.subs.php | ElkArte Documentation</title>
 
 	<script type="text/javascript" src="resources/combined.js?3648714599"></script>
-	<script type="text/javascript" src="elementlist.js?3850865134"></script>
-	<link rel="stylesheet" type="text/css" media="all" href="resources/bootstrap.min.css?260161822">
-	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?2015443609">
+	<script type="text/javascript" src="elementlist.js?3593784124"></script>
+	<link rel="stylesheet" type="text/css" media="all" href="resources/bootstrap.min.css?260161822" />
+	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?2015443609" />
 
 </head>
 
@@ -47,9 +47,9 @@
 	<div id="left">
 	<div id="menu">
 		<form id="search" class="form-search">
-			<input type="hidden" name="cx" value="">
-			<input type="hidden" name="ie" value="UTF-8">
-			<input type="text" name="q" class="search-query" placeholder="Search">
+			<input type="hidden" name="cx" value="" />
+			<input type="hidden" name="ie" value="UTF-8" />
+			<input type="text" name="q" class="search-query" placeholder="Search" />
 		</form>
 
 
@@ -81,6 +81,8 @@
 				<li><a href="package-CoreFeatures.html">CoreFeatures</a>
 						</li>
 				<li><a href="package-Drafts.html">Drafts</a>
+						</li>
+				<li><a href="package-Graphics.html">Graphics</a>
 						</li>
 				<li><a href="package-Languages.html">Languages</a>
 						</li>
@@ -827,7 +829,7 @@
 </span><span id="666" class="l"><a class="l" href="#666"> 666 </a>    );
 </span><span id="667" class="l"><a class="l" href="#667"> 667 </a>
 </span><span id="668" class="l"><a class="l" href="#668"> 668 </a>    <span class="php-comment">// What if we want to do anything with posts?</span>
-</span><span id="669" class="l"><a class="l" href="#669"> 669 </a>    call_integration_hook(<span class="php-quote">'integrate_create_post'</span>, <span class="php-keyword1">array</span>(&amp;<span class="php-var">$msgOptions</span>, &amp;<span class="php-var">$topicOptions</span>, &amp;<span class="php-var">$posterOptions</span>, &amp;<span class="php-var">$message_columns</span>, &amp;<span class="php-var">$message_parameters</span>));
+</span><span id="669" class="l"><a class="l" href="#669"> 669 </a>    call_integration_hook(<span class="php-quote">'integrate_before_create_post'</span>, <span class="php-keyword1">array</span>(&amp;<span class="php-var">$msgOptions</span>, &amp;<span class="php-var">$topicOptions</span>, &amp;<span class="php-var">$posterOptions</span>, &amp;<span class="php-var">$message_columns</span>, &amp;<span class="php-var">$message_parameters</span>));
 </span><span id="670" class="l"><a class="l" href="#670"> 670 </a>
 </span><span id="671" class="l"><a class="l" href="#671"> 671 </a>    <span class="php-comment">// Insert the post.</span>
 </span><span id="672" class="l"><a class="l" href="#672"> 672 </a>    <span class="php-var">$db</span>-&gt;insert(<span class="php-quote">''</span>,
@@ -855,7 +857,7 @@
 </span><span id="694" class="l"><a class="l" href="#694"> 694 </a>        );
 </span><span id="695" class="l"><a class="l" href="#695"> 695 </a>
 </span><span id="696" class="l"><a class="l" href="#696"> 696 </a>    <span class="php-comment">// What if we want to export new posts out to a CMS?</span>
-</span><span id="697" class="l"><a class="l" href="#697"> 697 </a>    call_integration_hook(<span class="php-quote">'integrate_after_create_post'</span>, <span class="php-keyword1">array</span>(<span class="php-var">$msgOptions</span>, <span class="php-var">$topicOptions</span>, <span class="php-var">$posterOptions</span>, <span class="php-var">$message_columns</span>, <span class="php-var">$message_parameters</span>));
+</span><span id="697" class="l"><a class="l" href="#697"> 697 </a>    call_integration_hook(<span class="php-quote">'integrate_create_post'</span>, <span class="php-keyword1">array</span>(<span class="php-var">$msgOptions</span>, <span class="php-var">$topicOptions</span>, <span class="php-var">$posterOptions</span>, <span class="php-var">$message_columns</span>, <span class="php-var">$message_parameters</span>));
 </span><span id="698" class="l"><a class="l" href="#698"> 698 </a>
 </span><span id="699" class="l"><a class="l" href="#699"> 699 </a>    <span class="php-comment">// Insert a new topic (if the topicID was left empty.)</span>
 </span><span id="700" class="l"><a class="l" href="#700"> 700 </a>    <span class="php-keyword1">if</span> (<span class="php-var">$new_topic</span>)
@@ -951,7 +953,7 @@
 </span><span id="790" class="l"><a class="l" href="#790"> 790 </a>                <span class="php-quote">'is_sticky = {int:is_sticky}'</span>,
 </span><span id="791" class="l"><a class="l" href="#791"> 791 </a>            );
 </span><span id="792" class="l"><a class="l" href="#792"> 792 </a>
-</span><span id="793" class="l"><a class="l" href="#793"> 793 </a>        call_integration_hook(<span class="php-quote">'integrate_modify_topic'</span>, <span class="php-keyword1">array</span>(&amp;<span class="php-var">$topics_columns</span>, &amp;<span class="php-var">$update_parameters</span>, &amp;<span class="php-var">$msgOptions</span>, &amp;<span class="php-var">$topicOptions</span>, &amp;<span class="php-var">$posterOptions</span>));
+</span><span id="793" class="l"><a class="l" href="#793"> 793 </a>        call_integration_hook(<span class="php-quote">'integrate_before_modify_topic'</span>, <span class="php-keyword1">array</span>(&amp;<span class="php-var">$topics_columns</span>, &amp;<span class="php-var">$update_parameters</span>, &amp;<span class="php-var">$msgOptions</span>, &amp;<span class="php-var">$topicOptions</span>, &amp;<span class="php-var">$posterOptions</span>));
 </span><span id="794" class="l"><a class="l" href="#794"> 794 </a>
 </span><span id="795" class="l"><a class="l" href="#795"> 795 </a>        <span class="php-comment">// Update the number of replies and the lock/sticky status.</span>
 </span><span id="796" class="l"><a class="l" href="#796"> 796 </a>        <span class="php-var">$db</span>-&gt;query(<span class="php-quote">''</span>, <span class="php-quote">'
@@ -1129,7 +1131,7 @@
 </span><span id="968" class="l"><a class="l" href="#968"> 968 </a>        <span class="php-quote">'id_msg'</span> =&gt; <span class="php-var">$msgOptions</span>[<span class="php-quote">'id'</span>],
 </span><span id="969" class="l"><a class="l" href="#969"> 969 </a>    );
 </span><span id="970" class="l"><a class="l" href="#970"> 970 </a>
-</span><span id="971" class="l"><a class="l" href="#971"> 971 </a>    call_integration_hook(<span class="php-quote">'integrate_modify_post'</span>, <span class="php-keyword1">array</span>(&amp;<span class="php-var">$messages_columns</span>, &amp;<span class="php-var">$update_parameters</span>, &amp;<span class="php-var">$msgOptions</span>, &amp;<span class="php-var">$topicOptions</span>, &amp;<span class="php-var">$posterOptions</span>, &amp;<span class="php-var">$messageInts</span>));
+</span><span id="971" class="l"><a class="l" href="#971"> 971 </a>    call_integration_hook(<span class="php-quote">'integrate_before_modify_post'</span>, <span class="php-keyword1">array</span>(&amp;<span class="php-var">$messages_columns</span>, &amp;<span class="php-var">$update_parameters</span>, &amp;<span class="php-var">$msgOptions</span>, &amp;<span class="php-var">$topicOptions</span>, &amp;<span class="php-var">$posterOptions</span>, &amp;<span class="php-var">$messageInts</span>));
 </span><span id="972" class="l"><a class="l" href="#972"> 972 </a>
 </span><span id="973" class="l"><a class="l" href="#973"> 973 </a>    <span class="php-keyword1">foreach</span> (<span class="php-var">$messages_columns</span> <span class="php-keyword1">as</span> <span class="php-var">$var</span> =&gt; <span class="php-var">$val</span>)
 </span><span id="974" class="l"><a class="l" href="#974"> 974 </a>    {
@@ -1665,166 +1667,167 @@
 </span></span><span id="1504" class="l"><a class="l" href="#1504">1504 </a><span class="php-comment"> *
 </span></span><span id="1505" class="l"><a class="l" href="#1505">1505 </a><span class="php-comment"> * - Will add the approriate Re: to the post subject if its a reply to an existing post
 </span></span><span id="1506" class="l"><a class="l" href="#1506">1506 </a><span class="php-comment"> * - If quoting a post, or editing a post, this function also prepares the message body
-</span></span><span id="1507" class="l"><a class="l" href="#1507">1507 </a><span class="php-comment"> *
-</span></span><span id="1508" class="l"><a class="l" href="#1508">1508 </a><span class="php-comment"> * @package Posts
-</span></span><span id="1509" class="l"><a class="l" href="#1509">1509 </a><span class="php-comment"> * @param boolean $editing
-</span></span><span id="1510" class="l"><a class="l" href="#1510">1510 </a><span class="php-comment"> * @param int $topic
-</span></span><span id="1511" class="l"><a class="l" href="#1511">1511 </a><span class="php-comment"> * @param string $first_subject
-</span></span><span id="1512" class="l"><a class="l" href="#1512">1512 </a><span class="php-comment"> */</span>
-</span><span id="1513" class="l"><a class="l" href="#1513">1513 </a><span class="php-keyword1">function</span> <a id="_getFormMsgSubject" href="#_getFormMsgSubject">getFormMsgSubject</a>(<span class="php-var">$editing</span>, <span class="php-var">$topic</span>, <span class="php-var">$first_subject</span> = <span class="php-quote">''</span>)
-</span><span id="1514" class="l"><a class="l" href="#1514">1514 </a>{
-</span><span id="1515" class="l"><a class="l" href="#1515">1515 </a>    <span class="php-keyword1">global</span> <span class="php-var">$modSettings</span>, <span class="php-var">$context</span>;
-</span><span id="1516" class="l"><a class="l" href="#1516">1516 </a>
-</span><span id="1517" class="l"><a class="l" href="#1517">1517 </a>    <span class="php-var">$db</span> = database();
-</span><span id="1518" class="l"><a class="l" href="#1518">1518 </a>
-</span><span id="1519" class="l"><a class="l" href="#1519">1519 </a>    <span class="php-keyword1">if</span> (<span class="php-var">$editing</span>)
-</span><span id="1520" class="l"><a class="l" href="#1520">1520 </a>    {
-</span><span id="1521" class="l"><a class="l" href="#1521">1521 </a>        <span class="php-keyword1">require_once</span>(SUBSDIR . <span class="php-quote">'/Messages.subs.php'</span>);
-</span><span id="1522" class="l"><a class="l" href="#1522">1522 </a>
-</span><span id="1523" class="l"><a class="l" href="#1523">1523 </a>        <span class="php-comment">// Get the existing message.</span>
-</span><span id="1524" class="l"><a class="l" href="#1524">1524 </a>        <span class="php-var">$message</span> = messageDetails((int) <span class="php-var">$_REQUEST</span>[<span class="php-quote">'msg'</span>], <span class="php-var">$topic</span>);
-</span><span id="1525" class="l"><a class="l" href="#1525">1525 </a>
-</span><span id="1526" class="l"><a class="l" href="#1526">1526 </a>        <span class="php-comment">// The message they were trying to edit was most likely deleted.</span>
-</span><span id="1527" class="l"><a class="l" href="#1527">1527 </a>        <span class="php-keyword1">if</span> (<span class="php-var">$message</span> === <span class="php-keyword1">false</span>)
-</span><span id="1528" class="l"><a class="l" href="#1528">1528 </a>            fatal_lang_error(<span class="php-quote">'no_message'</span>, <span class="php-keyword1">false</span>);
-</span><span id="1529" class="l"><a class="l" href="#1529">1529 </a>
-</span><span id="1530" class="l"><a class="l" href="#1530">1530 </a>        <span class="php-var">$errors</span> = checkMessagePermissions(<span class="php-var">$message</span>[<span class="php-quote">'message'</span>]);
-</span><span id="1531" class="l"><a class="l" href="#1531">1531 </a>
-</span><span id="1532" class="l"><a class="l" href="#1532">1532 </a>        prepareMessageContext(<span class="php-var">$message</span>);
-</span><span id="1533" class="l"><a class="l" href="#1533">1533 </a>
-</span><span id="1534" class="l"><a class="l" href="#1534">1534 </a>        <span class="php-keyword1">if</span> (!<span class="php-keyword1">empty</span>(<span class="php-var">$errors</span>))
-</span><span id="1535" class="l"><a class="l" href="#1535">1535 </a>            <span class="php-var">$message</span>[<span class="php-quote">'errors'</span>] = <span class="php-var">$errors</span>;
-</span><span id="1536" class="l"><a class="l" href="#1536">1536 </a>
-</span><span id="1537" class="l"><a class="l" href="#1537">1537 </a>        <span class="php-keyword1">return</span> <span class="php-var">$message</span>;
-</span><span id="1538" class="l"><a class="l" href="#1538">1538 </a>    }
-</span><span id="1539" class="l"><a class="l" href="#1539">1539 </a>    <span class="php-keyword1">else</span>
-</span><span id="1540" class="l"><a class="l" href="#1540">1540 </a>    {
-</span><span id="1541" class="l"><a class="l" href="#1541">1541 </a>        <span class="php-comment">// Posting a quoted reply?</span>
-</span><span id="1542" class="l"><a class="l" href="#1542">1542 </a>        <span class="php-keyword1">if</span> ((!<span class="php-keyword1">empty</span>(<span class="php-var">$topic</span>) &amp;&amp; !<span class="php-keyword1">empty</span>(<span class="php-var">$_REQUEST</span>[<span class="php-quote">'quote'</span>])) || (!<span class="php-keyword1">empty</span>(<span class="php-var">$modSettings</span>[<span class="php-quote">'enableFollowup'</span>]) &amp;&amp; !<span class="php-keyword1">empty</span>(<span class="php-var">$_REQUEST</span>[<span class="php-quote">'followup'</span>])))
-</span><span id="1543" class="l"><a class="l" href="#1543">1543 </a>        {
-</span><span id="1544" class="l"><a class="l" href="#1544">1544 </a>            <span class="php-comment">// Make sure they _can_ quote this post, and if so get it.</span>
-</span><span id="1545" class="l"><a class="l" href="#1545">1545 </a>            <span class="php-var">$request</span> = <span class="php-var">$db</span>-&gt;query(<span class="php-quote">''</span>, <span class="php-quote">'
-</span></span><span id="1546" class="l"><a class="l" href="#1546">1546 </a><span class="php-quote">                SELECT m.subject, IFNULL(mem.real_name, m.poster_name) AS poster_name, m.poster_time, m.body
-</span></span><span id="1547" class="l"><a class="l" href="#1547">1547 </a><span class="php-quote">                FROM {db_prefix}messages AS m
-</span></span><span id="1548" class="l"><a class="l" href="#1548">1548 </a><span class="php-quote">                    INNER JOIN {db_prefix}boards AS b ON (b.id_board = m.id_board AND {query_see_board})
-</span></span><span id="1549" class="l"><a class="l" href="#1549">1549 </a><span class="php-quote">                    LEFT JOIN {db_prefix}members AS mem ON (mem.id_member = m.id_member)
-</span></span><span id="1550" class="l"><a class="l" href="#1550">1550 </a><span class="php-quote">                WHERE m.id_msg = {int:id_msg}'</span> . (!<span class="php-var">$modSettings</span>[<span class="php-quote">'postmod_active'</span>] || allowedTo(<span class="php-quote">'approve_posts'</span>) ? <span class="php-quote">''</span> : <span class="php-quote">'
-</span></span><span id="1551" class="l"><a class="l" href="#1551">1551 </a><span class="php-quote">                    AND m.approved = {int:is_approved}'</span>) . <span class="php-quote">'
-</span></span><span id="1552" class="l"><a class="l" href="#1552">1552 </a><span class="php-quote">                LIMIT 1'</span>,
-</span><span id="1553" class="l"><a class="l" href="#1553">1553 </a>                <span class="php-keyword1">array</span>(
-</span><span id="1554" class="l"><a class="l" href="#1554">1554 </a>                    <span class="php-quote">'id_msg'</span> =&gt; !<span class="php-keyword1">empty</span>(<span class="php-var">$_REQUEST</span>[<span class="php-quote">'quote'</span>]) ? (int) <span class="php-var">$_REQUEST</span>[<span class="php-quote">'quote'</span>] : (int) <span class="php-var">$_REQUEST</span>[<span class="php-quote">'followup'</span>],
-</span><span id="1555" class="l"><a class="l" href="#1555">1555 </a>                    <span class="php-quote">'is_approved'</span> =&gt; <span class="php-num">1</span>,
-</span><span id="1556" class="l"><a class="l" href="#1556">1556 </a>                )
-</span><span id="1557" class="l"><a class="l" href="#1557">1557 </a>            );
-</span><span id="1558" class="l"><a class="l" href="#1558">1558 </a>            <span class="php-keyword1">if</span> (<span class="php-var">$db</span>-&gt;num_rows(<span class="php-var">$request</span>) == <span class="php-num">0</span>)
-</span><span id="1559" class="l"><a class="l" href="#1559">1559 </a>                fatal_lang_error(<span class="php-quote">'quoted_post_deleted'</span>, <span class="php-keyword1">false</span>);
-</span><span id="1560" class="l"><a class="l" href="#1560">1560 </a>            <span class="php-keyword1">list</span> (<span class="php-var">$form_subject</span>, <span class="php-var">$mname</span>, <span class="php-var">$mdate</span>, <span class="php-var">$form_message</span>) = <span class="php-var">$db</span>-&gt;fetch_row(<span class="php-var">$request</span>);
-</span><span id="1561" class="l"><a class="l" href="#1561">1561 </a>            <span class="php-var">$db</span>-&gt;free_result(<span class="php-var">$request</span>);
-</span><span id="1562" class="l"><a class="l" href="#1562">1562 </a>
-</span><span id="1563" class="l"><a class="l" href="#1563">1563 </a>            <span class="php-comment">// Add 'Re: ' to the front of the quoted subject.</span>
-</span><span id="1564" class="l"><a class="l" href="#1564">1564 </a>            <span class="php-keyword1">if</span> (<span class="php-keyword2">trim</span>(<span class="php-var">$context</span>[<span class="php-quote">'response_prefix'</span>]) != <span class="php-quote">''</span> &amp;&amp; Util::<span class="php-keyword2">strpos</span>(<span class="php-var">$form_subject</span>, <span class="php-keyword2">trim</span>(<span class="php-var">$context</span>[<span class="php-quote">'response_prefix'</span>])) !== <span class="php-num">0</span>)
-</span><span id="1565" class="l"><a class="l" href="#1565">1565 </a>                <span class="php-var">$form_subject</span> = <span class="php-var">$context</span>[<span class="php-quote">'response_prefix'</span>] . <span class="php-var">$form_subject</span>;
-</span><span id="1566" class="l"><a class="l" href="#1566">1566 </a>
-</span><span id="1567" class="l"><a class="l" href="#1567">1567 </a>            <span class="php-comment">// Censor the message and subject.</span>
-</span><span id="1568" class="l"><a class="l" href="#1568">1568 </a>            censorText(<span class="php-var">$form_message</span>);
-</span><span id="1569" class="l"><a class="l" href="#1569">1569 </a>            censorText(<span class="php-var">$form_subject</span>);
-</span><span id="1570" class="l"><a class="l" href="#1570">1570 </a>
-</span><span id="1571" class="l"><a class="l" href="#1571">1571 </a>            <span class="php-comment">// But if it's in HTML world, turn them into htmlspecialchar's so they can be edited!</span>
-</span><span id="1572" class="l"><a class="l" href="#1572">1572 </a>            <span class="php-keyword1">if</span> (<span class="php-keyword2">strpos</span>(<span class="php-var">$form_message</span>, <span class="php-quote">'[html]'</span>) !== <span class="php-keyword1">false</span>)
-</span><span id="1573" class="l"><a class="l" href="#1573">1573 </a>            {
-</span><span id="1574" class="l"><a class="l" href="#1574">1574 </a>                <span class="php-var">$parts</span> = <span class="php-keyword2">preg_split</span>(<span class="php-quote">'~(\[/code\]|\[code(?:=[^\]]+)?\])~i'</span>, <span class="php-var">$form_message</span>, -<span class="php-num">1</span>, PREG_SPLIT_DELIM_CAPTURE);
-</span><span id="1575" class="l"><a class="l" href="#1575">1575 </a>                <span class="php-keyword1">for</span> (<span class="php-var">$i</span> = <span class="php-num">0</span>, <span class="php-var">$n</span> = <span class="php-keyword2">count</span>(<span class="php-var">$parts</span>); <span class="php-var">$i</span> &lt; <span class="php-var">$n</span>; <span class="php-var">$i</span>++)
-</span><span id="1576" class="l"><a class="l" href="#1576">1576 </a>                {
-</span><span id="1577" class="l"><a class="l" href="#1577">1577 </a>                    <span class="php-comment">// It goes 0 = outside, 1 = begin tag, 2 = inside, 3 = close tag, repeat.</span>
-</span><span id="1578" class="l"><a class="l" href="#1578">1578 </a>                    <span class="php-keyword1">if</span> (<span class="php-var">$i</span> % <span class="php-num">4</span> == <span class="php-num">0</span>)
-</span><span id="1579" class="l"><a class="l" href="#1579">1579 </a>                        <span class="php-var">$parts</span>[<span class="php-var">$i</span>] = <span class="php-keyword2">preg_replace_callback</span>(<span class="php-quote">'~\[html\](.+?)\[/html\]~is'</span>, <span class="php-quote">'getFormMsgSubject_br_callback'</span>, <span class="php-var">$parts</span>[<span class="php-var">$i</span>]);
-</span><span id="1580" class="l"><a class="l" href="#1580">1580 </a>                }
-</span><span id="1581" class="l"><a class="l" href="#1581">1581 </a>                <span class="php-var">$form_message</span> = <span class="php-keyword2">implode</span>(<span class="php-quote">''</span>, <span class="php-var">$parts</span>);
-</span><span id="1582" class="l"><a class="l" href="#1582">1582 </a>            }
-</span><span id="1583" class="l"><a class="l" href="#1583">1583 </a>
-</span><span id="1584" class="l"><a class="l" href="#1584">1584 </a>            <span class="php-var">$form_message</span> = <span class="php-keyword2">preg_replace</span>(<span class="php-quote">'~&lt;br ?/?'</span> . <span class="php-quote">'&gt;~i'</span>, <span class="php-quote">&quot;\n&quot;</span>, <span class="php-var">$form_message</span>);
-</span><span id="1585" class="l"><a class="l" href="#1585">1585 </a>
-</span><span id="1586" class="l"><a class="l" href="#1586">1586 </a>            <span class="php-comment">// Remove any nested quotes, if necessary.</span>
-</span><span id="1587" class="l"><a class="l" href="#1587">1587 </a>            <span class="php-keyword1">if</span> (!<span class="php-keyword1">empty</span>(<span class="php-var">$modSettings</span>[<span class="php-quote">'removeNestedQuotes'</span>]))
-</span><span id="1588" class="l"><a class="l" href="#1588">1588 </a>                <span class="php-var">$form_message</span> = <span class="php-keyword2">preg_replace</span>(<span class="php-keyword1">array</span>(<span class="php-quote">'~\n?\[quote.*?\].+?\[/quote\]\n?~is'</span>, <span class="php-quote">'~^\n~'</span>, <span class="php-quote">'~\[/quote\]~'</span>), <span class="php-quote">''</span>, <span class="php-var">$form_message</span>);
-</span><span id="1589" class="l"><a class="l" href="#1589">1589 </a>
-</span><span id="1590" class="l"><a class="l" href="#1590">1590 </a>            <span class="php-comment">// Add a quote string on the front and end.</span>
-</span><span id="1591" class="l"><a class="l" href="#1591">1591 </a>            <span class="php-var">$form_message</span> = <span class="php-quote">'[quote author='</span> . <span class="php-var">$mname</span> . <span class="php-quote">' link=topic='</span> . <span class="php-var">$topic</span> . <span class="php-quote">'.msg'</span> . (int) <span class="php-var">$_REQUEST</span>[<span class="php-quote">'quote'</span>] . <span class="php-quote">'#msg'</span> . (int) <span class="php-var">$_REQUEST</span>[<span class="php-quote">'quote'</span>] . <span class="php-quote">' date='</span> . <span class="php-var">$mdate</span> . <span class="php-quote">']'</span> . <span class="php-quote">&quot;\n&quot;</span> . <span class="php-keyword2">rtrim</span>(<span class="php-var">$form_message</span>) . <span class="php-quote">&quot;\n&quot;</span> . <span class="php-quote">'[/quote]'</span>;
-</span><span id="1592" class="l"><a class="l" href="#1592">1592 </a>        }
-</span><span id="1593" class="l"><a class="l" href="#1593">1593 </a>        <span class="php-comment">// Posting a reply without a quote?</span>
-</span><span id="1594" class="l"><a class="l" href="#1594">1594 </a>        <span class="php-keyword1">elseif</span> (!<span class="php-keyword1">empty</span>(<span class="php-var">$topic</span>) &amp;&amp; <span class="php-keyword1">empty</span>(<span class="php-var">$_REQUEST</span>[<span class="php-quote">'quote'</span>]))
-</span><span id="1595" class="l"><a class="l" href="#1595">1595 </a>        {
-</span><span id="1596" class="l"><a class="l" href="#1596">1596 </a>            <span class="php-comment">// Get the first message's subject.</span>
-</span><span id="1597" class="l"><a class="l" href="#1597">1597 </a>            <span class="php-var">$form_subject</span> = <span class="php-var">$first_subject</span>;
-</span><span id="1598" class="l"><a class="l" href="#1598">1598 </a>
-</span><span id="1599" class="l"><a class="l" href="#1599">1599 </a>            <span class="php-comment">// Add 'Re: ' to the front of the subject.</span>
-</span><span id="1600" class="l"><a class="l" href="#1600">1600 </a>            <span class="php-keyword1">if</span> (<span class="php-keyword2">trim</span>(<span class="php-var">$context</span>[<span class="php-quote">'response_prefix'</span>]) != <span class="php-quote">''</span> &amp;&amp; <span class="php-var">$form_subject</span> != <span class="php-quote">''</span> &amp;&amp; Util::<span class="php-keyword2">strpos</span>(<span class="php-var">$form_subject</span>, <span class="php-keyword2">trim</span>(<span class="php-var">$context</span>[<span class="php-quote">'response_prefix'</span>])) !== <span class="php-num">0</span>)
-</span><span id="1601" class="l"><a class="l" href="#1601">1601 </a>                <span class="php-var">$form_subject</span> = <span class="php-var">$context</span>[<span class="php-quote">'response_prefix'</span>] . <span class="php-var">$form_subject</span>;
-</span><span id="1602" class="l"><a class="l" href="#1602">1602 </a>
-</span><span id="1603" class="l"><a class="l" href="#1603">1603 </a>            <span class="php-comment">// Censor the subject.</span>
-</span><span id="1604" class="l"><a class="l" href="#1604">1604 </a>            censorText(<span class="php-var">$form_subject</span>);
-</span><span id="1605" class="l"><a class="l" href="#1605">1605 </a>
-</span><span id="1606" class="l"><a class="l" href="#1606">1606 </a>            <span class="php-var">$form_message</span> = <span class="php-quote">''</span>;
-</span><span id="1607" class="l"><a class="l" href="#1607">1607 </a>        }
-</span><span id="1608" class="l"><a class="l" href="#1608">1608 </a>        <span class="php-keyword1">else</span>
-</span><span id="1609" class="l"><a class="l" href="#1609">1609 </a>        {
-</span><span id="1610" class="l"><a class="l" href="#1610">1610 </a>            <span class="php-var">$form_subject</span> = <span class="php-keyword1">isset</span>(<span class="php-var">$_GET</span>[<span class="php-quote">'subject'</span>]) ? <span class="php-var">$_GET</span>[<span class="php-quote">'subject'</span>] : <span class="php-quote">''</span>;
-</span><span id="1611" class="l"><a class="l" href="#1611">1611 </a>            <span class="php-var">$form_message</span> = <span class="php-quote">''</span>;
-</span><span id="1612" class="l"><a class="l" href="#1612">1612 </a>        }
-</span><span id="1613" class="l"><a class="l" href="#1613">1613 </a>
-</span><span id="1614" class="l"><a class="l" href="#1614">1614 </a>        <span class="php-keyword1">return</span> <span class="php-keyword1">array</span>(<span class="php-var">$form_subject</span>, <span class="php-var">$form_message</span>);
-</span><span id="1615" class="l"><a class="l" href="#1615">1615 </a>    }
-</span><span id="1616" class="l"><a class="l" href="#1616">1616 </a>}
-</span><span id="1617" class="l"><a class="l" href="#1617">1617 </a>
-</span><span id="1618" class="l"><a class="l" href="#1618">1618 </a><span class="php-comment">/**
-</span></span><span id="1619" class="l"><a class="l" href="#1619">1619 </a><span class="php-comment"> * Converts br's to entity safe versions &lt;br /&gt; =&gt; $lt;br /&amp;gt;&lt;br /&gt; so messages
-</span></span><span id="1620" class="l"><a class="l" href="#1620">1620 </a><span class="php-comment"> * with bbc html tags can be edited
-</span></span><span id="1621" class="l"><a class="l" href="#1621">1621 </a><span class="php-comment"> *
-</span></span><span id="1622" class="l"><a class="l" href="#1622">1622 </a><span class="php-comment"> * @package Posts
-</span></span><span id="1623" class="l"><a class="l" href="#1623">1623 </a><span class="php-comment"> * @param string[] $matches
-</span></span><span id="1624" class="l"><a class="l" href="#1624">1624 </a><span class="php-comment"> */</span>
-</span><span id="1625" class="l"><a class="l" href="#1625">1625 </a><span class="php-keyword1">function</span> <a id="_getFormMsgSubject_br_callback" href="#_getFormMsgSubject_br_callback">getFormMsgSubject_br_callback</a>(<span class="php-var">$matches</span>)
-</span><span id="1626" class="l"><a class="l" href="#1626">1626 </a>{
-</span><span id="1627" class="l"><a class="l" href="#1627">1627 </a>    <span class="php-keyword1">return</span> <span class="php-quote">'[html]'</span> . <span class="php-keyword2">preg_replace</span>(<span class="php-quote">'~&lt;br\s?/?'</span> . <span class="php-quote">'&gt;~i'</span>, <span class="php-quote">'&amp;lt;br /&amp;gt;&lt;br /&gt;'</span>, <span class="php-var">$matches</span>[<span class="php-num">1</span>]) . <span class="php-quote">'[/html]'</span>;
-</span><span id="1628" class="l"><a class="l" href="#1628">1628 </a>}
-</span><span id="1629" class="l"><a class="l" href="#1629">1629 </a>
-</span><span id="1630" class="l"><a class="l" href="#1630">1630 </a><span class="php-comment">/**
-</span></span><span id="1631" class="l"><a class="l" href="#1631">1631 </a><span class="php-comment"> * Update topic subject.
-</span></span><span id="1632" class="l"><a class="l" href="#1632">1632 </a><span class="php-comment"> *
-</span></span><span id="1633" class="l"><a class="l" href="#1633">1633 </a><span class="php-comment"> * - If $all is true, for all messages in the topic, otherwise only the first message.
-</span></span><span id="1634" class="l"><a class="l" href="#1634">1634 </a><span class="php-comment"> *
-</span></span><span id="1635" class="l"><a class="l" href="#1635">1635 </a><span class="php-comment"> * @package Posts
-</span></span><span id="1636" class="l"><a class="l" href="#1636">1636 </a><span class="php-comment"> * @param mixed[] $topic_info topic information as returned by getTopicInfo()
-</span></span><span id="1637" class="l"><a class="l" href="#1637">1637 </a><span class="php-comment"> * @param string $custom_subject
-</span></span><span id="1638" class="l"><a class="l" href="#1638">1638 </a><span class="php-comment"> * @param string $response_prefix = ''
-</span></span><span id="1639" class="l"><a class="l" href="#1639">1639 </a><span class="php-comment"> * @param bool $all = false
-</span></span><span id="1640" class="l"><a class="l" href="#1640">1640 </a><span class="php-comment"> */</span>
-</span><span id="1641" class="l"><a class="l" href="#1641">1641 </a><span class="php-keyword1">function</span> <a id="_topicSubject" href="#_topicSubject">topicSubject</a>(<span class="php-var">$topic_info</span>, <span class="php-var">$custom_subject</span>, <span class="php-var">$response_prefix</span> = <span class="php-quote">''</span>, <span class="php-var">$all</span> = <span class="php-keyword1">false</span>)
-</span><span id="1642" class="l"><a class="l" href="#1642">1642 </a>{
-</span><span id="1643" class="l"><a class="l" href="#1643">1643 </a>    <span class="php-var">$db</span> = database();
-</span><span id="1644" class="l"><a class="l" href="#1644">1644 </a>
-</span><span id="1645" class="l"><a class="l" href="#1645">1645 </a>    <span class="php-keyword1">if</span> (<span class="php-var">$all</span>)
-</span><span id="1646" class="l"><a class="l" href="#1646">1646 </a>    {
-</span><span id="1647" class="l"><a class="l" href="#1647">1647 </a>        <span class="php-var">$db</span>-&gt;query(<span class="php-quote">''</span>, <span class="php-quote">'
-</span></span><span id="1648" class="l"><a class="l" href="#1648">1648 </a><span class="php-quote">            UPDATE {db_prefix}messages
-</span></span><span id="1649" class="l"><a class="l" href="#1649">1649 </a><span class="php-quote">            SET subject = {string:subject}
-</span></span><span id="1650" class="l"><a class="l" href="#1650">1650 </a><span class="php-quote">            WHERE id_topic = {int:current_topic}'</span>,
-</span><span id="1651" class="l"><a class="l" href="#1651">1651 </a>            <span class="php-keyword1">array</span>(
-</span><span id="1652" class="l"><a class="l" href="#1652">1652 </a>                <span class="php-quote">'current_topic'</span> =&gt; <span class="php-var">$topic_info</span>[<span class="php-quote">'id_topic'</span>],
-</span><span id="1653" class="l"><a class="l" href="#1653">1653 </a>                <span class="php-quote">'subject'</span> =&gt; <span class="php-var">$response_prefix</span> . <span class="php-var">$custom_subject</span>,
-</span><span id="1654" class="l"><a class="l" href="#1654">1654 </a>            )
-</span><span id="1655" class="l"><a class="l" href="#1655">1655 </a>        );
-</span><span id="1656" class="l"><a class="l" href="#1656">1656 </a>    }
-</span><span id="1657" class="l"><a class="l" href="#1657">1657 </a>    <span class="php-var">$db</span>-&gt;query(<span class="php-quote">''</span>, <span class="php-quote">'
-</span></span><span id="1658" class="l"><a class="l" href="#1658">1658 </a><span class="php-quote">        UPDATE {db_prefix}messages
-</span></span><span id="1659" class="l"><a class="l" href="#1659">1659 </a><span class="php-quote">        SET subject = {string:custom_subject}
-</span></span><span id="1660" class="l"><a class="l" href="#1660">1660 </a><span class="php-quote">        WHERE id_msg = {int:id_first_msg}'</span>,
-</span><span id="1661" class="l"><a class="l" href="#1661">1661 </a>        <span class="php-keyword1">array</span>(
-</span><span id="1662" class="l"><a class="l" href="#1662">1662 </a>            <span class="php-quote">'id_first_msg'</span> =&gt; <span class="php-var">$topic_info</span>[<span class="php-quote">'id_first_msg'</span>],
-</span><span id="1663" class="l"><a class="l" href="#1663">1663 </a>            <span class="php-quote">'custom_subject'</span> =&gt; <span class="php-var">$custom_subject</span>,
-</span><span id="1664" class="l"><a class="l" href="#1664">1664 </a>        )
-</span><span id="1665" class="l"><a class="l" href="#1665">1665 </a>    );
-</span><span id="1666" class="l"><a class="l" href="#1666">1666 </a></span>}</code></pre>
+</span></span><span id="1507" class="l"><a class="l" href="#1507">1507 </a><span class="php-comment"> * - if editing is true, returns $message|$message[errors], else returns array($subject, $message)
+</span></span><span id="1508" class="l"><a class="l" href="#1508">1508 </a><span class="php-comment"> *
+</span></span><span id="1509" class="l"><a class="l" href="#1509">1509 </a><span class="php-comment"> * @package Posts
+</span></span><span id="1510" class="l"><a class="l" href="#1510">1510 </a><span class="php-comment"> * @param boolean $editing
+</span></span><span id="1511" class="l"><a class="l" href="#1511">1511 </a><span class="php-comment"> * @param int $topic
+</span></span><span id="1512" class="l"><a class="l" href="#1512">1512 </a><span class="php-comment"> * @param string $first_subject
+</span></span><span id="1513" class="l"><a class="l" href="#1513">1513 </a><span class="php-comment"> */</span>
+</span><span id="1514" class="l"><a class="l" href="#1514">1514 </a><span class="php-keyword1">function</span> <a id="_getFormMsgSubject" href="#_getFormMsgSubject">getFormMsgSubject</a>(<span class="php-var">$editing</span>, <span class="php-var">$topic</span>, <span class="php-var">$first_subject</span> = <span class="php-quote">''</span>)
+</span><span id="1515" class="l"><a class="l" href="#1515">1515 </a>{
+</span><span id="1516" class="l"><a class="l" href="#1516">1516 </a>    <span class="php-keyword1">global</span> <span class="php-var">$modSettings</span>, <span class="php-var">$context</span>;
+</span><span id="1517" class="l"><a class="l" href="#1517">1517 </a>
+</span><span id="1518" class="l"><a class="l" href="#1518">1518 </a>    <span class="php-var">$db</span> = database();
+</span><span id="1519" class="l"><a class="l" href="#1519">1519 </a>
+</span><span id="1520" class="l"><a class="l" href="#1520">1520 </a>    <span class="php-keyword1">if</span> (<span class="php-var">$editing</span>)
+</span><span id="1521" class="l"><a class="l" href="#1521">1521 </a>    {
+</span><span id="1522" class="l"><a class="l" href="#1522">1522 </a>        <span class="php-keyword1">require_once</span>(SUBSDIR . <span class="php-quote">'/Messages.subs.php'</span>);
+</span><span id="1523" class="l"><a class="l" href="#1523">1523 </a>
+</span><span id="1524" class="l"><a class="l" href="#1524">1524 </a>        <span class="php-comment">// Get the existing message.</span>
+</span><span id="1525" class="l"><a class="l" href="#1525">1525 </a>        <span class="php-var">$message</span> = messageDetails((int) <span class="php-var">$_REQUEST</span>[<span class="php-quote">'msg'</span>], <span class="php-var">$topic</span>);
+</span><span id="1526" class="l"><a class="l" href="#1526">1526 </a>
+</span><span id="1527" class="l"><a class="l" href="#1527">1527 </a>        <span class="php-comment">// The message they were trying to edit was most likely deleted.</span>
+</span><span id="1528" class="l"><a class="l" href="#1528">1528 </a>        <span class="php-keyword1">if</span> (<span class="php-var">$message</span> === <span class="php-keyword1">false</span>)
+</span><span id="1529" class="l"><a class="l" href="#1529">1529 </a>            fatal_lang_error(<span class="php-quote">'no_message'</span>, <span class="php-keyword1">false</span>);
+</span><span id="1530" class="l"><a class="l" href="#1530">1530 </a>
+</span><span id="1531" class="l"><a class="l" href="#1531">1531 </a>        <span class="php-var">$errors</span> = checkMessagePermissions(<span class="php-var">$message</span>[<span class="php-quote">'message'</span>]);
+</span><span id="1532" class="l"><a class="l" href="#1532">1532 </a>
+</span><span id="1533" class="l"><a class="l" href="#1533">1533 </a>        prepareMessageContext(<span class="php-var">$message</span>);
+</span><span id="1534" class="l"><a class="l" href="#1534">1534 </a>
+</span><span id="1535" class="l"><a class="l" href="#1535">1535 </a>        <span class="php-keyword1">if</span> (!<span class="php-keyword1">empty</span>(<span class="php-var">$errors</span>))
+</span><span id="1536" class="l"><a class="l" href="#1536">1536 </a>            <span class="php-var">$message</span>[<span class="php-quote">'errors'</span>] = <span class="php-var">$errors</span>;
+</span><span id="1537" class="l"><a class="l" href="#1537">1537 </a>
+</span><span id="1538" class="l"><a class="l" href="#1538">1538 </a>        <span class="php-keyword1">return</span> <span class="php-var">$message</span>;
+</span><span id="1539" class="l"><a class="l" href="#1539">1539 </a>    }
+</span><span id="1540" class="l"><a class="l" href="#1540">1540 </a>    <span class="php-keyword1">else</span>
+</span><span id="1541" class="l"><a class="l" href="#1541">1541 </a>    {
+</span><span id="1542" class="l"><a class="l" href="#1542">1542 </a>        <span class="php-comment">// Posting a quoted reply?</span>
+</span><span id="1543" class="l"><a class="l" href="#1543">1543 </a>        <span class="php-keyword1">if</span> ((!<span class="php-keyword1">empty</span>(<span class="php-var">$topic</span>) &amp;&amp; !<span class="php-keyword1">empty</span>(<span class="php-var">$_REQUEST</span>[<span class="php-quote">'quote'</span>])) || (!<span class="php-keyword1">empty</span>(<span class="php-var">$modSettings</span>[<span class="php-quote">'enableFollowup'</span>]) &amp;&amp; !<span class="php-keyword1">empty</span>(<span class="php-var">$_REQUEST</span>[<span class="php-quote">'followup'</span>])))
+</span><span id="1544" class="l"><a class="l" href="#1544">1544 </a>        {
+</span><span id="1545" class="l"><a class="l" href="#1545">1545 </a>            <span class="php-comment">// Make sure they _can_ quote this post, and if so get it.</span>
+</span><span id="1546" class="l"><a class="l" href="#1546">1546 </a>            <span class="php-var">$request</span> = <span class="php-var">$db</span>-&gt;query(<span class="php-quote">''</span>, <span class="php-quote">'
+</span></span><span id="1547" class="l"><a class="l" href="#1547">1547 </a><span class="php-quote">                SELECT m.subject, IFNULL(mem.real_name, m.poster_name) AS poster_name, m.poster_time, m.body
+</span></span><span id="1548" class="l"><a class="l" href="#1548">1548 </a><span class="php-quote">                FROM {db_prefix}messages AS m
+</span></span><span id="1549" class="l"><a class="l" href="#1549">1549 </a><span class="php-quote">                    INNER JOIN {db_prefix}boards AS b ON (b.id_board = m.id_board AND {query_see_board})
+</span></span><span id="1550" class="l"><a class="l" href="#1550">1550 </a><span class="php-quote">                    LEFT JOIN {db_prefix}members AS mem ON (mem.id_member = m.id_member)
+</span></span><span id="1551" class="l"><a class="l" href="#1551">1551 </a><span class="php-quote">                WHERE m.id_msg = {int:id_msg}'</span> . (!<span class="php-var">$modSettings</span>[<span class="php-quote">'postmod_active'</span>] || allowedTo(<span class="php-quote">'approve_posts'</span>) ? <span class="php-quote">''</span> : <span class="php-quote">'
+</span></span><span id="1552" class="l"><a class="l" href="#1552">1552 </a><span class="php-quote">                    AND m.approved = {int:is_approved}'</span>) . <span class="php-quote">'
+</span></span><span id="1553" class="l"><a class="l" href="#1553">1553 </a><span class="php-quote">                LIMIT 1'</span>,
+</span><span id="1554" class="l"><a class="l" href="#1554">1554 </a>                <span class="php-keyword1">array</span>(
+</span><span id="1555" class="l"><a class="l" href="#1555">1555 </a>                    <span class="php-quote">'id_msg'</span> =&gt; !<span class="php-keyword1">empty</span>(<span class="php-var">$_REQUEST</span>[<span class="php-quote">'quote'</span>]) ? (int) <span class="php-var">$_REQUEST</span>[<span class="php-quote">'quote'</span>] : (int) <span class="php-var">$_REQUEST</span>[<span class="php-quote">'followup'</span>],
+</span><span id="1556" class="l"><a class="l" href="#1556">1556 </a>                    <span class="php-quote">'is_approved'</span> =&gt; <span class="php-num">1</span>,
+</span><span id="1557" class="l"><a class="l" href="#1557">1557 </a>                )
+</span><span id="1558" class="l"><a class="l" href="#1558">1558 </a>            );
+</span><span id="1559" class="l"><a class="l" href="#1559">1559 </a>            <span class="php-keyword1">if</span> (<span class="php-var">$db</span>-&gt;num_rows(<span class="php-var">$request</span>) == <span class="php-num">0</span>)
+</span><span id="1560" class="l"><a class="l" href="#1560">1560 </a>                fatal_lang_error(<span class="php-quote">'quoted_post_deleted'</span>, <span class="php-keyword1">false</span>);
+</span><span id="1561" class="l"><a class="l" href="#1561">1561 </a>            <span class="php-keyword1">list</span> (<span class="php-var">$form_subject</span>, <span class="php-var">$mname</span>, <span class="php-var">$mdate</span>, <span class="php-var">$form_message</span>) = <span class="php-var">$db</span>-&gt;fetch_row(<span class="php-var">$request</span>);
+</span><span id="1562" class="l"><a class="l" href="#1562">1562 </a>            <span class="php-var">$db</span>-&gt;free_result(<span class="php-var">$request</span>);
+</span><span id="1563" class="l"><a class="l" href="#1563">1563 </a>
+</span><span id="1564" class="l"><a class="l" href="#1564">1564 </a>            <span class="php-comment">// Add 'Re: ' to the front of the quoted subject.</span>
+</span><span id="1565" class="l"><a class="l" href="#1565">1565 </a>            <span class="php-keyword1">if</span> (<span class="php-keyword2">trim</span>(<span class="php-var">$context</span>[<span class="php-quote">'response_prefix'</span>]) != <span class="php-quote">''</span> &amp;&amp; Util::<span class="php-keyword2">strpos</span>(<span class="php-var">$form_subject</span>, <span class="php-keyword2">trim</span>(<span class="php-var">$context</span>[<span class="php-quote">'response_prefix'</span>])) !== <span class="php-num">0</span>)
+</span><span id="1566" class="l"><a class="l" href="#1566">1566 </a>                <span class="php-var">$form_subject</span> = <span class="php-var">$context</span>[<span class="php-quote">'response_prefix'</span>] . <span class="php-var">$form_subject</span>;
+</span><span id="1567" class="l"><a class="l" href="#1567">1567 </a>
+</span><span id="1568" class="l"><a class="l" href="#1568">1568 </a>            <span class="php-comment">// Censor the message and subject.</span>
+</span><span id="1569" class="l"><a class="l" href="#1569">1569 </a>            censorText(<span class="php-var">$form_message</span>);
+</span><span id="1570" class="l"><a class="l" href="#1570">1570 </a>            censorText(<span class="php-var">$form_subject</span>);
+</span><span id="1571" class="l"><a class="l" href="#1571">1571 </a>
+</span><span id="1572" class="l"><a class="l" href="#1572">1572 </a>            <span class="php-comment">// But if it's in HTML world, turn them into htmlspecialchar's so they can be edited!</span>
+</span><span id="1573" class="l"><a class="l" href="#1573">1573 </a>            <span class="php-keyword1">if</span> (<span class="php-keyword2">strpos</span>(<span class="php-var">$form_message</span>, <span class="php-quote">'[html]'</span>) !== <span class="php-keyword1">false</span>)
+</span><span id="1574" class="l"><a class="l" href="#1574">1574 </a>            {
+</span><span id="1575" class="l"><a class="l" href="#1575">1575 </a>                <span class="php-var">$parts</span> = <span class="php-keyword2">preg_split</span>(<span class="php-quote">'~(\[/code\]|\[code(?:=[^\]]+)?\])~i'</span>, <span class="php-var">$form_message</span>, -<span class="php-num">1</span>, PREG_SPLIT_DELIM_CAPTURE);
+</span><span id="1576" class="l"><a class="l" href="#1576">1576 </a>                <span class="php-keyword1">for</span> (<span class="php-var">$i</span> = <span class="php-num">0</span>, <span class="php-var">$n</span> = <span class="php-keyword2">count</span>(<span class="php-var">$parts</span>); <span class="php-var">$i</span> &lt; <span class="php-var">$n</span>; <span class="php-var">$i</span>++)
+</span><span id="1577" class="l"><a class="l" href="#1577">1577 </a>                {
+</span><span id="1578" class="l"><a class="l" href="#1578">1578 </a>                    <span class="php-comment">// It goes 0 = outside, 1 = begin tag, 2 = inside, 3 = close tag, repeat.</span>
+</span><span id="1579" class="l"><a class="l" href="#1579">1579 </a>                    <span class="php-keyword1">if</span> (<span class="php-var">$i</span> % <span class="php-num">4</span> == <span class="php-num">0</span>)
+</span><span id="1580" class="l"><a class="l" href="#1580">1580 </a>                        <span class="php-var">$parts</span>[<span class="php-var">$i</span>] = <span class="php-keyword2">preg_replace_callback</span>(<span class="php-quote">'~\[html\](.+?)\[/html\]~is'</span>, <span class="php-quote">'getFormMsgSubject_br_callback'</span>, <span class="php-var">$parts</span>[<span class="php-var">$i</span>]);
+</span><span id="1581" class="l"><a class="l" href="#1581">1581 </a>                }
+</span><span id="1582" class="l"><a class="l" href="#1582">1582 </a>                <span class="php-var">$form_message</span> = <span class="php-keyword2">implode</span>(<span class="php-quote">''</span>, <span class="php-var">$parts</span>);
+</span><span id="1583" class="l"><a class="l" href="#1583">1583 </a>            }
+</span><span id="1584" class="l"><a class="l" href="#1584">1584 </a>
+</span><span id="1585" class="l"><a class="l" href="#1585">1585 </a>            <span class="php-var">$form_message</span> = <span class="php-keyword2">preg_replace</span>(<span class="php-quote">'~&lt;br ?/?'</span> . <span class="php-quote">'&gt;~i'</span>, <span class="php-quote">&quot;\n&quot;</span>, <span class="php-var">$form_message</span>);
+</span><span id="1586" class="l"><a class="l" href="#1586">1586 </a>
+</span><span id="1587" class="l"><a class="l" href="#1587">1587 </a>            <span class="php-comment">// Remove any nested quotes, if necessary.</span>
+</span><span id="1588" class="l"><a class="l" href="#1588">1588 </a>            <span class="php-keyword1">if</span> (!<span class="php-keyword1">empty</span>(<span class="php-var">$modSettings</span>[<span class="php-quote">'removeNestedQuotes'</span>]))
+</span><span id="1589" class="l"><a class="l" href="#1589">1589 </a>                <span class="php-var">$form_message</span> = <span class="php-keyword2">preg_replace</span>(<span class="php-keyword1">array</span>(<span class="php-quote">'~\n?\[quote.*?\].+?\[/quote\]\n?~is'</span>, <span class="php-quote">'~^\n~'</span>, <span class="php-quote">'~\[/quote\]~'</span>), <span class="php-quote">''</span>, <span class="php-var">$form_message</span>);
+</span><span id="1590" class="l"><a class="l" href="#1590">1590 </a>
+</span><span id="1591" class="l"><a class="l" href="#1591">1591 </a>            <span class="php-comment">// Add a quote string on the front and end.</span>
+</span><span id="1592" class="l"><a class="l" href="#1592">1592 </a>            <span class="php-var">$form_message</span> = <span class="php-quote">'[quote author='</span> . <span class="php-var">$mname</span> . <span class="php-quote">' link=topic='</span> . <span class="php-var">$topic</span> . <span class="php-quote">'.msg'</span> . (int) <span class="php-var">$_REQUEST</span>[<span class="php-quote">'quote'</span>] . <span class="php-quote">'#msg'</span> . (int) <span class="php-var">$_REQUEST</span>[<span class="php-quote">'quote'</span>] . <span class="php-quote">' date='</span> . <span class="php-var">$mdate</span> . <span class="php-quote">']'</span> . <span class="php-quote">&quot;\n&quot;</span> . <span class="php-keyword2">rtrim</span>(<span class="php-var">$form_message</span>) . <span class="php-quote">&quot;\n&quot;</span> . <span class="php-quote">'[/quote]'</span>;
+</span><span id="1593" class="l"><a class="l" href="#1593">1593 </a>        }
+</span><span id="1594" class="l"><a class="l" href="#1594">1594 </a>        <span class="php-comment">// Posting a reply without a quote?</span>
+</span><span id="1595" class="l"><a class="l" href="#1595">1595 </a>        <span class="php-keyword1">elseif</span> (!<span class="php-keyword1">empty</span>(<span class="php-var">$topic</span>) &amp;&amp; <span class="php-keyword1">empty</span>(<span class="php-var">$_REQUEST</span>[<span class="php-quote">'quote'</span>]))
+</span><span id="1596" class="l"><a class="l" href="#1596">1596 </a>        {
+</span><span id="1597" class="l"><a class="l" href="#1597">1597 </a>            <span class="php-comment">// Get the first message's subject.</span>
+</span><span id="1598" class="l"><a class="l" href="#1598">1598 </a>            <span class="php-var">$form_subject</span> = <span class="php-var">$first_subject</span>;
+</span><span id="1599" class="l"><a class="l" href="#1599">1599 </a>
+</span><span id="1600" class="l"><a class="l" href="#1600">1600 </a>            <span class="php-comment">// Add 'Re: ' to the front of the subject.</span>
+</span><span id="1601" class="l"><a class="l" href="#1601">1601 </a>            <span class="php-keyword1">if</span> (<span class="php-keyword2">trim</span>(<span class="php-var">$context</span>[<span class="php-quote">'response_prefix'</span>]) != <span class="php-quote">''</span> &amp;&amp; <span class="php-var">$form_subject</span> != <span class="php-quote">''</span> &amp;&amp; Util::<span class="php-keyword2">strpos</span>(<span class="php-var">$form_subject</span>, <span class="php-keyword2">trim</span>(<span class="php-var">$context</span>[<span class="php-quote">'response_prefix'</span>])) !== <span class="php-num">0</span>)
+</span><span id="1602" class="l"><a class="l" href="#1602">1602 </a>                <span class="php-var">$form_subject</span> = <span class="php-var">$context</span>[<span class="php-quote">'response_prefix'</span>] . <span class="php-var">$form_subject</span>;
+</span><span id="1603" class="l"><a class="l" href="#1603">1603 </a>
+</span><span id="1604" class="l"><a class="l" href="#1604">1604 </a>            <span class="php-comment">// Censor the subject.</span>
+</span><span id="1605" class="l"><a class="l" href="#1605">1605 </a>            censorText(<span class="php-var">$form_subject</span>);
+</span><span id="1606" class="l"><a class="l" href="#1606">1606 </a>
+</span><span id="1607" class="l"><a class="l" href="#1607">1607 </a>            <span class="php-var">$form_message</span> = <span class="php-quote">''</span>;
+</span><span id="1608" class="l"><a class="l" href="#1608">1608 </a>        }
+</span><span id="1609" class="l"><a class="l" href="#1609">1609 </a>        <span class="php-keyword1">else</span>
+</span><span id="1610" class="l"><a class="l" href="#1610">1610 </a>        {
+</span><span id="1611" class="l"><a class="l" href="#1611">1611 </a>            <span class="php-var">$form_subject</span> = <span class="php-keyword1">isset</span>(<span class="php-var">$_GET</span>[<span class="php-quote">'subject'</span>]) ? <span class="php-var">$_GET</span>[<span class="php-quote">'subject'</span>] : <span class="php-quote">''</span>;
+</span><span id="1612" class="l"><a class="l" href="#1612">1612 </a>            <span class="php-var">$form_message</span> = <span class="php-quote">''</span>;
+</span><span id="1613" class="l"><a class="l" href="#1613">1613 </a>        }
+</span><span id="1614" class="l"><a class="l" href="#1614">1614 </a>
+</span><span id="1615" class="l"><a class="l" href="#1615">1615 </a>        <span class="php-keyword1">return</span> <span class="php-keyword1">array</span>(<span class="php-var">$form_subject</span>, <span class="php-var">$form_message</span>);
+</span><span id="1616" class="l"><a class="l" href="#1616">1616 </a>    }
+</span><span id="1617" class="l"><a class="l" href="#1617">1617 </a>}
+</span><span id="1618" class="l"><a class="l" href="#1618">1618 </a>
+</span><span id="1619" class="l"><a class="l" href="#1619">1619 </a><span class="php-comment">/**
+</span></span><span id="1620" class="l"><a class="l" href="#1620">1620 </a><span class="php-comment"> * Converts br's to entity safe versions &lt;br /&gt; =&gt; $lt;br /&amp;gt;&lt;br /&gt; so messages
+</span></span><span id="1621" class="l"><a class="l" href="#1621">1621 </a><span class="php-comment"> * with bbc html tags can be edited
+</span></span><span id="1622" class="l"><a class="l" href="#1622">1622 </a><span class="php-comment"> *
+</span></span><span id="1623" class="l"><a class="l" href="#1623">1623 </a><span class="php-comment"> * @package Posts
+</span></span><span id="1624" class="l"><a class="l" href="#1624">1624 </a><span class="php-comment"> * @param string[] $matches
+</span></span><span id="1625" class="l"><a class="l" href="#1625">1625 </a><span class="php-comment"> */</span>
+</span><span id="1626" class="l"><a class="l" href="#1626">1626 </a><span class="php-keyword1">function</span> <a id="_getFormMsgSubject_br_callback" href="#_getFormMsgSubject_br_callback">getFormMsgSubject_br_callback</a>(<span class="php-var">$matches</span>)
+</span><span id="1627" class="l"><a class="l" href="#1627">1627 </a>{
+</span><span id="1628" class="l"><a class="l" href="#1628">1628 </a>    <span class="php-keyword1">return</span> <span class="php-quote">'[html]'</span> . <span class="php-keyword2">preg_replace</span>(<span class="php-quote">'~&lt;br\s?/?'</span> . <span class="php-quote">'&gt;~i'</span>, <span class="php-quote">'&amp;lt;br /&amp;gt;&lt;br /&gt;'</span>, <span class="php-var">$matches</span>[<span class="php-num">1</span>]) . <span class="php-quote">'[/html]'</span>;
+</span><span id="1629" class="l"><a class="l" href="#1629">1629 </a>}
+</span><span id="1630" class="l"><a class="l" href="#1630">1630 </a>
+</span><span id="1631" class="l"><a class="l" href="#1631">1631 </a><span class="php-comment">/**
+</span></span><span id="1632" class="l"><a class="l" href="#1632">1632 </a><span class="php-comment"> * Update topic subject.
+</span></span><span id="1633" class="l"><a class="l" href="#1633">1633 </a><span class="php-comment"> *
+</span></span><span id="1634" class="l"><a class="l" href="#1634">1634 </a><span class="php-comment"> * - If $all is true, for all messages in the topic, otherwise only the first message.
+</span></span><span id="1635" class="l"><a class="l" href="#1635">1635 </a><span class="php-comment"> *
+</span></span><span id="1636" class="l"><a class="l" href="#1636">1636 </a><span class="php-comment"> * @package Posts
+</span></span><span id="1637" class="l"><a class="l" href="#1637">1637 </a><span class="php-comment"> * @param mixed[] $topic_info topic information as returned by getTopicInfo()
+</span></span><span id="1638" class="l"><a class="l" href="#1638">1638 </a><span class="php-comment"> * @param string $custom_subject
+</span></span><span id="1639" class="l"><a class="l" href="#1639">1639 </a><span class="php-comment"> * @param string $response_prefix = ''
+</span></span><span id="1640" class="l"><a class="l" href="#1640">1640 </a><span class="php-comment"> * @param bool $all = false
+</span></span><span id="1641" class="l"><a class="l" href="#1641">1641 </a><span class="php-comment"> */</span>
+</span><span id="1642" class="l"><a class="l" href="#1642">1642 </a><span class="php-keyword1">function</span> <a id="_topicSubject" href="#_topicSubject">topicSubject</a>(<span class="php-var">$topic_info</span>, <span class="php-var">$custom_subject</span>, <span class="php-var">$response_prefix</span> = <span class="php-quote">''</span>, <span class="php-var">$all</span> = <span class="php-keyword1">false</span>)
+</span><span id="1643" class="l"><a class="l" href="#1643">1643 </a>{
+</span><span id="1644" class="l"><a class="l" href="#1644">1644 </a>    <span class="php-var">$db</span> = database();
+</span><span id="1645" class="l"><a class="l" href="#1645">1645 </a>
+</span><span id="1646" class="l"><a class="l" href="#1646">1646 </a>    <span class="php-keyword1">if</span> (<span class="php-var">$all</span>)
+</span><span id="1647" class="l"><a class="l" href="#1647">1647 </a>    {
+</span><span id="1648" class="l"><a class="l" href="#1648">1648 </a>        <span class="php-var">$db</span>-&gt;query(<span class="php-quote">''</span>, <span class="php-quote">'
+</span></span><span id="1649" class="l"><a class="l" href="#1649">1649 </a><span class="php-quote">            UPDATE {db_prefix}messages
+</span></span><span id="1650" class="l"><a class="l" href="#1650">1650 </a><span class="php-quote">            SET subject = {string:subject}
+</span></span><span id="1651" class="l"><a class="l" href="#1651">1651 </a><span class="php-quote">            WHERE id_topic = {int:current_topic}'</span>,
+</span><span id="1652" class="l"><a class="l" href="#1652">1652 </a>            <span class="php-keyword1">array</span>(
+</span><span id="1653" class="l"><a class="l" href="#1653">1653 </a>                <span class="php-quote">'current_topic'</span> =&gt; <span class="php-var">$topic_info</span>[<span class="php-quote">'id_topic'</span>],
+</span><span id="1654" class="l"><a class="l" href="#1654">1654 </a>                <span class="php-quote">'subject'</span> =&gt; <span class="php-var">$response_prefix</span> . <span class="php-var">$custom_subject</span>,
+</span><span id="1655" class="l"><a class="l" href="#1655">1655 </a>            )
+</span><span id="1656" class="l"><a class="l" href="#1656">1656 </a>        );
+</span><span id="1657" class="l"><a class="l" href="#1657">1657 </a>    }
+</span><span id="1658" class="l"><a class="l" href="#1658">1658 </a>    <span class="php-var">$db</span>-&gt;query(<span class="php-quote">''</span>, <span class="php-quote">'
+</span></span><span id="1659" class="l"><a class="l" href="#1659">1659 </a><span class="php-quote">        UPDATE {db_prefix}messages
+</span></span><span id="1660" class="l"><a class="l" href="#1660">1660 </a><span class="php-quote">        SET subject = {string:custom_subject}
+</span></span><span id="1661" class="l"><a class="l" href="#1661">1661 </a><span class="php-quote">        WHERE id_msg = {int:id_first_msg}'</span>,
+</span><span id="1662" class="l"><a class="l" href="#1662">1662 </a>        <span class="php-keyword1">array</span>(
+</span><span id="1663" class="l"><a class="l" href="#1663">1663 </a>            <span class="php-quote">'id_first_msg'</span> =&gt; <span class="php-var">$topic_info</span>[<span class="php-quote">'id_first_msg'</span>],
+</span><span id="1664" class="l"><a class="l" href="#1664">1664 </a>            <span class="php-quote">'custom_subject'</span> =&gt; <span class="php-var">$custom_subject</span>,
+</span><span id="1665" class="l"><a class="l" href="#1665">1665 </a>        )
+</span><span id="1666" class="l"><a class="l" href="#1666">1666 </a>    );
+</span><span id="1667" class="l"><a class="l" href="#1667">1667 </a></span>}</code></pre>
 	</div>
 
 	<div id="footer">

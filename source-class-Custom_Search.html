@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-	<meta name="generator" content="ApiGen 2.8.0">
-	<meta name="robots" content="noindex">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="generator" content="ApiGen 2.8.0" />
+	<meta name="robots" content="noindex" />
 
 	<title>File sources/subs/SearchAPI-Custom.class.php | ElkArte Documentation</title>
 
 	<script type="text/javascript" src="resources/combined.js?3648714599"></script>
-	<script type="text/javascript" src="elementlist.js?3850865134"></script>
-	<link rel="stylesheet" type="text/css" media="all" href="resources/bootstrap.min.css?260161822">
-	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?2015443609">
+	<script type="text/javascript" src="elementlist.js?3593784124"></script>
+	<link rel="stylesheet" type="text/css" media="all" href="resources/bootstrap.min.css?260161822" />
+	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?2015443609" />
 
 </head>
 
@@ -47,9 +47,9 @@
 	<div id="left">
 	<div id="menu">
 		<form id="search" class="form-search">
-			<input type="hidden" name="cx" value="">
-			<input type="hidden" name="ie" value="UTF-8">
-			<input type="text" name="q" class="search-query" placeholder="Search">
+			<input type="hidden" name="cx" value="" />
+			<input type="hidden" name="ie" value="UTF-8" />
+			<input type="text" name="q" class="search-query" placeholder="Search" />
 		</form>
 
 
@@ -81,6 +81,8 @@
 				<li><a href="package-CoreFeatures.html">CoreFeatures</a>
 						</li>
 				<li><a href="package-Drafts.html">Drafts</a>
+						</li>
+				<li><a href="package-Graphics.html">Graphics</a>
 						</li>
 				<li><a href="package-Languages.html">Languages</a>
 						</li>
@@ -481,7 +483,7 @@
 </span><span id="325" class="l"><a class="l" href="#325">325 </a>            <span class="php-var">$stopwords</span> = <span class="php-keyword1">empty</span>(<span class="php-var">$modSettings</span>[<span class="php-quote">'search_stopwords'</span>]) ? <span class="php-keyword1">array</span>() : <span class="php-keyword2">explode</span>(<span class="php-quote">','</span>, <span class="php-var">$modSettings</span>[<span class="php-quote">'search_stopwords'</span>]);
 </span><span id="326" class="l"><a class="l" href="#326">326 </a>            <span class="php-var">$old_body</span> = <span class="php-keyword1">isset</span>(<span class="php-var">$msgOptions</span>[<span class="php-quote">'old_body'</span>]) ? <span class="php-var">$msgOptions</span>[<span class="php-quote">'old_body'</span>] : <span class="php-quote">''</span>;
 </span><span id="327" class="l"><a class="l" href="#327">327 </a>
-</span><span id="328" class="l"><a class="l" href="#328">328 </a>            <span class="php-comment">// Create thew new and old index</span>
+</span><span id="328" class="l"><a class="l" href="#328">328 </a>            <span class="php-comment">// Create the new and old index</span>
 </span><span id="329" class="l"><a class="l" href="#329">329 </a>            <span class="php-var">$old_index</span> = text2words(<span class="php-var">$old_body</span>, <span class="php-var">$customIndexSettings</span>[<span class="php-quote">'bytes_per_word'</span>], <span class="php-keyword1">true</span>);
 </span><span id="330" class="l"><a class="l" href="#330">330 </a>            <span class="php-var">$new_index</span> = text2words(<span class="php-var">$msgOptions</span>[<span class="php-quote">'body'</span>], <span class="php-var">$customIndexSettings</span>[<span class="php-quote">'bytes_per_word'</span>], <span class="php-keyword1">true</span>);
 </span><span id="331" class="l"><a class="l" href="#331">331 </a>

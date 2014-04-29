@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-	<meta name="generator" content="ApiGen 2.8.0">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="generator" content="ApiGen 2.8.0" />
 
 	<title>Class ManageBans_Controller | ElkArte Documentation</title>
 
 	<script type="text/javascript" src="resources/combined.js?3648714599"></script>
-	<script type="text/javascript" src="elementlist.js?3850865134"></script>
-	<link rel="stylesheet" type="text/css" media="all" href="resources/bootstrap.min.css?260161822">
-	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?2015443609">
+	<script type="text/javascript" src="elementlist.js?3593784124"></script>
+	<link rel="stylesheet" type="text/css" media="all" href="resources/bootstrap.min.css?260161822" />
+	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?2015443609" />
 
 </head>
 
@@ -45,9 +45,9 @@
 	<div id="left">
 	<div id="menu">
 		<form id="search" class="form-search">
-			<input type="hidden" name="cx" value="">
-			<input type="hidden" name="ie" value="UTF-8">
-			<input type="text" name="q" class="search-query" placeholder="Search">
+			<input type="hidden" name="cx" value="" />
+			<input type="hidden" name="ie" value="UTF-8" />
+			<input type="text" name="q" class="search-query" placeholder="Search" />
 		</form>
 
 
@@ -79,6 +79,8 @@
 				<li><a href="package-CoreFeatures.html">CoreFeatures</a>
 						</li>
 				<li><a href="package-Drafts.html">Drafts</a>
+						</li>
+				<li><a href="package-Graphics.html">Graphics</a>
 						</li>
 				<li><a href="package-Languages.html">Languages</a>
 						</li>
@@ -137,9 +139,11 @@
 				<li><a href="function-banLoadAdditionalIPsError.html">banLoadAdditionalIPsError</a></li>
 				<li><a href="function-banLoadAdditionalIPsMember.html">banLoadAdditionalIPsMember</a></li>
 				<li><a href="function-banLogItems.html">banLogItems</a></li>
+				<li><a href="function-banPermissions.html">banPermissions</a></li>
 				<li><a href="function-checkExistingTriggerIP.html">checkExistingTriggerIP</a></li>
 				<li><a href="function-getMemberData.html">getMemberData</a></li>
 				<li><a href="function-insertBanGroup.html">insertBanGroup</a></li>
+				<li><a href="function-isBannedEmail.html">isBannedEmail</a></li>
 				<li><a href="function-list_getBanItems.html">list_getBanItems</a></li>
 				<li><a href="function-list_getBanLogEntries.html">list_getBanLogEntries</a></li>
 				<li><a href="function-list_getBans.html">list_getBans</a></li>
@@ -148,6 +152,7 @@
 				<li><a href="function-list_getNumBanLogEntries.html">list_getNumBanLogEntries</a></li>
 				<li><a href="function-list_getNumBans.html">list_getNumBans</a></li>
 				<li><a href="function-list_getNumBanTriggers.html">list_getNumBanTriggers</a></li>
+				<li><a href="function-log_ban.html">log_ban</a></li>
 				<li><a href="function-logTriggersUpdates.html">logTriggersUpdates</a></li>
 				<li><a href="function-range2ip.html">range2ip</a></li>
 				<li><a href="function-removeBanGroups.html">removeBanGroups</a></li>
@@ -186,7 +191,7 @@ panel.</p>
 			
 		</dd>
 		<dd style="padding-left:30px">
-			<img src="resources/inherit.png" alt="Extended by">
+			<img src="resources/inherit.png" alt="Extended by" />
 <b><span>ManageBans_Controller</span></b>			
 			
 			
@@ -204,13 +209,13 @@ panel.</p>
 		
 		
 		
-		<b>Package:</b> <a href="package-Bans.html">Bans</a><br>
+		<b>Package:</b> <a href="package-Bans.html">Bans</a><br />
 
 				<b>Copyright:</b>
-				ElkArte Forum contributors<br>
+				ElkArte Forum contributors<br />
 				<b>License:</b>
-				<a href="BSD">http://opensource.org/licenses/BSD-3-Clause</a><br>
-		<b>Located at</b> <a href="source-class-ManageBans_Controller.html#17-1086" title="Go to source code">sources/admin/ManageBans.controller.php</a><br>
+				<a href="BSD">http://opensource.org/licenses/BSD-3-Clause</a><br />
+		<b>Located at</b> <a href="source-class-ManageBans_Controller.html#17-1089" title="Go to source code">sources/admin/ManageBans.controller.php</a><br />
 	</div>
 
 
@@ -228,7 +233,7 @@ panel.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_action_index">#</a>
-			<code><a href="source-class-ManageBans_Controller.html#25-96" title="Go to source code">action_index</a>( )</code>
+			<code><a href="source-class-ManageBans_Controller.html#25-99" title="Go to source code">action_index</a>( )</code>
 
 			<div class="description short">
 				
@@ -261,7 +266,7 @@ panel.</p>
 
 					<h4>Uses</h4>
 					<div class="list">
-							ManageBans template.<br>
+							ManageBans template.<br />
 					</div>
 
 
@@ -279,7 +284,7 @@ panel.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_action_list">#</a>
-			<code><a href="source-class-ManageBans_Controller.html#98-290" title="Go to source code">action_list</a>( )</code>
+			<code><a href="source-class-ManageBans_Controller.html#101-293" title="Go to source code">action_list</a>( )</code>
 
 			<div class="description short">
 				
@@ -310,7 +315,7 @@ panel.</p>
 
 					<h4>Uses</h4>
 					<div class="list">
-							the main ManageBans template.<br>
+							the main ManageBans template.<br />
 					</div>
 
 
@@ -328,7 +333,7 @@ panel.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_action_edit">#</a>
-			<code><a href="source-class-ManageBans_Controller.html#292-511" title="Go to source code">action_edit</a>( )</code>
+			<code><a href="source-class-ManageBans_Controller.html#295-514" title="Go to source code">action_edit</a>( )</code>
 
 			<div class="description short">
 				
@@ -370,7 +375,7 @@ ManageBans template. - shows a list of ban triggers for the specified ban.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_action_log">#</a>
-			<code><a href="source-class-ManageBans_Controller.html#513-660" title="Go to source code">action_log</a>( )</code>
+			<code><a href="source-class-ManageBans_Controller.html#516-663" title="Go to source code">action_log</a>( )</code>
 
 			<div class="description short">
 				
@@ -415,7 +420,7 @@ ManageBans template. - shows a list of ban triggers for the specified ban.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_action_edit2">#</a>
-			<code><a href="source-class-ManageBans_Controller.html#662-748" title="Go to source code">action_edit2</a>( )</code>
+			<code><a href="source-class-ManageBans_Controller.html#665-751" title="Go to source code">action_edit2</a>( )</code>
 
 			<div class="description short">
 				
@@ -450,7 +455,7 @@ triggers.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_action_edittrigger">#</a>
-			<code><a href="source-class-ManageBans_Controller.html#750-865" title="Go to source code">action_edittrigger</a>( )</code>
+			<code><a href="source-class-ManageBans_Controller.html#753-868" title="Go to source code">action_edittrigger</a>( )</code>
 
 			<div class="description short">
 				
@@ -481,7 +486,7 @@ triggers or modifying existing ones.</p>
 
 					<h4>Uses</h4>
 					<div class="list">
-							sub template ban_edit_trigger<br>
+							sub template ban_edit_trigger<br />
 					</div>
 
 
@@ -499,7 +504,7 @@ triggers or modifying existing ones.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_action_browse">#</a>
-			<code><a href="source-class-ManageBans_Controller.html#867-1085" title="Go to source code">action_browse</a>( )</code>
+			<code><a href="source-class-ManageBans_Controller.html#870-1088" title="Go to source code">action_browse</a>( )</code>
 
 			<div class="description short">
 				
@@ -526,7 +531,7 @@ triggers or modifying existing ones.</p>
 
 					<h4>Uses</h4>
 					<div class="list">
-							ManageBans template, browse_triggers sub template.<br>
+							ManageBans template, browse_triggers sub template.<br />
 					</div>
 
 

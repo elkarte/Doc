@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-	<meta name="generator" content="ApiGen 2.8.0">
-	<meta name="robots" content="noindex">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="generator" content="ApiGen 2.8.0" />
+	<meta name="robots" content="noindex" />
 
 	<title>File sources/controllers/Mentions.controller.php | ElkArte Documentation</title>
 
 	<script type="text/javascript" src="resources/combined.js?3648714599"></script>
-	<script type="text/javascript" src="elementlist.js?3850865134"></script>
-	<link rel="stylesheet" type="text/css" media="all" href="resources/bootstrap.min.css?260161822">
-	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?2015443609">
+	<script type="text/javascript" src="elementlist.js?3593784124"></script>
+	<link rel="stylesheet" type="text/css" media="all" href="resources/bootstrap.min.css?260161822" />
+	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?2015443609" />
 
 </head>
 
@@ -47,9 +47,9 @@
 	<div id="left">
 	<div id="menu">
 		<form id="search" class="form-search">
-			<input type="hidden" name="cx" value="">
-			<input type="hidden" name="ie" value="UTF-8">
-			<input type="text" name="q" class="search-query" placeholder="Search">
+			<input type="hidden" name="cx" value="" />
+			<input type="hidden" name="ie" value="UTF-8" />
+			<input type="text" name="q" class="search-query" placeholder="Search" />
 		</form>
 
 
@@ -81,6 +81,8 @@
 				<li><a href="package-CoreFeatures.html">CoreFeatures</a>
 						</li>
 				<li><a href="package-Drafts.html">Drafts</a>
+						</li>
+				<li><a href="package-Graphics.html">Graphics</a>
 						</li>
 				<li><a href="package-Languages.html">Languages</a>
 						</li>
@@ -418,11 +420,11 @@
 </span></span><span id="264" class="l"><a class="l" href="#264">264 </a><span class="php-quote">                            $opts = \'\';
 </span></span><span id="265" class="l"><a class="l" href="#265">265 </a><span class="php-quote">
 </span></span><span id="266" class="l"><a class="l" href="#266">266 </a><span class="php-quote">                            if (empty($row[\'status\']))
-</span></span><span id="267" class="l"><a class="l" href="#267">267 </a><span class="php-quote">                                $opts = \'&lt;a href=&quot;?action=mentions;sa=updatestatus;mark=read;item=\' . $row[\'id_mention\'] . \';\' . $context[\'session_var\'] . \'=\' . $context[\'session_id\'] . \';&quot;&gt;&lt;img title=&quot;\' . $txt[\'mentions_markread\'] . \'&quot; src=&quot;\' . $settings[\'images_url\'] . \'/icons/mark_read.png&quot; alt=&quot;*&quot; /&gt;&lt;/a&gt;&amp;nbsp;\';
+</span></span><span id="267" class="l"><a class="l" href="#267">267 </a><span class="php-quote">                                $opts = \'&lt;a href=&quot;'</span> . <span class="php-var">$scripturl</span> . <span class="php-quote">'?action=mentions;sa=updatestatus;mark=read;item=\' . $row[\'id_mention\'] . \';\' . $context[\'session_var\'] . \'=\' . $context[\'session_id\'] . \';&quot;&gt;&lt;img title=&quot;\' . $txt[\'mentions_markread\'] . \'&quot; src=&quot;\' . $settings[\'images_url\'] . \'/icons/mark_read.png&quot; alt=&quot;*&quot; /&gt;&lt;/a&gt;&amp;nbsp;\';
 </span></span><span id="268" class="l"><a class="l" href="#268">268 </a><span class="php-quote">                            else
-</span></span><span id="269" class="l"><a class="l" href="#269">269 </a><span class="php-quote">                                $opts = \'&lt;a href=&quot;?action=mentions;sa=updatestatus;mark=unread;item=\' . $row[\'id_mention\'] . \';\' . $context[\'session_var\'] . \'=\' . $context[\'session_id\'] . \';&quot;&gt;&lt;img title=&quot;\' . $txt[\'mentions_markunread\'] . \'&quot; src=&quot;\' . $settings[\'images_url\'] . \'/icons/mark_unread.png&quot; alt=&quot;*&quot; /&gt;&lt;/a&gt;&amp;nbsp;\';
+</span></span><span id="269" class="l"><a class="l" href="#269">269 </a><span class="php-quote">                                $opts = \'&lt;a href=&quot;'</span> . <span class="php-var">$scripturl</span> . <span class="php-quote">'?action=mentions;sa=updatestatus;mark=unread;item=\' . $row[\'id_mention\'] . \';\' . $context[\'session_var\'] . \'=\' . $context[\'session_id\'] . \';&quot;&gt;&lt;img title=&quot;\' . $txt[\'mentions_markunread\'] . \'&quot; src=&quot;\' . $settings[\'images_url\'] . \'/icons/mark_unread.png&quot; alt=&quot;*&quot; /&gt;&lt;/a&gt;&amp;nbsp;\';
 </span></span><span id="270" class="l"><a class="l" href="#270">270 </a><span class="php-quote">
-</span></span><span id="271" class="l"><a class="l" href="#271">271 </a><span class="php-quote">                            return $opts . \'&lt;a href=&quot;?action=mentions;sa=updatestatus;mark=delete;item=\' . $row[\'id_mention\'] . \';\' . $context[\'session_var\'] . \'=\' . $context[\'session_id\'] . \';&quot;&gt;&lt;img title=&quot;\' . $txt[\'delete\'] . \'&quot; src=&quot;\' . $settings[\'images_url\'] . \'/icons/delete.png&quot; alt=&quot;*&quot; /&gt;&lt;/a&gt;\';
+</span></span><span id="271" class="l"><a class="l" href="#271">271 </a><span class="php-quote">                            return $opts . \'&lt;a href=&quot;'</span> . <span class="php-var">$scripturl</span> . <span class="php-quote">'?action=mentions;sa=updatestatus;mark=delete;item=\' . $row[\'id_mention\'] . \';\' . $context[\'session_var\'] . \'=\' . $context[\'session_id\'] . \';&quot;&gt;&lt;img title=&quot;\' . $txt[\'delete\'] . \'&quot; src=&quot;\' . $settings[\'images_url\'] . \'/icons/delete.png&quot; alt=&quot;*&quot; /&gt;&lt;/a&gt;\';
 </span></span><span id="272" class="l"><a class="l" href="#272">272 </a><span class="php-quote">                        '</span>),
 </span><span id="273" class="l"><a class="l" href="#273">273 </a>                        <span class="php-quote">'class'</span> =&gt; <span class="php-quote">'listaction'</span>,
 </span><span id="274" class="l"><a class="l" href="#274">274 </a>                    ),

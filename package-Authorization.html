@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-	<meta name="generator" content="ApiGen 2.8.0">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="generator" content="ApiGen 2.8.0" />
 
 	<title>Package Authorization | ElkArte Documentation</title>
 
 	<script type="text/javascript" src="resources/combined.js?3648714599"></script>
-	<script type="text/javascript" src="elementlist.js?3850865134"></script>
-	<link rel="stylesheet" type="text/css" media="all" href="resources/bootstrap.min.css?260161822">
-	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?2015443609">
+	<script type="text/javascript" src="elementlist.js?3593784124"></script>
+	<link rel="stylesheet" type="text/css" media="all" href="resources/bootstrap.min.css?260161822" />
+	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?2015443609" />
 
 </head>
 
@@ -44,9 +44,9 @@
 	<div id="left">
 	<div id="menu">
 		<form id="search" class="form-search">
-			<input type="hidden" name="cx" value="">
-			<input type="hidden" name="ie" value="UTF-8">
-			<input type="text" name="q" class="search-query" placeholder="Search">
+			<input type="hidden" name="cx" value="" />
+			<input type="hidden" name="ie" value="UTF-8" />
+			<input type="text" name="q" class="search-query" placeholder="Search" />
 		</form>
 
 
@@ -78,6 +78,8 @@
 				<li><a href="package-CoreFeatures.html">CoreFeatures</a>
 						</li>
 				<li><a href="package-Drafts.html">Drafts</a>
+						</li>
+				<li><a href="package-Graphics.html">Graphics</a>
 						</li>
 				<li><a href="package-Languages.html">Languages</a>
 						</li>
@@ -125,10 +127,29 @@
 
 			<h3>Functions</h3>
 			<ul>
+				<li><a href="function-adminLogin.html">adminLogin</a></li>
+				<li><a href="function-adminLogin_outputPostVars.html">adminLogin_outputPostVars</a></li>
 				<li><a href="function-checkActivation.html">checkActivation</a></li>
+				<li><a href="function-construct_query_string.html">construct_query_string</a></li>
+				<li><a href="function-deleteOnline.html">deleteOnline</a></li>
 				<li><a href="function-doLogin.html">doLogin</a></li>
+				<li><a href="function-elk_setcookie.html">elk_setcookie</a></li>
+				<li><a href="function-findMembers.html">findMembers</a></li>
+				<li><a href="function-findUser.html">findUser</a></li>
+				<li><a href="function-generateValidationCode.html">generateValidationCode</a></li>
+				<li><a href="function-isFirstLogin.html">isFirstLogin</a></li>
+				<li><a href="function-loadExistingMember.html">loadExistingMember</a></li>
+				<li><a href="function-logOnline.html">logOnline</a></li>
 				<li><a href="function-md5_hmac.html">md5_hmac</a></li>
 				<li><a href="function-phpBB3_password_check.html">phpBB3_password_check</a></li>
+				<li><a href="function-rebuildModCache.html">rebuildModCache</a></li>
+				<li><a href="function-resetPassword.html">resetPassword</a></li>
+				<li><a href="function-setLoginCookie.html">setLoginCookie</a></li>
+				<li><a href="function-url_parts.html">url_parts</a></li>
+				<li><a href="function-userByEmail.html">userByEmail</a></li>
+				<li><a href="function-validateLoginPassword.html">validateLoginPassword</a></li>
+				<li><a href="function-validatePassword.html">validatePassword</a></li>
+				<li><a href="function-validateUsername.html">validateUsername</a></li>
 			</ul>
 		</div>
 	</div>
@@ -151,12 +172,56 @@
 <h2>Functions summary</h2>
 <table class="summary table table-bordered table-striped" id="functions">
 <tr>
+	<td class="name"><a href="function-adminLogin.html">adminLogin</a></td>
+	<td>Question the verity of the admin by asking for his or her password.</td>
+</tr>
+<tr>
+	<td class="name"><a href="function-adminLogin_outputPostVars.html">adminLogin_outputPostVars</a></td>
+	<td>Used by the adminLogin() function.</td>
+</tr>
+<tr>
 	<td class="name"><a href="function-checkActivation.html">checkActivation</a></td>
 	<td>Check activation status of the current user.</td>
 </tr>
 <tr>
+	<td class="name"><a href="function-construct_query_string.html">construct_query_string</a></td>
+	<td>Properly urlencodes a string to be used in a query</td>
+</tr>
+<tr>
+	<td class="name"><a href="function-deleteOnline.html">deleteOnline</a></td>
+	<td>Delete expired/outdated session from log_online</td>
+</tr>
+<tr>
 	<td class="name"><a href="function-doLogin.html">doLogin</a></td>
 	<td>This function performs the logging in.</td>
+</tr>
+<tr>
+	<td class="name"><a href="function-elk_setcookie.html">elk_setcookie</a></td>
+	<td>The same thing as setcookie but allows for integration hook</td>
+</tr>
+<tr>
+	<td class="name"><a href="function-findMembers.html">findMembers</a></td>
+	<td>Finds members by email address, username, or real name.</td>
+</tr>
+<tr>
+	<td class="name"><a href="function-findUser.html">findUser</a></td>
+	<td>Search for a member by given criterias</td>
+</tr>
+<tr>
+	<td class="name"><a href="function-generateValidationCode.html">generateValidationCode</a></td>
+	<td>Generate a random validation code.</td>
+</tr>
+<tr>
+	<td class="name"><a href="function-isFirstLogin.html">isFirstLogin</a></td>
+	<td>This functions determines whether this is the first login of the given user.</td>
+</tr>
+<tr>
+	<td class="name"><a href="function-loadExistingMember.html">loadExistingMember</a></td>
+	<td>This function loads many settings of a user given by name or email.</td>
+</tr>
+<tr>
+	<td class="name"><a href="function-logOnline.html">logOnline</a></td>
+	<td>Set the passed users online or not, in the online log table</td>
 </tr>
 <tr>
 	<td class="name"><a href="function-md5_hmac.html">md5_hmac</a></td>
@@ -165,6 +230,38 @@
 <tr>
 	<td class="name"><a href="function-phpBB3_password_check.html">phpBB3_password_check</a></td>
 	<td>Custom encryption for phpBB3 based passwords.</td>
+</tr>
+<tr>
+	<td class="name"><a href="function-rebuildModCache.html">rebuildModCache</a></td>
+	<td>Quickly find out what moderation authority this user has</td>
+</tr>
+<tr>
+	<td class="name"><a href="function-resetPassword.html">resetPassword</a></td>
+	<td>Generates a random password for a user and emails it to them.</td>
+</tr>
+<tr>
+	<td class="name"><a href="function-setLoginCookie.html">setLoginCookie</a></td>
+	<td>Sets the login cookie and session based on the id_member and password passed.</td>
+</tr>
+<tr>
+	<td class="name"><a href="function-url_parts.html">url_parts</a></td>
+	<td>Get the domain and path for the cookie</td>
+</tr>
+<tr>
+	<td class="name"><a href="function-userByEmail.html">userByEmail</a></td>
+	<td>Find users by their email address.</td>
+</tr>
+<tr>
+	<td class="name"><a href="function-validateLoginPassword.html">validateLoginPassword</a></td>
+	<td>Checks whether an entered password is correct for the user</td>
+</tr>
+<tr>
+	<td class="name"><a href="function-validatePassword.html">validatePassword</a></td>
+	<td>Checks whether a password meets the current forum rules</td>
+</tr>
+<tr>
+	<td class="name"><a href="function-validateUsername.html">validateUsername</a></td>
+	<td>Checks a username obeys a load of rules</td>
 </tr>
 </table>
 </div>

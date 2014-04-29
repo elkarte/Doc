@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-	<meta name="generator" content="ApiGen 2.8.0">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="generator" content="ApiGen 2.8.0" />
 
 	<title>Class Sphinx_Search | ElkArte Documentation</title>
 
 	<script type="text/javascript" src="resources/combined.js?3648714599"></script>
-	<script type="text/javascript" src="elementlist.js?3850865134"></script>
-	<link rel="stylesheet" type="text/css" media="all" href="resources/bootstrap.min.css?260161822">
-	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?2015443609">
+	<script type="text/javascript" src="elementlist.js?3593784124"></script>
+	<link rel="stylesheet" type="text/css" media="all" href="resources/bootstrap.min.css?260161822" />
+	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?2015443609" />
 
 </head>
 
@@ -45,9 +45,9 @@
 	<div id="left">
 	<div id="menu">
 		<form id="search" class="form-search">
-			<input type="hidden" name="cx" value="">
-			<input type="hidden" name="ie" value="UTF-8">
-			<input type="text" name="q" class="search-query" placeholder="Search">
+			<input type="hidden" name="cx" value="" />
+			<input type="hidden" name="ie" value="UTF-8" />
+			<input type="text" name="q" class="search-query" placeholder="Search" />
 		</form>
 
 
@@ -79,6 +79,8 @@
 				<li><a href="package-CoreFeatures.html">CoreFeatures</a>
 						</li>
 				<li><a href="package-Drafts.html">Drafts</a>
+						</li>
+				<li><a href="package-Graphics.html">Graphics</a>
 						</li>
 				<li><a href="package-Languages.html">Languages</a>
 						</li>
@@ -158,8 +160,18 @@
 
 	<div class="description">
 	
-<p>SearchAPI-Sphinx.class.php, Sphinx API, used when an Sphinx search daemon is
-running Access is via the Sphinx native search API (SphinxAPI)</p>
+<p>SearchAPI-Sphinx.class.php, Sphinx API,</p>
+
+<p>What it does:</p>
+
+<ul>
+	<li>used when a Sphinx search daemon is running</li>
+
+	<li>Access is via the Sphinx native search API (SphinxAPI)</li>
+
+	<li>sphinxapi.php is part of the Sphinx package, the file must be addded to
+	SOURCDIR</li>
+</ul>
 
 	</div>
 
@@ -175,10 +187,10 @@ running Access is via the Sphinx native search API (SphinxAPI)</p>
 		
 		
 		
-		<b>Package:</b> <a href="package-Search.html">Search</a><br>
+		<b>Package:</b> <a href="package-Search.html">Search</a><br />
 
 				<b>Copyright:</b>
-				ElkArte Forum contributors<br>
+				ElkArte Forum contributors<br />
 				<b>License:</b>
 				<a href="BSD">http://opensource.org/licenses/BSD-3-Clause
 
@@ -186,8 +198,8 @@ This software is a derived product, based on:
 
 Simple Machines Forum (SMF)
 copyright:	2011 Simple Machines (http://www.simplemachines.org)
-license:  	BSD, See included LICENSE.TXT for terms and conditions.</a><br>
-		<b>Located at</b> <a href="source-class-Sphinx_Search.html#24-298" title="Go to source code">sources/subs/SearchAPI-Sphinx.class.php</a><br>
+license:  	BSD, See included LICENSE.TXT for terms and conditions.</a><br />
+		<b>Located at</b> <a href="source-class-Sphinx_Search.html#24-328" title="Go to source code">sources/subs/SearchAPI-Sphinx.class.php</a><br />
 	</div>
 
 
@@ -205,7 +217,7 @@ license:  	BSD, See included LICENSE.TXT for terms and conditions.</a><br>
 
 			<td class="name"><div>
 			<a class="anchor" href="#___construct">#</a>
-			<code><a href="source-class-Sphinx_Search.html#68-83" title="Go to source code">__construct</a>( )</code>
+			<code><a href="source-class-Sphinx_Search.html#72-87" title="Go to source code">__construct</a>( )</code>
 
 			<div class="description short">
 				
@@ -238,7 +250,7 @@ license:  	BSD, See included LICENSE.TXT for terms and conditions.</a><br>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_supportsMethod">#</a>
-			<code><a href="source-class-Sphinx_Search.html#85-108" title="Go to source code">supportsMethod</a>( <span>string <var>$methodName</var></span>, <span>mixed[]|null <var>$query_params</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-Sphinx_Search.html#89-111" title="Go to source code">supportsMethod</a>( <span>string <var>$methodName</var></span>, <span>mixed[]|null <var>$query_params</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				
@@ -278,7 +290,7 @@ license:  	BSD, See included LICENSE.TXT for terms and conditions.</a><br>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_isValid">#</a>
-			<code><a href="source-class-Sphinx_Search.html#110-118" title="Go to source code">isValid</a>( )</code>
+			<code><a href="source-class-Sphinx_Search.html#113-121" title="Go to source code">isValid</a>( )</code>
 
 			<div class="description short">
 				
@@ -311,7 +323,7 @@ license:  	BSD, See included LICENSE.TXT for terms and conditions.</a><br>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_searchSort">#</a>
-			<code><a href="source-class-Sphinx_Search.html#120-137" title="Go to source code">searchSort</a>( <span>string <var>$a</var></span>, <span>string <var>$b</var></span> )</code>
+			<code><a href="source-class-Sphinx_Search.html#123-140" title="Go to source code">searchSort</a>( <span>string <var>$a</var></span>, <span>string <var>$b</var></span> )</code>
 
 			<div class="description short">
 				
@@ -339,7 +351,7 @@ small words that are excluded.</p>
 
 					<h4>Returns</h4>
 					<div class="list">
-						<code>integer</code><br>
+						<code>integer</code><br />
 					</div>
 
 
@@ -359,7 +371,7 @@ small words that are excluded.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_prepareIndexes">#</a>
-			<code><a href="source-class-Sphinx_Search.html#139-155" title="Go to source code">prepareIndexes</a>( <span>mixed[] <var>$word</var></span>, <span>mixed[] <var>&amp; $wordsSearch</var></span>, <span>string[] <var>&amp; $wordsExclude</var></span>, <span>boolean <var>$isExcluded</var></span> )</code>
+			<code><a href="source-class-Sphinx_Search.html#142-158" title="Go to source code">prepareIndexes</a>( <span>mixed[] <var>$word</var></span>, <span>mixed[] <var>&amp; $wordsSearch</var></span>, <span>string[] <var>&amp; $wordsExclude</var></span>, <span>boolean <var>$isExcluded</var></span> )</code>
 
 			<div class="description short">
 				
@@ -405,7 +417,7 @@ them?</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_searchQuery">#</a>
-			<code><a href="source-class-Sphinx_Search.html#157-271" title="Go to source code">searchQuery</a>( <span>mixed[] <var>$search_params</var></span>, <span>mixed[] <var>$search_words</var></span>, <span>string[] <var>$excluded_words</var></span>, <span>int[] <var>&amp; $participants</var></span>, <span>string[] <var>&amp; $search_results</var></span> )</code>
+			<code><a href="source-class-Sphinx_Search.html#160-301" title="Go to source code">searchQuery</a>( <span>mixed[] <var>$search_params</var></span>, <span>mixed[] <var>$search_words</var></span>, <span>string[] <var>$excluded_words</var></span>, <span>int[] <var>&amp; $participants</var></span>, <span>string[] <var>&amp; $search_results</var></span> )</code>
 
 			<div class="description short">
 				
@@ -451,7 +463,7 @@ them?</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#__cleanWordSphinx">#</a>
-			<code><a href="source-class-Sphinx_Search.html#273-297" title="Go to source code">_cleanWordSphinx</a>( <span>string <var>$sphinx_term</var></span>, <span>SphinxClient <var>$sphinx_client</var></span> )</code>
+			<code><a href="source-class-Sphinx_Search.html#303-327" title="Go to source code">_cleanWordSphinx</a>( <span>string <var>$sphinx_term</var></span>, <span>SphinxClient <var>$sphinx_client</var></span> )</code>
 
 			<div class="description short">
 				
@@ -502,7 +514,7 @@ them?</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Sphinx_Search.html#32-36" title="Go to source code"><var>$version_compatible</var></a>
+					<a href="source-class-Sphinx_Search.html#36-40" title="Go to source code"><var>$version_compatible</var></a>
 			</td>
 			<td class="description"><div>
 				<a href="#$version_compatible" class="anchor">#</a>
@@ -530,7 +542,7 @@ against API changes.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Sphinx_Search.html#38-42" title="Go to source code"><var>$min_elk_version</var></a>
+					<a href="source-class-Sphinx_Search.html#42-46" title="Go to source code"><var>$min_elk_version</var></a>
 			</td>
 			<td class="description"><div>
 				<a href="#$min_elk_version" class="anchor">#</a>
@@ -556,7 +568,7 @@ against API changes.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Sphinx_Search.html#44-48" title="Go to source code"><var>$is_supported</var></a>
+					<a href="source-class-Sphinx_Search.html#48-52" title="Go to source code"><var>$is_supported</var></a>
 			</td>
 			<td class="description"><div>
 				<a href="#$is_supported" class="anchor">#</a>
@@ -582,7 +594,7 @@ against API changes.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Sphinx_Search.html#50-54" title="Go to source code"><var>$bannedWords</var></a>
+					<a href="source-class-Sphinx_Search.html#54-58" title="Go to source code"><var>$bannedWords</var></a>
 			</td>
 			<td class="description"><div>
 				<a href="#$bannedWords" class="anchor">#</a>
@@ -608,7 +620,7 @@ against API changes.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Sphinx_Search.html#56-60" title="Go to source code"><var>$min_word_length</var></a>
+					<a href="source-class-Sphinx_Search.html#60-64" title="Go to source code"><var>$min_word_length</var></a>
 			</td>
 			<td class="description"><div>
 				<a href="#$min_word_length" class="anchor">#</a>
@@ -634,7 +646,7 @@ against API changes.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Sphinx_Search.html#62-66" title="Go to source code"><var>$supported_databases</var></a>
+					<a href="source-class-Sphinx_Search.html#66-70" title="Go to source code"><var>$supported_databases</var></a>
 			</td>
 			<td class="description"><div>
 				<a href="#$supported_databases" class="anchor">#</a>

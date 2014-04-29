@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-	<meta name="generator" content="ApiGen 2.8.0">
-	<meta name="robots" content="noindex">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="generator" content="ApiGen 2.8.0" />
+	<meta name="robots" content="noindex" />
 
 	<title>File sources/subs/EmailParse.class.php | ElkArte Documentation</title>
 
 	<script type="text/javascript" src="resources/combined.js?3648714599"></script>
-	<script type="text/javascript" src="elementlist.js?3850865134"></script>
-	<link rel="stylesheet" type="text/css" media="all" href="resources/bootstrap.min.css?260161822">
-	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?2015443609">
+	<script type="text/javascript" src="elementlist.js?3593784124"></script>
+	<link rel="stylesheet" type="text/css" media="all" href="resources/bootstrap.min.css?260161822" />
+	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?2015443609" />
 
 </head>
 
@@ -47,9 +47,9 @@
 	<div id="left">
 	<div id="menu">
 		<form id="search" class="form-search">
-			<input type="hidden" name="cx" value="">
-			<input type="hidden" name="ie" value="UTF-8">
-			<input type="text" name="q" class="search-query" placeholder="Search">
+			<input type="hidden" name="cx" value="" />
+			<input type="hidden" name="ie" value="UTF-8" />
+			<input type="text" name="q" class="search-query" placeholder="Search" />
 		</form>
 
 
@@ -81,6 +81,8 @@
 				<li><a href="package-CoreFeatures.html">CoreFeatures</a>
 						</li>
 				<li><a href="package-Drafts.html">Drafts</a>
+						</li>
+				<li><a href="package-Graphics.html">Graphics</a>
 						</li>
 				<li><a href="package-Languages.html">Languages</a>
 						</li>
@@ -148,6 +150,9 @@
 				<li><a href="function-maillist_templates.html">maillist_templates</a></li>
 				<li><a href="function-pbe_check_moderation.html">pbe_check_moderation</a></li>
 				<li><a href="function-pbe_clean_email_subject.html">pbe_clean_email_subject</a></li>
+				<li><a href="function-pbe_create_pm.html">pbe_create_pm</a></li>
+				<li><a href="function-pbe_create_post.html">pbe_create_post</a></li>
+				<li><a href="function-pbe_create_topic.html">pbe_create_topic</a></li>
 				<li><a href="function-pbe_email_attachments.html">pbe_email_attachments</a></li>
 				<li><a href="function-pbe_email_quote_depth.html">pbe_email_quote_depth</a></li>
 				<li><a href="function-pbe_email_to_bbc.html">pbe_email_to_bbc</a></li>
@@ -157,6 +162,7 @@
 				<li><a href="function-pbe_fix_client_quotes.html">pbe_fix_client_quotes</a></li>
 				<li><a href="function-pbe_fix_email_body.html">pbe_fix_email_body</a></li>
 				<li><a href="function-pbe_fix_email_quotes.html">pbe_fix_email_quotes</a></li>
+				<li><a href="function-pbe_load_text.html">pbe_load_text</a></li>
 				<li><a href="function-pbe_parse_email_message.html">pbe_parse_email_message</a></li>
 				<li><a href="function-pbe_prepare_text.html">pbe_prepare_text</a></li>
 				<li><a href="function-pbe_str_replace_once.html">pbe_str_replace_once</a></li>
@@ -283,7 +289,7 @@
 </span><span id="97" class="l"><a class="l" href="#97">  97 </a>
 </span><span id="98" class="l"><a class="l" href="#98">  98 </a>    <span class="php-comment">/**
 </span></span><span id="99" class="l"><a class="l" href="#99">  99 </a><span class="php-comment">     * Message type of the key p, m or t
-</span></span><span id="100" class="l"><a class="l" href="#100"> 100 </a><span class="php-comment">     * @var char
+</span></span><span id="100" class="l"><a class="l" href="#100"> 100 </a><span class="php-comment">     * @var string
 </span></span><span id="101" class="l"><a class="l" href="#101"> 101 </a><span class="php-comment">     */</span>
 </span><span id="102" class="l"><a class="l" href="#102"> 102 </a>    <span class="php-keyword1">public</span> <span class="php-var"><a id="$message_type" href="#$message_type">$message_type</a></span> = <span class="php-keyword1">null</span>;
 </span><span id="103" class="l"><a class="l" href="#103"> 103 </a>
@@ -368,14 +374,14 @@
 </span><span id="182" class="l"><a class="l" href="#182"> 182 </a>    <span class="php-comment">/**
 </span></span><span id="183" class="l"><a class="l" href="#183"> 183 </a><span class="php-comment">     * Loads an email message from stdin, file or from a supplied string
 </span></span><span id="184" class="l"><a class="l" href="#184"> 184 </a><span class="php-comment">     *
-</span></span><span id="185" class="l"><a class="l" href="#185"> 185 </a><span class="php-comment">     * @param string $data optional
+</span></span><span id="185" class="l"><a class="l" href="#185"> 185 </a><span class="php-comment">     * @param string $data optional, if supplied must be a full headers+body email string
 </span></span><span id="186" class="l"><a class="l" href="#186"> 186 </a><span class="php-comment">     * @param string $location optional, used for debug
 </span></span><span id="187" class="l"><a class="l" href="#187"> 187 </a><span class="php-comment">     */</span>
 </span><span id="188" class="l"><a class="l" href="#188"> 188 </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_read_data" href="#_read_data">read_data</a>(<span class="php-var">$data</span> = <span class="php-quote">''</span>, <span class="php-var">$location</span> = <span class="php-quote">''</span>)
 </span><span id="189" class="l"><a class="l" href="#189"> 189 </a>    {
 </span><span id="190" class="l"><a class="l" href="#190"> 190 </a>        <span class="php-comment">// Supplied a string of data, use it</span>
-</span><span id="191" class="l"><a class="l" href="#191"> 191 </a>        <span class="php-keyword1">if</span> (<span class="php-var">$data</span>)
-</span><span id="192" class="l"><a class="l" href="#192"> 192 </a>            <span class="php-var">$this</span>-&gt;raw_message = <span class="php-var">$data</span>;
+</span><span id="191" class="l"><a class="l" href="#191"> 191 </a>        <span class="php-keyword1">if</span> (<span class="php-var">$data</span> !== <span class="php-keyword1">null</span>)
+</span><span id="192" class="l"><a class="l" href="#192"> 192 </a>            <span class="php-var">$this</span>-&gt;raw_message = !<span class="php-keyword1">empty</span>(<span class="php-var">$data</span>) ? <span class="php-var">$data</span> : <span class="php-keyword1">false</span>;
 </span><span id="193" class="l"><a class="l" href="#193"> 193 </a>        <span class="php-keyword1">elseif</span> (!<span class="php-keyword2">defined</span>(<span class="php-quote">'STDIN'</span>))
 </span><span id="194" class="l"><a class="l" href="#194"> 194 </a>        {
 </span><span id="195" class="l"><a class="l" href="#195"> 195 </a>            <span class="php-comment">// Called from the ACP, you must have approve permissions</span>

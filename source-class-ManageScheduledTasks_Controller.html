@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-	<meta name="generator" content="ApiGen 2.8.0">
-	<meta name="robots" content="noindex">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="generator" content="ApiGen 2.8.0" />
+	<meta name="robots" content="noindex" />
 
 	<title>File sources/admin/ManageScheduledTasks.controller.php | ElkArte Documentation</title>
 
 	<script type="text/javascript" src="resources/combined.js?3648714599"></script>
-	<script type="text/javascript" src="elementlist.js?3850865134"></script>
-	<link rel="stylesheet" type="text/css" media="all" href="resources/bootstrap.min.css?260161822">
-	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?2015443609">
+	<script type="text/javascript" src="elementlist.js?3593784124"></script>
+	<link rel="stylesheet" type="text/css" media="all" href="resources/bootstrap.min.css?260161822" />
+	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?2015443609" />
 
 </head>
 
@@ -47,9 +47,9 @@
 	<div id="left">
 	<div id="menu">
 		<form id="search" class="form-search">
-			<input type="hidden" name="cx" value="">
-			<input type="hidden" name="ie" value="UTF-8">
-			<input type="text" name="q" class="search-query" placeholder="Search">
+			<input type="hidden" name="cx" value="" />
+			<input type="hidden" name="ie" value="UTF-8" />
+			<input type="text" name="q" class="search-query" placeholder="Search" />
 		</form>
 
 
@@ -81,6 +81,8 @@
 				<li><a href="package-CoreFeatures.html">CoreFeatures</a>
 						</li>
 				<li><a href="package-Drafts.html">Drafts</a>
+						</li>
+				<li><a href="package-Graphics.html">Graphics</a>
 						</li>
 				<li><a href="package-Languages.html">Languages</a>
 						</li>
@@ -211,32 +213,32 @@
 </span><span id="53" class="l"><a class="l" href="#53"> 53 </a>            <span class="php-quote">'tasks'</span> =&gt; <span class="php-keyword1">array</span>(<span class="php-var">$this</span>, <span class="php-quote">'action_tasks'</span>, <span class="php-quote">'permission'</span> =&gt; <span class="php-quote">'admin_forum'</span>),
 </span><span id="54" class="l"><a class="l" href="#54"> 54 </a>        );
 </span><span id="55" class="l"><a class="l" href="#55"> 55 </a>
-</span><span id="56" class="l"><a class="l" href="#56"> 56 </a>        call_integration_hook(<span class="php-quote">'integrate_manage_scheduled_tasks'</span>, <span class="php-keyword1">array</span>(&amp;<span class="php-var">$subActions</span>));
-</span><span id="57" class="l"><a class="l" href="#57"> 57 </a>
-</span><span id="58" class="l"><a class="l" href="#58"> 58 </a>        <span class="php-comment">// We need to find what's the action.</span>
-</span><span id="59" class="l"><a class="l" href="#59"> 59 </a>        <span class="php-var">$subAction</span> = <span class="php-keyword1">isset</span>(<span class="php-var">$_REQUEST</span>[<span class="php-quote">'sa'</span>]) &amp;&amp; <span class="php-keyword1">isset</span>(<span class="php-var">$subActions</span>[<span class="php-var">$_REQUEST</span>[<span class="php-quote">'sa'</span>]]) ? <span class="php-var">$_REQUEST</span>[<span class="php-quote">'sa'</span>] : <span class="php-quote">'tasks'</span>;
-</span><span id="60" class="l"><a class="l" href="#60"> 60 </a>
-</span><span id="61" class="l"><a class="l" href="#61"> 61 </a>        <span class="php-var">$context</span>[<span class="php-quote">'page_title'</span>] = <span class="php-var">$txt</span>[<span class="php-quote">'maintain_info'</span>];
-</span><span id="62" class="l"><a class="l" href="#62"> 62 </a>        <span class="php-var">$context</span>[<span class="php-quote">'sub_action'</span>] = <span class="php-var">$subAction</span>;
-</span><span id="63" class="l"><a class="l" href="#63"> 63 </a>
-</span><span id="64" class="l"><a class="l" href="#64"> 64 </a>        <span class="php-comment">// Now for the lovely tabs. That we all love.</span>
-</span><span id="65" class="l"><a class="l" href="#65"> 65 </a>        <span class="php-var">$context</span>[<span class="php-var">$context</span>[<span class="php-quote">'admin_menu_name'</span>]][<span class="php-quote">'tab_data'</span>] = <span class="php-keyword1">array</span>(
-</span><span id="66" class="l"><a class="l" href="#66"> 66 </a>            <span class="php-quote">'title'</span> =&gt; <span class="php-var">$txt</span>[<span class="php-quote">'scheduled_tasks_title'</span>],
-</span><span id="67" class="l"><a class="l" href="#67"> 67 </a>            <span class="php-quote">'help'</span> =&gt; <span class="php-quote">''</span>,
-</span><span id="68" class="l"><a class="l" href="#68"> 68 </a>            <span class="php-quote">'description'</span> =&gt; <span class="php-var">$txt</span>[<span class="php-quote">'maintain_info'</span>],
-</span><span id="69" class="l"><a class="l" href="#69"> 69 </a>            <span class="php-quote">'tabs'</span> =&gt; <span class="php-keyword1">array</span>(
-</span><span id="70" class="l"><a class="l" href="#70"> 70 </a>                <span class="php-quote">'tasks'</span> =&gt; <span class="php-keyword1">array</span>(
-</span><span id="71" class="l"><a class="l" href="#71"> 71 </a>                    <span class="php-quote">'description'</span> =&gt; <span class="php-var">$txt</span>[<span class="php-quote">'maintain_tasks_desc'</span>],
-</span><span id="72" class="l"><a class="l" href="#72"> 72 </a>                ),
-</span><span id="73" class="l"><a class="l" href="#73"> 73 </a>                <span class="php-quote">'tasklog'</span> =&gt; <span class="php-keyword1">array</span>(
-</span><span id="74" class="l"><a class="l" href="#74"> 74 </a>                    <span class="php-quote">'description'</span> =&gt; <span class="php-var">$txt</span>[<span class="php-quote">'scheduled_log_desc'</span>],
-</span><span id="75" class="l"><a class="l" href="#75"> 75 </a>                ),
-</span><span id="76" class="l"><a class="l" href="#76"> 76 </a>            ),
-</span><span id="77" class="l"><a class="l" href="#77"> 77 </a>        );
-</span><span id="78" class="l"><a class="l" href="#78"> 78 </a>
-</span><span id="79" class="l"><a class="l" href="#79"> 79 </a>        <span class="php-comment">// Call the right function for this sub-action.</span>
-</span><span id="80" class="l"><a class="l" href="#80"> 80 </a>        <span class="php-var">$action</span> = <span class="php-keyword1">new</span> Action();
-</span><span id="81" class="l"><a class="l" href="#81"> 81 </a>        <span class="php-var">$action</span>-&gt;initialize(<span class="php-var">$subActions</span>, <span class="php-quote">'tasks'</span>);
+</span><span id="56" class="l"><a class="l" href="#56"> 56 </a>        <span class="php-comment">// Control those actions</span>
+</span><span id="57" class="l"><a class="l" href="#57"> 57 </a>        <span class="php-var">$action</span> = <span class="php-keyword1">new</span> Action(<span class="php-quote">'manage_scheduled_tasks'</span>);
+</span><span id="58" class="l"><a class="l" href="#58"> 58 </a>
+</span><span id="59" class="l"><a class="l" href="#59"> 59 </a>        <span class="php-comment">// Now for the lovely tabs. That we all love.</span>
+</span><span id="60" class="l"><a class="l" href="#60"> 60 </a>        <span class="php-var">$context</span>[<span class="php-var">$context</span>[<span class="php-quote">'admin_menu_name'</span>]][<span class="php-quote">'tab_data'</span>] = <span class="php-keyword1">array</span>(
+</span><span id="61" class="l"><a class="l" href="#61"> 61 </a>            <span class="php-quote">'title'</span> =&gt; <span class="php-var">$txt</span>[<span class="php-quote">'scheduled_tasks_title'</span>],
+</span><span id="62" class="l"><a class="l" href="#62"> 62 </a>            <span class="php-quote">'help'</span> =&gt; <span class="php-quote">''</span>,
+</span><span id="63" class="l"><a class="l" href="#63"> 63 </a>            <span class="php-quote">'description'</span> =&gt; <span class="php-var">$txt</span>[<span class="php-quote">'maintain_info'</span>],
+</span><span id="64" class="l"><a class="l" href="#64"> 64 </a>            <span class="php-quote">'tabs'</span> =&gt; <span class="php-keyword1">array</span>(
+</span><span id="65" class="l"><a class="l" href="#65"> 65 </a>                <span class="php-quote">'tasks'</span> =&gt; <span class="php-keyword1">array</span>(
+</span><span id="66" class="l"><a class="l" href="#66"> 66 </a>                    <span class="php-quote">'description'</span> =&gt; <span class="php-var">$txt</span>[<span class="php-quote">'maintain_tasks_desc'</span>],
+</span><span id="67" class="l"><a class="l" href="#67"> 67 </a>                ),
+</span><span id="68" class="l"><a class="l" href="#68"> 68 </a>                <span class="php-quote">'tasklog'</span> =&gt; <span class="php-keyword1">array</span>(
+</span><span id="69" class="l"><a class="l" href="#69"> 69 </a>                    <span class="php-quote">'description'</span> =&gt; <span class="php-var">$txt</span>[<span class="php-quote">'scheduled_log_desc'</span>],
+</span><span id="70" class="l"><a class="l" href="#70"> 70 </a>                ),
+</span><span id="71" class="l"><a class="l" href="#71"> 71 </a>            ),
+</span><span id="72" class="l"><a class="l" href="#72"> 72 </a>        );
+</span><span id="73" class="l"><a class="l" href="#73"> 73 </a>
+</span><span id="74" class="l"><a class="l" href="#74"> 74 </a>        <span class="php-comment">// We need to find what's the action. call integrate_sa_manage_scheduled_tasks</span>
+</span><span id="75" class="l"><a class="l" href="#75"> 75 </a>        <span class="php-var">$subAction</span> = <span class="php-var">$action</span>-&gt;initialize(<span class="php-var">$subActions</span>, <span class="php-quote">'tasks'</span>);
+</span><span id="76" class="l"><a class="l" href="#76"> 76 </a>
+</span><span id="77" class="l"><a class="l" href="#77"> 77 </a>        <span class="php-comment">// Page details</span>
+</span><span id="78" class="l"><a class="l" href="#78"> 78 </a>        <span class="php-var">$context</span>[<span class="php-quote">'page_title'</span>] = <span class="php-var">$txt</span>[<span class="php-quote">'maintain_info'</span>];
+</span><span id="79" class="l"><a class="l" href="#79"> 79 </a>        <span class="php-var">$context</span>[<span class="php-quote">'sub_action'</span>] = <span class="php-var">$subAction</span>;
+</span><span id="80" class="l"><a class="l" href="#80"> 80 </a>
+</span><span id="81" class="l"><a class="l" href="#81"> 81 </a>        <span class="php-comment">// Call the right function for this sub-action.</span>
 </span><span id="82" class="l"><a class="l" href="#82"> 82 </a>        <span class="php-var">$action</span>-&gt;dispatch(<span class="php-var">$subAction</span>);
 </span><span id="83" class="l"><a class="l" href="#83"> 83 </a>    }
 </span><span id="84" class="l"><a class="l" href="#84"> 84 </a>

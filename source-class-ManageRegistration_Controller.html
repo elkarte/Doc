@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-	<meta name="generator" content="ApiGen 2.8.0">
-	<meta name="robots" content="noindex">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="generator" content="ApiGen 2.8.0" />
+	<meta name="robots" content="noindex" />
 
 	<title>File sources/admin/ManageRegistration.controller.php | ElkArte Documentation</title>
 
 	<script type="text/javascript" src="resources/combined.js?3648714599"></script>
-	<script type="text/javascript" src="elementlist.js?3850865134"></script>
-	<link rel="stylesheet" type="text/css" media="all" href="resources/bootstrap.min.css?260161822">
-	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?2015443609">
+	<script type="text/javascript" src="elementlist.js?3593784124"></script>
+	<link rel="stylesheet" type="text/css" media="all" href="resources/bootstrap.min.css?260161822" />
+	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?2015443609" />
 
 </head>
 
@@ -47,9 +47,9 @@
 	<div id="left">
 	<div id="menu">
 		<form id="search" class="form-search">
-			<input type="hidden" name="cx" value="">
-			<input type="hidden" name="ie" value="UTF-8">
-			<input type="text" name="q" class="search-query" placeholder="Search">
+			<input type="hidden" name="cx" value="" />
+			<input type="hidden" name="ie" value="UTF-8" />
+			<input type="text" name="q" class="search-query" placeholder="Search" />
 		</form>
 
 
@@ -81,6 +81,8 @@
 				<li><a href="package-CoreFeatures.html">CoreFeatures</a>
 						</li>
 				<li><a href="package-Drafts.html">Drafts</a>
+						</li>
+				<li><a href="package-Graphics.html">Graphics</a>
 						</li>
 				<li><a href="package-Languages.html">Languages</a>
 						</li>
@@ -218,38 +220,38 @@
 </span><span id="78" class="l"><a class="l" href="#78"> 78 </a>                <span class="php-quote">'permission'</span> =&gt; <span class="php-quote">'admin_forum'</span>),
 </span><span id="79" class="l"><a class="l" href="#79"> 79 </a>        );
 </span><span id="80" class="l"><a class="l" href="#80"> 80 </a>
-</span><span id="81" class="l"><a class="l" href="#81"> 81 </a>        call_integration_hook(<span class="php-quote">'integrate_manage_registrations'</span>, <span class="php-keyword1">array</span>(&amp;<span class="php-var">$subActions</span>));
-</span><span id="82" class="l"><a class="l" href="#82"> 82 </a>
-</span><span id="83" class="l"><a class="l" href="#83"> 83 </a>        <span class="php-comment">// Work out which to call...</span>
-</span><span id="84" class="l"><a class="l" href="#84"> 84 </a>        <span class="php-var">$subAction</span> = <span class="php-keyword1">isset</span>(<span class="php-var">$_REQUEST</span>[<span class="php-quote">'sa'</span>]) &amp;&amp; <span class="php-keyword1">isset</span>(<span class="php-var">$subActions</span>[<span class="php-var">$_REQUEST</span>[<span class="php-quote">'sa'</span>]]) ? <span class="php-var">$_REQUEST</span>[<span class="php-quote">'sa'</span>] : <span class="php-quote">'register'</span>;
-</span><span id="85" class="l"><a class="l" href="#85"> 85 </a>
-</span><span id="86" class="l"><a class="l" href="#86"> 86 </a>        <span class="php-var">$context</span>[<span class="php-quote">'page_title'</span>] = <span class="php-var">$txt</span>[<span class="php-quote">'maintain_title'</span>];
-</span><span id="87" class="l"><a class="l" href="#87"> 87 </a>        <span class="php-var">$context</span>[<span class="php-quote">'sub_action'</span>] = <span class="php-var">$subAction</span>;
-</span><span id="88" class="l"><a class="l" href="#88"> 88 </a>
-</span><span id="89" class="l"><a class="l" href="#89"> 89 </a>        <span class="php-comment">// Next create the tabs for the template.</span>
-</span><span id="90" class="l"><a class="l" href="#90"> 90 </a>        <span class="php-var">$context</span>[<span class="php-var">$context</span>[<span class="php-quote">'admin_menu_name'</span>]][<span class="php-quote">'tab_data'</span>] = <span class="php-keyword1">array</span>(
-</span><span id="91" class="l"><a class="l" href="#91"> 91 </a>            <span class="php-quote">'title'</span> =&gt; <span class="php-var">$txt</span>[<span class="php-quote">'registration_center'</span>],
-</span><span id="92" class="l"><a class="l" href="#92"> 92 </a>            <span class="php-quote">'help'</span> =&gt; <span class="php-quote">'registrations'</span>,
-</span><span id="93" class="l"><a class="l" href="#93"> 93 </a>            <span class="php-quote">'description'</span> =&gt; <span class="php-var">$txt</span>[<span class="php-quote">'admin_settings_desc'</span>],
-</span><span id="94" class="l"><a class="l" href="#94"> 94 </a>            <span class="php-quote">'tabs'</span> =&gt; <span class="php-keyword1">array</span>(
-</span><span id="95" class="l"><a class="l" href="#95"> 95 </a>                <span class="php-quote">'register'</span> =&gt; <span class="php-keyword1">array</span>(
-</span><span id="96" class="l"><a class="l" href="#96"> 96 </a>                    <span class="php-quote">'description'</span> =&gt; <span class="php-var">$txt</span>[<span class="php-quote">'admin_register_desc'</span>],
-</span><span id="97" class="l"><a class="l" href="#97"> 97 </a>                ),
-</span><span id="98" class="l"><a class="l" href="#98"> 98 </a>                <span class="php-quote">'agreement'</span> =&gt; <span class="php-keyword1">array</span>(
-</span><span id="99" class="l"><a class="l" href="#99"> 99 </a>                    <span class="php-quote">'description'</span> =&gt; <span class="php-var">$txt</span>[<span class="php-quote">'registration_agreement_desc'</span>],
-</span><span id="100" class="l"><a class="l" href="#100">100 </a>                ),
-</span><span id="101" class="l"><a class="l" href="#101">101 </a>                <span class="php-quote">'reservednames'</span> =&gt; <span class="php-keyword1">array</span>(
-</span><span id="102" class="l"><a class="l" href="#102">102 </a>                    <span class="php-quote">'description'</span> =&gt; <span class="php-var">$txt</span>[<span class="php-quote">'admin_reserved_desc'</span>],
-</span><span id="103" class="l"><a class="l" href="#103">103 </a>                ),
-</span><span id="104" class="l"><a class="l" href="#104">104 </a>                <span class="php-quote">'settings'</span> =&gt; <span class="php-keyword1">array</span>(
-</span><span id="105" class="l"><a class="l" href="#105">105 </a>                    <span class="php-quote">'description'</span> =&gt; <span class="php-var">$txt</span>[<span class="php-quote">'admin_settings_desc'</span>],
-</span><span id="106" class="l"><a class="l" href="#106">106 </a>                )
-</span><span id="107" class="l"><a class="l" href="#107">107 </a>            )
-</span><span id="108" class="l"><a class="l" href="#108">108 </a>        );
-</span><span id="109" class="l"><a class="l" href="#109">109 </a>
-</span><span id="110" class="l"><a class="l" href="#110">110 </a>        <span class="php-comment">// Call the right function for this sub-action.</span>
-</span><span id="111" class="l"><a class="l" href="#111">111 </a>        <span class="php-var">$action</span> = <span class="php-keyword1">new</span> Action();
-</span><span id="112" class="l"><a class="l" href="#112">112 </a>        <span class="php-var">$action</span>-&gt;initialize(<span class="php-var">$subActions</span>, <span class="php-quote">'register'</span>);
+</span><span id="81" class="l"><a class="l" href="#81"> 81 </a>        <span class="php-comment">// Action controller</span>
+</span><span id="82" class="l"><a class="l" href="#82"> 82 </a>        <span class="php-var">$action</span> = <span class="php-keyword1">new</span> Action(<span class="php-quote">'manage_registrations'</span>);
+</span><span id="83" class="l"><a class="l" href="#83"> 83 </a>
+</span><span id="84" class="l"><a class="l" href="#84"> 84 </a>        <span class="php-comment">// Next create the tabs for the template.</span>
+</span><span id="85" class="l"><a class="l" href="#85"> 85 </a>        <span class="php-var">$context</span>[<span class="php-var">$context</span>[<span class="php-quote">'admin_menu_name'</span>]][<span class="php-quote">'tab_data'</span>] = <span class="php-keyword1">array</span>(
+</span><span id="86" class="l"><a class="l" href="#86"> 86 </a>            <span class="php-quote">'title'</span> =&gt; <span class="php-var">$txt</span>[<span class="php-quote">'registration_center'</span>],
+</span><span id="87" class="l"><a class="l" href="#87"> 87 </a>            <span class="php-quote">'help'</span> =&gt; <span class="php-quote">'registrations'</span>,
+</span><span id="88" class="l"><a class="l" href="#88"> 88 </a>            <span class="php-quote">'description'</span> =&gt; <span class="php-var">$txt</span>[<span class="php-quote">'admin_settings_desc'</span>],
+</span><span id="89" class="l"><a class="l" href="#89"> 89 </a>            <span class="php-quote">'tabs'</span> =&gt; <span class="php-keyword1">array</span>(
+</span><span id="90" class="l"><a class="l" href="#90"> 90 </a>                <span class="php-quote">'register'</span> =&gt; <span class="php-keyword1">array</span>(
+</span><span id="91" class="l"><a class="l" href="#91"> 91 </a>                    <span class="php-quote">'description'</span> =&gt; <span class="php-var">$txt</span>[<span class="php-quote">'admin_register_desc'</span>],
+</span><span id="92" class="l"><a class="l" href="#92"> 92 </a>                ),
+</span><span id="93" class="l"><a class="l" href="#93"> 93 </a>                <span class="php-quote">'agreement'</span> =&gt; <span class="php-keyword1">array</span>(
+</span><span id="94" class="l"><a class="l" href="#94"> 94 </a>                    <span class="php-quote">'description'</span> =&gt; <span class="php-var">$txt</span>[<span class="php-quote">'registration_agreement_desc'</span>],
+</span><span id="95" class="l"><a class="l" href="#95"> 95 </a>                ),
+</span><span id="96" class="l"><a class="l" href="#96"> 96 </a>                <span class="php-quote">'reservednames'</span> =&gt; <span class="php-keyword1">array</span>(
+</span><span id="97" class="l"><a class="l" href="#97"> 97 </a>                    <span class="php-quote">'description'</span> =&gt; <span class="php-var">$txt</span>[<span class="php-quote">'admin_reserved_desc'</span>],
+</span><span id="98" class="l"><a class="l" href="#98"> 98 </a>                ),
+</span><span id="99" class="l"><a class="l" href="#99"> 99 </a>                <span class="php-quote">'settings'</span> =&gt; <span class="php-keyword1">array</span>(
+</span><span id="100" class="l"><a class="l" href="#100">100 </a>                    <span class="php-quote">'description'</span> =&gt; <span class="php-var">$txt</span>[<span class="php-quote">'admin_settings_desc'</span>],
+</span><span id="101" class="l"><a class="l" href="#101">101 </a>                )
+</span><span id="102" class="l"><a class="l" href="#102">102 </a>            )
+</span><span id="103" class="l"><a class="l" href="#103">103 </a>        );
+</span><span id="104" class="l"><a class="l" href="#104">104 </a>
+</span><span id="105" class="l"><a class="l" href="#105">105 </a>        <span class="php-comment">// Work out which to call... call integrate_sa_manage_registrations</span>
+</span><span id="106" class="l"><a class="l" href="#106">106 </a>        <span class="php-var">$subAction</span> = <span class="php-var">$action</span>-&gt;initialize(<span class="php-var">$subActions</span>, <span class="php-quote">'register'</span>);
+</span><span id="107" class="l"><a class="l" href="#107">107 </a>
+</span><span id="108" class="l"><a class="l" href="#108">108 </a>        <span class="php-comment">// Final bits</span>
+</span><span id="109" class="l"><a class="l" href="#109">109 </a>        <span class="php-var">$context</span>[<span class="php-quote">'page_title'</span>] = <span class="php-var">$txt</span>[<span class="php-quote">'maintain_title'</span>];
+</span><span id="110" class="l"><a class="l" href="#110">110 </a>        <span class="php-var">$context</span>[<span class="php-quote">'sub_action'</span>] = <span class="php-var">$subAction</span>;
+</span><span id="111" class="l"><a class="l" href="#111">111 </a>
+</span><span id="112" class="l"><a class="l" href="#112">112 </a>        <span class="php-comment">// Call the right function for this sub-action.</span>
 </span><span id="113" class="l"><a class="l" href="#113">113 </a>        <span class="php-var">$action</span>-&gt;dispatch(<span class="php-var">$subAction</span>);
 </span><span id="114" class="l"><a class="l" href="#114">114 </a>    }
 </span><span id="115" class="l"><a class="l" href="#115">115 </a>
@@ -455,101 +457,102 @@
 </span><span id="315" class="l"><a class="l" href="#315">315 </a>
 </span><span id="316" class="l"><a class="l" href="#316">316 </a>        <span class="php-var">$config_vars</span> = <span class="php-var">$this</span>-&gt;_registerSettings-&gt;settings();
 </span><span id="317" class="l"><a class="l" href="#317">317 </a>
-</span><span id="318" class="l"><a class="l" href="#318">318 </a>        call_integration_hook(<span class="php-quote">'integrate_modify_registration_settings'</span>);
-</span><span id="319" class="l"><a class="l" href="#319">319 </a>
-</span><span id="320" class="l"><a class="l" href="#320">320 </a>        <span class="php-comment">// Setup the template</span>
-</span><span id="321" class="l"><a class="l" href="#321">321 </a>        <span class="php-var">$context</span>[<span class="php-quote">'sub_template'</span>] = <span class="php-quote">'show_settings'</span>;
-</span><span id="322" class="l"><a class="l" href="#322">322 </a>        <span class="php-var">$context</span>[<span class="php-quote">'page_title'</span>] = <span class="php-var">$txt</span>[<span class="php-quote">'registration_center'</span>];
-</span><span id="323" class="l"><a class="l" href="#323">323 </a>
-</span><span id="324" class="l"><a class="l" href="#324">324 </a>        <span class="php-keyword1">if</span> (<span class="php-keyword1">isset</span>(<span class="php-var">$_GET</span>[<span class="php-quote">'save'</span>]))
-</span><span id="325" class="l"><a class="l" href="#325">325 </a>        {
-</span><span id="326" class="l"><a class="l" href="#326">326 </a>            checkSession();
-</span><span id="327" class="l"><a class="l" href="#327">327 </a>
-</span><span id="328" class="l"><a class="l" href="#328">328 </a>            <span class="php-comment">// Are there some contacts missing?</span>
-</span><span id="329" class="l"><a class="l" href="#329">329 </a>            <span class="php-keyword1">if</span> (!<span class="php-keyword1">empty</span>(<span class="php-var">$_POST</span>[<span class="php-quote">'coppaAge'</span>]) &amp;&amp; !<span class="php-keyword1">empty</span>(<span class="php-var">$_POST</span>[<span class="php-quote">'coppaType'</span>]) &amp;&amp; <span class="php-keyword1">empty</span>(<span class="php-var">$_POST</span>[<span class="php-quote">'coppaPost'</span>]) &amp;&amp; <span class="php-keyword1">empty</span>(<span class="php-var">$_POST</span>[<span class="php-quote">'coppaFax'</span>]))
-</span><span id="330" class="l"><a class="l" href="#330">330 </a>                fatal_lang_error(<span class="php-quote">'admin_setting_coppa_require_contact'</span>);
-</span><span id="331" class="l"><a class="l" href="#331">331 </a>
-</span><span id="332" class="l"><a class="l" href="#332">332 </a>            <span class="php-comment">// Post needs to take into account line breaks.</span>
-</span><span id="333" class="l"><a class="l" href="#333">333 </a>            <span class="php-var">$_POST</span>[<span class="php-quote">'coppaPost'</span>] = <span class="php-keyword2">str_replace</span>(<span class="php-quote">&quot;\n&quot;</span>, <span class="php-quote">'&lt;br /&gt;'</span>, <span class="php-keyword1">empty</span>(<span class="php-var">$_POST</span>[<span class="php-quote">'coppaPost'</span>]) ? <span class="php-quote">''</span> : <span class="php-var">$_POST</span>[<span class="php-quote">'coppaPost'</span>]);
+</span><span id="318" class="l"><a class="l" href="#318">318 </a>        <span class="php-comment">// Setup the template</span>
+</span><span id="319" class="l"><a class="l" href="#319">319 </a>        <span class="php-var">$context</span>[<span class="php-quote">'sub_template'</span>] = <span class="php-quote">'show_settings'</span>;
+</span><span id="320" class="l"><a class="l" href="#320">320 </a>        <span class="php-var">$context</span>[<span class="php-quote">'page_title'</span>] = <span class="php-var">$txt</span>[<span class="php-quote">'registration_center'</span>];
+</span><span id="321" class="l"><a class="l" href="#321">321 </a>
+</span><span id="322" class="l"><a class="l" href="#322">322 </a>        <span class="php-keyword1">if</span> (<span class="php-keyword1">isset</span>(<span class="php-var">$_GET</span>[<span class="php-quote">'save'</span>]))
+</span><span id="323" class="l"><a class="l" href="#323">323 </a>        {
+</span><span id="324" class="l"><a class="l" href="#324">324 </a>            checkSession();
+</span><span id="325" class="l"><a class="l" href="#325">325 </a>
+</span><span id="326" class="l"><a class="l" href="#326">326 </a>            <span class="php-comment">// Are there some contacts missing?</span>
+</span><span id="327" class="l"><a class="l" href="#327">327 </a>            <span class="php-keyword1">if</span> (!<span class="php-keyword1">empty</span>(<span class="php-var">$_POST</span>[<span class="php-quote">'coppaAge'</span>]) &amp;&amp; !<span class="php-keyword1">empty</span>(<span class="php-var">$_POST</span>[<span class="php-quote">'coppaType'</span>]) &amp;&amp; <span class="php-keyword1">empty</span>(<span class="php-var">$_POST</span>[<span class="php-quote">'coppaPost'</span>]) &amp;&amp; <span class="php-keyword1">empty</span>(<span class="php-var">$_POST</span>[<span class="php-quote">'coppaFax'</span>]))
+</span><span id="328" class="l"><a class="l" href="#328">328 </a>                fatal_lang_error(<span class="php-quote">'admin_setting_coppa_require_contact'</span>);
+</span><span id="329" class="l"><a class="l" href="#329">329 </a>
+</span><span id="330" class="l"><a class="l" href="#330">330 </a>            <span class="php-comment">// Post needs to take into account line breaks.</span>
+</span><span id="331" class="l"><a class="l" href="#331">331 </a>            <span class="php-var">$_POST</span>[<span class="php-quote">'coppaPost'</span>] = <span class="php-keyword2">str_replace</span>(<span class="php-quote">&quot;\n&quot;</span>, <span class="php-quote">'&lt;br /&gt;'</span>, <span class="php-keyword1">empty</span>(<span class="php-var">$_POST</span>[<span class="php-quote">'coppaPost'</span>]) ? <span class="php-quote">''</span> : <span class="php-var">$_POST</span>[<span class="php-quote">'coppaPost'</span>]);
+</span><span id="332" class="l"><a class="l" href="#332">332 </a>
+</span><span id="333" class="l"><a class="l" href="#333">333 </a>            call_integration_hook(<span class="php-quote">'integrate_save_registration_settings'</span>);
 </span><span id="334" class="l"><a class="l" href="#334">334 </a>
-</span><span id="335" class="l"><a class="l" href="#335">335 </a>            call_integration_hook(<span class="php-quote">'integrate_save_registration_settings'</span>);
+</span><span id="335" class="l"><a class="l" href="#335">335 </a>            Settings_Form::save_db(<span class="php-var">$config_vars</span>);
 </span><span id="336" class="l"><a class="l" href="#336">336 </a>
-</span><span id="337" class="l"><a class="l" href="#337">337 </a>            Settings_Form::save_db(<span class="php-var">$config_vars</span>);
-</span><span id="338" class="l"><a class="l" href="#338">338 </a>
-</span><span id="339" class="l"><a class="l" href="#339">339 </a>            redirectexit(<span class="php-quote">'action=admin;area=regcenter;sa=settings'</span>);
-</span><span id="340" class="l"><a class="l" href="#340">340 </a>        }
-</span><span id="341" class="l"><a class="l" href="#341">341 </a>
-</span><span id="342" class="l"><a class="l" href="#342">342 </a>        <span class="php-var">$context</span>[<span class="php-quote">'post_url'</span>] = <span class="php-var">$scripturl</span> . <span class="php-quote">'?action=admin;area=regcenter;save;sa=settings'</span>;
-</span><span id="343" class="l"><a class="l" href="#343">343 </a>        <span class="php-var">$context</span>[<span class="php-quote">'settings_title'</span>] = <span class="php-var">$txt</span>[<span class="php-quote">'settings'</span>];
-</span><span id="344" class="l"><a class="l" href="#344">344 </a>
-</span><span id="345" class="l"><a class="l" href="#345">345 </a>        <span class="php-comment">// Define some javascript for COPPA.</span>
-</span><span id="346" class="l"><a class="l" href="#346">346 </a>        addInlineJavascript(<span class="php-quote">'
-</span></span><span id="347" class="l"><a class="l" href="#347">347 </a><span class="php-quote">            function checkCoppa()
-</span></span><span id="348" class="l"><a class="l" href="#348">348 </a><span class="php-quote">            {
-</span></span><span id="349" class="l"><a class="l" href="#349">349 </a><span class="php-quote">                var coppaDisabled = document.getElementById(\'coppaAge\').value == 0;
-</span></span><span id="350" class="l"><a class="l" href="#350">350 </a><span class="php-quote">                document.getElementById(\'coppaType\').disabled = coppaDisabled;
-</span></span><span id="351" class="l"><a class="l" href="#351">351 </a><span class="php-quote">
-</span></span><span id="352" class="l"><a class="l" href="#352">352 </a><span class="php-quote">                var disableContacts = coppaDisabled || document.getElementById(\'coppaType\').options[document.getElementById(\'coppaType\').selectedIndex].value != 1;
-</span></span><span id="353" class="l"><a class="l" href="#353">353 </a><span class="php-quote">                document.getElementById(\'coppaPost\').disabled = disableContacts;
-</span></span><span id="354" class="l"><a class="l" href="#354">354 </a><span class="php-quote">                document.getElementById(\'coppaFax\').disabled = disableContacts;
-</span></span><span id="355" class="l"><a class="l" href="#355">355 </a><span class="php-quote">                document.getElementById(\'coppaPhone\').disabled = disableContacts;
-</span></span><span id="356" class="l"><a class="l" href="#356">356 </a><span class="php-quote">            }
-</span></span><span id="357" class="l"><a class="l" href="#357">357 </a><span class="php-quote">            checkCoppa();'</span>, <span class="php-keyword1">true</span>);
-</span><span id="358" class="l"><a class="l" href="#358">358 </a>
-</span><span id="359" class="l"><a class="l" href="#359">359 </a>        <span class="php-comment">// Turn the postal address into something suitable for a textbox.</span>
-</span><span id="360" class="l"><a class="l" href="#360">360 </a>        <span class="php-var">$modSettings</span>[<span class="php-quote">'coppaPost'</span>] = !<span class="php-keyword1">empty</span>(<span class="php-var">$modSettings</span>[<span class="php-quote">'coppaPost'</span>]) ? <span class="php-keyword2">preg_replace</span>(<span class="php-quote">'~&lt;br ?/?'</span> . <span class="php-quote">'&gt;~'</span>, <span class="php-quote">&quot;\n&quot;</span>, <span class="php-var">$modSettings</span>[<span class="php-quote">'coppaPost'</span>]) : <span class="php-quote">''</span>;
-</span><span id="361" class="l"><a class="l" href="#361">361 </a>
-</span><span id="362" class="l"><a class="l" href="#362">362 </a>        Settings_Form::prepare_db(<span class="php-var">$config_vars</span>);
-</span><span id="363" class="l"><a class="l" href="#363">363 </a>    }
-</span><span id="364" class="l"><a class="l" href="#364">364 </a>
-</span><span id="365" class="l"><a class="l" href="#365">365 </a>    <span class="php-comment">/**
-</span></span><span id="366" class="l"><a class="l" href="#366">366 </a><span class="php-comment">     * Initialize settings form with the configuration settings for new members registration.
-</span></span><span id="367" class="l"><a class="l" href="#367">367 </a><span class="php-comment">     */</span>
-</span><span id="368" class="l"><a class="l" href="#368">368 </a>    <span class="php-keyword1">private</span> <span class="php-keyword1">function</span> <a id="__init_registerSettingsForm" href="#__init_registerSettingsForm">_init_registerSettingsForm</a>()
-</span><span id="369" class="l"><a class="l" href="#369">369 </a>    {
-</span><span id="370" class="l"><a class="l" href="#370">370 </a>        <span class="php-comment">// This is really quite wanting.</span>
-</span><span id="371" class="l"><a class="l" href="#371">371 </a>        <span class="php-keyword1">require_once</span>(SUBSDIR . <span class="php-quote">'/Settings.class.php'</span>);
-</span><span id="372" class="l"><a class="l" href="#372">372 </a>
-</span><span id="373" class="l"><a class="l" href="#373">373 </a>        <span class="php-comment">// Instantiate the form</span>
-</span><span id="374" class="l"><a class="l" href="#374">374 </a>        <span class="php-var">$this</span>-&gt;_registerSettings = <span class="php-keyword1">new</span> Settings_Form();
-</span><span id="375" class="l"><a class="l" href="#375">375 </a>
-</span><span id="376" class="l"><a class="l" href="#376">376 </a>        <span class="php-comment">// Initialize it with our settings</span>
-</span><span id="377" class="l"><a class="l" href="#377">377 </a>        <span class="php-var">$config_vars</span> = <span class="php-var">$this</span>-&gt;_settings();
-</span><span id="378" class="l"><a class="l" href="#378">378 </a>
-</span><span id="379" class="l"><a class="l" href="#379">379 </a>        <span class="php-keyword1">return</span> <span class="php-var">$this</span>-&gt;_registerSettings-&gt;settings(<span class="php-var">$config_vars</span>);
-</span><span id="380" class="l"><a class="l" href="#380">380 </a>    }
-</span><span id="381" class="l"><a class="l" href="#381">381 </a>
-</span><span id="382" class="l"><a class="l" href="#382">382 </a>    <span class="php-comment">/**
-</span></span><span id="383" class="l"><a class="l" href="#383">383 </a><span class="php-comment">     * Return configuration settings for new members registration.
-</span></span><span id="384" class="l"><a class="l" href="#384">384 </a><span class="php-comment">     */</span>
-</span><span id="385" class="l"><a class="l" href="#385">385 </a>    <span class="php-keyword1">private</span> <span class="php-keyword1">function</span> <a id="__settings" href="#__settings">_settings</a>()
-</span><span id="386" class="l"><a class="l" href="#386">386 </a>    {
-</span><span id="387" class="l"><a class="l" href="#387">387 </a>        <span class="php-keyword1">global</span> <span class="php-var">$txt</span>;
-</span><span id="388" class="l"><a class="l" href="#388">388 </a>
-</span><span id="389" class="l"><a class="l" href="#389">389 </a>        <span class="php-var">$config_vars</span> = <span class="php-keyword1">array</span>(
-</span><span id="390" class="l"><a class="l" href="#390">390 </a>                <span class="php-keyword1">array</span>(<span class="php-quote">'select'</span>, <span class="php-quote">'registration_method'</span>, <span class="php-keyword1">array</span>(<span class="php-var">$txt</span>[<span class="php-quote">'setting_registration_standard'</span>], <span class="php-var">$txt</span>[<span class="php-quote">'setting_registration_activate'</span>], <span class="php-var">$txt</span>[<span class="php-quote">'setting_registration_approval'</span>], <span class="php-var">$txt</span>[<span class="php-quote">'setting_registration_disabled'</span>])),
-</span><span id="391" class="l"><a class="l" href="#391">391 </a>                <span class="php-keyword1">array</span>(<span class="php-quote">'check'</span>, <span class="php-quote">'enableOpenID'</span>),
-</span><span id="392" class="l"><a class="l" href="#392">392 </a>                <span class="php-keyword1">array</span>(<span class="php-quote">'check'</span>, <span class="php-quote">'notify_new_registration'</span>),
-</span><span id="393" class="l"><a class="l" href="#393">393 </a>                <span class="php-keyword1">array</span>(<span class="php-quote">'check'</span>, <span class="php-quote">'send_welcomeEmail'</span>),
-</span><span id="394" class="l"><a class="l" href="#394">394 </a>            <span class="php-quote">''</span>,
-</span><span id="395" class="l"><a class="l" href="#395">395 </a>                <span class="php-keyword1">array</span>(<span class="php-quote">'int'</span>, <span class="php-quote">'coppaAge'</span>, <span class="php-quote">'subtext'</span> =&gt; <span class="php-var">$txt</span>[<span class="php-quote">'setting_coppaAge_desc'</span>], <span class="php-quote">'onchange'</span> =&gt; <span class="php-quote">'checkCoppa();'</span>, <span class="php-quote">'onkeyup'</span> =&gt; <span class="php-quote">'checkCoppa();'</span>),
-</span><span id="396" class="l"><a class="l" href="#396">396 </a>                <span class="php-keyword1">array</span>(<span class="php-quote">'select'</span>, <span class="php-quote">'coppaType'</span>, <span class="php-keyword1">array</span>(<span class="php-var">$txt</span>[<span class="php-quote">'setting_coppaType_reject'</span>], <span class="php-var">$txt</span>[<span class="php-quote">'setting_coppaType_approval'</span>]), <span class="php-quote">'onchange'</span> =&gt; <span class="php-quote">'checkCoppa();'</span>),
-</span><span id="397" class="l"><a class="l" href="#397">397 </a>                <span class="php-keyword1">array</span>(<span class="php-quote">'large_text'</span>, <span class="php-quote">'coppaPost'</span>, <span class="php-quote">'subtext'</span> =&gt; <span class="php-var">$txt</span>[<span class="php-quote">'setting_coppaPost_desc'</span>]),
-</span><span id="398" class="l"><a class="l" href="#398">398 </a>                <span class="php-keyword1">array</span>(<span class="php-quote">'text'</span>, <span class="php-quote">'coppaFax'</span>),
-</span><span id="399" class="l"><a class="l" href="#399">399 </a>                <span class="php-keyword1">array</span>(<span class="php-quote">'text'</span>, <span class="php-quote">'coppaPhone'</span>),
-</span><span id="400" class="l"><a class="l" href="#400">400 </a>        );
-</span><span id="401" class="l"><a class="l" href="#401">401 </a>
-</span><span id="402" class="l"><a class="l" href="#402">402 </a>        <span class="php-keyword1">return</span> <span class="php-var">$config_vars</span>;
-</span><span id="403" class="l"><a class="l" href="#403">403 </a>    }
-</span><span id="404" class="l"><a class="l" href="#404">404 </a>
-</span><span id="405" class="l"><a class="l" href="#405">405 </a>    <span class="php-comment">/**
-</span></span><span id="406" class="l"><a class="l" href="#406">406 </a><span class="php-comment">     * Return the registration settings for use in admin search
-</span></span><span id="407" class="l"><a class="l" href="#407">407 </a><span class="php-comment">     */</span>
-</span><span id="408" class="l"><a class="l" href="#408">408 </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_settings_search" href="#_settings_search">settings_search</a>()
-</span><span id="409" class="l"><a class="l" href="#409">409 </a>    {
-</span><span id="410" class="l"><a class="l" href="#410">410 </a>        <span class="php-keyword1">return</span> <span class="php-var">$this</span>-&gt;_settings();
-</span><span id="411" class="l"><a class="l" href="#411">411 </a>    }
-</span><span id="412" class="l"><a class="l" href="#412">412 </a></span>}</code></pre>
+</span><span id="337" class="l"><a class="l" href="#337">337 </a>            redirectexit(<span class="php-quote">'action=admin;area=regcenter;sa=settings'</span>);
+</span><span id="338" class="l"><a class="l" href="#338">338 </a>        }
+</span><span id="339" class="l"><a class="l" href="#339">339 </a>
+</span><span id="340" class="l"><a class="l" href="#340">340 </a>        <span class="php-var">$context</span>[<span class="php-quote">'post_url'</span>] = <span class="php-var">$scripturl</span> . <span class="php-quote">'?action=admin;area=regcenter;save;sa=settings'</span>;
+</span><span id="341" class="l"><a class="l" href="#341">341 </a>        <span class="php-var">$context</span>[<span class="php-quote">'settings_title'</span>] = <span class="php-var">$txt</span>[<span class="php-quote">'settings'</span>];
+</span><span id="342" class="l"><a class="l" href="#342">342 </a>
+</span><span id="343" class="l"><a class="l" href="#343">343 </a>        <span class="php-comment">// Define some javascript for COPPA.</span>
+</span><span id="344" class="l"><a class="l" href="#344">344 </a>        addInlineJavascript(<span class="php-quote">'
+</span></span><span id="345" class="l"><a class="l" href="#345">345 </a><span class="php-quote">            function checkCoppa()
+</span></span><span id="346" class="l"><a class="l" href="#346">346 </a><span class="php-quote">            {
+</span></span><span id="347" class="l"><a class="l" href="#347">347 </a><span class="php-quote">                var coppaDisabled = document.getElementById(\'coppaAge\').value == 0;
+</span></span><span id="348" class="l"><a class="l" href="#348">348 </a><span class="php-quote">                document.getElementById(\'coppaType\').disabled = coppaDisabled;
+</span></span><span id="349" class="l"><a class="l" href="#349">349 </a><span class="php-quote">
+</span></span><span id="350" class="l"><a class="l" href="#350">350 </a><span class="php-quote">                var disableContacts = coppaDisabled || document.getElementById(\'coppaType\').options[document.getElementById(\'coppaType\').selectedIndex].value != 1;
+</span></span><span id="351" class="l"><a class="l" href="#351">351 </a><span class="php-quote">                document.getElementById(\'coppaPost\').disabled = disableContacts;
+</span></span><span id="352" class="l"><a class="l" href="#352">352 </a><span class="php-quote">                document.getElementById(\'coppaFax\').disabled = disableContacts;
+</span></span><span id="353" class="l"><a class="l" href="#353">353 </a><span class="php-quote">                document.getElementById(\'coppaPhone\').disabled = disableContacts;
+</span></span><span id="354" class="l"><a class="l" href="#354">354 </a><span class="php-quote">            }
+</span></span><span id="355" class="l"><a class="l" href="#355">355 </a><span class="php-quote">            checkCoppa();'</span>, <span class="php-keyword1">true</span>);
+</span><span id="356" class="l"><a class="l" href="#356">356 </a>
+</span><span id="357" class="l"><a class="l" href="#357">357 </a>        <span class="php-comment">// Turn the postal address into something suitable for a textbox.</span>
+</span><span id="358" class="l"><a class="l" href="#358">358 </a>        <span class="php-var">$modSettings</span>[<span class="php-quote">'coppaPost'</span>] = !<span class="php-keyword1">empty</span>(<span class="php-var">$modSettings</span>[<span class="php-quote">'coppaPost'</span>]) ? <span class="php-keyword2">preg_replace</span>(<span class="php-quote">'~&lt;br ?/?'</span> . <span class="php-quote">'&gt;~'</span>, <span class="php-quote">&quot;\n&quot;</span>, <span class="php-var">$modSettings</span>[<span class="php-quote">'coppaPost'</span>]) : <span class="php-quote">''</span>;
+</span><span id="359" class="l"><a class="l" href="#359">359 </a>
+</span><span id="360" class="l"><a class="l" href="#360">360 </a>        Settings_Form::prepare_db(<span class="php-var">$config_vars</span>);
+</span><span id="361" class="l"><a class="l" href="#361">361 </a>    }
+</span><span id="362" class="l"><a class="l" href="#362">362 </a>
+</span><span id="363" class="l"><a class="l" href="#363">363 </a>    <span class="php-comment">/**
+</span></span><span id="364" class="l"><a class="l" href="#364">364 </a><span class="php-comment">     * Initialize settings form with the configuration settings for new members registration.
+</span></span><span id="365" class="l"><a class="l" href="#365">365 </a><span class="php-comment">     */</span>
+</span><span id="366" class="l"><a class="l" href="#366">366 </a>    <span class="php-keyword1">private</span> <span class="php-keyword1">function</span> <a id="__init_registerSettingsForm" href="#__init_registerSettingsForm">_init_registerSettingsForm</a>()
+</span><span id="367" class="l"><a class="l" href="#367">367 </a>    {
+</span><span id="368" class="l"><a class="l" href="#368">368 </a>        <span class="php-comment">// This is really quite wanting.</span>
+</span><span id="369" class="l"><a class="l" href="#369">369 </a>        <span class="php-keyword1">require_once</span>(SUBSDIR . <span class="php-quote">'/Settings.class.php'</span>);
+</span><span id="370" class="l"><a class="l" href="#370">370 </a>
+</span><span id="371" class="l"><a class="l" href="#371">371 </a>        <span class="php-comment">// Instantiate the form</span>
+</span><span id="372" class="l"><a class="l" href="#372">372 </a>        <span class="php-var">$this</span>-&gt;_registerSettings = <span class="php-keyword1">new</span> Settings_Form();
+</span><span id="373" class="l"><a class="l" href="#373">373 </a>
+</span><span id="374" class="l"><a class="l" href="#374">374 </a>        <span class="php-comment">// Initialize it with our settings</span>
+</span><span id="375" class="l"><a class="l" href="#375">375 </a>        <span class="php-var">$config_vars</span> = <span class="php-var">$this</span>-&gt;_settings();
+</span><span id="376" class="l"><a class="l" href="#376">376 </a>
+</span><span id="377" class="l"><a class="l" href="#377">377 </a>        <span class="php-keyword1">return</span> <span class="php-var">$this</span>-&gt;_registerSettings-&gt;settings(<span class="php-var">$config_vars</span>);
+</span><span id="378" class="l"><a class="l" href="#378">378 </a>    }
+</span><span id="379" class="l"><a class="l" href="#379">379 </a>
+</span><span id="380" class="l"><a class="l" href="#380">380 </a>    <span class="php-comment">/**
+</span></span><span id="381" class="l"><a class="l" href="#381">381 </a><span class="php-comment">     * Return configuration settings for new members registration.
+</span></span><span id="382" class="l"><a class="l" href="#382">382 </a><span class="php-comment">     */</span>
+</span><span id="383" class="l"><a class="l" href="#383">383 </a>    <span class="php-keyword1">private</span> <span class="php-keyword1">function</span> <a id="__settings" href="#__settings">_settings</a>()
+</span><span id="384" class="l"><a class="l" href="#384">384 </a>    {
+</span><span id="385" class="l"><a class="l" href="#385">385 </a>        <span class="php-keyword1">global</span> <span class="php-var">$txt</span>;
+</span><span id="386" class="l"><a class="l" href="#386">386 </a>
+</span><span id="387" class="l"><a class="l" href="#387">387 </a>        <span class="php-var">$config_vars</span> = <span class="php-keyword1">array</span>(
+</span><span id="388" class="l"><a class="l" href="#388">388 </a>                <span class="php-keyword1">array</span>(<span class="php-quote">'select'</span>, <span class="php-quote">'registration_method'</span>, <span class="php-keyword1">array</span>(<span class="php-var">$txt</span>[<span class="php-quote">'setting_registration_standard'</span>], <span class="php-var">$txt</span>[<span class="php-quote">'setting_registration_activate'</span>], <span class="php-var">$txt</span>[<span class="php-quote">'setting_registration_approval'</span>], <span class="php-var">$txt</span>[<span class="php-quote">'setting_registration_disabled'</span>])),
+</span><span id="389" class="l"><a class="l" href="#389">389 </a>                <span class="php-keyword1">array</span>(<span class="php-quote">'check'</span>, <span class="php-quote">'enableOpenID'</span>),
+</span><span id="390" class="l"><a class="l" href="#390">390 </a>                <span class="php-keyword1">array</span>(<span class="php-quote">'check'</span>, <span class="php-quote">'notify_new_registration'</span>),
+</span><span id="391" class="l"><a class="l" href="#391">391 </a>                <span class="php-keyword1">array</span>(<span class="php-quote">'check'</span>, <span class="php-quote">'send_welcomeEmail'</span>),
+</span><span id="392" class="l"><a class="l" href="#392">392 </a>            <span class="php-quote">''</span>,
+</span><span id="393" class="l"><a class="l" href="#393">393 </a>                <span class="php-keyword1">array</span>(<span class="php-quote">'int'</span>, <span class="php-quote">'coppaAge'</span>, <span class="php-quote">'subtext'</span> =&gt; <span class="php-var">$txt</span>[<span class="php-quote">'setting_coppaAge_desc'</span>], <span class="php-quote">'onchange'</span> =&gt; <span class="php-quote">'checkCoppa();'</span>, <span class="php-quote">'onkeyup'</span> =&gt; <span class="php-quote">'checkCoppa();'</span>),
+</span><span id="394" class="l"><a class="l" href="#394">394 </a>                <span class="php-keyword1">array</span>(<span class="php-quote">'select'</span>, <span class="php-quote">'coppaType'</span>, <span class="php-keyword1">array</span>(<span class="php-var">$txt</span>[<span class="php-quote">'setting_coppaType_reject'</span>], <span class="php-var">$txt</span>[<span class="php-quote">'setting_coppaType_approval'</span>]), <span class="php-quote">'onchange'</span> =&gt; <span class="php-quote">'checkCoppa();'</span>),
+</span><span id="395" class="l"><a class="l" href="#395">395 </a>                <span class="php-keyword1">array</span>(<span class="php-quote">'large_text'</span>, <span class="php-quote">'coppaPost'</span>, <span class="php-quote">'subtext'</span> =&gt; <span class="php-var">$txt</span>[<span class="php-quote">'setting_coppaPost_desc'</span>]),
+</span><span id="396" class="l"><a class="l" href="#396">396 </a>                <span class="php-keyword1">array</span>(<span class="php-quote">'text'</span>, <span class="php-quote">'coppaFax'</span>),
+</span><span id="397" class="l"><a class="l" href="#397">397 </a>                <span class="php-keyword1">array</span>(<span class="php-quote">'text'</span>, <span class="php-quote">'coppaPhone'</span>),
+</span><span id="398" class="l"><a class="l" href="#398">398 </a>        );
+</span><span id="399" class="l"><a class="l" href="#399">399 </a>
+</span><span id="400" class="l"><a class="l" href="#400">400 </a>        <span class="php-comment">// Add new settings with a nice hook, makes them available for admin settings search as well</span>
+</span><span id="401" class="l"><a class="l" href="#401">401 </a>        call_integration_hook(<span class="php-quote">'integrate_modify_registration_settings'</span>, <span class="php-keyword1">array</span>(&amp;<span class="php-var">$config_vars</span>));
+</span><span id="402" class="l"><a class="l" href="#402">402 </a>
+</span><span id="403" class="l"><a class="l" href="#403">403 </a>        <span class="php-keyword1">return</span> <span class="php-var">$config_vars</span>;
+</span><span id="404" class="l"><a class="l" href="#404">404 </a>    }
+</span><span id="405" class="l"><a class="l" href="#405">405 </a>
+</span><span id="406" class="l"><a class="l" href="#406">406 </a>    <span class="php-comment">/**
+</span></span><span id="407" class="l"><a class="l" href="#407">407 </a><span class="php-comment">     * Return the registration settings for use in admin search
+</span></span><span id="408" class="l"><a class="l" href="#408">408 </a><span class="php-comment">     */</span>
+</span><span id="409" class="l"><a class="l" href="#409">409 </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_settings_search" href="#_settings_search">settings_search</a>()
+</span><span id="410" class="l"><a class="l" href="#410">410 </a>    {
+</span><span id="411" class="l"><a class="l" href="#411">411 </a>        <span class="php-keyword1">return</span> <span class="php-var">$this</span>-&gt;_settings();
+</span><span id="412" class="l"><a class="l" href="#412">412 </a>    }
+</span><span id="413" class="l"><a class="l" href="#413">413 </a></span>}</code></pre>
 	</div>
 
 	<div id="footer">
