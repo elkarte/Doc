@@ -7,7 +7,7 @@
 	<title>Class ManageAttachments_Controller | ElkArte Documentation</title>
 
 	<script type="text/javascript" src="resources/combined.js?3648714599"></script>
-	<script type="text/javascript" src="elementlist.js?3593784124"></script>
+	<script type="text/javascript" src="elementlist.js?97495842"></script>
 	<link rel="stylesheet" type="text/css" media="all" href="resources/bootstrap.min.css?260161822" />
 	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?2015443609" />
 
@@ -82,7 +82,11 @@
 						</li>
 				<li><a href="package-Graphics.html">Graphics</a>
 						</li>
+				<li><a href="package-Karma.html">Karma</a>
+						</li>
 				<li><a href="package-Languages.html">Languages</a>
+						</li>
+				<li><a href="package-Likes.html">Likes</a>
 						</li>
 				<li><a href="package-Mail.html">Mail</a>
 						</li>
@@ -104,6 +108,8 @@
 						</li>
 				<li><a href="package-Permissions.html">Permissions</a>
 						</li>
+				<li><a href="package-PersonalMessage.html">PersonalMessage</a>
+						</li>
 				<li><a href="package-Posts.html">Posts</a>
 						</li>
 				<li><a href="package-Registration.html">Registration</a>
@@ -112,9 +118,13 @@
 						</li>
 				<li><a href="package-Search.html">Search</a>
 						</li>
+				<li><a href="package-SearchEngines.html">SearchEngines</a>
+						</li>
 				<li><a href="package-Security.html">Security</a>
 						</li>
 				<li><a href="package-Subscriptions.html">Subscriptions</a>
+						</li>
+				<li><a href="package-Themes.html">Themes</a>
 						</li>
 			</ul>
 		</div>
@@ -188,6 +198,7 @@
 				<li><a href="function-processAttachments.html">processAttachments</a></li>
 				<li><a href="function-removeAttachments.html">removeAttachments</a></li>
 				<li><a href="function-removeOrphanAttachments.html">removeOrphanAttachments</a></li>
+				<li><a href="function-removeTempAttachById.html">removeTempAttachById</a></li>
 				<li><a href="function-repairAttachmentData.html">repairAttachmentData</a></li>
 				<li><a href="function-saveAvatar.html">saveAvatar</a></li>
 				<li><a href="function-setRemovalNotice.html">setRemovalNotice</a></li>
@@ -254,7 +265,7 @@ This software is a derived product, based on:
 Simple Machines Forum (SMF)
 copyright:	2011 Simple Machines (http://www.simplemachines.org)
 license:		BSD, See included LICENSE.TXT for terms and conditions.</a><br />
-		<b>Located at</b> <a href="source-class-ManageAttachments_Controller.html#23-1711" title="Go to source code">sources/admin/ManageAttachments.controller.php</a><br />
+		<b>Located at</b> <a href="source-class-ManageAttachments_Controller.html#23-1713" title="Go to source code">sources/admin/ManageAttachments.controller.php</a><br />
 	</div>
 
 
@@ -408,7 +419,7 @@ license:		BSD, See included LICENSE.TXT for terms and conditions.</a><br />
 
 			<td class="name"><div>
 			<a class="anchor" href="#__settings">#</a>
-			<code><a href="source-class-ManageAttachments_Controller.html#214-312" title="Go to source code">_settings</a>( )</code>
+			<code><a href="source-class-ManageAttachments_Controller.html#214-315" title="Go to source code">_settings</a>( )</code>
 
 			<div class="description short">
 				
@@ -441,7 +452,7 @@ license:		BSD, See included LICENSE.TXT for terms and conditions.</a><br />
 
 			<td class="name"><div>
 			<a class="anchor" href="#_settings_search">#</a>
-			<code><a href="source-class-ManageAttachments_Controller.html#314-320" title="Go to source code">settings_search</a>( )</code>
+			<code><a href="source-class-ManageAttachments_Controller.html#317-323" title="Go to source code">settings_search</a>( )</code>
 
 			<div class="description short">
 				
@@ -474,7 +485,7 @@ license:		BSD, See included LICENSE.TXT for terms and conditions.</a><br />
 
 			<td class="name"><div>
 			<a class="anchor" href="#_action_browse">#</a>
-			<code><a href="source-class-ManageAttachments_Controller.html#322-539" title="Go to source code">action_browse</a>( )</code>
+			<code><a href="source-class-ManageAttachments_Controller.html#325-542" title="Go to source code">action_browse</a>( )</code>
 
 			<div class="description short">
 				
@@ -524,7 +535,7 @@ license:		BSD, See included LICENSE.TXT for terms and conditions.</a><br />
 
 			<td class="name"><div>
 			<a class="anchor" href="#_action_maintenance">#</a>
-			<code><a href="source-class-ManageAttachments_Controller.html#541-594" title="Go to source code">action_maintenance</a>( )</code>
+			<code><a href="source-class-ManageAttachments_Controller.html#544-597" title="Go to source code">action_maintenance</a>( )</code>
 
 			<div class="description short">
 				
@@ -571,7 +582,7 @@ license:		BSD, See included LICENSE.TXT for terms and conditions.</a><br />
 
 			<td class="name"><div>
 			<a class="anchor" href="#_action_moveAvatars">#</a>
-			<code><a href="source-class-ManageAttachments_Controller.html#596-621" title="Go to source code">action_moveAvatars</a>( )</code>
+			<code><a href="source-class-ManageAttachments_Controller.html#599-624" title="Go to source code">action_moveAvatars</a>( )</code>
 
 			<div class="description short">
 				
@@ -611,7 +622,7 @@ folder.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_action_byAge">#</a>
-			<code><a href="source-class-ManageAttachments_Controller.html#623-655" title="Go to source code">action_byAge</a>( )</code>
+			<code><a href="source-class-ManageAttachments_Controller.html#626-658" title="Go to source code">action_byAge</a>( )</code>
 
 			<div class="description short">
 				
@@ -656,7 +667,7 @@ folder.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_action_bySize">#</a>
-			<code><a href="source-class-ManageAttachments_Controller.html#657-678" title="Go to source code">action_bySize</a>( )</code>
+			<code><a href="source-class-ManageAttachments_Controller.html#660-681" title="Go to source code">action_bySize</a>( )</code>
 
 			<div class="description short">
 				
@@ -697,7 +708,7 @@ folder.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_action_remove">#</a>
-			<code><a href="source-class-ManageAttachments_Controller.html#680-719" title="Go to source code">action_remove</a>( )</code>
+			<code><a href="source-class-ManageAttachments_Controller.html#683-722" title="Go to source code">action_remove</a>( )</code>
 
 			<div class="description short">
 				
@@ -735,7 +746,7 @@ folder.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_action_removeall">#</a>
-			<code><a href="source-class-ManageAttachments_Controller.html#721-744" title="Go to source code">action_removeall</a>( )</code>
+			<code><a href="source-class-ManageAttachments_Controller.html#724-747" title="Go to source code">action_removeall</a>( )</code>
 
 			<div class="description short">
 				
@@ -773,7 +784,7 @@ folder.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_action_repair">#</a>
-			<code><a href="source-class-ManageAttachments_Controller.html#746-992" title="Go to source code">action_repair</a>( )</code>
+			<code><a href="source-class-ManageAttachments_Controller.html#749-995" title="Go to source code">action_repair</a>( )</code>
 
 			<div class="description short">
 				
@@ -834,7 +845,7 @@ them</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_action_attachpaths">#</a>
-			<code><a href="source-class-ManageAttachments_Controller.html#994-1514" title="Go to source code">action_attachpaths</a>( )</code>
+			<code><a href="source-class-ManageAttachments_Controller.html#997-1516" title="Go to source code">action_attachpaths</a>( )</code>
 
 			<div class="description short">
 				
@@ -867,7 +878,7 @@ them</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_action_transfer">#</a>
-			<code><a href="source-class-ManageAttachments_Controller.html#1516-1710" title="Go to source code">action_transfer</a>( )</code>
+			<code><a href="source-class-ManageAttachments_Controller.html#1518-1712" title="Go to source code">action_transfer</a>( )</code>
 
 			<div class="description short">
 				

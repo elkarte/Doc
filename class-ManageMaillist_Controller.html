@@ -7,7 +7,7 @@
 	<title>Class ManageMaillist_Controller | ElkArte Documentation</title>
 
 	<script type="text/javascript" src="resources/combined.js?3648714599"></script>
-	<script type="text/javascript" src="elementlist.js?3593784124"></script>
+	<script type="text/javascript" src="elementlist.js?97495842"></script>
 	<link rel="stylesheet" type="text/css" media="all" href="resources/bootstrap.min.css?260161822" />
 	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?2015443609" />
 
@@ -82,7 +82,11 @@
 						</li>
 				<li><a href="package-Graphics.html">Graphics</a>
 						</li>
+				<li><a href="package-Karma.html">Karma</a>
+						</li>
 				<li><a href="package-Languages.html">Languages</a>
+						</li>
+				<li><a href="package-Likes.html">Likes</a>
 						</li>
 				<li><a href="package-Mail.html">Mail</a>
 						</li>
@@ -104,6 +108,8 @@
 						</li>
 				<li><a href="package-Permissions.html">Permissions</a>
 						</li>
+				<li><a href="package-PersonalMessage.html">PersonalMessage</a>
+						</li>
 				<li><a href="package-Posts.html">Posts</a>
 						</li>
 				<li><a href="package-Registration.html">Registration</a>
@@ -112,9 +118,13 @@
 						</li>
 				<li><a href="package-Search.html">Search</a>
 						</li>
+				<li><a href="package-SearchEngines.html">SearchEngines</a>
+						</li>
 				<li><a href="package-Security.html">Security</a>
 						</li>
 				<li><a href="package-Subscriptions.html">Subscriptions</a>
+						</li>
+				<li><a href="package-Themes.html">Themes</a>
 						</li>
 			</ul>
 		</div>
@@ -125,7 +135,8 @@
 			<ul>
 				<li><a href="class-Email_Format.html">Email_Format</a></li>
 				<li><a href="class-Email_Parse.html">Email_Parse</a></li>
-				<li><a href="class-MaillistSettingsClass.html">MaillistSettingsClass</a></li>
+				<li><a href="class-Email_Settings.html">Email_Settings</a></li>
+				<li><a href="class-Emailpost_Controller.html">Emailpost_Controller</a></li>
 				<li class="active"><a href="class-ManageMaillist_Controller.html">ManageMaillist_Controller</a></li>
 			</ul>
 
@@ -236,7 +247,7 @@
 				ElkArte Forum contributors<br />
 				<b>License:</b>
 				<a href="BSD">http://opensource.org/licenses/BSD-3-Clause</a><br />
-		<b>Located at</b> <a href="source-class-ManageMaillist_Controller.html#18-1902" title="Go to source code">sources/admin/ManageMaillist.controller.php</a><br />
+		<b>Located at</b> <a href="source-class-ManageMaillist_Controller.html#18-1914" title="Go to source code">sources/admin/ManageMaillist.controller.php</a><br />
 	</div>
 
 
@@ -297,7 +308,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_action_unapproved_email">#</a>
-			<code><a href="source-class-ManageMaillist_Controller.html#107-300" title="Go to source code">action_unapproved_email</a>( )</code>
+			<code><a href="source-class-ManageMaillist_Controller.html#107-297" title="Go to source code">action_unapproved_email</a>( )</code>
 
 			<div class="description short">
 				
@@ -347,7 +358,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_action_view_email">#</a>
-			<code><a href="source-class-ManageMaillist_Controller.html#302-359" title="Go to source code">action_view_email</a>( )</code>
+			<code><a href="source-class-ManageMaillist_Controller.html#299-356" title="Go to source code">action_view_email</a>( )</code>
 
 			<div class="description short">
 				
@@ -390,7 +401,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_action_delete_email">#</a>
-			<code><a href="source-class-ManageMaillist_Controller.html#361-385" title="Go to source code">action_delete_email</a>( )</code>
+			<code><a href="source-class-ManageMaillist_Controller.html#358-382" title="Go to source code">action_delete_email</a>( )</code>
 
 			<div class="description short">
 				
@@ -431,7 +442,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_action_approve_email">#</a>
-			<code><a href="source-class-ManageMaillist_Controller.html#387-460" title="Go to source code">action_approve_email</a>( )</code>
+			<code><a href="source-class-ManageMaillist_Controller.html#384-457" title="Go to source code">action_approve_email</a>( )</code>
 
 			<div class="description short">
 				
@@ -478,7 +489,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_action_bounce_email">#</a>
-			<code><a href="source-class-ManageMaillist_Controller.html#462-567" title="Go to source code">action_bounce_email</a>( )</code>
+			<code><a href="source-class-ManageMaillist_Controller.html#459-563" title="Go to source code">action_bounce_email</a>( )</code>
 
 			<div class="description short">
 				
@@ -527,7 +538,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_action_list_filters">#</a>
-			<code><a href="source-class-ManageMaillist_Controller.html#569-708" title="Go to source code">action_list_filters</a>( )</code>
+			<code><a href="source-class-ManageMaillist_Controller.html#565-705" title="Go to source code">action_list_filters</a>( )</code>
 
 			<div class="description short">
 				
@@ -572,7 +583,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_action_sort_filters">#</a>
-			<code><a href="source-class-ManageMaillist_Controller.html#710-823" title="Go to source code">action_sort_filters</a>( )</code>
+			<code><a href="source-class-ManageMaillist_Controller.html#707-820" title="Go to source code">action_sort_filters</a>( )</code>
 
 			<div class="description short">
 				
@@ -605,7 +616,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_count_filter_parser">#</a>
-			<code><a href="source-class-ManageMaillist_Controller.html#825-836" title="Go to source code">count_filter_parser</a>( <span>integer <var>$id</var></span>, <span>string <var>$style</var></span> )</code>
+			<code><a href="source-class-ManageMaillist_Controller.html#822-833" title="Go to source code">count_filter_parser</a>( <span>integer <var>$id</var></span>, <span>string <var>$style</var></span> )</code>
 
 			<div class="description short">
 				
@@ -649,7 +660,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_load_filter_parser">#</a>
-			<code><a href="source-class-ManageMaillist_Controller.html#838-852" title="Go to source code">load_filter_parser</a>( <span>integer <var>$start</var></span>, <span>integer <var>$chunk_size</var></span>, <span>string <var>$sort</var></span>, <span>integer <var>$id</var></span>, <span>string <var>$style</var></span> )</code>
+			<code><a href="source-class-ManageMaillist_Controller.html#835-849" title="Go to source code">load_filter_parser</a>( <span>integer <var>$start</var></span>, <span>integer <var>$chunk_size</var></span>, <span>string <var>$sort</var></span>, <span>integer <var>$id</var></span>, <span>string <var>$style</var></span> )</code>
 
 			<div class="description short">
 				
@@ -699,7 +710,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_action_edit_filters">#</a>
-			<code><a href="source-class-ManageMaillist_Controller.html#854-967" title="Go to source code">action_edit_filters</a>( )</code>
+			<code><a href="source-class-ManageMaillist_Controller.html#851-964" title="Go to source code">action_edit_filters</a>( )</code>
 
 			<div class="description short">
 				
@@ -736,7 +747,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#__initFiltersSettingsForm">#</a>
-			<code><a href="source-class-ManageMaillist_Controller.html#969-1001" title="Go to source code">_initFiltersSettingsForm</a>( )</code>
+			<code><a href="source-class-ManageMaillist_Controller.html#966-998" title="Go to source code">_initFiltersSettingsForm</a>( )</code>
 
 			<div class="description short">
 				
@@ -769,7 +780,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_action_delete_filters">#</a>
-			<code><a href="source-class-ManageMaillist_Controller.html#1003-1017" title="Go to source code">action_delete_filters</a>( )</code>
+			<code><a href="source-class-ManageMaillist_Controller.html#1000-1014" title="Go to source code">action_delete_filters</a>( )</code>
 
 			<div class="description short">
 				
@@ -802,7 +813,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_action_list_parsers">#</a>
-			<code><a href="source-class-ManageMaillist_Controller.html#1019-1145" title="Go to source code">action_list_parsers</a>( )</code>
+			<code><a href="source-class-ManageMaillist_Controller.html#1016-1143" title="Go to source code">action_list_parsers</a>( )</code>
 
 			<div class="description short">
 				
@@ -846,7 +857,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_action_sort_parsers">#</a>
-			<code><a href="source-class-ManageMaillist_Controller.html#1147-1251" title="Go to source code">action_sort_parsers</a>( )</code>
+			<code><a href="source-class-ManageMaillist_Controller.html#1145-1249" title="Go to source code">action_sort_parsers</a>( )</code>
 
 			<div class="description short">
 				
@@ -879,7 +890,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_action_edit_parsers">#</a>
-			<code><a href="source-class-ManageMaillist_Controller.html#1253-1364" title="Go to source code">action_edit_parsers</a>( )</code>
+			<code><a href="source-class-ManageMaillist_Controller.html#1251-1362" title="Go to source code">action_edit_parsers</a>( )</code>
 
 			<div class="description short">
 				
@@ -916,7 +927,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#__initParsersSettingsForm">#</a>
-			<code><a href="source-class-ManageMaillist_Controller.html#1366-1397" title="Go to source code">_initParsersSettingsForm</a>( )</code>
+			<code><a href="source-class-ManageMaillist_Controller.html#1364-1395" title="Go to source code">_initParsersSettingsForm</a>( )</code>
 
 			<div class="description short">
 				
@@ -949,7 +960,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_action_delete_parsers">#</a>
-			<code><a href="source-class-ManageMaillist_Controller.html#1399-1413" title="Go to source code">action_delete_parsers</a>( )</code>
+			<code><a href="source-class-ManageMaillist_Controller.html#1397-1411" title="Go to source code">action_delete_parsers</a>( )</code>
 
 			<div class="description short">
 				
@@ -982,7 +993,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_action_settings">#</a>
-			<code><a href="source-class-ManageMaillist_Controller.html#1415-1551" title="Go to source code">action_settings</a>( )</code>
+			<code><a href="source-class-ManageMaillist_Controller.html#1413-1549" title="Go to source code">action_settings</a>( )</code>
 
 			<div class="description short">
 				
@@ -1019,7 +1030,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#__initMaillistSettingsForm">#</a>
-			<code><a href="source-class-ManageMaillist_Controller.html#1553-1568" title="Go to source code">_initMaillistSettingsForm</a>( )</code>
+			<code><a href="source-class-ManageMaillist_Controller.html#1551-1566" title="Go to source code">_initMaillistSettingsForm</a>( )</code>
 
 			<div class="description short">
 				
@@ -1052,7 +1063,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#__settings">#</a>
-			<code><a href="source-class-ManageMaillist_Controller.html#1570-1642" title="Go to source code">_settings</a>( )</code>
+			<code><a href="source-class-ManageMaillist_Controller.html#1568-1639" title="Go to source code">_settings</a>( )</code>
 
 			<div class="description short">
 				
@@ -1085,7 +1096,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_settings_search">#</a>
-			<code><a href="source-class-ManageMaillist_Controller.html#1644-1650" title="Go to source code">settings_search</a>( )</code>
+			<code><a href="source-class-ManageMaillist_Controller.html#1641-1647" title="Go to source code">settings_search</a>( )</code>
 
 			<div class="description short">
 				
@@ -1118,7 +1129,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_action_view_bounce_templates">#</a>
-			<code><a href="source-class-ManageMaillist_Controller.html#1652-1774" title="Go to source code">action_view_bounce_templates</a>( )</code>
+			<code><a href="source-class-ManageMaillist_Controller.html#1649-1772" title="Go to source code">action_view_bounce_templates</a>( )</code>
 
 			<div class="description short">
 				
@@ -1159,7 +1170,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_action_modify_bounce_templates">#</a>
-			<code><a href="source-class-ManageMaillist_Controller.html#1776-1877" title="Go to source code">action_modify_bounce_templates</a>( )</code>
+			<code><a href="source-class-ManageMaillist_Controller.html#1774-1875" title="Go to source code">action_modify_bounce_templates</a>( )</code>
 
 			<div class="description short">
 				
@@ -1196,7 +1207,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_list_getBounceTemplates">#</a>
-			<code><a href="source-class-ManageMaillist_Controller.html#1879-1891" title="Go to source code">list_getBounceTemplates</a>( <span>integer <var>$start</var></span>, <span>integer <var>$items_per_page</var></span>, <span>string <var>$sort</var></span> )</code>
+			<code><a href="source-class-ManageMaillist_Controller.html#1877-1889" title="Go to source code">list_getBounceTemplates</a>( <span>integer <var>$start</var></span>, <span>integer <var>$items_per_page</var></span>, <span>string <var>$sort</var></span> )</code>
 
 			<div class="description short">
 				
@@ -1242,7 +1253,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_list_getBounceTemplateCount">#</a>
-			<code><a href="source-class-ManageMaillist_Controller.html#1893-1901" title="Go to source code">list_getBounceTemplateCount</a>( )</code>
+			<code><a href="source-class-ManageMaillist_Controller.html#1891-1899" title="Go to source code">list_getBounceTemplateCount</a>( )</code>
 
 			<div class="description short">
 				
@@ -1255,11 +1266,55 @@
 <p>Get the number of bounce templates in the system</p>
 
 <ul>
-	<li>Callback for createList() to</li>
+	<li>Callback for createList() to warningTemplateCount</li>
 </ul>
 
 
 
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="list_maillist_unapproved" id="_list_maillist_unapproved">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_list_maillist_unapproved">#</a>
+			<code><a href="source-class-ManageMaillist_Controller.html#1901-1913" title="Go to source code">list_maillist_unapproved</a>( <span>integer <var>$start</var></span>, <span>integer <var>$chunk_size</var></span>, <span>string <var>$sort</var> = <span class="php-quote">''</span></span>, <span>integer <var>$id</var> = <span class="php-num">0</span></span> )</code>
+
+			<div class="description short">
+				
+<p>Get the number of unapproved emails</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Get the number of unapproved emails</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$start</var></dt>
+						<dd><code>integer</code><br>$start</dd>
+						<dt><var>$chunk_size</var></dt>
+						<dd><code>integer</code><br>$chunk_size</dd>
+						<dt><var>$sort</var></dt>
+						<dd><code>string</code><br>$sort</dd>
+						<dt><var>$id</var></dt>
+						<dd><code>integer</code><br>$id - Callback for createList() to list_maillist_unapproved</dd>
+					</dl></div>
 
 
 

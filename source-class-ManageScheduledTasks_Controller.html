@@ -8,7 +8,7 @@
 	<title>File sources/admin/ManageScheduledTasks.controller.php | ElkArte Documentation</title>
 
 	<script type="text/javascript" src="resources/combined.js?3648714599"></script>
-	<script type="text/javascript" src="elementlist.js?3593784124"></script>
+	<script type="text/javascript" src="elementlist.js?97495842"></script>
 	<link rel="stylesheet" type="text/css" media="all" href="resources/bootstrap.min.css?260161822" />
 	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?2015443609" />
 
@@ -84,7 +84,11 @@
 						</li>
 				<li><a href="package-Graphics.html">Graphics</a>
 						</li>
+				<li><a href="package-Karma.html">Karma</a>
+						</li>
 				<li><a href="package-Languages.html">Languages</a>
+						</li>
+				<li><a href="package-Likes.html">Likes</a>
 						</li>
 				<li><a href="package-Mail.html">Mail</a>
 						</li>
@@ -106,6 +110,8 @@
 						</li>
 				<li><a href="package-Permissions.html">Permissions</a>
 						</li>
+				<li><a href="package-PersonalMessage.html">PersonalMessage</a>
+						</li>
 				<li><a href="package-Posts.html">Posts</a>
 						</li>
 				<li><a href="package-Registration.html">Registration</a>
@@ -114,9 +120,13 @@
 						</li>
 				<li><a href="package-Search.html">Search</a>
 						</li>
+				<li><a href="package-SearchEngines.html">SearchEngines</a>
+						</li>
 				<li><a href="package-Security.html">Security</a>
 						</li>
 				<li><a href="package-Subscriptions.html">Subscriptions</a>
+						</li>
+				<li><a href="package-Themes.html">Themes</a>
 						</li>
 			</ul>
 		</div>
@@ -126,7 +136,7 @@
 			<h3>Classes</h3>
 			<ul>
 				<li class="active"><a href="class-ManageScheduledTasks_Controller.html">ManageScheduledTasks_Controller</a></li>
-				<li><a href="class-ScheduledTask.html">ScheduledTask</a></li>
+				<li><a href="class-Scheduled_Task.html">Scheduled_Task</a></li>
 			</ul>
 
 
@@ -173,7 +183,7 @@
 </span></span><span id="13" class="l"><a class="l" href="#13"> 13 </a><span class="php-comment"> * copyright:   2011 Simple Machines (http://www.simplemachines.org)
 </span></span><span id="14" class="l"><a class="l" href="#14"> 14 </a><span class="php-comment"> * license:     BSD, See included LICENSE.TXT for terms and conditions.
 </span></span><span id="15" class="l"><a class="l" href="#15"> 15 </a><span class="php-comment"> *
-</span></span><span id="16" class="l"><a class="l" href="#16"> 16 </a><span class="php-comment"> * @version 1.0 Beta 2
+</span></span><span id="16" class="l"><a class="l" href="#16"> 16 </a><span class="php-comment"> * @version 1.0
 </span></span><span id="17" class="l"><a class="l" href="#17"> 17 </a><span class="php-comment"> *
 </span></span><span id="18" class="l"><a class="l" href="#18"> 18 </a><span class="php-comment"> */</span>
 </span><span id="19" class="l"><a class="l" href="#19"> 19 </a>
@@ -387,253 +397,254 @@
 </span><span id="227" class="l"><a class="l" href="#227">227 </a>            ),
 </span><span id="228" class="l"><a class="l" href="#228">228 </a>            <span class="php-quote">'additional_rows'</span> =&gt; <span class="php-keyword1">array</span>(
 </span><span id="229" class="l"><a class="l" href="#229">229 </a>                <span class="php-keyword1">array</span>(
-</span><span id="230" class="l"><a class="l" href="#230">230 </a>                    <span class="php-quote">'position'</span> =&gt; <span class="php-quote">'below_table_data'</span>,
-</span><span id="231" class="l"><a class="l" href="#231">231 </a>                    <span class="php-quote">'value'</span> =&gt; <span class="php-quote">'
-</span></span><span id="232" class="l"><a class="l" href="#232">232 </a><span class="php-quote">                        &lt;input type=&quot;submit&quot; name=&quot;run&quot; value=&quot;'</span> . <span class="php-var">$txt</span>[<span class="php-quote">'scheduled_tasks_run_now'</span>] . <span class="php-quote">'&quot; class=&quot;right_submit&quot; /&gt;
-</span></span><span id="233" class="l"><a class="l" href="#233">233 </a><span class="php-quote">                        &lt;input type=&quot;submit&quot; name=&quot;save&quot; value=&quot;'</span> . <span class="php-var">$txt</span>[<span class="php-quote">'scheduled_tasks_save_changes'</span>] . <span class="php-quote">'&quot; class=&quot;right_submit&quot; /&gt;'</span>,
-</span><span id="234" class="l"><a class="l" href="#234">234 </a>                ),
-</span><span id="235" class="l"><a class="l" href="#235">235 </a>                <span class="php-keyword1">array</span>(
-</span><span id="236" class="l"><a class="l" href="#236">236 </a>                    <span class="php-quote">'position'</span> =&gt; <span class="php-quote">'after_title'</span>,
-</span><span id="237" class="l"><a class="l" href="#237">237 </a>                    <span class="php-quote">'value'</span> =&gt; <span class="php-var">$txt</span>[<span class="php-quote">'scheduled_tasks_time_offset'</span>],
-</span><span id="238" class="l"><a class="l" href="#238">238 </a>                    <span class="php-quote">'class'</span> =&gt; <span class="php-quote">'windowbg2'</span>,
-</span><span id="239" class="l"><a class="l" href="#239">239 </a>                ),
-</span><span id="240" class="l"><a class="l" href="#240">240 </a>            ),
-</span><span id="241" class="l"><a class="l" href="#241">241 </a>        );
-</span><span id="242" class="l"><a class="l" href="#242">242 </a>
-</span><span id="243" class="l"><a class="l" href="#243">243 </a>        <span class="php-keyword1">require_once</span>(SUBSDIR . <span class="php-quote">'/List.class.php'</span>);
-</span><span id="244" class="l"><a class="l" href="#244">244 </a>        createList(<span class="php-var">$listOptions</span>);
-</span><span id="245" class="l"><a class="l" href="#245">245 </a>
-</span><span id="246" class="l"><a class="l" href="#246">246 </a>        <span class="php-var">$context</span>[<span class="php-quote">'sub_template'</span>] = <span class="php-quote">'view_scheduled_tasks'</span>;
-</span><span id="247" class="l"><a class="l" href="#247">247 </a>        <span class="php-var">$context</span>[<span class="php-quote">'tasks_were_run'</span>] = <span class="php-keyword1">isset</span>(<span class="php-var">$_GET</span>[<span class="php-quote">'done'</span>]);
-</span><span id="248" class="l"><a class="l" href="#248">248 </a>
-</span><span id="249" class="l"><a class="l" href="#249">249 </a>        <span class="php-comment">// If we had any errors, place them in context as well</span>
-</span><span id="250" class="l"><a class="l" href="#250">250 </a>        <span class="php-keyword1">if</span> (<span class="php-keyword1">isset</span>(<span class="php-var">$_SESSION</span>[<span class="php-quote">'st_error'</span>]))
-</span><span id="251" class="l"><a class="l" href="#251">251 </a>        {
-</span><span id="252" class="l"><a class="l" href="#252">252 </a>            <span class="php-var">$context</span>[<span class="php-quote">'scheduled_errors'</span>] = <span class="php-var">$_SESSION</span>[<span class="php-quote">'st_error'</span>];
-</span><span id="253" class="l"><a class="l" href="#253">253 </a>            <span class="php-keyword1">unset</span>(<span class="php-var">$_SESSION</span>[<span class="php-quote">'st_error'</span>]);
-</span><span id="254" class="l"><a class="l" href="#254">254 </a>        }
-</span><span id="255" class="l"><a class="l" href="#255">255 </a>    }
-</span><span id="256" class="l"><a class="l" href="#256">256 </a>
-</span><span id="257" class="l"><a class="l" href="#257">257 </a>    <span class="php-comment">/**
-</span></span><span id="258" class="l"><a class="l" href="#258">258 </a><span class="php-comment">     * Function for editing a task.
-</span></span><span id="259" class="l"><a class="l" href="#259">259 </a><span class="php-comment">     *
-</span></span><span id="260" class="l"><a class="l" href="#260">260 </a><span class="php-comment">     * @uses ManageScheduledTasks template, edit_scheduled_tasks sub-template
-</span></span><span id="261" class="l"><a class="l" href="#261">261 </a><span class="php-comment">     */</span>
-</span><span id="262" class="l"><a class="l" href="#262">262 </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_action_edit" href="#_action_edit">action_edit</a>()
-</span><span id="263" class="l"><a class="l" href="#263">263 </a>    {
-</span><span id="264" class="l"><a class="l" href="#264">264 </a>        <span class="php-keyword1">global</span> <span class="php-var">$context</span>, <span class="php-var">$txt</span>;
-</span><span id="265" class="l"><a class="l" href="#265">265 </a>
-</span><span id="266" class="l"><a class="l" href="#266">266 </a>        <span class="php-comment">// Just set up some lovely context stuff.</span>
-</span><span id="267" class="l"><a class="l" href="#267">267 </a>        <span class="php-var">$context</span>[<span class="php-var">$context</span>[<span class="php-quote">'admin_menu_name'</span>]][<span class="php-quote">'current_subsection'</span>] = <span class="php-quote">'tasks'</span>;
-</span><span id="268" class="l"><a class="l" href="#268">268 </a>        <span class="php-var">$context</span>[<span class="php-quote">'sub_template'</span>] = <span class="php-quote">'edit_scheduled_tasks'</span>;
-</span><span id="269" class="l"><a class="l" href="#269">269 </a>        <span class="php-var">$context</span>[<span class="php-quote">'page_title'</span>] = <span class="php-var">$txt</span>[<span class="php-quote">'scheduled_task_edit'</span>];
-</span><span id="270" class="l"><a class="l" href="#270">270 </a>        <span class="php-var">$context</span>[<span class="php-quote">'server_time'</span>] = standardTime(<span class="php-keyword2">time</span>(), <span class="php-keyword1">false</span>, <span class="php-quote">'server'</span>);
-</span><span id="271" class="l"><a class="l" href="#271">271 </a>
-</span><span id="272" class="l"><a class="l" href="#272">272 </a>        <span class="php-comment">// We'll need this to calculate the next event.</span>
-</span><span id="273" class="l"><a class="l" href="#273">273 </a>        <span class="php-keyword1">require_once</span>(SUBSDIR . <span class="php-quote">'/ScheduledTasks.subs.php'</span>);
-</span><span id="274" class="l"><a class="l" href="#274">274 </a>
-</span><span id="275" class="l"><a class="l" href="#275">275 </a>        <span class="php-comment">// Cleaning...</span>
-</span><span id="276" class="l"><a class="l" href="#276">276 </a>        <span class="php-keyword1">if</span> (!<span class="php-keyword1">isset</span>(<span class="php-var">$_GET</span>[<span class="php-quote">'tid'</span>]))
-</span><span id="277" class="l"><a class="l" href="#277">277 </a>            fatal_lang_error(<span class="php-quote">'no_access'</span>, <span class="php-keyword1">false</span>);
-</span><span id="278" class="l"><a class="l" href="#278">278 </a>        <span class="php-var">$_GET</span>[<span class="php-quote">'tid'</span>] = (int) <span class="php-var">$_GET</span>[<span class="php-quote">'tid'</span>];
-</span><span id="279" class="l"><a class="l" href="#279">279 </a>
-</span><span id="280" class="l"><a class="l" href="#280">280 </a>        <span class="php-comment">// Saving?</span>
-</span><span id="281" class="l"><a class="l" href="#281">281 </a>        <span class="php-keyword1">if</span> (<span class="php-keyword1">isset</span>(<span class="php-var">$_GET</span>[<span class="php-quote">'save'</span>]))
-</span><span id="282" class="l"><a class="l" href="#282">282 </a>        {
-</span><span id="283" class="l"><a class="l" href="#283">283 </a>            checkSession();
-</span><span id="284" class="l"><a class="l" href="#284">284 </a>            validateToken(<span class="php-quote">'admin-st'</span>);
-</span><span id="285" class="l"><a class="l" href="#285">285 </a>
-</span><span id="286" class="l"><a class="l" href="#286">286 </a>            <span class="php-comment">// Do we have a valid offset?</span>
-</span><span id="287" class="l"><a class="l" href="#287">287 </a>            <span class="php-keyword2">preg_match</span>(<span class="php-quote">'~(\d{1,2}):(\d{1,2})~'</span>, <span class="php-var">$_POST</span>[<span class="php-quote">'offset'</span>], <span class="php-var">$matches</span>);
-</span><span id="288" class="l"><a class="l" href="#288">288 </a>
-</span><span id="289" class="l"><a class="l" href="#289">289 </a>            <span class="php-comment">// If a half is empty then assume zero offset!</span>
-</span><span id="290" class="l"><a class="l" href="#290">290 </a>            <span class="php-keyword1">if</span> (!<span class="php-keyword1">isset</span>(<span class="php-var">$matches</span>[<span class="php-num">2</span>]) || <span class="php-var">$matches</span>[<span class="php-num">2</span>] &gt; <span class="php-num">59</span>)
-</span><span id="291" class="l"><a class="l" href="#291">291 </a>                <span class="php-var">$matches</span>[<span class="php-num">2</span>] = <span class="php-num">0</span>;
-</span><span id="292" class="l"><a class="l" href="#292">292 </a>            <span class="php-keyword1">if</span> (!<span class="php-keyword1">isset</span>(<span class="php-var">$matches</span>[<span class="php-num">1</span>]) || <span class="php-var">$matches</span>[<span class="php-num">1</span>] &gt; <span class="php-num">23</span>)
-</span><span id="293" class="l"><a class="l" href="#293">293 </a>                <span class="php-var">$matches</span>[<span class="php-num">1</span>] = <span class="php-num">0</span>;
-</span><span id="294" class="l"><a class="l" href="#294">294 </a>
-</span><span id="295" class="l"><a class="l" href="#295">295 </a>            <span class="php-comment">// Now the offset is easy; easy peasy - except we need to offset by a few hours...</span>
-</span><span id="296" class="l"><a class="l" href="#296">296 </a>            <span class="php-var">$offset</span> = <span class="php-var">$matches</span>[<span class="php-num">1</span>] * <span class="php-num">3600</span> + <span class="php-var">$matches</span>[<span class="php-num">2</span>] * <span class="php-num">60</span> - <span class="php-keyword2">date</span>(<span class="php-quote">'Z'</span>);
-</span><span id="297" class="l"><a class="l" href="#297">297 </a>
-</span><span id="298" class="l"><a class="l" href="#298">298 </a>            <span class="php-comment">// The other time bits are simple!</span>
-</span><span id="299" class="l"><a class="l" href="#299">299 </a>            <span class="php-var">$interval</span> = <span class="php-keyword2">max</span>((int) <span class="php-var">$_POST</span>[<span class="php-quote">'regularity'</span>], <span class="php-num">1</span>);
-</span><span id="300" class="l"><a class="l" href="#300">300 </a>            <span class="php-var">$unit</span> = <span class="php-keyword2">in_array</span>(<span class="php-keyword2">substr</span>(<span class="php-var">$_POST</span>[<span class="php-quote">'unit'</span>], <span class="php-num">0</span>, <span class="php-num">1</span>), <span class="php-keyword1">array</span>(<span class="php-quote">'m'</span>, <span class="php-quote">'h'</span>, <span class="php-quote">'d'</span>, <span class="php-quote">'w'</span>)) ? <span class="php-keyword2">substr</span>(<span class="php-var">$_POST</span>[<span class="php-quote">'unit'</span>], <span class="php-num">0</span>, <span class="php-num">1</span>) : <span class="php-quote">'d'</span>;
-</span><span id="301" class="l"><a class="l" href="#301">301 </a>
-</span><span id="302" class="l"><a class="l" href="#302">302 </a>            <span class="php-comment">// Don't allow one minute intervals.</span>
-</span><span id="303" class="l"><a class="l" href="#303">303 </a>            <span class="php-keyword1">if</span> (<span class="php-var">$interval</span> == <span class="php-num">1</span> &amp;&amp; <span class="php-var">$unit</span> == <span class="php-quote">'m'</span>)
-</span><span id="304" class="l"><a class="l" href="#304">304 </a>                <span class="php-var">$interval</span> = <span class="php-num">2</span>;
-</span><span id="305" class="l"><a class="l" href="#305">305 </a>
-</span><span id="306" class="l"><a class="l" href="#306">306 </a>            <span class="php-comment">// Is it disabled?</span>
-</span><span id="307" class="l"><a class="l" href="#307">307 </a>            <span class="php-var">$disabled</span> = !<span class="php-keyword1">isset</span>(<span class="php-var">$_POST</span>[<span class="php-quote">'enabled'</span>]) ? <span class="php-num">1</span> : <span class="php-num">0</span>;
-</span><span id="308" class="l"><a class="l" href="#308">308 </a>
-</span><span id="309" class="l"><a class="l" href="#309">309 </a>            <span class="php-comment">// Do the update!</span>
-</span><span id="310" class="l"><a class="l" href="#310">310 </a>            <span class="php-var">$_GET</span>[<span class="php-quote">'tid'</span>] = (int) <span class="php-var">$_GET</span>[<span class="php-quote">'tid'</span>];
-</span><span id="311" class="l"><a class="l" href="#311">311 </a>            updateTask(<span class="php-var">$_GET</span>[<span class="php-quote">'tid'</span>], <span class="php-var">$disabled</span>, <span class="php-var">$offset</span>, <span class="php-var">$interval</span>, <span class="php-var">$unit</span>);
-</span><span id="312" class="l"><a class="l" href="#312">312 </a>
-</span><span id="313" class="l"><a class="l" href="#313">313 </a>            <span class="php-comment">// Check the next event.</span>
-</span><span id="314" class="l"><a class="l" href="#314">314 </a>            calculateNextTrigger(<span class="php-var">$_GET</span>[<span class="php-quote">'tid'</span>], <span class="php-keyword1">true</span>);
-</span><span id="315" class="l"><a class="l" href="#315">315 </a>
-</span><span id="316" class="l"><a class="l" href="#316">316 </a>            <span class="php-comment">// Return to the main list.</span>
-</span><span id="317" class="l"><a class="l" href="#317">317 </a>            redirectexit(<span class="php-quote">'action=admin;area=scheduledtasks'</span>);
-</span><span id="318" class="l"><a class="l" href="#318">318 </a>        }
-</span><span id="319" class="l"><a class="l" href="#319">319 </a>
-</span><span id="320" class="l"><a class="l" href="#320">320 </a>        <span class="php-comment">// Load the task, understand? Que? Que?</span>
-</span><span id="321" class="l"><a class="l" href="#321">321 </a>        <span class="php-var">$_GET</span>[<span class="php-quote">'tid'</span>] = (int) <span class="php-var">$_GET</span>[<span class="php-quote">'tid'</span>];
-</span><span id="322" class="l"><a class="l" href="#322">322 </a>        <span class="php-var">$context</span>[<span class="php-quote">'task'</span>] = loadTaskDetails(<span class="php-var">$_GET</span>[<span class="php-quote">'tid'</span>]);
-</span><span id="323" class="l"><a class="l" href="#323">323 </a>
-</span><span id="324" class="l"><a class="l" href="#324">324 </a>        createToken(<span class="php-quote">'admin-st'</span>);
-</span><span id="325" class="l"><a class="l" href="#325">325 </a>    }
-</span><span id="326" class="l"><a class="l" href="#326">326 </a>
-</span><span id="327" class="l"><a class="l" href="#327">327 </a>    <span class="php-comment">/**
-</span></span><span id="328" class="l"><a class="l" href="#328">328 </a><span class="php-comment">     * Show the log of all tasks that have taken place.
-</span></span><span id="329" class="l"><a class="l" href="#329">329 </a><span class="php-comment">     *
-</span></span><span id="330" class="l"><a class="l" href="#330">330 </a><span class="php-comment">     * @uses ManageScheduledTasks language file
-</span></span><span id="331" class="l"><a class="l" href="#331">331 </a><span class="php-comment">     */</span>
-</span><span id="332" class="l"><a class="l" href="#332">332 </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_action_log" href="#_action_log">action_log</a>()
-</span><span id="333" class="l"><a class="l" href="#333">333 </a>    {
-</span><span id="334" class="l"><a class="l" href="#334">334 </a>        <span class="php-keyword1">global</span> <span class="php-var">$scripturl</span>, <span class="php-var">$context</span>, <span class="php-var">$txt</span>;
-</span><span id="335" class="l"><a class="l" href="#335">335 </a>
-</span><span id="336" class="l"><a class="l" href="#336">336 </a>        <span class="php-keyword1">require_once</span>(SUBSDIR . <span class="php-quote">'/ScheduledTasks.subs.php'</span>);
-</span><span id="337" class="l"><a class="l" href="#337">337 </a>
-</span><span id="338" class="l"><a class="l" href="#338">338 </a>        <span class="php-comment">// Lets load the language just in case we are outside the Scheduled area.</span>
-</span><span id="339" class="l"><a class="l" href="#339">339 </a>        loadLanguage(<span class="php-quote">'ManageScheduledTasks'</span>);
-</span><span id="340" class="l"><a class="l" href="#340">340 </a>
-</span><span id="341" class="l"><a class="l" href="#341">341 </a>        <span class="php-comment">// Empty the log?</span>
-</span><span id="342" class="l"><a class="l" href="#342">342 </a>        <span class="php-keyword1">if</span> (!<span class="php-keyword1">empty</span>(<span class="php-var">$_POST</span>[<span class="php-quote">'removeAll'</span>]))
-</span><span id="343" class="l"><a class="l" href="#343">343 </a>        {
-</span><span id="344" class="l"><a class="l" href="#344">344 </a>            checkSession();
-</span><span id="345" class="l"><a class="l" href="#345">345 </a>            validateToken(<span class="php-quote">'admin-tl'</span>);
-</span><span id="346" class="l"><a class="l" href="#346">346 </a>
-</span><span id="347" class="l"><a class="l" href="#347">347 </a>            emptyTaskLog();
-</span><span id="348" class="l"><a class="l" href="#348">348 </a>        }
-</span><span id="349" class="l"><a class="l" href="#349">349 </a>
-</span><span id="350" class="l"><a class="l" href="#350">350 </a>        <span class="php-comment">// Setup the list.</span>
-</span><span id="351" class="l"><a class="l" href="#351">351 </a>        <span class="php-var">$listOptions</span> = <span class="php-keyword1">array</span>(
-</span><span id="352" class="l"><a class="l" href="#352">352 </a>            <span class="php-quote">'id'</span> =&gt; <span class="php-quote">'task_log'</span>,
-</span><span id="353" class="l"><a class="l" href="#353">353 </a>            <span class="php-quote">'items_per_page'</span> =&gt; <span class="php-num">30</span>,
-</span><span id="354" class="l"><a class="l" href="#354">354 </a>            <span class="php-quote">'title'</span> =&gt; <span class="php-var">$txt</span>[<span class="php-quote">'scheduled_log'</span>],
-</span><span id="355" class="l"><a class="l" href="#355">355 </a>            <span class="php-quote">'no_items_label'</span> =&gt; <span class="php-var">$txt</span>[<span class="php-quote">'scheduled_log_empty'</span>],
-</span><span id="356" class="l"><a class="l" href="#356">356 </a>            <span class="php-quote">'base_href'</span> =&gt; <span class="php-var">$context</span>[<span class="php-quote">'admin_area'</span>] == <span class="php-quote">'scheduledtasks'</span> ? <span class="php-var">$scripturl</span> . <span class="php-quote">'?action=admin;area=scheduledtasks;sa=tasklog'</span> : <span class="php-var">$scripturl</span> . <span class="php-quote">'?action=admin;area=logs;sa=tasklog'</span>,
-</span><span id="357" class="l"><a class="l" href="#357">357 </a>            <span class="php-quote">'default_sort_col'</span> =&gt; <span class="php-quote">'date'</span>,
-</span><span id="358" class="l"><a class="l" href="#358">358 </a>            <span class="php-quote">'get_items'</span> =&gt; <span class="php-keyword1">array</span>(
-</span><span id="359" class="l"><a class="l" href="#359">359 </a>                <span class="php-quote">'function'</span> =&gt; <span class="php-keyword1">array</span>(<span class="php-var">$this</span>, <span class="php-quote">'list_getTaskLogEntries'</span>),
-</span><span id="360" class="l"><a class="l" href="#360">360 </a>            ),
-</span><span id="361" class="l"><a class="l" href="#361">361 </a>            <span class="php-quote">'get_count'</span> =&gt; <span class="php-keyword1">array</span>(
-</span><span id="362" class="l"><a class="l" href="#362">362 </a>                <span class="php-quote">'function'</span> =&gt; <span class="php-keyword1">array</span>(<span class="php-var">$this</span>, <span class="php-quote">'list_getNumTaskLogEntries'</span>),
-</span><span id="363" class="l"><a class="l" href="#363">363 </a>            ),
-</span><span id="364" class="l"><a class="l" href="#364">364 </a>            <span class="php-quote">'columns'</span> =&gt; <span class="php-keyword1">array</span>(
-</span><span id="365" class="l"><a class="l" href="#365">365 </a>                <span class="php-quote">'name'</span> =&gt; <span class="php-keyword1">array</span>(
-</span><span id="366" class="l"><a class="l" href="#366">366 </a>                    <span class="php-quote">'header'</span> =&gt; <span class="php-keyword1">array</span>(
-</span><span id="367" class="l"><a class="l" href="#367">367 </a>                        <span class="php-quote">'value'</span> =&gt; <span class="php-var">$txt</span>[<span class="php-quote">'scheduled_tasks_name'</span>],
-</span><span id="368" class="l"><a class="l" href="#368">368 </a>                    ),
-</span><span id="369" class="l"><a class="l" href="#369">369 </a>                    <span class="php-quote">'data'</span> =&gt; <span class="php-keyword1">array</span>(
-</span><span id="370" class="l"><a class="l" href="#370">370 </a>                        <span class="php-quote">'db'</span> =&gt; <span class="php-quote">'name'</span>
-</span><span id="371" class="l"><a class="l" href="#371">371 </a>                    ),
-</span><span id="372" class="l"><a class="l" href="#372">372 </a>                ),
-</span><span id="373" class="l"><a class="l" href="#373">373 </a>                <span class="php-quote">'date'</span> =&gt; <span class="php-keyword1">array</span>(
-</span><span id="374" class="l"><a class="l" href="#374">374 </a>                    <span class="php-quote">'header'</span> =&gt; <span class="php-keyword1">array</span>(
-</span><span id="375" class="l"><a class="l" href="#375">375 </a>                        <span class="php-quote">'value'</span> =&gt; <span class="php-var">$txt</span>[<span class="php-quote">'scheduled_log_time_run'</span>],
-</span><span id="376" class="l"><a class="l" href="#376">376 </a>                    ),
-</span><span id="377" class="l"><a class="l" href="#377">377 </a>                    <span class="php-quote">'data'</span> =&gt; <span class="php-keyword1">array</span>(
-</span><span id="378" class="l"><a class="l" href="#378">378 </a>                        <span class="php-quote">'function'</span> =&gt; <span class="php-keyword2">create_function</span>(<span class="php-quote">'$rowData'</span>, <span class="php-quote">'
-</span></span><span id="379" class="l"><a class="l" href="#379">379 </a><span class="php-quote">                            return standardTime($rowData[\'time_run\'], true);
-</span></span><span id="380" class="l"><a class="l" href="#380">380 </a><span class="php-quote">                        '</span>),
-</span><span id="381" class="l"><a class="l" href="#381">381 </a>                    ),
-</span><span id="382" class="l"><a class="l" href="#382">382 </a>                    <span class="php-quote">'sort'</span> =&gt; <span class="php-keyword1">array</span>(
-</span><span id="383" class="l"><a class="l" href="#383">383 </a>                        <span class="php-quote">'default'</span> =&gt; <span class="php-quote">'lst.id_log DESC'</span>,
-</span><span id="384" class="l"><a class="l" href="#384">384 </a>                        <span class="php-quote">'reverse'</span> =&gt; <span class="php-quote">'lst.id_log'</span>,
-</span><span id="385" class="l"><a class="l" href="#385">385 </a>                    ),
-</span><span id="386" class="l"><a class="l" href="#386">386 </a>                ),
-</span><span id="387" class="l"><a class="l" href="#387">387 </a>                <span class="php-quote">'time_taken'</span> =&gt; <span class="php-keyword1">array</span>(
-</span><span id="388" class="l"><a class="l" href="#388">388 </a>                    <span class="php-quote">'header'</span> =&gt; <span class="php-keyword1">array</span>(
-</span><span id="389" class="l"><a class="l" href="#389">389 </a>                        <span class="php-quote">'value'</span> =&gt; <span class="php-var">$txt</span>[<span class="php-quote">'scheduled_log_time_taken'</span>],
-</span><span id="390" class="l"><a class="l" href="#390">390 </a>                    ),
-</span><span id="391" class="l"><a class="l" href="#391">391 </a>                    <span class="php-quote">'data'</span> =&gt; <span class="php-keyword1">array</span>(
-</span><span id="392" class="l"><a class="l" href="#392">392 </a>                        <span class="php-quote">'sprintf'</span> =&gt; <span class="php-keyword1">array</span>(
-</span><span id="393" class="l"><a class="l" href="#393">393 </a>                            <span class="php-quote">'format'</span> =&gt; <span class="php-var">$txt</span>[<span class="php-quote">'scheduled_log_time_taken_seconds'</span>],
-</span><span id="394" class="l"><a class="l" href="#394">394 </a>                            <span class="php-quote">'params'</span> =&gt; <span class="php-keyword1">array</span>(
-</span><span id="395" class="l"><a class="l" href="#395">395 </a>                                <span class="php-quote">'time_taken'</span> =&gt; <span class="php-keyword1">false</span>,
-</span><span id="396" class="l"><a class="l" href="#396">396 </a>                            ),
-</span><span id="397" class="l"><a class="l" href="#397">397 </a>                        ),
-</span><span id="398" class="l"><a class="l" href="#398">398 </a>                    ),
-</span><span id="399" class="l"><a class="l" href="#399">399 </a>                    <span class="php-quote">'sort'</span> =&gt; <span class="php-keyword1">array</span>(
-</span><span id="400" class="l"><a class="l" href="#400">400 </a>                        <span class="php-quote">'default'</span> =&gt; <span class="php-quote">'lst.time_taken'</span>,
-</span><span id="401" class="l"><a class="l" href="#401">401 </a>                        <span class="php-quote">'reverse'</span> =&gt; <span class="php-quote">'lst.time_taken DESC'</span>,
-</span><span id="402" class="l"><a class="l" href="#402">402 </a>                    ),
-</span><span id="403" class="l"><a class="l" href="#403">403 </a>                ),
-</span><span id="404" class="l"><a class="l" href="#404">404 </a>                <span class="php-quote">'task_completed'</span> =&gt; <span class="php-keyword1">array</span>(
-</span><span id="405" class="l"><a class="l" href="#405">405 </a>                    <span class="php-quote">'header'</span> =&gt; <span class="php-keyword1">array</span>(
-</span><span id="406" class="l"><a class="l" href="#406">406 </a>                        <span class="php-quote">'value'</span> =&gt; <span class="php-var">$txt</span>[<span class="php-quote">'scheduled_log_completed'</span>],
-</span><span id="407" class="l"><a class="l" href="#407">407 </a>                    ),
-</span><span id="408" class="l"><a class="l" href="#408">408 </a>                    <span class="php-quote">'data'</span> =&gt; <span class="php-keyword1">array</span>(
-</span><span id="409" class="l"><a class="l" href="#409">409 </a>                        <span class="php-quote">'function'</span> =&gt; <span class="php-keyword2">create_function</span>(<span class="php-quote">'$rowData'</span>, <span class="php-quote">'
-</span></span><span id="410" class="l"><a class="l" href="#410">410 </a><span class="php-quote">                            global $settings, $txt;
-</span></span><span id="411" class="l"><a class="l" href="#411">411 </a><span class="php-quote">
-</span></span><span id="412" class="l"><a class="l" href="#412">412 </a><span class="php-quote">                            return \'&lt;img src=&quot;\' . $settings[\'images_url\'] . \'/admin/complete_\' . ($rowData[\'task_completed\'] ? \'success\' : \'fail\') . \'.png&quot; alt=&quot;\' . sprintf($txt[$rowData[\'task_completed\'] ? \'maintain_done\' : \'maintain_fail\'], $rowData[\'name\']) . \'&quot; /&gt;\';
-</span></span><span id="413" class="l"><a class="l" href="#413">413 </a><span class="php-quote">                        '</span>),
-</span><span id="414" class="l"><a class="l" href="#414">414 </a>                    ),
-</span><span id="415" class="l"><a class="l" href="#415">415 </a>                ),
-</span><span id="416" class="l"><a class="l" href="#416">416 </a>            ),
-</span><span id="417" class="l"><a class="l" href="#417">417 </a>            <span class="php-quote">'form'</span> =&gt; <span class="php-keyword1">array</span>(
-</span><span id="418" class="l"><a class="l" href="#418">418 </a>                <span class="php-quote">'href'</span> =&gt; <span class="php-var">$context</span>[<span class="php-quote">'admin_area'</span>] == <span class="php-quote">'scheduledtasks'</span> ? <span class="php-var">$scripturl</span> . <span class="php-quote">'?action=admin;area=scheduledtasks;sa=tasklog'</span> : <span class="php-var">$scripturl</span> . <span class="php-quote">'?action=admin;area=logs;sa=tasklog'</span>,
-</span><span id="419" class="l"><a class="l" href="#419">419 </a>                <span class="php-quote">'token'</span> =&gt; <span class="php-quote">'admin-tl'</span>,
-</span><span id="420" class="l"><a class="l" href="#420">420 </a>            ),
-</span><span id="421" class="l"><a class="l" href="#421">421 </a>            <span class="php-quote">'additional_rows'</span> =&gt; <span class="php-keyword1">array</span>(
-</span><span id="422" class="l"><a class="l" href="#422">422 </a>                <span class="php-keyword1">array</span>(
-</span><span id="423" class="l"><a class="l" href="#423">423 </a>                    <span class="php-quote">'position'</span> =&gt; <span class="php-quote">'below_table_data'</span>,
-</span><span id="424" class="l"><a class="l" href="#424">424 </a>                    <span class="php-quote">'value'</span> =&gt; <span class="php-quote">'
-</span></span><span id="425" class="l"><a class="l" href="#425">425 </a><span class="php-quote">                        &lt;input type=&quot;submit&quot; name=&quot;removeAll&quot; value=&quot;'</span> . <span class="php-var">$txt</span>[<span class="php-quote">'scheduled_log_empty_log'</span>] . <span class="php-quote">'&quot; onclick=&quot;return confirm(\''</span> . <span class="php-var">$txt</span>[<span class="php-quote">'scheduled_log_empty_log_confirm'</span>] . <span class="php-quote">'\');&quot; class=&quot;right_submit&quot; /&gt;'</span>,
-</span><span id="426" class="l"><a class="l" href="#426">426 </a>                ),
-</span><span id="427" class="l"><a class="l" href="#427">427 </a>                <span class="php-keyword1">array</span>(
-</span><span id="428" class="l"><a class="l" href="#428">428 </a>                    <span class="php-quote">'position'</span> =&gt; <span class="php-quote">'after_title'</span>,
-</span><span id="429" class="l"><a class="l" href="#429">429 </a>                    <span class="php-quote">'value'</span> =&gt; <span class="php-var">$txt</span>[<span class="php-quote">'scheduled_tasks_time_offset'</span>],
-</span><span id="430" class="l"><a class="l" href="#430">430 </a>                    <span class="php-quote">'class'</span> =&gt; <span class="php-quote">'windowbg2'</span>,
-</span><span id="431" class="l"><a class="l" href="#431">431 </a>                ),
-</span><span id="432" class="l"><a class="l" href="#432">432 </a>            ),
-</span><span id="433" class="l"><a class="l" href="#433">433 </a>        );
-</span><span id="434" class="l"><a class="l" href="#434">434 </a>
-</span><span id="435" class="l"><a class="l" href="#435">435 </a>        createToken(<span class="php-quote">'admin-tl'</span>);
-</span><span id="436" class="l"><a class="l" href="#436">436 </a>
-</span><span id="437" class="l"><a class="l" href="#437">437 </a>        <span class="php-keyword1">require_once</span>(SUBSDIR . <span class="php-quote">'/List.class.php'</span>);
-</span><span id="438" class="l"><a class="l" href="#438">438 </a>        createList(<span class="php-var">$listOptions</span>);
-</span><span id="439" class="l"><a class="l" href="#439">439 </a>
-</span><span id="440" class="l"><a class="l" href="#440">440 </a>        <span class="php-var">$context</span>[<span class="php-quote">'sub_template'</span>] = <span class="php-quote">'show_list'</span>;
-</span><span id="441" class="l"><a class="l" href="#441">441 </a>        <span class="php-var">$context</span>[<span class="php-quote">'default_list'</span>] = <span class="php-quote">'task_log'</span>;
-</span><span id="442" class="l"><a class="l" href="#442">442 </a>
-</span><span id="443" class="l"><a class="l" href="#443">443 </a>        <span class="php-comment">// Make it all look tify.</span>
-</span><span id="444" class="l"><a class="l" href="#444">444 </a>        <span class="php-var">$context</span>[<span class="php-var">$context</span>[<span class="php-quote">'admin_menu_name'</span>]][<span class="php-quote">'current_subsection'</span>] = <span class="php-quote">'tasklog'</span>;
-</span><span id="445" class="l"><a class="l" href="#445">445 </a>        <span class="php-var">$context</span>[<span class="php-quote">'page_title'</span>] = <span class="php-var">$txt</span>[<span class="php-quote">'scheduled_log'</span>];
-</span><span id="446" class="l"><a class="l" href="#446">446 </a>    }
-</span><span id="447" class="l"><a class="l" href="#447">447 </a>
-</span><span id="448" class="l"><a class="l" href="#448">448 </a>    <span class="php-comment">/**
-</span></span><span id="449" class="l"><a class="l" href="#449">449 </a><span class="php-comment">     * Callback function for createList() in action_tasks().
-</span></span><span id="450" class="l"><a class="l" href="#450">450 </a><span class="php-comment">     *
-</span></span><span id="451" class="l"><a class="l" href="#451">451 </a><span class="php-comment">     */</span>
-</span><span id="452" class="l"><a class="l" href="#452">452 </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_list_getScheduledTasks" href="#_list_getScheduledTasks">list_getScheduledTasks</a>()
-</span><span id="453" class="l"><a class="l" href="#453">453 </a>    {
-</span><span id="454" class="l"><a class="l" href="#454">454 </a>        <span class="php-keyword1">return</span> scheduledTasks();
-</span><span id="455" class="l"><a class="l" href="#455">455 </a>    }
-</span><span id="456" class="l"><a class="l" href="#456">456 </a>
-</span><span id="457" class="l"><a class="l" href="#457">457 </a>    <span class="php-comment">/**
-</span></span><span id="458" class="l"><a class="l" href="#458">458 </a><span class="php-comment">     * Callback function for createList() in action_log().
-</span></span><span id="459" class="l"><a class="l" href="#459">459 </a><span class="php-comment">     *
-</span></span><span id="460" class="l"><a class="l" href="#460">460 </a><span class="php-comment">     * @param int $start
-</span></span><span id="461" class="l"><a class="l" href="#461">461 </a><span class="php-comment">     * @param int $items_per_page
-</span></span><span id="462" class="l"><a class="l" href="#462">462 </a><span class="php-comment">     * @param string $sort
-</span></span><span id="463" class="l"><a class="l" href="#463">463 </a><span class="php-comment">     */</span>
-</span><span id="464" class="l"><a class="l" href="#464">464 </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_list_getTaskLogEntries" href="#_list_getTaskLogEntries">list_getTaskLogEntries</a>(<span class="php-var">$start</span>, <span class="php-var">$items_per_page</span>, <span class="php-var">$sort</span>)
-</span><span id="465" class="l"><a class="l" href="#465">465 </a>    {
-</span><span id="466" class="l"><a class="l" href="#466">466 </a>        <span class="php-keyword1">return</span> getTaskLogEntries(<span class="php-var">$start</span>, <span class="php-var">$items_per_page</span>, <span class="php-var">$sort</span>);
-</span><span id="467" class="l"><a class="l" href="#467">467 </a>    }
-</span><span id="468" class="l"><a class="l" href="#468">468 </a>
-</span><span id="469" class="l"><a class="l" href="#469">469 </a>    <span class="php-comment">/**
-</span></span><span id="470" class="l"><a class="l" href="#470">470 </a><span class="php-comment">     * Callback function for createList() in action_log().
-</span></span><span id="471" class="l"><a class="l" href="#471">471 </a><span class="php-comment">     */</span>
-</span><span id="472" class="l"><a class="l" href="#472">472 </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_list_getNumTaskLogEntries" href="#_list_getNumTaskLogEntries">list_getNumTaskLogEntries</a>()
-</span><span id="473" class="l"><a class="l" href="#473">473 </a>    {
-</span><span id="474" class="l"><a class="l" href="#474">474 </a>        <span class="php-keyword1">return</span> countTaskLogEntries();
-</span><span id="475" class="l"><a class="l" href="#475">475 </a>    }
-</span><span id="476" class="l"><a class="l" href="#476">476 </a></span>}</code></pre>
+</span><span id="230" class="l"><a class="l" href="#230">230 </a>                    <span class="php-quote">'class'</span> =&gt; <span class="php-quote">'submitbutton'</span>,
+</span><span id="231" class="l"><a class="l" href="#231">231 </a>                    <span class="php-quote">'position'</span> =&gt; <span class="php-quote">'below_table_data'</span>,
+</span><span id="232" class="l"><a class="l" href="#232">232 </a>                    <span class="php-quote">'value'</span> =&gt; <span class="php-quote">'
+</span></span><span id="233" class="l"><a class="l" href="#233">233 </a><span class="php-quote">                        &lt;input type=&quot;submit&quot; name=&quot;run&quot; value=&quot;'</span> . <span class="php-var">$txt</span>[<span class="php-quote">'scheduled_tasks_run_now'</span>] . <span class="php-quote">'&quot; class=&quot;right_submit&quot; /&gt;
+</span></span><span id="234" class="l"><a class="l" href="#234">234 </a><span class="php-quote">                        &lt;input type=&quot;submit&quot; name=&quot;save&quot; value=&quot;'</span> . <span class="php-var">$txt</span>[<span class="php-quote">'scheduled_tasks_save_changes'</span>] . <span class="php-quote">'&quot; class=&quot;right_submit&quot; /&gt;'</span>,
+</span><span id="235" class="l"><a class="l" href="#235">235 </a>                ),
+</span><span id="236" class="l"><a class="l" href="#236">236 </a>                <span class="php-keyword1">array</span>(
+</span><span id="237" class="l"><a class="l" href="#237">237 </a>                    <span class="php-quote">'position'</span> =&gt; <span class="php-quote">'after_title'</span>,
+</span><span id="238" class="l"><a class="l" href="#238">238 </a>                    <span class="php-quote">'value'</span> =&gt; <span class="php-var">$txt</span>[<span class="php-quote">'scheduled_tasks_time_offset'</span>],
+</span><span id="239" class="l"><a class="l" href="#239">239 </a>                    <span class="php-quote">'class'</span> =&gt; <span class="php-quote">'windowbg2'</span>,
+</span><span id="240" class="l"><a class="l" href="#240">240 </a>                ),
+</span><span id="241" class="l"><a class="l" href="#241">241 </a>            ),
+</span><span id="242" class="l"><a class="l" href="#242">242 </a>        );
+</span><span id="243" class="l"><a class="l" href="#243">243 </a>
+</span><span id="244" class="l"><a class="l" href="#244">244 </a>        <span class="php-keyword1">require_once</span>(SUBSDIR . <span class="php-quote">'/GenericList.class.php'</span>);
+</span><span id="245" class="l"><a class="l" href="#245">245 </a>        createList(<span class="php-var">$listOptions</span>);
+</span><span id="246" class="l"><a class="l" href="#246">246 </a>
+</span><span id="247" class="l"><a class="l" href="#247">247 </a>        <span class="php-var">$context</span>[<span class="php-quote">'sub_template'</span>] = <span class="php-quote">'view_scheduled_tasks'</span>;
+</span><span id="248" class="l"><a class="l" href="#248">248 </a>        <span class="php-var">$context</span>[<span class="php-quote">'tasks_were_run'</span>] = <span class="php-keyword1">isset</span>(<span class="php-var">$_GET</span>[<span class="php-quote">'done'</span>]);
+</span><span id="249" class="l"><a class="l" href="#249">249 </a>
+</span><span id="250" class="l"><a class="l" href="#250">250 </a>        <span class="php-comment">// If we had any errors, place them in context as well</span>
+</span><span id="251" class="l"><a class="l" href="#251">251 </a>        <span class="php-keyword1">if</span> (<span class="php-keyword1">isset</span>(<span class="php-var">$_SESSION</span>[<span class="php-quote">'st_error'</span>]))
+</span><span id="252" class="l"><a class="l" href="#252">252 </a>        {
+</span><span id="253" class="l"><a class="l" href="#253">253 </a>            <span class="php-var">$context</span>[<span class="php-quote">'scheduled_errors'</span>] = <span class="php-var">$_SESSION</span>[<span class="php-quote">'st_error'</span>];
+</span><span id="254" class="l"><a class="l" href="#254">254 </a>            <span class="php-keyword1">unset</span>(<span class="php-var">$_SESSION</span>[<span class="php-quote">'st_error'</span>]);
+</span><span id="255" class="l"><a class="l" href="#255">255 </a>        }
+</span><span id="256" class="l"><a class="l" href="#256">256 </a>    }
+</span><span id="257" class="l"><a class="l" href="#257">257 </a>
+</span><span id="258" class="l"><a class="l" href="#258">258 </a>    <span class="php-comment">/**
+</span></span><span id="259" class="l"><a class="l" href="#259">259 </a><span class="php-comment">     * Function for editing a task.
+</span></span><span id="260" class="l"><a class="l" href="#260">260 </a><span class="php-comment">     *
+</span></span><span id="261" class="l"><a class="l" href="#261">261 </a><span class="php-comment">     * @uses ManageScheduledTasks template, edit_scheduled_tasks sub-template
+</span></span><span id="262" class="l"><a class="l" href="#262">262 </a><span class="php-comment">     */</span>
+</span><span id="263" class="l"><a class="l" href="#263">263 </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_action_edit" href="#_action_edit">action_edit</a>()
+</span><span id="264" class="l"><a class="l" href="#264">264 </a>    {
+</span><span id="265" class="l"><a class="l" href="#265">265 </a>        <span class="php-keyword1">global</span> <span class="php-var">$context</span>, <span class="php-var">$txt</span>;
+</span><span id="266" class="l"><a class="l" href="#266">266 </a>
+</span><span id="267" class="l"><a class="l" href="#267">267 </a>        <span class="php-comment">// Just set up some lovely context stuff.</span>
+</span><span id="268" class="l"><a class="l" href="#268">268 </a>        <span class="php-var">$context</span>[<span class="php-var">$context</span>[<span class="php-quote">'admin_menu_name'</span>]][<span class="php-quote">'current_subsection'</span>] = <span class="php-quote">'tasks'</span>;
+</span><span id="269" class="l"><a class="l" href="#269">269 </a>        <span class="php-var">$context</span>[<span class="php-quote">'sub_template'</span>] = <span class="php-quote">'edit_scheduled_tasks'</span>;
+</span><span id="270" class="l"><a class="l" href="#270">270 </a>        <span class="php-var">$context</span>[<span class="php-quote">'page_title'</span>] = <span class="php-var">$txt</span>[<span class="php-quote">'scheduled_task_edit'</span>];
+</span><span id="271" class="l"><a class="l" href="#271">271 </a>        <span class="php-var">$context</span>[<span class="php-quote">'server_time'</span>] = standardTime(<span class="php-keyword2">time</span>(), <span class="php-keyword1">false</span>, <span class="php-quote">'server'</span>);
+</span><span id="272" class="l"><a class="l" href="#272">272 </a>
+</span><span id="273" class="l"><a class="l" href="#273">273 </a>        <span class="php-comment">// We'll need this to calculate the next event.</span>
+</span><span id="274" class="l"><a class="l" href="#274">274 </a>        <span class="php-keyword1">require_once</span>(SUBSDIR . <span class="php-quote">'/ScheduledTasks.subs.php'</span>);
+</span><span id="275" class="l"><a class="l" href="#275">275 </a>
+</span><span id="276" class="l"><a class="l" href="#276">276 </a>        <span class="php-comment">// Cleaning...</span>
+</span><span id="277" class="l"><a class="l" href="#277">277 </a>        <span class="php-keyword1">if</span> (!<span class="php-keyword1">isset</span>(<span class="php-var">$_GET</span>[<span class="php-quote">'tid'</span>]))
+</span><span id="278" class="l"><a class="l" href="#278">278 </a>            fatal_lang_error(<span class="php-quote">'no_access'</span>, <span class="php-keyword1">false</span>);
+</span><span id="279" class="l"><a class="l" href="#279">279 </a>        <span class="php-var">$_GET</span>[<span class="php-quote">'tid'</span>] = (int) <span class="php-var">$_GET</span>[<span class="php-quote">'tid'</span>];
+</span><span id="280" class="l"><a class="l" href="#280">280 </a>
+</span><span id="281" class="l"><a class="l" href="#281">281 </a>        <span class="php-comment">// Saving?</span>
+</span><span id="282" class="l"><a class="l" href="#282">282 </a>        <span class="php-keyword1">if</span> (<span class="php-keyword1">isset</span>(<span class="php-var">$_GET</span>[<span class="php-quote">'save'</span>]))
+</span><span id="283" class="l"><a class="l" href="#283">283 </a>        {
+</span><span id="284" class="l"><a class="l" href="#284">284 </a>            checkSession();
+</span><span id="285" class="l"><a class="l" href="#285">285 </a>            validateToken(<span class="php-quote">'admin-st'</span>);
+</span><span id="286" class="l"><a class="l" href="#286">286 </a>
+</span><span id="287" class="l"><a class="l" href="#287">287 </a>            <span class="php-comment">// Do we have a valid offset?</span>
+</span><span id="288" class="l"><a class="l" href="#288">288 </a>            <span class="php-keyword2">preg_match</span>(<span class="php-quote">'~(\d{1,2}):(\d{1,2})~'</span>, <span class="php-var">$_POST</span>[<span class="php-quote">'offset'</span>], <span class="php-var">$matches</span>);
+</span><span id="289" class="l"><a class="l" href="#289">289 </a>
+</span><span id="290" class="l"><a class="l" href="#290">290 </a>            <span class="php-comment">// If a half is empty then assume zero offset!</span>
+</span><span id="291" class="l"><a class="l" href="#291">291 </a>            <span class="php-keyword1">if</span> (!<span class="php-keyword1">isset</span>(<span class="php-var">$matches</span>[<span class="php-num">2</span>]) || <span class="php-var">$matches</span>[<span class="php-num">2</span>] &gt; <span class="php-num">59</span>)
+</span><span id="292" class="l"><a class="l" href="#292">292 </a>                <span class="php-var">$matches</span>[<span class="php-num">2</span>] = <span class="php-num">0</span>;
+</span><span id="293" class="l"><a class="l" href="#293">293 </a>            <span class="php-keyword1">if</span> (!<span class="php-keyword1">isset</span>(<span class="php-var">$matches</span>[<span class="php-num">1</span>]) || <span class="php-var">$matches</span>[<span class="php-num">1</span>] &gt; <span class="php-num">23</span>)
+</span><span id="294" class="l"><a class="l" href="#294">294 </a>                <span class="php-var">$matches</span>[<span class="php-num">1</span>] = <span class="php-num">0</span>;
+</span><span id="295" class="l"><a class="l" href="#295">295 </a>
+</span><span id="296" class="l"><a class="l" href="#296">296 </a>            <span class="php-comment">// Now the offset is easy; easy peasy - except we need to offset by a few hours...</span>
+</span><span id="297" class="l"><a class="l" href="#297">297 </a>            <span class="php-var">$offset</span> = <span class="php-var">$matches</span>[<span class="php-num">1</span>] * <span class="php-num">3600</span> + <span class="php-var">$matches</span>[<span class="php-num">2</span>] * <span class="php-num">60</span> - <span class="php-keyword2">date</span>(<span class="php-quote">'Z'</span>);
+</span><span id="298" class="l"><a class="l" href="#298">298 </a>
+</span><span id="299" class="l"><a class="l" href="#299">299 </a>            <span class="php-comment">// The other time bits are simple!</span>
+</span><span id="300" class="l"><a class="l" href="#300">300 </a>            <span class="php-var">$interval</span> = <span class="php-keyword2">max</span>((int) <span class="php-var">$_POST</span>[<span class="php-quote">'regularity'</span>], <span class="php-num">1</span>);
+</span><span id="301" class="l"><a class="l" href="#301">301 </a>            <span class="php-var">$unit</span> = <span class="php-keyword2">in_array</span>(<span class="php-keyword2">substr</span>(<span class="php-var">$_POST</span>[<span class="php-quote">'unit'</span>], <span class="php-num">0</span>, <span class="php-num">1</span>), <span class="php-keyword1">array</span>(<span class="php-quote">'m'</span>, <span class="php-quote">'h'</span>, <span class="php-quote">'d'</span>, <span class="php-quote">'w'</span>)) ? <span class="php-keyword2">substr</span>(<span class="php-var">$_POST</span>[<span class="php-quote">'unit'</span>], <span class="php-num">0</span>, <span class="php-num">1</span>) : <span class="php-quote">'d'</span>;
+</span><span id="302" class="l"><a class="l" href="#302">302 </a>
+</span><span id="303" class="l"><a class="l" href="#303">303 </a>            <span class="php-comment">// Don't allow one minute intervals.</span>
+</span><span id="304" class="l"><a class="l" href="#304">304 </a>            <span class="php-keyword1">if</span> (<span class="php-var">$interval</span> == <span class="php-num">1</span> &amp;&amp; <span class="php-var">$unit</span> == <span class="php-quote">'m'</span>)
+</span><span id="305" class="l"><a class="l" href="#305">305 </a>                <span class="php-var">$interval</span> = <span class="php-num">2</span>;
+</span><span id="306" class="l"><a class="l" href="#306">306 </a>
+</span><span id="307" class="l"><a class="l" href="#307">307 </a>            <span class="php-comment">// Is it disabled?</span>
+</span><span id="308" class="l"><a class="l" href="#308">308 </a>            <span class="php-var">$disabled</span> = !<span class="php-keyword1">isset</span>(<span class="php-var">$_POST</span>[<span class="php-quote">'enabled'</span>]) ? <span class="php-num">1</span> : <span class="php-num">0</span>;
+</span><span id="309" class="l"><a class="l" href="#309">309 </a>
+</span><span id="310" class="l"><a class="l" href="#310">310 </a>            <span class="php-comment">// Do the update!</span>
+</span><span id="311" class="l"><a class="l" href="#311">311 </a>            <span class="php-var">$_GET</span>[<span class="php-quote">'tid'</span>] = (int) <span class="php-var">$_GET</span>[<span class="php-quote">'tid'</span>];
+</span><span id="312" class="l"><a class="l" href="#312">312 </a>            updateTask(<span class="php-var">$_GET</span>[<span class="php-quote">'tid'</span>], <span class="php-var">$disabled</span>, <span class="php-var">$offset</span>, <span class="php-var">$interval</span>, <span class="php-var">$unit</span>);
+</span><span id="313" class="l"><a class="l" href="#313">313 </a>
+</span><span id="314" class="l"><a class="l" href="#314">314 </a>            <span class="php-comment">// Check the next event.</span>
+</span><span id="315" class="l"><a class="l" href="#315">315 </a>            calculateNextTrigger(<span class="php-var">$_GET</span>[<span class="php-quote">'tid'</span>], <span class="php-keyword1">true</span>);
+</span><span id="316" class="l"><a class="l" href="#316">316 </a>
+</span><span id="317" class="l"><a class="l" href="#317">317 </a>            <span class="php-comment">// Return to the main list.</span>
+</span><span id="318" class="l"><a class="l" href="#318">318 </a>            redirectexit(<span class="php-quote">'action=admin;area=scheduledtasks'</span>);
+</span><span id="319" class="l"><a class="l" href="#319">319 </a>        }
+</span><span id="320" class="l"><a class="l" href="#320">320 </a>
+</span><span id="321" class="l"><a class="l" href="#321">321 </a>        <span class="php-comment">// Load the task, understand? Que? Que?</span>
+</span><span id="322" class="l"><a class="l" href="#322">322 </a>        <span class="php-var">$_GET</span>[<span class="php-quote">'tid'</span>] = (int) <span class="php-var">$_GET</span>[<span class="php-quote">'tid'</span>];
+</span><span id="323" class="l"><a class="l" href="#323">323 </a>        <span class="php-var">$context</span>[<span class="php-quote">'task'</span>] = loadTaskDetails(<span class="php-var">$_GET</span>[<span class="php-quote">'tid'</span>]);
+</span><span id="324" class="l"><a class="l" href="#324">324 </a>
+</span><span id="325" class="l"><a class="l" href="#325">325 </a>        createToken(<span class="php-quote">'admin-st'</span>);
+</span><span id="326" class="l"><a class="l" href="#326">326 </a>    }
+</span><span id="327" class="l"><a class="l" href="#327">327 </a>
+</span><span id="328" class="l"><a class="l" href="#328">328 </a>    <span class="php-comment">/**
+</span></span><span id="329" class="l"><a class="l" href="#329">329 </a><span class="php-comment">     * Show the log of all tasks that have taken place.
+</span></span><span id="330" class="l"><a class="l" href="#330">330 </a><span class="php-comment">     *
+</span></span><span id="331" class="l"><a class="l" href="#331">331 </a><span class="php-comment">     * @uses ManageScheduledTasks language file
+</span></span><span id="332" class="l"><a class="l" href="#332">332 </a><span class="php-comment">     */</span>
+</span><span id="333" class="l"><a class="l" href="#333">333 </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_action_log" href="#_action_log">action_log</a>()
+</span><span id="334" class="l"><a class="l" href="#334">334 </a>    {
+</span><span id="335" class="l"><a class="l" href="#335">335 </a>        <span class="php-keyword1">global</span> <span class="php-var">$scripturl</span>, <span class="php-var">$context</span>, <span class="php-var">$txt</span>;
+</span><span id="336" class="l"><a class="l" href="#336">336 </a>
+</span><span id="337" class="l"><a class="l" href="#337">337 </a>        <span class="php-keyword1">require_once</span>(SUBSDIR . <span class="php-quote">'/ScheduledTasks.subs.php'</span>);
+</span><span id="338" class="l"><a class="l" href="#338">338 </a>
+</span><span id="339" class="l"><a class="l" href="#339">339 </a>        <span class="php-comment">// Lets load the language just in case we are outside the Scheduled area.</span>
+</span><span id="340" class="l"><a class="l" href="#340">340 </a>        loadLanguage(<span class="php-quote">'ManageScheduledTasks'</span>);
+</span><span id="341" class="l"><a class="l" href="#341">341 </a>
+</span><span id="342" class="l"><a class="l" href="#342">342 </a>        <span class="php-comment">// Empty the log?</span>
+</span><span id="343" class="l"><a class="l" href="#343">343 </a>        <span class="php-keyword1">if</span> (!<span class="php-keyword1">empty</span>(<span class="php-var">$_POST</span>[<span class="php-quote">'removeAll'</span>]))
+</span><span id="344" class="l"><a class="l" href="#344">344 </a>        {
+</span><span id="345" class="l"><a class="l" href="#345">345 </a>            checkSession();
+</span><span id="346" class="l"><a class="l" href="#346">346 </a>            validateToken(<span class="php-quote">'admin-tl'</span>);
+</span><span id="347" class="l"><a class="l" href="#347">347 </a>
+</span><span id="348" class="l"><a class="l" href="#348">348 </a>            emptyTaskLog();
+</span><span id="349" class="l"><a class="l" href="#349">349 </a>        }
+</span><span id="350" class="l"><a class="l" href="#350">350 </a>
+</span><span id="351" class="l"><a class="l" href="#351">351 </a>        <span class="php-comment">// Setup the list.</span>
+</span><span id="352" class="l"><a class="l" href="#352">352 </a>        <span class="php-var">$listOptions</span> = <span class="php-keyword1">array</span>(
+</span><span id="353" class="l"><a class="l" href="#353">353 </a>            <span class="php-quote">'id'</span> =&gt; <span class="php-quote">'task_log'</span>,
+</span><span id="354" class="l"><a class="l" href="#354">354 </a>            <span class="php-quote">'items_per_page'</span> =&gt; <span class="php-num">30</span>,
+</span><span id="355" class="l"><a class="l" href="#355">355 </a>            <span class="php-quote">'title'</span> =&gt; <span class="php-var">$txt</span>[<span class="php-quote">'scheduled_log'</span>],
+</span><span id="356" class="l"><a class="l" href="#356">356 </a>            <span class="php-quote">'no_items_label'</span> =&gt; <span class="php-var">$txt</span>[<span class="php-quote">'scheduled_log_empty'</span>],
+</span><span id="357" class="l"><a class="l" href="#357">357 </a>            <span class="php-quote">'base_href'</span> =&gt; <span class="php-var">$context</span>[<span class="php-quote">'admin_area'</span>] == <span class="php-quote">'scheduledtasks'</span> ? <span class="php-var">$scripturl</span> . <span class="php-quote">'?action=admin;area=scheduledtasks;sa=tasklog'</span> : <span class="php-var">$scripturl</span> . <span class="php-quote">'?action=admin;area=logs;sa=tasklog'</span>,
+</span><span id="358" class="l"><a class="l" href="#358">358 </a>            <span class="php-quote">'default_sort_col'</span> =&gt; <span class="php-quote">'date'</span>,
+</span><span id="359" class="l"><a class="l" href="#359">359 </a>            <span class="php-quote">'get_items'</span> =&gt; <span class="php-keyword1">array</span>(
+</span><span id="360" class="l"><a class="l" href="#360">360 </a>                <span class="php-quote">'function'</span> =&gt; <span class="php-keyword1">array</span>(<span class="php-var">$this</span>, <span class="php-quote">'list_getTaskLogEntries'</span>),
+</span><span id="361" class="l"><a class="l" href="#361">361 </a>            ),
+</span><span id="362" class="l"><a class="l" href="#362">362 </a>            <span class="php-quote">'get_count'</span> =&gt; <span class="php-keyword1">array</span>(
+</span><span id="363" class="l"><a class="l" href="#363">363 </a>                <span class="php-quote">'function'</span> =&gt; <span class="php-keyword1">array</span>(<span class="php-var">$this</span>, <span class="php-quote">'list_getNumTaskLogEntries'</span>),
+</span><span id="364" class="l"><a class="l" href="#364">364 </a>            ),
+</span><span id="365" class="l"><a class="l" href="#365">365 </a>            <span class="php-quote">'columns'</span> =&gt; <span class="php-keyword1">array</span>(
+</span><span id="366" class="l"><a class="l" href="#366">366 </a>                <span class="php-quote">'name'</span> =&gt; <span class="php-keyword1">array</span>(
+</span><span id="367" class="l"><a class="l" href="#367">367 </a>                    <span class="php-quote">'header'</span> =&gt; <span class="php-keyword1">array</span>(
+</span><span id="368" class="l"><a class="l" href="#368">368 </a>                        <span class="php-quote">'value'</span> =&gt; <span class="php-var">$txt</span>[<span class="php-quote">'scheduled_tasks_name'</span>],
+</span><span id="369" class="l"><a class="l" href="#369">369 </a>                    ),
+</span><span id="370" class="l"><a class="l" href="#370">370 </a>                    <span class="php-quote">'data'</span> =&gt; <span class="php-keyword1">array</span>(
+</span><span id="371" class="l"><a class="l" href="#371">371 </a>                        <span class="php-quote">'db'</span> =&gt; <span class="php-quote">'name'</span>
+</span><span id="372" class="l"><a class="l" href="#372">372 </a>                    ),
+</span><span id="373" class="l"><a class="l" href="#373">373 </a>                ),
+</span><span id="374" class="l"><a class="l" href="#374">374 </a>                <span class="php-quote">'date'</span> =&gt; <span class="php-keyword1">array</span>(
+</span><span id="375" class="l"><a class="l" href="#375">375 </a>                    <span class="php-quote">'header'</span> =&gt; <span class="php-keyword1">array</span>(
+</span><span id="376" class="l"><a class="l" href="#376">376 </a>                        <span class="php-quote">'value'</span> =&gt; <span class="php-var">$txt</span>[<span class="php-quote">'scheduled_log_time_run'</span>],
+</span><span id="377" class="l"><a class="l" href="#377">377 </a>                    ),
+</span><span id="378" class="l"><a class="l" href="#378">378 </a>                    <span class="php-quote">'data'</span> =&gt; <span class="php-keyword1">array</span>(
+</span><span id="379" class="l"><a class="l" href="#379">379 </a>                        <span class="php-quote">'function'</span> =&gt; <span class="php-keyword2">create_function</span>(<span class="php-quote">'$rowData'</span>, <span class="php-quote">'
+</span></span><span id="380" class="l"><a class="l" href="#380">380 </a><span class="php-quote">                            return standardTime($rowData[\'time_run\'], true);
+</span></span><span id="381" class="l"><a class="l" href="#381">381 </a><span class="php-quote">                        '</span>),
+</span><span id="382" class="l"><a class="l" href="#382">382 </a>                    ),
+</span><span id="383" class="l"><a class="l" href="#383">383 </a>                    <span class="php-quote">'sort'</span> =&gt; <span class="php-keyword1">array</span>(
+</span><span id="384" class="l"><a class="l" href="#384">384 </a>                        <span class="php-quote">'default'</span> =&gt; <span class="php-quote">'lst.id_log DESC'</span>,
+</span><span id="385" class="l"><a class="l" href="#385">385 </a>                        <span class="php-quote">'reverse'</span> =&gt; <span class="php-quote">'lst.id_log'</span>,
+</span><span id="386" class="l"><a class="l" href="#386">386 </a>                    ),
+</span><span id="387" class="l"><a class="l" href="#387">387 </a>                ),
+</span><span id="388" class="l"><a class="l" href="#388">388 </a>                <span class="php-quote">'time_taken'</span> =&gt; <span class="php-keyword1">array</span>(
+</span><span id="389" class="l"><a class="l" href="#389">389 </a>                    <span class="php-quote">'header'</span> =&gt; <span class="php-keyword1">array</span>(
+</span><span id="390" class="l"><a class="l" href="#390">390 </a>                        <span class="php-quote">'value'</span> =&gt; <span class="php-var">$txt</span>[<span class="php-quote">'scheduled_log_time_taken'</span>],
+</span><span id="391" class="l"><a class="l" href="#391">391 </a>                    ),
+</span><span id="392" class="l"><a class="l" href="#392">392 </a>                    <span class="php-quote">'data'</span> =&gt; <span class="php-keyword1">array</span>(
+</span><span id="393" class="l"><a class="l" href="#393">393 </a>                        <span class="php-quote">'sprintf'</span> =&gt; <span class="php-keyword1">array</span>(
+</span><span id="394" class="l"><a class="l" href="#394">394 </a>                            <span class="php-quote">'format'</span> =&gt; <span class="php-var">$txt</span>[<span class="php-quote">'scheduled_log_time_taken_seconds'</span>],
+</span><span id="395" class="l"><a class="l" href="#395">395 </a>                            <span class="php-quote">'params'</span> =&gt; <span class="php-keyword1">array</span>(
+</span><span id="396" class="l"><a class="l" href="#396">396 </a>                                <span class="php-quote">'time_taken'</span> =&gt; <span class="php-keyword1">false</span>,
+</span><span id="397" class="l"><a class="l" href="#397">397 </a>                            ),
+</span><span id="398" class="l"><a class="l" href="#398">398 </a>                        ),
+</span><span id="399" class="l"><a class="l" href="#399">399 </a>                    ),
+</span><span id="400" class="l"><a class="l" href="#400">400 </a>                    <span class="php-quote">'sort'</span> =&gt; <span class="php-keyword1">array</span>(
+</span><span id="401" class="l"><a class="l" href="#401">401 </a>                        <span class="php-quote">'default'</span> =&gt; <span class="php-quote">'lst.time_taken'</span>,
+</span><span id="402" class="l"><a class="l" href="#402">402 </a>                        <span class="php-quote">'reverse'</span> =&gt; <span class="php-quote">'lst.time_taken DESC'</span>,
+</span><span id="403" class="l"><a class="l" href="#403">403 </a>                    ),
+</span><span id="404" class="l"><a class="l" href="#404">404 </a>                ),
+</span><span id="405" class="l"><a class="l" href="#405">405 </a>                <span class="php-quote">'task_completed'</span> =&gt; <span class="php-keyword1">array</span>(
+</span><span id="406" class="l"><a class="l" href="#406">406 </a>                    <span class="php-quote">'header'</span> =&gt; <span class="php-keyword1">array</span>(
+</span><span id="407" class="l"><a class="l" href="#407">407 </a>                        <span class="php-quote">'value'</span> =&gt; <span class="php-var">$txt</span>[<span class="php-quote">'scheduled_log_completed'</span>],
+</span><span id="408" class="l"><a class="l" href="#408">408 </a>                    ),
+</span><span id="409" class="l"><a class="l" href="#409">409 </a>                    <span class="php-quote">'data'</span> =&gt; <span class="php-keyword1">array</span>(
+</span><span id="410" class="l"><a class="l" href="#410">410 </a>                        <span class="php-quote">'function'</span> =&gt; <span class="php-keyword2">create_function</span>(<span class="php-quote">'$rowData'</span>, <span class="php-quote">'
+</span></span><span id="411" class="l"><a class="l" href="#411">411 </a><span class="php-quote">                            global $settings, $txt;
+</span></span><span id="412" class="l"><a class="l" href="#412">412 </a><span class="php-quote">
+</span></span><span id="413" class="l"><a class="l" href="#413">413 </a><span class="php-quote">                            return \'&lt;img src=&quot;\' . $settings[\'images_url\'] . \'/admin/complete_\' . ($rowData[\'task_completed\'] ? \'success\' : \'fail\') . \'.png&quot; alt=&quot;\' . sprintf($txt[$rowData[\'task_completed\'] ? \'maintain_done\' : \'maintain_fail\'], $rowData[\'name\']) . \'&quot; /&gt;\';
+</span></span><span id="414" class="l"><a class="l" href="#414">414 </a><span class="php-quote">                        '</span>),
+</span><span id="415" class="l"><a class="l" href="#415">415 </a>                    ),
+</span><span id="416" class="l"><a class="l" href="#416">416 </a>                ),
+</span><span id="417" class="l"><a class="l" href="#417">417 </a>            ),
+</span><span id="418" class="l"><a class="l" href="#418">418 </a>            <span class="php-quote">'form'</span> =&gt; <span class="php-keyword1">array</span>(
+</span><span id="419" class="l"><a class="l" href="#419">419 </a>                <span class="php-quote">'href'</span> =&gt; <span class="php-var">$context</span>[<span class="php-quote">'admin_area'</span>] == <span class="php-quote">'scheduledtasks'</span> ? <span class="php-var">$scripturl</span> . <span class="php-quote">'?action=admin;area=scheduledtasks;sa=tasklog'</span> : <span class="php-var">$scripturl</span> . <span class="php-quote">'?action=admin;area=logs;sa=tasklog'</span>,
+</span><span id="420" class="l"><a class="l" href="#420">420 </a>                <span class="php-quote">'token'</span> =&gt; <span class="php-quote">'admin-tl'</span>,
+</span><span id="421" class="l"><a class="l" href="#421">421 </a>            ),
+</span><span id="422" class="l"><a class="l" href="#422">422 </a>            <span class="php-quote">'additional_rows'</span> =&gt; <span class="php-keyword1">array</span>(
+</span><span id="423" class="l"><a class="l" href="#423">423 </a>                <span class="php-keyword1">array</span>(
+</span><span id="424" class="l"><a class="l" href="#424">424 </a>                    <span class="php-quote">'position'</span> =&gt; <span class="php-quote">'below_table_data'</span>,
+</span><span id="425" class="l"><a class="l" href="#425">425 </a>                    <span class="php-quote">'value'</span> =&gt; <span class="php-quote">'
+</span></span><span id="426" class="l"><a class="l" href="#426">426 </a><span class="php-quote">                        &lt;input type=&quot;submit&quot; name=&quot;removeAll&quot; value=&quot;'</span> . <span class="php-var">$txt</span>[<span class="php-quote">'scheduled_log_empty_log'</span>] . <span class="php-quote">'&quot; onclick=&quot;return confirm(\''</span> . <span class="php-var">$txt</span>[<span class="php-quote">'scheduled_log_empty_log_confirm'</span>] . <span class="php-quote">'\');&quot; class=&quot;right_submit&quot; /&gt;'</span>,
+</span><span id="427" class="l"><a class="l" href="#427">427 </a>                ),
+</span><span id="428" class="l"><a class="l" href="#428">428 </a>                <span class="php-keyword1">array</span>(
+</span><span id="429" class="l"><a class="l" href="#429">429 </a>                    <span class="php-quote">'position'</span> =&gt; <span class="php-quote">'after_title'</span>,
+</span><span id="430" class="l"><a class="l" href="#430">430 </a>                    <span class="php-quote">'value'</span> =&gt; <span class="php-var">$txt</span>[<span class="php-quote">'scheduled_tasks_time_offset'</span>],
+</span><span id="431" class="l"><a class="l" href="#431">431 </a>                    <span class="php-quote">'class'</span> =&gt; <span class="php-quote">'windowbg2'</span>,
+</span><span id="432" class="l"><a class="l" href="#432">432 </a>                ),
+</span><span id="433" class="l"><a class="l" href="#433">433 </a>            ),
+</span><span id="434" class="l"><a class="l" href="#434">434 </a>        );
+</span><span id="435" class="l"><a class="l" href="#435">435 </a>
+</span><span id="436" class="l"><a class="l" href="#436">436 </a>        createToken(<span class="php-quote">'admin-tl'</span>);
+</span><span id="437" class="l"><a class="l" href="#437">437 </a>
+</span><span id="438" class="l"><a class="l" href="#438">438 </a>        <span class="php-keyword1">require_once</span>(SUBSDIR . <span class="php-quote">'/GenericList.class.php'</span>);
+</span><span id="439" class="l"><a class="l" href="#439">439 </a>        createList(<span class="php-var">$listOptions</span>);
+</span><span id="440" class="l"><a class="l" href="#440">440 </a>
+</span><span id="441" class="l"><a class="l" href="#441">441 </a>        <span class="php-var">$context</span>[<span class="php-quote">'sub_template'</span>] = <span class="php-quote">'show_list'</span>;
+</span><span id="442" class="l"><a class="l" href="#442">442 </a>        <span class="php-var">$context</span>[<span class="php-quote">'default_list'</span>] = <span class="php-quote">'task_log'</span>;
+</span><span id="443" class="l"><a class="l" href="#443">443 </a>
+</span><span id="444" class="l"><a class="l" href="#444">444 </a>        <span class="php-comment">// Make it all look tify.</span>
+</span><span id="445" class="l"><a class="l" href="#445">445 </a>        <span class="php-var">$context</span>[<span class="php-var">$context</span>[<span class="php-quote">'admin_menu_name'</span>]][<span class="php-quote">'current_subsection'</span>] = <span class="php-quote">'tasklog'</span>;
+</span><span id="446" class="l"><a class="l" href="#446">446 </a>        <span class="php-var">$context</span>[<span class="php-quote">'page_title'</span>] = <span class="php-var">$txt</span>[<span class="php-quote">'scheduled_log'</span>];
+</span><span id="447" class="l"><a class="l" href="#447">447 </a>    }
+</span><span id="448" class="l"><a class="l" href="#448">448 </a>
+</span><span id="449" class="l"><a class="l" href="#449">449 </a>    <span class="php-comment">/**
+</span></span><span id="450" class="l"><a class="l" href="#450">450 </a><span class="php-comment">     * Callback function for createList() in action_tasks().
+</span></span><span id="451" class="l"><a class="l" href="#451">451 </a><span class="php-comment">     *
+</span></span><span id="452" class="l"><a class="l" href="#452">452 </a><span class="php-comment">     */</span>
+</span><span id="453" class="l"><a class="l" href="#453">453 </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_list_getScheduledTasks" href="#_list_getScheduledTasks">list_getScheduledTasks</a>()
+</span><span id="454" class="l"><a class="l" href="#454">454 </a>    {
+</span><span id="455" class="l"><a class="l" href="#455">455 </a>        <span class="php-keyword1">return</span> scheduledTasks();
+</span><span id="456" class="l"><a class="l" href="#456">456 </a>    }
+</span><span id="457" class="l"><a class="l" href="#457">457 </a>
+</span><span id="458" class="l"><a class="l" href="#458">458 </a>    <span class="php-comment">/**
+</span></span><span id="459" class="l"><a class="l" href="#459">459 </a><span class="php-comment">     * Callback function for createList() in action_log().
+</span></span><span id="460" class="l"><a class="l" href="#460">460 </a><span class="php-comment">     *
+</span></span><span id="461" class="l"><a class="l" href="#461">461 </a><span class="php-comment">     * @param int $start
+</span></span><span id="462" class="l"><a class="l" href="#462">462 </a><span class="php-comment">     * @param int $items_per_page
+</span></span><span id="463" class="l"><a class="l" href="#463">463 </a><span class="php-comment">     * @param string $sort
+</span></span><span id="464" class="l"><a class="l" href="#464">464 </a><span class="php-comment">     */</span>
+</span><span id="465" class="l"><a class="l" href="#465">465 </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_list_getTaskLogEntries" href="#_list_getTaskLogEntries">list_getTaskLogEntries</a>(<span class="php-var">$start</span>, <span class="php-var">$items_per_page</span>, <span class="php-var">$sort</span>)
+</span><span id="466" class="l"><a class="l" href="#466">466 </a>    {
+</span><span id="467" class="l"><a class="l" href="#467">467 </a>        <span class="php-keyword1">return</span> getTaskLogEntries(<span class="php-var">$start</span>, <span class="php-var">$items_per_page</span>, <span class="php-var">$sort</span>);
+</span><span id="468" class="l"><a class="l" href="#468">468 </a>    }
+</span><span id="469" class="l"><a class="l" href="#469">469 </a>
+</span><span id="470" class="l"><a class="l" href="#470">470 </a>    <span class="php-comment">/**
+</span></span><span id="471" class="l"><a class="l" href="#471">471 </a><span class="php-comment">     * Callback function for createList() in action_log().
+</span></span><span id="472" class="l"><a class="l" href="#472">472 </a><span class="php-comment">     */</span>
+</span><span id="473" class="l"><a class="l" href="#473">473 </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_list_getNumTaskLogEntries" href="#_list_getNumTaskLogEntries">list_getNumTaskLogEntries</a>()
+</span><span id="474" class="l"><a class="l" href="#474">474 </a>    {
+</span><span id="475" class="l"><a class="l" href="#475">475 </a>        <span class="php-keyword1">return</span> countTaskLogEntries();
+</span><span id="476" class="l"><a class="l" href="#476">476 </a>    }
+</span><span id="477" class="l"><a class="l" href="#477">477 </a></span>}</code></pre>
 	</div>
 
 	<div id="footer">

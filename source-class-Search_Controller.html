@@ -8,7 +8,7 @@
 	<title>File sources/controllers/Search.controller.php | ElkArte Documentation</title>
 
 	<script type="text/javascript" src="resources/combined.js?3648714599"></script>
-	<script type="text/javascript" src="elementlist.js?3593784124"></script>
+	<script type="text/javascript" src="elementlist.js?97495842"></script>
 	<link rel="stylesheet" type="text/css" media="all" href="resources/bootstrap.min.css?260161822" />
 	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?2015443609" />
 
@@ -84,7 +84,11 @@
 						</li>
 				<li><a href="package-Graphics.html">Graphics</a>
 						</li>
+				<li><a href="package-Karma.html">Karma</a>
+						</li>
 				<li><a href="package-Languages.html">Languages</a>
+						</li>
+				<li><a href="package-Likes.html">Likes</a>
 						</li>
 				<li><a href="package-Mail.html">Mail</a>
 						</li>
@@ -106,6 +110,8 @@
 						</li>
 				<li><a href="package-Permissions.html">Permissions</a>
 						</li>
+				<li><a href="package-PersonalMessage.html">PersonalMessage</a>
+						</li>
 				<li><a href="package-Posts.html">Posts</a>
 						</li>
 				<li><a href="package-Registration.html">Registration</a>
@@ -114,9 +120,13 @@
 						</li>
 				<li class="active"><a href="package-Search.html">Search</a>
 						</li>
+				<li><a href="package-SearchEngines.html">SearchEngines</a>
+						</li>
 				<li><a href="package-Security.html">Security</a>
 						</li>
 				<li><a href="package-Subscriptions.html">Subscriptions</a>
+						</li>
+				<li><a href="package-Themes.html">Themes</a>
 						</li>
 			</ul>
 		</div>
@@ -171,7 +181,7 @@
 </span></span><span id="13" class="l"><a class="l" href="#13">  13 </a><span class="php-comment"> * copyright:   2011 Simple Machines (http://www.simplemachines.org)
 </span></span><span id="14" class="l"><a class="l" href="#14">  14 </a><span class="php-comment"> * license:     BSD, See included LICENSE.TXT for terms and conditions.
 </span></span><span id="15" class="l"><a class="l" href="#15">  15 </a><span class="php-comment"> *
-</span></span><span id="16" class="l"><a class="l" href="#16">  16 </a><span class="php-comment"> * @version 1.0 Beta 2
+</span></span><span id="16" class="l"><a class="l" href="#16">  16 </a><span class="php-comment"> * @version 1.0
 </span></span><span id="17" class="l"><a class="l" href="#17">  17 </a><span class="php-comment"> *
 </span></span><span id="18" class="l"><a class="l" href="#18">  18 </a><span class="php-comment"> */</span>
 </span><span id="19" class="l"><a class="l" href="#19">  19 </a>
@@ -423,7 +433,7 @@
 </span><span id="265" class="l"><a class="l" href="#265"> 265 </a>        <span class="php-comment">// No, no, no... this is a bit hard on the server, so don't you go prefetching it!</span>
 </span><span id="266" class="l"><a class="l" href="#266"> 266 </a>        <span class="php-keyword1">if</span> (<span class="php-keyword1">isset</span>(<span class="php-var">$_SERVER</span>[<span class="php-quote">'HTTP_X_MOZ'</span>]) &amp;&amp; <span class="php-var">$_SERVER</span>[<span class="php-quote">'HTTP_X_MOZ'</span>] == <span class="php-quote">'prefetch'</span>)
 </span><span id="267" class="l"><a class="l" href="#267"> 267 </a>        {
-</span><span id="268" class="l"><a class="l" href="#268"> 268 </a>            <span class="php-keyword2">ob_end_clean</span>();
+</span><span id="268" class="l"><a class="l" href="#268"> 268 </a>            @<span class="php-keyword2">ob_end_clean</span>();
 </span><span id="269" class="l"><a class="l" href="#269"> 269 </a>            <span class="php-keyword2">header</span>(<span class="php-quote">'HTTP/1.1 403 Forbidden'</span>);
 </span><span id="270" class="l"><a class="l" href="#270"> 270 </a>            <span class="php-keyword1">die</span>;
 </span><span id="271" class="l"><a class="l" href="#271"> 271 </a>        }
@@ -2079,7 +2089,7 @@
 </span><span id="1921" class="l"><a class="l" href="#1921">1921 </a>        {
 </span><span id="1922" class="l"><a class="l" href="#1922">1922 </a>            <span class="php-comment">// Fix the international characters in the keyword too.</span>
 </span><span id="1923" class="l"><a class="l" href="#1923">1923 </a>            <span class="php-var">$query</span> = un_htmlspecialchars(<span class="php-var">$query</span>);
-</span><span id="1924" class="l"><a class="l" href="#1924">1924 </a>            <span class="php-var">$query</span> = <span class="php-keyword2">trim</span>(<span class="php-var">$query</span>, <span class="php-quote">&quot;\*+&quot;</span>);
+</span><span id="1924" class="l"><a class="l" href="#1924">1924 </a>            <span class="php-var">$query</span> = <span class="php-keyword2">trim</span>(<span class="php-var">$query</span>, <span class="php-quote">'\*+'</span>);
 </span><span id="1925" class="l"><a class="l" href="#1925">1925 </a>            <span class="php-var">$query</span> = <span class="php-keyword2">strtr</span>(Util::<span class="php-keyword2">htmlspecialchars</span>(<span class="php-var">$query</span>), <span class="php-keyword1">array</span>(<span class="php-quote">'\\\''</span> =&gt; <span class="php-quote">'\''</span>));
 </span><span id="1926" class="l"><a class="l" href="#1926">1926 </a>
 </span><span id="1927" class="l"><a class="l" href="#1927">1927 </a>            <span class="php-var">$body_highlighted</span> = <span class="php-keyword2">preg_replace_callback</span>(<span class="php-quote">'/((&lt;[^&gt;]*)|'</span> . <span class="php-keyword2">preg_quote</span>(<span class="php-keyword2">strtr</span>(<span class="php-var">$query</span>, <span class="php-keyword1">array</span>(<span class="php-quote">'\''</span> =&gt; <span class="php-quote">'&amp;#039;'</span>)), <span class="php-quote">'/'</span>) . <span class="php-quote">')/iu'</span>, <span class="php-keyword1">array</span>(<span class="php-var">$this</span>, <span class="php-quote">'_highlighted_callback'</span>), <span class="php-var">$body_highlighted</span>);
@@ -2117,7 +2127,7 @@
 </span><span id="1959" class="l"><a class="l" href="#1959">1959 </a>            <span class="php-var">$output</span>[<span class="php-quote">'buttons'</span>] = <span class="php-keyword1">array</span>(
 </span><span id="1960" class="l"><a class="l" href="#1960">1960 </a>                <span class="php-comment">// Can we request notification of topics?</span>
 </span><span id="1961" class="l"><a class="l" href="#1961">1961 </a>                <span class="php-quote">'notify'</span> =&gt; <span class="php-keyword1">array</span>(
-</span><span id="1962" class="l"><a class="l" href="#1962">1962 </a>                    <span class="php-quote">'href'</span> =&gt; <span class="php-var">$scripturl</span> . <span class="php-quote">'?action=notify;topic='</span> . <span class="php-var">$output</span>[<span class="php-quote">'id'</span>] . <span class="php-quote">'.'</span> . <span class="php-quote">'msg'</span> . <span class="php-var">$message</span>[<span class="php-quote">'id_msg'</span>],
+</span><span id="1962" class="l"><a class="l" href="#1962">1962 </a>                    <span class="php-quote">'href'</span> =&gt; <span class="php-var">$scripturl</span> . <span class="php-quote">'?action=notify;topic='</span> . <span class="php-var">$output</span>[<span class="php-quote">'id'</span>] . <span class="php-quote">'.msg'</span> . <span class="php-var">$message</span>[<span class="php-quote">'id_msg'</span>],
 </span><span id="1963" class="l"><a class="l" href="#1963">1963 </a>                    <span class="php-quote">'text'</span> =&gt; <span class="php-var">$txt</span>[<span class="php-quote">'notify'</span>],
 </span><span id="1964" class="l"><a class="l" href="#1964">1964 </a>                    <span class="php-quote">'test'</span> =&gt; <span class="php-quote">'can_mark_notify'</span>,
 </span><span id="1965" class="l"><a class="l" href="#1965">1965 </a>                ),
@@ -2279,7 +2289,7 @@
 </span><span id="2121" class="l"><a class="l" href="#2121">2121 </a>            <span class="php-var">$pspell_link</span> = pspell_new(<span class="php-quote">'en'</span>, <span class="php-quote">''</span>, <span class="php-quote">''</span>, <span class="php-quote">''</span>, PSPELL_FAST | PSPELL_RUN_TOGETHER);
 </span><span id="2122" class="l"><a class="l" href="#2122">2122 </a>
 </span><span id="2123" class="l"><a class="l" href="#2123">2123 </a>        <span class="php-keyword2">error_reporting</span>(<span class="php-var">$old</span>);
-</span><span id="2124" class="l"><a class="l" href="#2124">2124 </a>        <span class="php-keyword2">ob_end_clean</span>();
+</span><span id="2124" class="l"><a class="l" href="#2124">2124 </a>        @<span class="php-keyword2">ob_end_clean</span>();
 </span><span id="2125" class="l"><a class="l" href="#2125">2125 </a>
 </span><span id="2126" class="l"><a class="l" href="#2126">2126 </a>        <span class="php-var">$did_you_mean</span> = <span class="php-keyword1">array</span>(<span class="php-quote">'search'</span> =&gt; <span class="php-keyword1">array</span>(), <span class="php-quote">'display'</span> =&gt; <span class="php-keyword1">array</span>());
 </span><span id="2127" class="l"><a class="l" href="#2127">2127 </a>        <span class="php-var">$found_misspelling</span> = <span class="php-keyword1">false</span>;

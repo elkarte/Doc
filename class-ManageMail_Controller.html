@@ -7,7 +7,7 @@
 	<title>Class ManageMail_Controller | ElkArte Documentation</title>
 
 	<script type="text/javascript" src="resources/combined.js?3648714599"></script>
-	<script type="text/javascript" src="elementlist.js?3593784124"></script>
+	<script type="text/javascript" src="elementlist.js?97495842"></script>
 	<link rel="stylesheet" type="text/css" media="all" href="resources/bootstrap.min.css?260161822" />
 	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?2015443609" />
 
@@ -82,7 +82,11 @@
 						</li>
 				<li><a href="package-Graphics.html">Graphics</a>
 						</li>
+				<li><a href="package-Karma.html">Karma</a>
+						</li>
 				<li><a href="package-Languages.html">Languages</a>
+						</li>
+				<li><a href="package-Likes.html">Likes</a>
 						</li>
 				<li class="active"><a href="package-Mail.html">Mail</a>
 						</li>
@@ -104,6 +108,8 @@
 						</li>
 				<li><a href="package-Permissions.html">Permissions</a>
 						</li>
+				<li><a href="package-PersonalMessage.html">PersonalMessage</a>
+						</li>
 				<li><a href="package-Posts.html">Posts</a>
 						</li>
 				<li><a href="package-Registration.html">Registration</a>
@@ -112,9 +118,13 @@
 						</li>
 				<li><a href="package-Search.html">Search</a>
 						</li>
+				<li><a href="package-SearchEngines.html">SearchEngines</a>
+						</li>
 				<li><a href="package-Security.html">Security</a>
 						</li>
 				<li><a href="package-Subscriptions.html">Subscriptions</a>
+						</li>
+				<li><a href="package-Themes.html">Themes</a>
 						</li>
 			</ul>
 		</div>
@@ -171,8 +181,11 @@
 	
 <p>This class is the administration mailing controller.</p>
 
-<p>It handles mail configuration, it displays and allows to remove items from
-the mail queue.</p>
+<ul>
+	<li>It handles mail configuration,</li>
+
+	<li>It displays and allows to remove items from the mail queue.</li>
+</ul>
 
 	</div>
 
@@ -214,7 +227,7 @@ This software is a derived product, based on:
 Simple Machines Forum (SMF)
 copyright:	2011 Simple Machines (http://www.simplemachines.org)
 license:		BSD, See included LICENSE.TXT for terms and conditions.</a><br />
-		<b>Located at</b> <a href="source-class-ManageMail_Controller.html#23-448" title="Go to source code">sources/admin/ManageMail.controller.php</a><br />
+		<b>Located at</b> <a href="source-class-ManageMail_Controller.html#23-445" title="Go to source code">sources/admin/ManageMail.controller.php</a><br />
 	</div>
 
 
@@ -232,7 +245,7 @@ license:		BSD, See included LICENSE.TXT for terms and conditions.</a><br />
 
 			<td class="name"><div>
 			<a class="anchor" href="#_action_index">#</a>
-			<code><a href="source-class-ManageMail_Controller.html#38-81" title="Go to source code">action_index</a>( )</code>
+			<code><a href="source-class-ManageMail_Controller.html#39-82" title="Go to source code">action_index</a>( )</code>
 
 			<div class="description short">
 				
@@ -278,7 +291,7 @@ license:		BSD, See included LICENSE.TXT for terms and conditions.</a><br />
 
 			<td class="name"><div>
 			<a class="anchor" href="#_action_browse">#</a>
-			<code><a href="source-class-ManageMail_Controller.html#83-223" title="Go to source code">action_browse</a>( )</code>
+			<code><a href="source-class-ManageMail_Controller.html#84-220" title="Go to source code">action_browse</a>( )</code>
 
 			<div class="description short">
 				
@@ -315,7 +328,7 @@ license:		BSD, See included LICENSE.TXT for terms and conditions.</a><br />
 
 			<td class="name"><div>
 			<a class="anchor" href="#_action_mailSettings_display">#</a>
-			<code><a href="source-class-ManageMail_Controller.html#225-305" title="Go to source code">action_mailSettings_display</a>( )</code>
+			<code><a href="source-class-ManageMail_Controller.html#222-302" title="Go to source code">action_mailSettings_display</a>( )</code>
 
 			<div class="description short">
 				
@@ -352,7 +365,7 @@ license:		BSD, See included LICENSE.TXT for terms and conditions.</a><br />
 
 			<td class="name"><div>
 			<a class="anchor" href="#__initMailSettingsForm">#</a>
-			<code><a href="source-class-ManageMail_Controller.html#307-319" title="Go to source code">_initMailSettingsForm</a>( )</code>
+			<code><a href="source-class-ManageMail_Controller.html#304-316" title="Go to source code">_initMailSettingsForm</a>( )</code>
 
 			<div class="description short">
 				
@@ -385,7 +398,7 @@ license:		BSD, See included LICENSE.TXT for terms and conditions.</a><br />
 
 			<td class="name"><div>
 			<a class="anchor" href="#__settings">#</a>
-			<code><a href="source-class-ManageMail_Controller.html#321-367" title="Go to source code">_settings</a>( )</code>
+			<code><a href="source-class-ManageMail_Controller.html#318-364" title="Go to source code">_settings</a>( )</code>
 
 			<div class="description short">
 				
@@ -418,7 +431,7 @@ license:		BSD, See included LICENSE.TXT for terms and conditions.</a><br />
 
 			<td class="name"><div>
 			<a class="anchor" href="#_settings_search">#</a>
-			<code><a href="source-class-ManageMail_Controller.html#369-375" title="Go to source code">settings_search</a>( )</code>
+			<code><a href="source-class-ManageMail_Controller.html#366-372" title="Go to source code">settings_search</a>( )</code>
 
 			<div class="description short">
 				
@@ -451,7 +464,7 @@ license:		BSD, See included LICENSE.TXT for terms and conditions.</a><br />
 
 			<td class="name"><div>
 			<a class="anchor" href="#_action_clear">#</a>
-			<code><a href="source-class-ManageMail_Controller.html#377-410" title="Go to source code">action_clear</a>( )</code>
+			<code><a href="source-class-ManageMail_Controller.html#374-407" title="Go to source code">action_clear</a>( )</code>
 
 			<div class="description short">
 				
@@ -494,7 +507,7 @@ to browse.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#__pauseMailQueueClear">#</a>
-			<code><a href="source-class-ManageMail_Controller.html#412-447" title="Go to source code">_pauseMailQueueClear</a>( <span>integer <var>$all_emails</var></span>, <span>integer <var>$sent_emails</var></span> )</code>
+			<code><a href="source-class-ManageMail_Controller.html#409-444" title="Go to source code">_pauseMailQueueClear</a>( <span>integer <var>$all_emails</var></span>, <span>integer <var>$sent_emails</var></span> )</code>
 
 			<div class="description short">
 				
@@ -549,7 +562,7 @@ to browse.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-ManageMail_Controller.html#32-36" title="Go to source code"><var>$_mailSettings</var></a>
+					<a href="source-class-ManageMail_Controller.html#33-37" title="Go to source code"><var>$_mailSettings</var></a>
 			</td>
 			<td class="description"><div>
 				<a href="#$_mailSettings" class="anchor">#</a>

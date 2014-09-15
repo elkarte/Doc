@@ -8,7 +8,7 @@
 	<title>File sources/admin/CoreFeatures.controller.php | ElkArte Documentation</title>
 
 	<script type="text/javascript" src="resources/combined.js?3648714599"></script>
-	<script type="text/javascript" src="elementlist.js?3593784124"></script>
+	<script type="text/javascript" src="elementlist.js?97495842"></script>
 	<link rel="stylesheet" type="text/css" media="all" href="resources/bootstrap.min.css?260161822" />
 	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?2015443609" />
 
@@ -84,7 +84,11 @@
 						</li>
 				<li><a href="package-Graphics.html">Graphics</a>
 						</li>
+				<li><a href="package-Karma.html">Karma</a>
+						</li>
 				<li><a href="package-Languages.html">Languages</a>
+						</li>
+				<li><a href="package-Likes.html">Likes</a>
 						</li>
 				<li><a href="package-Mail.html">Mail</a>
 						</li>
@@ -106,6 +110,8 @@
 						</li>
 				<li><a href="package-Permissions.html">Permissions</a>
 						</li>
+				<li><a href="package-PersonalMessage.html">PersonalMessage</a>
+						</li>
 				<li><a href="package-Posts.html">Posts</a>
 						</li>
 				<li><a href="package-Registration.html">Registration</a>
@@ -114,9 +120,13 @@
 						</li>
 				<li><a href="package-Search.html">Search</a>
 						</li>
+				<li><a href="package-SearchEngines.html">SearchEngines</a>
+						</li>
 				<li><a href="package-Security.html">Security</a>
 						</li>
 				<li><a href="package-Subscriptions.html">Subscriptions</a>
+						</li>
+				<li><a href="package-Themes.html">Themes</a>
 						</li>
 			</ul>
 		</div>
@@ -155,7 +165,7 @@
 </span></span><span id="13" class="l"><a class="l" href="#13"> 13 </a><span class="php-comment"> * copyright:   2011 Simple Machines (http://www.simplemachines.org)
 </span></span><span id="14" class="l"><a class="l" href="#14"> 14 </a><span class="php-comment"> * license:     BSD, See included LICENSE.TXT for terms and conditions.
 </span></span><span id="15" class="l"><a class="l" href="#15"> 15 </a><span class="php-comment"> *
-</span></span><span id="16" class="l"><a class="l" href="#16"> 16 </a><span class="php-comment"> * @version 1.0 Beta 2
+</span></span><span id="16" class="l"><a class="l" href="#16"> 16 </a><span class="php-comment"> * @version 1.0
 </span></span><span id="17" class="l"><a class="l" href="#17"> 17 </a><span class="php-comment"> *
 </span></span><span id="18" class="l"><a class="l" href="#18"> 18 </a><span class="php-comment"> */</span>
 </span><span id="19" class="l"><a class="l" href="#19"> 19 </a>
@@ -522,7 +532,7 @@
 </span><span id="380" class="l"><a class="l" href="#380">380 </a>        loadLanguage(<span class="php-quote">'ManageSettings'</span>);
 </span><span id="381" class="l"><a class="l" href="#381">381 </a>
 </span><span id="382" class="l"><a class="l" href="#382">382 </a>        <span class="php-comment">// Will need the utility functions from here.</span>
-</span><span id="383" class="l"><a class="l" href="#383">383 </a>        <span class="php-keyword1">require_once</span>(SUBSDIR . <span class="php-quote">'/Settings.class.php'</span>);
+</span><span id="383" class="l"><a class="l" href="#383">383 </a>        <span class="php-keyword1">require_once</span>(SUBSDIR . <span class="php-quote">'/SettingsForm.class.php'</span>);
 </span><span id="384" class="l"><a class="l" href="#384">384 </a>
 </span><span id="385" class="l"><a class="l" href="#385">385 </a>        <span class="php-var">$context</span>[<span class="php-quote">'sub_template'</span>] = <span class="php-quote">'show_settings'</span>;
 </span><span id="386" class="l"><a class="l" href="#386">386 </a>

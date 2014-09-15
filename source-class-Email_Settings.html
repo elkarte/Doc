@@ -8,7 +8,7 @@
 	<title>File sources/subs/EmailSettings.class.php | ElkArte Documentation</title>
 
 	<script type="text/javascript" src="resources/combined.js?3648714599"></script>
-	<script type="text/javascript" src="elementlist.js?3593784124"></script>
+	<script type="text/javascript" src="elementlist.js?97495842"></script>
 	<link rel="stylesheet" type="text/css" media="all" href="resources/bootstrap.min.css?260161822" />
 	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?2015443609" />
 
@@ -25,7 +25,7 @@
 							<a href="package-Maillist.html" title="Summary of Maillist"><span>Package</span></a>
 						</li>
 						<li>
-							<a href="class-MaillistSettingsClass.html" title="Summary of MaillistSettingsClass"><span>Class</span></a>
+							<a href="class-Email_Settings.html" title="Summary of Email_Settings"><span>Class</span></a>
 						</li>
 
 						<li class="divider-vertical"></li>
@@ -84,7 +84,11 @@
 						</li>
 				<li><a href="package-Graphics.html">Graphics</a>
 						</li>
+				<li><a href="package-Karma.html">Karma</a>
+						</li>
 				<li><a href="package-Languages.html">Languages</a>
+						</li>
+				<li><a href="package-Likes.html">Likes</a>
 						</li>
 				<li><a href="package-Mail.html">Mail</a>
 						</li>
@@ -106,6 +110,8 @@
 						</li>
 				<li><a href="package-Permissions.html">Permissions</a>
 						</li>
+				<li><a href="package-PersonalMessage.html">PersonalMessage</a>
+						</li>
 				<li><a href="package-Posts.html">Posts</a>
 						</li>
 				<li><a href="package-Registration.html">Registration</a>
@@ -114,9 +120,13 @@
 						</li>
 				<li><a href="package-Search.html">Search</a>
 						</li>
+				<li><a href="package-SearchEngines.html">SearchEngines</a>
+						</li>
 				<li><a href="package-Security.html">Security</a>
 						</li>
 				<li><a href="package-Subscriptions.html">Subscriptions</a>
+						</li>
+				<li><a href="package-Themes.html">Themes</a>
 						</li>
 			</ul>
 		</div>
@@ -127,7 +137,8 @@
 			<ul>
 				<li><a href="class-Email_Format.html">Email_Format</a></li>
 				<li><a href="class-Email_Parse.html">Email_Parse</a></li>
-				<li class="active"><a href="class-MaillistSettingsClass.html">MaillistSettingsClass</a></li>
+				<li class="active"><a href="class-Email_Settings.html">Email_Settings</a></li>
+				<li><a href="class-Emailpost_Controller.html">Emailpost_Controller</a></li>
 				<li><a href="class-ManageMaillist_Controller.html">ManageMaillist_Controller</a></li>
 			</ul>
 
@@ -200,7 +211,7 @@
 </span></span><span id="8" class="l"><a class="l" href="#8">  8 </a><span class="php-comment"> * @copyright ElkArte Forum contributors
 </span></span><span id="9" class="l"><a class="l" href="#9">  9 </a><span class="php-comment"> * @license   BSD http://opensource.org/licenses/BSD-3-Clause
 </span></span><span id="10" class="l"><a class="l" href="#10"> 10 </a><span class="php-comment"> *
-</span></span><span id="11" class="l"><a class="l" href="#11"> 11 </a><span class="php-comment"> * @version 1.0 Beta 2
+</span></span><span id="11" class="l"><a class="l" href="#11"> 11 </a><span class="php-comment"> * @version 1.0
 </span></span><span id="12" class="l"><a class="l" href="#12"> 12 </a><span class="php-comment"> *
 </span></span><span id="13" class="l"><a class="l" href="#13"> 13 </a><span class="php-comment"> * Handles saving of config vars in another table than settings
 </span></span><span id="14" class="l"><a class="l" href="#14"> 14 </a><span class="php-comment"> */</span>
@@ -219,7 +230,7 @@
 </span></span><span id="27" class="l"><a class="l" href="#27"> 27 </a><span class="php-comment"> *
 </span></span><span id="28" class="l"><a class="l" href="#28"> 28 </a><span class="php-comment"> * @package Maillist
 </span></span><span id="29" class="l"><a class="l" href="#29"> 29 </a><span class="php-comment"> */</span>
-</span><span id="30" class="l"><a class="l" href="#30"> 30 </a><span class="php-keyword1">class</span> <a id="MaillistSettingsClass" href="#MaillistSettingsClass">MaillistSettingsClass</a> <span class="php-keyword1">extends</span> Settings_Form
+</span><span id="30" class="l"><a class="l" href="#30"> 30 </a><span class="php-keyword1">class</span> <a id="Email_Settings" href="#Email_Settings">Email_Settings</a> <span class="php-keyword1">extends</span> Settings_Form
 </span><span id="31" class="l"><a class="l" href="#31"> 31 </a>{
 </span><span id="32" class="l"><a class="l" href="#32"> 32 </a>    <span class="php-comment">/**
 </span></span><span id="33" class="l"><a class="l" href="#33"> 33 </a><span class="php-comment">     * static function saveTableSettings, now part of the Settings Form class

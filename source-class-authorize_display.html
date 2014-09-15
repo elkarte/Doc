@@ -8,7 +8,7 @@
 	<title>File sources/subs/Subscriptions-Authorize.class.php | ElkArte Documentation</title>
 
 	<script type="text/javascript" src="resources/combined.js?3648714599"></script>
-	<script type="text/javascript" src="elementlist.js?3593784124"></script>
+	<script type="text/javascript" src="elementlist.js?97495842"></script>
 	<link rel="stylesheet" type="text/css" media="all" href="resources/bootstrap.min.css?260161822" />
 	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?2015443609" />
 
@@ -25,7 +25,7 @@
 							<a href="package-Subscriptions.html" title="Summary of Subscriptions"><span>Package</span></a>
 						</li>
 						<li>
-							<a href="class-authorize_display.html" title="Summary of authorize_display"><span>Class</span></a>
+							<a href="class-Authorize_Display.html" title="Summary of Authorize_Display"><span>Class</span></a>
 						</li>
 
 						<li class="divider-vertical"></li>
@@ -84,7 +84,11 @@
 						</li>
 				<li><a href="package-Graphics.html">Graphics</a>
 						</li>
+				<li><a href="package-Karma.html">Karma</a>
+						</li>
 				<li><a href="package-Languages.html">Languages</a>
+						</li>
+				<li><a href="package-Likes.html">Likes</a>
 						</li>
 				<li><a href="package-Mail.html">Mail</a>
 						</li>
@@ -106,6 +110,8 @@
 						</li>
 				<li><a href="package-Permissions.html">Permissions</a>
 						</li>
+				<li><a href="package-PersonalMessage.html">PersonalMessage</a>
+						</li>
 				<li><a href="package-Posts.html">Posts</a>
 						</li>
 				<li><a href="package-Registration.html">Registration</a>
@@ -114,9 +120,13 @@
 						</li>
 				<li><a href="package-Search.html">Search</a>
 						</li>
+				<li><a href="package-SearchEngines.html">SearchEngines</a>
+						</li>
 				<li><a href="package-Security.html">Security</a>
 						</li>
 				<li class="active"><a href="package-Subscriptions.html">Subscriptions</a>
+						</li>
+				<li><a href="package-Themes.html">Themes</a>
 						</li>
 			</ul>
 		</div>
@@ -125,13 +135,13 @@
 		<div id="elements">
 			<h3>Classes</h3>
 			<ul>
-				<li class="active"><a href="class-authorize_display.html">authorize_display</a></li>
-				<li><a href="class-authorize_payment.html">authorize_payment</a></li>
+				<li class="active"><a href="class-Authorize_Display.html">Authorize_Display</a></li>
+				<li><a href="class-Authorize_Payment.html">Authorize_Payment</a></li>
 				<li><a href="class-ManagePaid_Controller.html">ManagePaid_Controller</a></li>
-				<li><a href="class-paypal_display.html">paypal_display</a></li>
-				<li><a href="class-paypal_payment.html">paypal_payment</a></li>
-				<li><a href="class-twocheckout_display.html">twocheckout_display</a></li>
-				<li><a href="class-twocheckout_payment.html">twocheckout_payment</a></li>
+				<li><a href="class-PayPal_Display.html">PayPal_Display</a></li>
+				<li><a href="class-PayPal_Payment.html">PayPal_Payment</a></li>
+				<li><a href="class-twoCheckOut_Display.html">twoCheckOut_Display</a></li>
+				<li><a href="class-twoCheckOut_Payment.html">twoCheckOut_Payment</a></li>
 			</ul>
 
 
@@ -149,7 +159,7 @@
 <pre id="source"><code><span id="1" class="l"><a class="l" href="#1">  1 </a><span class="xlang">&lt;?php</span>
 </span><span id="2" class="l"><a class="l" href="#2">  2 </a>
 </span><span id="3" class="l"><a class="l" href="#3">  3 </a><span class="php-comment">/**
-</span></span><span id="4" class="l"><a class="l" href="#4">  4 </a><span class="php-comment"> * Payment Gateway: authorize
+</span></span><span id="4" class="l"><a class="l" href="#4">  4 </a><span class="php-comment"> * Payment Gateway: Authorize
 </span></span><span id="5" class="l"><a class="l" href="#5">  5 </a><span class="php-comment"> *
 </span></span><span id="6" class="l"><a class="l" href="#6">  6 </a><span class="php-comment"> * @name      ElkArte Forum
 </span></span><span id="7" class="l"><a class="l" href="#7">  7 </a><span class="php-comment"> * @copyright ElkArte Forum contributors
@@ -159,7 +169,7 @@
 </span></span><span id="11" class="l"><a class="l" href="#11"> 11 </a><span class="php-comment"> * copyright:   2011 Simple Machines (http://www.simplemachines.org)
 </span></span><span id="12" class="l"><a class="l" href="#12"> 12 </a><span class="php-comment"> * license:     BSD, See included LICENSE.TXT for terms and conditions.
 </span></span><span id="13" class="l"><a class="l" href="#13"> 13 </a><span class="php-comment"> *
-</span></span><span id="14" class="l"><a class="l" href="#14"> 14 </a><span class="php-comment"> * @version 1.0 Beta 2
+</span></span><span id="14" class="l"><a class="l" href="#14"> 14 </a><span class="php-comment"> * @version 1.0
 </span></span><span id="15" class="l"><a class="l" href="#15"> 15 </a><span class="php-comment"> *
 </span></span><span id="16" class="l"><a class="l" href="#16"> 16 </a><span class="php-comment"> */</span>
 </span><span id="17" class="l"><a class="l" href="#17"> 17 </a>
@@ -171,7 +181,7 @@
 </span></span><span id="23" class="l"><a class="l" href="#23"> 23 </a><span class="php-comment"> *
 </span></span><span id="24" class="l"><a class="l" href="#24"> 24 </a><span class="php-comment"> * @package Subscriptions
 </span></span><span id="25" class="l"><a class="l" href="#25"> 25 </a><span class="php-comment"> */</span>
-</span><span id="26" class="l"><a class="l" href="#26"> 26 </a><span class="php-keyword1">class</span> <a id="authorize_display" href="#authorize_display">authorize_display</a>
+</span><span id="26" class="l"><a class="l" href="#26"> 26 </a><span class="php-keyword1">class</span> <a id="Authorize_Display" href="#Authorize_Display">Authorize_Display</a>
 </span><span id="27" class="l"><a class="l" href="#27"> 27 </a>{
 </span><span id="28" class="l"><a class="l" href="#28"> 28 </a>    <span class="php-comment">/**
 </span></span><span id="29" class="l"><a class="l" href="#29"> 29 </a><span class="php-comment">     * Title of this payment gateway
@@ -273,112 +283,118 @@
 </span></span><span id="125" class="l"><a class="l" href="#125">125 </a><span class="php-comment"> *
 </span></span><span id="126" class="l"><a class="l" href="#126">126 </a><span class="php-comment"> * @package Subscriptions
 </span></span><span id="127" class="l"><a class="l" href="#127">127 </a><span class="php-comment"> */</span>
-</span><span id="128" class="l"><a class="l" href="#128">128 </a><span class="php-keyword1">class</span> <a id="authorize_payment" href="#authorize_payment">authorize_payment</a>
+</span><span id="128" class="l"><a class="l" href="#128">128 </a><span class="php-keyword1">class</span> <a id="Authorize_Payment" href="#Authorize_Payment">Authorize_Payment</a>
 </span><span id="129" class="l"><a class="l" href="#129">129 </a>{
 </span><span id="130" class="l"><a class="l" href="#130">130 </a>    <span class="php-comment">/**
-</span></span><span id="131" class="l"><a class="l" href="#131">131 </a><span class="php-comment">     * Holds our return results
-</span></span><span id="132" class="l"><a class="l" href="#132">132 </a><span class="php-comment">     * @var array
-</span></span><span id="133" class="l"><a class="l" href="#133">133 </a><span class="php-comment">     */</span>
-</span><span id="134" class="l"><a class="l" href="#134">134 </a>    <span class="php-keyword1">private</span> <span class="php-var"><a id="$return_data" href="#$return_data">$return_data</a></span>;
-</span><span id="135" class="l"><a class="l" href="#135">135 </a>
-</span><span id="136" class="l"><a class="l" href="#136">136 </a>    <span class="php-comment">/**
-</span></span><span id="137" class="l"><a class="l" href="#137">137 </a><span class="php-comment">     * Validates that we have valid data to work with
-</span></span><span id="138" class="l"><a class="l" href="#138">138 </a><span class="php-comment">     *
-</span></span><span id="139" class="l"><a class="l" href="#139">139 </a><span class="php-comment">     * - Returns true/false for whether this gateway thinks the data is intended for it.
-</span></span><span id="140" class="l"><a class="l" href="#140">140 </a><span class="php-comment">     *
-</span></span><span id="141" class="l"><a class="l" href="#141">141 </a><span class="php-comment">     * @return boolean
-</span></span><span id="142" class="l"><a class="l" href="#142">142 </a><span class="php-comment">     */</span>
-</span><span id="143" class="l"><a class="l" href="#143">143 </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_isValid" href="#_isValid">isValid</a>()
-</span><span id="144" class="l"><a class="l" href="#144">144 </a>    {
-</span><span id="145" class="l"><a class="l" href="#145">145 </a>        <span class="php-keyword1">global</span> <span class="php-var">$modSettings</span>;
-</span><span id="146" class="l"><a class="l" href="#146">146 </a>
-</span><span id="147" class="l"><a class="l" href="#147">147 </a>        <span class="php-comment">// Is it even on?</span>
-</span><span id="148" class="l"><a class="l" href="#148">148 </a>        <span class="php-keyword1">if</span> (<span class="php-keyword1">empty</span>(<span class="php-var">$modSettings</span>[<span class="php-quote">'authorize_id'</span>]) || <span class="php-keyword1">empty</span>(<span class="php-var">$modSettings</span>[<span class="php-quote">'authorize_transid'</span>]))
-</span><span id="149" class="l"><a class="l" href="#149">149 </a>            <span class="php-keyword1">return</span> <span class="php-keyword1">false</span>;
-</span><span id="150" class="l"><a class="l" href="#150">150 </a>
-</span><span id="151" class="l"><a class="l" href="#151">151 </a>        <span class="php-comment">// We got a hash?</span>
-</span><span id="152" class="l"><a class="l" href="#152">152 </a>        <span class="php-keyword1">if</span> (<span class="php-keyword1">empty</span>(<span class="php-var">$_POST</span>[<span class="php-quote">'x_MD5_Hash'</span>]))
-</span><span id="153" class="l"><a class="l" href="#153">153 </a>            <span class="php-keyword1">return</span> <span class="php-keyword1">false</span>;
-</span><span id="154" class="l"><a class="l" href="#154">154 </a>
-</span><span id="155" class="l"><a class="l" href="#155">155 </a>        <span class="php-comment">// Do we have an invoice number?</span>
-</span><span id="156" class="l"><a class="l" href="#156">156 </a>        <span class="php-keyword1">if</span> (<span class="php-keyword1">empty</span>(<span class="php-var">$_POST</span>[<span class="php-quote">'x_invoice_num'</span>]))
-</span><span id="157" class="l"><a class="l" href="#157">157 </a>            <span class="php-keyword1">return</span> <span class="php-keyword1">false</span>;
-</span><span id="158" class="l"><a class="l" href="#158">158 </a>
-</span><span id="159" class="l"><a class="l" href="#159">159 </a>        <span class="php-comment">// And a response?</span>
-</span><span id="160" class="l"><a class="l" href="#160">160 </a>        <span class="php-keyword1">if</span> (<span class="php-keyword1">empty</span>(<span class="php-var">$_POST</span>[<span class="php-quote">'x_response_code'</span>]))
-</span><span id="161" class="l"><a class="l" href="#161">161 </a>            <span class="php-keyword1">return</span> <span class="php-keyword1">false</span>;
-</span><span id="162" class="l"><a class="l" href="#162">162 </a>
-</span><span id="163" class="l"><a class="l" href="#163">163 </a>        <span class="php-keyword1">return</span> <span class="php-keyword1">true</span>;
-</span><span id="164" class="l"><a class="l" href="#164">164 </a>    }
+</span></span><span id="131" class="l"><a class="l" href="#131">131 </a><span class="php-comment">     * Validates that we have valid data to work with
+</span></span><span id="132" class="l"><a class="l" href="#132">132 </a><span class="php-comment">     *
+</span></span><span id="133" class="l"><a class="l" href="#133">133 </a><span class="php-comment">     * - Returns true/false for whether this gateway thinks the data is intended for it.
+</span></span><span id="134" class="l"><a class="l" href="#134">134 </a><span class="php-comment">     *
+</span></span><span id="135" class="l"><a class="l" href="#135">135 </a><span class="php-comment">     * @return boolean
+</span></span><span id="136" class="l"><a class="l" href="#136">136 </a><span class="php-comment">     */</span>
+</span><span id="137" class="l"><a class="l" href="#137">137 </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_isValid" href="#_isValid">isValid</a>()
+</span><span id="138" class="l"><a class="l" href="#138">138 </a>    {
+</span><span id="139" class="l"><a class="l" href="#139">139 </a>        <span class="php-keyword1">global</span> <span class="php-var">$modSettings</span>;
+</span><span id="140" class="l"><a class="l" href="#140">140 </a>
+</span><span id="141" class="l"><a class="l" href="#141">141 </a>        <span class="php-comment">// Is it even on?</span>
+</span><span id="142" class="l"><a class="l" href="#142">142 </a>        <span class="php-keyword1">if</span> (<span class="php-keyword1">empty</span>(<span class="php-var">$modSettings</span>[<span class="php-quote">'authorize_id'</span>]) || <span class="php-keyword1">empty</span>(<span class="php-var">$modSettings</span>[<span class="php-quote">'authorize_transid'</span>]))
+</span><span id="143" class="l"><a class="l" href="#143">143 </a>            <span class="php-keyword1">return</span> <span class="php-keyword1">false</span>;
+</span><span id="144" class="l"><a class="l" href="#144">144 </a>
+</span><span id="145" class="l"><a class="l" href="#145">145 </a>        <span class="php-comment">// We got a hash?</span>
+</span><span id="146" class="l"><a class="l" href="#146">146 </a>        <span class="php-keyword1">if</span> (<span class="php-keyword1">empty</span>(<span class="php-var">$_POST</span>[<span class="php-quote">'x_MD5_Hash'</span>]))
+</span><span id="147" class="l"><a class="l" href="#147">147 </a>            <span class="php-keyword1">return</span> <span class="php-keyword1">false</span>;
+</span><span id="148" class="l"><a class="l" href="#148">148 </a>
+</span><span id="149" class="l"><a class="l" href="#149">149 </a>        <span class="php-comment">// Do we have an invoice number?</span>
+</span><span id="150" class="l"><a class="l" href="#150">150 </a>        <span class="php-keyword1">if</span> (<span class="php-keyword1">empty</span>(<span class="php-var">$_POST</span>[<span class="php-quote">'x_invoice_num'</span>]))
+</span><span id="151" class="l"><a class="l" href="#151">151 </a>            <span class="php-keyword1">return</span> <span class="php-keyword1">false</span>;
+</span><span id="152" class="l"><a class="l" href="#152">152 </a>
+</span><span id="153" class="l"><a class="l" href="#153">153 </a>        <span class="php-comment">// And a response?</span>
+</span><span id="154" class="l"><a class="l" href="#154">154 </a>        <span class="php-keyword1">return</span> !<span class="php-keyword1">empty</span>(<span class="php-var">$_POST</span>[<span class="php-quote">'x_response_code'</span>]);
+</span><span id="155" class="l"><a class="l" href="#155">155 </a>    }
+</span><span id="156" class="l"><a class="l" href="#156">156 </a>
+</span><span id="157" class="l"><a class="l" href="#157">157 </a>    <span class="php-comment">/**
+</span></span><span id="158" class="l"><a class="l" href="#158">158 </a><span class="php-comment">     * Validate this is valid for this transaction type.
+</span></span><span id="159" class="l"><a class="l" href="#159">159 </a><span class="php-comment">     *
+</span></span><span id="160" class="l"><a class="l" href="#160">160 </a><span class="php-comment">     * - If valid returns the subscription and member IDs we are going to process.
+</span></span><span id="161" class="l"><a class="l" href="#161">161 </a><span class="php-comment">     */</span>
+</span><span id="162" class="l"><a class="l" href="#162">162 </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_precheck" href="#_precheck">precheck</a>()
+</span><span id="163" class="l"><a class="l" href="#163">163 </a>    {
+</span><span id="164" class="l"><a class="l" href="#164">164 </a>        <span class="php-keyword1">global</span> <span class="php-var">$modSettings</span>;
 </span><span id="165" class="l"><a class="l" href="#165">165 </a>
-</span><span id="166" class="l"><a class="l" href="#166">166 </a>    <span class="php-comment">/**
-</span></span><span id="167" class="l"><a class="l" href="#167">167 </a><span class="php-comment">     * Validate this is valid for this transaction type.
-</span></span><span id="168" class="l"><a class="l" href="#168">168 </a><span class="php-comment">     *
-</span></span><span id="169" class="l"><a class="l" href="#169">169 </a><span class="php-comment">     * - If valid returns the subscription and member IDs we are going to process.
-</span></span><span id="170" class="l"><a class="l" href="#170">170 </a><span class="php-comment">     */</span>
-</span><span id="171" class="l"><a class="l" href="#171">171 </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_precheck" href="#_precheck">precheck</a>()
-</span><span id="172" class="l"><a class="l" href="#172">172 </a>    {
-</span><span id="173" class="l"><a class="l" href="#173">173 </a>        <span class="php-keyword1">global</span> <span class="php-var">$modSettings</span>;
-</span><span id="174" class="l"><a class="l" href="#174">174 </a>
-</span><span id="175" class="l"><a class="l" href="#175">175 </a>        <span class="php-comment">// Is this the right hash?</span>
-</span><span id="176" class="l"><a class="l" href="#176">176 </a>        <span class="php-keyword1">if</span> (<span class="php-var">$_POST</span>[<span class="php-quote">'x_MD5_Hash'</span>] != <span class="php-keyword2">strtoupper</span>(<span class="php-keyword2">md5</span>(<span class="php-var">$modSettings</span>[<span class="php-quote">'authorize_id'</span>] . <span class="php-var">$_POST</span>[<span class="php-quote">'x_trans_id'</span>] . <span class="php-var">$_POST</span>[<span class="php-quote">'x_amount'</span>])))
-</span><span id="177" class="l"><a class="l" href="#177">177 </a>            <span class="php-keyword1">exit</span>;
-</span><span id="178" class="l"><a class="l" href="#178">178 </a>
-</span><span id="179" class="l"><a class="l" href="#179">179 </a>        <span class="php-comment">// Can't exist if it doesn't contain anything.</span>
-</span><span id="180" class="l"><a class="l" href="#180">180 </a>        <span class="php-keyword1">if</span> (<span class="php-keyword1">empty</span>(<span class="php-var">$_POST</span>[<span class="php-quote">'x_invoice_num'</span>]))
-</span><span id="181" class="l"><a class="l" href="#181">181 </a>            <span class="php-keyword1">exit</span>;
-</span><span id="182" class="l"><a class="l" href="#182">182 </a>
-</span><span id="183" class="l"><a class="l" href="#183">183 </a>        <span class="php-comment">// Verify the currency</span>
-</span><span id="184" class="l"><a class="l" href="#184">184 </a>        <span class="php-var">$currency</span> = <span class="php-var">$_POST</span>[<span class="php-quote">'x_currency_code'</span>];
-</span><span id="185" class="l"><a class="l" href="#185">185 </a>
-</span><span id="186" class="l"><a class="l" href="#186">186 </a>        <span class="php-comment">// Verify the currency!</span>
-</span><span id="187" class="l"><a class="l" href="#187">187 </a>        <span class="php-keyword1">if</span> (<span class="php-keyword2">strtolower</span>(<span class="php-var">$currency</span>) != <span class="php-var">$modSettings</span>[<span class="php-quote">'currency_code'</span>])
-</span><span id="188" class="l"><a class="l" href="#188">188 </a>            <span class="php-keyword1">exit</span>;
-</span><span id="189" class="l"><a class="l" href="#189">189 </a>
-</span><span id="190" class="l"><a class="l" href="#190">190 </a>        <span class="php-comment">// Return the ID_SUB/ID_MEMBER</span>
-</span><span id="191" class="l"><a class="l" href="#191">191 </a>        <span class="php-keyword1">return</span> <span class="php-keyword2">explode</span>(<span class="php-quote">'+'</span>, <span class="php-var">$_POST</span>[<span class="php-quote">'x_invoice_num'</span>]);
-</span><span id="192" class="l"><a class="l" href="#192">192 </a>    }
-</span><span id="193" class="l"><a class="l" href="#193">193 </a>
-</span><span id="194" class="l"><a class="l" href="#194">194 </a>    <span class="php-comment">/**
-</span></span><span id="195" class="l"><a class="l" href="#195">195 </a><span class="php-comment">     * Returns if this is a refund.
-</span></span><span id="196" class="l"><a class="l" href="#196">196 </a><span class="php-comment">     */</span>
-</span><span id="197" class="l"><a class="l" href="#197">197 </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_isRefund" href="#_isRefund">isRefund</a>()
-</span><span id="198" class="l"><a class="l" href="#198">198 </a>    {
-</span><span id="199" class="l"><a class="l" href="#199">199 </a>        <span class="php-keyword1">return</span> <span class="php-keyword1">false</span>;
-</span><span id="200" class="l"><a class="l" href="#200">200 </a>    }
-</span><span id="201" class="l"><a class="l" href="#201">201 </a>
-</span><span id="202" class="l"><a class="l" href="#202">202 </a>    <span class="php-comment">/**
-</span></span><span id="203" class="l"><a class="l" href="#203">203 </a><span class="php-comment">     * Returns if this is a subscription.
-</span></span><span id="204" class="l"><a class="l" href="#204">204 </a><span class="php-comment">     */</span>
-</span><span id="205" class="l"><a class="l" href="#205">205 </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_isSubscription" href="#_isSubscription">isSubscription</a>()
-</span><span id="206" class="l"><a class="l" href="#206">206 </a>    {
-</span><span id="207" class="l"><a class="l" href="#207">207 </a>        <span class="php-keyword1">return</span> <span class="php-keyword1">false</span>;
-</span><span id="208" class="l"><a class="l" href="#208">208 </a>    }
-</span><span id="209" class="l"><a class="l" href="#209">209 </a>
-</span><span id="210" class="l"><a class="l" href="#210">210 </a>    <span class="php-comment">/**
-</span></span><span id="211" class="l"><a class="l" href="#211">211 </a><span class="php-comment">     * Returns if this is a normal payment.
-</span></span><span id="212" class="l"><a class="l" href="#212">212 </a><span class="php-comment">     */</span>
-</span><span id="213" class="l"><a class="l" href="#213">213 </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_isPayment" href="#_isPayment">isPayment</a>()
-</span><span id="214" class="l"><a class="l" href="#214">214 </a>    {
-</span><span id="215" class="l"><a class="l" href="#215">215 </a>        <span class="php-keyword1">return</span> <span class="php-var">$_POST</span>[<span class="php-quote">'x_response_code'</span>] == <span class="php-num">1</span>;
-</span><span id="216" class="l"><a class="l" href="#216">216 </a>    }
-</span><span id="217" class="l"><a class="l" href="#217">217 </a>
-</span><span id="218" class="l"><a class="l" href="#218">218 </a>    <span class="php-comment">/**
-</span></span><span id="219" class="l"><a class="l" href="#219">219 </a><span class="php-comment">     * Retrieve the cost.
-</span></span><span id="220" class="l"><a class="l" href="#220">220 </a><span class="php-comment">     */</span>
-</span><span id="221" class="l"><a class="l" href="#221">221 </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_getCost" href="#_getCost">getCost</a>()
-</span><span id="222" class="l"><a class="l" href="#222">222 </a>    {
-</span><span id="223" class="l"><a class="l" href="#223">223 </a>        <span class="php-keyword1">return</span> <span class="php-var">$_POST</span>[<span class="php-quote">'x_amount'</span>];
-</span><span id="224" class="l"><a class="l" href="#224">224 </a>    }
-</span><span id="225" class="l"><a class="l" href="#225">225 </a>
-</span><span id="226" class="l"><a class="l" href="#226">226 </a>    <span class="php-comment">/**
-</span></span><span id="227" class="l"><a class="l" href="#227">227 </a><span class="php-comment">     * Redirect the user away.
-</span></span><span id="228" class="l"><a class="l" href="#228">228 </a><span class="php-comment">     */</span>
-</span><span id="229" class="l"><a class="l" href="#229">229 </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_close" href="#_close">close</a>()
-</span><span id="230" class="l"><a class="l" href="#230">230 </a>    {
-</span><span id="231" class="l"><a class="l" href="#231">231 </a>        <span class="php-keyword1">exit</span>();
-</span><span id="232" class="l"><a class="l" href="#232">232 </a>    }
-</span><span id="233" class="l"><a class="l" href="#233">233 </a></span>}</code></pre>
+</span><span id="166" class="l"><a class="l" href="#166">166 </a>        <span class="php-comment">// Is this the right hash?</span>
+</span><span id="167" class="l"><a class="l" href="#167">167 </a>        <span class="php-keyword1">if</span> (<span class="php-var">$_POST</span>[<span class="php-quote">'x_MD5_Hash'</span>] != <span class="php-keyword2">strtoupper</span>(<span class="php-keyword2">md5</span>(<span class="php-var">$modSettings</span>[<span class="php-quote">'authorize_id'</span>] . <span class="php-var">$_POST</span>[<span class="php-quote">'x_trans_id'</span>] . <span class="php-var">$_POST</span>[<span class="php-quote">'x_amount'</span>])))
+</span><span id="168" class="l"><a class="l" href="#168">168 </a>            <span class="php-keyword1">exit</span>;
+</span><span id="169" class="l"><a class="l" href="#169">169 </a>
+</span><span id="170" class="l"><a class="l" href="#170">170 </a>        <span class="php-comment">// Can't exist if it doesn't contain anything.</span>
+</span><span id="171" class="l"><a class="l" href="#171">171 </a>        <span class="php-keyword1">if</span> (<span class="php-keyword1">empty</span>(<span class="php-var">$_POST</span>[<span class="php-quote">'x_invoice_num'</span>]))
+</span><span id="172" class="l"><a class="l" href="#172">172 </a>            <span class="php-keyword1">exit</span>;
+</span><span id="173" class="l"><a class="l" href="#173">173 </a>
+</span><span id="174" class="l"><a class="l" href="#174">174 </a>        <span class="php-comment">// Verify the currency</span>
+</span><span id="175" class="l"><a class="l" href="#175">175 </a>        <span class="php-var">$currency</span> = <span class="php-var">$_POST</span>[<span class="php-quote">'x_currency_code'</span>];
+</span><span id="176" class="l"><a class="l" href="#176">176 </a>
+</span><span id="177" class="l"><a class="l" href="#177">177 </a>        <span class="php-comment">// Verify the currency!</span>
+</span><span id="178" class="l"><a class="l" href="#178">178 </a>        <span class="php-keyword1">if</span> (<span class="php-keyword2">strtolower</span>(<span class="php-var">$currency</span>) != <span class="php-var">$modSettings</span>[<span class="php-quote">'currency_code'</span>])
+</span><span id="179" class="l"><a class="l" href="#179">179 </a>            <span class="php-keyword1">exit</span>;
+</span><span id="180" class="l"><a class="l" href="#180">180 </a>
+</span><span id="181" class="l"><a class="l" href="#181">181 </a>        <span class="php-comment">// Return the ID_SUB/ID_MEMBER</span>
+</span><span id="182" class="l"><a class="l" href="#182">182 </a>        <span class="php-keyword1">return</span> <span class="php-keyword2">explode</span>(<span class="php-quote">'+'</span>, <span class="php-var">$_POST</span>[<span class="php-quote">'x_invoice_num'</span>]);
+</span><span id="183" class="l"><a class="l" href="#183">183 </a>    }
+</span><span id="184" class="l"><a class="l" href="#184">184 </a>
+</span><span id="185" class="l"><a class="l" href="#185">185 </a>    <span class="php-comment">/**
+</span></span><span id="186" class="l"><a class="l" href="#186">186 </a><span class="php-comment">     * Returns if this is a refund.
+</span></span><span id="187" class="l"><a class="l" href="#187">187 </a><span class="php-comment">     */</span>
+</span><span id="188" class="l"><a class="l" href="#188">188 </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_isRefund" href="#_isRefund">isRefund</a>()
+</span><span id="189" class="l"><a class="l" href="#189">189 </a>    {
+</span><span id="190" class="l"><a class="l" href="#190">190 </a>        <span class="php-keyword1">return</span> <span class="php-keyword1">false</span>;
+</span><span id="191" class="l"><a class="l" href="#191">191 </a>    }
+</span><span id="192" class="l"><a class="l" href="#192">192 </a>
+</span><span id="193" class="l"><a class="l" href="#193">193 </a>    <span class="php-comment">/**
+</span></span><span id="194" class="l"><a class="l" href="#194">194 </a><span class="php-comment">     * Returns if this is a subscription.
+</span></span><span id="195" class="l"><a class="l" href="#195">195 </a><span class="php-comment">     */</span>
+</span><span id="196" class="l"><a class="l" href="#196">196 </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_isSubscription" href="#_isSubscription">isSubscription</a>()
+</span><span id="197" class="l"><a class="l" href="#197">197 </a>    {
+</span><span id="198" class="l"><a class="l" href="#198">198 </a>        <span class="php-keyword1">return</span> <span class="php-keyword1">false</span>;
+</span><span id="199" class="l"><a class="l" href="#199">199 </a>    }
+</span><span id="200" class="l"><a class="l" href="#200">200 </a>
+</span><span id="201" class="l"><a class="l" href="#201">201 </a>    <span class="php-comment">/**
+</span></span><span id="202" class="l"><a class="l" href="#202">202 </a><span class="php-comment">     * Returns if this is a normal valid approved payment.
+</span></span><span id="203" class="l"><a class="l" href="#203">203 </a><span class="php-comment">     *
+</span></span><span id="204" class="l"><a class="l" href="#204">204 </a><span class="php-comment">     * If a transaction is approved x_response_code will contain a value of 1.
+</span></span><span id="205" class="l"><a class="l" href="#205">205 </a><span class="php-comment">     * If the card is declined x_response_code will contain a value of 2.
+</span></span><span id="206" class="l"><a class="l" href="#206">206 </a><span class="php-comment">     * If there was an error the card is expired x_response_code will contain a value of 3.
+</span></span><span id="207" class="l"><a class="l" href="#207">207 </a><span class="php-comment">     * If the transaction is held for review x_response_code will contain a value of 4.
+</span></span><span id="208" class="l"><a class="l" href="#208">208 </a><span class="php-comment">     */</span>
+</span><span id="209" class="l"><a class="l" href="#209">209 </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_isPayment" href="#_isPayment">isPayment</a>()
+</span><span id="210" class="l"><a class="l" href="#210">210 </a>    {
+</span><span id="211" class="l"><a class="l" href="#211">211 </a>        <span class="php-keyword1">return</span> <span class="php-var">$_POST</span>[<span class="php-quote">'x_response_code'</span>] == <span class="php-num">1</span>;
+</span><span id="212" class="l"><a class="l" href="#212">212 </a>    }
+</span><span id="213" class="l"><a class="l" href="#213">213 </a>
+</span><span id="214" class="l"><a class="l" href="#214">214 </a>    <span class="php-comment">/**
+</span></span><span id="215" class="l"><a class="l" href="#215">215 </a><span class="php-comment">     * Returns if this is this is a cancellation transaction
+</span></span><span id="216" class="l"><a class="l" href="#216">216 </a><span class="php-comment">     *
+</span></span><span id="217" class="l"><a class="l" href="#217">217 </a><span class="php-comment">     * @return boolean
+</span></span><span id="218" class="l"><a class="l" href="#218">218 </a><span class="php-comment">     */</span>
+</span><span id="219" class="l"><a class="l" href="#219">219 </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_isCancellation" href="#_isCancellation">isCancellation</a>()
+</span><span id="220" class="l"><a class="l" href="#220">220 </a>    {
+</span><span id="221" class="l"><a class="l" href="#221">221 </a>        <span class="php-keyword1">return</span> <span class="php-keyword1">false</span>;
+</span><span id="222" class="l"><a class="l" href="#222">222 </a>    }
+</span><span id="223" class="l"><a class="l" href="#223">223 </a>
+</span><span id="224" class="l"><a class="l" href="#224">224 </a>    <span class="php-comment">/**
+</span></span><span id="225" class="l"><a class="l" href="#225">225 </a><span class="php-comment">     * Retrieve the cost.
+</span></span><span id="226" class="l"><a class="l" href="#226">226 </a><span class="php-comment">     */</span>
+</span><span id="227" class="l"><a class="l" href="#227">227 </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_getCost" href="#_getCost">getCost</a>()
+</span><span id="228" class="l"><a class="l" href="#228">228 </a>    {
+</span><span id="229" class="l"><a class="l" href="#229">229 </a>        <span class="php-keyword1">return</span> <span class="php-var">$_POST</span>[<span class="php-quote">'x_amount'</span>];
+</span><span id="230" class="l"><a class="l" href="#230">230 </a>    }
+</span><span id="231" class="l"><a class="l" href="#231">231 </a>
+</span><span id="232" class="l"><a class="l" href="#232">232 </a>    <span class="php-comment">/**
+</span></span><span id="233" class="l"><a class="l" href="#233">233 </a><span class="php-comment">     * Redirect the user away.
+</span></span><span id="234" class="l"><a class="l" href="#234">234 </a><span class="php-comment">     */</span>
+</span><span id="235" class="l"><a class="l" href="#235">235 </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_close" href="#_close">close</a>()
+</span><span id="236" class="l"><a class="l" href="#236">236 </a>    {
+</span><span id="237" class="l"><a class="l" href="#237">237 </a>        <span class="php-keyword1">exit</span>();
+</span><span id="238" class="l"><a class="l" href="#238">238 </a>    }
+</span><span id="239" class="l"><a class="l" href="#239">239 </a></span>}</code></pre>
 	</div>
 
 	<div id="footer">

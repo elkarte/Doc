@@ -8,7 +8,7 @@
 	<title>File sources/admin/AdminLog.controller.php | ElkArte Documentation</title>
 
 	<script type="text/javascript" src="resources/combined.js?3648714599"></script>
-	<script type="text/javascript" src="elementlist.js?3593784124"></script>
+	<script type="text/javascript" src="elementlist.js?97495842"></script>
 	<link rel="stylesheet" type="text/css" media="all" href="resources/bootstrap.min.css?260161822" />
 	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?2015443609" />
 
@@ -84,7 +84,11 @@
 						</li>
 				<li><a href="package-Graphics.html">Graphics</a>
 						</li>
+				<li><a href="package-Karma.html">Karma</a>
+						</li>
 				<li><a href="package-Languages.html">Languages</a>
+						</li>
+				<li><a href="package-Likes.html">Likes</a>
 						</li>
 				<li><a href="package-Mail.html">Mail</a>
 						</li>
@@ -106,6 +110,8 @@
 						</li>
 				<li><a href="package-Permissions.html">Permissions</a>
 						</li>
+				<li><a href="package-PersonalMessage.html">PersonalMessage</a>
+						</li>
 				<li><a href="package-Posts.html">Posts</a>
 						</li>
 				<li><a href="package-Registration.html">Registration</a>
@@ -114,9 +120,13 @@
 						</li>
 				<li><a href="package-Search.html">Search</a>
 						</li>
+				<li><a href="package-SearchEngines.html">SearchEngines</a>
+						</li>
 				<li><a href="package-Security.html">Security</a>
 						</li>
 				<li><a href="package-Subscriptions.html">Subscriptions</a>
+						</li>
+				<li><a href="package-Themes.html">Themes</a>
 						</li>
 			</ul>
 		</div>
@@ -149,7 +159,7 @@
 </span></span><span id="7" class="l"><a class="l" href="#7">  7 </a><span class="php-comment"> * @copyright ElkArte Forum contributors
 </span></span><span id="8" class="l"><a class="l" href="#8">  8 </a><span class="php-comment"> * @license   BSD http://opensource.org/licenses/BSD-3-Clause
 </span></span><span id="9" class="l"><a class="l" href="#9">  9 </a><span class="php-comment"> *
-</span></span><span id="10" class="l"><a class="l" href="#10"> 10 </a><span class="php-comment"> * @version 1.0 Beta 2
+</span></span><span id="10" class="l"><a class="l" href="#10"> 10 </a><span class="php-comment"> * @version 1.0
 </span></span><span id="11" class="l"><a class="l" href="#11"> 11 </a><span class="php-comment"> *
 </span></span><span id="12" class="l"><a class="l" href="#12"> 12 </a><span class="php-comment"> */</span>
 </span><span id="13" class="l"><a class="l" href="#13"> 13 </a>
@@ -182,7 +192,7 @@
 </span><span id="40" class="l"><a class="l" href="#40"> 40 </a>        <span class="php-keyword1">global</span> <span class="php-var">$context</span>, <span class="php-var">$txt</span>, <span class="php-var">$scripturl</span>, <span class="php-var">$modSettings</span>;
 </span><span id="41" class="l"><a class="l" href="#41"> 41 </a>
 </span><span id="42" class="l"><a class="l" href="#42"> 42 </a>        <span class="php-comment">// We're working with them settings here.</span>
-</span><span id="43" class="l"><a class="l" href="#43"> 43 </a>        <span class="php-keyword1">require_once</span>(SUBSDIR . <span class="php-quote">'/Settings.class.php'</span>);
+</span><span id="43" class="l"><a class="l" href="#43"> 43 </a>        <span class="php-keyword1">require_once</span>(SUBSDIR . <span class="php-quote">'/SettingsForm.class.php'</span>);
 </span><span id="44" class="l"><a class="l" href="#44"> 44 </a>
 </span><span id="45" class="l"><a class="l" href="#45"> 45 </a>        <span class="php-comment">// These are the logs they can load.</span>
 </span><span id="46" class="l"><a class="l" href="#46"> 46 </a>        <span class="php-var">$log_functions</span> = <span class="php-keyword1">array</span>(
@@ -259,7 +269,7 @@
 </span><span id="117" class="l"><a class="l" href="#117">117 </a>        call_integration_hook(<span class="php-quote">'integrate_manage_logs'</span>, <span class="php-keyword1">array</span>(&amp;<span class="php-var">$log_functions</span>));
 </span><span id="118" class="l"><a class="l" href="#118">118 </a>
 </span><span id="119" class="l"><a class="l" href="#119">119 </a>        <span class="php-var">$sub_action</span> = <span class="php-keyword1">isset</span>(<span class="php-var">$_REQUEST</span>[<span class="php-quote">'sa'</span>]) &amp;&amp; <span class="php-keyword1">isset</span>(<span class="php-var">$log_functions</span>[<span class="php-var">$_REQUEST</span>[<span class="php-quote">'sa'</span>]]) &amp;&amp; <span class="php-keyword1">empty</span>(<span class="php-var">$log_functions</span>[<span class="php-var">$_REQUEST</span>[<span class="php-quote">'sa'</span>]][<span class="php-quote">'disabled'</span>]) ? <span class="php-var">$_REQUEST</span>[<span class="php-quote">'sa'</span>] : <span class="php-quote">'errorlog'</span>;
-</span><span id="120" class="l"><a class="l" href="#120">120 </a>        
+</span><span id="120" class="l"><a class="l" href="#120">120 </a>
 </span><span id="121" class="l"><a class="l" href="#121">121 </a>        <span class="php-comment">// If it's not got a sa set it must have come here for first time, pretend error log should be reversed.</span>
 </span><span id="122" class="l"><a class="l" href="#122">122 </a>        <span class="php-keyword1">if</span> (!<span class="php-keyword1">isset</span>(<span class="php-var">$_REQUEST</span>[<span class="php-quote">'sa'</span>]))
 </span><span id="123" class="l"><a class="l" href="#123">123 </a>            <span class="php-var">$_REQUEST</span>[<span class="php-quote">'desc'</span>] = <span class="php-keyword1">true</span>;

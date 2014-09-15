@@ -8,7 +8,7 @@
 	<title>File sources/subs/SearchAPI-Fulltext.class.php | ElkArte Documentation</title>
 
 	<script type="text/javascript" src="resources/combined.js?3648714599"></script>
-	<script type="text/javascript" src="elementlist.js?3593784124"></script>
+	<script type="text/javascript" src="elementlist.js?97495842"></script>
 	<link rel="stylesheet" type="text/css" media="all" href="resources/bootstrap.min.css?260161822" />
 	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?2015443609" />
 
@@ -84,7 +84,11 @@
 						</li>
 				<li><a href="package-Graphics.html">Graphics</a>
 						</li>
+				<li><a href="package-Karma.html">Karma</a>
+						</li>
 				<li><a href="package-Languages.html">Languages</a>
+						</li>
+				<li><a href="package-Likes.html">Likes</a>
 						</li>
 				<li><a href="package-Mail.html">Mail</a>
 						</li>
@@ -106,6 +110,8 @@
 						</li>
 				<li><a href="package-Permissions.html">Permissions</a>
 						</li>
+				<li><a href="package-PersonalMessage.html">PersonalMessage</a>
+						</li>
 				<li><a href="package-Posts.html">Posts</a>
 						</li>
 				<li><a href="package-Registration.html">Registration</a>
@@ -114,9 +120,13 @@
 						</li>
 				<li class="active"><a href="package-Search.html">Search</a>
 						</li>
+				<li><a href="package-SearchEngines.html">SearchEngines</a>
+						</li>
 				<li><a href="package-Security.html">Security</a>
 						</li>
 				<li><a href="package-Subscriptions.html">Subscriptions</a>
+						</li>
+				<li><a href="package-Themes.html">Themes</a>
 						</li>
 			</ul>
 		</div>
@@ -171,7 +181,7 @@
 </span></span><span id="13" class="l"><a class="l" href="#13"> 13 </a><span class="php-comment"> * copyright:   2011 Simple Machines (http://www.simplemachines.org)
 </span></span><span id="14" class="l"><a class="l" href="#14"> 14 </a><span class="php-comment"> * license:     BSD, See included LICENSE.TXT for terms and conditions.
 </span></span><span id="15" class="l"><a class="l" href="#15"> 15 </a><span class="php-comment"> *
-</span></span><span id="16" class="l"><a class="l" href="#16"> 16 </a><span class="php-comment"> * @version 1.0 Beta 2
+</span></span><span id="16" class="l"><a class="l" href="#16"> 16 </a><span class="php-comment"> * @version 1.0
 </span></span><span id="17" class="l"><a class="l" href="#17"> 17 </a><span class="php-comment"> *
 </span></span><span id="18" class="l"><a class="l" href="#18"> 18 </a><span class="php-comment"> */</span>
 </span><span id="19" class="l"><a class="l" href="#19"> 19 </a>
@@ -189,7 +199,7 @@
 </span></span><span id="31" class="l"><a class="l" href="#31"> 31 </a><span class="php-comment">     * This is the last version of ElkArte that this was tested on, to protect against API changes.
 </span></span><span id="32" class="l"><a class="l" href="#32"> 32 </a><span class="php-comment">     * @var string
 </span></span><span id="33" class="l"><a class="l" href="#33"> 33 </a><span class="php-comment">     */</span>
-</span><span id="34" class="l"><a class="l" href="#34"> 34 </a>    <span class="php-keyword1">public</span> <span class="php-var"><a id="$version_compatible" href="#$version_compatible">$version_compatible</a></span> = <span class="php-quote">'ElkArte 1.0 Beta 2'</span>;
+</span><span id="34" class="l"><a class="l" href="#34"> 34 </a>    <span class="php-keyword1">public</span> <span class="php-var"><a id="$version_compatible" href="#$version_compatible">$version_compatible</a></span> = <span class="php-quote">'ElkArte 1.0'</span>;
 </span><span id="35" class="l"><a class="l" href="#35"> 35 </a>
 </span><span id="36" class="l"><a class="l" href="#36"> 36 </a>    <span class="php-comment">/**
 </span></span><span id="37" class="l"><a class="l" href="#37"> 37 </a><span class="php-comment">     * This won't work with versions of ElkArte less than this.
@@ -341,14 +351,14 @@
 </span><span id="183" class="l"><a class="l" href="#183">183 </a>                <span class="php-comment">// short which would also be ignored</span>
 </span><span id="184" class="l"><a class="l" href="#184">184 </a>                <span class="php-keyword1">if</span> ((Util::<span class="php-keyword2">strlen</span>(<span class="php-keyword2">current</span>(<span class="php-var">$subwords</span>)) &lt; <span class="php-var">$this</span>-&gt;min_word_length) &amp;&amp; (Util::<span class="php-keyword2">strlen</span>(<span class="php-keyword2">next</span>(<span class="php-var">$subwords</span>)) &lt; <span class="php-var">$this</span>-&gt;min_word_length))
 </span><span id="185" class="l"><a class="l" href="#185">185 </a>                {
-</span><span id="186" class="l"><a class="l" href="#186">186 </a>                    <span class="php-var">$wordsSearch</span>[<span class="php-quote">'words'</span>][] = <span class="php-keyword2">trim</span>(<span class="php-var">$word</span>, <span class="php-quote">&quot;/*- &quot;</span>);
+</span><span id="186" class="l"><a class="l" href="#186">186 </a>                    <span class="php-var">$wordsSearch</span>[<span class="php-quote">'words'</span>][] = <span class="php-keyword2">trim</span>(<span class="php-var">$word</span>, <span class="php-quote">'/*- '</span>);
 </span><span id="187" class="l"><a class="l" href="#187">187 </a>                    <span class="php-var">$wordsSearch</span>[<span class="php-quote">'complex_words'</span>][] = <span class="php-keyword2">count</span>(<span class="php-var">$subwords</span>) === <span class="php-num">1</span> ? <span class="php-var">$word</span> : <span class="php-quote">'&quot;'</span> . <span class="php-var">$word</span> . <span class="php-quote">'&quot;'</span>;
 </span><span id="188" class="l"><a class="l" href="#188">188 </a>                }
 </span><span id="189" class="l"><a class="l" href="#189">189 </a>            }
-</span><span id="190" class="l"><a class="l" href="#190">190 </a>            <span class="php-keyword1">elseif</span> (Util::<span class="php-keyword2">strlen</span>(<span class="php-keyword2">trim</span>(<span class="php-var">$word</span>, <span class="php-quote">&quot;/*- &quot;</span>)) &lt; <span class="php-var">$this</span>-&gt;min_word_length)
+</span><span id="190" class="l"><a class="l" href="#190">190 </a>            <span class="php-keyword1">elseif</span> (Util::<span class="php-keyword2">strlen</span>(<span class="php-keyword2">trim</span>(<span class="php-var">$word</span>, <span class="php-quote">'/*- '</span>)) &lt; <span class="php-var">$this</span>-&gt;min_word_length)
 </span><span id="191" class="l"><a class="l" href="#191">191 </a>            {
 </span><span id="192" class="l"><a class="l" href="#192">192 </a>                <span class="php-comment">// Short words have feelings too</span>
-</span><span id="193" class="l"><a class="l" href="#193">193 </a>                <span class="php-var">$wordsSearch</span>[<span class="php-quote">'words'</span>][] = <span class="php-keyword2">trim</span>(<span class="php-var">$word</span>, <span class="php-quote">&quot;/*- &quot;</span>);
+</span><span id="193" class="l"><a class="l" href="#193">193 </a>                <span class="php-var">$wordsSearch</span>[<span class="php-quote">'words'</span>][] = <span class="php-keyword2">trim</span>(<span class="php-var">$word</span>, <span class="php-quote">'/*- '</span>);
 </span><span id="194" class="l"><a class="l" href="#194">194 </a>                <span class="php-var">$wordsSearch</span>[<span class="php-quote">'complex_words'</span>][] = <span class="php-keyword2">count</span>(<span class="php-var">$subwords</span>) === <span class="php-num">1</span> ? <span class="php-var">$word</span> : <span class="php-quote">'&quot;'</span> . <span class="php-var">$word</span> . <span class="php-quote">'&quot;'</span>;
 </span><span id="195" class="l"><a class="l" href="#195">195 </a>            }
 </span><span id="196" class="l"><a class="l" href="#196">196 </a>        }

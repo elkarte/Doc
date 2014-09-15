@@ -8,7 +8,7 @@
 	<title>File sources/subs/BadBehavior.subs.php | ElkArte Documentation</title>
 
 	<script type="text/javascript" src="resources/combined.js?3648714599"></script>
-	<script type="text/javascript" src="elementlist.js?3593784124"></script>
+	<script type="text/javascript" src="elementlist.js?97495842"></script>
 	<link rel="stylesheet" type="text/css" media="all" href="resources/bootstrap.min.css?260161822" />
 	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?2015443609" />
 
@@ -84,7 +84,11 @@
 						</li>
 				<li><a href="package-Graphics.html">Graphics</a>
 						</li>
+				<li><a href="package-Karma.html">Karma</a>
+						</li>
 				<li><a href="package-Languages.html">Languages</a>
+						</li>
+				<li><a href="package-Likes.html">Likes</a>
 						</li>
 				<li><a href="package-Mail.html">Mail</a>
 						</li>
@@ -106,6 +110,8 @@
 						</li>
 				<li><a href="package-Permissions.html">Permissions</a>
 						</li>
+				<li><a href="package-PersonalMessage.html">PersonalMessage</a>
+						</li>
 				<li><a href="package-Posts.html">Posts</a>
 						</li>
 				<li><a href="package-Registration.html">Registration</a>
@@ -114,9 +120,13 @@
 						</li>
 				<li><a href="package-Search.html">Search</a>
 						</li>
+				<li><a href="package-SearchEngines.html">SearchEngines</a>
+						</li>
 				<li><a href="package-Security.html">Security</a>
 						</li>
 				<li><a href="package-Subscriptions.html">Subscriptions</a>
+						</li>
+				<li><a href="package-Themes.html">Themes</a>
 						</li>
 			</ul>
 		</div>
@@ -155,7 +165,7 @@
 </span></span><span id="7" class="l"><a class="l" href="#7">  7 </a><span class="php-comment"> * @copyright ElkArte Forum contributors
 </span></span><span id="8" class="l"><a class="l" href="#8">  8 </a><span class="php-comment"> * @license   BSD http://opensource.org/licenses/BSD-3-Clause
 </span></span><span id="9" class="l"><a class="l" href="#9">  9 </a><span class="php-comment"> *
-</span></span><span id="10" class="l"><a class="l" href="#10"> 10 </a><span class="php-comment"> * @version 1.0 Beta 2
+</span></span><span id="10" class="l"><a class="l" href="#10"> 10 </a><span class="php-comment"> * @version 1.0
 </span></span><span id="11" class="l"><a class="l" href="#11"> 11 </a><span class="php-comment"> *
 </span></span><span id="12" class="l"><a class="l" href="#12"> 12 </a><span class="php-comment"> */</span>
 </span><span id="13" class="l"><a class="l" href="#13"> 13 </a>
@@ -188,7 +198,7 @@
 </span><span id="40" class="l"><a class="l" href="#40"> 40 </a>        );
 </span><span id="41" class="l"><a class="l" href="#41"> 41 </a>    }
 </span><span id="42" class="l"><a class="l" href="#42"> 42 </a>    <span class="php-comment">// Deleting all with a filter?</span>
-</span><span id="43" class="l"><a class="l" href="#43"> 43 </a>    <span class="php-keyword1">elseif</span> (<span class="php-var">$type</span> === <span class="php-quote">'delall'</span>  &amp;&amp; !<span class="php-keyword1">empty</span>(<span class="php-var">$filter</span>))
+</span><span id="43" class="l"><a class="l" href="#43"> 43 </a>    <span class="php-keyword1">elseif</span> (<span class="php-var">$type</span> === <span class="php-quote">'delall'</span> &amp;&amp; !<span class="php-keyword1">empty</span>(<span class="php-var">$filter</span>))
 </span><span id="44" class="l"><a class="l" href="#44"> 44 </a>    {
 </span><span id="45" class="l"><a class="l" href="#45"> 45 </a>        <span class="php-var">$db</span>-&gt;query(<span class="php-quote">''</span>, <span class="php-quote">'
 </span></span><span id="46" class="l"><a class="l" href="#46"> 46 </a><span class="php-quote">            DELETE FROM {db_prefix}log_badbehavior
@@ -287,7 +297,7 @@
 </span><span id="139" class="l"><a class="l" href="#139">139 </a>        }
 </span><span id="140" class="l"><a class="l" href="#140">140 </a>
 </span><span id="141" class="l"><a class="l" href="#141">141 </a>        <span class="php-var">$bb_entries</span>[<span class="php-var">$row</span>[<span class="php-quote">'id'</span>]] = <span class="php-keyword1">array</span>(
-</span><span id="142" class="l"><a class="l" href="#142">142 </a>            <span class="php-quote">'alternate'</span> =&gt; <span class="php-var">$i</span> %<span class="php-num">2</span> == <span class="php-num">0</span>,
+</span><span id="142" class="l"><a class="l" href="#142">142 </a>            <span class="php-quote">'alternate'</span> =&gt; <span class="php-var">$i</span> % <span class="php-num">2</span> == <span class="php-num">0</span>,
 </span><span id="143" class="l"><a class="l" href="#143">143 </a>            <span class="php-quote">'ip'</span> =&gt; <span class="php-var">$row</span>[<span class="php-quote">'ip'</span>],
 </span><span id="144" class="l"><a class="l" href="#144">144 </a>            <span class="php-quote">'request_method'</span> =&gt; <span class="php-var">$row</span>[<span class="php-quote">'request_method'</span>],
 </span><span id="145" class="l"><a class="l" href="#145">145 </a>            <span class="php-quote">'server_protocol'</span> =&gt; <span class="php-var">$row</span>[<span class="php-quote">'server_protocol'</span>],

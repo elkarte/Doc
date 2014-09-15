@@ -8,7 +8,7 @@
 	<title>File sources/admin/ManageAvatars.controller.php | ElkArte Documentation</title>
 
 	<script type="text/javascript" src="resources/combined.js?3648714599"></script>
-	<script type="text/javascript" src="elementlist.js?3593784124"></script>
+	<script type="text/javascript" src="elementlist.js?97495842"></script>
 	<link rel="stylesheet" type="text/css" media="all" href="resources/bootstrap.min.css?260161822" />
 	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?2015443609" />
 
@@ -84,7 +84,11 @@
 						</li>
 				<li><a href="package-Graphics.html">Graphics</a>
 						</li>
+				<li><a href="package-Karma.html">Karma</a>
+						</li>
 				<li><a href="package-Languages.html">Languages</a>
+						</li>
+				<li><a href="package-Likes.html">Likes</a>
 						</li>
 				<li><a href="package-Mail.html">Mail</a>
 						</li>
@@ -106,6 +110,8 @@
 						</li>
 				<li><a href="package-Permissions.html">Permissions</a>
 						</li>
+				<li><a href="package-PersonalMessage.html">PersonalMessage</a>
+						</li>
 				<li><a href="package-Posts.html">Posts</a>
 						</li>
 				<li><a href="package-Registration.html">Registration</a>
@@ -114,9 +120,13 @@
 						</li>
 				<li><a href="package-Search.html">Search</a>
 						</li>
+				<li><a href="package-SearchEngines.html">SearchEngines</a>
+						</li>
 				<li><a href="package-Security.html">Security</a>
 						</li>
 				<li><a href="package-Subscriptions.html">Subscriptions</a>
+						</li>
+				<li><a href="package-Themes.html">Themes</a>
 						</li>
 			</ul>
 		</div>
@@ -149,7 +159,7 @@
 </span></span><span id="7" class="l"><a class="l" href="#7">  7 </a><span class="php-comment"> * @copyright ElkArte Forum contributors
 </span></span><span id="8" class="l"><a class="l" href="#8">  8 </a><span class="php-comment"> * @license   BSD http://opensource.org/licenses/BSD-3-Clause
 </span></span><span id="9" class="l"><a class="l" href="#9">  9 </a><span class="php-comment"> *
-</span></span><span id="10" class="l"><a class="l" href="#10"> 10 </a><span class="php-comment"> * @version 1.0 Beta 2
+</span></span><span id="10" class="l"><a class="l" href="#10"> 10 </a><span class="php-comment"> * @version 1.0
 </span></span><span id="11" class="l"><a class="l" href="#11"> 11 </a><span class="php-comment"> *
 </span></span><span id="12" class="l"><a class="l" href="#12"> 12 </a><span class="php-comment"> */</span>
 </span><span id="13" class="l"><a class="l" href="#13"> 13 </a>
@@ -191,7 +201,7 @@
 </span><span id="49" class="l"><a class="l" href="#49"> 49 </a>        isAllowedTo(<span class="php-quote">'manage_attachments'</span>);
 </span><span id="50" class="l"><a class="l" href="#50"> 50 </a>
 </span><span id="51" class="l"><a class="l" href="#51"> 51 </a>        <span class="php-comment">// We're working with them settings here.</span>
-</span><span id="52" class="l"><a class="l" href="#52"> 52 </a>        <span class="php-keyword1">require_once</span>(SUBSDIR . <span class="php-quote">'/Settings.class.php'</span>);
+</span><span id="52" class="l"><a class="l" href="#52"> 52 </a>        <span class="php-keyword1">require_once</span>(SUBSDIR . <span class="php-quote">'/SettingsForm.class.php'</span>);
 </span><span id="53" class="l"><a class="l" href="#53"> 53 </a>
 </span><span id="54" class="l"><a class="l" href="#54"> 54 </a>        <span class="php-var">$subActions</span> = <span class="php-keyword1">array</span>(
 </span><span id="55" class="l"><a class="l" href="#55"> 55 </a>            <span class="php-quote">'display'</span> =&gt; <span class="php-keyword1">array</span>(<span class="php-var">$this</span>, <span class="php-quote">'action_avatarSettings_display'</span>)
@@ -232,11 +242,11 @@
 </span><span id="90" class="l"><a class="l" href="#90"> 90 </a>        {
 </span><span id="91" class="l"><a class="l" href="#91"> 91 </a>            checkSession();
 </span><span id="92" class="l"><a class="l" href="#92"> 92 </a>
-</span><span id="93" class="l"><a class="l" href="#93"> 93 </a>            <span class="php-comment">// Disable if invalid values would result</span>
-</span><span id="94" class="l"><a class="l" href="#94"> 94 </a>            <span class="php-keyword1">if</span> (<span class="php-keyword1">isset</span>(<span class="php-var">$_POST</span>[<span class="php-quote">'custom_avatar_enabled'</span>]) &amp;&amp; <span class="php-var">$_POST</span>[<span class="php-quote">'custom_avatar_enabled'</span>] == <span class="php-num">1</span> &amp;&amp; (<span class="php-keyword1">empty</span>(<span class="php-var">$_POST</span>[<span class="php-quote">'custom_avatar_dir'</span>]) || <span class="php-keyword1">empty</span>(<span class="php-var">$_POST</span>[<span class="php-quote">'custom_avatar_url'</span>])))
-</span><span id="95" class="l"><a class="l" href="#95"> 95 </a>                <span class="php-var">$_POST</span>[<span class="php-quote">'custom_avatar_enabled'</span>] = <span class="php-num">0</span>;
-</span><span id="96" class="l"><a class="l" href="#96"> 96 </a>
-</span><span id="97" class="l"><a class="l" href="#97"> 97 </a>            call_integration_hook(<span class="php-quote">'integrate_save_avatar_settings'</span>);
+</span><span id="93" class="l"><a class="l" href="#93"> 93 </a>            call_integration_hook(<span class="php-quote">'integrate_save_avatar_settings'</span>);
+</span><span id="94" class="l"><a class="l" href="#94"> 94 </a>
+</span><span id="95" class="l"><a class="l" href="#95"> 95 </a>            <span class="php-comment">// Disable if invalid values would result</span>
+</span><span id="96" class="l"><a class="l" href="#96"> 96 </a>            <span class="php-keyword1">if</span> (<span class="php-keyword1">isset</span>(<span class="php-var">$_POST</span>[<span class="php-quote">'custom_avatar_enabled'</span>]) &amp;&amp; <span class="php-var">$_POST</span>[<span class="php-quote">'custom_avatar_enabled'</span>] == <span class="php-num">1</span> &amp;&amp; (<span class="php-keyword1">empty</span>(<span class="php-var">$_POST</span>[<span class="php-quote">'custom_avatar_dir'</span>]) || <span class="php-keyword1">empty</span>(<span class="php-var">$_POST</span>[<span class="php-quote">'custom_avatar_url'</span>])))
+</span><span id="97" class="l"><a class="l" href="#97"> 97 </a>                <span class="php-var">$_POST</span>[<span class="php-quote">'custom_avatar_enabled'</span>] = <span class="php-num">0</span>;
 </span><span id="98" class="l"><a class="l" href="#98"> 98 </a>
 </span><span id="99" class="l"><a class="l" href="#99"> 99 </a>            Settings_Form::save_db(<span class="php-var">$config_vars</span>);
 </span><span id="100" class="l"><a class="l" href="#100">100 </a>            redirectexit(<span class="php-quote">'action=admin;area=manageattachments;sa=avatars'</span>);

@@ -8,7 +8,7 @@
 	<title>File sources/admin/ManagePosts.controller.php | ElkArte Documentation</title>
 
 	<script type="text/javascript" src="resources/combined.js?3648714599"></script>
-	<script type="text/javascript" src="elementlist.js?3593784124"></script>
+	<script type="text/javascript" src="elementlist.js?97495842"></script>
 	<link rel="stylesheet" type="text/css" media="all" href="resources/bootstrap.min.css?260161822" />
 	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?2015443609" />
 
@@ -84,7 +84,11 @@
 						</li>
 				<li><a href="package-Graphics.html">Graphics</a>
 						</li>
+				<li><a href="package-Karma.html">Karma</a>
+						</li>
 				<li><a href="package-Languages.html">Languages</a>
+						</li>
+				<li><a href="package-Likes.html">Likes</a>
 						</li>
 				<li><a href="package-Mail.html">Mail</a>
 						</li>
@@ -106,6 +110,8 @@
 						</li>
 				<li><a href="package-Permissions.html">Permissions</a>
 						</li>
+				<li><a href="package-PersonalMessage.html">PersonalMessage</a>
+						</li>
 				<li class="active"><a href="package-Posts.html">Posts</a>
 						</li>
 				<li><a href="package-Registration.html">Registration</a>
@@ -114,9 +120,13 @@
 						</li>
 				<li><a href="package-Search.html">Search</a>
 						</li>
+				<li><a href="package-SearchEngines.html">SearchEngines</a>
+						</li>
 				<li><a href="package-Security.html">Security</a>
 						</li>
 				<li><a href="package-Subscriptions.html">Subscriptions</a>
+						</li>
+				<li><a href="package-Themes.html">Themes</a>
 						</li>
 			</ul>
 		</div>
@@ -176,7 +186,7 @@
 </span></span><span id="13" class="l"><a class="l" href="#13"> 13 </a><span class="php-comment"> * copyright:   2011 Simple Machines (http://www.simplemachines.org)
 </span></span><span id="14" class="l"><a class="l" href="#14"> 14 </a><span class="php-comment"> * license:     BSD, See included LICENSE.TXT for terms and conditions.
 </span></span><span id="15" class="l"><a class="l" href="#15"> 15 </a><span class="php-comment"> *
-</span></span><span id="16" class="l"><a class="l" href="#16"> 16 </a><span class="php-comment"> * @version 1.0 Beta 2
+</span></span><span id="16" class="l"><a class="l" href="#16"> 16 </a><span class="php-comment"> * @version 1.0
 </span></span><span id="17" class="l"><a class="l" href="#17"> 17 </a><span class="php-comment"> *
 </span></span><span id="18" class="l"><a class="l" href="#18"> 18 </a><span class="php-comment"> */</span>
 </span><span id="19" class="l"><a class="l" href="#19"> 19 </a>
@@ -213,7 +223,7 @@
 </span><span id="50" class="l"><a class="l" href="#50"> 50 </a>        <span class="php-keyword1">global</span> <span class="php-var">$context</span>, <span class="php-var">$txt</span>;
 </span><span id="51" class="l"><a class="l" href="#51"> 51 </a>
 </span><span id="52" class="l"><a class="l" href="#52"> 52 </a>        <span class="php-comment">// We're working with them settings here.</span>
-</span><span id="53" class="l"><a class="l" href="#53"> 53 </a>        <span class="php-keyword1">require_once</span>(SUBSDIR . <span class="php-quote">'/Settings.class.php'</span>);
+</span><span id="53" class="l"><a class="l" href="#53"> 53 </a>        <span class="php-keyword1">require_once</span>(SUBSDIR . <span class="php-quote">'/SettingsForm.class.php'</span>);
 </span><span id="54" class="l"><a class="l" href="#54"> 54 </a>
 </span><span id="55" class="l"><a class="l" href="#55"> 55 </a>        <span class="php-var">$subActions</span> = <span class="php-keyword1">array</span>(
 </span><span id="56" class="l"><a class="l" href="#56"> 56 </a>            <span class="php-quote">'posts'</span> =&gt; <span class="php-keyword1">array</span>(
@@ -362,7 +372,7 @@
 </span><span id="199" class="l"><a class="l" href="#199">199 </a>        createToken(<span class="php-quote">'admin-censor'</span>);
 </span><span id="200" class="l"><a class="l" href="#200">200 </a>
 </span><span id="201" class="l"><a class="l" href="#201">201 </a>        <span class="php-comment">// Using ajax?</span>
-</span><span id="202" class="l"><a class="l" href="#202">202 </a>        <span class="php-keyword1">if</span> (<span class="php-keyword1">isset</span>(<span class="php-var">$_REQUEST</span>[<span class="php-quote">'xml'</span>]))
+</span><span id="202" class="l"><a class="l" href="#202">202 </a>        <span class="php-keyword1">if</span> (<span class="php-keyword1">isset</span>(<span class="php-var">$_REQUEST</span>[<span class="php-quote">'xml'</span>], <span class="php-var">$_POST</span>[<span class="php-quote">'censortest'</span>]))
 </span><span id="203" class="l"><a class="l" href="#203">203 </a>        {
 </span><span id="204" class="l"><a class="l" href="#204">204 </a>            <span class="php-comment">// Clear the templates</span>
 </span><span id="205" class="l"><a class="l" href="#205">205 </a>            <span class="php-var">$template_layers</span> = Template_Layers::getInstance();
@@ -374,7 +384,7 @@
 </span><span id="211" class="l"><a class="l" href="#211">211 </a>            <span class="php-var">$context</span>[<span class="php-quote">'json_data'</span>] = <span class="php-keyword1">array</span>(
 </span><span id="212" class="l"><a class="l" href="#212">212 </a>                <span class="php-quote">'result'</span> =&gt; <span class="php-keyword1">true</span>,
 </span><span id="213" class="l"><a class="l" href="#213">213 </a>                <span class="php-quote">'censor'</span> =&gt; <span class="php-var">$pre_censor</span> . <span class="php-quote">' &lt;i class=&quot;fa fa-arrow-circle-right&quot;&gt;&lt;/i&gt; '</span> . <span class="php-var">$context</span>[<span class="php-quote">'censor_test'</span>],
-</span><span id="214" class="l"><a class="l" href="#214">214 </a>                <span class="php-quote">'token_val'</span> =&gt;  <span class="php-var">$context</span>[<span class="php-quote">'admin-censor_token_var'</span>],
+</span><span id="214" class="l"><a class="l" href="#214">214 </a>                <span class="php-quote">'token_val'</span> =&gt; <span class="php-var">$context</span>[<span class="php-quote">'admin-censor_token_var'</span>],
 </span><span id="215" class="l"><a class="l" href="#215">215 </a>                <span class="php-quote">'token'</span> =&gt; <span class="php-var">$context</span>[<span class="php-quote">'admin-censor_token'</span>],
 </span><span id="216" class="l"><a class="l" href="#216">216 </a>            );
 </span><span id="217" class="l"><a class="l" href="#217">217 </a>        }

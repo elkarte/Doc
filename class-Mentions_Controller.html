@@ -7,7 +7,7 @@
 	<title>Class Mentions_Controller | ElkArte Documentation</title>
 
 	<script type="text/javascript" src="resources/combined.js?3648714599"></script>
-	<script type="text/javascript" src="elementlist.js?3593784124"></script>
+	<script type="text/javascript" src="elementlist.js?97495842"></script>
 	<link rel="stylesheet" type="text/css" media="all" href="resources/bootstrap.min.css?260161822" />
 	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?2015443609" />
 
@@ -82,7 +82,11 @@
 						</li>
 				<li><a href="package-Graphics.html">Graphics</a>
 						</li>
+				<li><a href="package-Karma.html">Karma</a>
+						</li>
 				<li><a href="package-Languages.html">Languages</a>
+						</li>
+				<li><a href="package-Likes.html">Likes</a>
 						</li>
 				<li><a href="package-Mail.html">Mail</a>
 						</li>
@@ -104,6 +108,8 @@
 						</li>
 				<li><a href="package-Permissions.html">Permissions</a>
 						</li>
+				<li><a href="package-PersonalMessage.html">PersonalMessage</a>
+						</li>
 				<li><a href="package-Posts.html">Posts</a>
 						</li>
 				<li><a href="package-Registration.html">Registration</a>
@@ -112,9 +118,13 @@
 						</li>
 				<li><a href="package-Search.html">Search</a>
 						</li>
+				<li><a href="package-SearchEngines.html">SearchEngines</a>
+						</li>
 				<li><a href="package-Security.html">Security</a>
 						</li>
 				<li><a href="package-Subscriptions.html">Subscriptions</a>
+						</li>
+				<li><a href="package-Themes.html">Themes</a>
 						</li>
 			</ul>
 		</div>
@@ -195,7 +205,7 @@ as liking a post, adding a buddy, @ calling a member in a post</p>
 				ElkArte Forum contributors<br />
 				<b>License:</b>
 				<a href="BSD">http://opensource.org/licenses/BSD-3-Clause</a><br />
-		<b>Located at</b> <a href="source-class-Mentions_Controller.html#17-652" title="Go to source code">sources/controllers/Mentions.controller.php</a><br />
+		<b>Located at</b> <a href="source-class-Mentions_Controller.html#17-712" title="Go to source code">sources/controllers/Mentions.controller.php</a><br />
 	</div>
 
 
@@ -213,7 +223,7 @@ as liking a post, adding a buddy, @ calling a member in a post</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#___construct">#</a>
-			<code><a href="source-class-Mentions_Controller.html#90-128" title="Go to source code">__construct</a>( )</code>
+			<code><a href="source-class-Mentions_Controller.html#111-151" title="Go to source code">__construct</a>( )</code>
 
 			<div class="description short">
 				
@@ -246,7 +256,7 @@ as liking a post, adding a buddy, @ calling a member in a post</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_pre_dispatch">#</a>
-			<code><a href="source-class-Mentions_Controller.html#130-149" title="Go to source code">pre_dispatch</a>( )</code>
+			<code><a href="source-class-Mentions_Controller.html#153-172" title="Go to source code">pre_dispatch</a>( )</code>
 
 			<div class="description short">
 				
@@ -283,7 +293,7 @@ called before the flow is redirected to action_index().</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_action_index">#</a>
-			<code><a href="source-class-Mentions_Controller.html#151-159" title="Go to source code">action_index</a>( )</code>
+			<code><a href="source-class-Mentions_Controller.html#174-182" title="Go to source code">action_index</a>( )</code>
 
 			<div class="description short">
 				
@@ -318,7 +328,7 @@ called before the flow is redirected to action_index().</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_action_list">#</a>
-			<code><a href="source-class-Mentions_Controller.html#161-321" title="Go to source code">action_list</a>( )</code>
+			<code><a href="source-class-Mentions_Controller.html#184-350" title="Go to source code">action_list</a>( )</code>
 
 			<div class="description short">
 				
@@ -353,7 +363,7 @@ unread Can sort the various forms of mentions, likes or @mentions</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_list_getMentionCount">#</a>
-			<code><a href="source-class-Mentions_Controller.html#323-333" title="Go to source code">list_getMentionCount</a>( <span>boolean <var>$all</var></span>, <span>string <var>$type</var></span> )</code>
+			<code><a href="source-class-Mentions_Controller.html#352-362" title="Go to source code">list_getMentionCount</a>( <span>boolean <var>$all</var></span>, <span>string <var>$type</var></span> )</code>
 
 			<div class="description short">
 				
@@ -395,7 +405,7 @@ member has</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_list_loadMentions">#</a>
-			<code><a href="source-class-Mentions_Controller.html#335-385" title="Go to source code">list_loadMentions</a>( <span>integer <var>$start</var></span>, <span>integer <var>$limit</var></span>, <span>string <var>$sort</var></span>, <span>boolean <var>$all</var></span>, <span>string <var>$type</var></span> )</code>
+			<code><a href="source-class-Mentions_Controller.html#364-417" title="Go to source code">list_loadMentions</a>( <span>integer <var>$start</var></span>, <span>integer <var>$limit</var></span>, <span>string <var>$sort</var></span>, <span>boolean <var>$all</var></span>, <span>string <var>$type</var></span> )</code>
 
 			<div class="description short">
 				
@@ -443,7 +453,7 @@ member has</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_prepareMentionMessage">#</a>
-			<code><a href="source-class-Mentions_Controller.html#387-456" title="Go to source code">prepareMentionMessage</a>( <span>mixed[] <var>&amp; $mentions</var></span>, <span>string <var>$type</var></span> )</code>
+			<code><a href="source-class-Mentions_Controller.html#419-488" title="Go to source code">prepareMentionMessage</a>( <span>mixed[] <var>&amp; $mentions</var></span>, <span>string <var>$type</var></span> )</code>
 
 			<div class="description short">
 				
@@ -485,7 +495,7 @@ likes and buddies</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_action_add">#</a>
-			<code><a href="source-class-Mentions_Controller.html#458-476" title="Go to source code">action_add</a>( )</code>
+			<code><a href="source-class-Mentions_Controller.html#490-508" title="Go to source code">action_add</a>( )</code>
 
 			<div class="description short">
 				
@@ -518,7 +528,7 @@ likes and buddies</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_action_rlike">#</a>
-			<code><a href="source-class-Mentions_Controller.html#478-496" title="Go to source code">action_rlike</a>( )</code>
+			<code><a href="source-class-Mentions_Controller.html#510-528" title="Go to source code">action_rlike</a>( )</code>
 
 			<div class="description short">
 				
@@ -551,7 +561,7 @@ likes and buddies</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_setData">#</a>
-			<code><a href="source-class-Mentions_Controller.html#498-522" title="Go to source code">setData</a>( <span>mixed[] <var>$data</var></span> )</code>
+			<code><a href="source-class-Mentions_Controller.html#530-554" title="Go to source code">setData</a>( <span>mixed[] <var>$data</var></span> )</code>
 
 			<div class="description short">
 				
@@ -589,7 +599,7 @@ likes and buddies</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_action_markread">#</a>
-			<code><a href="source-class-Mentions_Controller.html#524-540" title="Go to source code">action_markread</a>( )</code>
+			<code><a href="source-class-Mentions_Controller.html#556-572" title="Go to source code">action_markread</a>( )</code>
 
 			<div class="description short">
 				
@@ -626,7 +636,7 @@ would require to add an optional parameter to avoid the redirect</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_action_updatestatus">#</a>
-			<code><a href="source-class-Mentions_Controller.html#542-574" title="Go to source code">action_updatestatus</a>( )</code>
+			<code><a href="source-class-Mentions_Controller.html#574-610" title="Go to source code">action_updatestatus</a>( )</code>
 
 			<div class="description short">
 				
@@ -648,6 +658,45 @@ would require to add an optional parameter to avoid the redirect</p>
 			</div>
 			</div></td>
 		</tr>
+		<tr data-order="_markMentionsRead" id="__markMentionsRead">
+
+			<td class="attributes"><code>
+				 protected 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#__markMentionsRead">#</a>
+			<code><a href="source-class-Mentions_Controller.html#612-633" title="Go to source code">_markMentionsRead</a>( <span>int[] <var>$mention_ids</var></span> )</code>
+
+			<div class="description short">
+				
+<p>Marks an array of mentions as read</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Marks an array of mentions as read</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$mention_ids</var></dt>
+						<dd><code>int[]</code><br>$mention_ids An array of mention ids. Each of them will be validated
+independently</dd>
+					</dl></div>
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
 		<tr data-order="_buildUrl" id="__buildUrl">
 
 			<td class="attributes"><code>
@@ -659,7 +708,7 @@ would require to add an optional parameter to avoid the redirect</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#__buildUrl">#</a>
-			<code><a href="source-class-Mentions_Controller.html#576-586" title="Go to source code">_buildUrl</a>( )</code>
+			<code><a href="source-class-Mentions_Controller.html#635-646" title="Go to source code">_buildUrl</a>( )</code>
 
 			<div class="description short">
 				
@@ -692,7 +741,7 @@ would require to add an optional parameter to avoid the redirect</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#__isAccessible">#</a>
-			<code><a href="source-class-Mentions_Controller.html#588-610" title="Go to source code">_isAccessible</a>( )</code>
+			<code><a href="source-class-Mentions_Controller.html#648-670" title="Go to source code">_isAccessible</a>( )</code>
 
 			<div class="description short">
 				
@@ -725,7 +774,7 @@ would require to add an optional parameter to avoid the redirect</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#__isValid">#</a>
-			<code><a href="source-class-Mentions_Controller.html#612-651" title="Go to source code">_isValid</a>( )</code>
+			<code><a href="source-class-Mentions_Controller.html#672-711" title="Go to source code">_isValid</a>( )</code>
 
 			<div class="description short">
 				
@@ -976,6 +1025,84 @@ the db Are originally stored in $_known_mentions</p>
 				</div>
 			</div></td>
 		</tr>
+		<tr data-order="_items_per_page" id="$_items_per_page">
+			<td class="attributes"><code>
+				protected  
+				integer
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-Mentions_Controller.html#83-88" title="Go to source code"><var>$_items_per_page</var></a>
+			</td>
+			<td class="description"><div>
+				<a href="#$_items_per_page" class="anchor">#</a>
+
+				<div class="description short">
+					
+<p>Number of items per page</p>
+
+				</div>
+
+				<div class="description detailed hidden">
+					
+<p>Number of items per page</p>
+
+
+				</div>
+			</div></td>
+		</tr>
+		<tr data-order="_default_sort" id="$_default_sort">
+			<td class="attributes"><code>
+				protected  
+				string
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-Mentions_Controller.html#90-95" title="Go to source code"><var>$_default_sort</var></a>
+			</td>
+			<td class="description"><div>
+				<a href="#$_default_sort" class="anchor">#</a>
+
+				<div class="description short">
+					
+<p>Default sorting column</p>
+
+				</div>
+
+				<div class="description detailed hidden">
+					
+<p>Default sorting column</p>
+
+
+				</div>
+			</div></td>
+		</tr>
+		<tr data-order="_known_sorting" id="$_known_sorting">
+			<td class="attributes"><code>
+				protected  
+				string[]
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-Mentions_Controller.html#97-102" title="Go to source code"><var>$_known_sorting</var></a>
+			</td>
+			<td class="description"><div>
+				<a href="#$_known_sorting" class="anchor">#</a>
+
+				<div class="description short">
+					
+<p>The sorting methods we know</p>
+
+				</div>
+
+				<div class="description detailed hidden">
+					
+<p>The sorting methods we know</p>
+
+
+				</div>
+			</div></td>
+		</tr>
 		<tr data-order="_all" id="$_all">
 			<td class="attributes"><code>
 				protected  
@@ -983,7 +1110,7 @@ the db Are originally stored in $_known_mentions</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Mentions_Controller.html#83-88" title="Go to source code"><var>$_all</var></a>
+					<a href="source-class-Mentions_Controller.html#104-109" title="Go to source code"><var>$_all</var></a>
 			</td>
 			<td class="description"><div>
 				<a href="#$_all" class="anchor">#</a>

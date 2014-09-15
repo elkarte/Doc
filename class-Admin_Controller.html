@@ -7,7 +7,7 @@
 	<title>Class Admin_Controller | ElkArte Documentation</title>
 
 	<script type="text/javascript" src="resources/combined.js?3648714599"></script>
-	<script type="text/javascript" src="elementlist.js?3593784124"></script>
+	<script type="text/javascript" src="elementlist.js?97495842"></script>
 	<link rel="stylesheet" type="text/css" media="all" href="resources/bootstrap.min.css?260161822" />
 	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?2015443609" />
 
@@ -82,7 +82,11 @@
 						</li>
 				<li><a href="package-Graphics.html">Graphics</a>
 						</li>
+				<li><a href="package-Karma.html">Karma</a>
+						</li>
 				<li><a href="package-Languages.html">Languages</a>
+						</li>
+				<li><a href="package-Likes.html">Likes</a>
 						</li>
 				<li><a href="package-Mail.html">Mail</a>
 						</li>
@@ -104,6 +108,8 @@
 						</li>
 				<li><a href="package-Permissions.html">Permissions</a>
 						</li>
+				<li><a href="package-PersonalMessage.html">PersonalMessage</a>
+						</li>
 				<li><a href="package-Posts.html">Posts</a>
 						</li>
 				<li><a href="package-Registration.html">Registration</a>
@@ -112,9 +118,13 @@
 						</li>
 				<li><a href="package-Search.html">Search</a>
 						</li>
+				<li><a href="package-SearchEngines.html">SearchEngines</a>
+						</li>
 				<li><a href="package-Security.html">Security</a>
 						</li>
 				<li><a href="package-Subscriptions.html">Subscriptions</a>
+						</li>
+				<li><a href="package-Themes.html">Themes</a>
 						</li>
 			</ul>
 		</div>
@@ -207,7 +217,7 @@ This software is a derived product, based on:
 Simple Machines Forum (SMF)
 copyright:	2011 Simple Machines (http://www.simplemachines.org)
 license:		BSD, See included LICENSE.TXT for terms and conditions.</a><br />
-		<b>Located at</b> <a href="source-class-Admin_Controller.html#23-1049" title="Go to source code">sources/admin/Admin.controller.php</a><br />
+		<b>Located at</b> <a href="source-class-Admin_Controller.html#23-1047" title="Go to source code">sources/admin/Admin.controller.php</a><br />
 	</div>
 
 
@@ -225,7 +235,7 @@ license:		BSD, See included LICENSE.TXT for terms and conditions.</a><br />
 
 			<td class="name"><div>
 			<a class="anchor" href="#_action_index">#</a>
-			<code><a href="source-class-Admin_Controller.html#34-616" title="Go to source code">action_index</a>( )</code>
+			<code><a href="source-class-Admin_Controller.html#34-613" title="Go to source code">action_index</a>( )</code>
 
 			<div class="description short">
 				
@@ -270,7 +280,7 @@ license:		BSD, See included LICENSE.TXT for terms and conditions.</a><br />
 
 			<td class="name"><div>
 			<a class="anchor" href="#_action_home">#</a>
-			<code><a href="source-class-Admin_Controller.html#618-681" title="Go to source code">action_home</a>( )</code>
+			<code><a href="source-class-Admin_Controller.html#615-679" title="Go to source code">action_home</a>( )</code>
 
 			<div class="description short">
 				
@@ -322,7 +332,7 @@ manage_boards, edit_news, or send_mail permission.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_action_credits">#</a>
-			<code><a href="source-class-Admin_Controller.html#683-745" title="Go to source code">action_credits</a>( )</code>
+			<code><a href="source-class-Admin_Controller.html#681-744" title="Go to source code">action_credits</a>( )</code>
 
 			<div class="description short">
 				
@@ -368,7 +378,7 @@ manage_boards, edit_news, or send_mail permission.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_action_search">#</a>
-			<code><a href="source-class-Admin_Controller.html#747-788" title="Go to source code">action_search</a>( )</code>
+			<code><a href="source-class-Admin_Controller.html#746-785" title="Go to source code">action_search</a>( )</code>
 
 			<div class="description short">
 				
@@ -401,7 +411,7 @@ manage_boards, edit_news, or send_mail permission.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_action_search_internal">#</a>
-			<code><a href="source-class-Admin_Controller.html#790-956" title="Go to source code">action_search_internal</a>( )</code>
+			<code><a href="source-class-Admin_Controller.html#787-953" title="Go to source code">action_search_internal</a>( )</code>
 
 			<div class="description short">
 				
@@ -434,7 +444,7 @@ manage_boards, edit_news, or send_mail permission.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_action_search_member">#</a>
-			<code><a href="source-class-Admin_Controller.html#958-972" title="Go to source code">action_search_member</a>( )</code>
+			<code><a href="source-class-Admin_Controller.html#955-970" title="Go to source code">action_search_member</a>( )</code>
 
 			<div class="description short">
 				
@@ -467,7 +477,7 @@ manage_boards, edit_news, or send_mail permission.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_action_search_doc">#</a>
-			<code><a href="source-class-Admin_Controller.html#974-1031" title="Go to source code">action_search_doc</a>( )</code>
+			<code><a href="source-class-Admin_Controller.html#972-1029" title="Go to source code">action_search_doc</a>( )</code>
 
 			<div class="description short">
 				
@@ -502,7 +512,7 @@ help.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_action_endsession">#</a>
-			<code><a href="source-class-Admin_Controller.html#1033-1048" title="Go to source code">action_endsession</a>( )</code>
+			<code><a href="source-class-Admin_Controller.html#1031-1046" title="Go to source code">action_endsession</a>( )</code>
 
 			<div class="description short">
 				

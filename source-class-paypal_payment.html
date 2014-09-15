@@ -8,7 +8,7 @@
 	<title>File sources/subs/Subscriptions-PayPal.class.php | ElkArte Documentation</title>
 
 	<script type="text/javascript" src="resources/combined.js?3648714599"></script>
-	<script type="text/javascript" src="elementlist.js?3593784124"></script>
+	<script type="text/javascript" src="elementlist.js?97495842"></script>
 	<link rel="stylesheet" type="text/css" media="all" href="resources/bootstrap.min.css?260161822" />
 	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?2015443609" />
 
@@ -25,7 +25,7 @@
 							<a href="package-Subscriptions.html" title="Summary of Subscriptions"><span>Package</span></a>
 						</li>
 						<li>
-							<a href="class-paypal_payment.html" title="Summary of paypal_payment"><span>Class</span></a>
+							<a href="class-PayPal_Payment.html" title="Summary of PayPal_Payment"><span>Class</span></a>
 						</li>
 
 						<li class="divider-vertical"></li>
@@ -84,7 +84,11 @@
 						</li>
 				<li><a href="package-Graphics.html">Graphics</a>
 						</li>
+				<li><a href="package-Karma.html">Karma</a>
+						</li>
 				<li><a href="package-Languages.html">Languages</a>
+						</li>
+				<li><a href="package-Likes.html">Likes</a>
 						</li>
 				<li><a href="package-Mail.html">Mail</a>
 						</li>
@@ -106,6 +110,8 @@
 						</li>
 				<li><a href="package-Permissions.html">Permissions</a>
 						</li>
+				<li><a href="package-PersonalMessage.html">PersonalMessage</a>
+						</li>
 				<li><a href="package-Posts.html">Posts</a>
 						</li>
 				<li><a href="package-Registration.html">Registration</a>
@@ -114,9 +120,13 @@
 						</li>
 				<li><a href="package-Search.html">Search</a>
 						</li>
+				<li><a href="package-SearchEngines.html">SearchEngines</a>
+						</li>
 				<li><a href="package-Security.html">Security</a>
 						</li>
 				<li class="active"><a href="package-Subscriptions.html">Subscriptions</a>
+						</li>
+				<li><a href="package-Themes.html">Themes</a>
 						</li>
 			</ul>
 		</div>
@@ -125,13 +135,13 @@
 		<div id="elements">
 			<h3>Classes</h3>
 			<ul>
-				<li><a href="class-authorize_display.html">authorize_display</a></li>
-				<li><a href="class-authorize_payment.html">authorize_payment</a></li>
+				<li><a href="class-Authorize_Display.html">Authorize_Display</a></li>
+				<li><a href="class-Authorize_Payment.html">Authorize_Payment</a></li>
 				<li><a href="class-ManagePaid_Controller.html">ManagePaid_Controller</a></li>
-				<li><a href="class-paypal_display.html">paypal_display</a></li>
-				<li class="active"><a href="class-paypal_payment.html">paypal_payment</a></li>
-				<li><a href="class-twocheckout_display.html">twocheckout_display</a></li>
-				<li><a href="class-twocheckout_payment.html">twocheckout_payment</a></li>
+				<li><a href="class-PayPal_Display.html">PayPal_Display</a></li>
+				<li class="active"><a href="class-PayPal_Payment.html">PayPal_Payment</a></li>
+				<li><a href="class-twoCheckOut_Display.html">twoCheckOut_Display</a></li>
+				<li><a href="class-twoCheckOut_Payment.html">twoCheckOut_Payment</a></li>
 			</ul>
 
 
@@ -149,7 +159,7 @@
 <pre id="source"><code><span id="1" class="l"><a class="l" href="#1">  1 </a><span class="xlang">&lt;?php</span>
 </span><span id="2" class="l"><a class="l" href="#2">  2 </a>
 </span><span id="3" class="l"><a class="l" href="#3">  3 </a><span class="php-comment">/**
-</span></span><span id="4" class="l"><a class="l" href="#4">  4 </a><span class="php-comment"> * Payment Gateway: paypal
+</span></span><span id="4" class="l"><a class="l" href="#4">  4 </a><span class="php-comment"> * Payment Gateway: PayPal
 </span></span><span id="5" class="l"><a class="l" href="#5">  5 </a><span class="php-comment"> *
 </span></span><span id="6" class="l"><a class="l" href="#6">  6 </a><span class="php-comment"> * @name      ElkArte Forum
 </span></span><span id="7" class="l"><a class="l" href="#7">  7 </a><span class="php-comment"> * @copyright ElkArte Forum contributors
@@ -159,7 +169,7 @@
 </span></span><span id="11" class="l"><a class="l" href="#11"> 11 </a><span class="php-comment"> * copyright:   2011 Simple Machines (http://www.simplemachines.org)
 </span></span><span id="12" class="l"><a class="l" href="#12"> 12 </a><span class="php-comment"> * license:     BSD, See included LICENSE.TXT for terms and conditions.
 </span></span><span id="13" class="l"><a class="l" href="#13"> 13 </a><span class="php-comment"> *
-</span></span><span id="14" class="l"><a class="l" href="#14"> 14 </a><span class="php-comment"> * @version 1.0 Beta 2
+</span></span><span id="14" class="l"><a class="l" href="#14"> 14 </a><span class="php-comment"> * @version 1.0
 </span></span><span id="15" class="l"><a class="l" href="#15"> 15 </a><span class="php-comment"> *
 </span></span><span id="16" class="l"><a class="l" href="#16"> 16 </a><span class="php-comment"> */</span>
 </span><span id="17" class="l"><a class="l" href="#17"> 17 </a>
@@ -171,7 +181,7 @@
 </span></span><span id="23" class="l"><a class="l" href="#23"> 23 </a><span class="php-comment"> *
 </span></span><span id="24" class="l"><a class="l" href="#24"> 24 </a><span class="php-comment"> * @package Subscriptions
 </span></span><span id="25" class="l"><a class="l" href="#25"> 25 </a><span class="php-comment"> */</span>
-</span><span id="26" class="l"><a class="l" href="#26"> 26 </a><span class="php-keyword1">class</span> <a id="paypal_display" href="#paypal_display">paypal_display</a>
+</span><span id="26" class="l"><a class="l" href="#26"> 26 </a><span class="php-keyword1">class</span> <a id="PayPal_Display" href="#PayPal_Display">PayPal_Display</a>
 </span><span id="27" class="l"><a class="l" href="#27"> 27 </a>{
 </span><span id="28" class="l"><a class="l" href="#28"> 28 </a>    <span class="php-comment">/**
 </span></span><span id="29" class="l"><a class="l" href="#29"> 29 </a><span class="php-comment">     * Name of this payment gateway
@@ -286,7 +296,7 @@
 </span></span><span id="138" class="l"><a class="l" href="#138">138 </a><span class="php-comment"> *
 </span></span><span id="139" class="l"><a class="l" href="#139">139 </a><span class="php-comment"> * @package Subscriptions
 </span></span><span id="140" class="l"><a class="l" href="#140">140 </a><span class="php-comment"> */</span>
-</span><span id="141" class="l"><a class="l" href="#141">141 </a><span class="php-keyword1">class</span> <a id="paypal_payment" href="#paypal_payment">paypal_payment</a>
+</span><span id="141" class="l"><a class="l" href="#141">141 </a><span class="php-keyword1">class</span> <a id="PayPal_Payment" href="#PayPal_Payment">PayPal_Payment</a>
 </span><span id="142" class="l"><a class="l" href="#142">142 </a>{
 </span><span id="143" class="l"><a class="l" href="#143">143 </a>    <span class="php-comment">/**
 </span></span><span id="144" class="l"><a class="l" href="#144">144 </a><span class="php-comment">     * Holds the IPN response data
@@ -315,269 +325,285 @@
 </span><span id="167" class="l"><a class="l" href="#167">167 </a>        <span class="php-keyword1">if</span> (!<span class="php-keyword1">isset</span>(<span class="php-var">$_POST</span>[<span class="php-quote">'business'</span>]))
 </span><span id="168" class="l"><a class="l" href="#168">168 </a>            <span class="php-var">$_POST</span>[<span class="php-quote">'business'</span>] = <span class="php-var">$_POST</span>[<span class="php-quote">'receiver_email'</span>];
 </span><span id="169" class="l"><a class="l" href="#169">169 </a>
-</span><span id="170" class="l"><a class="l" href="#170">170 </a>        <span class="php-keyword1">if</span> (<span class="php-var">$modSettings</span>[<span class="php-quote">'paypal_email'</span>] !== <span class="php-var">$_POST</span>[<span class="php-quote">'business'</span>] &amp;&amp; (<span class="php-keyword1">empty</span>(<span class="php-var">$modSettings</span>[<span class="php-quote">'paypal_additional_emails'</span>]) || !<span class="php-keyword2">in_array</span>(<span class="php-var">$_POST</span>[<span class="php-quote">'business'</span>], <span class="php-keyword2">explode</span>(<span class="php-quote">','</span>, <span class="php-var">$modSettings</span>[<span class="php-quote">'paypal_additional_emails'</span>]))))
-</span><span id="171" class="l"><a class="l" href="#171">171 </a>            <span class="php-keyword1">return</span> <span class="php-keyword1">false</span>;
-</span><span id="172" class="l"><a class="l" href="#172">172 </a>
-</span><span id="173" class="l"><a class="l" href="#173">173 </a>        <span class="php-keyword1">return</span> <span class="php-keyword1">true</span>;
-</span><span id="174" class="l"><a class="l" href="#174">174 </a>    }
-</span><span id="175" class="l"><a class="l" href="#175">175 </a>
-</span><span id="176" class="l"><a class="l" href="#176">176 </a>    <span class="php-comment">/**
-</span></span><span id="177" class="l"><a class="l" href="#177">177 </a><span class="php-comment">     * Post the IPN data received back to paypal for validation
-</span></span><span id="178" class="l"><a class="l" href="#178">178 </a><span class="php-comment">     *
-</span></span><span id="179" class="l"><a class="l" href="#179">179 </a><span class="php-comment">     * - Sends the complete unaltered message back to PayPal.
-</span></span><span id="180" class="l"><a class="l" href="#180">180 </a><span class="php-comment">     * - The message must contain the same fields in the same order and be encoded in the same way as the original message
-</span></span><span id="181" class="l"><a class="l" href="#181">181 </a><span class="php-comment">     * - PayPal will respond back with a single word, which is either VERIFIED if the message originated with PayPal or INVALID
-</span></span><span id="182" class="l"><a class="l" href="#182">182 </a><span class="php-comment">     * - If valid returns the subscription and member IDs we are going to process if it passes
-</span></span><span id="183" class="l"><a class="l" href="#183">183 </a><span class="php-comment">     *
-</span></span><span id="184" class="l"><a class="l" href="#184">184 </a><span class="php-comment">     * @return string
-</span></span><span id="185" class="l"><a class="l" href="#185">185 </a><span class="php-comment">     */</span>
-</span><span id="186" class="l"><a class="l" href="#186">186 </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_precheck" href="#_precheck">precheck</a>()
-</span><span id="187" class="l"><a class="l" href="#187">187 </a>    {
-</span><span id="188" class="l"><a class="l" href="#188">188 </a>        <span class="php-keyword1">global</span> <span class="php-var">$modSettings</span>, <span class="php-var">$txt</span>;
+</span><span id="170" class="l"><a class="l" href="#170">170 </a>        <span class="php-comment">// Return true or false if the data is intended for this</span>
+</span><span id="171" class="l"><a class="l" href="#171">171 </a>        <span class="php-keyword1">return</span> !(<span class="php-var">$modSettings</span>[<span class="php-quote">'paypal_email'</span>] !== <span class="php-var">$_POST</span>[<span class="php-quote">'business'</span>] &amp;&amp; (<span class="php-keyword1">empty</span>(<span class="php-var">$modSettings</span>[<span class="php-quote">'paypal_additional_emails'</span>]) || !<span class="php-keyword2">in_array</span>(<span class="php-var">$_POST</span>[<span class="php-quote">'business'</span>], <span class="php-keyword2">explode</span>(<span class="php-quote">','</span>, <span class="php-var">$modSettings</span>[<span class="php-quote">'paypal_additional_emails'</span>]))));
+</span><span id="172" class="l"><a class="l" href="#172">172 </a>    }
+</span><span id="173" class="l"><a class="l" href="#173">173 </a>
+</span><span id="174" class="l"><a class="l" href="#174">174 </a>    <span class="php-comment">/**
+</span></span><span id="175" class="l"><a class="l" href="#175">175 </a><span class="php-comment">     * Post the IPN data received back to paypal for validation
+</span></span><span id="176" class="l"><a class="l" href="#176">176 </a><span class="php-comment">     *
+</span></span><span id="177" class="l"><a class="l" href="#177">177 </a><span class="php-comment">     * - Sends the complete unaltered message back to PayPal.
+</span></span><span id="178" class="l"><a class="l" href="#178">178 </a><span class="php-comment">     * - The message must contain the same fields in the same order and be encoded in the same way as the original message
+</span></span><span id="179" class="l"><a class="l" href="#179">179 </a><span class="php-comment">     * - PayPal will respond back with a single word, which is either VERIFIED if the message originated with PayPal or INVALID
+</span></span><span id="180" class="l"><a class="l" href="#180">180 </a><span class="php-comment">     * - If valid returns the subscription and member IDs we are going to process if it passes
+</span></span><span id="181" class="l"><a class="l" href="#181">181 </a><span class="php-comment">     *
+</span></span><span id="182" class="l"><a class="l" href="#182">182 </a><span class="php-comment">     * @return string
+</span></span><span id="183" class="l"><a class="l" href="#183">183 </a><span class="php-comment">     */</span>
+</span><span id="184" class="l"><a class="l" href="#184">184 </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_precheck" href="#_precheck">precheck</a>()
+</span><span id="185" class="l"><a class="l" href="#185">185 </a>    {
+</span><span id="186" class="l"><a class="l" href="#186">186 </a>        <span class="php-keyword1">global</span> <span class="php-var">$modSettings</span>, <span class="php-var">$txt</span>;
+</span><span id="187" class="l"><a class="l" href="#187">187 </a>
+</span><span id="188" class="l"><a class="l" href="#188">188 </a>        <span class="php-var">$my_post</span> = <span class="php-keyword1">array</span>();
 </span><span id="189" class="l"><a class="l" href="#189">189 </a>
-</span><span id="190" class="l"><a class="l" href="#190">190 </a>        <span class="php-var">$my_post</span> = <span class="php-keyword1">array</span>();
-</span><span id="191" class="l"><a class="l" href="#191">191 </a>
-</span><span id="192" class="l"><a class="l" href="#192">192 </a>        <span class="php-comment">// Reading POSTed data directly from $_POST may causes serialization issues with array data</span>
-</span><span id="193" class="l"><a class="l" href="#193">193 </a>        <span class="php-comment">// in the POST. Instead, read raw POST data from the input stream.</span>
-</span><span id="194" class="l"><a class="l" href="#194">194 </a>        <span class="php-var">$raw_post_data</span> = <span class="php-keyword2">file_get_contents</span>(<span class="php-quote">'php://input'</span>);
-</span><span id="195" class="l"><a class="l" href="#195">195 </a>        <span class="php-var">$raw_post_array</span> = <span class="php-keyword2">explode</span>(<span class="php-quote">'&amp;'</span>, <span class="php-var">$raw_post_data</span>);
-</span><span id="196" class="l"><a class="l" href="#196">196 </a>
-</span><span id="197" class="l"><a class="l" href="#197">197 </a>        <span class="php-comment">// Process it</span>
-</span><span id="198" class="l"><a class="l" href="#198">198 </a>        <span class="php-keyword1">foreach</span> (<span class="php-var">$raw_post_array</span> <span class="php-keyword1">as</span> <span class="php-var">$keyval</span>)
-</span><span id="199" class="l"><a class="l" href="#199">199 </a>        {
-</span><span id="200" class="l"><a class="l" href="#200">200 </a>            <span class="php-var">$keyval</span> = <span class="php-keyword2">explode</span>(<span class="php-quote">'='</span>, <span class="php-var">$keyval</span>);
-</span><span id="201" class="l"><a class="l" href="#201">201 </a>            <span class="php-keyword1">if</span> (<span class="php-keyword2">count</span>(<span class="php-var">$keyval</span>) === <span class="php-num">2</span>)
-</span><span id="202" class="l"><a class="l" href="#202">202 </a>                <span class="php-var">$my_post</span>[<span class="php-var">$keyval</span>[<span class="php-num">0</span>]] = <span class="php-keyword2">urldecode</span>(<span class="php-var">$keyval</span>[<span class="php-num">1</span>]);
-</span><span id="203" class="l"><a class="l" href="#203">203 </a>        }
-</span><span id="204" class="l"><a class="l" href="#204">204 </a>
-</span><span id="205" class="l"><a class="l" href="#205">205 </a>        <span class="php-comment">// Put this to some default value.</span>
-</span><span id="206" class="l"><a class="l" href="#206">206 </a>        <span class="php-keyword1">if</span> (!<span class="php-keyword1">isset</span>(<span class="php-var">$my_post</span>[<span class="php-quote">'txn_type'</span>]))
-</span><span id="207" class="l"><a class="l" href="#207">207 </a>            <span class="php-var">$my_post</span>[<span class="php-quote">'txn_type'</span>] = <span class="php-quote">''</span>;
-</span><span id="208" class="l"><a class="l" href="#208">208 </a>
-</span><span id="209" class="l"><a class="l" href="#209">209 </a>        <span class="php-comment">// Build the request string - starting with the minimum requirement.</span>
-</span><span id="210" class="l"><a class="l" href="#210">210 </a>        <span class="php-var">$requestString</span> = <span class="php-quote">'cmd=_notify-validate'</span>;
-</span><span id="211" class="l"><a class="l" href="#211">211 </a>
-</span><span id="212" class="l"><a class="l" href="#212">212 </a>        <span class="php-comment">// Now my dear, add all the posted bits back in the exact order we got them</span>
-</span><span id="213" class="l"><a class="l" href="#213">213 </a>        <span class="php-keyword1">foreach</span> (<span class="php-var">$my_post</span> <span class="php-keyword1">as</span> <span class="php-var">$key</span> =&gt; <span class="php-var">$value</span>)
-</span><span id="214" class="l"><a class="l" href="#214">214 </a>            <span class="php-var">$requestString</span> .= <span class="php-quote">'&amp;'</span> . <span class="php-var">$key</span> . <span class="php-quote">'='</span> . <span class="php-keyword2">urlencode</span>(<span class="php-var">$value</span>);
-</span><span id="215" class="l"><a class="l" href="#215">215 </a>
-</span><span id="216" class="l"><a class="l" href="#216">216 </a>        <span class="php-comment">// Post IPN data back to PayPal to validate the IPN data is genuine</span>
-</span><span id="217" class="l"><a class="l" href="#217">217 </a>        <span class="php-comment">// First we try cURL</span>
-</span><span id="218" class="l"><a class="l" href="#218">218 </a>        <span class="php-keyword1">if</span> (<span class="php-keyword2">function_exists</span>(<span class="php-quote">'curl_init'</span>) &amp;&amp; <span class="php-var">$curl</span> = <span class="php-keyword2">curl_init</span>((!<span class="php-keyword1">empty</span>(<span class="php-var">$modSettings</span>[<span class="php-quote">'paidsubs_test'</span>]) ? <span class="php-quote">'https://www.sandbox.'</span> : <span class="php-quote">'http://www.'</span>) . <span class="php-quote">'paypal.com/cgi-bin/webscr'</span>))
-</span><span id="219" class="l"><a class="l" href="#219">219 </a>        {
-</span><span id="220" class="l"><a class="l" href="#220">220 </a>            <span class="php-comment">// Set the post data.</span>
-</span><span id="221" class="l"><a class="l" href="#221">221 </a>            <span class="php-keyword2">curl_setopt</span>(<span class="php-var">$curl</span>, CURLOPT_POST, <span class="php-keyword1">true</span>);
-</span><span id="222" class="l"><a class="l" href="#222">222 </a>            <span class="php-keyword2">curl_setopt</span>(<span class="php-var">$curl</span>, CURLOPT_POSTFIELDSIZE, <span class="php-num">0</span>);
-</span><span id="223" class="l"><a class="l" href="#223">223 </a>            <span class="php-keyword2">curl_setopt</span>(<span class="php-var">$curl</span>, CURLOPT_POSTFIELDS, <span class="php-var">$requestString</span>);
-</span><span id="224" class="l"><a class="l" href="#224">224 </a>
-</span><span id="225" class="l"><a class="l" href="#225">225 </a>            <span class="php-comment">// Set up the headers so paypal will accept the post</span>
-</span><span id="226" class="l"><a class="l" href="#226">226 </a>            <span class="php-keyword2">curl_setopt</span>(<span class="php-var">$curl</span>, CURLOPT_HTTP_VERSION, CURL_HTTP_VERSION_1_1);
-</span><span id="227" class="l"><a class="l" href="#227">227 </a>            <span class="php-keyword2">curl_setopt</span>(<span class="php-var">$curl</span>, CURLOPT_SSL_VERIFYPEER, <span class="php-num">1</span>);
-</span><span id="228" class="l"><a class="l" href="#228">228 </a>            <span class="php-keyword2">curl_setopt</span>(<span class="php-var">$curl</span>, CURLOPT_SSL_VERIFYHOST, <span class="php-num">2</span>);
-</span><span id="229" class="l"><a class="l" href="#229">229 </a>            <span class="php-keyword2">curl_setopt</span>(<span class="php-var">$curl</span>, CURLOPT_FORBID_REUSE, <span class="php-num">1</span>);
-</span><span id="230" class="l"><a class="l" href="#230">230 </a>+
-</span><span id="231" class="l"><a class="l" href="#231">231 </a>            <span class="php-comment">// Set TCP timeout to 30 seconds</span>
-</span><span id="232" class="l"><a class="l" href="#232">232 </a>            <span class="php-keyword2">curl_setopt</span>(<span class="php-var">$curl</span>, CURLOPT_CONNECTTIMEOUT, <span class="php-num">30</span>);
-</span><span id="233" class="l"><a class="l" href="#233">233 </a>
-</span><span id="234" class="l"><a class="l" href="#234">234 </a>            <span class="php-comment">// Set the http headers</span>
-</span><span id="235" class="l"><a class="l" href="#235">235 </a>            <span class="php-keyword2">curl_setopt</span>(<span class="php-var">$curl</span>, CURLOPT_HTTPHEADER, <span class="php-keyword1">array</span>(
-</span><span id="236" class="l"><a class="l" href="#236">236 </a>                <span class="php-quote">'Content-Type: application/x-www-form-urlencoded'</span>,
-</span><span id="237" class="l"><a class="l" href="#237">237 </a>                <span class="php-quote">'Content-Length: '</span> . <span class="php-keyword2">strlen</span>(<span class="php-var">$requestString</span>),
-</span><span id="238" class="l"><a class="l" href="#238">238 </a>                <span class="php-quote">'Host: www.'</span> . (!<span class="php-keyword1">empty</span>(<span class="php-var">$modSettings</span>[<span class="php-quote">'paidsubs_test'</span>]) ? <span class="php-quote">'sandbox.'</span> : <span class="php-quote">''</span>) . <span class="php-quote">'paypal.com'</span>,
-</span><span id="239" class="l"><a class="l" href="#239">239 </a>                <span class="php-quote">'Connection: close'</span>
-</span><span id="240" class="l"><a class="l" href="#240">240 </a>            ));
-</span><span id="241" class="l"><a class="l" href="#241">241 </a>
-</span><span id="242" class="l"><a class="l" href="#242">242 </a>            <span class="php-comment">// The data returned as a string.</span>
-</span><span id="243" class="l"><a class="l" href="#243">243 </a>            <span class="php-keyword2">curl_setopt</span>(<span class="php-var">$curl</span>, CURLOPT_RETURNTRANSFER, <span class="php-keyword1">true</span>);
-</span><span id="244" class="l"><a class="l" href="#244">244 </a>
-</span><span id="245" class="l"><a class="l" href="#245">245 </a>            <span class="php-comment">// Fetch the data.</span>
-</span><span id="246" class="l"><a class="l" href="#246">246 </a>            <span class="php-var">$this</span>-&gt;return_data = <span class="php-keyword2">curl_exec</span>(<span class="php-var">$curl</span>);
-</span><span id="247" class="l"><a class="l" href="#247">247 </a>
-</span><span id="248" class="l"><a class="l" href="#248">248 </a>            <span class="php-comment">// Close the session.</span>
-</span><span id="249" class="l"><a class="l" href="#249">249 </a>            <span class="php-keyword2">curl_close</span>(<span class="php-var">$curl</span>);
-</span><span id="250" class="l"><a class="l" href="#250">250 </a>        }
-</span><span id="251" class="l"><a class="l" href="#251">251 </a>        <span class="php-comment">// Otherwise good old HTTP.</span>
-</span><span id="252" class="l"><a class="l" href="#252">252 </a>        <span class="php-keyword1">else</span>
-</span><span id="253" class="l"><a class="l" href="#253">253 </a>        {
-</span><span id="254" class="l"><a class="l" href="#254">254 </a>            <span class="php-comment">// Setup the headers.</span>
-</span><span id="255" class="l"><a class="l" href="#255">255 </a>            <span class="php-var">$header</span> = <span class="php-quote">'POST /cgi-bin/webscr HTTP/1.1'</span> . <span class="php-quote">&quot;\r\n&quot;</span>;
-</span><span id="256" class="l"><a class="l" href="#256">256 </a>            <span class="php-var">$header</span> .= <span class="php-quote">'Content-Type: application/x-www-form-urlencoded'</span> . <span class="php-quote">&quot;\r\n&quot;</span>;
-</span><span id="257" class="l"><a class="l" href="#257">257 </a>            <span class="php-var">$header</span> .= <span class="php-quote">'Host: www.'</span> . (!<span class="php-keyword1">empty</span>(<span class="php-var">$modSettings</span>[<span class="php-quote">'paidsubs_test'</span>]) ? <span class="php-quote">'sandbox.'</span> : <span class="php-quote">''</span>) . <span class="php-quote">'paypal.com'</span> . <span class="php-quote">&quot;\r\n&quot;</span>;
-</span><span id="258" class="l"><a class="l" href="#258">258 </a>            <span class="php-var">$header</span> .= <span class="php-quote">'Content-Length: '</span> . <span class="php-keyword2">strlen</span>(<span class="php-var">$requestString</span>) . <span class="php-quote">&quot;\r\n&quot;</span>;
-</span><span id="259" class="l"><a class="l" href="#259">259 </a>            <span class="php-var">$header</span> .= <span class="php-quote">'Connection: close'</span> . <span class="php-quote">&quot;\r\n\r\n&quot;</span>;
-</span><span id="260" class="l"><a class="l" href="#260">260 </a>
-</span><span id="261" class="l"><a class="l" href="#261">261 </a>            <span class="php-comment">// Open the connection.</span>
-</span><span id="262" class="l"><a class="l" href="#262">262 </a>            <span class="php-keyword1">if</span> (!<span class="php-keyword1">empty</span>(<span class="php-var">$modSettings</span>[<span class="php-quote">'paidsubs_test'</span>]))
-</span><span id="263" class="l"><a class="l" href="#263">263 </a>                <span class="php-var">$fp</span> = <span class="php-keyword2">fsockopen</span>(<span class="php-quote">'ssl://www.sandbox.paypal.com'</span>, <span class="php-num">443</span>, <span class="php-var">$errno</span>, <span class="php-var">$errstr</span>, <span class="php-num">30</span>);
-</span><span id="264" class="l"><a class="l" href="#264">264 </a>            <span class="php-keyword1">else</span>
-</span><span id="265" class="l"><a class="l" href="#265">265 </a>                <span class="php-var">$fp</span> = <span class="php-keyword2">fsockopen</span>(<span class="php-quote">'www.paypal.com'</span>, <span class="php-num">80</span>, <span class="php-var">$errno</span>, <span class="php-var">$errstr</span>, <span class="php-num">30</span>);
-</span><span id="266" class="l"><a class="l" href="#266">266 </a>
-</span><span id="267" class="l"><a class="l" href="#267">267 </a>            <span class="php-comment">// Did it work?</span>
-</span><span id="268" class="l"><a class="l" href="#268">268 </a>            <span class="php-keyword1">if</span> (!<span class="php-var">$fp</span>)
-</span><span id="269" class="l"><a class="l" href="#269">269 </a>                generateSubscriptionError(<span class="php-var">$txt</span>[<span class="php-quote">'paypal_could_not_connect'</span>]);
-</span><span id="270" class="l"><a class="l" href="#270">270 </a>
-</span><span id="271" class="l"><a class="l" href="#271">271 </a>            <span class="php-comment">// Put the data to the port.</span>
-</span><span id="272" class="l"><a class="l" href="#272">272 </a>            <span class="php-keyword2">fputs</span>(<span class="php-var">$fp</span>, <span class="php-var">$header</span> . <span class="php-var">$requestString</span>);
-</span><span id="273" class="l"><a class="l" href="#273">273 </a>
-</span><span id="274" class="l"><a class="l" href="#274">274 </a>            <span class="php-comment">// Get the data back...</span>
-</span><span id="275" class="l"><a class="l" href="#275">275 </a>            <span class="php-keyword1">while</span> (!<span class="php-keyword2">feof</span>(<span class="php-var">$fp</span>))
-</span><span id="276" class="l"><a class="l" href="#276">276 </a>            {
-</span><span id="277" class="l"><a class="l" href="#277">277 </a>                <span class="php-var">$this</span>-&gt;return_data = <span class="php-keyword2">fgets</span>(<span class="php-var">$fp</span>, <span class="php-num">1024</span>);
-</span><span id="278" class="l"><a class="l" href="#278">278 </a>                <span class="php-keyword1">if</span> (<span class="php-keyword2">strcmp</span>(<span class="php-keyword2">trim</span>(<span class="php-var">$this</span>-&gt;return_data), <span class="php-quote">'VERIFIED'</span>) === <span class="php-num">0</span>)
-</span><span id="279" class="l"><a class="l" href="#279">279 </a>                    <span class="php-keyword1">break</span>;
-</span><span id="280" class="l"><a class="l" href="#280">280 </a>            }
-</span><span id="281" class="l"><a class="l" href="#281">281 </a>
-</span><span id="282" class="l"><a class="l" href="#282">282 </a>            <span class="php-comment">// Clean up.</span>
-</span><span id="283" class="l"><a class="l" href="#283">283 </a>            <span class="php-keyword2">fclose</span>(<span class="php-var">$fp</span>);
-</span><span id="284" class="l"><a class="l" href="#284">284 </a>        }
-</span><span id="285" class="l"><a class="l" href="#285">285 </a>
-</span><span id="286" class="l"><a class="l" href="#286">286 </a>        <span class="php-comment">// If PayPal IPN does not return verified then give up...</span>
-</span><span id="287" class="l"><a class="l" href="#287">287 </a>        <span class="php-keyword1">if</span> (<span class="php-keyword2">strcmp</span>(<span class="php-keyword2">trim</span>(<span class="php-var">$this</span>-&gt;return_data), <span class="php-quote">'VERIFIED'</span>) !== <span class="php-num">0</span>)
-</span><span id="288" class="l"><a class="l" href="#288">288 </a>            <span class="php-keyword1">exit</span>;
-</span><span id="289" class="l"><a class="l" href="#289">289 </a>
-</span><span id="290" class="l"><a class="l" href="#290">290 </a>        <span class="php-comment">// Now that we have received a VERIFIED response from PayPal, we perform some checks</span>
-</span><span id="291" class="l"><a class="l" href="#291">291 </a>        <span class="php-comment">// before we assume that the IPN is legitimate. First check that this is intended for us.</span>
-</span><span id="292" class="l"><a class="l" href="#292">292 </a>        <span class="php-keyword1">if</span> (<span class="php-var">$modSettings</span>[<span class="php-quote">'paypal_email'</span>] !== <span class="php-var">$_POST</span>[<span class="php-quote">'business'</span>] &amp;&amp; (<span class="php-keyword1">empty</span>(<span class="php-var">$modSettings</span>[<span class="php-quote">'paypal_additional_emails'</span>]) || !<span class="php-keyword2">in_array</span>(<span class="php-var">$_POST</span>[<span class="php-quote">'business'</span>], <span class="php-keyword2">explode</span>(<span class="php-quote">','</span>, <span class="php-var">$modSettings</span>[<span class="php-quote">'paypal_additional_emails'</span>]))))
-</span><span id="293" class="l"><a class="l" href="#293">293 </a>            <span class="php-keyword1">exit</span>;
-</span><span id="294" class="l"><a class="l" href="#294">294 </a>
-</span><span id="295" class="l"><a class="l" href="#295">295 </a>        <span class="php-comment">// Is this a subscription - and if so is it a secondary payment that we need to process?</span>
-</span><span id="296" class="l"><a class="l" href="#296">296 </a>        <span class="php-keyword1">if</span> (<span class="php-var">$this</span>-&gt;isSubscription() &amp;&amp; (<span class="php-keyword1">empty</span>(<span class="php-var">$_POST</span>[<span class="php-quote">'item_number'</span>]) || <span class="php-keyword2">strpos</span>(<span class="php-var">$_POST</span>[<span class="php-quote">'item_number'</span>], <span class="php-quote">'+'</span>) === <span class="php-keyword1">false</span>))
-</span><span id="297" class="l"><a class="l" href="#297">297 </a>            <span class="php-comment">// Calculate the subscription it relates to!</span>
-</span><span id="298" class="l"><a class="l" href="#298">298 </a>            <span class="php-var">$this</span>-&gt;_findSubscription();
-</span><span id="299" class="l"><a class="l" href="#299">299 </a>
-</span><span id="300" class="l"><a class="l" href="#300">300 </a>        <span class="php-comment">// Verify the currency!</span>
-</span><span id="301" class="l"><a class="l" href="#301">301 </a>        <span class="php-keyword1">if</span> (<span class="php-keyword2">trim</span>(<span class="php-keyword2">strtolower</span>(<span class="php-var">$_POST</span>[<span class="php-quote">'mc_currency'</span>])) !== <span class="php-keyword2">strtolower</span>(<span class="php-var">$modSettings</span>[<span class="php-quote">'paid_currency_code'</span>]))
-</span><span id="302" class="l"><a class="l" href="#302">302 </a>            generateSubscriptionError(<span class="php-keyword2">sprintf</span>(<span class="php-var">$txt</span>[<span class="php-quote">'paypal_currency_unkown'</span>], <span class="php-var">$_POST</span>[<span class="php-quote">'mc_currency'</span>], <span class="php-var">$modSettings</span>[<span class="php-quote">'paid_currency_code'</span>]));
-</span><span id="303" class="l"><a class="l" href="#303">303 </a>
-</span><span id="304" class="l"><a class="l" href="#304">304 </a>        <span class="php-comment">// Can't exist if it doesn't contain anything.</span>
-</span><span id="305" class="l"><a class="l" href="#305">305 </a>        <span class="php-keyword1">if</span> (<span class="php-keyword1">empty</span>(<span class="php-var">$_POST</span>[<span class="php-quote">'item_number'</span>]))
-</span><span id="306" class="l"><a class="l" href="#306">306 </a>            <span class="php-keyword1">exit</span>;
-</span><span id="307" class="l"><a class="l" href="#307">307 </a>
-</span><span id="308" class="l"><a class="l" href="#308">308 </a>        <span class="php-comment">// Return the id_sub and id_member</span>
-</span><span id="309" class="l"><a class="l" href="#309">309 </a>        <span class="php-keyword1">return</span> <span class="php-keyword2">explode</span>(<span class="php-quote">'+'</span>, <span class="php-var">$_POST</span>[<span class="php-quote">'item_number'</span>]);
-</span><span id="310" class="l"><a class="l" href="#310">310 </a>    }
-</span><span id="311" class="l"><a class="l" href="#311">311 </a>
-</span><span id="312" class="l"><a class="l" href="#312">312 </a>    <span class="php-comment">/**
-</span></span><span id="313" class="l"><a class="l" href="#313">313 </a><span class="php-comment">     * Is this a refund?
-</span></span><span id="314" class="l"><a class="l" href="#314">314 </a><span class="php-comment">     *
-</span></span><span id="315" class="l"><a class="l" href="#315">315 </a><span class="php-comment">     * @return boolean
-</span></span><span id="316" class="l"><a class="l" href="#316">316 </a><span class="php-comment">     */</span>
-</span><span id="317" class="l"><a class="l" href="#317">317 </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_isRefund" href="#_isRefund">isRefund</a>()
-</span><span id="318" class="l"><a class="l" href="#318">318 </a>    {
-</span><span id="319" class="l"><a class="l" href="#319">319 </a>        <span class="php-keyword1">return</span> ((<span class="php-var">$_POST</span>[<span class="php-quote">'payment_status'</span>] === <span class="php-quote">'Refunded'</span> || <span class="php-var">$_POST</span>[<span class="php-quote">'payment_status'</span>] === <span class="php-quote">'Reversed'</span> || <span class="php-var">$_POST</span>[<span class="php-quote">'txn_type'</span>] === <span class="php-quote">'Refunded'</span> || (<span class="php-var">$_POST</span>[<span class="php-quote">'txn_type'</span>] === <span class="php-quote">'reversal'</span> &amp;&amp; <span class="php-var">$_POST</span>[<span class="php-quote">'payment_status'</span>] === <span class="php-quote">'Completed'</span>)));
-</span><span id="320" class="l"><a class="l" href="#320">320 </a>    }
-</span><span id="321" class="l"><a class="l" href="#321">321 </a>
-</span><span id="322" class="l"><a class="l" href="#322">322 </a>    <span class="php-comment">/**
-</span></span><span id="323" class="l"><a class="l" href="#323">323 </a><span class="php-comment">     * Is this a subscription?
-</span></span><span id="324" class="l"><a class="l" href="#324">324 </a><span class="php-comment">     *
-</span></span><span id="325" class="l"><a class="l" href="#325">325 </a><span class="php-comment">     * @return boolean
-</span></span><span id="326" class="l"><a class="l" href="#326">326 </a><span class="php-comment">     */</span>
-</span><span id="327" class="l"><a class="l" href="#327">327 </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_isSubscription" href="#_isSubscription">isSubscription</a>()
-</span><span id="328" class="l"><a class="l" href="#328">328 </a>    {
-</span><span id="329" class="l"><a class="l" href="#329">329 </a>        <span class="php-keyword1">return</span> (<span class="php-keyword2">substr</span>(<span class="php-var">$_POST</span>[<span class="php-quote">'txn_type'</span>], <span class="php-num">0</span>, <span class="php-num">14</span>) === <span class="php-quote">'subscr_payment'</span> &amp;&amp; <span class="php-var">$_POST</span>[<span class="php-quote">'payment_status'</span>] === <span class="php-quote">'Completed'</span>);
-</span><span id="330" class="l"><a class="l" href="#330">330 </a>    }
-</span><span id="331" class="l"><a class="l" href="#331">331 </a>
-</span><span id="332" class="l"><a class="l" href="#332">332 </a>    <span class="php-comment">/**
-</span></span><span id="333" class="l"><a class="l" href="#333">333 </a><span class="php-comment">     * Is this a normal payment?
-</span></span><span id="334" class="l"><a class="l" href="#334">334 </a><span class="php-comment">     *
-</span></span><span id="335" class="l"><a class="l" href="#335">335 </a><span class="php-comment">     * @return boolean
-</span></span><span id="336" class="l"><a class="l" href="#336">336 </a><span class="php-comment">     */</span>
-</span><span id="337" class="l"><a class="l" href="#337">337 </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_isPayment" href="#_isPayment">isPayment</a>()
-</span><span id="338" class="l"><a class="l" href="#338">338 </a>    {
-</span><span id="339" class="l"><a class="l" href="#339">339 </a>        <span class="php-keyword1">return</span> (<span class="php-var">$_POST</span>[<span class="php-quote">'payment_status'</span>] === <span class="php-quote">'Completed'</span> &amp;&amp; <span class="php-var">$_POST</span>[<span class="php-quote">'txn_type'</span>] === <span class="php-quote">'web_accept'</span>);
-</span><span id="340" class="l"><a class="l" href="#340">340 </a>    }
-</span><span id="341" class="l"><a class="l" href="#341">341 </a>
-</span><span id="342" class="l"><a class="l" href="#342">342 </a>    <span class="php-comment">/**
-</span></span><span id="343" class="l"><a class="l" href="#343">343 </a><span class="php-comment">     * How much was paid?
-</span></span><span id="344" class="l"><a class="l" href="#344">344 </a><span class="php-comment">     *
-</span></span><span id="345" class="l"><a class="l" href="#345">345 </a><span class="php-comment">     * @return float
-</span></span><span id="346" class="l"><a class="l" href="#346">346 </a><span class="php-comment">     */</span>
-</span><span id="347" class="l"><a class="l" href="#347">347 </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_getCost" href="#_getCost">getCost</a>()
-</span><span id="348" class="l"><a class="l" href="#348">348 </a>    {
-</span><span id="349" class="l"><a class="l" href="#349">349 </a>        <span class="php-keyword1">return</span> (<span class="php-keyword1">isset</span>(<span class="php-var">$_POST</span>[<span class="php-quote">'tax'</span>]) ? <span class="php-var">$_POST</span>[<span class="php-quote">'tax'</span>] : <span class="php-num">0</span>) + <span class="php-var">$_POST</span>[<span class="php-quote">'mc_gross'</span>];
-</span><span id="350" class="l"><a class="l" href="#350">350 </a>    }
-</span><span id="351" class="l"><a class="l" href="#351">351 </a>
-</span><span id="352" class="l"><a class="l" href="#352">352 </a>    <span class="php-comment">/**
-</span></span><span id="353" class="l"><a class="l" href="#353">353 </a><span class="php-comment">     * Record the transaction reference and exit
-</span></span><span id="354" class="l"><a class="l" href="#354">354 </a><span class="php-comment">     */</span>
-</span><span id="355" class="l"><a class="l" href="#355">355 </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_close" href="#_close">close</a>()
-</span><span id="356" class="l"><a class="l" href="#356">356 </a>    {
-</span><span id="357" class="l"><a class="l" href="#357">357 </a>        <span class="php-keyword1">global</span> <span class="php-var">$subscription_id</span>;
-</span><span id="358" class="l"><a class="l" href="#358">358 </a>
-</span><span id="359" class="l"><a class="l" href="#359">359 </a>        <span class="php-var">$db</span> = database();
-</span><span id="360" class="l"><a class="l" href="#360">360 </a>
-</span><span id="361" class="l"><a class="l" href="#361">361 </a>        <span class="php-comment">// If it's a subscription record the reference.</span>
-</span><span id="362" class="l"><a class="l" href="#362">362 </a>        <span class="php-keyword1">if</span> (<span class="php-var">$_POST</span>[<span class="php-quote">'txn_type'</span>] == <span class="php-quote">'subscr_payment'</span> &amp;&amp; !<span class="php-keyword1">empty</span>(<span class="php-var">$_POST</span>[<span class="php-quote">'subscr_id'</span>]))
-</span><span id="363" class="l"><a class="l" href="#363">363 </a>        {
-</span><span id="364" class="l"><a class="l" href="#364">364 </a>            <span class="php-var">$_POST</span>[<span class="php-quote">'subscr_id'</span>] = <span class="php-var">$_POST</span>[<span class="php-quote">'subscr_id'</span>];
-</span><span id="365" class="l"><a class="l" href="#365">365 </a>
-</span><span id="366" class="l"><a class="l" href="#366">366 </a>            <span class="php-var">$db</span>-&gt;query(<span class="php-quote">''</span>, <span class="php-quote">'
-</span></span><span id="367" class="l"><a class="l" href="#367">367 </a><span class="php-quote">                UPDATE {db_prefix}log_subscribed
-</span></span><span id="368" class="l"><a class="l" href="#368">368 </a><span class="php-quote">                SET vendor_ref = {string:vendor_ref}
-</span></span><span id="369" class="l"><a class="l" href="#369">369 </a><span class="php-quote">                WHERE id_sublog = {int:current_subscription}'</span>,
-</span><span id="370" class="l"><a class="l" href="#370">370 </a>                <span class="php-keyword1">array</span>(
-</span><span id="371" class="l"><a class="l" href="#371">371 </a>                    <span class="php-quote">'current_subscription'</span> =&gt; <span class="php-var">$subscription_id</span>,
-</span><span id="372" class="l"><a class="l" href="#372">372 </a>                    <span class="php-quote">'vendor_ref'</span> =&gt; <span class="php-var">$_POST</span>[<span class="php-quote">'subscr_id'</span>],
-</span><span id="373" class="l"><a class="l" href="#373">373 </a>                )
-</span><span id="374" class="l"><a class="l" href="#374">374 </a>            );
-</span><span id="375" class="l"><a class="l" href="#375">375 </a>        }
+</span><span id="190" class="l"><a class="l" href="#190">190 </a>        <span class="php-comment">// Reading POSTed data directly from $_POST may causes serialization issues with array data</span>
+</span><span id="191" class="l"><a class="l" href="#191">191 </a>        <span class="php-comment">// in the POST. Instead, read raw POST data from the input stream.</span>
+</span><span id="192" class="l"><a class="l" href="#192">192 </a>        <span class="php-var">$raw_post_data</span> = <span class="php-keyword2">file_get_contents</span>(<span class="php-quote">'php://input'</span>);
+</span><span id="193" class="l"><a class="l" href="#193">193 </a>        <span class="php-var">$raw_post_array</span> = <span class="php-keyword2">explode</span>(<span class="php-quote">'&amp;'</span>, <span class="php-var">$raw_post_data</span>);
+</span><span id="194" class="l"><a class="l" href="#194">194 </a>
+</span><span id="195" class="l"><a class="l" href="#195">195 </a>        <span class="php-comment">// Process it</span>
+</span><span id="196" class="l"><a class="l" href="#196">196 </a>        <span class="php-keyword1">foreach</span> (<span class="php-var">$raw_post_array</span> <span class="php-keyword1">as</span> <span class="php-var">$keyval</span>)
+</span><span id="197" class="l"><a class="l" href="#197">197 </a>        {
+</span><span id="198" class="l"><a class="l" href="#198">198 </a>            <span class="php-var">$keyval</span> = <span class="php-keyword2">explode</span>(<span class="php-quote">'='</span>, <span class="php-var">$keyval</span>);
+</span><span id="199" class="l"><a class="l" href="#199">199 </a>            <span class="php-keyword1">if</span> (<span class="php-keyword2">count</span>(<span class="php-var">$keyval</span>) === <span class="php-num">2</span>)
+</span><span id="200" class="l"><a class="l" href="#200">200 </a>                <span class="php-var">$my_post</span>[<span class="php-var">$keyval</span>[<span class="php-num">0</span>]] = <span class="php-keyword2">urldecode</span>(<span class="php-var">$keyval</span>[<span class="php-num">1</span>]);
+</span><span id="201" class="l"><a class="l" href="#201">201 </a>        }
+</span><span id="202" class="l"><a class="l" href="#202">202 </a>
+</span><span id="203" class="l"><a class="l" href="#203">203 </a>        <span class="php-comment">// Put this to some default value.</span>
+</span><span id="204" class="l"><a class="l" href="#204">204 </a>        <span class="php-keyword1">if</span> (!<span class="php-keyword1">isset</span>(<span class="php-var">$my_post</span>[<span class="php-quote">'txn_type'</span>]))
+</span><span id="205" class="l"><a class="l" href="#205">205 </a>            <span class="php-var">$my_post</span>[<span class="php-quote">'txn_type'</span>] = <span class="php-quote">''</span>;
+</span><span id="206" class="l"><a class="l" href="#206">206 </a>
+</span><span id="207" class="l"><a class="l" href="#207">207 </a>        <span class="php-comment">// Build the request string - starting with the minimum requirement.</span>
+</span><span id="208" class="l"><a class="l" href="#208">208 </a>        <span class="php-var">$requestString</span> = <span class="php-quote">'cmd=_notify-validate'</span>;
+</span><span id="209" class="l"><a class="l" href="#209">209 </a>
+</span><span id="210" class="l"><a class="l" href="#210">210 </a>        <span class="php-comment">// Now my dear, add all the posted bits back in the exact order we got them</span>
+</span><span id="211" class="l"><a class="l" href="#211">211 </a>        <span class="php-keyword1">foreach</span> (<span class="php-var">$my_post</span> <span class="php-keyword1">as</span> <span class="php-var">$key</span> =&gt; <span class="php-var">$value</span>)
+</span><span id="212" class="l"><a class="l" href="#212">212 </a>            <span class="php-var">$requestString</span> .= <span class="php-quote">'&amp;'</span> . <span class="php-var">$key</span> . <span class="php-quote">'='</span> . <span class="php-keyword2">urlencode</span>(<span class="php-var">$value</span>);
+</span><span id="213" class="l"><a class="l" href="#213">213 </a>
+</span><span id="214" class="l"><a class="l" href="#214">214 </a>        <span class="php-comment">// Post IPN data back to PayPal to validate the IPN data is genuine</span>
+</span><span id="215" class="l"><a class="l" href="#215">215 </a>        <span class="php-comment">// First we try cURL</span>
+</span><span id="216" class="l"><a class="l" href="#216">216 </a>        <span class="php-keyword1">if</span> (<span class="php-keyword2">function_exists</span>(<span class="php-quote">'curl_init'</span>) &amp;&amp; <span class="php-var">$curl</span> = <span class="php-keyword2">curl_init</span>((!<span class="php-keyword1">empty</span>(<span class="php-var">$modSettings</span>[<span class="php-quote">'paidsubs_test'</span>]) ? <span class="php-quote">'https://www.sandbox.'</span> : <span class="php-quote">'http://www.'</span>) . <span class="php-quote">'paypal.com/cgi-bin/webscr'</span>))
+</span><span id="217" class="l"><a class="l" href="#217">217 </a>        {
+</span><span id="218" class="l"><a class="l" href="#218">218 </a>            <span class="php-comment">// Set the post data.</span>
+</span><span id="219" class="l"><a class="l" href="#219">219 </a>            <span class="php-keyword2">curl_setopt</span>(<span class="php-var">$curl</span>, CURLOPT_POST, <span class="php-keyword1">true</span>);
+</span><span id="220" class="l"><a class="l" href="#220">220 </a>            <span class="php-keyword2">curl_setopt</span>(<span class="php-var">$curl</span>, CURLOPT_POSTFIELDSIZE, <span class="php-num">0</span>);
+</span><span id="221" class="l"><a class="l" href="#221">221 </a>            <span class="php-keyword2">curl_setopt</span>(<span class="php-var">$curl</span>, CURLOPT_POSTFIELDS, <span class="php-var">$requestString</span>);
+</span><span id="222" class="l"><a class="l" href="#222">222 </a>
+</span><span id="223" class="l"><a class="l" href="#223">223 </a>            <span class="php-comment">// Set up the headers so paypal will accept the post</span>
+</span><span id="224" class="l"><a class="l" href="#224">224 </a>            <span class="php-keyword2">curl_setopt</span>(<span class="php-var">$curl</span>, CURLOPT_HTTP_VERSION, CURL_HTTP_VERSION_1_1);
+</span><span id="225" class="l"><a class="l" href="#225">225 </a>            <span class="php-keyword2">curl_setopt</span>(<span class="php-var">$curl</span>, CURLOPT_SSL_VERIFYPEER, <span class="php-num">1</span>);
+</span><span id="226" class="l"><a class="l" href="#226">226 </a>            <span class="php-keyword2">curl_setopt</span>(<span class="php-var">$curl</span>, CURLOPT_SSL_VERIFYHOST, <span class="php-num">2</span>);
+</span><span id="227" class="l"><a class="l" href="#227">227 </a>            <span class="php-keyword2">curl_setopt</span>(<span class="php-var">$curl</span>, CURLOPT_FORBID_REUSE, <span class="php-num">1</span>);
+</span><span id="228" class="l"><a class="l" href="#228">228 </a>
+</span><span id="229" class="l"><a class="l" href="#229">229 </a>            <span class="php-comment">// Set TCP timeout to 30 seconds</span>
+</span><span id="230" class="l"><a class="l" href="#230">230 </a>            <span class="php-keyword2">curl_setopt</span>(<span class="php-var">$curl</span>, CURLOPT_CONNECTTIMEOUT, <span class="php-num">30</span>);
+</span><span id="231" class="l"><a class="l" href="#231">231 </a>
+</span><span id="232" class="l"><a class="l" href="#232">232 </a>            <span class="php-comment">// Set the http headers</span>
+</span><span id="233" class="l"><a class="l" href="#233">233 </a>            <span class="php-keyword2">curl_setopt</span>(<span class="php-var">$curl</span>, CURLOPT_HTTPHEADER, <span class="php-keyword1">array</span>(
+</span><span id="234" class="l"><a class="l" href="#234">234 </a>                <span class="php-quote">'Content-Type: application/x-www-form-urlencoded'</span>,
+</span><span id="235" class="l"><a class="l" href="#235">235 </a>                <span class="php-quote">'Content-Length: '</span> . <span class="php-keyword2">strlen</span>(<span class="php-var">$requestString</span>),
+</span><span id="236" class="l"><a class="l" href="#236">236 </a>                <span class="php-quote">'Host: www.'</span> . (!<span class="php-keyword1">empty</span>(<span class="php-var">$modSettings</span>[<span class="php-quote">'paidsubs_test'</span>]) ? <span class="php-quote">'sandbox.'</span> : <span class="php-quote">''</span>) . <span class="php-quote">'paypal.com'</span>,
+</span><span id="237" class="l"><a class="l" href="#237">237 </a>                <span class="php-quote">'Connection: close'</span>
+</span><span id="238" class="l"><a class="l" href="#238">238 </a>            ));
+</span><span id="239" class="l"><a class="l" href="#239">239 </a>
+</span><span id="240" class="l"><a class="l" href="#240">240 </a>            <span class="php-comment">// The data returned as a string.</span>
+</span><span id="241" class="l"><a class="l" href="#241">241 </a>            <span class="php-keyword2">curl_setopt</span>(<span class="php-var">$curl</span>, CURLOPT_RETURNTRANSFER, <span class="php-keyword1">true</span>);
+</span><span id="242" class="l"><a class="l" href="#242">242 </a>
+</span><span id="243" class="l"><a class="l" href="#243">243 </a>            <span class="php-comment">// Fetch the data.</span>
+</span><span id="244" class="l"><a class="l" href="#244">244 </a>            <span class="php-var">$this</span>-&gt;return_data = <span class="php-keyword2">curl_exec</span>(<span class="php-var">$curl</span>);
+</span><span id="245" class="l"><a class="l" href="#245">245 </a>
+</span><span id="246" class="l"><a class="l" href="#246">246 </a>            <span class="php-comment">// Close the session.</span>
+</span><span id="247" class="l"><a class="l" href="#247">247 </a>            <span class="php-keyword2">curl_close</span>(<span class="php-var">$curl</span>);
+</span><span id="248" class="l"><a class="l" href="#248">248 </a>        }
+</span><span id="249" class="l"><a class="l" href="#249">249 </a>        <span class="php-comment">// Otherwise good old HTTP.</span>
+</span><span id="250" class="l"><a class="l" href="#250">250 </a>        <span class="php-keyword1">else</span>
+</span><span id="251" class="l"><a class="l" href="#251">251 </a>        {
+</span><span id="252" class="l"><a class="l" href="#252">252 </a>            <span class="php-comment">// Setup the headers.</span>
+</span><span id="253" class="l"><a class="l" href="#253">253 </a>            <span class="php-var">$header</span> = <span class="php-quote">'POST /cgi-bin/webscr HTTP/1.1'</span> . <span class="php-quote">&quot;\r\n&quot;</span>;
+</span><span id="254" class="l"><a class="l" href="#254">254 </a>            <span class="php-var">$header</span> .= <span class="php-quote">'Content-Type: application/x-www-form-urlencoded'</span> . <span class="php-quote">&quot;\r\n&quot;</span>;
+</span><span id="255" class="l"><a class="l" href="#255">255 </a>            <span class="php-var">$header</span> .= <span class="php-quote">'Host: www.'</span> . (!<span class="php-keyword1">empty</span>(<span class="php-var">$modSettings</span>[<span class="php-quote">'paidsubs_test'</span>]) ? <span class="php-quote">'sandbox.'</span> : <span class="php-quote">''</span>) . <span class="php-quote">'paypal.com'</span> . <span class="php-quote">&quot;\r\n&quot;</span>;
+</span><span id="256" class="l"><a class="l" href="#256">256 </a>            <span class="php-var">$header</span> .= <span class="php-quote">'Content-Length: '</span> . <span class="php-keyword2">strlen</span>(<span class="php-var">$requestString</span>) . <span class="php-quote">&quot;\r\n&quot;</span>;
+</span><span id="257" class="l"><a class="l" href="#257">257 </a>            <span class="php-var">$header</span> .= <span class="php-quote">'Connection: close'</span> . <span class="php-quote">&quot;\r\n\r\n&quot;</span>;
+</span><span id="258" class="l"><a class="l" href="#258">258 </a>
+</span><span id="259" class="l"><a class="l" href="#259">259 </a>            <span class="php-comment">// Open the connection.</span>
+</span><span id="260" class="l"><a class="l" href="#260">260 </a>            <span class="php-keyword1">if</span> (!<span class="php-keyword1">empty</span>(<span class="php-var">$modSettings</span>[<span class="php-quote">'paidsubs_test'</span>]))
+</span><span id="261" class="l"><a class="l" href="#261">261 </a>                <span class="php-var">$fp</span> = <span class="php-keyword2">fsockopen</span>(<span class="php-quote">'ssl://www.sandbox.paypal.com'</span>, <span class="php-num">443</span>, <span class="php-var">$errno</span>, <span class="php-var">$errstr</span>, <span class="php-num">30</span>);
+</span><span id="262" class="l"><a class="l" href="#262">262 </a>            <span class="php-keyword1">else</span>
+</span><span id="263" class="l"><a class="l" href="#263">263 </a>                <span class="php-var">$fp</span> = <span class="php-keyword2">fsockopen</span>(<span class="php-quote">'www.paypal.com'</span>, <span class="php-num">80</span>, <span class="php-var">$errno</span>, <span class="php-var">$errstr</span>, <span class="php-num">30</span>);
+</span><span id="264" class="l"><a class="l" href="#264">264 </a>
+</span><span id="265" class="l"><a class="l" href="#265">265 </a>            <span class="php-comment">// Did it work?</span>
+</span><span id="266" class="l"><a class="l" href="#266">266 </a>            <span class="php-keyword1">if</span> (!<span class="php-var">$fp</span>)
+</span><span id="267" class="l"><a class="l" href="#267">267 </a>                generateSubscriptionError(<span class="php-var">$txt</span>[<span class="php-quote">'paypal_could_not_connect'</span>]);
+</span><span id="268" class="l"><a class="l" href="#268">268 </a>
+</span><span id="269" class="l"><a class="l" href="#269">269 </a>            <span class="php-comment">// Put the data to the port.</span>
+</span><span id="270" class="l"><a class="l" href="#270">270 </a>            <span class="php-keyword2">fputs</span>(<span class="php-var">$fp</span>, <span class="php-var">$header</span> . <span class="php-var">$requestString</span>);
+</span><span id="271" class="l"><a class="l" href="#271">271 </a>
+</span><span id="272" class="l"><a class="l" href="#272">272 </a>            <span class="php-comment">// Get the data back...</span>
+</span><span id="273" class="l"><a class="l" href="#273">273 </a>            <span class="php-keyword1">while</span> (!<span class="php-keyword2">feof</span>(<span class="php-var">$fp</span>))
+</span><span id="274" class="l"><a class="l" href="#274">274 </a>            {
+</span><span id="275" class="l"><a class="l" href="#275">275 </a>                <span class="php-var">$this</span>-&gt;return_data = <span class="php-keyword2">fgets</span>(<span class="php-var">$fp</span>, <span class="php-num">1024</span>);
+</span><span id="276" class="l"><a class="l" href="#276">276 </a>                <span class="php-keyword1">if</span> (<span class="php-keyword2">strcmp</span>(<span class="php-keyword2">trim</span>(<span class="php-var">$this</span>-&gt;return_data), <span class="php-quote">'VERIFIED'</span>) === <span class="php-num">0</span>)
+</span><span id="277" class="l"><a class="l" href="#277">277 </a>                    <span class="php-keyword1">break</span>;
+</span><span id="278" class="l"><a class="l" href="#278">278 </a>            }
+</span><span id="279" class="l"><a class="l" href="#279">279 </a>
+</span><span id="280" class="l"><a class="l" href="#280">280 </a>            <span class="php-comment">// Clean up.</span>
+</span><span id="281" class="l"><a class="l" href="#281">281 </a>            <span class="php-keyword2">fclose</span>(<span class="php-var">$fp</span>);
+</span><span id="282" class="l"><a class="l" href="#282">282 </a>        }
+</span><span id="283" class="l"><a class="l" href="#283">283 </a>
+</span><span id="284" class="l"><a class="l" href="#284">284 </a>        <span class="php-comment">// If PayPal IPN does not return verified then give up...</span>
+</span><span id="285" class="l"><a class="l" href="#285">285 </a>        <span class="php-keyword1">if</span> (<span class="php-keyword2">strcmp</span>(<span class="php-keyword2">trim</span>(<span class="php-var">$this</span>-&gt;return_data), <span class="php-quote">'VERIFIED'</span>) !== <span class="php-num">0</span>)
+</span><span id="286" class="l"><a class="l" href="#286">286 </a>            <span class="php-keyword1">exit</span>;
+</span><span id="287" class="l"><a class="l" href="#287">287 </a>
+</span><span id="288" class="l"><a class="l" href="#288">288 </a>        <span class="php-comment">// Now that we have received a VERIFIED response from PayPal, we perform some checks</span>
+</span><span id="289" class="l"><a class="l" href="#289">289 </a>        <span class="php-comment">// before we assume that the IPN is legitimate. First check that this is intended for us.</span>
+</span><span id="290" class="l"><a class="l" href="#290">290 </a>        <span class="php-keyword1">if</span> (<span class="php-var">$modSettings</span>[<span class="php-quote">'paypal_email'</span>] !== <span class="php-var">$_POST</span>[<span class="php-quote">'business'</span>] &amp;&amp; (<span class="php-keyword1">empty</span>(<span class="php-var">$modSettings</span>[<span class="php-quote">'paypal_additional_emails'</span>]) || !<span class="php-keyword2">in_array</span>(<span class="php-var">$_POST</span>[<span class="php-quote">'business'</span>], <span class="php-keyword2">explode</span>(<span class="php-quote">','</span>, <span class="php-var">$modSettings</span>[<span class="php-quote">'paypal_additional_emails'</span>]))))
+</span><span id="291" class="l"><a class="l" href="#291">291 </a>            <span class="php-keyword1">exit</span>;
+</span><span id="292" class="l"><a class="l" href="#292">292 </a>
+</span><span id="293" class="l"><a class="l" href="#293">293 </a>        <span class="php-comment">// Is this a subscription - and if so is it a secondary payment that we need to process?</span>
+</span><span id="294" class="l"><a class="l" href="#294">294 </a>        <span class="php-keyword1">if</span> (<span class="php-var">$this</span>-&gt;isSubscription() &amp;&amp; (<span class="php-keyword1">empty</span>(<span class="php-var">$_POST</span>[<span class="php-quote">'item_number'</span>]) || <span class="php-keyword2">strpos</span>(<span class="php-var">$_POST</span>[<span class="php-quote">'item_number'</span>], <span class="php-quote">'+'</span>) === <span class="php-keyword1">false</span>))
+</span><span id="295" class="l"><a class="l" href="#295">295 </a>            <span class="php-comment">// Calculate the subscription it relates to!</span>
+</span><span id="296" class="l"><a class="l" href="#296">296 </a>            <span class="php-var">$this</span>-&gt;_findSubscription();
+</span><span id="297" class="l"><a class="l" href="#297">297 </a>
+</span><span id="298" class="l"><a class="l" href="#298">298 </a>        <span class="php-comment">// Verify the currency!</span>
+</span><span id="299" class="l"><a class="l" href="#299">299 </a>        <span class="php-keyword1">if</span> (<span class="php-keyword2">trim</span>(<span class="php-keyword2">strtolower</span>(<span class="php-var">$_POST</span>[<span class="php-quote">'mc_currency'</span>])) !== <span class="php-keyword2">strtolower</span>(<span class="php-var">$modSettings</span>[<span class="php-quote">'paid_currency_code'</span>]))
+</span><span id="300" class="l"><a class="l" href="#300">300 </a>            generateSubscriptionError(<span class="php-keyword2">sprintf</span>(<span class="php-var">$txt</span>[<span class="php-quote">'paypal_currency_unkown'</span>], <span class="php-var">$_POST</span>[<span class="php-quote">'mc_currency'</span>], <span class="php-var">$modSettings</span>[<span class="php-quote">'paid_currency_code'</span>]));
+</span><span id="301" class="l"><a class="l" href="#301">301 </a>
+</span><span id="302" class="l"><a class="l" href="#302">302 </a>        <span class="php-comment">// Can't exist if it doesn't contain anything.</span>
+</span><span id="303" class="l"><a class="l" href="#303">303 </a>        <span class="php-keyword1">if</span> (<span class="php-keyword1">empty</span>(<span class="php-var">$_POST</span>[<span class="php-quote">'item_number'</span>]))
+</span><span id="304" class="l"><a class="l" href="#304">304 </a>            <span class="php-keyword1">exit</span>;
+</span><span id="305" class="l"><a class="l" href="#305">305 </a>
+</span><span id="306" class="l"><a class="l" href="#306">306 </a>        <span class="php-comment">// Return the id_sub and id_member</span>
+</span><span id="307" class="l"><a class="l" href="#307">307 </a>        <span class="php-keyword1">return</span> <span class="php-keyword2">explode</span>(<span class="php-quote">'+'</span>, <span class="php-var">$_POST</span>[<span class="php-quote">'item_number'</span>]);
+</span><span id="308" class="l"><a class="l" href="#308">308 </a>    }
+</span><span id="309" class="l"><a class="l" href="#309">309 </a>
+</span><span id="310" class="l"><a class="l" href="#310">310 </a>    <span class="php-comment">/**
+</span></span><span id="311" class="l"><a class="l" href="#311">311 </a><span class="php-comment">     * Is this a refund?
+</span></span><span id="312" class="l"><a class="l" href="#312">312 </a><span class="php-comment">     *
+</span></span><span id="313" class="l"><a class="l" href="#313">313 </a><span class="php-comment">     * @return boolean
+</span></span><span id="314" class="l"><a class="l" href="#314">314 </a><span class="php-comment">     */</span>
+</span><span id="315" class="l"><a class="l" href="#315">315 </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_isRefund" href="#_isRefund">isRefund</a>()
+</span><span id="316" class="l"><a class="l" href="#316">316 </a>    {
+</span><span id="317" class="l"><a class="l" href="#317">317 </a>        <span class="php-keyword1">return</span> ((<span class="php-var">$_POST</span>[<span class="php-quote">'payment_status'</span>] === <span class="php-quote">'Refunded'</span> || <span class="php-var">$_POST</span>[<span class="php-quote">'payment_status'</span>] === <span class="php-quote">'Reversed'</span> || <span class="php-var">$_POST</span>[<span class="php-quote">'txn_type'</span>] === <span class="php-quote">'Refunded'</span> || (<span class="php-var">$_POST</span>[<span class="php-quote">'txn_type'</span>] === <span class="php-quote">'reversal'</span> &amp;&amp; <span class="php-var">$_POST</span>[<span class="php-quote">'payment_status'</span>] === <span class="php-quote">'Completed'</span>)));
+</span><span id="318" class="l"><a class="l" href="#318">318 </a>    }
+</span><span id="319" class="l"><a class="l" href="#319">319 </a>
+</span><span id="320" class="l"><a class="l" href="#320">320 </a>    <span class="php-comment">/**
+</span></span><span id="321" class="l"><a class="l" href="#321">321 </a><span class="php-comment">     * Is this a subscription?
+</span></span><span id="322" class="l"><a class="l" href="#322">322 </a><span class="php-comment">     *
+</span></span><span id="323" class="l"><a class="l" href="#323">323 </a><span class="php-comment">     * @return boolean
+</span></span><span id="324" class="l"><a class="l" href="#324">324 </a><span class="php-comment">     */</span>
+</span><span id="325" class="l"><a class="l" href="#325">325 </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_isSubscription" href="#_isSubscription">isSubscription</a>()
+</span><span id="326" class="l"><a class="l" href="#326">326 </a>    {
+</span><span id="327" class="l"><a class="l" href="#327">327 </a>        <span class="php-keyword1">return</span> (<span class="php-keyword2">substr</span>(<span class="php-var">$_POST</span>[<span class="php-quote">'txn_type'</span>], <span class="php-num">0</span>, <span class="php-num">14</span>) === <span class="php-quote">'subscr_payment'</span> &amp;&amp; <span class="php-var">$_POST</span>[<span class="php-quote">'payment_status'</span>] === <span class="php-quote">'Completed'</span>);
+</span><span id="328" class="l"><a class="l" href="#328">328 </a>    }
+</span><span id="329" class="l"><a class="l" href="#329">329 </a>
+</span><span id="330" class="l"><a class="l" href="#330">330 </a>    <span class="php-comment">/**
+</span></span><span id="331" class="l"><a class="l" href="#331">331 </a><span class="php-comment">     * Is this a normal payment?
+</span></span><span id="332" class="l"><a class="l" href="#332">332 </a><span class="php-comment">     *
+</span></span><span id="333" class="l"><a class="l" href="#333">333 </a><span class="php-comment">     * @return boolean
+</span></span><span id="334" class="l"><a class="l" href="#334">334 </a><span class="php-comment">     */</span>
+</span><span id="335" class="l"><a class="l" href="#335">335 </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_isPayment" href="#_isPayment">isPayment</a>()
+</span><span id="336" class="l"><a class="l" href="#336">336 </a>    {
+</span><span id="337" class="l"><a class="l" href="#337">337 </a>        <span class="php-keyword1">return</span> (<span class="php-var">$_POST</span>[<span class="php-quote">'payment_status'</span>] === <span class="php-quote">'Completed'</span> &amp;&amp; <span class="php-var">$_POST</span>[<span class="php-quote">'txn_type'</span>] === <span class="php-quote">'web_accept'</span>);
+</span><span id="338" class="l"><a class="l" href="#338">338 </a>    }
+</span><span id="339" class="l"><a class="l" href="#339">339 </a>
+</span><span id="340" class="l"><a class="l" href="#340">340 </a>    <span class="php-comment">/**
+</span></span><span id="341" class="l"><a class="l" href="#341">341 </a><span class="php-comment">     * Is this a cancellation?
+</span></span><span id="342" class="l"><a class="l" href="#342">342 </a><span class="php-comment">     *
+</span></span><span id="343" class="l"><a class="l" href="#343">343 </a><span class="php-comment">     * @return boolean
+</span></span><span id="344" class="l"><a class="l" href="#344">344 </a><span class="php-comment">     */</span>
+</span><span id="345" class="l"><a class="l" href="#345">345 </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_isCancellation" href="#_isCancellation">isCancellation</a>()
+</span><span id="346" class="l"><a class="l" href="#346">346 </a>    {
+</span><span id="347" class="l"><a class="l" href="#347">347 </a>        <span class="php-comment">// subscr_cancel: This IPN response (txn_type) is sent only when the subscriber cancels his/her</span>
+</span><span id="348" class="l"><a class="l" href="#348">348 </a>        <span class="php-comment">// current subscription or the merchant cancels the subscribers subscription. In this event according</span>
+</span><span id="349" class="l"><a class="l" href="#349">349 </a>        <span class="php-comment">// to Paypal rules the subscr_eot (End of Term) IPN response is NEVER sent, and it is up to you to</span>
+</span><span id="350" class="l"><a class="l" href="#350">350 </a>        <span class="php-comment">// keep the subscription of the subscriber active for remaining days of subscription should they cancel</span>
+</span><span id="351" class="l"><a class="l" href="#351">351 </a>        <span class="php-comment">// their subscription in the middle of the subscription period.</span>
+</span><span id="352" class="l"><a class="l" href="#352">352 </a>        <span class="php-comment">//</span>
+</span><span id="353" class="l"><a class="l" href="#353">353 </a>        <span class="php-comment">// subscr_eot: This IPN response (txn_type) is sent ONLY when the subscription ends naturally/expires</span>
+</span><span id="354" class="l"><a class="l" href="#354">354 </a>        <span class="php-comment">//</span>
+</span><span id="355" class="l"><a class="l" href="#355">355 </a>        <span class="php-keyword1">return</span> (<span class="php-keyword2">substr</span>(<span class="php-var">$_POST</span>[<span class="php-quote">'txn_type'</span>], <span class="php-num">0</span>, <span class="php-num">13</span>) === <span class="php-quote">'subscr_cancel'</span> || <span class="php-keyword2">substr</span>(<span class="php-var">$_POST</span>[<span class="php-quote">'txn_type'</span>], <span class="php-num">0</span>, <span class="php-num">10</span>) === <span class="php-quote">'subscr_eot'</span>);
+</span><span id="356" class="l"><a class="l" href="#356">356 </a>    }
+</span><span id="357" class="l"><a class="l" href="#357">357 </a>
+</span><span id="358" class="l"><a class="l" href="#358">358 </a>    <span class="php-comment">/**
+</span></span><span id="359" class="l"><a class="l" href="#359">359 </a><span class="php-comment">     * How much was paid?
+</span></span><span id="360" class="l"><a class="l" href="#360">360 </a><span class="php-comment">     *
+</span></span><span id="361" class="l"><a class="l" href="#361">361 </a><span class="php-comment">     * @return float
+</span></span><span id="362" class="l"><a class="l" href="#362">362 </a><span class="php-comment">     */</span>
+</span><span id="363" class="l"><a class="l" href="#363">363 </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_getCost" href="#_getCost">getCost</a>()
+</span><span id="364" class="l"><a class="l" href="#364">364 </a>    {
+</span><span id="365" class="l"><a class="l" href="#365">365 </a>        <span class="php-keyword1">return</span> (<span class="php-keyword1">isset</span>(<span class="php-var">$_POST</span>[<span class="php-quote">'tax'</span>]) ? <span class="php-var">$_POST</span>[<span class="php-quote">'tax'</span>] : <span class="php-num">0</span>) + <span class="php-var">$_POST</span>[<span class="php-quote">'mc_gross'</span>];
+</span><span id="366" class="l"><a class="l" href="#366">366 </a>    }
+</span><span id="367" class="l"><a class="l" href="#367">367 </a>
+</span><span id="368" class="l"><a class="l" href="#368">368 </a>    <span class="php-comment">/**
+</span></span><span id="369" class="l"><a class="l" href="#369">369 </a><span class="php-comment">     * Record the transaction reference and exit
+</span></span><span id="370" class="l"><a class="l" href="#370">370 </a><span class="php-comment">     */</span>
+</span><span id="371" class="l"><a class="l" href="#371">371 </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_close" href="#_close">close</a>()
+</span><span id="372" class="l"><a class="l" href="#372">372 </a>    {
+</span><span id="373" class="l"><a class="l" href="#373">373 </a>        <span class="php-keyword1">global</span> <span class="php-var">$subscription_id</span>;
+</span><span id="374" class="l"><a class="l" href="#374">374 </a>
+</span><span id="375" class="l"><a class="l" href="#375">375 </a>        <span class="php-var">$db</span> = database();
 </span><span id="376" class="l"><a class="l" href="#376">376 </a>
-</span><span id="377" class="l"><a class="l" href="#377">377 </a>        <span class="php-keyword1">exit</span>();
-</span><span id="378" class="l"><a class="l" href="#378">378 </a>    }
-</span><span id="379" class="l"><a class="l" href="#379">379 </a>
-</span><span id="380" class="l"><a class="l" href="#380">380 </a>    <span class="php-comment">/**
-</span></span><span id="381" class="l"><a class="l" href="#381">381 </a><span class="php-comment">     * A private function to find out the subscription details.
-</span></span><span id="382" class="l"><a class="l" href="#382">382 </a><span class="php-comment">     *
-</span></span><span id="383" class="l"><a class="l" href="#383">383 </a><span class="php-comment">     * @return false|null
-</span></span><span id="384" class="l"><a class="l" href="#384">384 </a><span class="php-comment">     */</span>
-</span><span id="385" class="l"><a class="l" href="#385">385 </a>    <span class="php-keyword1">private</span> <span class="php-keyword1">function</span> <a id="__findSubscription" href="#__findSubscription">_findSubscription</a>()
-</span><span id="386" class="l"><a class="l" href="#386">386 </a>    {
-</span><span id="387" class="l"><a class="l" href="#387">387 </a>        <span class="php-var">$db</span> = database();
-</span><span id="388" class="l"><a class="l" href="#388">388 </a>
-</span><span id="389" class="l"><a class="l" href="#389">389 </a>        <span class="php-comment">// Assume we have this?</span>
-</span><span id="390" class="l"><a class="l" href="#390">390 </a>        <span class="php-keyword1">if</span> (<span class="php-keyword1">empty</span>(<span class="php-var">$_POST</span>[<span class="php-quote">'subscr_id'</span>]))
-</span><span id="391" class="l"><a class="l" href="#391">391 </a>            <span class="php-keyword1">return</span> <span class="php-keyword1">false</span>;
+</span><span id="377" class="l"><a class="l" href="#377">377 </a>        <span class="php-comment">// If it's a subscription record the reference.</span>
+</span><span id="378" class="l"><a class="l" href="#378">378 </a>        <span class="php-keyword1">if</span> (<span class="php-var">$_POST</span>[<span class="php-quote">'txn_type'</span>] == <span class="php-quote">'subscr_payment'</span> &amp;&amp; !<span class="php-keyword1">empty</span>(<span class="php-var">$_POST</span>[<span class="php-quote">'subscr_id'</span>]))
+</span><span id="379" class="l"><a class="l" href="#379">379 </a>        {
+</span><span id="380" class="l"><a class="l" href="#380">380 </a>            <span class="php-var">$_POST</span>[<span class="php-quote">'subscr_id'</span>] = <span class="php-var">$_POST</span>[<span class="php-quote">'subscr_id'</span>];
+</span><span id="381" class="l"><a class="l" href="#381">381 </a>
+</span><span id="382" class="l"><a class="l" href="#382">382 </a>            <span class="php-var">$db</span>-&gt;query(<span class="php-quote">''</span>, <span class="php-quote">'
+</span></span><span id="383" class="l"><a class="l" href="#383">383 </a><span class="php-quote">                UPDATE {db_prefix}log_subscribed
+</span></span><span id="384" class="l"><a class="l" href="#384">384 </a><span class="php-quote">                SET vendor_ref = {string:vendor_ref}
+</span></span><span id="385" class="l"><a class="l" href="#385">385 </a><span class="php-quote">                WHERE id_sublog = {int:current_subscription}'</span>,
+</span><span id="386" class="l"><a class="l" href="#386">386 </a>                <span class="php-keyword1">array</span>(
+</span><span id="387" class="l"><a class="l" href="#387">387 </a>                    <span class="php-quote">'current_subscription'</span> =&gt; <span class="php-var">$subscription_id</span>,
+</span><span id="388" class="l"><a class="l" href="#388">388 </a>                    <span class="php-quote">'vendor_ref'</span> =&gt; <span class="php-var">$_POST</span>[<span class="php-quote">'subscr_id'</span>],
+</span><span id="389" class="l"><a class="l" href="#389">389 </a>                )
+</span><span id="390" class="l"><a class="l" href="#390">390 </a>            );
+</span><span id="391" class="l"><a class="l" href="#391">391 </a>        }
 </span><span id="392" class="l"><a class="l" href="#392">392 </a>
-</span><span id="393" class="l"><a class="l" href="#393">393 </a>        <span class="php-comment">// Do we have this in the database?</span>
-</span><span id="394" class="l"><a class="l" href="#394">394 </a>        <span class="php-var">$request</span> = <span class="php-var">$db</span>-&gt;query(<span class="php-quote">''</span>, <span class="php-quote">'
-</span></span><span id="395" class="l"><a class="l" href="#395">395 </a><span class="php-quote">            SELECT
-</span></span><span id="396" class="l"><a class="l" href="#396">396 </a><span class="php-quote">                id_member, id_subscribe
-</span></span><span id="397" class="l"><a class="l" href="#397">397 </a><span class="php-quote">            FROM {db_prefix}log_subscribed
-</span></span><span id="398" class="l"><a class="l" href="#398">398 </a><span class="php-quote">            WHERE vendor_ref = {string:vendor_ref}
-</span></span><span id="399" class="l"><a class="l" href="#399">399 </a><span class="php-quote">            LIMIT 1'</span>,
-</span><span id="400" class="l"><a class="l" href="#400">400 </a>            <span class="php-keyword1">array</span>(
-</span><span id="401" class="l"><a class="l" href="#401">401 </a>                <span class="php-quote">'vendor_ref'</span> =&gt; <span class="php-var">$_POST</span>[<span class="php-quote">'subscr_id'</span>],
-</span><span id="402" class="l"><a class="l" href="#402">402 </a>            )
-</span><span id="403" class="l"><a class="l" href="#403">403 </a>        );
-</span><span id="404" class="l"><a class="l" href="#404">404 </a>        <span class="php-comment">// No joy?</span>
-</span><span id="405" class="l"><a class="l" href="#405">405 </a>        <span class="php-keyword1">if</span> (<span class="php-var">$db</span>-&gt;num_rows(<span class="php-var">$request</span>) == <span class="php-num">0</span>)
-</span><span id="406" class="l"><a class="l" href="#406">406 </a>        {
-</span><span id="407" class="l"><a class="l" href="#407">407 </a>            <span class="php-comment">// Can we identify them by email?</span>
-</span><span id="408" class="l"><a class="l" href="#408">408 </a>            <span class="php-keyword1">if</span> (!<span class="php-keyword1">empty</span>(<span class="php-var">$_POST</span>[<span class="php-quote">'payer_email'</span>]))
-</span><span id="409" class="l"><a class="l" href="#409">409 </a>            {
-</span><span id="410" class="l"><a class="l" href="#410">410 </a>                <span class="php-var">$db</span>-&gt;free_result(<span class="php-var">$request</span>);
-</span><span id="411" class="l"><a class="l" href="#411">411 </a>                <span class="php-var">$request</span> = <span class="php-var">$db</span>-&gt;query(<span class="php-quote">''</span>, <span class="php-quote">'
-</span></span><span id="412" class="l"><a class="l" href="#412">412 </a><span class="php-quote">                    SELECT
-</span></span><span id="413" class="l"><a class="l" href="#413">413 </a><span class="php-quote">                        ls.id_member, ls.id_subscribe
-</span></span><span id="414" class="l"><a class="l" href="#414">414 </a><span class="php-quote">                    FROM {db_prefix}log_subscribed AS ls
-</span></span><span id="415" class="l"><a class="l" href="#415">415 </a><span class="php-quote">                        INNER JOIN {db_prefix}members AS mem ON (mem.id_member = ls.id_member)
-</span></span><span id="416" class="l"><a class="l" href="#416">416 </a><span class="php-quote">                    WHERE mem.email_address = {string:payer_email}
-</span></span><span id="417" class="l"><a class="l" href="#417">417 </a><span class="php-quote">                    LIMIT 1'</span>,
-</span><span id="418" class="l"><a class="l" href="#418">418 </a>                    <span class="php-keyword1">array</span>(
-</span><span id="419" class="l"><a class="l" href="#419">419 </a>                        <span class="php-quote">'payer_email'</span> =&gt; <span class="php-var">$_POST</span>[<span class="php-quote">'payer_email'</span>],
-</span><span id="420" class="l"><a class="l" href="#420">420 </a>                    )
-</span><span id="421" class="l"><a class="l" href="#421">421 </a>                );
-</span><span id="422" class="l"><a class="l" href="#422">422 </a>                <span class="php-keyword1">if</span> (<span class="php-var">$db</span>-&gt;num_rows(<span class="php-var">$request</span>) === <span class="php-num">0</span>)
-</span><span id="423" class="l"><a class="l" href="#423">423 </a>                    <span class="php-keyword1">return</span> <span class="php-keyword1">false</span>;
-</span><span id="424" class="l"><a class="l" href="#424">424 </a>            }
-</span><span id="425" class="l"><a class="l" href="#425">425 </a>            <span class="php-keyword1">else</span>
-</span><span id="426" class="l"><a class="l" href="#426">426 </a>                <span class="php-keyword1">return</span> <span class="php-keyword1">false</span>;
-</span><span id="427" class="l"><a class="l" href="#427">427 </a>        }
-</span><span id="428" class="l"><a class="l" href="#428">428 </a>        <span class="php-keyword1">list</span> (<span class="php-var">$member_id</span>, <span class="php-var">$subscription_id</span>) = <span class="php-var">$db</span>-&gt;fetch_row(<span class="php-var">$request</span>);
-</span><span id="429" class="l"><a class="l" href="#429">429 </a>        <span class="php-var">$_POST</span>[<span class="php-quote">'item_number'</span>] = <span class="php-var">$member_id</span> . <span class="php-quote">'+'</span> . <span class="php-var">$subscription_id</span>;
-</span><span id="430" class="l"><a class="l" href="#430">430 </a>        <span class="php-var">$db</span>-&gt;free_result(<span class="php-var">$request</span>);
-</span><span id="431" class="l"><a class="l" href="#431">431 </a>    }
-</span><span id="432" class="l"><a class="l" href="#432">432 </a></span>}</code></pre>
+</span><span id="393" class="l"><a class="l" href="#393">393 </a>        <span class="php-keyword1">exit</span>();
+</span><span id="394" class="l"><a class="l" href="#394">394 </a>    }
+</span><span id="395" class="l"><a class="l" href="#395">395 </a>
+</span><span id="396" class="l"><a class="l" href="#396">396 </a>    <span class="php-comment">/**
+</span></span><span id="397" class="l"><a class="l" href="#397">397 </a><span class="php-comment">     * A private function to find out the subscription details.
+</span></span><span id="398" class="l"><a class="l" href="#398">398 </a><span class="php-comment">     *
+</span></span><span id="399" class="l"><a class="l" href="#399">399 </a><span class="php-comment">     * @return false|null
+</span></span><span id="400" class="l"><a class="l" href="#400">400 </a><span class="php-comment">     */</span>
+</span><span id="401" class="l"><a class="l" href="#401">401 </a>    <span class="php-keyword1">private</span> <span class="php-keyword1">function</span> <a id="__findSubscription" href="#__findSubscription">_findSubscription</a>()
+</span><span id="402" class="l"><a class="l" href="#402">402 </a>    {
+</span><span id="403" class="l"><a class="l" href="#403">403 </a>        <span class="php-var">$db</span> = database();
+</span><span id="404" class="l"><a class="l" href="#404">404 </a>
+</span><span id="405" class="l"><a class="l" href="#405">405 </a>        <span class="php-comment">// Assume we have this?</span>
+</span><span id="406" class="l"><a class="l" href="#406">406 </a>        <span class="php-keyword1">if</span> (<span class="php-keyword1">empty</span>(<span class="php-var">$_POST</span>[<span class="php-quote">'subscr_id'</span>]))
+</span><span id="407" class="l"><a class="l" href="#407">407 </a>            <span class="php-keyword1">return</span> <span class="php-keyword1">false</span>;
+</span><span id="408" class="l"><a class="l" href="#408">408 </a>
+</span><span id="409" class="l"><a class="l" href="#409">409 </a>        <span class="php-comment">// Do we have this in the database?</span>
+</span><span id="410" class="l"><a class="l" href="#410">410 </a>        <span class="php-var">$request</span> = <span class="php-var">$db</span>-&gt;query(<span class="php-quote">''</span>, <span class="php-quote">'
+</span></span><span id="411" class="l"><a class="l" href="#411">411 </a><span class="php-quote">            SELECT
+</span></span><span id="412" class="l"><a class="l" href="#412">412 </a><span class="php-quote">                id_member, id_subscribe
+</span></span><span id="413" class="l"><a class="l" href="#413">413 </a><span class="php-quote">            FROM {db_prefix}log_subscribed
+</span></span><span id="414" class="l"><a class="l" href="#414">414 </a><span class="php-quote">            WHERE vendor_ref = {string:vendor_ref}
+</span></span><span id="415" class="l"><a class="l" href="#415">415 </a><span class="php-quote">            LIMIT 1'</span>,
+</span><span id="416" class="l"><a class="l" href="#416">416 </a>            <span class="php-keyword1">array</span>(
+</span><span id="417" class="l"><a class="l" href="#417">417 </a>                <span class="php-quote">'vendor_ref'</span> =&gt; <span class="php-var">$_POST</span>[<span class="php-quote">'subscr_id'</span>],
+</span><span id="418" class="l"><a class="l" href="#418">418 </a>            )
+</span><span id="419" class="l"><a class="l" href="#419">419 </a>        );
+</span><span id="420" class="l"><a class="l" href="#420">420 </a>        <span class="php-comment">// No joy?</span>
+</span><span id="421" class="l"><a class="l" href="#421">421 </a>        <span class="php-keyword1">if</span> (<span class="php-var">$db</span>-&gt;num_rows(<span class="php-var">$request</span>) == <span class="php-num">0</span>)
+</span><span id="422" class="l"><a class="l" href="#422">422 </a>        {
+</span><span id="423" class="l"><a class="l" href="#423">423 </a>            <span class="php-comment">// Can we identify them by email?</span>
+</span><span id="424" class="l"><a class="l" href="#424">424 </a>            <span class="php-keyword1">if</span> (!<span class="php-keyword1">empty</span>(<span class="php-var">$_POST</span>[<span class="php-quote">'payer_email'</span>]))
+</span><span id="425" class="l"><a class="l" href="#425">425 </a>            {
+</span><span id="426" class="l"><a class="l" href="#426">426 </a>                <span class="php-var">$db</span>-&gt;free_result(<span class="php-var">$request</span>);
+</span><span id="427" class="l"><a class="l" href="#427">427 </a>                <span class="php-var">$request</span> = <span class="php-var">$db</span>-&gt;query(<span class="php-quote">''</span>, <span class="php-quote">'
+</span></span><span id="428" class="l"><a class="l" href="#428">428 </a><span class="php-quote">                    SELECT
+</span></span><span id="429" class="l"><a class="l" href="#429">429 </a><span class="php-quote">                        ls.id_member, ls.id_subscribe
+</span></span><span id="430" class="l"><a class="l" href="#430">430 </a><span class="php-quote">                    FROM {db_prefix}log_subscribed AS ls
+</span></span><span id="431" class="l"><a class="l" href="#431">431 </a><span class="php-quote">                        INNER JOIN {db_prefix}members AS mem ON (mem.id_member = ls.id_member)
+</span></span><span id="432" class="l"><a class="l" href="#432">432 </a><span class="php-quote">                    WHERE mem.email_address = {string:payer_email}
+</span></span><span id="433" class="l"><a class="l" href="#433">433 </a><span class="php-quote">                    LIMIT 1'</span>,
+</span><span id="434" class="l"><a class="l" href="#434">434 </a>                    <span class="php-keyword1">array</span>(
+</span><span id="435" class="l"><a class="l" href="#435">435 </a>                        <span class="php-quote">'payer_email'</span> =&gt; <span class="php-var">$_POST</span>[<span class="php-quote">'payer_email'</span>],
+</span><span id="436" class="l"><a class="l" href="#436">436 </a>                    )
+</span><span id="437" class="l"><a class="l" href="#437">437 </a>                );
+</span><span id="438" class="l"><a class="l" href="#438">438 </a>                <span class="php-keyword1">if</span> (<span class="php-var">$db</span>-&gt;num_rows(<span class="php-var">$request</span>) === <span class="php-num">0</span>)
+</span><span id="439" class="l"><a class="l" href="#439">439 </a>                    <span class="php-keyword1">return</span> <span class="php-keyword1">false</span>;
+</span><span id="440" class="l"><a class="l" href="#440">440 </a>            }
+</span><span id="441" class="l"><a class="l" href="#441">441 </a>            <span class="php-keyword1">else</span>
+</span><span id="442" class="l"><a class="l" href="#442">442 </a>                <span class="php-keyword1">return</span> <span class="php-keyword1">false</span>;
+</span><span id="443" class="l"><a class="l" href="#443">443 </a>        }
+</span><span id="444" class="l"><a class="l" href="#444">444 </a>        <span class="php-keyword1">list</span> (<span class="php-var">$member_id</span>, <span class="php-var">$subscription_id</span>) = <span class="php-var">$db</span>-&gt;fetch_row(<span class="php-var">$request</span>);
+</span><span id="445" class="l"><a class="l" href="#445">445 </a>        <span class="php-var">$_POST</span>[<span class="php-quote">'item_number'</span>] = <span class="php-var">$member_id</span> . <span class="php-quote">'+'</span> . <span class="php-var">$subscription_id</span>;
+</span><span id="446" class="l"><a class="l" href="#446">446 </a>        <span class="php-var">$db</span>-&gt;free_result(<span class="php-var">$request</span>);
+</span><span id="447" class="l"><a class="l" href="#447">447 </a>    }
+</span><span id="448" class="l"><a class="l" href="#448">448 </a></span>}</code></pre>
 	</div>
 
 	<div id="footer">

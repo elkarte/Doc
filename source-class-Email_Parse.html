@@ -8,7 +8,7 @@
 	<title>File sources/subs/EmailParse.class.php | ElkArte Documentation</title>
 
 	<script type="text/javascript" src="resources/combined.js?3648714599"></script>
-	<script type="text/javascript" src="elementlist.js?3593784124"></script>
+	<script type="text/javascript" src="elementlist.js?97495842"></script>
 	<link rel="stylesheet" type="text/css" media="all" href="resources/bootstrap.min.css?260161822" />
 	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?2015443609" />
 
@@ -84,7 +84,11 @@
 						</li>
 				<li><a href="package-Graphics.html">Graphics</a>
 						</li>
+				<li><a href="package-Karma.html">Karma</a>
+						</li>
 				<li><a href="package-Languages.html">Languages</a>
+						</li>
+				<li><a href="package-Likes.html">Likes</a>
 						</li>
 				<li><a href="package-Mail.html">Mail</a>
 						</li>
@@ -106,6 +110,8 @@
 						</li>
 				<li><a href="package-Permissions.html">Permissions</a>
 						</li>
+				<li><a href="package-PersonalMessage.html">PersonalMessage</a>
+						</li>
 				<li><a href="package-Posts.html">Posts</a>
 						</li>
 				<li><a href="package-Registration.html">Registration</a>
@@ -114,9 +120,13 @@
 						</li>
 				<li><a href="package-Search.html">Search</a>
 						</li>
+				<li><a href="package-SearchEngines.html">SearchEngines</a>
+						</li>
 				<li><a href="package-Security.html">Security</a>
 						</li>
 				<li><a href="package-Subscriptions.html">Subscriptions</a>
+						</li>
+				<li><a href="package-Themes.html">Themes</a>
 						</li>
 			</ul>
 		</div>
@@ -127,7 +137,8 @@
 			<ul>
 				<li><a href="class-Email_Format.html">Email_Format</a></li>
 				<li class="active"><a href="class-Email_Parse.html">Email_Parse</a></li>
-				<li><a href="class-MaillistSettingsClass.html">MaillistSettingsClass</a></li>
+				<li><a href="class-Email_Settings.html">Email_Settings</a></li>
+				<li><a href="class-Emailpost_Controller.html">Emailpost_Controller</a></li>
 				<li><a href="class-ManageMaillist_Controller.html">ManageMaillist_Controller</a></li>
 			</ul>
 
@@ -199,7 +210,7 @@
 </span></span><span id="7" class="l"><a class="l" href="#7">   7 </a><span class="php-comment"> * @copyright ElkArte Forum contributors
 </span></span><span id="8" class="l"><a class="l" href="#8">   8 </a><span class="php-comment"> * @license   BSD http://opensource.org/licenses/BSD-3-Clause
 </span></span><span id="9" class="l"><a class="l" href="#9">   9 </a><span class="php-comment"> *
-</span></span><span id="10" class="l"><a class="l" href="#10">  10 </a><span class="php-comment"> * @version 1.0 Beta 2
+</span></span><span id="10" class="l"><a class="l" href="#10">  10 </a><span class="php-comment"> * @version 1.0
 </span></span><span id="11" class="l"><a class="l" href="#11">  11 </a><span class="php-comment"> *
 </span></span><span id="12" class="l"><a class="l" href="#12">  12 </a><span class="php-comment"> */</span>
 </span><span id="13" class="l"><a class="l" href="#13">  13 </a>
@@ -1230,20 +1241,36 @@
 </span><span id="1038" class="l"><a class="l" href="#1038">1038 </a>    {
 </span><span id="1039" class="l"><a class="l" href="#1039">1039 </a>        <span class="php-comment">// Lets assume we have one of the functions available to us</span>
 </span><span id="1040" class="l"><a class="l" href="#1040">1040 </a>        <span class="php-var">$this</span>-&gt;_converted_utf8 = <span class="php-keyword1">true</span>;
-</span><span id="1041" class="l"><a class="l" href="#1041">1041 </a>
-</span><span id="1042" class="l"><a class="l" href="#1042">1042 </a>        <span class="php-keyword1">if</span> (<span class="php-keyword2">function_exists</span>(<span class="php-quote">'iconv'</span>))
-</span><span id="1043" class="l"><a class="l" href="#1043">1043 </a>            <span class="php-keyword1">return</span> @<span class="php-keyword2">iconv</span>(<span class="php-var">$from</span>, <span class="php-var">$to</span> . <span class="php-quote">'//TRANSLIT//IGNORE'</span>, <span class="php-var">$string</span>);
-</span><span id="1044" class="l"><a class="l" href="#1044">1044 </a>        <span class="php-keyword1">elseif</span> (<span class="php-keyword2">function_exists</span>(<span class="php-quote">'mb_convert_encoding'</span>))
-</span><span id="1045" class="l"><a class="l" href="#1045">1045 </a>            <span class="php-keyword1">return</span> @<span class="php-keyword2">mb_convert_encoding</span>(<span class="php-var">$string</span>, <span class="php-var">$to</span>, <span class="php-var">$from</span>);
-</span><span id="1046" class="l"><a class="l" href="#1046">1046 </a>        <span class="php-keyword1">elseif</span> (<span class="php-keyword2">function_exists</span>(<span class="php-quote">'recode_string'</span>))
-</span><span id="1047" class="l"><a class="l" href="#1047">1047 </a>            <span class="php-keyword1">return</span> @<span class="php-keyword2">recode_string</span>(<span class="php-var">$from</span> . <span class="php-quote">'..'</span> . <span class="php-var">$to</span>, <span class="php-var">$string</span>);
-</span><span id="1048" class="l"><a class="l" href="#1048">1048 </a>        <span class="php-keyword1">else</span>
+</span><span id="1041" class="l"><a class="l" href="#1041">1041 </a>        <span class="php-var">$string_save</span> = <span class="php-var">$string</span>;
+</span><span id="1042" class="l"><a class="l" href="#1042">1042 </a>
+</span><span id="1043" class="l"><a class="l" href="#1043">1043 </a>        <span class="php-comment">// Use iconv if its available</span>
+</span><span id="1044" class="l"><a class="l" href="#1044">1044 </a>        <span class="php-keyword1">if</span> (<span class="php-keyword2">function_exists</span>(<span class="php-quote">'iconv'</span>))
+</span><span id="1045" class="l"><a class="l" href="#1045">1045 </a>            <span class="php-var">$string</span> = @<span class="php-keyword2">iconv</span>(<span class="php-var">$from</span>, <span class="php-var">$to</span> . <span class="php-quote">'//TRANSLIT//IGNORE'</span>, <span class="php-var">$string</span>);
+</span><span id="1046" class="l"><a class="l" href="#1046">1046 </a>
+</span><span id="1047" class="l"><a class="l" href="#1047">1047 </a>        <span class="php-comment">// No iconv or a false response from it</span>
+</span><span id="1048" class="l"><a class="l" href="#1048">1048 </a>        <span class="php-keyword1">if</span> (!<span class="php-keyword2">function_exists</span>(<span class="php-quote">'iconv'</span>) || (<span class="php-var">$string</span> == <span class="php-keyword1">false</span>))
 </span><span id="1049" class="l"><a class="l" href="#1049">1049 </a>        {
-</span><span id="1050" class="l"><a class="l" href="#1050">1050 </a>            <span class="php-var">$this</span>-&gt;_converted_utf8 = <span class="php-keyword1">false</span>;
-</span><span id="1051" class="l"><a class="l" href="#1051">1051 </a>            <span class="php-keyword1">return</span> <span class="php-var">$string</span>;
-</span><span id="1052" class="l"><a class="l" href="#1052">1052 </a>        }
-</span><span id="1053" class="l"><a class="l" href="#1053">1053 </a>    }
-</span><span id="1054" class="l"><a class="l" href="#1054">1054 </a></span>}</code></pre>
+</span><span id="1050" class="l"><a class="l" href="#1050">1050 </a>            <span class="php-comment">// PHP (some 5.4 versions) mishandles //TRANSLIT//IGNORE and returns false: see https://bugs.php.net/bug.php?id=61484</span>
+</span><span id="1051" class="l"><a class="l" href="#1051">1051 </a>            <span class="php-keyword1">if</span> (<span class="php-var">$string</span> == <span class="php-keyword1">false</span>)
+</span><span id="1052" class="l"><a class="l" href="#1052">1052 </a>                <span class="php-var">$string</span> = <span class="php-var">$string_save</span>;
+</span><span id="1053" class="l"><a class="l" href="#1053">1053 </a>
+</span><span id="1054" class="l"><a class="l" href="#1054">1054 </a>            <span class="php-keyword1">if</span> (<span class="php-keyword2">function_exists</span>(<span class="php-quote">'mb_convert_encoding'</span>))
+</span><span id="1055" class="l"><a class="l" href="#1055">1055 </a>            {
+</span><span id="1056" class="l"><a class="l" href="#1056">1056 </a>                <span class="php-comment">// Replace unknown characters with a space</span>
+</span><span id="1057" class="l"><a class="l" href="#1057">1057 </a>                @<span class="php-keyword2">ini_set</span>(<span class="php-quote">'mbstring.substitute_character'</span>, <span class="php-quote">'32'</span>);
+</span><span id="1058" class="l"><a class="l" href="#1058">1058 </a>                <span class="php-var">$string</span> = @<span class="php-keyword2">mb_convert_encoding</span>(<span class="php-var">$string</span>, <span class="php-var">$to</span>, <span class="php-var">$from</span>);
+</span><span id="1059" class="l"><a class="l" href="#1059">1059 </a>            }
+</span><span id="1060" class="l"><a class="l" href="#1060">1060 </a>            <span class="php-keyword1">elseif</span> (<span class="php-keyword2">function_exists</span>(<span class="php-quote">'recode_string'</span>))
+</span><span id="1061" class="l"><a class="l" href="#1061">1061 </a>                <span class="php-var">$string</span> = @<span class="php-keyword2">recode_string</span>(<span class="php-var">$from</span> . <span class="php-quote">'..'</span> . <span class="php-var">$to</span>, <span class="php-var">$string</span>);
+</span><span id="1062" class="l"><a class="l" href="#1062">1062 </a>            <span class="php-keyword1">else</span>
+</span><span id="1063" class="l"><a class="l" href="#1063">1063 </a>                <span class="php-var">$this</span>-&gt;_converted_utf8 = <span class="php-keyword1">false</span>;
+</span><span id="1064" class="l"><a class="l" href="#1064">1064 </a>        }
+</span><span id="1065" class="l"><a class="l" href="#1065">1065 </a>
+</span><span id="1066" class="l"><a class="l" href="#1066">1066 </a>        <span class="php-keyword1">unset</span>(<span class="php-var">$string_save</span>);
+</span><span id="1067" class="l"><a class="l" href="#1067">1067 </a>
+</span><span id="1068" class="l"><a class="l" href="#1068">1068 </a>        <span class="php-keyword1">return</span> <span class="php-var">$string</span>;
+</span><span id="1069" class="l"><a class="l" href="#1069">1069 </a>    }
+</span><span id="1070" class="l"><a class="l" href="#1070">1070 </a></span>}</code></pre>
 	</div>
 
 	<div id="footer">

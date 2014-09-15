@@ -8,7 +8,7 @@
 	<title>File sources/admin/ManagePermissions.controller.php | ElkArte Documentation</title>
 
 	<script type="text/javascript" src="resources/combined.js?3648714599"></script>
-	<script type="text/javascript" src="elementlist.js?3593784124"></script>
+	<script type="text/javascript" src="elementlist.js?97495842"></script>
 	<link rel="stylesheet" type="text/css" media="all" href="resources/bootstrap.min.css?260161822" />
 	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?2015443609" />
 
@@ -84,7 +84,11 @@
 						</li>
 				<li><a href="package-Graphics.html">Graphics</a>
 						</li>
+				<li><a href="package-Karma.html">Karma</a>
+						</li>
 				<li><a href="package-Languages.html">Languages</a>
+						</li>
+				<li><a href="package-Likes.html">Likes</a>
 						</li>
 				<li><a href="package-Mail.html">Mail</a>
 						</li>
@@ -106,6 +110,8 @@
 						</li>
 				<li class="active"><a href="package-Permissions.html">Permissions</a>
 						</li>
+				<li><a href="package-PersonalMessage.html">PersonalMessage</a>
+						</li>
 				<li><a href="package-Posts.html">Posts</a>
 						</li>
 				<li><a href="package-Registration.html">Registration</a>
@@ -114,9 +120,13 @@
 						</li>
 				<li><a href="package-Search.html">Search</a>
 						</li>
+				<li><a href="package-SearchEngines.html">SearchEngines</a>
+						</li>
 				<li><a href="package-Security.html">Security</a>
 						</li>
 				<li><a href="package-Subscriptions.html">Subscriptions</a>
+						</li>
+				<li><a href="package-Themes.html">Themes</a>
 						</li>
 			</ul>
 		</div>
@@ -185,7 +195,7 @@
 </span></span><span id="14" class="l"><a class="l" href="#14">  14 </a><span class="php-comment"> * copyright:   2011 Simple Machines (http://www.simplemachines.org)
 </span></span><span id="15" class="l"><a class="l" href="#15">  15 </a><span class="php-comment"> * license:     BSD, See included LICENSE.TXT for terms and conditions.
 </span></span><span id="16" class="l"><a class="l" href="#16">  16 </a><span class="php-comment"> *
-</span></span><span id="17" class="l"><a class="l" href="#17">  17 </a><span class="php-comment"> * @version 1.0 Beta 2
+</span></span><span id="17" class="l"><a class="l" href="#17">  17 </a><span class="php-comment"> * @version 1.0
 </span></span><span id="18" class="l"><a class="l" href="#18">  18 </a><span class="php-comment"> *
 </span></span><span id="19" class="l"><a class="l" href="#19">  19 </a><span class="php-comment"> */</span>
 </span><span id="20" class="l"><a class="l" href="#20">  20 </a>
@@ -222,7 +232,7 @@
 </span><span id="51" class="l"><a class="l" href="#51">  51 </a>        loadTemplate(<span class="php-quote">'ManagePermissions'</span>);
 </span><span id="52" class="l"><a class="l" href="#52">  52 </a>
 </span><span id="53" class="l"><a class="l" href="#53">  53 </a>        <span class="php-comment">// We're working with them settings here.</span>
-</span><span id="54" class="l"><a class="l" href="#54">  54 </a>        <span class="php-keyword1">require_once</span>(SUBSDIR . <span class="php-quote">'/Settings.class.php'</span>);
+</span><span id="54" class="l"><a class="l" href="#54">  54 </a>        <span class="php-keyword1">require_once</span>(SUBSDIR . <span class="php-quote">'/SettingsForm.class.php'</span>);
 </span><span id="55" class="l"><a class="l" href="#55">  55 </a>
 </span><span id="56" class="l"><a class="l" href="#56">  56 </a>        <span class="php-comment">// Format: 'sub-action' =&gt; array('function_to_call', 'permission_needed'),</span>
 </span><span id="57" class="l"><a class="l" href="#57">  57 </a>        <span class="php-var">$subActions</span> = <span class="php-keyword1">array</span>(
@@ -469,7 +479,7 @@
 </span><span id="298" class="l"><a class="l" href="#298"> 298 </a>            ),
 </span><span id="299" class="l"><a class="l" href="#299"> 299 </a>        );
 </span><span id="300" class="l"><a class="l" href="#300"> 300 </a>
-</span><span id="301" class="l"><a class="l" href="#301"> 301 </a>        <span class="php-keyword1">require_once</span>(SUBSDIR . <span class="php-quote">'/List.class.php'</span>);
+</span><span id="301" class="l"><a class="l" href="#301"> 301 </a>        <span class="php-keyword1">require_once</span>(SUBSDIR . <span class="php-quote">'/GenericList.class.php'</span>);
 </span><span id="302" class="l"><a class="l" href="#302"> 302 </a>        createList(<span class="php-var">$listOptions</span>);
 </span><span id="303" class="l"><a class="l" href="#303"> 303 </a>
 </span><span id="304" class="l"><a class="l" href="#304"> 304 </a>        <span class="php-comment">// The second list shows the post count based groups...if enabled</span>
@@ -576,7 +586,7 @@
 </span><span id="405" class="l"><a class="l" href="#405"> 405 </a>                        ),
 </span><span id="406" class="l"><a class="l" href="#406"> 406 </a>                        <span class="php-quote">'data'</span> =&gt; <span class="php-keyword1">array</span>(
 </span><span id="407" class="l"><a class="l" href="#407"> 407 </a>                            <span class="php-quote">'sprintf'</span> =&gt; <span class="php-keyword1">array</span>(
-</span><span id="408" class="l"><a class="l" href="#408"> 408 </a>                                <span class="php-quote">'format'</span> =&gt; <span class="php-quote">'&lt;a href=&quot;'</span> . <span class="php-var">$scripturl</span> . <span class="php-quote">'?action=admin;area=membergroups;sa=edit;group=%1$d'</span> . (<span class="php-keyword1">isset</span>(<span class="php-var">$_REQUEST</span>[<span class="php-quote">'pid'</span>]) ? <span class="php-quote">';pid='</span> . <span class="php-var">$_REQUEST</span>[<span class="php-quote">'pid'</span>] : <span class="php-quote">''</span>) . <span class="php-quote">'&quot;&gt;'</span> . <span class="php-var">$txt</span>[<span class="php-quote">'membergroups_modify'</span>] . <span class="php-quote">'&lt;/a&gt;'</span>,
+</span><span id="408" class="l"><a class="l" href="#408"> 408 </a>                                <span class="php-quote">'format'</span> =&gt; <span class="php-quote">'&lt;a href=&quot;'</span> . <span class="php-var">$scripturl</span> . <span class="php-quote">'?action=admin;area=permissions;sa=modify;group=%1$d'</span> . (<span class="php-keyword1">isset</span>(<span class="php-var">$_REQUEST</span>[<span class="php-quote">'pid'</span>]) ? <span class="php-quote">';pid='</span> . <span class="php-var">$_REQUEST</span>[<span class="php-quote">'pid'</span>] : <span class="php-quote">''</span>) . <span class="php-quote">'&quot;&gt;'</span> . <span class="php-var">$txt</span>[<span class="php-quote">'membergroups_modify'</span>] . <span class="php-quote">'&lt;/a&gt;'</span>,
 </span><span id="409" class="l"><a class="l" href="#409"> 409 </a>                                <span class="php-quote">'params'</span> =&gt; <span class="php-keyword1">array</span>(
 </span><span id="410" class="l"><a class="l" href="#410"> 410 </a>                                    <span class="php-quote">'id_group'</span> =&gt; <span class="php-keyword1">false</span>,
 </span><span id="411" class="l"><a class="l" href="#411"> 411 </a>                                ),

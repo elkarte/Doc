@@ -7,7 +7,7 @@
 	<title>Function read_tgz_data | ElkArte Documentation</title>
 
 	<script type="text/javascript" src="resources/combined.js?3648714599"></script>
-	<script type="text/javascript" src="elementlist.js?3593784124"></script>
+	<script type="text/javascript" src="elementlist.js?97495842"></script>
 	<link rel="stylesheet" type="text/css" media="all" href="resources/bootstrap.min.css?260161822" />
 	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?2015443609" />
 
@@ -82,7 +82,11 @@
 						</li>
 				<li><a href="package-Graphics.html">Graphics</a>
 						</li>
+				<li><a href="package-Karma.html">Karma</a>
+						</li>
 				<li><a href="package-Languages.html">Languages</a>
+						</li>
+				<li><a href="package-Likes.html">Likes</a>
 						</li>
 				<li><a href="package-Mail.html">Mail</a>
 						</li>
@@ -104,6 +108,8 @@
 						</li>
 				<li><a href="package-Permissions.html">Permissions</a>
 						</li>
+				<li><a href="package-PersonalMessage.html">PersonalMessage</a>
+						</li>
 				<li><a href="package-Posts.html">Posts</a>
 						</li>
 				<li><a href="package-Registration.html">Registration</a>
@@ -112,9 +118,13 @@
 						</li>
 				<li><a href="package-Search.html">Search</a>
 						</li>
+				<li><a href="package-SearchEngines.html">SearchEngines</a>
+						</li>
 				<li><a href="package-Security.html">Security</a>
 						</li>
 				<li><a href="package-Subscriptions.html">Subscriptions</a>
+						</li>
+				<li><a href="package-Themes.html">Themes</a>
 						</li>
 			</ul>
 		</div>
@@ -188,18 +198,27 @@
 <p>Extracts a file or files from the .tar.gz contained in data.</p>
 
 <ul>
-	<li>detects if the file is really a .zip file, and if so returns the result of
+	<li>Detects if the file is really a .zip file, and if so returns the result of
 	read_zip_data</li>
 </ul>
 
-<p>if destination is null - returns a list of files in the archive.</p>
-
-<p>if single_file is true - returns the contents of the file specified by
-destination, if it exists, or false. - destination can start with * and / to
-signify that the file may come from any directory. - destination should not
-begin with a / if single_file is true.</p>
+<p>if destination is null</p>
 
 <ul>
+	<li>returns a list of files in the archive.</li>
+</ul>
+
+<p>if single_file is true</p>
+
+<ul>
+	<li>returns the contents of the file specified by destination, if it exists, or
+	false.</li>
+
+	<li>destination can start with * and / to signify that the file may come from
+	any directory.</li>
+
+	<li>destination should not begin with a / if single_file is true.</li>
+
 	<li>existing files with newer modification times if and only if overwrite is
 	true.</li>
 
@@ -229,7 +248,7 @@ This software is a derived product, based on:
 Simple Machines Forum (SMF)
 copyright:	2011 Simple Machines (http://www.simplemachines.org)
 license:  	BSD, See included LICENSE.TXT for terms and conditions.</a><br />
-		<b>Located at</b> <a href="source-function-read_tgz_data.html#55-260" title="Go to source code">sources/subs/Package.subs.php</a><br />
+		<b>Located at</b> <a href="source-function-read_tgz_data.html#57-262" title="Go to source code">sources/subs/Package.subs.php</a><br />
 	</div>
 
 
