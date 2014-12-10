@@ -5,10 +5,10 @@
 	<meta name="generator" content="ApiGen 2.8.0" />
 	<meta name="robots" content="noindex" />
 
-	<title>File sources/subs/Notification.subs.php | ElkArte Documentation</title>
+	<title>File sources/subs/Notification.subs.php | ElkArte 1.0.2 Documentation</title>
 
 	<script type="text/javascript" src="resources/combined.js?3648714599"></script>
-	<script type="text/javascript" src="elementlist.js?97495842"></script>
+	<script type="text/javascript" src="elementlist.js?2133182458"></script>
 	<link rel="stylesheet" type="text/css" media="all" href="resources/bootstrap.min.css?260161822" />
 	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?2015443609" />
 
@@ -18,7 +18,7 @@
 	<div id="navigation" class="navbar navbar-fixed-top">
 		<div class="navbar-inner">
 			<div class="container">
-				<a href="index.html" class="brand">ElkArte Documentation</a>
+				<a href="index.html" class="brand">ElkArte 1.0.2 Documentation</a>
 				<div class="nav-collapse">
 					<ul class="nav">
 						<li>
@@ -339,6 +339,7 @@
 				<li><a href="function-destroyMenu.html">destroyMenu</a></li>
 				<li><a href="function-detectBrowser.html">detectBrowser</a></li>
 				<li><a href="function-detectServer.html">detectServer</a></li>
+				<li><a href="function-detectServerCores.html">detectServerCores</a></li>
 				<li><a href="function-detectServerLoad.html">detectServerLoad</a></li>
 				<li><a href="function-determineActions.html">determineActions</a></li>
 				<li><a href="function-determineAvatar.html">determineAvatar</a></li>
@@ -447,6 +448,7 @@
 				<li><a href="function-isAllowedTo.html">isAllowedTo</a></li>
 				<li><a href="function-isBrowser.html">isBrowser</a></li>
 				<li><a href="function-isSmileySetInstalled.html">isSmileySetInstalled</a></li>
+				<li><a href="function-isValidEmail.html">isValidEmail</a></li>
 				<li><a href="function-isValidIPv6.html">isValidIPv6</a></li>
 				<li><a href="function-JavaScriptEscape.html">JavaScriptEscape</a></li>
 				<li><a href="function-linkMessages.html">linkMessages</a></li>
@@ -567,6 +569,7 @@
 				<li><a href="function-parsesmileys.html">parsesmileys</a></li>
 				<li><a href="function-pauseRepairProcess.html">pauseRepairProcess</a></li>
 				<li><a href="function-pauseSignatureApplySettings.html">pauseSignatureApplySettings</a></li>
+				<li><a href="function-pbe_run_parsers.html">pbe_run_parsers</a></li>
 				<li><a href="function-permute.html">permute</a></li>
 				<li><a href="function-pollInfo.html">pollInfo</a></li>
 				<li><a href="function-pollInfoForTopic.html">pollInfoForTopic</a></li>
@@ -602,6 +605,7 @@
 				<li><a href="function-quote_callback.html">quote_callback</a></li>
 				<li><a href="function-quote_callback_2.html">quote_callback_2</a></li>
 				<li><a href="function-reapplySubscriptions.html">reapplySubscriptions</a></li>
+				<li><a href="function-recentlyLogged.html">recentlyLogged</a></li>
 				<li><a href="function-recordReport.html">recordReport</a></li>
 				<li><a href="function-recountFailedEmails.html">recountFailedEmails</a></li>
 				<li><a href="function-recountOpenReports.html">recountOpenReports</a></li>
@@ -829,7 +833,7 @@
 </span></span><span id="7" class="l"><a class="l" href="#7">  7 </a><span class="php-comment"> * @copyright ElkArte Forum contributors
 </span></span><span id="8" class="l"><a class="l" href="#8">  8 </a><span class="php-comment"> * @license   BSD http://opensource.org/licenses/BSD-3-Clause
 </span></span><span id="9" class="l"><a class="l" href="#9">  9 </a><span class="php-comment"> *
-</span></span><span id="10" class="l"><a class="l" href="#10"> 10 </a><span class="php-comment"> * @version 1.0
+</span></span><span id="10" class="l"><a class="l" href="#10"> 10 </a><span class="php-comment"> * @version 1.0.2
 </span></span><span id="11" class="l"><a class="l" href="#11"> 11 </a><span class="php-comment"> *
 </span></span><span id="12" class="l"><a class="l" href="#12"> 12 </a><span class="php-comment"> */</span>
 </span><span id="13" class="l"><a class="l" href="#13"> 13 </a>
@@ -913,7 +917,7 @@
 </span><span id="91" class="l"><a class="l" href="#91"> 91 </a>            <span class="php-quote">'last_id'</span> =&gt; <span class="php-var">$row</span>[<span class="php-quote">'id_last_msg'</span>],
 </span><span id="92" class="l"><a class="l" href="#92"> 92 </a>            <span class="php-quote">'topic'</span> =&gt; <span class="php-var">$row</span>[<span class="php-quote">'id_topic'</span>],
 </span><span id="93" class="l"><a class="l" href="#93"> 93 </a>            <span class="php-quote">'board'</span> =&gt; <span class="php-var">$row</span>[<span class="php-quote">'id_board'</span>],
-</span><span id="94" class="l"><a class="l" href="#94"> 94 </a>            <span class="php-quote">'name'</span> =&gt; <span class="php-var">$row</span>[<span class="php-quote">'poster_name'</span>],
+</span><span id="94" class="l"><a class="l" href="#94"> 94 </a>            <span class="php-quote">'name'</span> =&gt; <span class="php-var">$type</span> === <span class="php-quote">'reply'</span> ? <span class="php-var">$row</span>[<span class="php-quote">'poster_name'</span>] : <span class="php-var">$user_info</span>[<span class="php-quote">'name'</span>],
 </span><span id="95" class="l"><a class="l" href="#95"> 95 </a>            <span class="php-quote">'exclude'</span> =&gt; <span class="php-quote">''</span>,
 </span><span id="96" class="l"><a class="l" href="#96"> 96 </a>            <span class="php-quote">'signature'</span> =&gt; <span class="php-var">$row</span>[<span class="php-quote">'signature'</span>],
 </span><span id="97" class="l"><a class="l" href="#97"> 97 </a>            <span class="php-quote">'attachments'</span> =&gt; <span class="php-var">$row</span>[<span class="php-quote">'num_attach'</span>],
@@ -1075,7 +1079,7 @@
 </span></span><span id="253" class="l"><a class="l" href="#253">253 </a><span class="php-quote">        SELECT
 </span></span><span id="254" class="l"><a class="l" href="#254">254 </a><span class="php-quote">            mem.id_member, mem.email_address, mem.notify_regularity, mem.notify_types, mem.warning,
 </span></span><span id="255" class="l"><a class="l" href="#255">255 </a><span class="php-quote">            mem.notify_send_body, mem.lngfile, mem.id_group, mem.additional_groups,mem.id_post_group,
-</span></span><span id="256" class="l"><a class="l" href="#256">256 </a><span class="php-quote">            t.id_member_started, b.member_groups, b.name, b.id_profile,
+</span></span><span id="256" class="l"><a class="l" href="#256">256 </a><span class="php-quote">            t.id_member_started, b.member_groups, b.name, b.id_profile, b.id_board,
 </span></span><span id="257" class="l"><a class="l" href="#257">257 </a><span class="php-quote">            ln.id_topic, ln.sent
 </span></span><span id="258" class="l"><a class="l" href="#258">258 </a><span class="php-quote">        FROM {db_prefix}log_notify AS ln
 </span></span><span id="259" class="l"><a class="l" href="#259">259 </a><span class="php-quote">            INNER JOIN {db_prefix}members AS mem ON (mem.id_member = ln.id_member)
@@ -1632,58 +1636,52 @@
 </span><span id="810" class="l"><a class="l" href="#810">810 </a>{
 </span><span id="811" class="l"><a class="l" href="#811">811 </a>    <span class="php-keyword1">global</span> <span class="php-var">$modSettings</span>;
 </span><span id="812" class="l"><a class="l" href="#812">812 </a>
-</span><span id="813" class="l"><a class="l" href="#813">813 </a>    <span class="php-var">$db</span> = database();
-</span><span id="814" class="l"><a class="l" href="#814">814 </a>    <span class="php-keyword1">static</span> <span class="php-var"><a id="$board_profile" href="#$board_profile">$board_profile</a></span> = <span class="php-keyword1">array</span>();
-</span><span id="815" class="l"><a class="l" href="#815">815 </a>
-</span><span id="816" class="l"><a class="l" href="#816">816 </a>    <span class="php-comment">// No need to check for you ;)</span>
-</span><span id="817" class="l"><a class="l" href="#817">817 </a>    <span class="php-keyword1">if</span> (<span class="php-var">$row</span>[<span class="php-quote">'id_group'</span>] == <span class="php-num">1</span>)
-</span><span id="818" class="l"><a class="l" href="#818">818 </a>        <span class="php-keyword1">return</span>;
-</span><span id="819" class="l"><a class="l" href="#819">819 </a>
-</span><span id="820" class="l"><a class="l" href="#820">820 </a>    <span class="php-var">$allowed</span> = <span class="php-keyword2">explode</span>(<span class="php-quote">','</span>, <span class="php-var">$row</span>[<span class="php-quote">'member_groups'</span>]);
-</span><span id="821" class="l"><a class="l" href="#821">821 </a>    <span class="php-var">$row</span>[<span class="php-quote">'additional_groups'</span>] = !<span class="php-keyword1">empty</span>( <span class="php-var">$row</span>[<span class="php-quote">'additional_groups'</span>]) ? <span class="php-keyword2">explode</span>(<span class="php-quote">','</span>, <span class="php-var">$row</span>[<span class="php-quote">'additional_groups'</span>]) : <span class="php-keyword1">array</span>();
-</span><span id="822" class="l"><a class="l" href="#822">822 </a>    <span class="php-var">$row</span>[<span class="php-quote">'additional_groups'</span>][] = <span class="php-var">$row</span>[<span class="php-quote">'id_group'</span>];
-</span><span id="823" class="l"><a class="l" href="#823">823 </a>    <span class="php-var">$row</span>[<span class="php-quote">'additional_groups'</span>][] = <span class="php-var">$row</span>[<span class="php-quote">'id_post_group'</span>];
-</span><span id="824" class="l"><a class="l" href="#824">824 </a>
-</span><span id="825" class="l"><a class="l" href="#825">825 </a>    <span class="php-comment">// They do have access to this board?</span>
-</span><span id="826" class="l"><a class="l" href="#826">826 </a>    <span class="php-keyword1">if</span> (<span class="php-keyword2">count</span>(<span class="php-keyword2">array_intersect</span>(<span class="php-var">$allowed</span>, <span class="php-var">$row</span>[<span class="php-quote">'additional_groups'</span>])) === <span class="php-num">0</span>)
-</span><span id="827" class="l"><a class="l" href="#827">827 </a>        <span class="php-keyword1">return</span> <span class="php-keyword1">false</span>;
-</span><span id="828" class="l"><a class="l" href="#828">828 </a>
-</span><span id="829" class="l"><a class="l" href="#829">829 </a>    <span class="php-comment">// If using maillist, see if they should get a reply-able message</span>
-</span><span id="830" class="l"><a class="l" href="#830">830 </a>    <span class="php-keyword1">if</span> (<span class="php-var">$maillist</span>)
-</span><span id="831" class="l"><a class="l" href="#831">831 </a>    {
-</span><span id="832" class="l"><a class="l" href="#832">832 </a>        <span class="php-comment">// Perhaps they don't require a security key in the message</span>
-</span><span id="833" class="l"><a class="l" href="#833">833 </a>        <span class="php-keyword1">if</span> (!<span class="php-keyword1">empty</span>(<span class="php-var">$modSettings</span>[<span class="php-quote">'postmod_active'</span>]) &amp;&amp; !<span class="php-keyword1">empty</span>(<span class="php-var">$modSettings</span>[<span class="php-quote">'warning_mute'</span>]) &amp;&amp; <span class="php-var">$modSettings</span>[<span class="php-quote">'warning_mute'</span>] &lt;= <span class="php-var">$row</span>[<span class="php-quote">'warning'</span>])
-</span><span id="834" class="l"><a class="l" href="#834">834 </a>            <span class="php-var">$email_perm</span> = <span class="php-keyword1">false</span>;
-</span><span id="835" class="l"><a class="l" href="#835">835 </a>        <span class="php-keyword1">else</span>
-</span><span id="836" class="l"><a class="l" href="#836">836 </a>        {
-</span><span id="837" class="l"><a class="l" href="#837">837 </a>            <span class="php-comment">// In a group that has email posting permissions on this board</span>
-</span><span id="838" class="l"><a class="l" href="#838">838 </a>            <span class="php-keyword1">if</span> (!<span class="php-keyword1">isset</span>(<span class="php-var">$board_profile</span>[<span class="php-var">$row</span>[<span class="php-quote">'id_profile'</span>]]))
-</span><span id="839" class="l"><a class="l" href="#839">839 </a>            {
-</span><span id="840" class="l"><a class="l" href="#840">840 </a>                <span class="php-var">$request</span> = <span class="php-var">$db</span>-&gt;query(<span class="php-quote">''</span>, <span class="php-quote">'
-</span></span><span id="841" class="l"><a class="l" href="#841">841 </a><span class="php-quote">                    SELECT permission, add_deny, id_group
-</span></span><span id="842" class="l"><a class="l" href="#842">842 </a><span class="php-quote">                    FROM {db_prefix}board_permissions
-</span></span><span id="843" class="l"><a class="l" href="#843">843 </a><span class="php-quote">                    WHERE id_profile = {int:id_profile}
-</span></span><span id="844" class="l"><a class="l" href="#844">844 </a><span class="php-quote">                        AND permission = {string:permission}'</span>,
-</span><span id="845" class="l"><a class="l" href="#845">845 </a>                    <span class="php-keyword1">array</span>(
-</span><span id="846" class="l"><a class="l" href="#846">846 </a>                        <span class="php-quote">'id_profile'</span> =&gt; <span class="php-var">$row</span>[<span class="php-quote">'id_profile'</span>],
-</span><span id="847" class="l"><a class="l" href="#847">847 </a>                        <span class="php-quote">'permission'</span> =&gt; <span class="php-quote">'postby_email'</span>,
-</span><span id="848" class="l"><a class="l" href="#848">848 </a>                    )
-</span><span id="849" class="l"><a class="l" href="#849">849 </a>                );
-</span><span id="850" class="l"><a class="l" href="#850">850 </a>                <span class="php-keyword1">while</span> (<span class="php-var">$row_perm</span> = <span class="php-var">$db</span>-&gt;fetch_assoc(<span class="php-var">$request</span>))
-</span><span id="851" class="l"><a class="l" href="#851">851 </a>                    <span class="php-var">$board_profile</span>[<span class="php-var">$row</span>[<span class="php-quote">'id_profile'</span>]][] = <span class="php-var">$row_perm</span>[<span class="php-quote">'id_group'</span>];
-</span><span id="852" class="l"><a class="l" href="#852">852 </a>                <span class="php-var">$db</span>-&gt;free_result(<span class="php-var">$request</span>);
-</span><span id="853" class="l"><a class="l" href="#853">853 </a>            }
-</span><span id="854" class="l"><a class="l" href="#854">854 </a>
-</span><span id="855" class="l"><a class="l" href="#855">855 </a>            <span class="php-comment">// Get the email permission for this board / posting group</span>
-</span><span id="856" class="l"><a class="l" href="#856">856 </a>            <span class="php-keyword1">if</span> (<span class="php-keyword2">count</span>(<span class="php-keyword2">array_intersect</span>(<span class="php-var">$board_profile</span>[<span class="php-var">$row</span>[<span class="php-quote">'id_profile'</span>]], <span class="php-var">$row</span>[<span class="php-quote">'additional_groups'</span>])) === <span class="php-num">0</span>)
-</span><span id="857" class="l"><a class="l" href="#857">857 </a>                <span class="php-var">$email_perm</span> = <span class="php-keyword1">false</span>;
-</span><span id="858" class="l"><a class="l" href="#858">858 </a>        }
-</span><span id="859" class="l"><a class="l" href="#859">859 </a>    }
-</span><span id="860" class="l"><a class="l" href="#860">860 </a></span>}</code></pre>
+</span><span id="813" class="l"><a class="l" href="#813">813 </a>    <span class="php-keyword1">static</span> <span class="php-var"><a id="$board_profile" href="#$board_profile">$board_profile</a></span> = <span class="php-keyword1">array</span>();
+</span><span id="814" class="l"><a class="l" href="#814">814 </a>
+</span><span id="815" class="l"><a class="l" href="#815">815 </a>    <span class="php-comment">// No need to check for you ;)</span>
+</span><span id="816" class="l"><a class="l" href="#816">816 </a>    <span class="php-keyword1">if</span> (<span class="php-var">$row</span>[<span class="php-quote">'id_group'</span>] == <span class="php-num">1</span>)
+</span><span id="817" class="l"><a class="l" href="#817">817 </a>        <span class="php-keyword1">return</span> <span class="php-var">$email_perm</span>;
+</span><span id="818" class="l"><a class="l" href="#818">818 </a>
+</span><span id="819" class="l"><a class="l" href="#819">819 </a>    <span class="php-var">$allowed</span> = <span class="php-keyword2">explode</span>(<span class="php-quote">','</span>, <span class="php-var">$row</span>[<span class="php-quote">'member_groups'</span>]);
+</span><span id="820" class="l"><a class="l" href="#820">820 </a>    <span class="php-var">$row</span>[<span class="php-quote">'additional_groups'</span>] = !<span class="php-keyword1">empty</span>( <span class="php-var">$row</span>[<span class="php-quote">'additional_groups'</span>]) ? <span class="php-keyword2">explode</span>(<span class="php-quote">','</span>, <span class="php-var">$row</span>[<span class="php-quote">'additional_groups'</span>]) : <span class="php-keyword1">array</span>();
+</span><span id="821" class="l"><a class="l" href="#821">821 </a>    <span class="php-var">$row</span>[<span class="php-quote">'additional_groups'</span>][] = <span class="php-var">$row</span>[<span class="php-quote">'id_group'</span>];
+</span><span id="822" class="l"><a class="l" href="#822">822 </a>    <span class="php-var">$row</span>[<span class="php-quote">'additional_groups'</span>][] = <span class="php-var">$row</span>[<span class="php-quote">'id_post_group'</span>];
+</span><span id="823" class="l"><a class="l" href="#823">823 </a>
+</span><span id="824" class="l"><a class="l" href="#824">824 </a>    <span class="php-comment">// They do have access to this board?</span>
+</span><span id="825" class="l"><a class="l" href="#825">825 </a>    <span class="php-keyword1">if</span> (<span class="php-keyword2">count</span>(<span class="php-keyword2">array_intersect</span>(<span class="php-var">$allowed</span>, <span class="php-var">$row</span>[<span class="php-quote">'additional_groups'</span>])) === <span class="php-num">0</span>)
+</span><span id="826" class="l"><a class="l" href="#826">826 </a>        <span class="php-keyword1">return</span> <span class="php-keyword1">false</span>;
+</span><span id="827" class="l"><a class="l" href="#827">827 </a>
+</span><span id="828" class="l"><a class="l" href="#828">828 </a>    <span class="php-comment">// If using maillist, see if they should get a reply-able message</span>
+</span><span id="829" class="l"><a class="l" href="#829">829 </a>    <span class="php-keyword1">if</span> (<span class="php-var">$maillist</span>)
+</span><span id="830" class="l"><a class="l" href="#830">830 </a>    {
+</span><span id="831" class="l"><a class="l" href="#831">831 </a>        <span class="php-comment">// Perhaps they don't require a security key in the message</span>
+</span><span id="832" class="l"><a class="l" href="#832">832 </a>        <span class="php-keyword1">if</span> (!<span class="php-keyword1">empty</span>(<span class="php-var">$modSettings</span>[<span class="php-quote">'postmod_active'</span>]) &amp;&amp; !<span class="php-keyword1">empty</span>(<span class="php-var">$modSettings</span>[<span class="php-quote">'warning_mute'</span>]) &amp;&amp; <span class="php-var">$modSettings</span>[<span class="php-quote">'warning_mute'</span>] &lt;= <span class="php-var">$row</span>[<span class="php-quote">'warning'</span>])
+</span><span id="833" class="l"><a class="l" href="#833">833 </a>            <span class="php-var">$email_perm</span> = <span class="php-keyword1">false</span>;
+</span><span id="834" class="l"><a class="l" href="#834">834 </a>        <span class="php-keyword1">else</span>
+</span><span id="835" class="l"><a class="l" href="#835">835 </a>        {
+</span><span id="836" class="l"><a class="l" href="#836">836 </a>            <span class="php-keyword1">if</span> (!<span class="php-keyword1">isset</span>(<span class="php-var">$board_profile</span>[<span class="php-var">$row</span>[<span class="php-quote">'id_board'</span>]]))
+</span><span id="837" class="l"><a class="l" href="#837">837 </a>            {
+</span><span id="838" class="l"><a class="l" href="#838">838 </a>                <span class="php-keyword1">require_once</span>(SUBSDIR . <span class="php-quote">'/Members.subs.php'</span>);
+</span><span id="839" class="l"><a class="l" href="#839">839 </a>                <span class="php-var">$board_profile</span>[<span class="php-var">$row</span>[<span class="php-quote">'id_board'</span>]] = groupsAllowedTo(<span class="php-quote">'postby_email'</span>, <span class="php-var">$row</span>[<span class="php-quote">'id_board'</span>]);
+</span><span id="840" class="l"><a class="l" href="#840">840 </a>            }
+</span><span id="841" class="l"><a class="l" href="#841">841 </a>
+</span><span id="842" class="l"><a class="l" href="#842">842 </a>            <span class="php-comment">// In a group that has email posting permissions on this board</span>
+</span><span id="843" class="l"><a class="l" href="#843">843 </a>            <span class="php-keyword1">if</span> (<span class="php-keyword2">count</span>(<span class="php-keyword2">array_intersect</span>(<span class="php-var">$board_profile</span>[<span class="php-var">$row</span>[<span class="php-quote">'id_board'</span>]][<span class="php-quote">'allowed'</span>], <span class="php-var">$row</span>[<span class="php-quote">'additional_groups'</span>])) === <span class="php-num">0</span>)
+</span><span id="844" class="l"><a class="l" href="#844">844 </a>                <span class="php-var">$email_perm</span> = <span class="php-keyword1">false</span>;
+</span><span id="845" class="l"><a class="l" href="#845">845 </a>
+</span><span id="846" class="l"><a class="l" href="#846">846 </a>            <span class="php-comment">// And not specifically denied?</span>
+</span><span id="847" class="l"><a class="l" href="#847">847 </a>            <span class="php-keyword1">if</span> (<span class="php-var">$email_perm</span> &amp;&amp; !<span class="php-keyword1">empty</span>(<span class="php-var">$modSettings</span>[<span class="php-quote">'permission_enable_deny'</span>])
+</span><span id="848" class="l"><a class="l" href="#848">848 </a>                &amp;&amp; <span class="php-keyword2">count</span>(<span class="php-keyword2">array_intersect</span>(<span class="php-var">$row</span>[<span class="php-quote">'additional_groups'</span>], <span class="php-var">$board_profile</span>[<span class="php-var">$row</span>[<span class="php-quote">'id_board'</span>]][<span class="php-quote">'denied'</span>])) !== <span class="php-num">0</span>)
+</span><span id="849" class="l"><a class="l" href="#849">849 </a>                <span class="php-var">$email_perm</span> = <span class="php-keyword1">false</span>;
+</span><span id="850" class="l"><a class="l" href="#850">850 </a>        }
+</span><span id="851" class="l"><a class="l" href="#851">851 </a>    }
+</span><span id="852" class="l"><a class="l" href="#852">852 </a>
+</span><span id="853" class="l"><a class="l" href="#853">853 </a>    <span class="php-keyword1">return</span> <span class="php-var">$email_perm</span>;
+</span><span id="854" class="l"><a class="l" href="#854">854 </a></span>}</code></pre>
 	</div>
 
 	<div id="footer">
-		ElkArte Documentation API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+		ElkArte 1.0.2 Documentation API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
 	</div>
 </div>
 </body>

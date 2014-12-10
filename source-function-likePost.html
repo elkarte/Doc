@@ -5,10 +5,10 @@
 	<meta name="generator" content="ApiGen 2.8.0" />
 	<meta name="robots" content="noindex" />
 
-	<title>File sources/subs/Likes.subs.php | ElkArte Documentation</title>
+	<title>File sources/subs/Likes.subs.php | ElkArte 1.0.2 Documentation</title>
 
 	<script type="text/javascript" src="resources/combined.js?3648714599"></script>
-	<script type="text/javascript" src="elementlist.js?97495842"></script>
+	<script type="text/javascript" src="elementlist.js?2133182458"></script>
 	<link rel="stylesheet" type="text/css" media="all" href="resources/bootstrap.min.css?260161822" />
 	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?2015443609" />
 
@@ -18,7 +18,7 @@
 	<div id="navigation" class="navbar navbar-fixed-top">
 		<div class="navbar-inner">
 			<div class="container">
-				<a href="index.html" class="brand">ElkArte Documentation</a>
+				<a href="index.html" class="brand">ElkArte 1.0.2 Documentation</a>
 				<div class="nav-collapse">
 					<ul class="nav">
 						<li>
@@ -174,7 +174,7 @@
 </span></span><span id="7" class="l"><a class="l" href="#7">  7 </a><span class="php-comment"> * @copyright ElkArte Forum contributors
 </span></span><span id="8" class="l"><a class="l" href="#8">  8 </a><span class="php-comment"> * @license   BSD http://opensource.org/licenses/BSD-3-Clause
 </span></span><span id="9" class="l"><a class="l" href="#9">  9 </a><span class="php-comment"> *
-</span></span><span id="10" class="l"><a class="l" href="#10"> 10 </a><span class="php-comment"> * @version 1.0
+</span></span><span id="10" class="l"><a class="l" href="#10"> 10 </a><span class="php-comment"> * @version 1.0.1
 </span></span><span id="11" class="l"><a class="l" href="#11"> 11 </a><span class="php-comment"> *
 </span></span><span id="12" class="l"><a class="l" href="#12"> 12 </a><span class="php-comment"> */</span>
 </span><span id="13" class="l"><a class="l" href="#13"> 13 </a>
@@ -387,8 +387,8 @@
 </span><span id="220" class="l"><a class="l" href="#220">220 </a>    {
 </span><span id="221" class="l"><a class="l" href="#221">221 </a>        <span class="php-var">$db</span>-&gt;insert(<span class="php-quote">''</span>,
 </span><span id="222" class="l"><a class="l" href="#222">222 </a>            <span class="php-quote">'{db_prefix}message_likes'</span>,
-</span><span id="223" class="l"><a class="l" href="#223">223 </a>            <span class="php-keyword1">array</span>(<span class="php-quote">'id_member'</span> =&gt; <span class="php-quote">'int'</span>, <span class="php-quote">'id_msg'</span> =&gt; <span class="php-quote">'int'</span>, <span class="php-quote">'id_poster'</span> =&gt; <span class="php-quote">'int'</span>),
-</span><span id="224" class="l"><a class="l" href="#224">224 </a>            <span class="php-keyword1">array</span>(<span class="php-var">$id_liker</span>, <span class="php-var">$liked_message</span>[<span class="php-quote">'id_msg'</span>], <span class="php-var">$liked_message</span>[<span class="php-quote">'id_member'</span>]),
+</span><span id="223" class="l"><a class="l" href="#223">223 </a>            <span class="php-keyword1">array</span>(<span class="php-quote">'id_member'</span> =&gt; <span class="php-quote">'int'</span>, <span class="php-quote">'id_msg'</span> =&gt; <span class="php-quote">'int'</span>, <span class="php-quote">'id_poster'</span> =&gt; <span class="php-quote">'int'</span>, <span class="php-quote">'like_timestamp'</span> =&gt; <span class="php-quote">'int'</span>,),
+</span><span id="224" class="l"><a class="l" href="#224">224 </a>            <span class="php-keyword1">array</span>(<span class="php-var">$id_liker</span>, <span class="php-var">$liked_message</span>[<span class="php-quote">'id_msg'</span>], <span class="php-var">$liked_message</span>[<span class="php-quote">'id_member'</span>], <span class="php-keyword2">time</span>()),
 </span><span id="225" class="l"><a class="l" href="#225">225 </a>            <span class="php-keyword1">array</span>(<span class="php-quote">'id_msg'</span>, <span class="php-quote">'id_member'</span>, <span class="php-quote">'id_poster'</span>)
 </span><span id="226" class="l"><a class="l" href="#226">226 </a>        );
 </span><span id="227" class="l"><a class="l" href="#227">227 </a>
@@ -664,11 +664,12 @@
 </span><span id="497" class="l"><a class="l" href="#497">497 </a>    <span class="php-var">$db</span>-&gt;free_result(<span class="php-var">$request</span>);
 </span><span id="498" class="l"><a class="l" href="#498">498 </a>
 </span><span id="499" class="l"><a class="l" href="#499">499 </a>    <span class="php-keyword1">return</span> (int) <span class="php-var">$total</span>;
-</span><span id="500" class="l"><a class="l" href="#500">500 </a></span>}</code></pre>
+</span><span id="500" class="l"><a class="l" href="#500">500 </a>}
+</span><span id="501" class="l"><a class="l" href="#501">501 </a></span></code></pre>
 	</div>
 
 	<div id="footer">
-		ElkArte Documentation API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+		ElkArte 1.0.2 Documentation API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
 	</div>
 </div>
 </body>

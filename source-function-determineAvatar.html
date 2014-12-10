@@ -5,10 +5,10 @@
 	<meta name="generator" content="ApiGen 2.8.0" />
 	<meta name="robots" content="noindex" />
 
-	<title>File sources/Load.php | ElkArte Documentation</title>
+	<title>File sources/Load.php | ElkArte 1.0.2 Documentation</title>
 
 	<script type="text/javascript" src="resources/combined.js?3648714599"></script>
-	<script type="text/javascript" src="elementlist.js?97495842"></script>
+	<script type="text/javascript" src="elementlist.js?2133182458"></script>
 	<link rel="stylesheet" type="text/css" media="all" href="resources/bootstrap.min.css?260161822" />
 	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?2015443609" />
 
@@ -18,7 +18,7 @@
 	<div id="navigation" class="navbar navbar-fixed-top">
 		<div class="navbar-inner">
 			<div class="container">
-				<a href="index.html" class="brand">ElkArte Documentation</a>
+				<a href="index.html" class="brand">ElkArte 1.0.2 Documentation</a>
 				<div class="nav-collapse">
 					<ul class="nav">
 						<li>
@@ -339,6 +339,7 @@
 				<li><a href="function-destroyMenu.html">destroyMenu</a></li>
 				<li><a href="function-detectBrowser.html">detectBrowser</a></li>
 				<li><a href="function-detectServer.html">detectServer</a></li>
+				<li><a href="function-detectServerCores.html">detectServerCores</a></li>
 				<li><a href="function-detectServerLoad.html">detectServerLoad</a></li>
 				<li><a href="function-determineActions.html">determineActions</a></li>
 				<li class="active"><a href="function-determineAvatar.html">determineAvatar</a></li>
@@ -447,6 +448,7 @@
 				<li><a href="function-isAllowedTo.html">isAllowedTo</a></li>
 				<li><a href="function-isBrowser.html">isBrowser</a></li>
 				<li><a href="function-isSmileySetInstalled.html">isSmileySetInstalled</a></li>
+				<li><a href="function-isValidEmail.html">isValidEmail</a></li>
 				<li><a href="function-isValidIPv6.html">isValidIPv6</a></li>
 				<li><a href="function-JavaScriptEscape.html">JavaScriptEscape</a></li>
 				<li><a href="function-linkMessages.html">linkMessages</a></li>
@@ -567,6 +569,7 @@
 				<li><a href="function-parsesmileys.html">parsesmileys</a></li>
 				<li><a href="function-pauseRepairProcess.html">pauseRepairProcess</a></li>
 				<li><a href="function-pauseSignatureApplySettings.html">pauseSignatureApplySettings</a></li>
+				<li><a href="function-pbe_run_parsers.html">pbe_run_parsers</a></li>
 				<li><a href="function-permute.html">permute</a></li>
 				<li><a href="function-pollInfo.html">pollInfo</a></li>
 				<li><a href="function-pollInfoForTopic.html">pollInfoForTopic</a></li>
@@ -602,6 +605,7 @@
 				<li><a href="function-quote_callback.html">quote_callback</a></li>
 				<li><a href="function-quote_callback_2.html">quote_callback_2</a></li>
 				<li><a href="function-reapplySubscriptions.html">reapplySubscriptions</a></li>
+				<li><a href="function-recentlyLogged.html">recentlyLogged</a></li>
 				<li><a href="function-recordReport.html">recordReport</a></li>
 				<li><a href="function-recountFailedEmails.html">recountFailedEmails</a></li>
 				<li><a href="function-recountOpenReports.html">recountOpenReports</a></li>
@@ -835,7 +839,7 @@
 </span></span><span id="13" class="l"><a class="l" href="#13">  13 </a><span class="php-comment"> * copyright:   2011 Simple Machines (http://www.simplemachines.org)
 </span></span><span id="14" class="l"><a class="l" href="#14">  14 </a><span class="php-comment"> * license:     BSD, See included LICENSE.TXT for terms and conditions.
 </span></span><span id="15" class="l"><a class="l" href="#15">  15 </a><span class="php-comment"> *
-</span></span><span id="16" class="l"><a class="l" href="#16">  16 </a><span class="php-comment"> * @version 1.0
+</span></span><span id="16" class="l"><a class="l" href="#16">  16 </a><span class="php-comment"> * @version 1.0.2
 </span></span><span id="17" class="l"><a class="l" href="#17">  17 </a><span class="php-comment"> *
 </span></span><span id="18" class="l"><a class="l" href="#18">  18 </a><span class="php-comment"> */</span>
 </span><span id="19" class="l"><a class="l" href="#19">  19 </a>
@@ -2263,7 +2267,7 @@
 </span><span id="1441" class="l"><a class="l" href="#1441">1441 </a>    <span class="php-var">$context</span>[<span class="php-quote">'session_var'</span>] = <span class="php-var">$_SESSION</span>[<span class="php-quote">'session_var'</span>];
 </span><span id="1442" class="l"><a class="l" href="#1442">1442 </a>    <span class="php-var">$context</span>[<span class="php-quote">'session_id'</span>] = <span class="php-var">$_SESSION</span>[<span class="php-quote">'session_value'</span>];
 </span><span id="1443" class="l"><a class="l" href="#1443">1443 </a>    <span class="php-var">$context</span>[<span class="php-quote">'forum_name'</span>] = <span class="php-var">$mbname</span>;
-</span><span id="1444" class="l"><a class="l" href="#1444">1444 </a>    <span class="php-var">$context</span>[<span class="php-quote">'forum_name_html_safe'</span>] = Util::<span class="php-keyword2">htmlspecialchars</span>(<span class="php-var">$context</span>[<span class="php-quote">'forum_name'</span>]);
+</span><span id="1444" class="l"><a class="l" href="#1444">1444 </a>    <span class="php-var">$context</span>[<span class="php-quote">'forum_name_html_safe'</span>] = <span class="php-var">$context</span>[<span class="php-quote">'forum_name'</span>];
 </span><span id="1445" class="l"><a class="l" href="#1445">1445 </a>    <span class="php-var">$context</span>[<span class="php-quote">'current_action'</span>] = <span class="php-keyword1">isset</span>(<span class="php-var">$_REQUEST</span>[<span class="php-quote">'action'</span>]) ? <span class="php-var">$_REQUEST</span>[<span class="php-quote">'action'</span>] : <span class="php-keyword1">null</span>;
 </span><span id="1446" class="l"><a class="l" href="#1446">1446 </a>    <span class="php-var">$context</span>[<span class="php-quote">'current_subaction'</span>] = <span class="php-keyword1">isset</span>(<span class="php-var">$_REQUEST</span>[<span class="php-quote">'sa'</span>]) ? <span class="php-var">$_REQUEST</span>[<span class="php-quote">'sa'</span>] : <span class="php-keyword1">null</span>;
 </span><span id="1447" class="l"><a class="l" href="#1447">1447 </a>    <span class="php-var">$context</span>[<span class="php-quote">'can_register'</span>] = <span class="php-keyword1">empty</span>(<span class="php-var">$modSettings</span>[<span class="php-quote">'registration_method'</span>]) || <span class="php-var">$modSettings</span>[<span class="php-quote">'registration_method'</span>] != <span class="php-num">3</span>;
@@ -3648,256 +3652,320 @@
 </span></span><span id="2826" class="l"><a class="l" href="#2826">2826 </a><span class="php-comment"> */</span>
 </span><span id="2827" class="l"><a class="l" href="#2827">2827 </a><span class="php-keyword1">function</span> <a id="_determineAvatar" href="#_determineAvatar">determineAvatar</a>(<span class="php-var">$profile</span>)
 </span><span id="2828" class="l"><a class="l" href="#2828">2828 </a>{
-</span><span id="2829" class="l"><a class="l" href="#2829">2829 </a>    <span class="php-keyword1">global</span> <span class="php-var">$modSettings</span>, <span class="php-var">$scripturl</span>, <span class="php-var">$settings</span>;
-</span><span id="2830" class="l"><a class="l" href="#2830">2830 </a>
-</span><span id="2831" class="l"><a class="l" href="#2831">2831 </a>    <span class="php-keyword1">if</span> (<span class="php-keyword1">empty</span>(<span class="php-var">$profile</span>))
-</span><span id="2832" class="l"><a class="l" href="#2832">2832 </a>        <span class="php-keyword1">return</span> <span class="php-keyword1">array</span>();
-</span><span id="2833" class="l"><a class="l" href="#2833">2833 </a>
-</span><span id="2834" class="l"><a class="l" href="#2834">2834 </a>    <span class="php-comment">// If we're always html resizing, assume it's too large.</span>
-</span><span id="2835" class="l"><a class="l" href="#2835">2835 </a>    <span class="php-keyword1">if</span> (<span class="php-var">$modSettings</span>[<span class="php-quote">'avatar_action_too_large'</span>] == <span class="php-quote">'option_html_resize'</span> || <span class="php-var">$modSettings</span>[<span class="php-quote">'avatar_action_too_large'</span>] == <span class="php-quote">'option_js_resize'</span>)
-</span><span id="2836" class="l"><a class="l" href="#2836">2836 </a>    {
-</span><span id="2837" class="l"><a class="l" href="#2837">2837 </a>        <span class="php-var">$max_avatar_width</span> = !<span class="php-keyword1">empty</span>(<span class="php-var">$modSettings</span>[<span class="php-quote">'avatar_max_width_external'</span>]) ? <span class="php-quote">' max-width:'</span> . <span class="php-var">$modSettings</span>[<span class="php-quote">'avatar_max_width_external'</span>] . <span class="php-quote">'px;'</span> : <span class="php-quote">''</span>;
-</span><span id="2838" class="l"><a class="l" href="#2838">2838 </a>        <span class="php-var">$max_avatar_height</span> = !<span class="php-keyword1">empty</span>(<span class="php-var">$modSettings</span>[<span class="php-quote">'avatar_max_height_external'</span>]) ? <span class="php-quote">' max-height:'</span> . <span class="php-var">$modSettings</span>[<span class="php-quote">'avatar_max_height_external'</span>] . <span class="php-quote">'px;'</span> : <span class="php-quote">''</span>;
-</span><span id="2839" class="l"><a class="l" href="#2839">2839 </a>    }
-</span><span id="2840" class="l"><a class="l" href="#2840">2840 </a>    <span class="php-keyword1">else</span>
-</span><span id="2841" class="l"><a class="l" href="#2841">2841 </a>    {
-</span><span id="2842" class="l"><a class="l" href="#2842">2842 </a>        <span class="php-var">$max_avatar_width</span> = <span class="php-quote">''</span>;
-</span><span id="2843" class="l"><a class="l" href="#2843">2843 </a>        <span class="php-var">$max_avatar_height</span> = <span class="php-quote">''</span>;
-</span><span id="2844" class="l"><a class="l" href="#2844">2844 </a>    }
-</span><span id="2845" class="l"><a class="l" href="#2845">2845 </a>
-</span><span id="2846" class="l"><a class="l" href="#2846">2846 </a>    <span class="php-var">$avatar_protocol</span> = <span class="php-keyword2">substr</span>(<span class="php-keyword2">strtolower</span>(<span class="php-var">$profile</span>[<span class="php-quote">'avatar'</span>]), <span class="php-num">0</span>, <span class="php-num">7</span>);
+</span><span id="2829" class="l"><a class="l" href="#2829">2829 </a>    <span class="php-keyword1">global</span> <span class="php-var">$modSettings</span>, <span class="php-var">$scripturl</span>, <span class="php-var">$settings</span>, <span class="php-var">$context</span>;
+</span><span id="2830" class="l"><a class="l" href="#2830">2830 </a>    <span class="php-keyword1">static</span> <span class="php-var"><a id="$added_once" href="#$added_once">$added_once</a></span> = <span class="php-keyword1">false</span>;
+</span><span id="2831" class="l"><a class="l" href="#2831">2831 </a>
+</span><span id="2832" class="l"><a class="l" href="#2832">2832 </a>    <span class="php-keyword1">if</span> (<span class="php-keyword1">empty</span>(<span class="php-var">$profile</span>))
+</span><span id="2833" class="l"><a class="l" href="#2833">2833 </a>        <span class="php-keyword1">return</span> <span class="php-keyword1">array</span>();
+</span><span id="2834" class="l"><a class="l" href="#2834">2834 </a>
+</span><span id="2835" class="l"><a class="l" href="#2835">2835 </a>    <span class="php-comment">// @todo compatibility setting for migration</span>
+</span><span id="2836" class="l"><a class="l" href="#2836">2836 </a>    <span class="php-keyword1">if</span> (!<span class="php-keyword1">isset</span>(<span class="php-var">$modSettings</span>[<span class="php-quote">'avatar_max_height'</span>]))
+</span><span id="2837" class="l"><a class="l" href="#2837">2837 </a>        <span class="php-var">$modSettings</span>[<span class="php-quote">'avatar_max_height'</span>] = <span class="php-var">$modSettings</span>[<span class="php-quote">'avatar_max_height_external'</span>];
+</span><span id="2838" class="l"><a class="l" href="#2838">2838 </a>    <span class="php-keyword1">if</span> (!<span class="php-keyword1">isset</span>(<span class="php-var">$modSettings</span>[<span class="php-quote">'avatar_max_width'</span>]))
+</span><span id="2839" class="l"><a class="l" href="#2839">2839 </a>        <span class="php-var">$modSettings</span>[<span class="php-quote">'avatar_max_width'</span>] = <span class="php-var">$modSettings</span>[<span class="php-quote">'avatar_max_width_external'</span>];
+</span><span id="2840" class="l"><a class="l" href="#2840">2840 </a>
+</span><span id="2841" class="l"><a class="l" href="#2841">2841 </a>    <span class="php-comment">// Since it's nice to have avatars all of the same size, and in some cases the size detection may fail,</span>
+</span><span id="2842" class="l"><a class="l" href="#2842">2842 </a>    <span class="php-comment">// let's add the css in any case</span>
+</span><span id="2843" class="l"><a class="l" href="#2843">2843 </a>    <span class="php-keyword1">if</span> (!<span class="php-var">$added_once</span>)
+</span><span id="2844" class="l"><a class="l" href="#2844">2844 </a>    {
+</span><span id="2845" class="l"><a class="l" href="#2845">2845 </a>        <span class="php-keyword1">if</span> (!<span class="php-keyword1">isset</span>(<span class="php-var">$context</span>[<span class="php-quote">'html_headers'</span>]))
+</span><span id="2846" class="l"><a class="l" href="#2846">2846 </a>            <span class="php-var">$context</span>[<span class="php-quote">'html_headers'</span>] = <span class="php-quote">''</span>;
 </span><span id="2847" class="l"><a class="l" href="#2847">2847 </a>
-</span><span id="2848" class="l"><a class="l" href="#2848">2848 </a>    <span class="php-comment">// uploaded avatar?</span>
-</span><span id="2849" class="l"><a class="l" href="#2849">2849 </a>    <span class="php-keyword1">if</span> (<span class="php-var">$profile</span>[<span class="php-quote">'id_attach'</span>] &gt; <span class="php-num">0</span> &amp;&amp; <span class="php-keyword1">empty</span>(<span class="php-var">$profile</span>[<span class="php-quote">'avatar'</span>]))
-</span><span id="2850" class="l"><a class="l" href="#2850">2850 </a>    {
-</span><span id="2851" class="l"><a class="l" href="#2851">2851 </a>        <span class="php-comment">// where are those pesky avatars?</span>
-</span><span id="2852" class="l"><a class="l" href="#2852">2852 </a>        <span class="php-var">$avatar_url</span> = <span class="php-keyword1">empty</span>(<span class="php-var">$profile</span>[<span class="php-quote">'attachment_type'</span>]) ? <span class="php-var">$scripturl</span> . <span class="php-quote">'?action=dlattach;attach='</span> . <span class="php-var">$profile</span>[<span class="php-quote">'id_attach'</span>] . <span class="php-quote">';type=avatar'</span> : <span class="php-var">$modSettings</span>[<span class="php-quote">'custom_avatar_url'</span>] . <span class="php-quote">'/'</span> . <span class="php-var">$profile</span>[<span class="php-quote">'filename'</span>];
-</span><span id="2853" class="l"><a class="l" href="#2853">2853 </a>
-</span><span id="2854" class="l"><a class="l" href="#2854">2854 </a>        <span class="php-var">$avatar</span> = <span class="php-keyword1">array</span>(
-</span><span id="2855" class="l"><a class="l" href="#2855">2855 </a>            <span class="php-quote">'name'</span> =&gt; <span class="php-var">$profile</span>[<span class="php-quote">'avatar'</span>],
-</span><span id="2856" class="l"><a class="l" href="#2856">2856 </a>            <span class="php-quote">'image'</span> =&gt; <span class="php-quote">'&lt;img class=&quot;avatar&quot; src=&quot;'</span> . <span class="php-var">$avatar_url</span> . <span class="php-quote">'&quot; alt=&quot;&quot; /&gt;'</span>,
-</span><span id="2857" class="l"><a class="l" href="#2857">2857 </a>            <span class="php-quote">'href'</span> =&gt; <span class="php-var">$avatar_url</span>,
-</span><span id="2858" class="l"><a class="l" href="#2858">2858 </a>            <span class="php-quote">'url'</span> =&gt; <span class="php-quote">''</span>,
-</span><span id="2859" class="l"><a class="l" href="#2859">2859 </a>        );
-</span><span id="2860" class="l"><a class="l" href="#2860">2860 </a>    }
-</span><span id="2861" class="l"><a class="l" href="#2861">2861 </a>    <span class="php-comment">// remote avatar?</span>
-</span><span id="2862" class="l"><a class="l" href="#2862">2862 </a>    <span class="php-keyword1">elseif</span> (<span class="php-var">$avatar_protocol</span> === <span class="php-quote">'http://'</span> || <span class="php-var">$avatar_protocol</span> === <span class="php-quote">'https:/'</span>)
-</span><span id="2863" class="l"><a class="l" href="#2863">2863 </a>    {
-</span><span id="2864" class="l"><a class="l" href="#2864">2864 </a>        <span class="php-var">$avatar</span> = <span class="php-keyword1">array</span>(
-</span><span id="2865" class="l"><a class="l" href="#2865">2865 </a>            <span class="php-quote">'name'</span> =&gt; <span class="php-var">$profile</span>[<span class="php-quote">'avatar'</span>],
-</span><span id="2866" class="l"><a class="l" href="#2866">2866 </a>            <span class="php-quote">'image'</span> =&gt; <span class="php-quote">'&lt;img class=&quot;avatar&quot; src=&quot;'</span> . <span class="php-var">$profile</span>[<span class="php-quote">'avatar'</span>] . <span class="php-quote">'&quot; style=&quot;'</span> . <span class="php-var">$max_avatar_width</span> . <span class="php-var">$max_avatar_height</span> . <span class="php-quote">'&quot; alt=&quot;&quot; /&gt;'</span>,
-</span><span id="2867" class="l"><a class="l" href="#2867">2867 </a>            <span class="php-quote">'href'</span> =&gt; <span class="php-var">$profile</span>[<span class="php-quote">'avatar'</span>],
-</span><span id="2868" class="l"><a class="l" href="#2868">2868 </a>            <span class="php-quote">'url'</span> =&gt; <span class="php-var">$profile</span>[<span class="php-quote">'avatar'</span>],
-</span><span id="2869" class="l"><a class="l" href="#2869">2869 </a>        );
-</span><span id="2870" class="l"><a class="l" href="#2870">2870 </a>    }
-</span><span id="2871" class="l"><a class="l" href="#2871">2871 </a>    <span class="php-comment">// Gravatar instead?</span>
-</span><span id="2872" class="l"><a class="l" href="#2872">2872 </a>    <span class="php-keyword1">elseif</span> (!<span class="php-keyword1">empty</span>(<span class="php-var">$profile</span>[<span class="php-quote">'avatar'</span>]) &amp;&amp; <span class="php-var">$profile</span>[<span class="php-quote">'avatar'</span>] === <span class="php-quote">'gravatar'</span>)
-</span><span id="2873" class="l"><a class="l" href="#2873">2873 </a>    {
-</span><span id="2874" class="l"><a class="l" href="#2874">2874 </a>        <span class="php-comment">// Gravatars URL.</span>
-</span><span id="2875" class="l"><a class="l" href="#2875">2875 </a>        <span class="php-var">$gravatar_url</span> = <span class="php-quote">'//www.gravatar.com/avatar/'</span> . <span class="php-keyword2">md5</span>(<span class="php-keyword2">strtolower</span>(<span class="php-var">$profile</span>[<span class="php-quote">'email_address'</span>])) . <span class="php-quote">'d='</span> . <span class="php-var">$modSettings</span>[<span class="php-quote">'avatar_max_height_external'</span>] . (!<span class="php-keyword1">empty</span>(<span class="php-var">$modSettings</span>[<span class="php-quote">'gravatar_rating'</span>]) ? (<span class="php-quote">'&amp;amp;r='</span> . <span class="php-var">$modSettings</span>[<span class="php-quote">'gravatar_rating'</span>]) : <span class="php-quote">''</span>);
-</span><span id="2876" class="l"><a class="l" href="#2876">2876 </a>
-</span><span id="2877" class="l"><a class="l" href="#2877">2877 </a>        <span class="php-var">$avatar</span> = <span class="php-keyword1">array</span>(
-</span><span id="2878" class="l"><a class="l" href="#2878">2878 </a>            <span class="php-quote">'name'</span> =&gt; <span class="php-var">$profile</span>[<span class="php-quote">'avatar'</span>],
-</span><span id="2879" class="l"><a class="l" href="#2879">2879 </a>            <span class="php-quote">'image'</span> =&gt; <span class="php-quote">'&lt;img class=&quot;avatar&quot; src=&quot;'</span> . <span class="php-var">$gravatar_url</span> . <span class="php-quote">'&quot; style=&quot;'</span> . <span class="php-var">$max_avatar_width</span> . <span class="php-var">$max_avatar_height</span> . <span class="php-quote">'&quot; alt=&quot;&quot; /&gt;'</span>,
-</span><span id="2880" class="l"><a class="l" href="#2880">2880 </a>            <span class="php-quote">'href'</span> =&gt; <span class="php-var">$gravatar_url</span>,
-</span><span id="2881" class="l"><a class="l" href="#2881">2881 </a>            <span class="php-quote">'url'</span> =&gt; <span class="php-var">$gravatar_url</span>,
-</span><span id="2882" class="l"><a class="l" href="#2882">2882 </a>        );
-</span><span id="2883" class="l"><a class="l" href="#2883">2883 </a>    }
-</span><span id="2884" class="l"><a class="l" href="#2884">2884 </a>    <span class="php-comment">// an avatar from the gallery?</span>
-</span><span id="2885" class="l"><a class="l" href="#2885">2885 </a>    <span class="php-keyword1">elseif</span> (!<span class="php-keyword1">empty</span>(<span class="php-var">$profile</span>[<span class="php-quote">'avatar'</span>]) &amp;&amp; !(<span class="php-var">$avatar_protocol</span> === <span class="php-quote">'http://'</span> || <span class="php-var">$avatar_protocol</span> === <span class="php-quote">'https:/'</span>))
-</span><span id="2886" class="l"><a class="l" href="#2886">2886 </a>    {
-</span><span id="2887" class="l"><a class="l" href="#2887">2887 </a>        <span class="php-var">$avatar</span> = <span class="php-keyword1">array</span>(
-</span><span id="2888" class="l"><a class="l" href="#2888">2888 </a>            <span class="php-quote">'name'</span> =&gt; <span class="php-var">$profile</span>[<span class="php-quote">'avatar'</span>],
-</span><span id="2889" class="l"><a class="l" href="#2889">2889 </a>            <span class="php-quote">'image'</span> =&gt; <span class="php-quote">'&lt;img class=&quot;avatar&quot; src=&quot;'</span> . <span class="php-var">$modSettings</span>[<span class="php-quote">'avatar_url'</span>] . <span class="php-quote">'/'</span> . <span class="php-var">$profile</span>[<span class="php-quote">'avatar'</span>] . <span class="php-quote">'&quot; style=&quot;'</span> . <span class="php-var">$max_avatar_width</span> . <span class="php-var">$max_avatar_height</span> . <span class="php-quote">'&quot; alt=&quot;&quot; /&gt;'</span>,
-</span><span id="2890" class="l"><a class="l" href="#2890">2890 </a>            <span class="php-quote">'href'</span> =&gt; <span class="php-var">$modSettings</span>[<span class="php-quote">'avatar_url'</span>] . <span class="php-quote">'/'</span> . <span class="php-var">$profile</span>[<span class="php-quote">'avatar'</span>],
-</span><span id="2891" class="l"><a class="l" href="#2891">2891 </a>            <span class="php-quote">'url'</span> =&gt; <span class="php-var">$modSettings</span>[<span class="php-quote">'avatar_url'</span>] . <span class="php-quote">'/'</span> . <span class="php-var">$profile</span>[<span class="php-quote">'avatar'</span>],
-</span><span id="2892" class="l"><a class="l" href="#2892">2892 </a>        );
-</span><span id="2893" class="l"><a class="l" href="#2893">2893 </a>    }
-</span><span id="2894" class="l"><a class="l" href="#2894">2894 </a>    <span class="php-comment">// no custon avatar found yet, maybe a default avatar?</span>
-</span><span id="2895" class="l"><a class="l" href="#2895">2895 </a>    <span class="php-keyword1">elseif</span> (!<span class="php-keyword1">empty</span>(<span class="php-var">$modSettings</span>[<span class="php-quote">'avatar_default'</span>]) &amp;&amp; <span class="php-keyword1">empty</span>(<span class="php-var">$profile</span>[<span class="php-quote">'avatar'</span>]) &amp;&amp; <span class="php-keyword1">empty</span>(<span class="php-var">$profile</span>[<span class="php-quote">'filename'</span>]))
-</span><span id="2896" class="l"><a class="l" href="#2896">2896 </a>    {
-</span><span id="2897" class="l"><a class="l" href="#2897">2897 </a>        <span class="php-comment">// $settings not initialized? We can't do anything further..</span>
-</span><span id="2898" class="l"><a class="l" href="#2898">2898 </a>        <span class="php-keyword1">if</span> (<span class="php-keyword1">empty</span>(<span class="php-var">$settings</span>))
-</span><span id="2899" class="l"><a class="l" href="#2899">2899 </a>            <span class="php-keyword1">return</span> <span class="php-keyword1">array</span>();
-</span><span id="2900" class="l"><a class="l" href="#2900">2900 </a>
-</span><span id="2901" class="l"><a class="l" href="#2901">2901 </a>        <span class="php-comment">// Let's proceed with the default avatar.</span>
+</span><span id="2848" class="l"><a class="l" href="#2848">2848 </a>        <span class="php-keyword1">if</span> (!<span class="php-keyword1">empty</span>(<span class="php-var">$modSettings</span>[<span class="php-quote">'avatar_max_width'</span>]) || !<span class="php-keyword1">empty</span>(<span class="php-var">$modSettings</span>[<span class="php-quote">'avatar_max_height'</span>]))
+</span><span id="2849" class="l"><a class="l" href="#2849">2849 </a>        {
+</span><span id="2850" class="l"><a class="l" href="#2850">2850 </a>            <span class="php-var">$context</span>[<span class="php-quote">'html_headers'</span>] .= <span class="php-quote">'
+</span></span><span id="2851" class="l"><a class="l" href="#2851">2851 </a><span class="php-quote">    &lt;style&gt;
+</span></span><span id="2852" class="l"><a class="l" href="#2852">2852 </a><span class="php-quote">        .avatarresize {'</span> . (!<span class="php-keyword1">empty</span>(<span class="php-var">$modSettings</span>[<span class="php-quote">'avatar_max_width'</span>]) ? <span class="php-quote">'
+</span></span><span id="2853" class="l"><a class="l" href="#2853">2853 </a><span class="php-quote">            max-width:'</span> . <span class="php-var">$modSettings</span>[<span class="php-quote">'avatar_max_width'</span>] . <span class="php-quote">'px;'</span> : <span class="php-quote">''</span>) . (!<span class="php-keyword1">empty</span>(<span class="php-var">$modSettings</span>[<span class="php-quote">'avatar_max_height'</span>]) ? <span class="php-quote">'
+</span></span><span id="2854" class="l"><a class="l" href="#2854">2854 </a><span class="php-quote">            max-height:'</span> . <span class="php-var">$modSettings</span>[<span class="php-quote">'avatar_max_height'</span>] . <span class="php-quote">'px;'</span> : <span class="php-quote">''</span>) . <span class="php-quote">'
+</span></span><span id="2855" class="l"><a class="l" href="#2855">2855 </a><span class="php-quote">        }
+</span></span><span id="2856" class="l"><a class="l" href="#2856">2856 </a><span class="php-quote">    &lt;/style&gt;'</span>;
+</span><span id="2857" class="l"><a class="l" href="#2857">2857 </a>        }
+</span><span id="2858" class="l"><a class="l" href="#2858">2858 </a>        <span class="php-var">$added_once</span> = <span class="php-keyword1">true</span>;
+</span><span id="2859" class="l"><a class="l" href="#2859">2859 </a>    }
+</span><span id="2860" class="l"><a class="l" href="#2860">2860 </a>
+</span><span id="2861" class="l"><a class="l" href="#2861">2861 </a>    <span class="php-var">$avatar_protocol</span> = <span class="php-keyword2">substr</span>(<span class="php-keyword2">strtolower</span>(<span class="php-var">$profile</span>[<span class="php-quote">'avatar'</span>]), <span class="php-num">0</span>, <span class="php-num">7</span>);
+</span><span id="2862" class="l"><a class="l" href="#2862">2862 </a>
+</span><span id="2863" class="l"><a class="l" href="#2863">2863 </a>    <span class="php-comment">// uploaded avatar?</span>
+</span><span id="2864" class="l"><a class="l" href="#2864">2864 </a>    <span class="php-keyword1">if</span> (<span class="php-var">$profile</span>[<span class="php-quote">'id_attach'</span>] &gt; <span class="php-num">0</span> &amp;&amp; <span class="php-keyword1">empty</span>(<span class="php-var">$profile</span>[<span class="php-quote">'avatar'</span>]))
+</span><span id="2865" class="l"><a class="l" href="#2865">2865 </a>    {
+</span><span id="2866" class="l"><a class="l" href="#2866">2866 </a>        <span class="php-comment">// where are those pesky avatars?</span>
+</span><span id="2867" class="l"><a class="l" href="#2867">2867 </a>        <span class="php-var">$avatar_url</span> = <span class="php-keyword1">empty</span>(<span class="php-var">$profile</span>[<span class="php-quote">'attachment_type'</span>]) ? <span class="php-var">$scripturl</span> . <span class="php-quote">'?action=dlattach;attach='</span> . <span class="php-var">$profile</span>[<span class="php-quote">'id_attach'</span>] . <span class="php-quote">';type=avatar'</span> : <span class="php-var">$modSettings</span>[<span class="php-quote">'custom_avatar_url'</span>] . <span class="php-quote">'/'</span> . <span class="php-var">$profile</span>[<span class="php-quote">'filename'</span>];
+</span><span id="2868" class="l"><a class="l" href="#2868">2868 </a>
+</span><span id="2869" class="l"><a class="l" href="#2869">2869 </a>        <span class="php-var">$avatar</span> = <span class="php-keyword1">array</span>(
+</span><span id="2870" class="l"><a class="l" href="#2870">2870 </a>            <span class="php-quote">'name'</span> =&gt; <span class="php-var">$profile</span>[<span class="php-quote">'avatar'</span>],
+</span><span id="2871" class="l"><a class="l" href="#2871">2871 </a>            <span class="php-quote">'image'</span> =&gt; <span class="php-quote">'&lt;img class=&quot;avatar avatarresize&quot; src=&quot;'</span> . <span class="php-var">$avatar_url</span> . <span class="php-quote">'&quot; alt=&quot;&quot; /&gt;'</span>,
+</span><span id="2872" class="l"><a class="l" href="#2872">2872 </a>            <span class="php-quote">'href'</span> =&gt; <span class="php-var">$avatar_url</span>,
+</span><span id="2873" class="l"><a class="l" href="#2873">2873 </a>            <span class="php-quote">'url'</span> =&gt; <span class="php-quote">''</span>,
+</span><span id="2874" class="l"><a class="l" href="#2874">2874 </a>        );
+</span><span id="2875" class="l"><a class="l" href="#2875">2875 </a>    }
+</span><span id="2876" class="l"><a class="l" href="#2876">2876 </a>    <span class="php-comment">// remote avatar?</span>
+</span><span id="2877" class="l"><a class="l" href="#2877">2877 </a>    <span class="php-keyword1">elseif</span> (<span class="php-var">$avatar_protocol</span> === <span class="php-quote">'http://'</span> || <span class="php-var">$avatar_protocol</span> === <span class="php-quote">'https:/'</span>)
+</span><span id="2878" class="l"><a class="l" href="#2878">2878 </a>    {
+</span><span id="2879" class="l"><a class="l" href="#2879">2879 </a>        <span class="php-var">$avatar</span> = <span class="php-keyword1">array</span>(
+</span><span id="2880" class="l"><a class="l" href="#2880">2880 </a>            <span class="php-quote">'name'</span> =&gt; <span class="php-var">$profile</span>[<span class="php-quote">'avatar'</span>],
+</span><span id="2881" class="l"><a class="l" href="#2881">2881 </a>            <span class="php-quote">'image'</span> =&gt; <span class="php-quote">'&lt;img class=&quot;avatar avatarresize&quot; src=&quot;'</span> . <span class="php-var">$profile</span>[<span class="php-quote">'avatar'</span>] . <span class="php-quote">'&quot; alt=&quot;&quot; /&gt;'</span>,
+</span><span id="2882" class="l"><a class="l" href="#2882">2882 </a>            <span class="php-quote">'href'</span> =&gt; <span class="php-var">$profile</span>[<span class="php-quote">'avatar'</span>],
+</span><span id="2883" class="l"><a class="l" href="#2883">2883 </a>            <span class="php-quote">'url'</span> =&gt; <span class="php-var">$profile</span>[<span class="php-quote">'avatar'</span>],
+</span><span id="2884" class="l"><a class="l" href="#2884">2884 </a>        );
+</span><span id="2885" class="l"><a class="l" href="#2885">2885 </a>    }
+</span><span id="2886" class="l"><a class="l" href="#2886">2886 </a>    <span class="php-comment">// Gravatar instead?</span>
+</span><span id="2887" class="l"><a class="l" href="#2887">2887 </a>    <span class="php-keyword1">elseif</span> (!<span class="php-keyword1">empty</span>(<span class="php-var">$profile</span>[<span class="php-quote">'avatar'</span>]) &amp;&amp; <span class="php-var">$profile</span>[<span class="php-quote">'avatar'</span>] === <span class="php-quote">'gravatar'</span>)
+</span><span id="2888" class="l"><a class="l" href="#2888">2888 </a>    {
+</span><span id="2889" class="l"><a class="l" href="#2889">2889 </a>        <span class="php-comment">// Gravatars URL.</span>
+</span><span id="2890" class="l"><a class="l" href="#2890">2890 </a>        <span class="php-var">$gravatar_url</span> = <span class="php-quote">'//www.gravatar.com/avatar/'</span> . <span class="php-keyword2">md5</span>(<span class="php-keyword2">strtolower</span>(<span class="php-var">$profile</span>[<span class="php-quote">'email_address'</span>])) . <span class="php-quote">'d='</span> . <span class="php-var">$modSettings</span>[<span class="php-quote">'avatar_max_height'</span>] . (!<span class="php-keyword1">empty</span>(<span class="php-var">$modSettings</span>[<span class="php-quote">'gravatar_rating'</span>]) ? (<span class="php-quote">'&amp;amp;r='</span> . <span class="php-var">$modSettings</span>[<span class="php-quote">'gravatar_rating'</span>]) : <span class="php-quote">''</span>);
+</span><span id="2891" class="l"><a class="l" href="#2891">2891 </a>
+</span><span id="2892" class="l"><a class="l" href="#2892">2892 </a>        <span class="php-var">$avatar</span> = <span class="php-keyword1">array</span>(
+</span><span id="2893" class="l"><a class="l" href="#2893">2893 </a>            <span class="php-quote">'name'</span> =&gt; <span class="php-var">$profile</span>[<span class="php-quote">'avatar'</span>],
+</span><span id="2894" class="l"><a class="l" href="#2894">2894 </a>            <span class="php-quote">'image'</span> =&gt; <span class="php-quote">'&lt;img class=&quot;avatar avatarresize&quot; src=&quot;'</span> . <span class="php-var">$gravatar_url</span> . <span class="php-quote">'&quot; alt=&quot;&quot; /&gt;'</span>,
+</span><span id="2895" class="l"><a class="l" href="#2895">2895 </a>            <span class="php-quote">'href'</span> =&gt; <span class="php-var">$gravatar_url</span>,
+</span><span id="2896" class="l"><a class="l" href="#2896">2896 </a>            <span class="php-quote">'url'</span> =&gt; <span class="php-var">$gravatar_url</span>,
+</span><span id="2897" class="l"><a class="l" href="#2897">2897 </a>        );
+</span><span id="2898" class="l"><a class="l" href="#2898">2898 </a>    }
+</span><span id="2899" class="l"><a class="l" href="#2899">2899 </a>    <span class="php-comment">// an avatar from the gallery?</span>
+</span><span id="2900" class="l"><a class="l" href="#2900">2900 </a>    <span class="php-keyword1">elseif</span> (!<span class="php-keyword1">empty</span>(<span class="php-var">$profile</span>[<span class="php-quote">'avatar'</span>]) &amp;&amp; !(<span class="php-var">$avatar_protocol</span> === <span class="php-quote">'http://'</span> || <span class="php-var">$avatar_protocol</span> === <span class="php-quote">'https:/'</span>))
+</span><span id="2901" class="l"><a class="l" href="#2901">2901 </a>    {
 </span><span id="2902" class="l"><a class="l" href="#2902">2902 </a>        <span class="php-var">$avatar</span> = <span class="php-keyword1">array</span>(
-</span><span id="2903" class="l"><a class="l" href="#2903">2903 </a>            <span class="php-quote">'name'</span> =&gt; <span class="php-quote">''</span>,
-</span><span id="2904" class="l"><a class="l" href="#2904">2904 </a>            <span class="php-quote">'image'</span> =&gt; <span class="php-quote">'&lt;img class=&quot;avatar&quot; src=&quot;'</span> . <span class="php-var">$settings</span>[<span class="php-quote">'images_url'</span>] . <span class="php-quote">'/default_avatar.png&quot; style=&quot;'</span> . <span class="php-var">$max_avatar_width</span> . <span class="php-var">$max_avatar_height</span> . <span class="php-quote">'&quot; alt=&quot;&quot; /&gt;'</span>,
-</span><span id="2905" class="l"><a class="l" href="#2905">2905 </a>            <span class="php-quote">'href'</span> =&gt; <span class="php-var">$settings</span>[<span class="php-quote">'images_url'</span>] . <span class="php-quote">'/default_avatar.png'</span>,
-</span><span id="2906" class="l"><a class="l" href="#2906">2906 </a>            <span class="php-quote">'url'</span> =&gt; <span class="php-quote">'http://'</span>,
+</span><span id="2903" class="l"><a class="l" href="#2903">2903 </a>            <span class="php-quote">'name'</span> =&gt; <span class="php-var">$profile</span>[<span class="php-quote">'avatar'</span>],
+</span><span id="2904" class="l"><a class="l" href="#2904">2904 </a>            <span class="php-quote">'image'</span> =&gt; <span class="php-quote">'&lt;img class=&quot;avatar avatarresize&quot; src=&quot;'</span> . <span class="php-var">$modSettings</span>[<span class="php-quote">'avatar_url'</span>] . <span class="php-quote">'/'</span> . <span class="php-var">$profile</span>[<span class="php-quote">'avatar'</span>] . <span class="php-quote">'&quot; alt=&quot;&quot; /&gt;'</span>,
+</span><span id="2905" class="l"><a class="l" href="#2905">2905 </a>            <span class="php-quote">'href'</span> =&gt; <span class="php-var">$modSettings</span>[<span class="php-quote">'avatar_url'</span>] . <span class="php-quote">'/'</span> . <span class="php-var">$profile</span>[<span class="php-quote">'avatar'</span>],
+</span><span id="2906" class="l"><a class="l" href="#2906">2906 </a>            <span class="php-quote">'url'</span> =&gt; <span class="php-var">$modSettings</span>[<span class="php-quote">'avatar_url'</span>] . <span class="php-quote">'/'</span> . <span class="php-var">$profile</span>[<span class="php-quote">'avatar'</span>],
 </span><span id="2907" class="l"><a class="l" href="#2907">2907 </a>        );
 </span><span id="2908" class="l"><a class="l" href="#2908">2908 </a>    }
-</span><span id="2909" class="l"><a class="l" href="#2909">2909 </a>    <span class="php-comment">// finally ...</span>
-</span><span id="2910" class="l"><a class="l" href="#2910">2910 </a>    <span class="php-keyword1">else</span>
-</span><span id="2911" class="l"><a class="l" href="#2911">2911 </a>        <span class="php-var">$avatar</span> = <span class="php-keyword1">array</span>(
-</span><span id="2912" class="l"><a class="l" href="#2912">2912 </a>            <span class="php-quote">'name'</span> =&gt; <span class="php-quote">''</span>,
-</span><span id="2913" class="l"><a class="l" href="#2913">2913 </a>            <span class="php-quote">'image'</span> =&gt; <span class="php-quote">''</span>,
-</span><span id="2914" class="l"><a class="l" href="#2914">2914 </a>            <span class="php-quote">'href'</span> =&gt; <span class="php-quote">''</span>,
-</span><span id="2915" class="l"><a class="l" href="#2915">2915 </a>            <span class="php-quote">'url'</span> =&gt; <span class="php-quote">''</span>
-</span><span id="2916" class="l"><a class="l" href="#2916">2916 </a>        );
-</span><span id="2917" class="l"><a class="l" href="#2917">2917 </a>
-</span><span id="2918" class="l"><a class="l" href="#2918">2918 </a>    <span class="php-comment">// Make sure there's a preview for gravatars available.</span>
-</span><span id="2919" class="l"><a class="l" href="#2919">2919 </a>    <span class="php-var">$avatar</span>[<span class="php-quote">'gravatar_preview'</span>] = <span class="php-quote">'//www.gravatar.com/avatar/'</span> . <span class="php-keyword2">md5</span>(<span class="php-keyword2">strtolower</span>(<span class="php-var">$profile</span>[<span class="php-quote">'email_address'</span>])) . <span class="php-quote">'d='</span> . <span class="php-var">$modSettings</span>[<span class="php-quote">'avatar_max_height_external'</span>] . (!<span class="php-keyword1">empty</span>(<span class="php-var">$modSettings</span>[<span class="php-quote">'gravatar_rating'</span>]) ? (<span class="php-quote">'&amp;amp;r='</span> . <span class="php-var">$modSettings</span>[<span class="php-quote">'gravatar_rating'</span>]) : <span class="php-quote">''</span>);
-</span><span id="2920" class="l"><a class="l" href="#2920">2920 </a>
-</span><span id="2921" class="l"><a class="l" href="#2921">2921 </a>    <span class="php-keyword1">return</span> <span class="php-var">$avatar</span>;
-</span><span id="2922" class="l"><a class="l" href="#2922">2922 </a>}
-</span><span id="2923" class="l"><a class="l" href="#2923">2923 </a>
-</span><span id="2924" class="l"><a class="l" href="#2924">2924 </a><span class="php-comment">/**
-</span></span><span id="2925" class="l"><a class="l" href="#2925">2925 </a><span class="php-comment"> * Get information about the server
-</span></span><span id="2926" class="l"><a class="l" href="#2926">2926 </a><span class="php-comment"> */</span>
-</span><span id="2927" class="l"><a class="l" href="#2927">2927 </a><span class="php-keyword1">function</span> <a id="_detectServer" href="#_detectServer">detectServer</a>()
-</span><span id="2928" class="l"><a class="l" href="#2928">2928 </a>{
-</span><span id="2929" class="l"><a class="l" href="#2929">2929 </a>    <span class="php-keyword1">global</span> <span class="php-var">$context</span>;
-</span><span id="2930" class="l"><a class="l" href="#2930">2930 </a>
-</span><span id="2931" class="l"><a class="l" href="#2931">2931 </a>    <span class="php-var">$context</span>[<span class="php-quote">'server'</span>] = <span class="php-keyword1">array</span>(
-</span><span id="2932" class="l"><a class="l" href="#2932">2932 </a>        <span class="php-quote">'is_iis'</span> =&gt; <span class="php-keyword1">isset</span>(<span class="php-var">$_SERVER</span>[<span class="php-quote">'SERVER_SOFTWARE'</span>]) &amp;&amp; <span class="php-keyword2">strpos</span>(<span class="php-var">$_SERVER</span>[<span class="php-quote">'SERVER_SOFTWARE'</span>], <span class="php-quote">'Microsoft-IIS'</span>) !== <span class="php-keyword1">false</span>,
-</span><span id="2933" class="l"><a class="l" href="#2933">2933 </a>        <span class="php-quote">'is_apache'</span> =&gt; <span class="php-keyword1">isset</span>(<span class="php-var">$_SERVER</span>[<span class="php-quote">'SERVER_SOFTWARE'</span>]) &amp;&amp; <span class="php-keyword2">strpos</span>(<span class="php-var">$_SERVER</span>[<span class="php-quote">'SERVER_SOFTWARE'</span>], <span class="php-quote">'Apache'</span>) !== <span class="php-keyword1">false</span>,
-</span><span id="2934" class="l"><a class="l" href="#2934">2934 </a>        <span class="php-quote">'is_litespeed'</span> =&gt; <span class="php-keyword1">isset</span>(<span class="php-var">$_SERVER</span>[<span class="php-quote">'SERVER_SOFTWARE'</span>]) &amp;&amp; <span class="php-keyword2">strpos</span>(<span class="php-var">$_SERVER</span>[<span class="php-quote">'SERVER_SOFTWARE'</span>], <span class="php-quote">'LiteSpeed'</span>) !== <span class="php-keyword1">false</span>,
-</span><span id="2935" class="l"><a class="l" href="#2935">2935 </a>        <span class="php-quote">'is_lighttpd'</span> =&gt; <span class="php-keyword1">isset</span>(<span class="php-var">$_SERVER</span>[<span class="php-quote">'SERVER_SOFTWARE'</span>]) &amp;&amp; <span class="php-keyword2">strpos</span>(<span class="php-var">$_SERVER</span>[<span class="php-quote">'SERVER_SOFTWARE'</span>], <span class="php-quote">'lighttpd'</span>) !== <span class="php-keyword1">false</span>,
-</span><span id="2936" class="l"><a class="l" href="#2936">2936 </a>        <span class="php-quote">'is_nginx'</span> =&gt; <span class="php-keyword1">isset</span>(<span class="php-var">$_SERVER</span>[<span class="php-quote">'SERVER_SOFTWARE'</span>]) &amp;&amp; <span class="php-keyword2">strpos</span>(<span class="php-var">$_SERVER</span>[<span class="php-quote">'SERVER_SOFTWARE'</span>], <span class="php-quote">'nginx'</span>) !== <span class="php-keyword1">false</span>,
-</span><span id="2937" class="l"><a class="l" href="#2937">2937 </a>        <span class="php-quote">'is_cgi'</span> =&gt; <span class="php-keyword1">isset</span>(<span class="php-var">$_SERVER</span>[<span class="php-quote">'SERVER_SOFTWARE'</span>]) &amp;&amp; <span class="php-keyword2">strpos</span>(<span class="php-keyword2">php_sapi_name</span>(), <span class="php-quote">'cgi'</span>) !== <span class="php-keyword1">false</span>,
-</span><span id="2938" class="l"><a class="l" href="#2938">2938 </a>        <span class="php-quote">'is_windows'</span> =&gt; <span class="php-keyword2">strpos</span>(PHP_OS, <span class="php-quote">'WIN'</span>) === <span class="php-num">0</span>,
-</span><span id="2939" class="l"><a class="l" href="#2939">2939 </a>        <span class="php-quote">'iso_case_folding'</span> =&gt; <span class="php-keyword2">ord</span>(<span class="php-keyword2">strtolower</span>(<span class="php-keyword2">chr</span>(<span class="php-num">138</span>))) === <span class="php-num">154</span>,
-</span><span id="2940" class="l"><a class="l" href="#2940">2940 </a>    );
-</span><span id="2941" class="l"><a class="l" href="#2941">2941 </a>
-</span><span id="2942" class="l"><a class="l" href="#2942">2942 </a>    <span class="php-comment">// A bug in some versions of IIS under CGI (older ones) makes cookie setting not work with Location: headers.</span>
-</span><span id="2943" class="l"><a class="l" href="#2943">2943 </a>    <span class="php-var">$context</span>[<span class="php-quote">'server'</span>][<span class="php-quote">'needs_login_fix'</span>] = <span class="php-var">$context</span>[<span class="php-quote">'server'</span>][<span class="php-quote">'is_cgi'</span>] &amp;&amp; <span class="php-var">$context</span>[<span class="php-quote">'server'</span>][<span class="php-quote">'is_iis'</span>];
-</span><span id="2944" class="l"><a class="l" href="#2944">2944 </a>}
+</span><span id="2909" class="l"><a class="l" href="#2909">2909 </a>    <span class="php-comment">// no custon avatar found yet, maybe a default avatar?</span>
+</span><span id="2910" class="l"><a class="l" href="#2910">2910 </a>    <span class="php-keyword1">elseif</span> (!<span class="php-keyword1">empty</span>(<span class="php-var">$modSettings</span>[<span class="php-quote">'avatar_default'</span>]) &amp;&amp; <span class="php-keyword1">empty</span>(<span class="php-var">$profile</span>[<span class="php-quote">'avatar'</span>]) &amp;&amp; <span class="php-keyword1">empty</span>(<span class="php-var">$profile</span>[<span class="php-quote">'filename'</span>]))
+</span><span id="2911" class="l"><a class="l" href="#2911">2911 </a>    {
+</span><span id="2912" class="l"><a class="l" href="#2912">2912 </a>        <span class="php-comment">// $settings not initialized? We can't do anything further..</span>
+</span><span id="2913" class="l"><a class="l" href="#2913">2913 </a>        <span class="php-keyword1">if</span> (<span class="php-keyword1">empty</span>(<span class="php-var">$settings</span>))
+</span><span id="2914" class="l"><a class="l" href="#2914">2914 </a>            <span class="php-keyword1">return</span> <span class="php-keyword1">array</span>();
+</span><span id="2915" class="l"><a class="l" href="#2915">2915 </a>
+</span><span id="2916" class="l"><a class="l" href="#2916">2916 </a>        <span class="php-comment">// Let's proceed with the default avatar.</span>
+</span><span id="2917" class="l"><a class="l" href="#2917">2917 </a>        <span class="php-var">$avatar</span> = <span class="php-keyword1">array</span>(
+</span><span id="2918" class="l"><a class="l" href="#2918">2918 </a>            <span class="php-quote">'name'</span> =&gt; <span class="php-quote">''</span>,
+</span><span id="2919" class="l"><a class="l" href="#2919">2919 </a>            <span class="php-quote">'image'</span> =&gt; <span class="php-quote">'&lt;img class=&quot;avatar avatarresize&quot; src=&quot;'</span> . <span class="php-var">$settings</span>[<span class="php-quote">'images_url'</span>] . <span class="php-quote">'/default_avatar.png&quot; alt=&quot;&quot; /&gt;'</span>,
+</span><span id="2920" class="l"><a class="l" href="#2920">2920 </a>            <span class="php-quote">'href'</span> =&gt; <span class="php-var">$settings</span>[<span class="php-quote">'images_url'</span>] . <span class="php-quote">'/default_avatar.png'</span>,
+</span><span id="2921" class="l"><a class="l" href="#2921">2921 </a>            <span class="php-quote">'url'</span> =&gt; <span class="php-quote">'http://'</span>,
+</span><span id="2922" class="l"><a class="l" href="#2922">2922 </a>        );
+</span><span id="2923" class="l"><a class="l" href="#2923">2923 </a>    }
+</span><span id="2924" class="l"><a class="l" href="#2924">2924 </a>    <span class="php-comment">// finally ...</span>
+</span><span id="2925" class="l"><a class="l" href="#2925">2925 </a>    <span class="php-keyword1">else</span>
+</span><span id="2926" class="l"><a class="l" href="#2926">2926 </a>        <span class="php-var">$avatar</span> = <span class="php-keyword1">array</span>(
+</span><span id="2927" class="l"><a class="l" href="#2927">2927 </a>            <span class="php-quote">'name'</span> =&gt; <span class="php-quote">''</span>,
+</span><span id="2928" class="l"><a class="l" href="#2928">2928 </a>            <span class="php-quote">'image'</span> =&gt; <span class="php-quote">''</span>,
+</span><span id="2929" class="l"><a class="l" href="#2929">2929 </a>            <span class="php-quote">'href'</span> =&gt; <span class="php-quote">''</span>,
+</span><span id="2930" class="l"><a class="l" href="#2930">2930 </a>            <span class="php-quote">'url'</span> =&gt; <span class="php-quote">''</span>
+</span><span id="2931" class="l"><a class="l" href="#2931">2931 </a>        );
+</span><span id="2932" class="l"><a class="l" href="#2932">2932 </a>
+</span><span id="2933" class="l"><a class="l" href="#2933">2933 </a>    <span class="php-comment">// Make sure there's a preview for gravatars available.</span>
+</span><span id="2934" class="l"><a class="l" href="#2934">2934 </a>    <span class="php-var">$avatar</span>[<span class="php-quote">'gravatar_preview'</span>] = <span class="php-quote">'//www.gravatar.com/avatar/'</span> . <span class="php-keyword2">md5</span>(<span class="php-keyword2">strtolower</span>(<span class="php-var">$profile</span>[<span class="php-quote">'email_address'</span>])) . <span class="php-quote">'d='</span> . <span class="php-var">$modSettings</span>[<span class="php-quote">'avatar_max_height'</span>] . (!<span class="php-keyword1">empty</span>(<span class="php-var">$modSettings</span>[<span class="php-quote">'gravatar_rating'</span>]) ? (<span class="php-quote">'&amp;amp;r='</span> . <span class="php-var">$modSettings</span>[<span class="php-quote">'gravatar_rating'</span>]) : <span class="php-quote">''</span>);
+</span><span id="2935" class="l"><a class="l" href="#2935">2935 </a>
+</span><span id="2936" class="l"><a class="l" href="#2936">2936 </a>    <span class="php-keyword1">return</span> <span class="php-var">$avatar</span>;
+</span><span id="2937" class="l"><a class="l" href="#2937">2937 </a>}
+</span><span id="2938" class="l"><a class="l" href="#2938">2938 </a>
+</span><span id="2939" class="l"><a class="l" href="#2939">2939 </a><span class="php-comment">/**
+</span></span><span id="2940" class="l"><a class="l" href="#2940">2940 </a><span class="php-comment"> * Get information about the server
+</span></span><span id="2941" class="l"><a class="l" href="#2941">2941 </a><span class="php-comment"> */</span>
+</span><span id="2942" class="l"><a class="l" href="#2942">2942 </a><span class="php-keyword1">function</span> <a id="_detectServer" href="#_detectServer">detectServer</a>()
+</span><span id="2943" class="l"><a class="l" href="#2943">2943 </a>{
+</span><span id="2944" class="l"><a class="l" href="#2944">2944 </a>    <span class="php-keyword1">global</span> <span class="php-var">$context</span>;
 </span><span id="2945" class="l"><a class="l" href="#2945">2945 </a>
-</span><span id="2946" class="l"><a class="l" href="#2946">2946 </a><span class="php-comment">/**
-</span></span><span id="2947" class="l"><a class="l" href="#2947">2947 </a><span class="php-comment"> * Do some important security checks:
-</span></span><span id="2948" class="l"><a class="l" href="#2948">2948 </a><span class="php-comment"> *
-</span></span><span id="2949" class="l"><a class="l" href="#2949">2949 </a><span class="php-comment"> * What it does:
-</span></span><span id="2950" class="l"><a class="l" href="#2950">2950 </a><span class="php-comment"> * - checks the existence of critical files e.g. install.php
-</span></span><span id="2951" class="l"><a class="l" href="#2951">2951 </a><span class="php-comment"> * - checks for an active admin session.
-</span></span><span id="2952" class="l"><a class="l" href="#2952">2952 </a><span class="php-comment"> * - checks cache directory is writable.
-</span></span><span id="2953" class="l"><a class="l" href="#2953">2953 </a><span class="php-comment"> * - calls secureDirectory to protect attachments &amp; cache.
-</span></span><span id="2954" class="l"><a class="l" href="#2954">2954 </a><span class="php-comment"> * - checks if the forum is in maintance mode.
-</span></span><span id="2955" class="l"><a class="l" href="#2955">2955 </a><span class="php-comment"> */</span>
-</span><span id="2956" class="l"><a class="l" href="#2956">2956 </a><span class="php-keyword1">function</span> <a id="_doSecurityChecks" href="#_doSecurityChecks">doSecurityChecks</a>()
-</span><span id="2957" class="l"><a class="l" href="#2957">2957 </a>{
-</span><span id="2958" class="l"><a class="l" href="#2958">2958 </a>    <span class="php-keyword1">global</span> <span class="php-var">$modSettings</span>, <span class="php-var">$context</span>, <span class="php-var">$maintenance</span>, <span class="php-var">$user_info</span>, <span class="php-var">$txt</span>, <span class="php-var">$scripturl</span>, <span class="php-var">$user_settings</span>;
-</span><span id="2959" class="l"><a class="l" href="#2959">2959 </a>
-</span><span id="2960" class="l"><a class="l" href="#2960">2960 </a>    <span class="php-var">$show_warnings</span> = <span class="php-keyword1">false</span>;
-</span><span id="2961" class="l"><a class="l" href="#2961">2961 </a>
-</span><span id="2962" class="l"><a class="l" href="#2962">2962 </a>    <span class="php-keyword1">if</span> (allowedTo(<span class="php-quote">'admin_forum'</span>) &amp;&amp; !<span class="php-var">$user_info</span>[<span class="php-quote">'is_guest'</span>])
-</span><span id="2963" class="l"><a class="l" href="#2963">2963 </a>    {
-</span><span id="2964" class="l"><a class="l" href="#2964">2964 </a>        <span class="php-comment">// If agreement is enabled, at least the english version shall exists</span>
-</span><span id="2965" class="l"><a class="l" href="#2965">2965 </a>        <span class="php-keyword1">if</span> (<span class="php-var">$modSettings</span>[<span class="php-quote">'requireAgreement'</span>] &amp;&amp; !<span class="php-keyword2">file_exists</span>(BOARDDIR . <span class="php-quote">'/agreement.txt'</span>))
-</span><span id="2966" class="l"><a class="l" href="#2966">2966 </a>        {
-</span><span id="2967" class="l"><a class="l" href="#2967">2967 </a>            <span class="php-var">$context</span>[<span class="php-quote">'security_controls_files'</span>][<span class="php-quote">'title'</span>] = <span class="php-var">$txt</span>[<span class="php-quote">'generic_warning'</span>];
-</span><span id="2968" class="l"><a class="l" href="#2968">2968 </a>            <span class="php-var">$context</span>[<span class="php-quote">'security_controls_files'</span>][<span class="php-quote">'errors'</span>][<span class="php-quote">'agreement'</span>] = <span class="php-var">$txt</span>[<span class="php-quote">'agreement_missing'</span>];
-</span><span id="2969" class="l"><a class="l" href="#2969">2969 </a>            <span class="php-var">$show_warnings</span> = <span class="php-keyword1">true</span>;
-</span><span id="2970" class="l"><a class="l" href="#2970">2970 </a>        }
-</span><span id="2971" class="l"><a class="l" href="#2971">2971 </a>
-</span><span id="2972" class="l"><a class="l" href="#2972">2972 </a>        <span class="php-comment">// Cache directory writeable?</span>
-</span><span id="2973" class="l"><a class="l" href="#2973">2973 </a>        <span class="php-keyword1">if</span> (!<span class="php-keyword1">empty</span>(<span class="php-var">$modSettings</span>[<span class="php-quote">'cache_enable'</span>]) &amp;&amp; !<span class="php-keyword2">is_writable</span>(CACHEDIR))
-</span><span id="2974" class="l"><a class="l" href="#2974">2974 </a>        {
-</span><span id="2975" class="l"><a class="l" href="#2975">2975 </a>            <span class="php-var">$context</span>[<span class="php-quote">'security_controls_files'</span>][<span class="php-quote">'title'</span>] = <span class="php-var">$txt</span>[<span class="php-quote">'generic_warning'</span>];
-</span><span id="2976" class="l"><a class="l" href="#2976">2976 </a>            <span class="php-var">$context</span>[<span class="php-quote">'security_controls_files'</span>][<span class="php-quote">'errors'</span>][<span class="php-quote">'cache'</span>] = <span class="php-var">$txt</span>[<span class="php-quote">'cache_writable'</span>];
-</span><span id="2977" class="l"><a class="l" href="#2977">2977 </a>            <span class="php-var">$show_warnings</span> = <span class="php-keyword1">true</span>;
-</span><span id="2978" class="l"><a class="l" href="#2978">2978 </a>        }
-</span><span id="2979" class="l"><a class="l" href="#2979">2979 </a>
-</span><span id="2980" class="l"><a class="l" href="#2980">2980 </a>        <span class="php-comment">// @todo add a hook here</span>
-</span><span id="2981" class="l"><a class="l" href="#2981">2981 </a>        <span class="php-var">$securityFiles</span> = <span class="php-keyword1">array</span>(<span class="php-quote">'install.php'</span>, <span class="php-quote">'upgrade.php'</span>, <span class="php-quote">'convert.php'</span>, <span class="php-quote">'repair_paths.php'</span>, <span class="php-quote">'repair_settings.php'</span>, <span class="php-quote">'Settings.php~'</span>, <span class="php-quote">'Settings_bak.php~'</span>);
-</span><span id="2982" class="l"><a class="l" href="#2982">2982 </a>        <span class="php-keyword1">foreach</span> (<span class="php-var">$securityFiles</span> <span class="php-keyword1">as</span> <span class="php-var">$securityFile</span>)
-</span><span id="2983" class="l"><a class="l" href="#2983">2983 </a>        {
-</span><span id="2984" class="l"><a class="l" href="#2984">2984 </a>            <span class="php-keyword1">if</span> (<span class="php-keyword2">file_exists</span>(BOARDDIR . <span class="php-quote">'/'</span> . <span class="php-var">$securityFile</span>))
-</span><span id="2985" class="l"><a class="l" href="#2985">2985 </a>            {
-</span><span id="2986" class="l"><a class="l" href="#2986">2986 </a>                <span class="php-var">$context</span>[<span class="php-quote">'security_controls_files'</span>][<span class="php-quote">'title'</span>] = <span class="php-var">$txt</span>[<span class="php-quote">'security_risk'</span>];
-</span><span id="2987" class="l"><a class="l" href="#2987">2987 </a>                <span class="php-var">$context</span>[<span class="php-quote">'security_controls_files'</span>][<span class="php-quote">'errors'</span>][<span class="php-var">$securityFile</span>] = <span class="php-keyword2">sprintf</span>(<span class="php-var">$txt</span>[<span class="php-quote">'not_removed'</span>], <span class="php-var">$securityFile</span>);
-</span><span id="2988" class="l"><a class="l" href="#2988">2988 </a>                <span class="php-var">$show_warnings</span> = <span class="php-keyword1">true</span>;
-</span><span id="2989" class="l"><a class="l" href="#2989">2989 </a>
-</span><span id="2990" class="l"><a class="l" href="#2990">2990 </a>                <span class="php-keyword1">if</span> (<span class="php-var">$securityFile</span> == <span class="php-quote">'Settings.php~'</span> || <span class="php-var">$securityFile</span> == <span class="php-quote">'Settings_bak.php~'</span>)
-</span><span id="2991" class="l"><a class="l" href="#2991">2991 </a>                {
-</span><span id="2992" class="l"><a class="l" href="#2992">2992 </a>                    <span class="php-var">$context</span>[<span class="php-quote">'security_controls_files'</span>][<span class="php-quote">'errors'</span>][<span class="php-var">$securityFile</span>] .= <span class="php-quote">'&lt;span class=&quot;smalltext&quot;&gt;'</span> . <span class="php-keyword2">sprintf</span>(<span class="php-var">$txt</span>[<span class="php-quote">'not_removed_extra'</span>], <span class="php-var">$securityFile</span>, <span class="php-keyword2">substr</span>(<span class="php-var">$securityFile</span>, <span class="php-num">0</span>, -<span class="php-num">1</span>)) . <span class="php-quote">'&lt;/span&gt;'</span>;
-</span><span id="2993" class="l"><a class="l" href="#2993">2993 </a>                }
-</span><span id="2994" class="l"><a class="l" href="#2994">2994 </a>            }
-</span><span id="2995" class="l"><a class="l" href="#2995">2995 </a>        }
-</span><span id="2996" class="l"><a class="l" href="#2996">2996 </a>
-</span><span id="2997" class="l"><a class="l" href="#2997">2997 </a>        <span class="php-comment">// We are already checking so many files...just few more doesn't make any difference! :P</span>
-</span><span id="2998" class="l"><a class="l" href="#2998">2998 </a>        <span class="php-keyword1">require_once</span>(SUBSDIR . <span class="php-quote">'/Attachments.subs.php'</span>);
-</span><span id="2999" class="l"><a class="l" href="#2999">2999 </a>        <span class="php-var">$path</span> = getAttachmentPath();
-</span><span id="3000" class="l"><a class="l" href="#3000">3000 </a>        secureDirectory(<span class="php-var">$path</span>, <span class="php-keyword1">true</span>);
-</span><span id="3001" class="l"><a class="l" href="#3001">3001 </a>        secureDirectory(CACHEDIR);
-</span><span id="3002" class="l"><a class="l" href="#3002">3002 </a>
-</span><span id="3003" class="l"><a class="l" href="#3003">3003 </a>        <span class="php-comment">// Active admin session?</span>
-</span><span id="3004" class="l"><a class="l" href="#3004">3004 </a>        <span class="php-keyword1">if</span> (<span class="php-keyword1">empty</span>(<span class="php-var">$modSettings</span>[<span class="php-quote">'securityDisable'</span>]) &amp;&amp; (<span class="php-keyword1">isset</span>(<span class="php-var">$_SESSION</span>[<span class="php-quote">'admin_time'</span>]) &amp;&amp; <span class="php-var">$_SESSION</span>[<span class="php-quote">'admin_time'</span>] + (<span class="php-var">$modSettings</span>[<span class="php-quote">'admin_session_lifetime'</span>] * <span class="php-num">60</span>) &gt; <span class="php-keyword2">time</span>()))
-</span><span id="3005" class="l"><a class="l" href="#3005">3005 </a>            <span class="php-var">$context</span>[<span class="php-quote">'warning_controls'</span>][<span class="php-quote">'admin_session'</span>] = <span class="php-keyword2">sprintf</span>(<span class="php-var">$txt</span>[<span class="php-quote">'admin_session_active'</span>], (<span class="php-var">$scripturl</span> . <span class="php-quote">'?action=admin;area=adminlogoff;redir;'</span> . <span class="php-var">$context</span>[<span class="php-quote">'session_var'</span>] . <span class="php-quote">'='</span> . <span class="php-var">$context</span>[<span class="php-quote">'session_id'</span>]));
-</span><span id="3006" class="l"><a class="l" href="#3006">3006 </a>
-</span><span id="3007" class="l"><a class="l" href="#3007">3007 </a>        <span class="php-comment">// Maintenance mode enabled?</span>
-</span><span id="3008" class="l"><a class="l" href="#3008">3008 </a>        <span class="php-keyword1">if</span> (!<span class="php-keyword1">empty</span>(<span class="php-var">$maintenance</span>))
-</span><span id="3009" class="l"><a class="l" href="#3009">3009 </a>            <span class="php-var">$context</span>[<span class="php-quote">'warning_controls'</span>][<span class="php-quote">'maintenance'</span>] = <span class="php-keyword2">sprintf</span>(<span class="php-var">$txt</span>[<span class="php-quote">'admin_maintenance_active'</span>], (<span class="php-var">$scripturl</span> . <span class="php-quote">'?action=admin;area=serversettings;'</span> . <span class="php-var">$context</span>[<span class="php-quote">'session_var'</span>] . <span class="php-quote">'='</span> . <span class="php-var">$context</span>[<span class="php-quote">'session_id'</span>]));
-</span><span id="3010" class="l"><a class="l" href="#3010">3010 </a>    }
+</span><span id="2946" class="l"><a class="l" href="#2946">2946 </a>    <span class="php-var">$context</span>[<span class="php-quote">'server'</span>] = <span class="php-keyword1">array</span>(
+</span><span id="2947" class="l"><a class="l" href="#2947">2947 </a>        <span class="php-quote">'is_iis'</span> =&gt; <span class="php-keyword1">isset</span>(<span class="php-var">$_SERVER</span>[<span class="php-quote">'SERVER_SOFTWARE'</span>]) &amp;&amp; <span class="php-keyword2">strpos</span>(<span class="php-var">$_SERVER</span>[<span class="php-quote">'SERVER_SOFTWARE'</span>], <span class="php-quote">'Microsoft-IIS'</span>) !== <span class="php-keyword1">false</span>,
+</span><span id="2948" class="l"><a class="l" href="#2948">2948 </a>        <span class="php-quote">'is_apache'</span> =&gt; <span class="php-keyword1">isset</span>(<span class="php-var">$_SERVER</span>[<span class="php-quote">'SERVER_SOFTWARE'</span>]) &amp;&amp; <span class="php-keyword2">strpos</span>(<span class="php-var">$_SERVER</span>[<span class="php-quote">'SERVER_SOFTWARE'</span>], <span class="php-quote">'Apache'</span>) !== <span class="php-keyword1">false</span>,
+</span><span id="2949" class="l"><a class="l" href="#2949">2949 </a>        <span class="php-quote">'is_litespeed'</span> =&gt; <span class="php-keyword1">isset</span>(<span class="php-var">$_SERVER</span>[<span class="php-quote">'SERVER_SOFTWARE'</span>]) &amp;&amp; <span class="php-keyword2">strpos</span>(<span class="php-var">$_SERVER</span>[<span class="php-quote">'SERVER_SOFTWARE'</span>], <span class="php-quote">'LiteSpeed'</span>) !== <span class="php-keyword1">false</span>,
+</span><span id="2950" class="l"><a class="l" href="#2950">2950 </a>        <span class="php-quote">'is_lighttpd'</span> =&gt; <span class="php-keyword1">isset</span>(<span class="php-var">$_SERVER</span>[<span class="php-quote">'SERVER_SOFTWARE'</span>]) &amp;&amp; <span class="php-keyword2">strpos</span>(<span class="php-var">$_SERVER</span>[<span class="php-quote">'SERVER_SOFTWARE'</span>], <span class="php-quote">'lighttpd'</span>) !== <span class="php-keyword1">false</span>,
+</span><span id="2951" class="l"><a class="l" href="#2951">2951 </a>        <span class="php-quote">'is_nginx'</span> =&gt; <span class="php-keyword1">isset</span>(<span class="php-var">$_SERVER</span>[<span class="php-quote">'SERVER_SOFTWARE'</span>]) &amp;&amp; <span class="php-keyword2">strpos</span>(<span class="php-var">$_SERVER</span>[<span class="php-quote">'SERVER_SOFTWARE'</span>], <span class="php-quote">'nginx'</span>) !== <span class="php-keyword1">false</span>,
+</span><span id="2952" class="l"><a class="l" href="#2952">2952 </a>        <span class="php-quote">'is_cgi'</span> =&gt; <span class="php-keyword1">isset</span>(<span class="php-var">$_SERVER</span>[<span class="php-quote">'SERVER_SOFTWARE'</span>]) &amp;&amp; <span class="php-keyword2">strpos</span>(<span class="php-keyword2">php_sapi_name</span>(), <span class="php-quote">'cgi'</span>) !== <span class="php-keyword1">false</span>,
+</span><span id="2953" class="l"><a class="l" href="#2953">2953 </a>        <span class="php-quote">'is_windows'</span> =&gt; <span class="php-keyword2">strpos</span>(PHP_OS, <span class="php-quote">'WIN'</span>) === <span class="php-num">0</span>,
+</span><span id="2954" class="l"><a class="l" href="#2954">2954 </a>        <span class="php-quote">'iso_case_folding'</span> =&gt; <span class="php-keyword2">ord</span>(<span class="php-keyword2">strtolower</span>(<span class="php-keyword2">chr</span>(<span class="php-num">138</span>))) === <span class="php-num">154</span>,
+</span><span id="2955" class="l"><a class="l" href="#2955">2955 </a>    );
+</span><span id="2956" class="l"><a class="l" href="#2956">2956 </a>
+</span><span id="2957" class="l"><a class="l" href="#2957">2957 </a>    <span class="php-comment">// A bug in some versions of IIS under CGI (older ones) makes cookie setting not work with Location: headers.</span>
+</span><span id="2958" class="l"><a class="l" href="#2958">2958 </a>    <span class="php-var">$context</span>[<span class="php-quote">'server'</span>][<span class="php-quote">'needs_login_fix'</span>] = <span class="php-var">$context</span>[<span class="php-quote">'server'</span>][<span class="php-quote">'is_cgi'</span>] &amp;&amp; <span class="php-var">$context</span>[<span class="php-quote">'server'</span>][<span class="php-quote">'is_iis'</span>];
+</span><span id="2959" class="l"><a class="l" href="#2959">2959 </a>}
+</span><span id="2960" class="l"><a class="l" href="#2960">2960 </a>
+</span><span id="2961" class="l"><a class="l" href="#2961">2961 </a><span class="php-comment">/**
+</span></span><span id="2962" class="l"><a class="l" href="#2962">2962 </a><span class="php-comment"> * Do some important security checks:
+</span></span><span id="2963" class="l"><a class="l" href="#2963">2963 </a><span class="php-comment"> *
+</span></span><span id="2964" class="l"><a class="l" href="#2964">2964 </a><span class="php-comment"> * What it does:
+</span></span><span id="2965" class="l"><a class="l" href="#2965">2965 </a><span class="php-comment"> * - checks the existence of critical files e.g. install.php
+</span></span><span id="2966" class="l"><a class="l" href="#2966">2966 </a><span class="php-comment"> * - checks for an active admin session.
+</span></span><span id="2967" class="l"><a class="l" href="#2967">2967 </a><span class="php-comment"> * - checks cache directory is writable.
+</span></span><span id="2968" class="l"><a class="l" href="#2968">2968 </a><span class="php-comment"> * - calls secureDirectory to protect attachments &amp; cache.
+</span></span><span id="2969" class="l"><a class="l" href="#2969">2969 </a><span class="php-comment"> * - checks if the forum is in maintance mode.
+</span></span><span id="2970" class="l"><a class="l" href="#2970">2970 </a><span class="php-comment"> */</span>
+</span><span id="2971" class="l"><a class="l" href="#2971">2971 </a><span class="php-keyword1">function</span> <a id="_doSecurityChecks" href="#_doSecurityChecks">doSecurityChecks</a>()
+</span><span id="2972" class="l"><a class="l" href="#2972">2972 </a>{
+</span><span id="2973" class="l"><a class="l" href="#2973">2973 </a>    <span class="php-keyword1">global</span> <span class="php-var">$modSettings</span>, <span class="php-var">$context</span>, <span class="php-var">$maintenance</span>, <span class="php-var">$user_info</span>, <span class="php-var">$txt</span>, <span class="php-var">$scripturl</span>, <span class="php-var">$user_settings</span>, <span class="php-var">$options</span>;
+</span><span id="2974" class="l"><a class="l" href="#2974">2974 </a>
+</span><span id="2975" class="l"><a class="l" href="#2975">2975 </a>    <span class="php-var">$show_warnings</span> = <span class="php-keyword1">false</span>;
+</span><span id="2976" class="l"><a class="l" href="#2976">2976 </a>
+</span><span id="2977" class="l"><a class="l" href="#2977">2977 </a>    <span class="php-keyword1">if</span> (allowedTo(<span class="php-quote">'admin_forum'</span>) &amp;&amp; !<span class="php-var">$user_info</span>[<span class="php-quote">'is_guest'</span>])
+</span><span id="2978" class="l"><a class="l" href="#2978">2978 </a>    {
+</span><span id="2979" class="l"><a class="l" href="#2979">2979 </a>        <span class="php-comment">// If agreement is enabled, at least the english version shall exists</span>
+</span><span id="2980" class="l"><a class="l" href="#2980">2980 </a>        <span class="php-keyword1">if</span> (<span class="php-var">$modSettings</span>[<span class="php-quote">'requireAgreement'</span>] &amp;&amp; !<span class="php-keyword2">file_exists</span>(BOARDDIR . <span class="php-quote">'/agreement.txt'</span>))
+</span><span id="2981" class="l"><a class="l" href="#2981">2981 </a>        {
+</span><span id="2982" class="l"><a class="l" href="#2982">2982 </a>            <span class="php-var">$context</span>[<span class="php-quote">'security_controls_files'</span>][<span class="php-quote">'title'</span>] = <span class="php-var">$txt</span>[<span class="php-quote">'generic_warning'</span>];
+</span><span id="2983" class="l"><a class="l" href="#2983">2983 </a>            <span class="php-var">$context</span>[<span class="php-quote">'security_controls_files'</span>][<span class="php-quote">'errors'</span>][<span class="php-quote">'agreement'</span>] = <span class="php-var">$txt</span>[<span class="php-quote">'agreement_missing'</span>];
+</span><span id="2984" class="l"><a class="l" href="#2984">2984 </a>            <span class="php-var">$show_warnings</span> = <span class="php-keyword1">true</span>;
+</span><span id="2985" class="l"><a class="l" href="#2985">2985 </a>        }
+</span><span id="2986" class="l"><a class="l" href="#2986">2986 </a>
+</span><span id="2987" class="l"><a class="l" href="#2987">2987 </a>        <span class="php-comment">// Cache directory writeable?</span>
+</span><span id="2988" class="l"><a class="l" href="#2988">2988 </a>        <span class="php-keyword1">if</span> (!<span class="php-keyword1">empty</span>(<span class="php-var">$modSettings</span>[<span class="php-quote">'cache_enable'</span>]) &amp;&amp; !<span class="php-keyword2">is_writable</span>(CACHEDIR))
+</span><span id="2989" class="l"><a class="l" href="#2989">2989 </a>        {
+</span><span id="2990" class="l"><a class="l" href="#2990">2990 </a>            <span class="php-var">$context</span>[<span class="php-quote">'security_controls_files'</span>][<span class="php-quote">'title'</span>] = <span class="php-var">$txt</span>[<span class="php-quote">'generic_warning'</span>];
+</span><span id="2991" class="l"><a class="l" href="#2991">2991 </a>            <span class="php-var">$context</span>[<span class="php-quote">'security_controls_files'</span>][<span class="php-quote">'errors'</span>][<span class="php-quote">'cache'</span>] = <span class="php-var">$txt</span>[<span class="php-quote">'cache_writable'</span>];
+</span><span id="2992" class="l"><a class="l" href="#2992">2992 </a>            <span class="php-var">$show_warnings</span> = <span class="php-keyword1">true</span>;
+</span><span id="2993" class="l"><a class="l" href="#2993">2993 </a>        }
+</span><span id="2994" class="l"><a class="l" href="#2994">2994 </a>
+</span><span id="2995" class="l"><a class="l" href="#2995">2995 </a>        <span class="php-comment">// @todo add a hook here</span>
+</span><span id="2996" class="l"><a class="l" href="#2996">2996 </a>        <span class="php-var">$securityFiles</span> = <span class="php-keyword1">array</span>(<span class="php-quote">'install.php'</span>, <span class="php-quote">'upgrade.php'</span>, <span class="php-quote">'convert.php'</span>, <span class="php-quote">'repair_paths.php'</span>, <span class="php-quote">'repair_settings.php'</span>, <span class="php-quote">'Settings.php~'</span>, <span class="php-quote">'Settings_bak.php~'</span>);
+</span><span id="2997" class="l"><a class="l" href="#2997">2997 </a>        <span class="php-keyword1">foreach</span> (<span class="php-var">$securityFiles</span> <span class="php-keyword1">as</span> <span class="php-var">$securityFile</span>)
+</span><span id="2998" class="l"><a class="l" href="#2998">2998 </a>        {
+</span><span id="2999" class="l"><a class="l" href="#2999">2999 </a>            <span class="php-keyword1">if</span> (<span class="php-keyword2">file_exists</span>(BOARDDIR . <span class="php-quote">'/'</span> . <span class="php-var">$securityFile</span>))
+</span><span id="3000" class="l"><a class="l" href="#3000">3000 </a>            {
+</span><span id="3001" class="l"><a class="l" href="#3001">3001 </a>                <span class="php-var">$context</span>[<span class="php-quote">'security_controls_files'</span>][<span class="php-quote">'title'</span>] = <span class="php-var">$txt</span>[<span class="php-quote">'security_risk'</span>];
+</span><span id="3002" class="l"><a class="l" href="#3002">3002 </a>                <span class="php-var">$context</span>[<span class="php-quote">'security_controls_files'</span>][<span class="php-quote">'errors'</span>][<span class="php-var">$securityFile</span>] = <span class="php-keyword2">sprintf</span>(<span class="php-var">$txt</span>[<span class="php-quote">'not_removed'</span>], <span class="php-var">$securityFile</span>);
+</span><span id="3003" class="l"><a class="l" href="#3003">3003 </a>                <span class="php-var">$show_warnings</span> = <span class="php-keyword1">true</span>;
+</span><span id="3004" class="l"><a class="l" href="#3004">3004 </a>
+</span><span id="3005" class="l"><a class="l" href="#3005">3005 </a>                <span class="php-keyword1">if</span> (<span class="php-var">$securityFile</span> == <span class="php-quote">'Settings.php~'</span> || <span class="php-var">$securityFile</span> == <span class="php-quote">'Settings_bak.php~'</span>)
+</span><span id="3006" class="l"><a class="l" href="#3006">3006 </a>                {
+</span><span id="3007" class="l"><a class="l" href="#3007">3007 </a>                    <span class="php-var">$context</span>[<span class="php-quote">'security_controls_files'</span>][<span class="php-quote">'errors'</span>][<span class="php-var">$securityFile</span>] .= <span class="php-quote">'&lt;span class=&quot;smalltext&quot;&gt;'</span> . <span class="php-keyword2">sprintf</span>(<span class="php-var">$txt</span>[<span class="php-quote">'not_removed_extra'</span>], <span class="php-var">$securityFile</span>, <span class="php-keyword2">substr</span>(<span class="php-var">$securityFile</span>, <span class="php-num">0</span>, -<span class="php-num">1</span>)) . <span class="php-quote">'&lt;/span&gt;'</span>;
+</span><span id="3008" class="l"><a class="l" href="#3008">3008 </a>                }
+</span><span id="3009" class="l"><a class="l" href="#3009">3009 </a>            }
+</span><span id="3010" class="l"><a class="l" href="#3010">3010 </a>        }
 </span><span id="3011" class="l"><a class="l" href="#3011">3011 </a>
-</span><span id="3012" class="l"><a class="l" href="#3012">3012 </a>    <span class="php-comment">// Check for database errors.</span>
-</span><span id="3013" class="l"><a class="l" href="#3013">3013 </a>    <span class="php-keyword1">if</span> (!<span class="php-keyword1">empty</span>(<span class="php-var">$_SESSION</span>[<span class="php-quote">'query_command_denied'</span>]))
-</span><span id="3014" class="l"><a class="l" href="#3014">3014 </a>    {
-</span><span id="3015" class="l"><a class="l" href="#3015">3015 </a>        <span class="php-keyword1">if</span> (<span class="php-var">$user_info</span>[<span class="php-quote">'is_admin'</span>])
-</span><span id="3016" class="l"><a class="l" href="#3016">3016 </a>        {
-</span><span id="3017" class="l"><a class="l" href="#3017">3017 </a>            <span class="php-var">$context</span>[<span class="php-quote">'security_controls_query'</span>][<span class="php-quote">'title'</span>] = <span class="php-var">$txt</span>[<span class="php-quote">'query_command_denied'</span>];
-</span><span id="3018" class="l"><a class="l" href="#3018">3018 </a>            <span class="php-var">$show_warnings</span> = <span class="php-keyword1">true</span>;
-</span><span id="3019" class="l"><a class="l" href="#3019">3019 </a>            <span class="php-keyword1">foreach</span> (<span class="php-var">$_SESSION</span>[<span class="php-quote">'query_command_denied'</span>] <span class="php-keyword1">as</span> <span class="php-var">$command</span> =&gt; <span class="php-var">$error</span>)
-</span><span id="3020" class="l"><a class="l" href="#3020">3020 </a>                <span class="php-var">$context</span>[<span class="php-quote">'security_controls_query'</span>][<span class="php-quote">'errors'</span>][<span class="php-var">$command</span>] = <span class="php-quote">'&lt;pre&gt;'</span> . Util::<span class="php-keyword2">htmlspecialchars</span>(<span class="php-var">$error</span>) . <span class="php-quote">'&lt;/pre&gt;'</span>;
-</span><span id="3021" class="l"><a class="l" href="#3021">3021 </a>        }
-</span><span id="3022" class="l"><a class="l" href="#3022">3022 </a>        <span class="php-keyword1">else</span>
-</span><span id="3023" class="l"><a class="l" href="#3023">3023 </a>        {
-</span><span id="3024" class="l"><a class="l" href="#3024">3024 </a>            <span class="php-var">$context</span>[<span class="php-quote">'security_controls_query'</span>][<span class="php-quote">'title'</span>] = <span class="php-var">$txt</span>[<span class="php-quote">'query_command_denied_guests'</span>];
-</span><span id="3025" class="l"><a class="l" href="#3025">3025 </a>            <span class="php-keyword1">foreach</span> (<span class="php-var">$_SESSION</span>[<span class="php-quote">'query_command_denied'</span>] <span class="php-keyword1">as</span> <span class="php-var">$command</span> =&gt; <span class="php-var">$error</span>)
-</span><span id="3026" class="l"><a class="l" href="#3026">3026 </a>                <span class="php-var">$context</span>[<span class="php-quote">'security_controls_query'</span>][<span class="php-quote">'errors'</span>][<span class="php-var">$command</span>] = <span class="php-quote">'&lt;pre&gt;'</span> . <span class="php-keyword2">sprintf</span>(<span class="php-var">$txt</span>[<span class="php-quote">'query_command_denied_guests_msg'</span>], Util::<span class="php-keyword2">htmlspecialchars</span>(<span class="php-var">$command</span>)) . <span class="php-quote">'&lt;/pre&gt;'</span>;
-</span><span id="3027" class="l"><a class="l" href="#3027">3027 </a>        }
-</span><span id="3028" class="l"><a class="l" href="#3028">3028 </a>    }
-</span><span id="3029" class="l"><a class="l" href="#3029">3029 </a>
-</span><span id="3030" class="l"><a class="l" href="#3030">3030 </a>    <span class="php-comment">// Are there any members waiting for approval?</span>
-</span><span id="3031" class="l"><a class="l" href="#3031">3031 </a>    <span class="php-keyword1">if</span> (allowedTo(<span class="php-quote">'moderate_forum'</span>) &amp;&amp; ((!<span class="php-keyword1">empty</span>(<span class="php-var">$modSettings</span>[<span class="php-quote">'registration_method'</span>]) &amp;&amp; <span class="php-var">$modSettings</span>[<span class="php-quote">'registration_method'</span>] == <span class="php-num">2</span>) || !<span class="php-keyword1">empty</span>(<span class="php-var">$modSettings</span>[<span class="php-quote">'approveAccountDeletion'</span>])) &amp;&amp; !<span class="php-keyword1">empty</span>(<span class="php-var">$modSettings</span>[<span class="php-quote">'unapprovedMembers'</span>]))
-</span><span id="3032" class="l"><a class="l" href="#3032">3032 </a>        <span class="php-var">$context</span>[<span class="php-quote">'warning_controls'</span>][<span class="php-quote">'unapproved_members'</span>] = <span class="php-keyword2">sprintf</span>(<span class="php-var">$txt</span>[<span class="php-var">$modSettings</span>[<span class="php-quote">'unapprovedMembers'</span>] == <span class="php-num">1</span> ? <span class="php-quote">'approve_one_member_waiting'</span> : <span class="php-quote">'approve_many_members_waiting'</span>], <span class="php-var">$scripturl</span> . <span class="php-quote">'?action=admin;area=viewmembers;sa=browse;type=approve'</span>, <span class="php-var">$modSettings</span>[<span class="php-quote">'unapprovedMembers'</span>]);
-</span><span id="3033" class="l"><a class="l" href="#3033">3033 </a>
-</span><span id="3034" class="l"><a class="l" href="#3034">3034 </a>    <span class="php-keyword1">if</span> (!<span class="php-keyword1">empty</span>(<span class="php-var">$context</span>[<span class="php-quote">'open_mod_reports'</span>]) &amp;&amp; (<span class="php-keyword1">empty</span>(<span class="php-var">$user_settings</span>[<span class="php-quote">'mod_prefs'</span>]) || <span class="php-var">$user_settings</span>[<span class="php-quote">'mod_prefs'</span>][<span class="php-num">0</span>] == <span class="php-num">1</span>))
-</span><span id="3035" class="l"><a class="l" href="#3035">3035 </a>        <span class="php-var">$context</span>[<span class="php-quote">'warning_controls'</span>][<span class="php-quote">'open_mod_reports'</span>] = <span class="php-quote">'&lt;a href=&quot;'</span> . <span class="php-var">$scripturl</span> . <span class="php-quote">'?action=moderate;area=reports&quot;&gt;'</span> . <span class="php-keyword2">sprintf</span>(<span class="php-var">$txt</span>[<span class="php-quote">'mod_reports_waiting'</span>], <span class="php-var">$context</span>[<span class="php-quote">'open_mod_reports'</span>]) . <span class="php-quote">'&lt;/a&gt;'</span>;
-</span><span id="3036" class="l"><a class="l" href="#3036">3036 </a>
-</span><span id="3037" class="l"><a class="l" href="#3037">3037 </a>    <span class="php-keyword1">if</span> (<span class="php-keyword1">isset</span>(<span class="php-var">$_SESSION</span>[<span class="php-quote">'ban'</span>][<span class="php-quote">'cannot_post'</span>]))
-</span><span id="3038" class="l"><a class="l" href="#3038">3038 </a>    {
-</span><span id="3039" class="l"><a class="l" href="#3039">3039 </a>        <span class="php-comment">// An admin cannot be banned (technically he could), and if it is better he knows.</span>
-</span><span id="3040" class="l"><a class="l" href="#3040">3040 </a>        <span class="php-var">$context</span>[<span class="php-quote">'security_controls_ban'</span>][<span class="php-quote">'title'</span>] = <span class="php-keyword2">sprintf</span>(<span class="php-var">$txt</span>[<span class="php-quote">'you_are_post_banned'</span>], <span class="php-var">$user_info</span>[<span class="php-quote">'is_guest'</span>] ? <span class="php-var">$txt</span>[<span class="php-quote">'guest_title'</span>] : <span class="php-var">$user_info</span>[<span class="php-quote">'name'</span>]);
-</span><span id="3041" class="l"><a class="l" href="#3041">3041 </a>        <span class="php-var">$show_warnings</span> = <span class="php-keyword1">true</span>;
-</span><span id="3042" class="l"><a class="l" href="#3042">3042 </a>
-</span><span id="3043" class="l"><a class="l" href="#3043">3043 </a>        <span class="php-var">$context</span>[<span class="php-quote">'security_controls_ban'</span>][<span class="php-quote">'errors'</span>][<span class="php-quote">'reason'</span>] = <span class="php-quote">''</span>;
-</span><span id="3044" class="l"><a class="l" href="#3044">3044 </a>
-</span><span id="3045" class="l"><a class="l" href="#3045">3045 </a>        <span class="php-keyword1">if</span> (!<span class="php-keyword1">empty</span>(<span class="php-var">$_SESSION</span>[<span class="php-quote">'ban'</span>][<span class="php-quote">'cannot_post'</span>][<span class="php-quote">'reason'</span>]))
-</span><span id="3046" class="l"><a class="l" href="#3046">3046 </a>            <span class="php-var">$context</span>[<span class="php-quote">'security_controls_ban'</span>][<span class="php-quote">'errors'</span>][<span class="php-quote">'reason'</span>] = <span class="php-var">$_SESSION</span>[<span class="php-quote">'ban'</span>][<span class="php-quote">'cannot_post'</span>][<span class="php-quote">'reason'</span>];
-</span><span id="3047" class="l"><a class="l" href="#3047">3047 </a>
-</span><span id="3048" class="l"><a class="l" href="#3048">3048 </a>        <span class="php-keyword1">if</span> (!<span class="php-keyword1">empty</span>(<span class="php-var">$_SESSION</span>[<span class="php-quote">'ban'</span>][<span class="php-quote">'expire_time'</span>]))
-</span><span id="3049" class="l"><a class="l" href="#3049">3049 </a>            <span class="php-var">$context</span>[<span class="php-quote">'security_controls_ban'</span>][<span class="php-quote">'errors'</span>][<span class="php-quote">'reason'</span>] .= <span class="php-quote">'&lt;span class=&quot;smalltext&quot;&gt;'</span> . <span class="php-keyword2">sprintf</span>(<span class="php-var">$txt</span>[<span class="php-quote">'your_ban_expires'</span>], standardTime(<span class="php-var">$_SESSION</span>[<span class="php-quote">'ban'</span>][<span class="php-quote">'expire_time'</span>], <span class="php-keyword1">false</span>)) . <span class="php-quote">'&lt;/span&gt;'</span>;
+</span><span id="3012" class="l"><a class="l" href="#3012">3012 </a>        <span class="php-comment">// We are already checking so many files...just few more doesn't make any difference! :P</span>
+</span><span id="3013" class="l"><a class="l" href="#3013">3013 </a>        <span class="php-keyword1">require_once</span>(SUBSDIR . <span class="php-quote">'/Attachments.subs.php'</span>);
+</span><span id="3014" class="l"><a class="l" href="#3014">3014 </a>        <span class="php-var">$path</span> = getAttachmentPath();
+</span><span id="3015" class="l"><a class="l" href="#3015">3015 </a>        secureDirectory(<span class="php-var">$path</span>, <span class="php-keyword1">true</span>);
+</span><span id="3016" class="l"><a class="l" href="#3016">3016 </a>        secureDirectory(CACHEDIR);
+</span><span id="3017" class="l"><a class="l" href="#3017">3017 </a>
+</span><span id="3018" class="l"><a class="l" href="#3018">3018 </a>        <span class="php-comment">// Active admin session?</span>
+</span><span id="3019" class="l"><a class="l" href="#3019">3019 </a>        <span class="php-keyword1">if</span> (<span class="php-keyword1">empty</span>(<span class="php-var">$modSettings</span>[<span class="php-quote">'securityDisable'</span>]) &amp;&amp; (<span class="php-keyword1">isset</span>(<span class="php-var">$_SESSION</span>[<span class="php-quote">'admin_time'</span>]) &amp;&amp; <span class="php-var">$_SESSION</span>[<span class="php-quote">'admin_time'</span>] + (<span class="php-var">$modSettings</span>[<span class="php-quote">'admin_session_lifetime'</span>] * <span class="php-num">60</span>) &gt; <span class="php-keyword2">time</span>()))
+</span><span id="3020" class="l"><a class="l" href="#3020">3020 </a>            <span class="php-var">$context</span>[<span class="php-quote">'warning_controls'</span>][<span class="php-quote">'admin_session'</span>] = <span class="php-keyword2">sprintf</span>(<span class="php-var">$txt</span>[<span class="php-quote">'admin_session_active'</span>], (<span class="php-var">$scripturl</span> . <span class="php-quote">'?action=admin;area=adminlogoff;redir;'</span> . <span class="php-var">$context</span>[<span class="php-quote">'session_var'</span>] . <span class="php-quote">'='</span> . <span class="php-var">$context</span>[<span class="php-quote">'session_id'</span>]));
+</span><span id="3021" class="l"><a class="l" href="#3021">3021 </a>
+</span><span id="3022" class="l"><a class="l" href="#3022">3022 </a>        <span class="php-comment">// Maintenance mode enabled?</span>
+</span><span id="3023" class="l"><a class="l" href="#3023">3023 </a>        <span class="php-keyword1">if</span> (!<span class="php-keyword1">empty</span>(<span class="php-var">$maintenance</span>))
+</span><span id="3024" class="l"><a class="l" href="#3024">3024 </a>            <span class="php-var">$context</span>[<span class="php-quote">'warning_controls'</span>][<span class="php-quote">'maintenance'</span>] = <span class="php-keyword2">sprintf</span>(<span class="php-var">$txt</span>[<span class="php-quote">'admin_maintenance_active'</span>], (<span class="php-var">$scripturl</span> . <span class="php-quote">'?action=admin;area=serversettings;'</span> . <span class="php-var">$context</span>[<span class="php-quote">'session_var'</span>] . <span class="php-quote">'='</span> . <span class="php-var">$context</span>[<span class="php-quote">'session_id'</span>]));
+</span><span id="3025" class="l"><a class="l" href="#3025">3025 </a>
+</span><span id="3026" class="l"><a class="l" href="#3026">3026 </a>        <span class="php-comment">// New updates</span>
+</span><span id="3027" class="l"><a class="l" href="#3027">3027 </a>        <span class="php-keyword1">if</span> (<span class="php-keyword2">defined</span>(<span class="php-quote">'FORUM_VERSION'</span>))
+</span><span id="3028" class="l"><a class="l" href="#3028">3028 </a>        {
+</span><span id="3029" class="l"><a class="l" href="#3029">3029 </a>            <span class="php-var">$index</span> = <span class="php-quote">'new_in_'</span> . <span class="php-keyword2">str_replace</span>(<span class="php-keyword1">array</span>(<span class="php-quote">'ElkArte '</span>, <span class="php-quote">'.'</span>), <span class="php-keyword1">array</span>(<span class="php-quote">''</span>, <span class="php-quote">'_'</span>), FORUM_VERSION);
+</span><span id="3030" class="l"><a class="l" href="#3030">3030 </a>            <span class="php-keyword1">if</span> (!<span class="php-keyword1">empty</span>(<span class="php-var">$modSettings</span>[<span class="php-var">$index</span>]) &amp;&amp; <span class="php-keyword1">empty</span>(<span class="php-var">$options</span>[<span class="php-quote">'dismissed_'</span> . <span class="php-var">$index</span>]))
+</span><span id="3031" class="l"><a class="l" href="#3031">3031 </a>            {
+</span><span id="3032" class="l"><a class="l" href="#3032">3032 </a>                <span class="php-var">$context</span>[<span class="php-quote">'new_version_updates'</span>] = <span class="php-keyword1">array</span>(
+</span><span id="3033" class="l"><a class="l" href="#3033">3033 </a>                    <span class="php-quote">'title'</span> =&gt; <span class="php-var">$txt</span>[<span class="php-quote">'new_version_updates'</span>],
+</span><span id="3034" class="l"><a class="l" href="#3034">3034 </a>                    <span class="php-quote">'errors'</span> =&gt; <span class="php-keyword1">array</span>(replaceBasicActionUrl(<span class="php-var">$txt</span>[<span class="php-quote">'new_version_updates_text'</span>])),
+</span><span id="3035" class="l"><a class="l" href="#3035">3035 </a>                );
+</span><span id="3036" class="l"><a class="l" href="#3036">3036 </a>            }
+</span><span id="3037" class="l"><a class="l" href="#3037">3037 </a>        }
+</span><span id="3038" class="l"><a class="l" href="#3038">3038 </a>    }
+</span><span id="3039" class="l"><a class="l" href="#3039">3039 </a>
+</span><span id="3040" class="l"><a class="l" href="#3040">3040 </a>    <span class="php-comment">// Check for database errors.</span>
+</span><span id="3041" class="l"><a class="l" href="#3041">3041 </a>    <span class="php-keyword1">if</span> (!<span class="php-keyword1">empty</span>(<span class="php-var">$_SESSION</span>[<span class="php-quote">'query_command_denied'</span>]))
+</span><span id="3042" class="l"><a class="l" href="#3042">3042 </a>    {
+</span><span id="3043" class="l"><a class="l" href="#3043">3043 </a>        <span class="php-keyword1">if</span> (<span class="php-var">$user_info</span>[<span class="php-quote">'is_admin'</span>])
+</span><span id="3044" class="l"><a class="l" href="#3044">3044 </a>        {
+</span><span id="3045" class="l"><a class="l" href="#3045">3045 </a>            <span class="php-var">$context</span>[<span class="php-quote">'security_controls_query'</span>][<span class="php-quote">'title'</span>] = <span class="php-var">$txt</span>[<span class="php-quote">'query_command_denied'</span>];
+</span><span id="3046" class="l"><a class="l" href="#3046">3046 </a>            <span class="php-var">$show_warnings</span> = <span class="php-keyword1">true</span>;
+</span><span id="3047" class="l"><a class="l" href="#3047">3047 </a>            <span class="php-keyword1">foreach</span> (<span class="php-var">$_SESSION</span>[<span class="php-quote">'query_command_denied'</span>] <span class="php-keyword1">as</span> <span class="php-var">$command</span> =&gt; <span class="php-var">$error</span>)
+</span><span id="3048" class="l"><a class="l" href="#3048">3048 </a>                <span class="php-var">$context</span>[<span class="php-quote">'security_controls_query'</span>][<span class="php-quote">'errors'</span>][<span class="php-var">$command</span>] = <span class="php-quote">'&lt;pre&gt;'</span> . Util::<span class="php-keyword2">htmlspecialchars</span>(<span class="php-var">$error</span>) . <span class="php-quote">'&lt;/pre&gt;'</span>;
+</span><span id="3049" class="l"><a class="l" href="#3049">3049 </a>        }
 </span><span id="3050" class="l"><a class="l" href="#3050">3050 </a>        <span class="php-keyword1">else</span>
-</span><span id="3051" class="l"><a class="l" href="#3051">3051 </a>            <span class="php-var">$context</span>[<span class="php-quote">'security_controls_ban'</span>][<span class="php-quote">'errors'</span>][<span class="php-quote">'reason'</span>] .= <span class="php-quote">'&lt;span class=&quot;smalltext&quot;&gt;'</span> . <span class="php-var">$txt</span>[<span class="php-quote">'your_ban_expires_never'</span>] . <span class="php-quote">'&lt;/span&gt;'</span>;
-</span><span id="3052" class="l"><a class="l" href="#3052">3052 </a>    }
-</span><span id="3053" class="l"><a class="l" href="#3053">3053 </a>
-</span><span id="3054" class="l"><a class="l" href="#3054">3054 </a>    <span class="php-comment">// Finally, let's show the layer.</span>
-</span><span id="3055" class="l"><a class="l" href="#3055">3055 </a>    <span class="php-keyword1">if</span> (<span class="php-var">$show_warnings</span> || !<span class="php-keyword1">empty</span>(<span class="php-var">$context</span>[<span class="php-quote">'warning_controls'</span>]))
-</span><span id="3056" class="l"><a class="l" href="#3056">3056 </a>        Template_Layers::getInstance()-&gt;addAfter(<span class="php-quote">'admin_warning'</span>, <span class="php-quote">'body'</span>);
-</span><span id="3057" class="l"><a class="l" href="#3057">3057 </a>}
-</span><span id="3058" class="l"><a class="l" href="#3058">3058 </a>
-</span><span id="3059" class="l"><a class="l" href="#3059">3059 </a><span class="php-comment">/**
-</span></span><span id="3060" class="l"><a class="l" href="#3060">3060 </a><span class="php-comment"> * Returns the current server load for nix systems
-</span></span><span id="3061" class="l"><a class="l" href="#3061">3061 </a><span class="php-comment"> *
-</span></span><span id="3062" class="l"><a class="l" href="#3062">3062 </a><span class="php-comment"> * - Used to enable / disable features based on current system overhead
-</span></span><span id="3063" class="l"><a class="l" href="#3063">3063 </a><span class="php-comment"> */</span>
-</span><span id="3064" class="l"><a class="l" href="#3064">3064 </a><span class="php-keyword1">function</span> <a id="_detectServerLoad" href="#_detectServerLoad">detectServerLoad</a>()
-</span><span id="3065" class="l"><a class="l" href="#3065">3065 </a>{
-</span><span id="3066" class="l"><a class="l" href="#3066">3066 </a>    <span class="php-var">$load_average</span> = @<span class="php-keyword2">file_get_contents</span>(<span class="php-quote">'/proc/loadavg'</span>);
-</span><span id="3067" class="l"><a class="l" href="#3067">3067 </a>
-</span><span id="3068" class="l"><a class="l" href="#3068">3068 </a>    <span class="php-keyword1">if</span> (!<span class="php-keyword1">empty</span>(<span class="php-var">$load_average</span>) &amp;&amp; <span class="php-keyword2">preg_match</span>(<span class="php-quote">'~^([^ ]+?) ([^ ]+?) ([^ ]+)~'</span>, <span class="php-var">$load_average</span>, <span class="php-var">$matches</span>) != <span class="php-num">0</span>)
-</span><span id="3069" class="l"><a class="l" href="#3069">3069 </a>        <span class="php-keyword1">return</span> (float) <span class="php-var">$matches</span>[<span class="php-num">1</span>];
-</span><span id="3070" class="l"><a class="l" href="#3070">3070 </a>    <span class="php-keyword1">elseif</span> ((<span class="php-var">$load_average</span> = @`uptime`) != <span class="php-keyword1">null</span> &amp;&amp; <span class="php-keyword2">preg_match</span>(<span class="php-quote">'~load average[s]?: (\d+\.\d+), (\d+\.\d+), (\d+\.\d+)~i'</span>, <span class="php-var">$load_average</span>, <span class="php-var">$matches</span>) != <span class="php-num">0</span>)
-</span><span id="3071" class="l"><a class="l" href="#3071">3071 </a>        <span class="php-keyword1">return</span> (float) <span class="php-var">$matches</span>[<span class="php-num">1</span>];
+</span><span id="3051" class="l"><a class="l" href="#3051">3051 </a>        {
+</span><span id="3052" class="l"><a class="l" href="#3052">3052 </a>            <span class="php-var">$context</span>[<span class="php-quote">'security_controls_query'</span>][<span class="php-quote">'title'</span>] = <span class="php-var">$txt</span>[<span class="php-quote">'query_command_denied_guests'</span>];
+</span><span id="3053" class="l"><a class="l" href="#3053">3053 </a>            <span class="php-keyword1">foreach</span> (<span class="php-var">$_SESSION</span>[<span class="php-quote">'query_command_denied'</span>] <span class="php-keyword1">as</span> <span class="php-var">$command</span> =&gt; <span class="php-var">$error</span>)
+</span><span id="3054" class="l"><a class="l" href="#3054">3054 </a>                <span class="php-var">$context</span>[<span class="php-quote">'security_controls_query'</span>][<span class="php-quote">'errors'</span>][<span class="php-var">$command</span>] = <span class="php-quote">'&lt;pre&gt;'</span> . <span class="php-keyword2">sprintf</span>(<span class="php-var">$txt</span>[<span class="php-quote">'query_command_denied_guests_msg'</span>], Util::<span class="php-keyword2">htmlspecialchars</span>(<span class="php-var">$command</span>)) . <span class="php-quote">'&lt;/pre&gt;'</span>;
+</span><span id="3055" class="l"><a class="l" href="#3055">3055 </a>        }
+</span><span id="3056" class="l"><a class="l" href="#3056">3056 </a>    }
+</span><span id="3057" class="l"><a class="l" href="#3057">3057 </a>
+</span><span id="3058" class="l"><a class="l" href="#3058">3058 </a>    <span class="php-comment">// Are there any members waiting for approval?</span>
+</span><span id="3059" class="l"><a class="l" href="#3059">3059 </a>    <span class="php-keyword1">if</span> (allowedTo(<span class="php-quote">'moderate_forum'</span>) &amp;&amp; ((!<span class="php-keyword1">empty</span>(<span class="php-var">$modSettings</span>[<span class="php-quote">'registration_method'</span>]) &amp;&amp; <span class="php-var">$modSettings</span>[<span class="php-quote">'registration_method'</span>] == <span class="php-num">2</span>) || !<span class="php-keyword1">empty</span>(<span class="php-var">$modSettings</span>[<span class="php-quote">'approveAccountDeletion'</span>])) &amp;&amp; !<span class="php-keyword1">empty</span>(<span class="php-var">$modSettings</span>[<span class="php-quote">'unapprovedMembers'</span>]))
+</span><span id="3060" class="l"><a class="l" href="#3060">3060 </a>        <span class="php-var">$context</span>[<span class="php-quote">'warning_controls'</span>][<span class="php-quote">'unapproved_members'</span>] = <span class="php-keyword2">sprintf</span>(<span class="php-var">$txt</span>[<span class="php-var">$modSettings</span>[<span class="php-quote">'unapprovedMembers'</span>] == <span class="php-num">1</span> ? <span class="php-quote">'approve_one_member_waiting'</span> : <span class="php-quote">'approve_many_members_waiting'</span>], <span class="php-var">$scripturl</span> . <span class="php-quote">'?action=admin;area=viewmembers;sa=browse;type=approve'</span>, <span class="php-var">$modSettings</span>[<span class="php-quote">'unapprovedMembers'</span>]);
+</span><span id="3061" class="l"><a class="l" href="#3061">3061 </a>
+</span><span id="3062" class="l"><a class="l" href="#3062">3062 </a>    <span class="php-keyword1">if</span> (!<span class="php-keyword1">empty</span>(<span class="php-var">$context</span>[<span class="php-quote">'open_mod_reports'</span>]) &amp;&amp; (<span class="php-keyword1">empty</span>(<span class="php-var">$user_settings</span>[<span class="php-quote">'mod_prefs'</span>]) || <span class="php-var">$user_settings</span>[<span class="php-quote">'mod_prefs'</span>][<span class="php-num">0</span>] == <span class="php-num">1</span>))
+</span><span id="3063" class="l"><a class="l" href="#3063">3063 </a>        <span class="php-var">$context</span>[<span class="php-quote">'warning_controls'</span>][<span class="php-quote">'open_mod_reports'</span>] = <span class="php-quote">'&lt;a href=&quot;'</span> . <span class="php-var">$scripturl</span> . <span class="php-quote">'?action=moderate;area=reports&quot;&gt;'</span> . <span class="php-keyword2">sprintf</span>(<span class="php-var">$txt</span>[<span class="php-quote">'mod_reports_waiting'</span>], <span class="php-var">$context</span>[<span class="php-quote">'open_mod_reports'</span>]) . <span class="php-quote">'&lt;/a&gt;'</span>;
+</span><span id="3064" class="l"><a class="l" href="#3064">3064 </a>
+</span><span id="3065" class="l"><a class="l" href="#3065">3065 </a>    <span class="php-keyword1">if</span> (<span class="php-keyword1">isset</span>(<span class="php-var">$_SESSION</span>[<span class="php-quote">'ban'</span>][<span class="php-quote">'cannot_post'</span>]))
+</span><span id="3066" class="l"><a class="l" href="#3066">3066 </a>    {
+</span><span id="3067" class="l"><a class="l" href="#3067">3067 </a>        <span class="php-comment">// An admin cannot be banned (technically he could), and if it is better he knows.</span>
+</span><span id="3068" class="l"><a class="l" href="#3068">3068 </a>        <span class="php-var">$context</span>[<span class="php-quote">'security_controls_ban'</span>][<span class="php-quote">'title'</span>] = <span class="php-keyword2">sprintf</span>(<span class="php-var">$txt</span>[<span class="php-quote">'you_are_post_banned'</span>], <span class="php-var">$user_info</span>[<span class="php-quote">'is_guest'</span>] ? <span class="php-var">$txt</span>[<span class="php-quote">'guest_title'</span>] : <span class="php-var">$user_info</span>[<span class="php-quote">'name'</span>]);
+</span><span id="3069" class="l"><a class="l" href="#3069">3069 </a>        <span class="php-var">$show_warnings</span> = <span class="php-keyword1">true</span>;
+</span><span id="3070" class="l"><a class="l" href="#3070">3070 </a>
+</span><span id="3071" class="l"><a class="l" href="#3071">3071 </a>        <span class="php-var">$context</span>[<span class="php-quote">'security_controls_ban'</span>][<span class="php-quote">'errors'</span>][<span class="php-quote">'reason'</span>] = <span class="php-quote">''</span>;
 </span><span id="3072" class="l"><a class="l" href="#3072">3072 </a>
-</span><span id="3073" class="l"><a class="l" href="#3073">3073 </a>    <span class="php-keyword1">return</span> <span class="php-keyword1">false</span>;
-</span><span id="3074" class="l"><a class="l" href="#3074">3074 </a></span>}</code></pre>
+</span><span id="3073" class="l"><a class="l" href="#3073">3073 </a>        <span class="php-keyword1">if</span> (!<span class="php-keyword1">empty</span>(<span class="php-var">$_SESSION</span>[<span class="php-quote">'ban'</span>][<span class="php-quote">'cannot_post'</span>][<span class="php-quote">'reason'</span>]))
+</span><span id="3074" class="l"><a class="l" href="#3074">3074 </a>            <span class="php-var">$context</span>[<span class="php-quote">'security_controls_ban'</span>][<span class="php-quote">'errors'</span>][<span class="php-quote">'reason'</span>] = <span class="php-var">$_SESSION</span>[<span class="php-quote">'ban'</span>][<span class="php-quote">'cannot_post'</span>][<span class="php-quote">'reason'</span>];
+</span><span id="3075" class="l"><a class="l" href="#3075">3075 </a>
+</span><span id="3076" class="l"><a class="l" href="#3076">3076 </a>        <span class="php-keyword1">if</span> (!<span class="php-keyword1">empty</span>(<span class="php-var">$_SESSION</span>[<span class="php-quote">'ban'</span>][<span class="php-quote">'expire_time'</span>]))
+</span><span id="3077" class="l"><a class="l" href="#3077">3077 </a>            <span class="php-var">$context</span>[<span class="php-quote">'security_controls_ban'</span>][<span class="php-quote">'errors'</span>][<span class="php-quote">'reason'</span>] .= <span class="php-quote">'&lt;span class=&quot;smalltext&quot;&gt;'</span> . <span class="php-keyword2">sprintf</span>(<span class="php-var">$txt</span>[<span class="php-quote">'your_ban_expires'</span>], standardTime(<span class="php-var">$_SESSION</span>[<span class="php-quote">'ban'</span>][<span class="php-quote">'expire_time'</span>], <span class="php-keyword1">false</span>)) . <span class="php-quote">'&lt;/span&gt;'</span>;
+</span><span id="3078" class="l"><a class="l" href="#3078">3078 </a>        <span class="php-keyword1">else</span>
+</span><span id="3079" class="l"><a class="l" href="#3079">3079 </a>            <span class="php-var">$context</span>[<span class="php-quote">'security_controls_ban'</span>][<span class="php-quote">'errors'</span>][<span class="php-quote">'reason'</span>] .= <span class="php-quote">'&lt;span class=&quot;smalltext&quot;&gt;'</span> . <span class="php-var">$txt</span>[<span class="php-quote">'your_ban_expires_never'</span>] . <span class="php-quote">'&lt;/span&gt;'</span>;
+</span><span id="3080" class="l"><a class="l" href="#3080">3080 </a>    }
+</span><span id="3081" class="l"><a class="l" href="#3081">3081 </a>
+</span><span id="3082" class="l"><a class="l" href="#3082">3082 </a>    <span class="php-comment">// Finally, let's show the layer.</span>
+</span><span id="3083" class="l"><a class="l" href="#3083">3083 </a>    <span class="php-keyword1">if</span> (<span class="php-var">$show_warnings</span> || !<span class="php-keyword1">empty</span>(<span class="php-var">$context</span>[<span class="php-quote">'warning_controls'</span>]))
+</span><span id="3084" class="l"><a class="l" href="#3084">3084 </a>        Template_Layers::getInstance()-&gt;addAfter(<span class="php-quote">'admin_warning'</span>, <span class="php-quote">'body'</span>);
+</span><span id="3085" class="l"><a class="l" href="#3085">3085 </a>}
+</span><span id="3086" class="l"><a class="l" href="#3086">3086 </a>
+</span><span id="3087" class="l"><a class="l" href="#3087">3087 </a><span class="php-comment">/**
+</span></span><span id="3088" class="l"><a class="l" href="#3088">3088 </a><span class="php-comment"> * Returns the current server load for nix systems
+</span></span><span id="3089" class="l"><a class="l" href="#3089">3089 </a><span class="php-comment"> *
+</span></span><span id="3090" class="l"><a class="l" href="#3090">3090 </a><span class="php-comment"> * - Used to enable / disable features based on current system overhead
+</span></span><span id="3091" class="l"><a class="l" href="#3091">3091 </a><span class="php-comment"> */</span>
+</span><span id="3092" class="l"><a class="l" href="#3092">3092 </a><span class="php-keyword1">function</span> <a id="_detectServerLoad" href="#_detectServerLoad">detectServerLoad</a>()
+</span><span id="3093" class="l"><a class="l" href="#3093">3093 </a>{
+</span><span id="3094" class="l"><a class="l" href="#3094">3094 </a>    <span class="php-keyword1">if</span> (<span class="php-keyword2">stristr</span>(PHP_OS, <span class="php-quote">'win'</span>))
+</span><span id="3095" class="l"><a class="l" href="#3095">3095 </a>        <span class="php-keyword1">return</span> <span class="php-keyword1">false</span>;
+</span><span id="3096" class="l"><a class="l" href="#3096">3096 </a>
+</span><span id="3097" class="l"><a class="l" href="#3097">3097 </a>    <span class="php-var">$cores</span> = detectServerCores();
+</span><span id="3098" class="l"><a class="l" href="#3098">3098 </a>
+</span><span id="3099" class="l"><a class="l" href="#3099">3099 </a>    <span class="php-comment">// The internal function should always be available</span>
+</span><span id="3100" class="l"><a class="l" href="#3100">3100 </a>    <span class="php-keyword1">if</span> (<span class="php-keyword2">function_exists</span>(<span class="php-quote">'sys_getloadavg'</span>))
+</span><span id="3101" class="l"><a class="l" href="#3101">3101 </a>    {
+</span><span id="3102" class="l"><a class="l" href="#3102">3102 </a>        <span class="php-var">$sys_load</span> = sys_getloadavg();
+</span><span id="3103" class="l"><a class="l" href="#3103">3103 </a>        <span class="php-keyword1">return</span> <span class="php-var">$sys_load</span>[<span class="php-num">0</span>] / <span class="php-var">$cores</span>;
+</span><span id="3104" class="l"><a class="l" href="#3104">3104 </a>    }
+</span><span id="3105" class="l"><a class="l" href="#3105">3105 </a>    <span class="php-comment">// Maybe someone has a custom compile</span>
+</span><span id="3106" class="l"><a class="l" href="#3106">3106 </a>    <span class="php-keyword1">else</span>
+</span><span id="3107" class="l"><a class="l" href="#3107">3107 </a>    {
+</span><span id="3108" class="l"><a class="l" href="#3108">3108 </a>        <span class="php-var">$load_average</span> = @<span class="php-keyword2">file_get_contents</span>(<span class="php-quote">'/proc/loadavg'</span>);
+</span><span id="3109" class="l"><a class="l" href="#3109">3109 </a>
+</span><span id="3110" class="l"><a class="l" href="#3110">3110 </a>        <span class="php-keyword1">if</span> (!<span class="php-keyword1">empty</span>(<span class="php-var">$load_average</span>) &amp;&amp; <span class="php-keyword2">preg_match</span>(<span class="php-quote">'~^([^ ]+?) ([^ ]+?) ([^ ]+)~'</span>, <span class="php-var">$load_average</span>, <span class="php-var">$matches</span>) != <span class="php-num">0</span>)
+</span><span id="3111" class="l"><a class="l" href="#3111">3111 </a>            <span class="php-keyword1">return</span> (float) <span class="php-var">$matches</span>[<span class="php-num">1</span>] / <span class="php-var">$cores</span>;
+</span><span id="3112" class="l"><a class="l" href="#3112">3112 </a>        <span class="php-keyword1">elseif</span> ((<span class="php-var">$load_average</span> = @`uptime`) != <span class="php-keyword1">null</span> &amp;&amp; <span class="php-keyword2">preg_match</span>(<span class="php-quote">'~load average[s]?: (\d+\.\d+), (\d+\.\d+), (\d+\.\d+)~i'</span>, <span class="php-var">$load_average</span>, <span class="php-var">$matches</span>) != <span class="php-num">0</span>)
+</span><span id="3113" class="l"><a class="l" href="#3113">3113 </a>            <span class="php-keyword1">return</span> (float) <span class="php-var">$matches</span>[<span class="php-num">1</span>] / <span class="php-var">$cores</span>;
+</span><span id="3114" class="l"><a class="l" href="#3114">3114 </a>
+</span><span id="3115" class="l"><a class="l" href="#3115">3115 </a>        <span class="php-keyword1">return</span> <span class="php-keyword1">false</span>;
+</span><span id="3116" class="l"><a class="l" href="#3116">3116 </a>    }
+</span><span id="3117" class="l"><a class="l" href="#3117">3117 </a>}
+</span><span id="3118" class="l"><a class="l" href="#3118">3118 </a>
+</span><span id="3119" class="l"><a class="l" href="#3119">3119 </a><span class="php-comment">/**
+</span></span><span id="3120" class="l"><a class="l" href="#3120">3120 </a><span class="php-comment"> * Determines the number of cpu cores available
+</span></span><span id="3121" class="l"><a class="l" href="#3121">3121 </a><span class="php-comment"> *
+</span></span><span id="3122" class="l"><a class="l" href="#3122">3122 </a><span class="php-comment"> * - Used to normalize server load based on cores
+</span></span><span id="3123" class="l"><a class="l" href="#3123">3123 </a><span class="php-comment"> *
+</span></span><span id="3124" class="l"><a class="l" href="#3124">3124 </a><span class="php-comment"> * @return int
+</span></span><span id="3125" class="l"><a class="l" href="#3125">3125 </a><span class="php-comment"> */</span>
+</span><span id="3126" class="l"><a class="l" href="#3126">3126 </a><span class="php-keyword1">function</span> <a id="_detectServerCores" href="#_detectServerCores">detectServerCores</a>()
+</span><span id="3127" class="l"><a class="l" href="#3127">3127 </a>{
+</span><span id="3128" class="l"><a class="l" href="#3128">3128 </a>    <span class="php-var">$cores</span> = @<span class="php-keyword2">file_get_contents</span>(<span class="php-quote">'/proc/cpuinfo'</span>);
+</span><span id="3129" class="l"><a class="l" href="#3129">3129 </a>
+</span><span id="3130" class="l"><a class="l" href="#3130">3130 </a>    <span class="php-keyword1">if</span> (!<span class="php-keyword1">empty</span>(<span class="php-var">$cores</span>))
+</span><span id="3131" class="l"><a class="l" href="#3131">3131 </a>    {
+</span><span id="3132" class="l"><a class="l" href="#3132">3132 </a>        <span class="php-var">$cores</span> = <span class="php-keyword2">preg_match_all</span>(<span class="php-quote">'~^physical id~m'</span>, <span class="php-var">$cores</span>, <span class="php-var">$matches</span>);
+</span><span id="3133" class="l"><a class="l" href="#3133">3133 </a>        <span class="php-keyword1">if</span> (!<span class="php-keyword1">empty</span>(<span class="php-var">$cores</span>))
+</span><span id="3134" class="l"><a class="l" href="#3134">3134 </a>            <span class="php-keyword1">return</span> (int) <span class="php-var">$cores</span>;
+</span><span id="3135" class="l"><a class="l" href="#3135">3135 </a>    }
+</span><span id="3136" class="l"><a class="l" href="#3136">3136 </a>
+</span><span id="3137" class="l"><a class="l" href="#3137">3137 </a>    <span class="php-keyword1">return</span> <span class="php-num">1</span>;
+</span><span id="3138" class="l"><a class="l" href="#3138">3138 </a></span>}</code></pre>
 	</div>
 
 	<div id="footer">
-		ElkArte Documentation API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+		ElkArte 1.0.2 Documentation API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
 	</div>
 </div>
 </body>

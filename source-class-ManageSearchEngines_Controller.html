@@ -5,10 +5,10 @@
 	<meta name="generator" content="ApiGen 2.8.0" />
 	<meta name="robots" content="noindex" />
 
-	<title>File sources/admin/ManageSearchEngines.controller.php | ElkArte Documentation</title>
+	<title>File sources/admin/ManageSearchEngines.controller.php | ElkArte 1.0.2 Documentation</title>
 
 	<script type="text/javascript" src="resources/combined.js?3648714599"></script>
-	<script type="text/javascript" src="elementlist.js?97495842"></script>
+	<script type="text/javascript" src="elementlist.js?2133182458"></script>
 	<link rel="stylesheet" type="text/css" media="all" href="resources/bootstrap.min.css?260161822" />
 	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?2015443609" />
 
@@ -18,7 +18,7 @@
 	<div id="navigation" class="navbar navbar-fixed-top">
 		<div class="navbar-inner">
 			<div class="container">
-				<a href="index.html" class="brand">ElkArte Documentation</a>
+				<a href="index.html" class="brand">ElkArte 1.0.2 Documentation</a>
 				<div class="nav-collapse">
 					<ul class="nav">
 						<li>
@@ -185,7 +185,7 @@
 </span></span><span id="13" class="l"><a class="l" href="#13"> 13 </a><span class="php-comment"> * copyright:   2011 Simple Machines (http://www.simplemachines.org)
 </span></span><span id="14" class="l"><a class="l" href="#14"> 14 </a><span class="php-comment"> * license:     BSD, See included LICENSE.TXT for terms and conditions.
 </span></span><span id="15" class="l"><a class="l" href="#15"> 15 </a><span class="php-comment"> *
-</span></span><span id="16" class="l"><a class="l" href="#16"> 16 </a><span class="php-comment"> * @version 1.0
+</span></span><span id="16" class="l"><a class="l" href="#16"> 16 </a><span class="php-comment"> * @version 1.0.2
 </span></span><span id="17" class="l"><a class="l" href="#17"> 17 </a><span class="php-comment"> *
 </span></span><span id="18" class="l"><a class="l" href="#18"> 18 </a><span class="php-comment"> */</span>
 </span><span id="19" class="l"><a class="l" href="#19"> 19 </a>
@@ -682,17 +682,17 @@
 </span><span id="510" class="l"><a class="l" href="#510">510 </a>            <span class="php-keyword1">foreach</span> (<span class="php-var">$context</span>[<span class="php-quote">'spider_logs'</span>][<span class="php-quote">'rows'</span>] <span class="php-keyword1">as</span> <span class="php-var">$k</span> =&gt; <span class="php-var">$row</span>)
 </span><span id="511" class="l"><a class="l" href="#511">511 </a>            {
 </span><span id="512" class="l"><a class="l" href="#512">512 </a>                <span class="php-comment">// Feature disabled?</span>
-</span><span id="513" class="l"><a class="l" href="#513">513 </a>                <span class="php-keyword1">if</span> (<span class="php-keyword1">empty</span>(<span class="php-var">$row</span>[<span class="php-quote">'viewing'</span>][<span class="php-quote">'value'</span>]) &amp;&amp; <span class="php-keyword1">isset</span>(<span class="php-var">$modSettings</span>[<span class="php-quote">'spider_mode'</span>]) &amp;&amp; <span class="php-var">$modSettings</span>[<span class="php-quote">'spider_mode'</span>] &lt; <span class="php-num">3</span>)
-</span><span id="514" class="l"><a class="l" href="#514">514 </a>                    <span class="php-var">$context</span>[<span class="php-quote">'spider_logs'</span>][<span class="php-quote">'rows'</span>][<span class="php-var">$k</span>][<span class="php-quote">'viewing'</span>][<span class="php-quote">'value'</span>] = <span class="php-quote">'&lt;em&gt;'</span> . <span class="php-var">$txt</span>[<span class="php-quote">'spider_disabled'</span>] . <span class="php-quote">'&lt;/em&gt;'</span>;
+</span><span id="513" class="l"><a class="l" href="#513">513 </a>                <span class="php-keyword1">if</span> (<span class="php-keyword1">empty</span>(<span class="php-var">$row</span>[<span class="php-quote">'data'</span>][<span class="php-quote">'viewing'</span>][<span class="php-quote">'value'</span>]) &amp;&amp; <span class="php-keyword1">isset</span>(<span class="php-var">$modSettings</span>[<span class="php-quote">'spider_mode'</span>]) &amp;&amp; <span class="php-var">$modSettings</span>[<span class="php-quote">'spider_mode'</span>] &lt; <span class="php-num">3</span>)
+</span><span id="514" class="l"><a class="l" href="#514">514 </a>                    <span class="php-var">$context</span>[<span class="php-quote">'spider_logs'</span>][<span class="php-quote">'rows'</span>][<span class="php-var">$k</span>][<span class="php-quote">'data'</span>][<span class="php-quote">'viewing'</span>][<span class="php-quote">'value'</span>] = <span class="php-quote">'&lt;em&gt;'</span> . <span class="php-var">$txt</span>[<span class="php-quote">'spider_disabled'</span>] . <span class="php-quote">'&lt;/em&gt;'</span>;
 </span><span id="515" class="l"><a class="l" href="#515">515 </a>                <span class="php-keyword1">else</span>
-</span><span id="516" class="l"><a class="l" href="#516">516 </a>                    <span class="php-var">$urls</span>[<span class="php-var">$k</span>] = <span class="php-keyword1">array</span>(<span class="php-var">$row</span>[<span class="php-quote">'viewing'</span>][<span class="php-quote">'value'</span>], -<span class="php-num">1</span>);
+</span><span id="516" class="l"><a class="l" href="#516">516 </a>                    <span class="php-var">$urls</span>[<span class="php-var">$k</span>] = <span class="php-keyword1">array</span>(<span class="php-var">$row</span>[<span class="php-quote">'data'</span>][<span class="php-quote">'viewing'</span>][<span class="php-quote">'value'</span>], -<span class="php-num">1</span>);
 </span><span id="517" class="l"><a class="l" href="#517">517 </a>            }
 </span><span id="518" class="l"><a class="l" href="#518">518 </a>
 </span><span id="519" class="l"><a class="l" href="#519">519 </a>            <span class="php-comment">// Now stick in the new URLs.</span>
 </span><span id="520" class="l"><a class="l" href="#520">520 </a>            <span class="php-keyword1">require_once</span>(SUBSDIR . <span class="php-quote">'/Who.subs.php'</span>);
 </span><span id="521" class="l"><a class="l" href="#521">521 </a>            <span class="php-var">$urls</span> = determineActions(<span class="php-var">$urls</span>, <span class="php-quote">'whospider_'</span>);
 </span><span id="522" class="l"><a class="l" href="#522">522 </a>            <span class="php-keyword1">foreach</span> (<span class="php-var">$urls</span> <span class="php-keyword1">as</span> <span class="php-var">$k</span> =&gt; <span class="php-var">$new_url</span>)
-</span><span id="523" class="l"><a class="l" href="#523">523 </a>                <span class="php-var">$context</span>[<span class="php-quote">'spider_logs'</span>][<span class="php-quote">'rows'</span>][<span class="php-var">$k</span>][<span class="php-quote">'viewing'</span>][<span class="php-quote">'value'</span>] = <span class="php-var">$new_url</span>;
+</span><span id="523" class="l"><a class="l" href="#523">523 </a>                <span class="php-var">$context</span>[<span class="php-quote">'spider_logs'</span>][<span class="php-quote">'rows'</span>][<span class="php-var">$k</span>][<span class="php-quote">'data'</span>][<span class="php-quote">'viewing'</span>][<span class="php-quote">'value'</span>] = <span class="php-var">$new_url</span>;
 </span><span id="524" class="l"><a class="l" href="#524">524 </a>        }
 </span><span id="525" class="l"><a class="l" href="#525">525 </a>
 </span><span id="526" class="l"><a class="l" href="#526">526 </a>        <span class="php-var">$context</span>[<span class="php-quote">'page_title'</span>] = <span class="php-var">$txt</span>[<span class="php-quote">'spider_logs'</span>];
@@ -839,7 +839,7 @@
 	</div>
 
 	<div id="footer">
-		ElkArte Documentation API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+		ElkArte 1.0.2 Documentation API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
 	</div>
 </div>
 </body>

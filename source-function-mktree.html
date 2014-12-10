@@ -5,10 +5,10 @@
 	<meta name="generator" content="ApiGen 2.8.0" />
 	<meta name="robots" content="noindex" />
 
-	<title>File sources/subs/Package.subs.php | ElkArte Documentation</title>
+	<title>File sources/subs/Package.subs.php | ElkArte 1.0.2 Documentation</title>
 
 	<script type="text/javascript" src="resources/combined.js?3648714599"></script>
-	<script type="text/javascript" src="elementlist.js?97495842"></script>
+	<script type="text/javascript" src="elementlist.js?2133182458"></script>
 	<link rel="stylesheet" type="text/css" media="all" href="resources/bootstrap.min.css?260161822" />
 	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?2015443609" />
 
@@ -18,7 +18,7 @@
 	<div id="navigation" class="navbar navbar-fixed-top">
 		<div class="navbar-inner">
 			<div class="container">
-				<a href="index.html" class="brand">ElkArte Documentation</a>
+				<a href="index.html" class="brand">ElkArte 1.0.2 Documentation</a>
 				<div class="nav-collapse">
 					<ul class="nav">
 						<li>
@@ -206,7 +206,7 @@
 </span></span><span id="13" class="l"><a class="l" href="#13">  13 </a><span class="php-comment"> * copyright:   2011 Simple Machines (http://www.simplemachines.org)
 </span></span><span id="14" class="l"><a class="l" href="#14">  14 </a><span class="php-comment"> * license:     BSD, See included LICENSE.TXT for terms and conditions.
 </span></span><span id="15" class="l"><a class="l" href="#15">  15 </a><span class="php-comment"> *
-</span></span><span id="16" class="l"><a class="l" href="#16">  16 </a><span class="php-comment"> * @version 1.0
+</span></span><span id="16" class="l"><a class="l" href="#16">  16 </a><span class="php-comment"> * @version 1.0.2
 </span></span><span id="17" class="l"><a class="l" href="#17">  17 </a><span class="php-comment"> *
 </span></span><span id="18" class="l"><a class="l" href="#18">  18 </a><span class="php-comment"> */</span>
 </span><span id="19" class="l"><a class="l" href="#19">  19 </a>
@@ -3369,10 +3369,10 @@
 </span></span><span id="3176" class="l"><a class="l" href="#3176">3176 </a><span class="php-comment"> * @param string $url
 </span></span><span id="3177" class="l"><a class="l" href="#3177">3177 </a><span class="php-comment"> * @param string $post_data = ''
 </span></span><span id="3178" class="l"><a class="l" href="#3178">3178 </a><span class="php-comment"> * @param bool $keep_alive = false
-</span></span><span id="3179" class="l"><a class="l" href="#3179">3179 </a><span class="php-comment"> * @param int $redirection_level = 0
+</span></span><span id="3179" class="l"><a class="l" href="#3179">3179 </a><span class="php-comment"> * @param int $redirection_level = 2
 </span></span><span id="3180" class="l"><a class="l" href="#3180">3180 </a><span class="php-comment"> * @return string
 </span></span><span id="3181" class="l"><a class="l" href="#3181">3181 </a><span class="php-comment"> */</span>
-</span><span id="3182" class="l"><a class="l" href="#3182">3182 </a><span class="php-keyword1">function</span> <a id="_fetch_web_data" href="#_fetch_web_data">fetch_web_data</a>(<span class="php-var">$url</span>, <span class="php-var">$post_data</span> = <span class="php-quote">''</span>, <span class="php-var">$keep_alive</span> = <span class="php-keyword1">false</span>, <span class="php-var">$redirection_level</span> = <span class="php-num">0</span>)
+</span><span id="3182" class="l"><a class="l" href="#3182">3182 </a><span class="php-keyword1">function</span> <a id="_fetch_web_data" href="#_fetch_web_data">fetch_web_data</a>(<span class="php-var">$url</span>, <span class="php-var">$post_data</span> = <span class="php-quote">''</span>, <span class="php-var">$keep_alive</span> = <span class="php-keyword1">false</span>, <span class="php-var">$redirection_level</span> = <span class="php-num">2</span>)
 </span><span id="3183" class="l"><a class="l" href="#3183">3183 </a>{
 </span><span id="3184" class="l"><a class="l" href="#3184">3184 </a>    <span class="php-keyword1">global</span> <span class="php-var">$webmaster_email</span>;
 </span><span id="3185" class="l"><a class="l" href="#3185">3185 </a>    <span class="php-keyword1">static</span> <span class="php-var"><a id="$keep_alive_dom" href="#$keep_alive_dom">$keep_alive_dom</a></span> = <span class="php-keyword1">null</span>, <span class="php-var"><a id="$keep_alive_fp" href="#$keep_alive_fp">$keep_alive_fp</a></span> = <span class="php-keyword1">null</span>;
@@ -3418,7 +3418,7 @@
 </span><span id="3225" class="l"><a class="l" href="#3225">3225 </a>        <span class="php-comment">// Include the file containing the Curl_Fetch_Webdata class.</span>
 </span><span id="3226" class="l"><a class="l" href="#3226">3226 </a>        <span class="php-keyword1">require_once</span>(SOURCEDIR . <span class="php-quote">'/CurlFetchWebdata.class.php'</span>);
 </span><span id="3227" class="l"><a class="l" href="#3227">3227 </a>
-</span><span id="3228" class="l"><a class="l" href="#3228">3228 </a>        <span class="php-var">$fetch_data</span> = <span class="php-keyword1">new</span> Curl_Fetch_Webdata();
+</span><span id="3228" class="l"><a class="l" href="#3228">3228 </a>        <span class="php-var">$fetch_data</span> = <span class="php-keyword1">new</span> Curl_Fetch_Webdata(<span class="php-keyword1">array</span>(), <span class="php-var">$redirection_level</span>);
 </span><span id="3229" class="l"><a class="l" href="#3229">3229 </a>        <span class="php-var">$fetch_data</span>-&gt;get_url_data(<span class="php-var">$url</span>, <span class="php-var">$post_data</span>);
 </span><span id="3230" class="l"><a class="l" href="#3230">3230 </a>
 </span><span id="3231" class="l"><a class="l" href="#3231">3231 </a>        <span class="php-comment">// no errors and a 200 result, then we have a good dataset, well we at least have data ;)</span>
@@ -3733,7 +3733,7 @@
 	</div>
 
 	<div id="footer">
-		ElkArte Documentation API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+		ElkArte 1.0.2 Documentation API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
 	</div>
 </div>
 </body>

@@ -5,10 +5,10 @@
 	<meta name="generator" content="ApiGen 2.8.0" />
 	<meta name="robots" content="noindex" />
 
-	<title>File sources/admin/ManageNews.controller.php | ElkArte Documentation</title>
+	<title>File sources/admin/ManageNews.controller.php | ElkArte 1.0.2 Documentation</title>
 
 	<script type="text/javascript" src="resources/combined.js?3648714599"></script>
-	<script type="text/javascript" src="elementlist.js?97495842"></script>
+	<script type="text/javascript" src="elementlist.js?2133182458"></script>
 	<link rel="stylesheet" type="text/css" media="all" href="resources/bootstrap.min.css?260161822" />
 	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?2015443609" />
 
@@ -18,7 +18,7 @@
 	<div id="navigation" class="navbar navbar-fixed-top">
 		<div class="navbar-inner">
 			<div class="container">
-				<a href="index.html" class="brand">ElkArte Documentation</a>
+				<a href="index.html" class="brand">ElkArte 1.0.2 Documentation</a>
 				<div class="nav-collapse">
 					<ul class="nav">
 						<li>
@@ -174,7 +174,7 @@
 </span></span><span id="13" class="l"><a class="l" href="#13"> 13 </a><span class="php-comment"> * copyright:   2011 Simple Machines (http://www.simplemachines.org)
 </span></span><span id="14" class="l"><a class="l" href="#14"> 14 </a><span class="php-comment"> * license:     BSD, See included LICENSE.TXT for terms and conditions.
 </span></span><span id="15" class="l"><a class="l" href="#15"> 15 </a><span class="php-comment"> *
-</span></span><span id="16" class="l"><a class="l" href="#16"> 16 </a><span class="php-comment"> * @version 1.0
+</span></span><span id="16" class="l"><a class="l" href="#16"> 16 </a><span class="php-comment"> * @version 1.0.1
 </span></span><span id="17" class="l"><a class="l" href="#17"> 17 </a><span class="php-comment"> *
 </span></span><span id="18" class="l"><a class="l" href="#18"> 18 </a><span class="php-comment"> */</span>
 </span><span id="19" class="l"><a class="l" href="#19"> 19 </a>
@@ -512,7 +512,7 @@
 </span><span id="351" class="l"><a class="l" href="#351">351 </a>        <span class="php-comment">// Setup the template!</span>
 </span><span id="352" class="l"><a class="l" href="#352">352 </a>        <span class="php-var">$context</span>[<span class="php-quote">'page_title'</span>] = <span class="php-var">$txt</span>[<span class="php-quote">'admin_newsletters'</span>];
 </span><span id="353" class="l"><a class="l" href="#353">353 </a>        <span class="php-var">$context</span>[<span class="php-quote">'sub_template'</span>] = <span class="php-quote">'email_members_compose'</span>;
-</span><span id="354" class="l"><a class="l" href="#354">354 </a>        <span class="php-var">$context</span>[<span class="php-quote">'subject'</span>] = !<span class="php-keyword1">empty</span>(<span class="php-var">$_POST</span>[<span class="php-quote">'subject'</span>]) ? <span class="php-var">$_POST</span>[<span class="php-quote">'subject'</span>] : <span class="php-keyword2">htmlspecialchars</span>(<span class="php-var">$context</span>[<span class="php-quote">'forum_name'</span>] . <span class="php-quote">': '</span> . <span class="php-var">$txt</span>[<span class="php-quote">'subject'</span>], ENT_COMPAT, <span class="php-quote">'UTF-8'</span>);
+</span><span id="354" class="l"><a class="l" href="#354">354 </a>        <span class="php-var">$context</span>[<span class="php-quote">'subject'</span>] = !<span class="php-keyword1">empty</span>(<span class="php-var">$_POST</span>[<span class="php-quote">'subject'</span>]) ? <span class="php-var">$_POST</span>[<span class="php-quote">'subject'</span>] : <span class="php-var">$context</span>[<span class="php-quote">'forum_name'</span>] . <span class="php-quote">': '</span> . <span class="php-keyword2">htmlspecialchars</span>(<span class="php-var">$txt</span>[<span class="php-quote">'subject'</span>], ENT_COMPAT, <span class="php-quote">'UTF-8'</span>);
 </span><span id="355" class="l"><a class="l" href="#355">355 </a>        <span class="php-var">$context</span>[<span class="php-quote">'message'</span>] = !<span class="php-keyword1">empty</span>(<span class="php-var">$_POST</span>[<span class="php-quote">'message'</span>]) ? <span class="php-var">$_POST</span>[<span class="php-quote">'message'</span>] : <span class="php-keyword2">htmlspecialchars</span>(<span class="php-var">$txt</span>[<span class="php-quote">'message'</span>] . <span class="php-quote">&quot;\n\n&quot;</span> . replaceBasicActionUrl(<span class="php-var">$txt</span>[<span class="php-quote">'regards_team'</span>]) . <span class="php-quote">&quot;\n\n&quot;</span> . <span class="php-quote">'{$board_url}'</span>, ENT_COMPAT, <span class="php-quote">'UTF-8'</span>);
 </span><span id="356" class="l"><a class="l" href="#356">356 </a>
 </span><span id="357" class="l"><a class="l" href="#357">357 </a>        <span class="php-comment">// Needed for the WYSIWYG editor.</span>
@@ -617,9 +617,9 @@
 </span><span id="456" class="l"><a class="l" href="#456">456 </a>            <span class="php-keyword1">foreach</span> (<span class="php-var">$mods</span> <span class="php-keyword1">as</span> <span class="php-var">$row</span>)
 </span><span id="457" class="l"><a class="l" href="#457">457 </a>            {
 </span><span id="458" class="l"><a class="l" href="#458">458 </a>                <span class="php-keyword1">if</span> (<span class="php-keyword2">in_array</span>(<span class="php-num">3</span>, <span class="php-var">$context</span>[<span class="php-quote">'recipients'</span>]))
-</span><span id="459" class="l"><a class="l" href="#459">459 </a>                    <span class="php-var">$context</span>[<span class="php-quote">'recipients'</span>][<span class="php-quote">'exclude_members'</span>][] = <span class="php-var">$row</span>[<span class="php-quote">'identifier'</span>];
+</span><span id="459" class="l"><a class="l" href="#459">459 </a>                    <span class="php-var">$context</span>[<span class="php-quote">'recipients'</span>][<span class="php-quote">'exclude_members'</span>][] = <span class="php-var">$row</span>;
 </span><span id="460" class="l"><a class="l" href="#460">460 </a>                <span class="php-keyword1">else</span>
-</span><span id="461" class="l"><a class="l" href="#461">461 </a>                    <span class="php-var">$context</span>[<span class="php-quote">'recipients'</span>][<span class="php-quote">'members'</span>][] = <span class="php-var">$row</span>[<span class="php-quote">'identifier'</span>];
+</span><span id="461" class="l"><a class="l" href="#461">461 </a>                    <span class="php-var">$context</span>[<span class="php-quote">'recipients'</span>][<span class="php-quote">'members'</span>][] = <span class="php-var">$row</span>;
 </span><span id="462" class="l"><a class="l" href="#462">462 </a>            }
 </span><span id="463" class="l"><a class="l" href="#463">463 </a>        }
 </span><span id="464" class="l"><a class="l" href="#464">464 </a>
@@ -1094,7 +1094,7 @@
 	</div>
 
 	<div id="footer">
-		ElkArte Documentation API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+		ElkArte 1.0.2 Documentation API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
 	</div>
 </div>
 </body>

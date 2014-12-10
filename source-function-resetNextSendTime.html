@@ -5,10 +5,10 @@
 	<meta name="generator" content="ApiGen 2.8.0" />
 	<meta name="robots" content="noindex" />
 
-	<title>File sources/subs/Mail.subs.php | ElkArte Documentation</title>
+	<title>File sources/subs/Mail.subs.php | ElkArte 1.0.2 Documentation</title>
 
 	<script type="text/javascript" src="resources/combined.js?3648714599"></script>
-	<script type="text/javascript" src="elementlist.js?97495842"></script>
+	<script type="text/javascript" src="elementlist.js?2133182458"></script>
 	<link rel="stylesheet" type="text/css" media="all" href="resources/bootstrap.min.css?260161822" />
 	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?2015443609" />
 
@@ -18,7 +18,7 @@
 	<div id="navigation" class="navbar navbar-fixed-top">
 		<div class="navbar-inner">
 			<div class="container">
-				<a href="index.html" class="brand">ElkArte Documentation</a>
+				<a href="index.html" class="brand">ElkArte 1.0.2 Documentation</a>
 				<div class="nav-collapse">
 					<ul class="nav">
 						<li>
@@ -339,6 +339,7 @@
 				<li><a href="function-destroyMenu.html">destroyMenu</a></li>
 				<li><a href="function-detectBrowser.html">detectBrowser</a></li>
 				<li><a href="function-detectServer.html">detectServer</a></li>
+				<li><a href="function-detectServerCores.html">detectServerCores</a></li>
 				<li><a href="function-detectServerLoad.html">detectServerLoad</a></li>
 				<li><a href="function-determineActions.html">determineActions</a></li>
 				<li><a href="function-determineAvatar.html">determineAvatar</a></li>
@@ -447,6 +448,7 @@
 				<li><a href="function-isAllowedTo.html">isAllowedTo</a></li>
 				<li><a href="function-isBrowser.html">isBrowser</a></li>
 				<li><a href="function-isSmileySetInstalled.html">isSmileySetInstalled</a></li>
+				<li><a href="function-isValidEmail.html">isValidEmail</a></li>
 				<li><a href="function-isValidIPv6.html">isValidIPv6</a></li>
 				<li><a href="function-JavaScriptEscape.html">JavaScriptEscape</a></li>
 				<li><a href="function-linkMessages.html">linkMessages</a></li>
@@ -567,6 +569,7 @@
 				<li><a href="function-parsesmileys.html">parsesmileys</a></li>
 				<li><a href="function-pauseRepairProcess.html">pauseRepairProcess</a></li>
 				<li><a href="function-pauseSignatureApplySettings.html">pauseSignatureApplySettings</a></li>
+				<li><a href="function-pbe_run_parsers.html">pbe_run_parsers</a></li>
 				<li><a href="function-permute.html">permute</a></li>
 				<li><a href="function-pollInfo.html">pollInfo</a></li>
 				<li><a href="function-pollInfoForTopic.html">pollInfoForTopic</a></li>
@@ -602,6 +605,7 @@
 				<li><a href="function-quote_callback.html">quote_callback</a></li>
 				<li><a href="function-quote_callback_2.html">quote_callback_2</a></li>
 				<li><a href="function-reapplySubscriptions.html">reapplySubscriptions</a></li>
+				<li><a href="function-recentlyLogged.html">recentlyLogged</a></li>
 				<li><a href="function-recordReport.html">recordReport</a></li>
 				<li><a href="function-recountFailedEmails.html">recountFailedEmails</a></li>
 				<li><a href="function-recountOpenReports.html">recountOpenReports</a></li>
@@ -836,7 +840,7 @@
 </span></span><span id="14" class="l"><a class="l" href="#14">  14 </a><span class="php-comment"> * copyright:   2011 Simple Machines (http://www.simplemachines.org)
 </span></span><span id="15" class="l"><a class="l" href="#15">  15 </a><span class="php-comment"> * license:     BSD, See included LICENSE.TXT for terms and conditions.
 </span></span><span id="16" class="l"><a class="l" href="#16">  16 </a><span class="php-comment"> *
-</span></span><span id="17" class="l"><a class="l" href="#17">  17 </a><span class="php-comment"> * @version 1.0
+</span></span><span id="17" class="l"><a class="l" href="#17">  17 </a><span class="php-comment"> * @version 1.0.1
 </span></span><span id="18" class="l"><a class="l" href="#18">  18 </a><span class="php-comment"> *
 </span></span><span id="19" class="l"><a class="l" href="#19">  19 </a><span class="php-comment"> */</span>
 </span><span id="20" class="l"><a class="l" href="#20">  20 </a>
@@ -1884,7 +1888,7 @@
 </span><span id="1062" class="l"><a class="l" href="#1062">1062 </a>    <span class="php-comment">// Add our email back to the queue, manually.</span>
 </span><span id="1063" class="l"><a class="l" href="#1063">1063 </a>    <span class="php-var">$db</span>-&gt;insert(<span class="php-quote">'insert'</span>,
 </span><span id="1064" class="l"><a class="l" href="#1064">1064 </a>        <span class="php-quote">'{db_prefix}mail_queue'</span>,
-</span><span id="1065" class="l"><a class="l" href="#1065">1065 </a>        <span class="php-keyword1">array</span>(<span class="php-quote">'time_sent'</span> =&gt; <span class="php-quote">'int'</span>, <span class="php-quote">'recipient'</span> =&gt; <span class="php-quote">'string'</span>, <span class="php-quote">'body'</span> =&gt; <span class="php-quote">'string'</span>, <span class="php-quote">'subject'</span> =&gt; <span class="php-quote">'string'</span>, <span class="php-quote">'headers'</span> =&gt; <span class="php-quote">'string'</span>, <span class="php-quote">'send_html'</span> =&gt; <span class="php-quote">'int'</span>, <span class="php-quote">'priority'</span> =&gt; <span class="php-quote">'int'</span>, <span class="php-quote">'private'</span> =&gt; <span class="php-quote">'int'</span>, <span class="php-quote">'message_id'</span> =&gt; <span class="php-quote">'int'</span>),
+</span><span id="1065" class="l"><a class="l" href="#1065">1065 </a>        <span class="php-keyword1">array</span>(<span class="php-quote">'time_sent'</span> =&gt; <span class="php-quote">'int'</span>, <span class="php-quote">'recipient'</span> =&gt; <span class="php-quote">'string'</span>, <span class="php-quote">'body'</span> =&gt; <span class="php-quote">'string'</span>, <span class="php-quote">'subject'</span> =&gt; <span class="php-quote">'string'</span>, <span class="php-quote">'headers'</span> =&gt; <span class="php-quote">'string'</span>, <span class="php-quote">'send_html'</span> =&gt; <span class="php-quote">'int'</span>, <span class="php-quote">'priority'</span> =&gt; <span class="php-quote">'int'</span>, <span class="php-quote">'private'</span> =&gt; <span class="php-quote">'int'</span>, <span class="php-quote">'message_id'</span> =&gt; <span class="php-quote">'string-255'</span>),
 </span><span id="1066" class="l"><a class="l" href="#1066">1066 </a>        <span class="php-var">$failed_emails</span>,
 </span><span id="1067" class="l"><a class="l" href="#1067">1067 </a>        <span class="php-keyword1">array</span>(<span class="php-quote">'id_mail'</span>)
 </span><span id="1068" class="l"><a class="l" href="#1068">1068 </a>    );
@@ -2274,7 +2278,7 @@
 	</div>
 
 	<div id="footer">
-		ElkArte Documentation API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+		ElkArte 1.0.2 Documentation API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
 	</div>
 </div>
 </body>

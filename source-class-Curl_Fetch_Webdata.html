@@ -5,10 +5,10 @@
 	<meta name="generator" content="ApiGen 2.8.0" />
 	<meta name="robots" content="noindex" />
 
-	<title>File sources/CurlFetchWebdata.class.php | ElkArte Documentation</title>
+	<title>File sources/CurlFetchWebdata.class.php | ElkArte 1.0.2 Documentation</title>
 
 	<script type="text/javascript" src="resources/combined.js?3648714599"></script>
-	<script type="text/javascript" src="elementlist.js?97495842"></script>
+	<script type="text/javascript" src="elementlist.js?2133182458"></script>
 	<link rel="stylesheet" type="text/css" media="all" href="resources/bootstrap.min.css?260161822" />
 	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?2015443609" />
 
@@ -18,7 +18,7 @@
 	<div id="navigation" class="navbar navbar-fixed-top">
 		<div class="navbar-inner">
 			<div class="container">
-				<a href="index.html" class="brand">ElkArte Documentation</a>
+				<a href="index.html" class="brand">ElkArte 1.0.2 Documentation</a>
 				<div class="nav-collapse">
 					<ul class="nav">
 						<li>
@@ -339,6 +339,7 @@
 				<li><a href="function-destroyMenu.html">destroyMenu</a></li>
 				<li><a href="function-detectBrowser.html">detectBrowser</a></li>
 				<li><a href="function-detectServer.html">detectServer</a></li>
+				<li><a href="function-detectServerCores.html">detectServerCores</a></li>
 				<li><a href="function-detectServerLoad.html">detectServerLoad</a></li>
 				<li><a href="function-determineActions.html">determineActions</a></li>
 				<li><a href="function-determineAvatar.html">determineAvatar</a></li>
@@ -447,6 +448,7 @@
 				<li><a href="function-isAllowedTo.html">isAllowedTo</a></li>
 				<li><a href="function-isBrowser.html">isBrowser</a></li>
 				<li><a href="function-isSmileySetInstalled.html">isSmileySetInstalled</a></li>
+				<li><a href="function-isValidEmail.html">isValidEmail</a></li>
 				<li><a href="function-isValidIPv6.html">isValidIPv6</a></li>
 				<li><a href="function-JavaScriptEscape.html">JavaScriptEscape</a></li>
 				<li><a href="function-linkMessages.html">linkMessages</a></li>
@@ -567,6 +569,7 @@
 				<li><a href="function-parsesmileys.html">parsesmileys</a></li>
 				<li><a href="function-pauseRepairProcess.html">pauseRepairProcess</a></li>
 				<li><a href="function-pauseSignatureApplySettings.html">pauseSignatureApplySettings</a></li>
+				<li><a href="function-pbe_run_parsers.html">pbe_run_parsers</a></li>
 				<li><a href="function-permute.html">permute</a></li>
 				<li><a href="function-pollInfo.html">pollInfo</a></li>
 				<li><a href="function-pollInfoForTopic.html">pollInfoForTopic</a></li>
@@ -602,6 +605,7 @@
 				<li><a href="function-quote_callback.html">quote_callback</a></li>
 				<li><a href="function-quote_callback_2.html">quote_callback_2</a></li>
 				<li><a href="function-reapplySubscriptions.html">reapplySubscriptions</a></li>
+				<li><a href="function-recentlyLogged.html">recentlyLogged</a></li>
 				<li><a href="function-recordReport.html">recordReport</a></li>
 				<li><a href="function-recountFailedEmails.html">recountFailedEmails</a></li>
 				<li><a href="function-recountOpenReports.html">recountOpenReports</a></li>
@@ -829,7 +833,7 @@
 </span></span><span id="7" class="l"><a class="l" href="#7">  7 </a><span class="php-comment"> * @copyright ElkArte Forum contributors
 </span></span><span id="8" class="l"><a class="l" href="#8">  8 </a><span class="php-comment"> * @license   BSD http://opensource.org/licenses/BSD-3-Clause
 </span></span><span id="9" class="l"><a class="l" href="#9">  9 </a><span class="php-comment"> *
-</span></span><span id="10" class="l"><a class="l" href="#10"> 10 </a><span class="php-comment"> * @version 1.0
+</span></span><span id="10" class="l"><a class="l" href="#10"> 10 </a><span class="php-comment"> * @version 1.0.2
 </span></span><span id="11" class="l"><a class="l" href="#11"> 11 </a><span class="php-comment"> *
 </span></span><span id="12" class="l"><a class="l" href="#12"> 12 </a><span class="php-comment"> */</span>
 </span><span id="13" class="l"><a class="l" href="#13"> 13 </a>
@@ -1108,82 +1112,81 @@
 </span><span id="286" class="l"><a class="l" href="#286">286 </a>        }
 </span><span id="287" class="l"><a class="l" href="#287">287 </a>        <span class="php-keyword1">else</span>
 </span><span id="288" class="l"><a class="l" href="#288">288 </a>            <span class="php-keyword1">return</span> <span class="php-var">$post_data</span>;
-</span><span id="289" class="l"><a class="l" href="#289">289 </a>
-</span><span id="290" class="l"><a class="l" href="#290">290 </a>    }
-</span><span id="291" class="l"><a class="l" href="#291">291 </a>
-</span><span id="292" class="l"><a class="l" href="#292">292 </a>    <span class="php-comment">/**
-</span></span><span id="293" class="l"><a class="l" href="#293">293 </a><span class="php-comment">     * Sets the final cURL options for the current call
-</span></span><span id="294" class="l"><a class="l" href="#294">294 </a><span class="php-comment">     *
-</span></span><span id="295" class="l"><a class="l" href="#295">295 </a><span class="php-comment">     * What it does:
-</span></span><span id="296" class="l"><a class="l" href="#296">296 </a><span class="php-comment">     * - overwrites our default values with user supplied ones or appends new user ones to what we have
-</span></span><span id="297" class="l"><a class="l" href="#297">297 </a><span class="php-comment">     * - sets the callback function now that $this exists
-</span></span><span id="298" class="l"><a class="l" href="#298">298 </a><span class="php-comment">     */</span>
-</span><span id="299" class="l"><a class="l" href="#299">299 </a>    <span class="php-keyword1">private</span> <span class="php-keyword1">function</span> <a id="__setOptions" href="#__setOptions">_setOptions</a>()
-</span><span id="300" class="l"><a class="l" href="#300">300 </a>    {
-</span><span id="301" class="l"><a class="l" href="#301">301 </a>        <span class="php-comment">// Callback to parse the returned headers, if any</span>
-</span><span id="302" class="l"><a class="l" href="#302">302 </a>        <span class="php-var">$this</span>-&gt;default_options[CURLOPT_HEADERFUNCTION] = <span class="php-keyword1">array</span>(<span class="php-var">$this</span>, <span class="php-quote">'_headerCallback'</span>);
-</span><span id="303" class="l"><a class="l" href="#303">303 </a>
-</span><span id="304" class="l"><a class="l" href="#304">304 </a>        <span class="php-comment">// Any user options to account for</span>
-</span><span id="305" class="l"><a class="l" href="#305">305 </a>        <span class="php-keyword1">if</span> (<span class="php-keyword2">is_array</span>(<span class="php-var">$this</span>-&gt;_user_options))
-</span><span id="306" class="l"><a class="l" href="#306">306 </a>        {
-</span><span id="307" class="l"><a class="l" href="#307">307 </a>            <span class="php-var">$keys</span> = <span class="php-keyword2">array_merge</span>(<span class="php-keyword2">array_keys</span>(<span class="php-var">$this</span>-&gt;default_options), <span class="php-keyword2">array_keys</span>(<span class="php-var">$this</span>-&gt;_user_options));
-</span><span id="308" class="l"><a class="l" href="#308">308 </a>            <span class="php-var">$vals</span> = <span class="php-keyword2">array_merge</span>(<span class="php-var">$this</span>-&gt;default_options, <span class="php-var">$this</span>-&gt;_user_options);
-</span><span id="309" class="l"><a class="l" href="#309">309 </a>            <span class="php-var">$this</span>-&gt;_options = <span class="php-keyword2">array_combine</span>(<span class="php-var">$keys</span>, <span class="php-var">$vals</span>);
-</span><span id="310" class="l"><a class="l" href="#310">310 </a>        }
-</span><span id="311" class="l"><a class="l" href="#311">311 </a>        <span class="php-keyword1">else</span>
-</span><span id="312" class="l"><a class="l" href="#312">312 </a>            <span class="php-var">$this</span>-&gt;_options = <span class="php-var">$this</span>-&gt;default_options;
-</span><span id="313" class="l"><a class="l" href="#313">313 </a>
-</span><span id="314" class="l"><a class="l" href="#314">314 </a>        <span class="php-comment">// POST data options, here we don't allow any override</span>
-</span><span id="315" class="l"><a class="l" href="#315">315 </a>        <span class="php-keyword1">if</span> (!<span class="php-keyword1">empty</span>(<span class="php-var">$this</span>-&gt;_post_data))
-</span><span id="316" class="l"><a class="l" href="#316">316 </a>        {
-</span><span id="317" class="l"><a class="l" href="#317">317 </a>            <span class="php-var">$this</span>-&gt;_options[CURLOPT_POST] = <span class="php-num">1</span>;
-</span><span id="318" class="l"><a class="l" href="#318">318 </a>            <span class="php-var">$this</span>-&gt;_options[CURLOPT_POSTFIELDS] = <span class="php-var">$this</span>-&gt;_post_data;
-</span><span id="319" class="l"><a class="l" href="#319">319 </a>        }
-</span><span id="320" class="l"><a class="l" href="#320">320 </a>    }
-</span><span id="321" class="l"><a class="l" href="#321">321 </a>
-</span><span id="322" class="l"><a class="l" href="#322">322 </a>    <span class="php-comment">/**
-</span></span><span id="323" class="l"><a class="l" href="#323">323 </a><span class="php-comment">     * Called to initiate a redirect from a 301, 302 or 307 header
-</span></span><span id="324" class="l"><a class="l" href="#324">324 </a><span class="php-comment">     *
-</span></span><span id="325" class="l"><a class="l" href="#325">325 </a><span class="php-comment">     * What it does
-</span></span><span id="326" class="l"><a class="l" href="#326">326 </a><span class="php-comment">     * - resets the cURL options for the loop, sets the referrer flag
-</span></span><span id="327" class="l"><a class="l" href="#327">327 </a><span class="php-comment">     *
-</span></span><span id="328" class="l"><a class="l" href="#328">328 </a><span class="php-comment">     * @param string $target_url
-</span></span><span id="329" class="l"><a class="l" href="#329">329 </a><span class="php-comment">     * @param string $referer_url
-</span></span><span id="330" class="l"><a class="l" href="#330">330 </a><span class="php-comment">     */</span>
-</span><span id="331" class="l"><a class="l" href="#331">331 </a>    <span class="php-keyword1">private</span> <span class="php-keyword1">function</span> <a id="__redirect" href="#__redirect">_redirect</a>(<span class="php-var">$target_url</span>, <span class="php-var">$referer_url</span>)
-</span><span id="332" class="l"><a class="l" href="#332">332 </a>    {
-</span><span id="333" class="l"><a class="l" href="#333">333 </a>        <span class="php-comment">// No no I last saw that over there ... really, 301, 302, 307</span>
-</span><span id="334" class="l"><a class="l" href="#334">334 </a>        <span class="php-var">$this</span>-&gt;_setOptions();
-</span><span id="335" class="l"><a class="l" href="#335">335 </a>        <span class="php-var">$this</span>-&gt;_options[CURLOPT_REFERER] = <span class="php-var">$referer_url</span>;
-</span><span id="336" class="l"><a class="l" href="#336">336 </a>        <span class="php-var">$this</span>-&gt;_curlRequest(<span class="php-var">$target_url</span>, <span class="php-keyword1">true</span>);
-</span><span id="337" class="l"><a class="l" href="#337">337 </a>    }
-</span><span id="338" class="l"><a class="l" href="#338">338 </a>
-</span><span id="339" class="l"><a class="l" href="#339">339 </a>    <span class="php-comment">/**
-</span></span><span id="340" class="l"><a class="l" href="#340">340 </a><span class="php-comment">     * Callback function to parse returned headers
-</span></span><span id="341" class="l"><a class="l" href="#341">341 </a><span class="php-comment">     *
-</span></span><span id="342" class="l"><a class="l" href="#342">342 </a><span class="php-comment">     * What it does:
-</span></span><span id="343" class="l"><a class="l" href="#343">343 </a><span class="php-comment">     * - lowercases everything to make it consistent
-</span></span><span id="344" class="l"><a class="l" href="#344">344 </a><span class="php-comment">     *
-</span></span><span id="345" class="l"><a class="l" href="#345">345 </a><span class="php-comment">     * @param object $cr
-</span></span><span id="346" class="l"><a class="l" href="#346">346 </a><span class="php-comment">     * @param string $header
-</span></span><span id="347" class="l"><a class="l" href="#347">347 </a><span class="php-comment">     */</span>
-</span><span id="348" class="l"><a class="l" href="#348">348 </a>    <span class="php-keyword1">private</span> <span class="php-keyword1">function</span> <a id="__headerCallback" href="#__headerCallback">_headerCallback</a>(<span class="php-var">$cr</span>, <span class="php-var">$header</span>)
-</span><span id="349" class="l"><a class="l" href="#349">349 </a>    {
-</span><span id="350" class="l"><a class="l" href="#350">350 </a>        <span class="php-var">$_header</span> = <span class="php-keyword2">trim</span>(<span class="php-var">$header</span>);
-</span><span id="351" class="l"><a class="l" href="#351">351 </a>        <span class="php-var">$temp</span> = <span class="php-keyword2">explode</span>(<span class="php-quote">': '</span>, <span class="php-var">$_header</span>, <span class="php-num">2</span>);
-</span><span id="352" class="l"><a class="l" href="#352">352 </a>
-</span><span id="353" class="l"><a class="l" href="#353">353 </a>        <span class="php-comment">// set proper headers only</span>
-</span><span id="354" class="l"><a class="l" href="#354">354 </a>        <span class="php-keyword1">if</span> (<span class="php-keyword1">isset</span>(<span class="php-var">$temp</span>[<span class="php-num">0</span>]) &amp;&amp; <span class="php-keyword1">isset</span>(<span class="php-var">$temp</span>[<span class="php-num">1</span>]))
-</span><span id="355" class="l"><a class="l" href="#355">355 </a>            <span class="php-var">$this</span>-&gt;_headers[<span class="php-keyword2">strtolower</span>(<span class="php-var">$temp</span>[<span class="php-num">0</span>])] = <span class="php-keyword2">strtolower</span>(<span class="php-keyword2">trim</span>(<span class="php-var">$temp</span>[<span class="php-num">1</span>]));
-</span><span id="356" class="l"><a class="l" href="#356">356 </a>
-</span><span id="357" class="l"><a class="l" href="#357">357 </a>        <span class="php-comment">// return the length of what was *passed* unless you want a Failed writing header error ;)</span>
-</span><span id="358" class="l"><a class="l" href="#358">358 </a>        <span class="php-keyword1">return</span> <span class="php-keyword2">strlen</span>(<span class="php-var">$header</span>);
-</span><span id="359" class="l"><a class="l" href="#359">359 </a>    }
-</span><span id="360" class="l"><a class="l" href="#360">360 </a></span>}</code></pre>
+</span><span id="289" class="l"><a class="l" href="#289">289 </a>    }
+</span><span id="290" class="l"><a class="l" href="#290">290 </a>
+</span><span id="291" class="l"><a class="l" href="#291">291 </a>    <span class="php-comment">/**
+</span></span><span id="292" class="l"><a class="l" href="#292">292 </a><span class="php-comment">     * Sets the final cURL options for the current call
+</span></span><span id="293" class="l"><a class="l" href="#293">293 </a><span class="php-comment">     *
+</span></span><span id="294" class="l"><a class="l" href="#294">294 </a><span class="php-comment">     * What it does:
+</span></span><span id="295" class="l"><a class="l" href="#295">295 </a><span class="php-comment">     * - overwrites our default values with user supplied ones or appends new user ones to what we have
+</span></span><span id="296" class="l"><a class="l" href="#296">296 </a><span class="php-comment">     * - sets the callback function now that $this exists
+</span></span><span id="297" class="l"><a class="l" href="#297">297 </a><span class="php-comment">     */</span>
+</span><span id="298" class="l"><a class="l" href="#298">298 </a>    <span class="php-keyword1">private</span> <span class="php-keyword1">function</span> <a id="__setOptions" href="#__setOptions">_setOptions</a>()
+</span><span id="299" class="l"><a class="l" href="#299">299 </a>    {
+</span><span id="300" class="l"><a class="l" href="#300">300 </a>        <span class="php-comment">// Callback to parse the returned headers, if any</span>
+</span><span id="301" class="l"><a class="l" href="#301">301 </a>        <span class="php-var">$this</span>-&gt;default_options[CURLOPT_HEADERFUNCTION] = <span class="php-keyword1">array</span>(<span class="php-var">$this</span>, <span class="php-quote">'_headerCallback'</span>);
+</span><span id="302" class="l"><a class="l" href="#302">302 </a>
+</span><span id="303" class="l"><a class="l" href="#303">303 </a>        <span class="php-comment">// Any user options to account for</span>
+</span><span id="304" class="l"><a class="l" href="#304">304 </a>        <span class="php-keyword1">if</span> (<span class="php-keyword2">is_array</span>(<span class="php-var">$this</span>-&gt;_user_options))
+</span><span id="305" class="l"><a class="l" href="#305">305 </a>        {
+</span><span id="306" class="l"><a class="l" href="#306">306 </a>            <span class="php-var">$keys</span> = <span class="php-keyword2">array_merge</span>(<span class="php-keyword2">array_keys</span>(<span class="php-var">$this</span>-&gt;default_options), <span class="php-keyword2">array_keys</span>(<span class="php-var">$this</span>-&gt;_user_options));
+</span><span id="307" class="l"><a class="l" href="#307">307 </a>            <span class="php-var">$vals</span> = <span class="php-keyword2">array_merge</span>(<span class="php-var">$this</span>-&gt;default_options, <span class="php-var">$this</span>-&gt;_user_options);
+</span><span id="308" class="l"><a class="l" href="#308">308 </a>            <span class="php-var">$this</span>-&gt;_options = <span class="php-keyword2">array_combine</span>(<span class="php-var">$keys</span>, <span class="php-var">$vals</span>);
+</span><span id="309" class="l"><a class="l" href="#309">309 </a>        }
+</span><span id="310" class="l"><a class="l" href="#310">310 </a>        <span class="php-keyword1">else</span>
+</span><span id="311" class="l"><a class="l" href="#311">311 </a>            <span class="php-var">$this</span>-&gt;_options = <span class="php-var">$this</span>-&gt;default_options;
+</span><span id="312" class="l"><a class="l" href="#312">312 </a>
+</span><span id="313" class="l"><a class="l" href="#313">313 </a>        <span class="php-comment">// POST data options, here we don't allow any override</span>
+</span><span id="314" class="l"><a class="l" href="#314">314 </a>        <span class="php-keyword1">if</span> (!<span class="php-keyword1">empty</span>(<span class="php-var">$this</span>-&gt;_post_data))
+</span><span id="315" class="l"><a class="l" href="#315">315 </a>        {
+</span><span id="316" class="l"><a class="l" href="#316">316 </a>            <span class="php-var">$this</span>-&gt;_options[CURLOPT_POST] = <span class="php-num">1</span>;
+</span><span id="317" class="l"><a class="l" href="#317">317 </a>            <span class="php-var">$this</span>-&gt;_options[CURLOPT_POSTFIELDS] = <span class="php-var">$this</span>-&gt;_post_data;
+</span><span id="318" class="l"><a class="l" href="#318">318 </a>        }
+</span><span id="319" class="l"><a class="l" href="#319">319 </a>    }
+</span><span id="320" class="l"><a class="l" href="#320">320 </a>
+</span><span id="321" class="l"><a class="l" href="#321">321 </a>    <span class="php-comment">/**
+</span></span><span id="322" class="l"><a class="l" href="#322">322 </a><span class="php-comment">     * Called to initiate a redirect from a 301, 302 or 307 header
+</span></span><span id="323" class="l"><a class="l" href="#323">323 </a><span class="php-comment">     *
+</span></span><span id="324" class="l"><a class="l" href="#324">324 </a><span class="php-comment">     * What it does
+</span></span><span id="325" class="l"><a class="l" href="#325">325 </a><span class="php-comment">     * - resets the cURL options for the loop, sets the referrer flag
+</span></span><span id="326" class="l"><a class="l" href="#326">326 </a><span class="php-comment">     *
+</span></span><span id="327" class="l"><a class="l" href="#327">327 </a><span class="php-comment">     * @param string $target_url
+</span></span><span id="328" class="l"><a class="l" href="#328">328 </a><span class="php-comment">     * @param string $referer_url
+</span></span><span id="329" class="l"><a class="l" href="#329">329 </a><span class="php-comment">     */</span>
+</span><span id="330" class="l"><a class="l" href="#330">330 </a>    <span class="php-keyword1">private</span> <span class="php-keyword1">function</span> <a id="__redirect" href="#__redirect">_redirect</a>(<span class="php-var">$target_url</span>, <span class="php-var">$referer_url</span>)
+</span><span id="331" class="l"><a class="l" href="#331">331 </a>    {
+</span><span id="332" class="l"><a class="l" href="#332">332 </a>        <span class="php-comment">// No no I last saw that over there ... really, 301, 302, 307</span>
+</span><span id="333" class="l"><a class="l" href="#333">333 </a>        <span class="php-var">$this</span>-&gt;_setOptions();
+</span><span id="334" class="l"><a class="l" href="#334">334 </a>        <span class="php-var">$this</span>-&gt;_options[CURLOPT_REFERER] = <span class="php-var">$referer_url</span>;
+</span><span id="335" class="l"><a class="l" href="#335">335 </a>        <span class="php-var">$this</span>-&gt;_curlRequest(<span class="php-var">$target_url</span>, <span class="php-keyword1">true</span>);
+</span><span id="336" class="l"><a class="l" href="#336">336 </a>    }
+</span><span id="337" class="l"><a class="l" href="#337">337 </a>
+</span><span id="338" class="l"><a class="l" href="#338">338 </a>    <span class="php-comment">/**
+</span></span><span id="339" class="l"><a class="l" href="#339">339 </a><span class="php-comment">     * Callback function to parse returned headers
+</span></span><span id="340" class="l"><a class="l" href="#340">340 </a><span class="php-comment">     *
+</span></span><span id="341" class="l"><a class="l" href="#341">341 </a><span class="php-comment">     * What it does:
+</span></span><span id="342" class="l"><a class="l" href="#342">342 </a><span class="php-comment">     * - lowercases everything to make it consistent
+</span></span><span id="343" class="l"><a class="l" href="#343">343 </a><span class="php-comment">     *
+</span></span><span id="344" class="l"><a class="l" href="#344">344 </a><span class="php-comment">     * @param object $cr
+</span></span><span id="345" class="l"><a class="l" href="#345">345 </a><span class="php-comment">     * @param string $header
+</span></span><span id="346" class="l"><a class="l" href="#346">346 </a><span class="php-comment">     */</span>
+</span><span id="347" class="l"><a class="l" href="#347">347 </a>    <span class="php-keyword1">private</span> <span class="php-keyword1">function</span> <a id="__headerCallback" href="#__headerCallback">_headerCallback</a>(<span class="php-var">$cr</span>, <span class="php-var">$header</span>)
+</span><span id="348" class="l"><a class="l" href="#348">348 </a>    {
+</span><span id="349" class="l"><a class="l" href="#349">349 </a>        <span class="php-var">$_header</span> = <span class="php-keyword2">trim</span>(<span class="php-var">$header</span>);
+</span><span id="350" class="l"><a class="l" href="#350">350 </a>        <span class="php-var">$temp</span> = <span class="php-keyword2">explode</span>(<span class="php-quote">': '</span>, <span class="php-var">$_header</span>, <span class="php-num">2</span>);
+</span><span id="351" class="l"><a class="l" href="#351">351 </a>
+</span><span id="352" class="l"><a class="l" href="#352">352 </a>        <span class="php-comment">// set proper headers only</span>
+</span><span id="353" class="l"><a class="l" href="#353">353 </a>        <span class="php-keyword1">if</span> (<span class="php-keyword1">isset</span>(<span class="php-var">$temp</span>[<span class="php-num">0</span>]) &amp;&amp; <span class="php-keyword1">isset</span>(<span class="php-var">$temp</span>[<span class="php-num">1</span>]))
+</span><span id="354" class="l"><a class="l" href="#354">354 </a>            <span class="php-var">$this</span>-&gt;_headers[<span class="php-keyword2">strtolower</span>(<span class="php-var">$temp</span>[<span class="php-num">0</span>])] = <span class="php-keyword2">trim</span>(<span class="php-var">$temp</span>[<span class="php-num">1</span>]);
+</span><span id="355" class="l"><a class="l" href="#355">355 </a>
+</span><span id="356" class="l"><a class="l" href="#356">356 </a>        <span class="php-comment">// return the length of what was *passed* unless you want a Failed writing header error ;)</span>
+</span><span id="357" class="l"><a class="l" href="#357">357 </a>        <span class="php-keyword1">return</span> <span class="php-keyword2">strlen</span>(<span class="php-var">$header</span>);
+</span><span id="358" class="l"><a class="l" href="#358">358 </a>    }
+</span><span id="359" class="l"><a class="l" href="#359">359 </a></span>}</code></pre>
 	</div>
 
 	<div id="footer">
-		ElkArte Documentation API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+		ElkArte 1.0.2 Documentation API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
 	</div>
 </div>
 </body>

@@ -5,10 +5,10 @@
 	<meta name="generator" content="ApiGen 2.8.0" />
 	<meta name="robots" content="noindex" />
 
-	<title>File sources/controllers/Display.controller.php | ElkArte Documentation</title>
+	<title>File sources/controllers/Display.controller.php | ElkArte 1.0.2 Documentation</title>
 
 	<script type="text/javascript" src="resources/combined.js?3648714599"></script>
-	<script type="text/javascript" src="elementlist.js?97495842"></script>
+	<script type="text/javascript" src="elementlist.js?2133182458"></script>
 	<link rel="stylesheet" type="text/css" media="all" href="resources/bootstrap.min.css?260161822" />
 	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?2015443609" />
 
@@ -18,7 +18,7 @@
 	<div id="navigation" class="navbar navbar-fixed-top">
 		<div class="navbar-inner">
 			<div class="container">
-				<a href="index.html" class="brand">ElkArte Documentation</a>
+				<a href="index.html" class="brand">ElkArte 1.0.2 Documentation</a>
 				<div class="nav-collapse">
 					<ul class="nav">
 						<li>
@@ -339,6 +339,7 @@
 				<li><a href="function-destroyMenu.html">destroyMenu</a></li>
 				<li><a href="function-detectBrowser.html">detectBrowser</a></li>
 				<li><a href="function-detectServer.html">detectServer</a></li>
+				<li><a href="function-detectServerCores.html">detectServerCores</a></li>
 				<li><a href="function-detectServerLoad.html">detectServerLoad</a></li>
 				<li><a href="function-determineActions.html">determineActions</a></li>
 				<li><a href="function-determineAvatar.html">determineAvatar</a></li>
@@ -447,6 +448,7 @@
 				<li><a href="function-isAllowedTo.html">isAllowedTo</a></li>
 				<li><a href="function-isBrowser.html">isBrowser</a></li>
 				<li><a href="function-isSmileySetInstalled.html">isSmileySetInstalled</a></li>
+				<li><a href="function-isValidEmail.html">isValidEmail</a></li>
 				<li><a href="function-isValidIPv6.html">isValidIPv6</a></li>
 				<li><a href="function-JavaScriptEscape.html">JavaScriptEscape</a></li>
 				<li><a href="function-linkMessages.html">linkMessages</a></li>
@@ -567,6 +569,7 @@
 				<li><a href="function-parsesmileys.html">parsesmileys</a></li>
 				<li><a href="function-pauseRepairProcess.html">pauseRepairProcess</a></li>
 				<li><a href="function-pauseSignatureApplySettings.html">pauseSignatureApplySettings</a></li>
+				<li><a href="function-pbe_run_parsers.html">pbe_run_parsers</a></li>
 				<li><a href="function-permute.html">permute</a></li>
 				<li><a href="function-pollInfo.html">pollInfo</a></li>
 				<li><a href="function-pollInfoForTopic.html">pollInfoForTopic</a></li>
@@ -602,6 +605,7 @@
 				<li><a href="function-quote_callback.html">quote_callback</a></li>
 				<li><a href="function-quote_callback_2.html">quote_callback_2</a></li>
 				<li><a href="function-reapplySubscriptions.html">reapplySubscriptions</a></li>
+				<li><a href="function-recentlyLogged.html">recentlyLogged</a></li>
 				<li><a href="function-recordReport.html">recordReport</a></li>
 				<li><a href="function-recountFailedEmails.html">recountFailedEmails</a></li>
 				<li><a href="function-recountOpenReports.html">recountOpenReports</a></li>
@@ -835,7 +839,7 @@
 </span></span><span id="13" class="l"><a class="l" href="#13">  13 </a><span class="php-comment"> * copyright:   2011 Simple Machines (http://www.simplemachines.org)
 </span></span><span id="14" class="l"><a class="l" href="#14">  14 </a><span class="php-comment"> * license:     BSD, See included LICENSE.TXT for terms and conditions.
 </span></span><span id="15" class="l"><a class="l" href="#15">  15 </a><span class="php-comment"> *
-</span></span><span id="16" class="l"><a class="l" href="#16">  16 </a><span class="php-comment"> * @version 1.0
+</span></span><span id="16" class="l"><a class="l" href="#16">  16 </a><span class="php-comment"> * @version 1.0.2
 </span></span><span id="17" class="l"><a class="l" href="#17">  17 </a><span class="php-comment"> *
 </span></span><span id="18" class="l"><a class="l" href="#18">  18 </a><span class="php-comment"> */</span>
 </span><span id="19" class="l"><a class="l" href="#19">  19 </a>
@@ -1799,31 +1803,34 @@
 </span><span id="977" class="l"><a class="l" href="#977"> 977 </a>            <span class="php-quote">'can_unlike'</span> =&gt; <span class="php-var">$message</span>[<span class="php-quote">'use_likes'</span>] &amp;&amp; <span class="php-var">$message</span>[<span class="php-quote">'you_liked'</span>],
 </span><span id="978" class="l"><a class="l" href="#978"> 978 </a>            <span class="php-quote">'like_counter'</span> =&gt; <span class="php-var">$message</span>[<span class="php-quote">'like_count'</span>],
 </span><span id="979" class="l"><a class="l" href="#979"> 979 </a>            <span class="php-quote">'likes_enabled'</span> =&gt; !<span class="php-keyword1">empty</span>(<span class="php-var">$modSettings</span>[<span class="php-quote">'likes_enabled'</span>]) &amp;&amp; (<span class="php-var">$message</span>[<span class="php-quote">'use_likes'</span>] || (<span class="php-var">$message</span>[<span class="php-quote">'like_count'</span>] != <span class="php-num">0</span>)),
-</span><span id="980" class="l"><a class="l" href="#980"> 980 </a>        );
-</span><span id="981" class="l"><a class="l" href="#981"> 981 </a>
-</span><span id="982" class="l"><a class="l" href="#982"> 982 </a>        <span class="php-keyword1">if</span> (!<span class="php-keyword1">empty</span>(<span class="php-var">$output</span>[<span class="php-quote">'modified'</span>][<span class="php-quote">'name'</span>]))
-</span><span id="983" class="l"><a class="l" href="#983"> 983 </a>            <span class="php-var">$output</span>[<span class="php-quote">'modified'</span>][<span class="php-quote">'last_edit_text'</span>] = <span class="php-keyword2">sprintf</span>(<span class="php-var">$txt</span>[<span class="php-quote">'last_edit_by'</span>], <span class="php-var">$output</span>[<span class="php-quote">'modified'</span>][<span class="php-quote">'time'</span>], <span class="php-var">$output</span>[<span class="php-quote">'modified'</span>][<span class="php-quote">'name'</span>], standardTime(<span class="php-var">$output</span>[<span class="php-quote">'modified'</span>][<span class="php-quote">'timestamp'</span>]));
-</span><span id="984" class="l"><a class="l" href="#984"> 984 </a>
-</span><span id="985" class="l"><a class="l" href="#985"> 985 </a>        <span class="php-keyword1">if</span> (!<span class="php-keyword1">empty</span>(<span class="php-var">$output</span>[<span class="php-quote">'member'</span>][<span class="php-quote">'karma'</span>][<span class="php-quote">'allow'</span>]))
-</span><span id="986" class="l"><a class="l" href="#986"> 986 </a>        {
-</span><span id="987" class="l"><a class="l" href="#987"> 987 </a>            <span class="php-var">$output</span>[<span class="php-quote">'member'</span>][<span class="php-quote">'karma'</span>] += <span class="php-keyword1">array</span>(
-</span><span id="988" class="l"><a class="l" href="#988"> 988 </a>                <span class="php-quote">'applaud_url'</span> =&gt; <span class="php-var">$scripturl</span> . <span class="php-quote">'?action=karma;sa=applaud;uid='</span> . <span class="php-var">$output</span>[<span class="php-quote">'member'</span>][<span class="php-quote">'id'</span>] . <span class="php-quote">';topic='</span> . <span class="php-var">$context</span>[<span class="php-quote">'current_topic'</span>] . <span class="php-quote">'.'</span> . <span class="php-var">$context</span>[<span class="php-quote">'start'</span>] . <span class="php-quote">';m='</span> . <span class="php-var">$output</span>[<span class="php-quote">'id'</span>] . <span class="php-quote">';'</span> . <span class="php-var">$context</span>[<span class="php-quote">'session_var'</span>] . <span class="php-quote">'='</span> . <span class="php-var">$context</span>[<span class="php-quote">'session_id'</span>],
-</span><span id="989" class="l"><a class="l" href="#989"> 989 </a>                <span class="php-quote">'smite_url'</span> =&gt; <span class="php-var">$scripturl</span> . <span class="php-quote">'?action=karma;sa=smite;uid='</span> . <span class="php-var">$output</span>[<span class="php-quote">'member'</span>][<span class="php-quote">'id'</span>] . <span class="php-quote">';topic='</span> . <span class="php-var">$context</span>[<span class="php-quote">'current_topic'</span>] . <span class="php-quote">'.'</span> . <span class="php-var">$context</span>[<span class="php-quote">'start'</span>] . <span class="php-quote">';m='</span> . <span class="php-var">$output</span>[<span class="php-quote">'id'</span>] . <span class="php-quote">';'</span> . <span class="php-var">$context</span>[<span class="php-quote">'session_var'</span>] . <span class="php-quote">'='</span> . <span class="php-var">$context</span>[<span class="php-quote">'session_id'</span>]
-</span><span id="990" class="l"><a class="l" href="#990"> 990 </a>            );
-</span><span id="991" class="l"><a class="l" href="#991"> 991 </a>        }
-</span><span id="992" class="l"><a class="l" href="#992"> 992 </a>
-</span><span id="993" class="l"><a class="l" href="#993"> 993 </a>        call_integration_hook(<span class="php-quote">'integrate_prepare_display_context'</span>, <span class="php-keyword1">array</span>(&amp;<span class="php-var">$output</span>, &amp;<span class="php-var">$message</span>));
-</span><span id="994" class="l"><a class="l" href="#994"> 994 </a>
-</span><span id="995" class="l"><a class="l" href="#995"> 995 </a>        <span class="php-var">$counter</span>++;
-</span><span id="996" class="l"><a class="l" href="#996"> 996 </a>
-</span><span id="997" class="l"><a class="l" href="#997"> 997 </a>        <span class="php-keyword1">return</span> <span class="php-var">$output</span>;
-</span><span id="998" class="l"><a class="l" href="#998"> 998 </a>    }
-</span><span id="999" class="l"><a class="l" href="#999"> 999 </a>}
-</span><span id="1000" class="l"><a class="l" href="#1000">1000 </a></span></code></pre>
+</span><span id="980" class="l"><a class="l" href="#980"> 980 </a>            <span class="php-quote">'classes'</span> =&gt; <span class="php-keyword1">array</span>(),
+</span><span id="981" class="l"><a class="l" href="#981"> 981 </a>        );
+</span><span id="982" class="l"><a class="l" href="#982"> 982 </a>
+</span><span id="983" class="l"><a class="l" href="#983"> 983 </a>        <span class="php-keyword1">if</span> (!<span class="php-keyword1">empty</span>(<span class="php-var">$output</span>[<span class="php-quote">'modified'</span>][<span class="php-quote">'name'</span>]))
+</span><span id="984" class="l"><a class="l" href="#984"> 984 </a>            <span class="php-var">$output</span>[<span class="php-quote">'modified'</span>][<span class="php-quote">'last_edit_text'</span>] = <span class="php-keyword2">sprintf</span>(<span class="php-var">$txt</span>[<span class="php-quote">'last_edit_by'</span>], <span class="php-var">$output</span>[<span class="php-quote">'modified'</span>][<span class="php-quote">'time'</span>], <span class="php-var">$output</span>[<span class="php-quote">'modified'</span>][<span class="php-quote">'name'</span>], standardTime(<span class="php-var">$output</span>[<span class="php-quote">'modified'</span>][<span class="php-quote">'timestamp'</span>]));
+</span><span id="985" class="l"><a class="l" href="#985"> 985 </a>
+</span><span id="986" class="l"><a class="l" href="#986"> 986 </a>        <span class="php-keyword1">if</span> (!<span class="php-keyword1">empty</span>(<span class="php-var">$output</span>[<span class="php-quote">'member'</span>][<span class="php-quote">'karma'</span>][<span class="php-quote">'allow'</span>]))
+</span><span id="987" class="l"><a class="l" href="#987"> 987 </a>        {
+</span><span id="988" class="l"><a class="l" href="#988"> 988 </a>            <span class="php-var">$output</span>[<span class="php-quote">'member'</span>][<span class="php-quote">'karma'</span>] += <span class="php-keyword1">array</span>(
+</span><span id="989" class="l"><a class="l" href="#989"> 989 </a>                <span class="php-quote">'applaud_url'</span> =&gt; <span class="php-var">$scripturl</span> . <span class="php-quote">'?action=karma;sa=applaud;uid='</span> . <span class="php-var">$output</span>[<span class="php-quote">'member'</span>][<span class="php-quote">'id'</span>] . <span class="php-quote">';topic='</span> . <span class="php-var">$context</span>[<span class="php-quote">'current_topic'</span>] . <span class="php-quote">'.'</span> . <span class="php-var">$context</span>[<span class="php-quote">'start'</span>] . <span class="php-quote">';m='</span> . <span class="php-var">$output</span>[<span class="php-quote">'id'</span>] . <span class="php-quote">';'</span> . <span class="php-var">$context</span>[<span class="php-quote">'session_var'</span>] . <span class="php-quote">'='</span> . <span class="php-var">$context</span>[<span class="php-quote">'session_id'</span>],
+</span><span id="990" class="l"><a class="l" href="#990"> 990 </a>                <span class="php-quote">'smite_url'</span> =&gt; <span class="php-var">$scripturl</span> . <span class="php-quote">'?action=karma;sa=smite;uid='</span> . <span class="php-var">$output</span>[<span class="php-quote">'member'</span>][<span class="php-quote">'id'</span>] . <span class="php-quote">';topic='</span> . <span class="php-var">$context</span>[<span class="php-quote">'current_topic'</span>] . <span class="php-quote">'.'</span> . <span class="php-var">$context</span>[<span class="php-quote">'start'</span>] . <span class="php-quote">';m='</span> . <span class="php-var">$output</span>[<span class="php-quote">'id'</span>] . <span class="php-quote">';'</span> . <span class="php-var">$context</span>[<span class="php-quote">'session_var'</span>] . <span class="php-quote">'='</span> . <span class="php-var">$context</span>[<span class="php-quote">'session_id'</span>]
+</span><span id="991" class="l"><a class="l" href="#991"> 991 </a>            );
+</span><span id="992" class="l"><a class="l" href="#992"> 992 </a>        }
+</span><span id="993" class="l"><a class="l" href="#993"> 993 </a>
+</span><span id="994" class="l"><a class="l" href="#994"> 994 </a>        call_integration_hook(<span class="php-quote">'integrate_prepare_display_context'</span>, <span class="php-keyword1">array</span>(&amp;<span class="php-var">$output</span>, &amp;<span class="php-var">$message</span>));
+</span><span id="995" class="l"><a class="l" href="#995"> 995 </a>
+</span><span id="996" class="l"><a class="l" href="#996"> 996 </a>        <span class="php-var">$output</span>[<span class="php-quote">'classes'</span>] = <span class="php-keyword2">implode</span>(<span class="php-quote">' '</span>, <span class="php-var">$output</span>[<span class="php-quote">'classes'</span>]);
+</span><span id="997" class="l"><a class="l" href="#997"> 997 </a>
+</span><span id="998" class="l"><a class="l" href="#998"> 998 </a>        <span class="php-var">$counter</span>++;
+</span><span id="999" class="l"><a class="l" href="#999"> 999 </a>
+</span><span id="1000" class="l"><a class="l" href="#1000">1000 </a>        <span class="php-keyword1">return</span> <span class="php-var">$output</span>;
+</span><span id="1001" class="l"><a class="l" href="#1001">1001 </a>    }
+</span><span id="1002" class="l"><a class="l" href="#1002">1002 </a>}
+</span><span id="1003" class="l"><a class="l" href="#1003">1003 </a></span></code></pre>
 	</div>
 
 	<div id="footer">
-		ElkArte Documentation API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+		ElkArte 1.0.2 Documentation API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
 	</div>
 </div>
 </body>

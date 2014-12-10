@@ -4,10 +4,10 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="generator" content="ApiGen 2.8.0" />
 
-	<title>Class Html_2_BBC | ElkArte Documentation</title>
+	<title>Class Html_2_BBC | ElkArte 1.0.2 Documentation</title>
 
 	<script type="text/javascript" src="resources/combined.js?3648714599"></script>
-	<script type="text/javascript" src="elementlist.js?97495842"></script>
+	<script type="text/javascript" src="elementlist.js?2133182458"></script>
 	<link rel="stylesheet" type="text/css" media="all" href="resources/bootstrap.min.css?260161822" />
 	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?2015443609" />
 
@@ -17,7 +17,7 @@
 	<div id="navigation" class="navbar navbar-fixed-top">
 		<div class="navbar-inner">
 			<div class="container">
-				<a href="index.html" class="brand">ElkArte Documentation</a>
+				<a href="index.html" class="brand">ElkArte 1.0.2 Documentation</a>
 				<div class="nav-collapse">
 					<ul class="nav">
 						<li>
@@ -337,6 +337,7 @@
 				<li><a href="function-destroyMenu.html">destroyMenu</a></li>
 				<li><a href="function-detectBrowser.html">detectBrowser</a></li>
 				<li><a href="function-detectServer.html">detectServer</a></li>
+				<li><a href="function-detectServerCores.html">detectServerCores</a></li>
 				<li><a href="function-detectServerLoad.html">detectServerLoad</a></li>
 				<li><a href="function-determineActions.html">determineActions</a></li>
 				<li><a href="function-determineAvatar.html">determineAvatar</a></li>
@@ -445,6 +446,7 @@
 				<li><a href="function-isAllowedTo.html">isAllowedTo</a></li>
 				<li><a href="function-isBrowser.html">isBrowser</a></li>
 				<li><a href="function-isSmileySetInstalled.html">isSmileySetInstalled</a></li>
+				<li><a href="function-isValidEmail.html">isValidEmail</a></li>
 				<li><a href="function-isValidIPv6.html">isValidIPv6</a></li>
 				<li><a href="function-JavaScriptEscape.html">JavaScriptEscape</a></li>
 				<li><a href="function-linkMessages.html">linkMessages</a></li>
@@ -565,6 +567,7 @@
 				<li><a href="function-parsesmileys.html">parsesmileys</a></li>
 				<li><a href="function-pauseRepairProcess.html">pauseRepairProcess</a></li>
 				<li><a href="function-pauseSignatureApplySettings.html">pauseSignatureApplySettings</a></li>
+				<li><a href="function-pbe_run_parsers.html">pbe_run_parsers</a></li>
 				<li><a href="function-permute.html">permute</a></li>
 				<li><a href="function-pollInfo.html">pollInfo</a></li>
 				<li><a href="function-pollInfoForTopic.html">pollInfoForTopic</a></li>
@@ -600,6 +603,7 @@
 				<li><a href="function-quote_callback.html">quote_callback</a></li>
 				<li><a href="function-quote_callback_2.html">quote_callback_2</a></li>
 				<li><a href="function-reapplySubscriptions.html">reapplySubscriptions</a></li>
+				<li><a href="function-recentlyLogged.html">recentlyLogged</a></li>
 				<li><a href="function-recordReport.html">recordReport</a></li>
 				<li><a href="function-recountFailedEmails.html">recountFailedEmails</a></li>
 				<li><a href="function-recountOpenReports.html">recountOpenReports</a></li>
@@ -854,7 +858,7 @@ certain html tags to bbc</p>
 				ElkArte Forum contributors<br />
 				<b>License:</b>
 				<a href="BSD">http://opensource.org/licenses/BSD-3-Clause</a><br />
-		<b>Located at</b> <a href="source-class-Html_2_BBC.html#17-924" title="Go to source code">sources/subs/Html2BBC.class.php</a><br />
+		<b>Located at</b> <a href="source-class-Html_2_BBC.html#17-955" title="Go to source code">sources/subs/Html2BBC.class.php</a><br />
 	</div>
 
 
@@ -872,7 +876,7 @@ certain html tags to bbc</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#___construct">#</a>
-			<code><a href="source-class-Html_2_BBC.html#82-114" title="Go to source code">__construct</a>( <span>string <var>$html</var></span>, <span>boolean <var>$strip</var> = <span class="php-keyword1">true</span></span> )</code>
+			<code><a href="source-class-Html_2_BBC.html#88-121" title="Go to source code">__construct</a>( <span>string <var>$html</var></span>, <span>boolean <var>$strip</var> = <span class="php-keyword1">true</span></span> )</code>
 
 			<div class="description short">
 				
@@ -891,7 +895,7 @@ certain html tags to bbc</p>
 						<dt><var>$html</var></dt>
 						<dd><code>string</code><br>$html string of html to convert</dd>
 						<dt><var>$strip</var></dt>
-						<dd><code>boolean</code><br>$strip flag to strip unconverted tags, true by default</dd>
+						<dd><code>boolean</code><br>$strip flag to strip newlines, true by default</dd>
 					</dl></div>
 
 
@@ -912,7 +916,7 @@ certain html tags to bbc</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_skip_tags">#</a>
-			<code><a href="source-class-Html_2_BBC.html#116-129" title="Go to source code">skip_tags</a>( <span>string[] <var>$tags</var> = <span class="php-keyword1">array</span>()</span> )</code>
+			<code><a href="source-class-Html_2_BBC.html#123-136" title="Go to source code">skip_tags</a>( <span>string[] <var>$tags</var> = <span class="php-keyword1">array</span>()</span> )</code>
 
 			<div class="description short">
 				
@@ -939,6 +943,46 @@ certain html tags to bbc</p>
 			</div>
 			</div></td>
 		</tr>
+		<tr data-order="skip_styles" id="_skip_styles">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_skip_styles">#</a>
+			<code><a href="source-class-Html_2_BBC.html#138-151" title="Go to source code">skip_styles</a>( <span>string[] <var>$styles</var> = <span class="php-keyword1">array</span>()</span> )</code>
+
+			<div class="description short">
+				
+<p>If we want to skip over inline style tags (that would normally be
+converted)</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>If we want to skip over inline style tags (that would normally be
+converted)</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$styles</var></dt>
+						<dd><code>string[]</code><br>$styles</dd>
+					</dl></div>
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
 		<tr data-order="get_bbc" id="_get_bbc">
 
 			<td class="attributes"><code>
@@ -950,7 +994,7 @@ certain html tags to bbc</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_get_bbc">#</a>
-			<code><a href="source-class-Html_2_BBC.html#131-180" title="Go to source code">get_bbc</a>( )</code>
+			<code><a href="source-class-Html_2_BBC.html#153-201" title="Go to source code">get_bbc</a>( )</code>
 
 			<div class="description short">
 				
@@ -985,7 +1029,7 @@ to BBC</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#__has_parent_code">#</a>
-			<code><a href="source-class-Html_2_BBC.html#182-207" title="Go to source code">_has_parent_code</a>( <span>object <var>$node</var></span>, <span>boolean <var>$parser</var></span> )</code>
+			<code><a href="source-class-Html_2_BBC.html#203-228" title="Go to source code">_has_parent_code</a>( <span>object <var>$node</var></span>, <span>boolean <var>$parser</var></span> )</code>
 
 			<div class="description short">
 				
@@ -1033,7 +1077,7 @@ to BBC</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#__convert_childNodes">#</a>
-			<code><a href="source-class-Html_2_BBC.html#209-232" title="Go to source code">_convert_childNodes</a>( <span>object <var>$node</var></span> )</code>
+			<code><a href="source-class-Html_2_BBC.html#230-253" title="Go to source code">_convert_childNodes</a>( <span>object <var>$node</var></span> )</code>
 
 			<div class="description short">
 				
@@ -1073,7 +1117,7 @@ out</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#__convert_to_bbc">#</a>
-			<code><a href="source-class-Html_2_BBC.html#234-405" title="Go to source code">_convert_to_bbc</a>( <span>object <var>$node</var></span> )</code>
+			<code><a href="source-class-Html_2_BBC.html#255-426" title="Go to source code">_convert_to_bbc</a>( <span>object <var>$node</var></span> )</code>
 
 			<div class="description short">
 				
@@ -1111,7 +1155,7 @@ out</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#__convert_abbr">#</a>
-			<code><a href="source-class-Html_2_BBC.html#407-426" title="Go to source code">_convert_abbr</a>( <span>object <var>$node</var></span> )</code>
+			<code><a href="source-class-Html_2_BBC.html#428-447" title="Go to source code">_convert_abbr</a>( <span>object <var>$node</var></span> )</code>
 
 			<div class="description short">
 				
@@ -1152,7 +1196,7 @@ out</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#__convert_anchor">#</a>
-			<code><a href="source-class-Html_2_BBC.html#428-491" title="Go to source code">_convert_anchor</a>( <span>object <var>$node</var></span> )</code>
+			<code><a href="source-class-Html_2_BBC.html#449-512" title="Go to source code">_convert_anchor</a>( <span>object <var>$node</var></span> )</code>
 
 			<div class="description short">
 				
@@ -1193,7 +1237,7 @@ out</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#__convert_bdo">#</a>
-			<code><a href="source-class-Html_2_BBC.html#493-512" title="Go to source code">_convert_bdo</a>( <span>object <var>$node</var></span> )</code>
+			<code><a href="source-class-Html_2_BBC.html#514-533" title="Go to source code">_convert_bdo</a>( <span>object <var>$node</var></span> )</code>
 
 			<div class="description short">
 				
@@ -1234,7 +1278,7 @@ Text[/bdo]</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#__convert_code">#</a>
-			<code><a href="source-class-Html_2_BBC.html#514-553" title="Go to source code">_convert_code</a>( <span>object <var>$node</var></span> )</code>
+			<code><a href="source-class-Html_2_BBC.html#535-574" title="Go to source code">_convert_code</a>( <span>object <var>$node</var></span> )</code>
 
 			<div class="description short">
 				
@@ -1272,7 +1316,7 @@ Text[/bdo]</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#__convert_font">#</a>
-			<code><a href="source-class-Html_2_BBC.html#555-582" title="Go to source code">_convert_font</a>( <span>object <var>$node</var></span> )</code>
+			<code><a href="source-class-Html_2_BBC.html#576-606" title="Go to source code">_convert_font</a>( <span>object <var>$node</var></span> )</code>
 
 			<div class="description short">
 				
@@ -1314,7 +1358,7 @@ size="3" color="red"&gt;This is some text!&lt;/font&gt; bbc:
 
 			<td class="name"><div>
 			<a class="anchor" href="#__convert_header">#</a>
-			<code><a href="source-class-Html_2_BBC.html#584-601" title="Go to source code">_convert_header</a>( <span>integer <var>$level</var></span>, <span>string <var>$content</var></span> )</code>
+			<code><a href="source-class-Html_2_BBC.html#608-625" title="Go to source code">_convert_header</a>( <span>integer <var>$level</var></span>, <span>string <var>$content</var></span> )</code>
 
 			<div class="description short">
 				
@@ -1356,7 +1400,7 @@ size="3" color="red"&gt;This is some text!&lt;/font&gt; bbc:
 
 			<td class="name"><div>
 			<a class="anchor" href="#__convert_image">#</a>
-			<code><a href="source-class-Html_2_BBC.html#603-663" title="Go to source code">_convert_image</a>( <span>object <var>$node</var></span> )</code>
+			<code><a href="source-class-Html_2_BBC.html#627-687" title="Go to source code">_convert_image</a>( <span>object <var>$node</var></span> )</code>
 
 			<div class="description short">
 				
@@ -1397,7 +1441,7 @@ size="3" color="red"&gt;This is some text!&lt;/font&gt; bbc:
 
 			<td class="name"><div>
 			<a class="anchor" href="#__convert_styles">#</a>
-			<code><a href="source-class-Html_2_BBC.html#665-734" title="Go to source code">_convert_styles</a>( <span>object <var>$node</var></span> )</code>
+			<code><a href="source-class-Html_2_BBC.html#689-763" title="Go to source code">_convert_styles</a>( <span>object <var>$node</var></span> )</code>
 
 			<div class="description short">
 				
@@ -1440,7 +1484,7 @@ basic bbc</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#__convert_table_cell">#</a>
-			<code><a href="source-class-Html_2_BBC.html#736-770" title="Go to source code">_convert_table_cell</a>( <span>object <var>$node</var></span> )</code>
+			<code><a href="source-class-Html_2_BBC.html#765-799" title="Go to source code">_convert_table_cell</a>( <span>object <var>$node</var></span> )</code>
 
 			<div class="description short">
 				
@@ -1483,7 +1527,7 @@ Text[/td][td][/td]</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#__get_item">#</a>
-			<code><a href="source-class-Html_2_BBC.html#772-784" title="Go to source code">_get_item</a>( <span>object <var>$node</var></span>, <span>integer <var>$item</var></span> )</code>
+			<code><a href="source-class-Html_2_BBC.html#801-813" title="Go to source code">_get_item</a>( <span>object <var>$node</var></span>, <span>integer <var>$item</var></span> )</code>
 
 			<div class="description short">
 				
@@ -1523,7 +1567,7 @@ Text[/td][td][/td]</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#__get_length">#</a>
-			<code><a href="source-class-Html_2_BBC.html#786-797" title="Go to source code">_get_length</a>( <span>object <var>$node</var></span> )</code>
+			<code><a href="source-class-Html_2_BBC.html#815-826" title="Go to source code">_get_length</a>( <span>object <var>$node</var></span> )</code>
 
 			<div class="description short">
 				
@@ -1561,7 +1605,7 @@ Text[/td][td][/td]</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#__get_value">#</a>
-			<code><a href="source-class-Html_2_BBC.html#799-813" title="Go to source code">_get_value</a>( <span>object <var>$node</var></span> )</code>
+			<code><a href="source-class-Html_2_BBC.html#828-842" title="Go to source code">_get_value</a>( <span>object <var>$node</var></span> )</code>
 
 			<div class="description short">
 				
@@ -1599,7 +1643,7 @@ Text[/td][td][/td]</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#__get_name">#</a>
-			<code><a href="source-class-Html_2_BBC.html#815-829" title="Go to source code">_get_name</a>( <span>object <var>$node</var></span> )</code>
+			<code><a href="source-class-Html_2_BBC.html#844-858" title="Go to source code">_get_name</a>( <span>object <var>$node</var></span> )</code>
 
 			<div class="description short">
 				
@@ -1637,7 +1681,7 @@ Text[/td][td][/td]</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#__get_innerHTML">#</a>
-			<code><a href="source-class-Html_2_BBC.html#831-850" title="Go to source code">_get_innerHTML</a>( <span>object <var>$node</var></span> )</code>
+			<code><a href="source-class-Html_2_BBC.html#860-879" title="Go to source code">_get_innerHTML</a>( <span>object <var>$node</var></span> )</code>
 
 			<div class="description short">
 				
@@ -1679,7 +1723,7 @@ Text[/td][td][/td]</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#__get_outerHTML">#</a>
-			<code><a href="source-class-Html_2_BBC.html#852-883" title="Go to source code">_get_outerHTML</a>( <span>object <var>$node</var></span> )</code>
+			<code><a href="source-class-Html_2_BBC.html#881-911" title="Go to source code">_get_outerHTML</a>( <span>object <var>$node</var></span> )</code>
 
 			<div class="description short">
 				
@@ -1717,7 +1761,7 @@ Text[/td][td][/td]</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#__get_style_values">#</a>
-			<code><a href="source-class-Html_2_BBC.html#885-909" title="Go to source code">_get_style_values</a>( <span>string <var>$style</var></span> )</code>
+			<code><a href="source-class-Html_2_BBC.html#913-937" title="Go to source code">_get_style_values</a>( <span>string <var>$style</var></span> )</code>
 
 			<div class="description short">
 				
@@ -1757,7 +1801,7 @@ $value $style['width'] = '150px'</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#__recursive_decode">#</a>
-			<code><a href="source-class-Html_2_BBC.html#911-923" title="Go to source code">_recursive_decode</a>( <span>string <var>$text</var></span> )</code>
+			<code><a href="source-class-Html_2_BBC.html#939-954" title="Go to source code">_recursive_decode</a>( <span>string <var>$text</var></span> )</code>
 
 			<div class="description short">
 				
@@ -2011,6 +2055,34 @@ skipped</p>
 				</div>
 			</div></td>
 		</tr>
+		<tr data-order="_skip_style" id="$_skip_style">
+			<td class="attributes"><code>
+				protected  
+				string[]
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-Html_2_BBC.html#82-86" title="Go to source code"><var>$_skip_style</var></a>
+			</td>
+			<td class="description"><div>
+				<a href="#$_skip_style" class="anchor">#</a>
+
+				<div class="description short">
+					
+<p>Holds any style attributes that would normally be convert to bbc but are
+instead skipped</p>
+
+				</div>
+
+				<div class="description detailed hidden">
+					
+<p>Holds any style attributes that would normally be convert to bbc but are
+instead skipped</p>
+
+
+				</div>
+			</div></td>
+		</tr>
 		</table>
 
 
@@ -2022,7 +2094,7 @@ skipped</p>
 	</div>
 
 	<div id="footer">
-		ElkArte Documentation API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+		ElkArte 1.0.2 Documentation API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
 	</div>
 </div>
 </body>

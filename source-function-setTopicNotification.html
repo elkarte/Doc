@@ -5,10 +5,10 @@
 	<meta name="generator" content="ApiGen 2.8.0" />
 	<meta name="robots" content="noindex" />
 
-	<title>File sources/subs/Topic.subs.php | ElkArte Documentation</title>
+	<title>File sources/subs/Topic.subs.php | ElkArte 1.0.2 Documentation</title>
 
 	<script type="text/javascript" src="resources/combined.js?3648714599"></script>
-	<script type="text/javascript" src="elementlist.js?97495842"></script>
+	<script type="text/javascript" src="elementlist.js?2133182458"></script>
 	<link rel="stylesheet" type="text/css" media="all" href="resources/bootstrap.min.css?260161822" />
 	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?2015443609" />
 
@@ -18,7 +18,7 @@
 	<div id="navigation" class="navbar navbar-fixed-top">
 		<div class="navbar-inner">
 			<div class="container">
-				<a href="index.html" class="brand">ElkArte Documentation</a>
+				<a href="index.html" class="brand">ElkArte 1.0.2 Documentation</a>
 				<div class="nav-collapse">
 					<ul class="nav">
 						<li>
@@ -339,6 +339,7 @@
 				<li><a href="function-destroyMenu.html">destroyMenu</a></li>
 				<li><a href="function-detectBrowser.html">detectBrowser</a></li>
 				<li><a href="function-detectServer.html">detectServer</a></li>
+				<li><a href="function-detectServerCores.html">detectServerCores</a></li>
 				<li><a href="function-detectServerLoad.html">detectServerLoad</a></li>
 				<li><a href="function-determineActions.html">determineActions</a></li>
 				<li><a href="function-determineAvatar.html">determineAvatar</a></li>
@@ -447,6 +448,7 @@
 				<li><a href="function-isAllowedTo.html">isAllowedTo</a></li>
 				<li><a href="function-isBrowser.html">isBrowser</a></li>
 				<li><a href="function-isSmileySetInstalled.html">isSmileySetInstalled</a></li>
+				<li><a href="function-isValidEmail.html">isValidEmail</a></li>
 				<li><a href="function-isValidIPv6.html">isValidIPv6</a></li>
 				<li><a href="function-JavaScriptEscape.html">JavaScriptEscape</a></li>
 				<li><a href="function-linkMessages.html">linkMessages</a></li>
@@ -567,6 +569,7 @@
 				<li><a href="function-parsesmileys.html">parsesmileys</a></li>
 				<li><a href="function-pauseRepairProcess.html">pauseRepairProcess</a></li>
 				<li><a href="function-pauseSignatureApplySettings.html">pauseSignatureApplySettings</a></li>
+				<li><a href="function-pbe_run_parsers.html">pbe_run_parsers</a></li>
 				<li><a href="function-permute.html">permute</a></li>
 				<li><a href="function-pollInfo.html">pollInfo</a></li>
 				<li><a href="function-pollInfoForTopic.html">pollInfoForTopic</a></li>
@@ -602,6 +605,7 @@
 				<li><a href="function-quote_callback.html">quote_callback</a></li>
 				<li><a href="function-quote_callback_2.html">quote_callback_2</a></li>
 				<li><a href="function-reapplySubscriptions.html">reapplySubscriptions</a></li>
+				<li><a href="function-recentlyLogged.html">recentlyLogged</a></li>
 				<li><a href="function-recordReport.html">recordReport</a></li>
 				<li><a href="function-recountFailedEmails.html">recountFailedEmails</a></li>
 				<li><a href="function-recountOpenReports.html">recountOpenReports</a></li>
@@ -838,7 +842,7 @@
 </span></span><span id="16" class="l"><a class="l" href="#16">  16 </a><span class="php-comment"> * copyright:   2011 Simple Machines (http://www.simplemachines.org)
 </span></span><span id="17" class="l"><a class="l" href="#17">  17 </a><span class="php-comment"> * license:     BSD, See included LICENSE.TXT for terms and conditions.
 </span></span><span id="18" class="l"><a class="l" href="#18">  18 </a><span class="php-comment"> *
-</span></span><span id="19" class="l"><a class="l" href="#19">  19 </a><span class="php-comment"> * @version 1.0
+</span></span><span id="19" class="l"><a class="l" href="#19">  19 </a><span class="php-comment"> * @version 1.0.2
 </span></span><span id="20" class="l"><a class="l" href="#20">  20 </a><span class="php-comment"> *
 </span></span><span id="21" class="l"><a class="l" href="#21">  21 </a><span class="php-comment"> */</span>
 </span><span id="22" class="l"><a class="l" href="#22">  22 </a>
@@ -3219,7 +3223,7 @@
 </span></span><span id="2397" class="l"><a class="l" href="#2397">2397 </a><span class="php-comment"> */</span>
 </span><span id="2398" class="l"><a class="l" href="#2398">2398 </a><span class="php-keyword1">function</span> <a id="_splitAttemptMove" href="#_splitAttemptMove">splitAttemptMove</a>(<span class="php-var">$boards</span>, <span class="php-var">$totopic</span>)
 </span><span id="2399" class="l"><a class="l" href="#2399">2399 </a>{
-</span><span id="2400" class="l"><a class="l" href="#2400">2400 </a>    <span class="php-keyword1">global</span> <span class="php-var">$board</span>, <span class="php-var">$user_info</span>, <span class="php-var">$context</span>;
+</span><span id="2400" class="l"><a class="l" href="#2400">2400 </a>    <span class="php-keyword1">global</span> <span class="php-var">$board</span>, <span class="php-var">$user_info</span>;
 </span><span id="2401" class="l"><a class="l" href="#2401">2401 </a>
 </span><span id="2402" class="l"><a class="l" href="#2402">2402 </a>    <span class="php-var">$db</span> = database();
 </span><span id="2403" class="l"><a class="l" href="#2403">2403 </a>
@@ -3279,549 +3283,540 @@
 </span><span id="2457" class="l"><a class="l" href="#2457">2457 </a>        <span class="php-keyword1">else</span>
 </span><span id="2458" class="l"><a class="l" href="#2458">2458 </a>            <span class="php-var">$boards</span>[<span class="php-quote">'destination'</span>] = <span class="php-var">$boards</span>[<span class="php-quote">'current'</span>];
 </span><span id="2459" class="l"><a class="l" href="#2459">2459 </a>    }
-</span><span id="2460" class="l"><a class="l" href="#2460">2460 </a>
-</span><span id="2461" class="l"><a class="l" href="#2461">2461 </a>    <span class="php-comment">// Create a link to this in the old topic.</span>
-</span><span id="2462" class="l"><a class="l" href="#2462">2462 </a>    <span class="php-comment">// @todo Does this make sense if the topic was unapproved before? We are not yet sure if the resulting topic is unapproved.</span>
-</span><span id="2463" class="l"><a class="l" href="#2463">2463 </a>    <span class="php-keyword1">if</span> (!<span class="php-keyword1">empty</span>(<span class="php-var">$_POST</span>[<span class="php-quote">'messageRedirect'</span>]))
-</span><span id="2464" class="l"><a class="l" href="#2464">2464 </a>        postSplitRedirect(<span class="php-var">$context</span>[<span class="php-quote">'reason'</span>], <span class="php-var">$_POST</span>[<span class="php-quote">'subname'</span>], <span class="php-var">$boards</span>[<span class="php-quote">'destination'</span>], <span class="php-var">$context</span>[<span class="php-quote">'new_topic'</span>]);
-</span><span id="2465" class="l"><a class="l" href="#2465">2465 </a>}
-</span><span id="2466" class="l"><a class="l" href="#2466">2466 </a>
-</span><span id="2467" class="l"><a class="l" href="#2467">2467 </a><span class="php-comment">/**
-</span></span><span id="2468" class="l"><a class="l" href="#2468">2468 </a><span class="php-comment"> * Retrives informations of the current and destination board of a split topic
-</span></span><span id="2469" class="l"><a class="l" href="#2469">2469 </a><span class="php-comment"> *
-</span></span><span id="2470" class="l"><a class="l" href="#2470">2470 </a><span class="php-comment"> * @return array
-</span></span><span id="2471" class="l"><a class="l" href="#2471">2471 </a><span class="php-comment"> */</span>
-</span><span id="2472" class="l"><a class="l" href="#2472">2472 </a><span class="php-keyword1">function</span> <a id="_splitDestinationBoard" href="#_splitDestinationBoard">splitDestinationBoard</a>()
-</span><span id="2473" class="l"><a class="l" href="#2473">2473 </a>{
-</span><span id="2474" class="l"><a class="l" href="#2474">2474 </a>    <span class="php-keyword1">global</span> <span class="php-var">$board</span>, <span class="php-var">$topic</span>;
-</span><span id="2475" class="l"><a class="l" href="#2475">2475 </a>
-</span><span id="2476" class="l"><a class="l" href="#2476">2476 </a>    <span class="php-var">$current_board</span> = boardInfo(<span class="php-var">$board</span>, <span class="php-var">$topic</span>);
-</span><span id="2477" class="l"><a class="l" href="#2477">2477 </a>    <span class="php-keyword1">if</span> (<span class="php-keyword1">empty</span>(<span class="php-var">$current_board</span>))
-</span><span id="2478" class="l"><a class="l" href="#2478">2478 </a>        fatal_lang_error(<span class="php-quote">'no_board'</span>);
-</span><span id="2479" class="l"><a class="l" href="#2479">2479 </a>
-</span><span id="2480" class="l"><a class="l" href="#2480">2480 </a>    <span class="php-keyword1">if</span> (!<span class="php-keyword1">empty</span>(<span class="php-var">$_POST</span>[<span class="php-quote">'move_new_topic'</span>]))
-</span><span id="2481" class="l"><a class="l" href="#2481">2481 </a>    {
-</span><span id="2482" class="l"><a class="l" href="#2482">2482 </a>        <span class="php-var">$toboard</span> = !<span class="php-keyword1">empty</span>(<span class="php-var">$_POST</span>[<span class="php-quote">'board_list'</span>]) ? (int) <span class="php-var">$_POST</span>[<span class="php-quote">'board_list'</span>] : <span class="php-num">0</span>;
-</span><span id="2483" class="l"><a class="l" href="#2483">2483 </a>        <span class="php-keyword1">if</span> (!<span class="php-keyword1">empty</span>(<span class="php-var">$toboard</span>) &amp;&amp; <span class="php-var">$board</span> !== <span class="php-var">$toboard</span>)
-</span><span id="2484" class="l"><a class="l" href="#2484">2484 </a>        {
-</span><span id="2485" class="l"><a class="l" href="#2485">2485 </a>            <span class="php-var">$destination_board</span> = boardInfo(<span class="php-var">$toboard</span>);
-</span><span id="2486" class="l"><a class="l" href="#2486">2486 </a>            <span class="php-keyword1">if</span> (<span class="php-keyword1">empty</span>(<span class="php-var">$destination_board</span>))
-</span><span id="2487" class="l"><a class="l" href="#2487">2487 </a>                fatal_lang_error(<span class="php-quote">'no_board'</span>);
-</span><span id="2488" class="l"><a class="l" href="#2488">2488 </a>        }
-</span><span id="2489" class="l"><a class="l" href="#2489">2489 </a>    }
-</span><span id="2490" class="l"><a class="l" href="#2490">2490 </a>
-</span><span id="2491" class="l"><a class="l" href="#2491">2491 </a>    <span class="php-keyword1">if</span> (!<span class="php-keyword1">isset</span>(<span class="php-var">$destination_board</span>))
-</span><span id="2492" class="l"><a class="l" href="#2492">2492 </a>        <span class="php-var">$destination_board</span> = <span class="php-keyword2">array_merge</span>(<span class="php-var">$current_board</span>, <span class="php-keyword1">array</span>(<span class="php-quote">'id'</span> =&gt; <span class="php-var">$board</span>));
-</span><span id="2493" class="l"><a class="l" href="#2493">2493 </a>    <span class="php-keyword1">else</span>
-</span><span id="2494" class="l"><a class="l" href="#2494">2494 </a>        <span class="php-var">$destination_board</span>[<span class="php-quote">'id'</span>] = <span class="php-var">$toboard</span>;
-</span><span id="2495" class="l"><a class="l" href="#2495">2495 </a>
-</span><span id="2496" class="l"><a class="l" href="#2496">2496 </a>    <span class="php-keyword1">return</span> <span class="php-keyword1">array</span>(<span class="php-quote">'current'</span> =&gt; <span class="php-var">$current_board</span>, <span class="php-quote">'destination'</span> =&gt; <span class="php-var">$destination_board</span>);
-</span><span id="2497" class="l"><a class="l" href="#2497">2497 </a>}
-</span><span id="2498" class="l"><a class="l" href="#2498">2498 </a>
-</span><span id="2499" class="l"><a class="l" href="#2499">2499 </a><span class="php-comment">/**
-</span></span><span id="2500" class="l"><a class="l" href="#2500">2500 </a><span class="php-comment"> * Retrieve topic notifications count.
-</span></span><span id="2501" class="l"><a class="l" href="#2501">2501 </a><span class="php-comment"> * (used by createList() callbacks, amongst others.)
-</span></span><span id="2502" class="l"><a class="l" href="#2502">2502 </a><span class="php-comment"> *
-</span></span><span id="2503" class="l"><a class="l" href="#2503">2503 </a><span class="php-comment"> * @param int $memID id_member
-</span></span><span id="2504" class="l"><a class="l" href="#2504">2504 </a><span class="php-comment"> * @return integer
-</span></span><span id="2505" class="l"><a class="l" href="#2505">2505 </a><span class="php-comment"> */</span>
-</span><span id="2506" class="l"><a class="l" href="#2506">2506 </a><span class="php-keyword1">function</span> <a id="_topicNotificationCount" href="#_topicNotificationCount">topicNotificationCount</a>(<span class="php-var">$memID</span>)
-</span><span id="2507" class="l"><a class="l" href="#2507">2507 </a>{
-</span><span id="2508" class="l"><a class="l" href="#2508">2508 </a>    <span class="php-keyword1">global</span> <span class="php-var">$user_info</span>, <span class="php-var">$modSettings</span>;
-</span><span id="2509" class="l"><a class="l" href="#2509">2509 </a>
-</span><span id="2510" class="l"><a class="l" href="#2510">2510 </a>    <span class="php-var">$db</span> = database();
-</span><span id="2511" class="l"><a class="l" href="#2511">2511 </a>
-</span><span id="2512" class="l"><a class="l" href="#2512">2512 </a>    <span class="php-var">$request</span> = <span class="php-var">$db</span>-&gt;query(<span class="php-quote">''</span>, <span class="php-quote">'
-</span></span><span id="2513" class="l"><a class="l" href="#2513">2513 </a><span class="php-quote">        SELECT COUNT(*)
-</span></span><span id="2514" class="l"><a class="l" href="#2514">2514 </a><span class="php-quote">        FROM {db_prefix}log_notify AS ln'</span> . (!<span class="php-var">$modSettings</span>[<span class="php-quote">'postmod_active'</span>] &amp;&amp; <span class="php-var">$user_info</span>[<span class="php-quote">'query_see_board'</span>] === <span class="php-quote">'1=1'</span> ? <span class="php-quote">''</span> : <span class="php-quote">'
-</span></span><span id="2515" class="l"><a class="l" href="#2515">2515 </a><span class="php-quote">            INNER JOIN {db_prefix}topics AS t ON (t.id_topic = ln.id_topic)'</span>) . (<span class="php-var">$user_info</span>[<span class="php-quote">'query_see_board'</span>] === <span class="php-quote">'1=1'</span> ? <span class="php-quote">''</span> : <span class="php-quote">'
-</span></span><span id="2516" class="l"><a class="l" href="#2516">2516 </a><span class="php-quote">            INNER JOIN {db_prefix}boards AS b ON (b.id_board = t.id_board)'</span>) . <span class="php-quote">'
-</span></span><span id="2517" class="l"><a class="l" href="#2517">2517 </a><span class="php-quote">        WHERE ln.id_member = {int:selected_member}'</span> . (<span class="php-var">$user_info</span>[<span class="php-quote">'query_see_board'</span>] === <span class="php-quote">'1=1'</span> ? <span class="php-quote">''</span> : <span class="php-quote">'
-</span></span><span id="2518" class="l"><a class="l" href="#2518">2518 </a><span class="php-quote">            AND {query_see_board}'</span>) . (<span class="php-var">$modSettings</span>[<span class="php-quote">'postmod_active'</span>] ? <span class="php-quote">'
-</span></span><span id="2519" class="l"><a class="l" href="#2519">2519 </a><span class="php-quote">            AND t.approved = {int:is_approved}'</span> : <span class="php-quote">''</span>),
-</span><span id="2520" class="l"><a class="l" href="#2520">2520 </a>        <span class="php-keyword1">array</span>(
-</span><span id="2521" class="l"><a class="l" href="#2521">2521 </a>            <span class="php-quote">'selected_member'</span> =&gt; <span class="php-var">$memID</span>,
-</span><span id="2522" class="l"><a class="l" href="#2522">2522 </a>            <span class="php-quote">'is_approved'</span> =&gt; <span class="php-num">1</span>,
-</span><span id="2523" class="l"><a class="l" href="#2523">2523 </a>        )
-</span><span id="2524" class="l"><a class="l" href="#2524">2524 </a>    );
-</span><span id="2525" class="l"><a class="l" href="#2525">2525 </a>    <span class="php-keyword1">list</span> (<span class="php-var">$totalNotifications</span>) = <span class="php-var">$db</span>-&gt;fetch_row(<span class="php-var">$request</span>);
-</span><span id="2526" class="l"><a class="l" href="#2526">2526 </a>    <span class="php-var">$db</span>-&gt;free_result(<span class="php-var">$request</span>);
-</span><span id="2527" class="l"><a class="l" href="#2527">2527 </a>
-</span><span id="2528" class="l"><a class="l" href="#2528">2528 </a>    <span class="php-keyword1">return</span> (int) <span class="php-var">$totalNotifications</span>;
-</span><span id="2529" class="l"><a class="l" href="#2529">2529 </a>}
-</span><span id="2530" class="l"><a class="l" href="#2530">2530 </a>
-</span><span id="2531" class="l"><a class="l" href="#2531">2531 </a><span class="php-comment">/**
-</span></span><span id="2532" class="l"><a class="l" href="#2532">2532 </a><span class="php-comment"> * Retrieve all topic notifications for the given user.
-</span></span><span id="2533" class="l"><a class="l" href="#2533">2533 </a><span class="php-comment"> * (used by createList() callbacks)
-</span></span><span id="2534" class="l"><a class="l" href="#2534">2534 </a><span class="php-comment"> *
-</span></span><span id="2535" class="l"><a class="l" href="#2535">2535 </a><span class="php-comment"> * @param int $start
-</span></span><span id="2536" class="l"><a class="l" href="#2536">2536 </a><span class="php-comment"> * @param int $items_per_page
-</span></span><span id="2537" class="l"><a class="l" href="#2537">2537 </a><span class="php-comment"> * @param string $sort
-</span></span><span id="2538" class="l"><a class="l" href="#2538">2538 </a><span class="php-comment"> * @param int $memID id_member
-</span></span><span id="2539" class="l"><a class="l" href="#2539">2539 </a><span class="php-comment"> * @return array
-</span></span><span id="2540" class="l"><a class="l" href="#2540">2540 </a><span class="php-comment"> */</span>
-</span><span id="2541" class="l"><a class="l" href="#2541">2541 </a><span class="php-keyword1">function</span> <a id="_topicNotifications" href="#_topicNotifications">topicNotifications</a>(<span class="php-var">$start</span>, <span class="php-var">$items_per_page</span>, <span class="php-var">$sort</span>, <span class="php-var">$memID</span>)
-</span><span id="2542" class="l"><a class="l" href="#2542">2542 </a>{
-</span><span id="2543" class="l"><a class="l" href="#2543">2543 </a>    <span class="php-keyword1">global</span> <span class="php-var">$scripturl</span>, <span class="php-var">$user_info</span>, <span class="php-var">$modSettings</span>;
-</span><span id="2544" class="l"><a class="l" href="#2544">2544 </a>
-</span><span id="2545" class="l"><a class="l" href="#2545">2545 </a>    <span class="php-var">$db</span> = database();
-</span><span id="2546" class="l"><a class="l" href="#2546">2546 </a>
-</span><span id="2547" class="l"><a class="l" href="#2547">2547 </a>    <span class="php-comment">// All the topics with notification on...</span>
-</span><span id="2548" class="l"><a class="l" href="#2548">2548 </a>    <span class="php-var">$request</span> = <span class="php-var">$db</span>-&gt;query(<span class="php-quote">''</span>, <span class="php-quote">'
-</span></span><span id="2549" class="l"><a class="l" href="#2549">2549 </a><span class="php-quote">        SELECT
-</span></span><span id="2550" class="l"><a class="l" href="#2550">2550 </a><span class="php-quote">            IFNULL(lt.id_msg, IFNULL(lmr.id_msg, -1)) + 1 AS new_from, b.id_board, b.name,
-</span></span><span id="2551" class="l"><a class="l" href="#2551">2551 </a><span class="php-quote">            t.id_topic, ms.subject, ms.id_member, IFNULL(mem.real_name, ms.poster_name) AS real_name_col,
-</span></span><span id="2552" class="l"><a class="l" href="#2552">2552 </a><span class="php-quote">            ml.id_msg_modified, ml.poster_time, ml.id_member AS id_member_updated,
-</span></span><span id="2553" class="l"><a class="l" href="#2553">2553 </a><span class="php-quote">            IFNULL(mem2.real_name, ml.poster_name) AS last_real_name
-</span></span><span id="2554" class="l"><a class="l" href="#2554">2554 </a><span class="php-quote">        FROM {db_prefix}log_notify AS ln
-</span></span><span id="2555" class="l"><a class="l" href="#2555">2555 </a><span class="php-quote">            INNER JOIN {db_prefix}topics AS t ON (t.id_topic = ln.id_topic'</span> . (<span class="php-var">$modSettings</span>[<span class="php-quote">'postmod_active'</span>] ? <span class="php-quote">' AND t.approved = {int:is_approved}'</span> : <span class="php-quote">''</span>) . <span class="php-quote">')
-</span></span><span id="2556" class="l"><a class="l" href="#2556">2556 </a><span class="php-quote">            INNER JOIN {db_prefix}boards AS b ON (b.id_board = t.id_board AND {query_see_board})
-</span></span><span id="2557" class="l"><a class="l" href="#2557">2557 </a><span class="php-quote">            INNER JOIN {db_prefix}messages AS ms ON (ms.id_msg = t.id_first_msg)
-</span></span><span id="2558" class="l"><a class="l" href="#2558">2558 </a><span class="php-quote">            INNER JOIN {db_prefix}messages AS ml ON (ml.id_msg = t.id_last_msg)
-</span></span><span id="2559" class="l"><a class="l" href="#2559">2559 </a><span class="php-quote">            LEFT JOIN {db_prefix}members AS mem ON (mem.id_member = ms.id_member)
-</span></span><span id="2560" class="l"><a class="l" href="#2560">2560 </a><span class="php-quote">            LEFT JOIN {db_prefix}members AS mem2 ON (mem2.id_member = ml.id_member)
-</span></span><span id="2561" class="l"><a class="l" href="#2561">2561 </a><span class="php-quote">            LEFT JOIN {db_prefix}log_topics AS lt ON (lt.id_topic = t.id_topic AND lt.id_member = {int:current_member})
-</span></span><span id="2562" class="l"><a class="l" href="#2562">2562 </a><span class="php-quote">            LEFT JOIN {db_prefix}log_mark_read AS lmr ON (lmr.id_board = b.id_board AND lmr.id_member = {int:current_member})
-</span></span><span id="2563" class="l"><a class="l" href="#2563">2563 </a><span class="php-quote">        WHERE ln.id_member = {int:selected_member}
-</span></span><span id="2564" class="l"><a class="l" href="#2564">2564 </a><span class="php-quote">        ORDER BY {raw:sort}
-</span></span><span id="2565" class="l"><a class="l" href="#2565">2565 </a><span class="php-quote">        LIMIT {int:offset}, {int:items_per_page}'</span>,
-</span><span id="2566" class="l"><a class="l" href="#2566">2566 </a>        <span class="php-keyword1">array</span>(
-</span><span id="2567" class="l"><a class="l" href="#2567">2567 </a>            <span class="php-quote">'current_member'</span> =&gt; <span class="php-var">$user_info</span>[<span class="php-quote">'id'</span>],
-</span><span id="2568" class="l"><a class="l" href="#2568">2568 </a>            <span class="php-quote">'is_approved'</span> =&gt; <span class="php-num">1</span>,
-</span><span id="2569" class="l"><a class="l" href="#2569">2569 </a>            <span class="php-quote">'selected_member'</span> =&gt; <span class="php-var">$memID</span>,
-</span><span id="2570" class="l"><a class="l" href="#2570">2570 </a>            <span class="php-quote">'sort'</span> =&gt; <span class="php-var">$sort</span>,
-</span><span id="2571" class="l"><a class="l" href="#2571">2571 </a>            <span class="php-quote">'offset'</span> =&gt; <span class="php-var">$start</span>,
-</span><span id="2572" class="l"><a class="l" href="#2572">2572 </a>            <span class="php-quote">'items_per_page'</span> =&gt; <span class="php-var">$items_per_page</span>,
-</span><span id="2573" class="l"><a class="l" href="#2573">2573 </a>        )
-</span><span id="2574" class="l"><a class="l" href="#2574">2574 </a>    );
-</span><span id="2575" class="l"><a class="l" href="#2575">2575 </a>    <span class="php-var">$notification_topics</span> = <span class="php-keyword1">array</span>();
-</span><span id="2576" class="l"><a class="l" href="#2576">2576 </a>    <span class="php-keyword1">while</span> (<span class="php-var">$row</span> = <span class="php-var">$db</span>-&gt;fetch_assoc(<span class="php-var">$request</span>))
-</span><span id="2577" class="l"><a class="l" href="#2577">2577 </a>    {
-</span><span id="2578" class="l"><a class="l" href="#2578">2578 </a>        censorText(<span class="php-var">$row</span>[<span class="php-quote">'subject'</span>]);
-</span><span id="2579" class="l"><a class="l" href="#2579">2579 </a>
-</span><span id="2580" class="l"><a class="l" href="#2580">2580 </a>        <span class="php-var">$notification_topics</span>[] = <span class="php-keyword1">array</span>(
-</span><span id="2581" class="l"><a class="l" href="#2581">2581 </a>            <span class="php-quote">'id'</span> =&gt; <span class="php-var">$row</span>[<span class="php-quote">'id_topic'</span>],
-</span><span id="2582" class="l"><a class="l" href="#2582">2582 </a>            <span class="php-quote">'poster_link'</span> =&gt; <span class="php-keyword1">empty</span>(<span class="php-var">$row</span>[<span class="php-quote">'id_member'</span>]) ? <span class="php-var">$row</span>[<span class="php-quote">'real_name_col'</span>] : <span class="php-quote">'&lt;a href=&quot;'</span> . <span class="php-var">$scripturl</span> . <span class="php-quote">'?action=profile;u='</span> . <span class="php-var">$row</span>[<span class="php-quote">'id_member'</span>] . <span class="php-quote">'&quot;&gt;'</span> . <span class="php-var">$row</span>[<span class="php-quote">'real_name_col'</span>] . <span class="php-quote">'&lt;/a&gt;'</span>,
-</span><span id="2583" class="l"><a class="l" href="#2583">2583 </a>            <span class="php-quote">'poster_updated_link'</span> =&gt; <span class="php-keyword1">empty</span>(<span class="php-var">$row</span>[<span class="php-quote">'id_member_updated'</span>]) ? <span class="php-var">$row</span>[<span class="php-quote">'last_real_name'</span>] : <span class="php-quote">'&lt;a href=&quot;'</span> . <span class="php-var">$scripturl</span> . <span class="php-quote">'?action=profile;u='</span> . <span class="php-var">$row</span>[<span class="php-quote">'id_member_updated'</span>] . <span class="php-quote">'&quot;&gt;'</span> . <span class="php-var">$row</span>[<span class="php-quote">'last_real_name'</span>] . <span class="php-quote">'&lt;/a&gt;'</span>,
-</span><span id="2584" class="l"><a class="l" href="#2584">2584 </a>            <span class="php-quote">'subject'</span> =&gt; <span class="php-var">$row</span>[<span class="php-quote">'subject'</span>],
-</span><span id="2585" class="l"><a class="l" href="#2585">2585 </a>            <span class="php-quote">'href'</span> =&gt; <span class="php-var">$scripturl</span> . <span class="php-quote">'?topic='</span> . <span class="php-var">$row</span>[<span class="php-quote">'id_topic'</span>] . <span class="php-quote">'.0'</span>,
-</span><span id="2586" class="l"><a class="l" href="#2586">2586 </a>            <span class="php-quote">'link'</span> =&gt; <span class="php-quote">'&lt;a href=&quot;'</span> . <span class="php-var">$scripturl</span> . <span class="php-quote">'?topic='</span> . <span class="php-var">$row</span>[<span class="php-quote">'id_topic'</span>] . <span class="php-quote">'.0&quot;&gt;'</span> . <span class="php-var">$row</span>[<span class="php-quote">'subject'</span>] . <span class="php-quote">'&lt;/a&gt;'</span>,
-</span><span id="2587" class="l"><a class="l" href="#2587">2587 </a>            <span class="php-quote">'new'</span> =&gt; <span class="php-var">$row</span>[<span class="php-quote">'new_from'</span>] &lt;= <span class="php-var">$row</span>[<span class="php-quote">'id_msg_modified'</span>],
-</span><span id="2588" class="l"><a class="l" href="#2588">2588 </a>            <span class="php-quote">'new_from'</span> =&gt; <span class="php-var">$row</span>[<span class="php-quote">'new_from'</span>],
-</span><span id="2589" class="l"><a class="l" href="#2589">2589 </a>            <span class="php-quote">'updated'</span> =&gt; standardTime(<span class="php-var">$row</span>[<span class="php-quote">'poster_time'</span>]),
-</span><span id="2590" class="l"><a class="l" href="#2590">2590 </a>            <span class="php-quote">'new_href'</span> =&gt; <span class="php-var">$scripturl</span> . <span class="php-quote">'?topic='</span> . <span class="php-var">$row</span>[<span class="php-quote">'id_topic'</span>] . <span class="php-quote">'.msg'</span> . <span class="php-var">$row</span>[<span class="php-quote">'new_from'</span>] . <span class="php-quote">'#new'</span>,
-</span><span id="2591" class="l"><a class="l" href="#2591">2591 </a>            <span class="php-quote">'new_link'</span> =&gt; <span class="php-quote">'&lt;a href=&quot;'</span> . <span class="php-var">$scripturl</span> . <span class="php-quote">'?topic='</span> . <span class="php-var">$row</span>[<span class="php-quote">'id_topic'</span>] . <span class="php-quote">'.msg'</span> . <span class="php-var">$row</span>[<span class="php-quote">'new_from'</span>] . <span class="php-quote">'#new&quot;&gt;'</span> . <span class="php-var">$row</span>[<span class="php-quote">'subject'</span>] . <span class="php-quote">'&lt;/a&gt;'</span>,
-</span><span id="2592" class="l"><a class="l" href="#2592">2592 </a>            <span class="php-quote">'board_link'</span> =&gt; <span class="php-quote">'&lt;a href=&quot;'</span> . <span class="php-var">$scripturl</span> . <span class="php-quote">'?board='</span> . <span class="php-var">$row</span>[<span class="php-quote">'id_board'</span>] . <span class="php-quote">'.0&quot;&gt;'</span> . <span class="php-var">$row</span>[<span class="php-quote">'name'</span>] . <span class="php-quote">'&lt;/a&gt;'</span>,
-</span><span id="2593" class="l"><a class="l" href="#2593">2593 </a>        );
-</span><span id="2594" class="l"><a class="l" href="#2594">2594 </a>    }
-</span><span id="2595" class="l"><a class="l" href="#2595">2595 </a>    <span class="php-var">$db</span>-&gt;free_result(<span class="php-var">$request</span>);
-</span><span id="2596" class="l"><a class="l" href="#2596">2596 </a>
-</span><span id="2597" class="l"><a class="l" href="#2597">2597 </a>    <span class="php-keyword1">return</span> <span class="php-var">$notification_topics</span>;
-</span><span id="2598" class="l"><a class="l" href="#2598">2598 </a>}
-</span><span id="2599" class="l"><a class="l" href="#2599">2599 </a>
-</span><span id="2600" class="l"><a class="l" href="#2600">2600 </a><span class="php-comment">/**
-</span></span><span id="2601" class="l"><a class="l" href="#2601">2601 </a><span class="php-comment"> * Get a list of posters in this topic, and their posts counts in the topic.
-</span></span><span id="2602" class="l"><a class="l" href="#2602">2602 </a><span class="php-comment"> * Used to update users posts counts when topics are moved or are deleted.
-</span></span><span id="2603" class="l"><a class="l" href="#2603">2603 </a><span class="php-comment"> *
-</span></span><span id="2604" class="l"><a class="l" href="#2604">2604 </a><span class="php-comment"> * @param int $id_topic topic id to work with
-</span></span><span id="2605" class="l"><a class="l" href="#2605">2605 </a><span class="php-comment"> */</span>
-</span><span id="2606" class="l"><a class="l" href="#2606">2606 </a><span class="php-keyword1">function</span> <a id="_postersCount" href="#_postersCount">postersCount</a>(<span class="php-var">$id_topic</span>)
-</span><span id="2607" class="l"><a class="l" href="#2607">2607 </a>{
-</span><span id="2608" class="l"><a class="l" href="#2608">2608 </a>    <span class="php-var">$db</span> = database();
-</span><span id="2609" class="l"><a class="l" href="#2609">2609 </a>
-</span><span id="2610" class="l"><a class="l" href="#2610">2610 </a>    <span class="php-comment">// We only care about approved topics, the rest don't count.</span>
-</span><span id="2611" class="l"><a class="l" href="#2611">2611 </a>    <span class="php-var">$request</span> = <span class="php-var">$db</span>-&gt;query(<span class="php-quote">''</span>, <span class="php-quote">'
-</span></span><span id="2612" class="l"><a class="l" href="#2612">2612 </a><span class="php-quote">        SELECT id_member
-</span></span><span id="2613" class="l"><a class="l" href="#2613">2613 </a><span class="php-quote">        FROM {db_prefix}messages
-</span></span><span id="2614" class="l"><a class="l" href="#2614">2614 </a><span class="php-quote">        WHERE id_topic = {int:current_topic}
-</span></span><span id="2615" class="l"><a class="l" href="#2615">2615 </a><span class="php-quote">            AND approved = {int:is_approved}'</span>,
-</span><span id="2616" class="l"><a class="l" href="#2616">2616 </a>        <span class="php-keyword1">array</span>(
-</span><span id="2617" class="l"><a class="l" href="#2617">2617 </a>            <span class="php-quote">'current_topic'</span> =&gt; <span class="php-var">$id_topic</span>,
-</span><span id="2618" class="l"><a class="l" href="#2618">2618 </a>            <span class="php-quote">'is_approved'</span> =&gt; <span class="php-num">1</span>,
-</span><span id="2619" class="l"><a class="l" href="#2619">2619 </a>        )
-</span><span id="2620" class="l"><a class="l" href="#2620">2620 </a>    );
-</span><span id="2621" class="l"><a class="l" href="#2621">2621 </a>    <span class="php-var">$posters</span> = <span class="php-keyword1">array</span>();
-</span><span id="2622" class="l"><a class="l" href="#2622">2622 </a>    <span class="php-keyword1">while</span> (<span class="php-var">$row</span> = <span class="php-var">$db</span>-&gt;fetch_assoc(<span class="php-var">$request</span>))
-</span><span id="2623" class="l"><a class="l" href="#2623">2623 </a>    {
-</span><span id="2624" class="l"><a class="l" href="#2624">2624 </a>        <span class="php-keyword1">if</span> (!<span class="php-keyword1">isset</span>(<span class="php-var">$posters</span>[<span class="php-var">$row</span>[<span class="php-quote">'id_member'</span>]]))
-</span><span id="2625" class="l"><a class="l" href="#2625">2625 </a>            <span class="php-var">$posters</span>[<span class="php-var">$row</span>[<span class="php-quote">'id_member'</span>]] = <span class="php-num">0</span>;
-</span><span id="2626" class="l"><a class="l" href="#2626">2626 </a>
-</span><span id="2627" class="l"><a class="l" href="#2627">2627 </a>        <span class="php-var">$posters</span>[<span class="php-var">$row</span>[<span class="php-quote">'id_member'</span>]]++;
-</span><span id="2628" class="l"><a class="l" href="#2628">2628 </a>    }
-</span><span id="2629" class="l"><a class="l" href="#2629">2629 </a>    <span class="php-var">$db</span>-&gt;free_result(<span class="php-var">$request</span>);
-</span><span id="2630" class="l"><a class="l" href="#2630">2630 </a>
-</span><span id="2631" class="l"><a class="l" href="#2631">2631 </a>    <span class="php-keyword1">return</span> <span class="php-var">$posters</span>;
-</span><span id="2632" class="l"><a class="l" href="#2632">2632 </a>}
-</span><span id="2633" class="l"><a class="l" href="#2633">2633 </a>
-</span><span id="2634" class="l"><a class="l" href="#2634">2634 </a><span class="php-comment">/**
-</span></span><span id="2635" class="l"><a class="l" href="#2635">2635 </a><span class="php-comment"> * Counts topics from the given id_board.
-</span></span><span id="2636" class="l"><a class="l" href="#2636">2636 </a><span class="php-comment"> *
-</span></span><span id="2637" class="l"><a class="l" href="#2637">2637 </a><span class="php-comment"> * @param int $board
-</span></span><span id="2638" class="l"><a class="l" href="#2638">2638 </a><span class="php-comment"> * @param bool $approved
-</span></span><span id="2639" class="l"><a class="l" href="#2639">2639 </a><span class="php-comment"> * @return int
-</span></span><span id="2640" class="l"><a class="l" href="#2640">2640 </a><span class="php-comment"> */</span>
-</span><span id="2641" class="l"><a class="l" href="#2641">2641 </a><span class="php-keyword1">function</span> <a id="_countTopicsByBoard" href="#_countTopicsByBoard">countTopicsByBoard</a>(<span class="php-var">$board</span>, <span class="php-var">$approved</span> = <span class="php-keyword1">false</span>)
-</span><span id="2642" class="l"><a class="l" href="#2642">2642 </a>{
-</span><span id="2643" class="l"><a class="l" href="#2643">2643 </a>    <span class="php-var">$db</span> = database();
-</span><span id="2644" class="l"><a class="l" href="#2644">2644 </a>
-</span><span id="2645" class="l"><a class="l" href="#2645">2645 </a>    <span class="php-comment">// How many topics are on this board?  (used for paging.)</span>
-</span><span id="2646" class="l"><a class="l" href="#2646">2646 </a>    <span class="php-var">$request</span> = <span class="php-var">$db</span>-&gt;query(<span class="php-quote">''</span>, <span class="php-quote">'
-</span></span><span id="2647" class="l"><a class="l" href="#2647">2647 </a><span class="php-quote">        SELECT COUNT(*)
-</span></span><span id="2648" class="l"><a class="l" href="#2648">2648 </a><span class="php-quote">        FROM {db_prefix}topics AS t
-</span></span><span id="2649" class="l"><a class="l" href="#2649">2649 </a><span class="php-quote">        WHERE t.id_board = {int:id_board}'</span> . (<span class="php-keyword1">empty</span>(<span class="php-var">$approved</span>) ? <span class="php-quote">'
-</span></span><span id="2650" class="l"><a class="l" href="#2650">2650 </a><span class="php-quote">            AND t.approved = {int:is_approved}'</span> : <span class="php-quote">''</span>),
-</span><span id="2651" class="l"><a class="l" href="#2651">2651 </a>        <span class="php-keyword1">array</span>(
-</span><span id="2652" class="l"><a class="l" href="#2652">2652 </a>            <span class="php-quote">'id_board'</span> =&gt; <span class="php-var">$board</span>,
-</span><span id="2653" class="l"><a class="l" href="#2653">2653 </a>            <span class="php-quote">'is_approved'</span> =&gt; <span class="php-num">1</span>,
-</span><span id="2654" class="l"><a class="l" href="#2654">2654 </a>        )
-</span><span id="2655" class="l"><a class="l" href="#2655">2655 </a>    );
-</span><span id="2656" class="l"><a class="l" href="#2656">2656 </a>    <span class="php-keyword1">list</span> (<span class="php-var">$topics</span>) = <span class="php-var">$db</span>-&gt;fetch_row(<span class="php-var">$request</span>);
-</span><span id="2657" class="l"><a class="l" href="#2657">2657 </a>    <span class="php-var">$db</span>-&gt;free_result(<span class="php-var">$request</span>);
-</span><span id="2658" class="l"><a class="l" href="#2658">2658 </a>
-</span><span id="2659" class="l"><a class="l" href="#2659">2659 </a>    <span class="php-keyword1">return</span> <span class="php-var">$topics</span>;
-</span><span id="2660" class="l"><a class="l" href="#2660">2660 </a>}
-</span><span id="2661" class="l"><a class="l" href="#2661">2661 </a>
-</span><span id="2662" class="l"><a class="l" href="#2662">2662 </a><span class="php-comment">/**
-</span></span><span id="2663" class="l"><a class="l" href="#2663">2663 </a><span class="php-comment"> * Determines topics which can be merged from a specific board.
-</span></span><span id="2664" class="l"><a class="l" href="#2664">2664 </a><span class="php-comment"> *
-</span></span><span id="2665" class="l"><a class="l" href="#2665">2665 </a><span class="php-comment"> * @param int $id_board
-</span></span><span id="2666" class="l"><a class="l" href="#2666">2666 </a><span class="php-comment"> * @param int $id_topic
-</span></span><span id="2667" class="l"><a class="l" href="#2667">2667 </a><span class="php-comment"> * @param bool $approved
-</span></span><span id="2668" class="l"><a class="l" href="#2668">2668 </a><span class="php-comment"> * @param int $offset
-</span></span><span id="2669" class="l"><a class="l" href="#2669">2669 </a><span class="php-comment"> * @return array
-</span></span><span id="2670" class="l"><a class="l" href="#2670">2670 </a><span class="php-comment"> */</span>
-</span><span id="2671" class="l"><a class="l" href="#2671">2671 </a><span class="php-keyword1">function</span> <a id="_mergeableTopics" href="#_mergeableTopics">mergeableTopics</a>(<span class="php-var">$id_board</span>, <span class="php-var">$id_topic</span>, <span class="php-var">$approved</span>, <span class="php-var">$offset</span>)
-</span><span id="2672" class="l"><a class="l" href="#2672">2672 </a>{
-</span><span id="2673" class="l"><a class="l" href="#2673">2673 </a>    <span class="php-keyword1">global</span> <span class="php-var">$modSettings</span>, <span class="php-var">$scripturl</span>;
-</span><span id="2674" class="l"><a class="l" href="#2674">2674 </a>
-</span><span id="2675" class="l"><a class="l" href="#2675">2675 </a>    <span class="php-var">$db</span> = database();
-</span><span id="2676" class="l"><a class="l" href="#2676">2676 </a>
-</span><span id="2677" class="l"><a class="l" href="#2677">2677 </a>    <span class="php-comment">// Get some topics to merge it with.</span>
-</span><span id="2678" class="l"><a class="l" href="#2678">2678 </a>    <span class="php-var">$request</span> = <span class="php-var">$db</span>-&gt;query(<span class="php-quote">''</span>, <span class="php-quote">'
-</span></span><span id="2679" class="l"><a class="l" href="#2679">2679 </a><span class="php-quote">        SELECT t.id_topic, m.subject, m.id_member, IFNULL(mem.real_name, m.poster_name) AS poster_name
-</span></span><span id="2680" class="l"><a class="l" href="#2680">2680 </a><span class="php-quote">        FROM {db_prefix}topics AS t
-</span></span><span id="2681" class="l"><a class="l" href="#2681">2681 </a><span class="php-quote">            INNER JOIN {db_prefix}messages AS m ON (m.id_msg = t.id_first_msg)
-</span></span><span id="2682" class="l"><a class="l" href="#2682">2682 </a><span class="php-quote">            LEFT JOIN {db_prefix}members AS mem ON (mem.id_member = m.id_member)
-</span></span><span id="2683" class="l"><a class="l" href="#2683">2683 </a><span class="php-quote">        WHERE t.id_board = {int:id_board}
-</span></span><span id="2684" class="l"><a class="l" href="#2684">2684 </a><span class="php-quote">            AND t.id_topic != {int:id_topic}'</span> . (<span class="php-keyword1">empty</span>(<span class="php-var">$approved</span>) ? <span class="php-quote">'
-</span></span><span id="2685" class="l"><a class="l" href="#2685">2685 </a><span class="php-quote">            AND t.approved = {int:is_approved}'</span> : <span class="php-quote">''</span>) . <span class="php-quote">'
-</span></span><span id="2686" class="l"><a class="l" href="#2686">2686 </a><span class="php-quote">        ORDER BY {raw:sort}
-</span></span><span id="2687" class="l"><a class="l" href="#2687">2687 </a><span class="php-quote">        LIMIT {int:offset}, {int:limit}'</span>,
-</span><span id="2688" class="l"><a class="l" href="#2688">2688 </a>        <span class="php-keyword1">array</span>(
-</span><span id="2689" class="l"><a class="l" href="#2689">2689 </a>            <span class="php-quote">'id_board'</span> =&gt; <span class="php-var">$id_board</span>,
-</span><span id="2690" class="l"><a class="l" href="#2690">2690 </a>            <span class="php-quote">'id_topic'</span> =&gt; <span class="php-var">$id_topic</span>,
-</span><span id="2691" class="l"><a class="l" href="#2691">2691 </a>            <span class="php-quote">'sort'</span> =&gt; (!<span class="php-keyword1">empty</span>(<span class="php-var">$modSettings</span>[<span class="php-quote">'enableStickyTopics'</span>]) ? <span class="php-quote">'t.is_sticky DESC, '</span> : <span class="php-quote">''</span>) . <span class="php-quote">'t.id_last_msg DESC'</span>,
-</span><span id="2692" class="l"><a class="l" href="#2692">2692 </a>            <span class="php-quote">'offset'</span> =&gt; <span class="php-var">$offset</span>,
-</span><span id="2693" class="l"><a class="l" href="#2693">2693 </a>            <span class="php-quote">'limit'</span> =&gt; <span class="php-var">$modSettings</span>[<span class="php-quote">'defaultMaxTopics'</span>],
-</span><span id="2694" class="l"><a class="l" href="#2694">2694 </a>            <span class="php-quote">'is_approved'</span> =&gt; <span class="php-num">1</span>,
-</span><span id="2695" class="l"><a class="l" href="#2695">2695 </a>        )
-</span><span id="2696" class="l"><a class="l" href="#2696">2696 </a>    );
-</span><span id="2697" class="l"><a class="l" href="#2697">2697 </a>    <span class="php-var">$topics</span> = <span class="php-keyword1">array</span>();
-</span><span id="2698" class="l"><a class="l" href="#2698">2698 </a>    <span class="php-keyword1">while</span> (<span class="php-var">$row</span> = <span class="php-var">$db</span>-&gt;fetch_assoc(<span class="php-var">$request</span>))
-</span><span id="2699" class="l"><a class="l" href="#2699">2699 </a>    {
-</span><span id="2700" class="l"><a class="l" href="#2700">2700 </a>        censorText(<span class="php-var">$row</span>[<span class="php-quote">'subject'</span>]);
-</span><span id="2701" class="l"><a class="l" href="#2701">2701 </a>
-</span><span id="2702" class="l"><a class="l" href="#2702">2702 </a>        <span class="php-var">$topics</span>[] = <span class="php-keyword1">array</span>(
-</span><span id="2703" class="l"><a class="l" href="#2703">2703 </a>            <span class="php-quote">'id'</span> =&gt; <span class="php-var">$row</span>[<span class="php-quote">'id_topic'</span>],
-</span><span id="2704" class="l"><a class="l" href="#2704">2704 </a>            <span class="php-quote">'poster'</span> =&gt; <span class="php-keyword1">array</span>(
-</span><span id="2705" class="l"><a class="l" href="#2705">2705 </a>                <span class="php-quote">'id'</span> =&gt; <span class="php-var">$row</span>[<span class="php-quote">'id_member'</span>],
-</span><span id="2706" class="l"><a class="l" href="#2706">2706 </a>                <span class="php-quote">'name'</span> =&gt; <span class="php-var">$row</span>[<span class="php-quote">'poster_name'</span>],
-</span><span id="2707" class="l"><a class="l" href="#2707">2707 </a>                <span class="php-quote">'href'</span> =&gt; <span class="php-keyword1">empty</span>(<span class="php-var">$row</span>[<span class="php-quote">'id_member'</span>]) ? <span class="php-quote">''</span> : <span class="php-var">$scripturl</span> . <span class="php-quote">'?action=profile;u='</span> . <span class="php-var">$row</span>[<span class="php-quote">'id_member'</span>],
-</span><span id="2708" class="l"><a class="l" href="#2708">2708 </a>                <span class="php-quote">'link'</span> =&gt; <span class="php-keyword1">empty</span>(<span class="php-var">$row</span>[<span class="php-quote">'id_member'</span>]) ? <span class="php-var">$row</span>[<span class="php-quote">'poster_name'</span>] : <span class="php-quote">'&lt;a href=&quot;'</span> . <span class="php-var">$scripturl</span> . <span class="php-quote">'?action=profile;u='</span> . <span class="php-var">$row</span>[<span class="php-quote">'id_member'</span>] . <span class="php-quote">'&quot; target=&quot;_blank&quot; class=&quot;new_win&quot;&gt;'</span> . <span class="php-var">$row</span>[<span class="php-quote">'poster_name'</span>] . <span class="php-quote">'&lt;/a&gt;'</span>
-</span><span id="2709" class="l"><a class="l" href="#2709">2709 </a>            ),
-</span><span id="2710" class="l"><a class="l" href="#2710">2710 </a>            <span class="php-quote">'subject'</span> =&gt; <span class="php-var">$row</span>[<span class="php-quote">'subject'</span>],
-</span><span id="2711" class="l"><a class="l" href="#2711">2711 </a>            <span class="php-quote">'js_subject'</span> =&gt; <span class="php-keyword2">addcslashes</span>(<span class="php-keyword2">addslashes</span>(<span class="php-var">$row</span>[<span class="php-quote">'subject'</span>]), <span class="php-quote">'/'</span>)
-</span><span id="2712" class="l"><a class="l" href="#2712">2712 </a>        );
-</span><span id="2713" class="l"><a class="l" href="#2713">2713 </a>    }
-</span><span id="2714" class="l"><a class="l" href="#2714">2714 </a>    <span class="php-var">$db</span>-&gt;free_result(<span class="php-var">$request</span>);
-</span><span id="2715" class="l"><a class="l" href="#2715">2715 </a>
-</span><span id="2716" class="l"><a class="l" href="#2716">2716 </a>    <span class="php-keyword1">return</span> <span class="php-var">$topics</span>;
-</span><span id="2717" class="l"><a class="l" href="#2717">2717 </a>}
-</span><span id="2718" class="l"><a class="l" href="#2718">2718 </a>
-</span><span id="2719" class="l"><a class="l" href="#2719">2719 </a><span class="php-comment">/**
-</span></span><span id="2720" class="l"><a class="l" href="#2720">2720 </a><span class="php-comment"> * Determines all messages from a given array of topics.
-</span></span><span id="2721" class="l"><a class="l" href="#2721">2721 </a><span class="php-comment"> *
-</span></span><span id="2722" class="l"><a class="l" href="#2722">2722 </a><span class="php-comment"> * @param int[] $topics integer array of topics to work with
-</span></span><span id="2723" class="l"><a class="l" href="#2723">2723 </a><span class="php-comment"> * @return array
-</span></span><span id="2724" class="l"><a class="l" href="#2724">2724 </a><span class="php-comment"> */</span>
-</span><span id="2725" class="l"><a class="l" href="#2725">2725 </a><span class="php-keyword1">function</span> <a id="_messagesInTopics" href="#_messagesInTopics">messagesInTopics</a>(<span class="php-var">$topics</span>)
-</span><span id="2726" class="l"><a class="l" href="#2726">2726 </a>{
-</span><span id="2727" class="l"><a class="l" href="#2727">2727 </a>    <span class="php-var">$db</span> = database();
-</span><span id="2728" class="l"><a class="l" href="#2728">2728 </a>
-</span><span id="2729" class="l"><a class="l" href="#2729">2729 </a>    <span class="php-comment">// Obtain all the message ids we are going to affect.</span>
-</span><span id="2730" class="l"><a class="l" href="#2730">2730 </a>    <span class="php-var">$request</span> = <span class="php-var">$db</span>-&gt;query(<span class="php-quote">''</span>, <span class="php-quote">'
-</span></span><span id="2731" class="l"><a class="l" href="#2731">2731 </a><span class="php-quote">        SELECT id_msg
-</span></span><span id="2732" class="l"><a class="l" href="#2732">2732 </a><span class="php-quote">        FROM {db_prefix}messages
-</span></span><span id="2733" class="l"><a class="l" href="#2733">2733 </a><span class="php-quote">        WHERE id_topic IN ({array_int:topic_list})'</span>,
-</span><span id="2734" class="l"><a class="l" href="#2734">2734 </a>        <span class="php-keyword1">array</span>(
-</span><span id="2735" class="l"><a class="l" href="#2735">2735 </a>            <span class="php-quote">'topic_list'</span> =&gt; <span class="php-var">$topics</span>,
-</span><span id="2736" class="l"><a class="l" href="#2736">2736 </a>    ));
-</span><span id="2737" class="l"><a class="l" href="#2737">2737 </a>    <span class="php-var">$messages</span> = <span class="php-keyword1">array</span>();
-</span><span id="2738" class="l"><a class="l" href="#2738">2738 </a>    <span class="php-keyword1">while</span> (<span class="php-var">$row</span> = <span class="php-var">$db</span>-&gt;fetch_assoc(<span class="php-var">$request</span>))
-</span><span id="2739" class="l"><a class="l" href="#2739">2739 </a>        <span class="php-var">$messages</span>[] = <span class="php-var">$row</span>[<span class="php-quote">'id_msg'</span>];
-</span><span id="2740" class="l"><a class="l" href="#2740">2740 </a>    <span class="php-var">$db</span>-&gt;free_result(<span class="php-var">$request</span>);
-</span><span id="2741" class="l"><a class="l" href="#2741">2741 </a>
-</span><span id="2742" class="l"><a class="l" href="#2742">2742 </a>    <span class="php-keyword1">return</span> <span class="php-var">$messages</span>;
-</span><span id="2743" class="l"><a class="l" href="#2743">2743 </a>}
-</span><span id="2744" class="l"><a class="l" href="#2744">2744 </a>
-</span><span id="2745" class="l"><a class="l" href="#2745">2745 </a><span class="php-comment">/**
-</span></span><span id="2746" class="l"><a class="l" href="#2746">2746 </a><span class="php-comment"> * Retrieves the members that posted in a group of topics.
-</span></span><span id="2747" class="l"><a class="l" href="#2747">2747 </a><span class="php-comment"> *
-</span></span><span id="2748" class="l"><a class="l" href="#2748">2748 </a><span class="php-comment"> * @param int[] $topics integer array of topics to work with
-</span></span><span id="2749" class="l"><a class="l" href="#2749">2749 </a><span class="php-comment"> * @return array of topics each member posted in (grouped by members)
-</span></span><span id="2750" class="l"><a class="l" href="#2750">2750 </a><span class="php-comment"> */</span>
-</span><span id="2751" class="l"><a class="l" href="#2751">2751 </a><span class="php-keyword1">function</span> <a id="_topicsPosters" href="#_topicsPosters">topicsPosters</a>(<span class="php-var">$topics</span>)
-</span><span id="2752" class="l"><a class="l" href="#2752">2752 </a>{
-</span><span id="2753" class="l"><a class="l" href="#2753">2753 </a>    <span class="php-var">$db</span> = database();
-</span><span id="2754" class="l"><a class="l" href="#2754">2754 </a>
-</span><span id="2755" class="l"><a class="l" href="#2755">2755 </a>    <span class="php-comment">// Obtain all the member ids</span>
-</span><span id="2756" class="l"><a class="l" href="#2756">2756 </a>    <span class="php-var">$members</span> = <span class="php-keyword1">array</span>();
-</span><span id="2757" class="l"><a class="l" href="#2757">2757 </a>    <span class="php-var">$request</span> = <span class="php-var">$db</span>-&gt;query(<span class="php-quote">''</span>, <span class="php-quote">'
-</span></span><span id="2758" class="l"><a class="l" href="#2758">2758 </a><span class="php-quote">        SELECT id_member, id_topic
-</span></span><span id="2759" class="l"><a class="l" href="#2759">2759 </a><span class="php-quote">        FROM {db_prefix}messages
-</span></span><span id="2760" class="l"><a class="l" href="#2760">2760 </a><span class="php-quote">        WHERE id_topic IN ({array_int:topic_list})'</span>,
-</span><span id="2761" class="l"><a class="l" href="#2761">2761 </a>        <span class="php-keyword1">array</span>(
-</span><span id="2762" class="l"><a class="l" href="#2762">2762 </a>            <span class="php-quote">'topic_list'</span> =&gt; <span class="php-var">$topics</span>,
-</span><span id="2763" class="l"><a class="l" href="#2763">2763 </a>    ));
-</span><span id="2764" class="l"><a class="l" href="#2764">2764 </a>    <span class="php-keyword1">while</span> (<span class="php-var">$row</span> = <span class="php-var">$db</span>-&gt;fetch_assoc(<span class="php-var">$request</span>))
-</span><span id="2765" class="l"><a class="l" href="#2765">2765 </a>        <span class="php-var">$members</span>[<span class="php-var">$row</span>[<span class="php-quote">'id_member'</span>]][] = <span class="php-var">$row</span>[<span class="php-quote">'id_topic'</span>];
-</span><span id="2766" class="l"><a class="l" href="#2766">2766 </a>    <span class="php-var">$db</span>-&gt;free_result(<span class="php-var">$request</span>);
-</span><span id="2767" class="l"><a class="l" href="#2767">2767 </a>
-</span><span id="2768" class="l"><a class="l" href="#2768">2768 </a>    <span class="php-keyword1">return</span> <span class="php-var">$members</span>;
-</span><span id="2769" class="l"><a class="l" href="#2769">2769 </a>}
-</span><span id="2770" class="l"><a class="l" href="#2770">2770 </a>
-</span><span id="2771" class="l"><a class="l" href="#2771">2771 </a><span class="php-comment">/**
-</span></span><span id="2772" class="l"><a class="l" href="#2772">2772 </a><span class="php-comment"> * Updates all the tables involved when two or more topics are merged
-</span></span><span id="2773" class="l"><a class="l" href="#2773">2773 </a><span class="php-comment"> *
-</span></span><span id="2774" class="l"><a class="l" href="#2774">2774 </a><span class="php-comment"> * @param int $first_msg the first message of the new topic
-</span></span><span id="2775" class="l"><a class="l" href="#2775">2775 </a><span class="php-comment"> * @param int[] $topics ids of all the topics merged
-</span></span><span id="2776" class="l"><a class="l" href="#2776">2776 </a><span class="php-comment"> * @param int $id_topic id of the merged topic
-</span></span><span id="2777" class="l"><a class="l" href="#2777">2777 </a><span class="php-comment"> * @param int $target_board id of the target board where the topic will resides
-</span></span><span id="2778" class="l"><a class="l" href="#2778">2778 </a><span class="php-comment"> * @param string $target_subject subject of the new topic
-</span></span><span id="2779" class="l"><a class="l" href="#2779">2779 </a><span class="php-comment"> * @param string $enforce_subject if not empty all the messages will be set to the same subject
-</span></span><span id="2780" class="l"><a class="l" href="#2780">2780 </a><span class="php-comment"> * @param int[] $notifications array of topics with active notifications
-</span></span><span id="2781" class="l"><a class="l" href="#2781">2781 </a><span class="php-comment"> */</span>
-</span><span id="2782" class="l"><a class="l" href="#2782">2782 </a><span class="php-keyword1">function</span> <a id="_fixMergedTopics" href="#_fixMergedTopics">fixMergedTopics</a>(<span class="php-var">$first_msg</span>, <span class="php-var">$topics</span>, <span class="php-var">$id_topic</span>, <span class="php-var">$target_board</span>, <span class="php-var">$target_subject</span>, <span class="php-var">$enforce_subject</span>, <span class="php-var">$notifications</span>)
-</span><span id="2783" class="l"><a class="l" href="#2783">2783 </a>{
-</span><span id="2784" class="l"><a class="l" href="#2784">2784 </a>    <span class="php-keyword1">global</span> <span class="php-var">$context</span>;
-</span><span id="2785" class="l"><a class="l" href="#2785">2785 </a>
-</span><span id="2786" class="l"><a class="l" href="#2786">2786 </a>    <span class="php-var">$db</span> = database();
-</span><span id="2787" class="l"><a class="l" href="#2787">2787 </a>
-</span><span id="2788" class="l"><a class="l" href="#2788">2788 </a>    <span class="php-comment">// Delete the remaining topics.</span>
-</span><span id="2789" class="l"><a class="l" href="#2789">2789 </a>    <span class="php-var">$deleted_topics</span> = <span class="php-keyword2">array_diff</span>(<span class="php-var">$topics</span>, <span class="php-keyword1">array</span>(<span class="php-var">$id_topic</span>));
-</span><span id="2790" class="l"><a class="l" href="#2790">2790 </a>    <span class="php-var">$db</span>-&gt;query(<span class="php-quote">''</span>, <span class="php-quote">'
-</span></span><span id="2791" class="l"><a class="l" href="#2791">2791 </a><span class="php-quote">        DELETE FROM {db_prefix}topics
-</span></span><span id="2792" class="l"><a class="l" href="#2792">2792 </a><span class="php-quote">        WHERE id_topic IN ({array_int:deleted_topics})'</span>,
-</span><span id="2793" class="l"><a class="l" href="#2793">2793 </a>        <span class="php-keyword1">array</span>(
-</span><span id="2794" class="l"><a class="l" href="#2794">2794 </a>            <span class="php-quote">'deleted_topics'</span> =&gt; <span class="php-var">$deleted_topics</span>,
-</span><span id="2795" class="l"><a class="l" href="#2795">2795 </a>        )
-</span><span id="2796" class="l"><a class="l" href="#2796">2796 </a>    );
-</span><span id="2797" class="l"><a class="l" href="#2797">2797 </a>
+</span><span id="2460" class="l"><a class="l" href="#2460">2460 </a>}
+</span><span id="2461" class="l"><a class="l" href="#2461">2461 </a>
+</span><span id="2462" class="l"><a class="l" href="#2462">2462 </a><span class="php-comment">/**
+</span></span><span id="2463" class="l"><a class="l" href="#2463">2463 </a><span class="php-comment"> * Retrives informations of the current and destination board of a split topic
+</span></span><span id="2464" class="l"><a class="l" href="#2464">2464 </a><span class="php-comment"> *
+</span></span><span id="2465" class="l"><a class="l" href="#2465">2465 </a><span class="php-comment"> * @return array
+</span></span><span id="2466" class="l"><a class="l" href="#2466">2466 </a><span class="php-comment"> */</span>
+</span><span id="2467" class="l"><a class="l" href="#2467">2467 </a><span class="php-keyword1">function</span> <a id="_splitDestinationBoard" href="#_splitDestinationBoard">splitDestinationBoard</a>(<span class="php-var">$toboard</span> = <span class="php-num">0</span>)
+</span><span id="2468" class="l"><a class="l" href="#2468">2468 </a>{
+</span><span id="2469" class="l"><a class="l" href="#2469">2469 </a>    <span class="php-keyword1">global</span> <span class="php-var">$board</span>, <span class="php-var">$topic</span>;
+</span><span id="2470" class="l"><a class="l" href="#2470">2470 </a>
+</span><span id="2471" class="l"><a class="l" href="#2471">2471 </a>    <span class="php-var">$current_board</span> = boardInfo(<span class="php-var">$board</span>, <span class="php-var">$topic</span>);
+</span><span id="2472" class="l"><a class="l" href="#2472">2472 </a>    <span class="php-keyword1">if</span> (<span class="php-keyword1">empty</span>(<span class="php-var">$current_board</span>))
+</span><span id="2473" class="l"><a class="l" href="#2473">2473 </a>        fatal_lang_error(<span class="php-quote">'no_board'</span>);
+</span><span id="2474" class="l"><a class="l" href="#2474">2474 </a>
+</span><span id="2475" class="l"><a class="l" href="#2475">2475 </a>    <span class="php-keyword1">if</span> (!<span class="php-keyword1">empty</span>(<span class="php-var">$toboard</span>) &amp;&amp; <span class="php-var">$board</span> !== <span class="php-var">$toboard</span>)
+</span><span id="2476" class="l"><a class="l" href="#2476">2476 </a>    {
+</span><span id="2477" class="l"><a class="l" href="#2477">2477 </a>        <span class="php-var">$destination_board</span> = boardInfo(<span class="php-var">$toboard</span>);
+</span><span id="2478" class="l"><a class="l" href="#2478">2478 </a>        <span class="php-keyword1">if</span> (<span class="php-keyword1">empty</span>(<span class="php-var">$destination_board</span>))
+</span><span id="2479" class="l"><a class="l" href="#2479">2479 </a>            fatal_lang_error(<span class="php-quote">'no_board'</span>);
+</span><span id="2480" class="l"><a class="l" href="#2480">2480 </a>    }
+</span><span id="2481" class="l"><a class="l" href="#2481">2481 </a>
+</span><span id="2482" class="l"><a class="l" href="#2482">2482 </a>    <span class="php-keyword1">if</span> (!<span class="php-keyword1">isset</span>(<span class="php-var">$destination_board</span>))
+</span><span id="2483" class="l"><a class="l" href="#2483">2483 </a>        <span class="php-var">$destination_board</span> = <span class="php-keyword2">array_merge</span>(<span class="php-var">$current_board</span>, <span class="php-keyword1">array</span>(<span class="php-quote">'id'</span> =&gt; <span class="php-var">$board</span>));
+</span><span id="2484" class="l"><a class="l" href="#2484">2484 </a>    <span class="php-keyword1">else</span>
+</span><span id="2485" class="l"><a class="l" href="#2485">2485 </a>        <span class="php-var">$destination_board</span>[<span class="php-quote">'id'</span>] = <span class="php-var">$toboard</span>;
+</span><span id="2486" class="l"><a class="l" href="#2486">2486 </a>
+</span><span id="2487" class="l"><a class="l" href="#2487">2487 </a>    <span class="php-keyword1">return</span> <span class="php-keyword1">array</span>(<span class="php-quote">'current'</span> =&gt; <span class="php-var">$current_board</span>, <span class="php-quote">'destination'</span> =&gt; <span class="php-var">$destination_board</span>);
+</span><span id="2488" class="l"><a class="l" href="#2488">2488 </a>}
+</span><span id="2489" class="l"><a class="l" href="#2489">2489 </a>
+</span><span id="2490" class="l"><a class="l" href="#2490">2490 </a><span class="php-comment">/**
+</span></span><span id="2491" class="l"><a class="l" href="#2491">2491 </a><span class="php-comment"> * Retrieve topic notifications count.
+</span></span><span id="2492" class="l"><a class="l" href="#2492">2492 </a><span class="php-comment"> * (used by createList() callbacks, amongst others.)
+</span></span><span id="2493" class="l"><a class="l" href="#2493">2493 </a><span class="php-comment"> *
+</span></span><span id="2494" class="l"><a class="l" href="#2494">2494 </a><span class="php-comment"> * @param int $memID id_member
+</span></span><span id="2495" class="l"><a class="l" href="#2495">2495 </a><span class="php-comment"> * @return integer
+</span></span><span id="2496" class="l"><a class="l" href="#2496">2496 </a><span class="php-comment"> */</span>
+</span><span id="2497" class="l"><a class="l" href="#2497">2497 </a><span class="php-keyword1">function</span> <a id="_topicNotificationCount" href="#_topicNotificationCount">topicNotificationCount</a>(<span class="php-var">$memID</span>)
+</span><span id="2498" class="l"><a class="l" href="#2498">2498 </a>{
+</span><span id="2499" class="l"><a class="l" href="#2499">2499 </a>    <span class="php-keyword1">global</span> <span class="php-var">$user_info</span>, <span class="php-var">$modSettings</span>;
+</span><span id="2500" class="l"><a class="l" href="#2500">2500 </a>
+</span><span id="2501" class="l"><a class="l" href="#2501">2501 </a>    <span class="php-var">$db</span> = database();
+</span><span id="2502" class="l"><a class="l" href="#2502">2502 </a>
+</span><span id="2503" class="l"><a class="l" href="#2503">2503 </a>    <span class="php-var">$request</span> = <span class="php-var">$db</span>-&gt;query(<span class="php-quote">''</span>, <span class="php-quote">'
+</span></span><span id="2504" class="l"><a class="l" href="#2504">2504 </a><span class="php-quote">        SELECT COUNT(*)
+</span></span><span id="2505" class="l"><a class="l" href="#2505">2505 </a><span class="php-quote">        FROM {db_prefix}log_notify AS ln'</span> . (!<span class="php-var">$modSettings</span>[<span class="php-quote">'postmod_active'</span>] &amp;&amp; <span class="php-var">$user_info</span>[<span class="php-quote">'query_see_board'</span>] === <span class="php-quote">'1=1'</span> ? <span class="php-quote">''</span> : <span class="php-quote">'
+</span></span><span id="2506" class="l"><a class="l" href="#2506">2506 </a><span class="php-quote">            INNER JOIN {db_prefix}topics AS t ON (t.id_topic = ln.id_topic)'</span>) . (<span class="php-var">$user_info</span>[<span class="php-quote">'query_see_board'</span>] === <span class="php-quote">'1=1'</span> ? <span class="php-quote">''</span> : <span class="php-quote">'
+</span></span><span id="2507" class="l"><a class="l" href="#2507">2507 </a><span class="php-quote">            INNER JOIN {db_prefix}boards AS b ON (b.id_board = t.id_board)'</span>) . <span class="php-quote">'
+</span></span><span id="2508" class="l"><a class="l" href="#2508">2508 </a><span class="php-quote">        WHERE ln.id_member = {int:selected_member}'</span> . (<span class="php-var">$user_info</span>[<span class="php-quote">'query_see_board'</span>] === <span class="php-quote">'1=1'</span> ? <span class="php-quote">''</span> : <span class="php-quote">'
+</span></span><span id="2509" class="l"><a class="l" href="#2509">2509 </a><span class="php-quote">            AND {query_see_board}'</span>) . (<span class="php-var">$modSettings</span>[<span class="php-quote">'postmod_active'</span>] ? <span class="php-quote">'
+</span></span><span id="2510" class="l"><a class="l" href="#2510">2510 </a><span class="php-quote">            AND t.approved = {int:is_approved}'</span> : <span class="php-quote">''</span>),
+</span><span id="2511" class="l"><a class="l" href="#2511">2511 </a>        <span class="php-keyword1">array</span>(
+</span><span id="2512" class="l"><a class="l" href="#2512">2512 </a>            <span class="php-quote">'selected_member'</span> =&gt; <span class="php-var">$memID</span>,
+</span><span id="2513" class="l"><a class="l" href="#2513">2513 </a>            <span class="php-quote">'is_approved'</span> =&gt; <span class="php-num">1</span>,
+</span><span id="2514" class="l"><a class="l" href="#2514">2514 </a>        )
+</span><span id="2515" class="l"><a class="l" href="#2515">2515 </a>    );
+</span><span id="2516" class="l"><a class="l" href="#2516">2516 </a>    <span class="php-keyword1">list</span> (<span class="php-var">$totalNotifications</span>) = <span class="php-var">$db</span>-&gt;fetch_row(<span class="php-var">$request</span>);
+</span><span id="2517" class="l"><a class="l" href="#2517">2517 </a>    <span class="php-var">$db</span>-&gt;free_result(<span class="php-var">$request</span>);
+</span><span id="2518" class="l"><a class="l" href="#2518">2518 </a>
+</span><span id="2519" class="l"><a class="l" href="#2519">2519 </a>    <span class="php-keyword1">return</span> (int) <span class="php-var">$totalNotifications</span>;
+</span><span id="2520" class="l"><a class="l" href="#2520">2520 </a>}
+</span><span id="2521" class="l"><a class="l" href="#2521">2521 </a>
+</span><span id="2522" class="l"><a class="l" href="#2522">2522 </a><span class="php-comment">/**
+</span></span><span id="2523" class="l"><a class="l" href="#2523">2523 </a><span class="php-comment"> * Retrieve all topic notifications for the given user.
+</span></span><span id="2524" class="l"><a class="l" href="#2524">2524 </a><span class="php-comment"> * (used by createList() callbacks)
+</span></span><span id="2525" class="l"><a class="l" href="#2525">2525 </a><span class="php-comment"> *
+</span></span><span id="2526" class="l"><a class="l" href="#2526">2526 </a><span class="php-comment"> * @param int $start
+</span></span><span id="2527" class="l"><a class="l" href="#2527">2527 </a><span class="php-comment"> * @param int $items_per_page
+</span></span><span id="2528" class="l"><a class="l" href="#2528">2528 </a><span class="php-comment"> * @param string $sort
+</span></span><span id="2529" class="l"><a class="l" href="#2529">2529 </a><span class="php-comment"> * @param int $memID id_member
+</span></span><span id="2530" class="l"><a class="l" href="#2530">2530 </a><span class="php-comment"> * @return array
+</span></span><span id="2531" class="l"><a class="l" href="#2531">2531 </a><span class="php-comment"> */</span>
+</span><span id="2532" class="l"><a class="l" href="#2532">2532 </a><span class="php-keyword1">function</span> <a id="_topicNotifications" href="#_topicNotifications">topicNotifications</a>(<span class="php-var">$start</span>, <span class="php-var">$items_per_page</span>, <span class="php-var">$sort</span>, <span class="php-var">$memID</span>)
+</span><span id="2533" class="l"><a class="l" href="#2533">2533 </a>{
+</span><span id="2534" class="l"><a class="l" href="#2534">2534 </a>    <span class="php-keyword1">global</span> <span class="php-var">$scripturl</span>, <span class="php-var">$user_info</span>, <span class="php-var">$modSettings</span>;
+</span><span id="2535" class="l"><a class="l" href="#2535">2535 </a>
+</span><span id="2536" class="l"><a class="l" href="#2536">2536 </a>    <span class="php-var">$db</span> = database();
+</span><span id="2537" class="l"><a class="l" href="#2537">2537 </a>
+</span><span id="2538" class="l"><a class="l" href="#2538">2538 </a>    <span class="php-comment">// All the topics with notification on...</span>
+</span><span id="2539" class="l"><a class="l" href="#2539">2539 </a>    <span class="php-var">$request</span> = <span class="php-var">$db</span>-&gt;query(<span class="php-quote">''</span>, <span class="php-quote">'
+</span></span><span id="2540" class="l"><a class="l" href="#2540">2540 </a><span class="php-quote">        SELECT
+</span></span><span id="2541" class="l"><a class="l" href="#2541">2541 </a><span class="php-quote">            IFNULL(lt.id_msg, IFNULL(lmr.id_msg, -1)) + 1 AS new_from, b.id_board, b.name,
+</span></span><span id="2542" class="l"><a class="l" href="#2542">2542 </a><span class="php-quote">            t.id_topic, ms.subject, ms.id_member, IFNULL(mem.real_name, ms.poster_name) AS real_name_col,
+</span></span><span id="2543" class="l"><a class="l" href="#2543">2543 </a><span class="php-quote">            ml.id_msg_modified, ml.poster_time, ml.id_member AS id_member_updated,
+</span></span><span id="2544" class="l"><a class="l" href="#2544">2544 </a><span class="php-quote">            IFNULL(mem2.real_name, ml.poster_name) AS last_real_name
+</span></span><span id="2545" class="l"><a class="l" href="#2545">2545 </a><span class="php-quote">        FROM {db_prefix}log_notify AS ln
+</span></span><span id="2546" class="l"><a class="l" href="#2546">2546 </a><span class="php-quote">            INNER JOIN {db_prefix}topics AS t ON (t.id_topic = ln.id_topic'</span> . (<span class="php-var">$modSettings</span>[<span class="php-quote">'postmod_active'</span>] ? <span class="php-quote">' AND t.approved = {int:is_approved}'</span> : <span class="php-quote">''</span>) . <span class="php-quote">')
+</span></span><span id="2547" class="l"><a class="l" href="#2547">2547 </a><span class="php-quote">            INNER JOIN {db_prefix}boards AS b ON (b.id_board = t.id_board AND {query_see_board})
+</span></span><span id="2548" class="l"><a class="l" href="#2548">2548 </a><span class="php-quote">            INNER JOIN {db_prefix}messages AS ms ON (ms.id_msg = t.id_first_msg)
+</span></span><span id="2549" class="l"><a class="l" href="#2549">2549 </a><span class="php-quote">            INNER JOIN {db_prefix}messages AS ml ON (ml.id_msg = t.id_last_msg)
+</span></span><span id="2550" class="l"><a class="l" href="#2550">2550 </a><span class="php-quote">            LEFT JOIN {db_prefix}members AS mem ON (mem.id_member = ms.id_member)
+</span></span><span id="2551" class="l"><a class="l" href="#2551">2551 </a><span class="php-quote">            LEFT JOIN {db_prefix}members AS mem2 ON (mem2.id_member = ml.id_member)
+</span></span><span id="2552" class="l"><a class="l" href="#2552">2552 </a><span class="php-quote">            LEFT JOIN {db_prefix}log_topics AS lt ON (lt.id_topic = t.id_topic AND lt.id_member = {int:current_member})
+</span></span><span id="2553" class="l"><a class="l" href="#2553">2553 </a><span class="php-quote">            LEFT JOIN {db_prefix}log_mark_read AS lmr ON (lmr.id_board = b.id_board AND lmr.id_member = {int:current_member})
+</span></span><span id="2554" class="l"><a class="l" href="#2554">2554 </a><span class="php-quote">        WHERE ln.id_member = {int:selected_member}
+</span></span><span id="2555" class="l"><a class="l" href="#2555">2555 </a><span class="php-quote">        ORDER BY {raw:sort}
+</span></span><span id="2556" class="l"><a class="l" href="#2556">2556 </a><span class="php-quote">        LIMIT {int:offset}, {int:items_per_page}'</span>,
+</span><span id="2557" class="l"><a class="l" href="#2557">2557 </a>        <span class="php-keyword1">array</span>(
+</span><span id="2558" class="l"><a class="l" href="#2558">2558 </a>            <span class="php-quote">'current_member'</span> =&gt; <span class="php-var">$user_info</span>[<span class="php-quote">'id'</span>],
+</span><span id="2559" class="l"><a class="l" href="#2559">2559 </a>            <span class="php-quote">'is_approved'</span> =&gt; <span class="php-num">1</span>,
+</span><span id="2560" class="l"><a class="l" href="#2560">2560 </a>            <span class="php-quote">'selected_member'</span> =&gt; <span class="php-var">$memID</span>,
+</span><span id="2561" class="l"><a class="l" href="#2561">2561 </a>            <span class="php-quote">'sort'</span> =&gt; <span class="php-var">$sort</span>,
+</span><span id="2562" class="l"><a class="l" href="#2562">2562 </a>            <span class="php-quote">'offset'</span> =&gt; <span class="php-var">$start</span>,
+</span><span id="2563" class="l"><a class="l" href="#2563">2563 </a>            <span class="php-quote">'items_per_page'</span> =&gt; <span class="php-var">$items_per_page</span>,
+</span><span id="2564" class="l"><a class="l" href="#2564">2564 </a>        )
+</span><span id="2565" class="l"><a class="l" href="#2565">2565 </a>    );
+</span><span id="2566" class="l"><a class="l" href="#2566">2566 </a>    <span class="php-var">$notification_topics</span> = <span class="php-keyword1">array</span>();
+</span><span id="2567" class="l"><a class="l" href="#2567">2567 </a>    <span class="php-keyword1">while</span> (<span class="php-var">$row</span> = <span class="php-var">$db</span>-&gt;fetch_assoc(<span class="php-var">$request</span>))
+</span><span id="2568" class="l"><a class="l" href="#2568">2568 </a>    {
+</span><span id="2569" class="l"><a class="l" href="#2569">2569 </a>        censorText(<span class="php-var">$row</span>[<span class="php-quote">'subject'</span>]);
+</span><span id="2570" class="l"><a class="l" href="#2570">2570 </a>
+</span><span id="2571" class="l"><a class="l" href="#2571">2571 </a>        <span class="php-var">$notification_topics</span>[] = <span class="php-keyword1">array</span>(
+</span><span id="2572" class="l"><a class="l" href="#2572">2572 </a>            <span class="php-quote">'id'</span> =&gt; <span class="php-var">$row</span>[<span class="php-quote">'id_topic'</span>],
+</span><span id="2573" class="l"><a class="l" href="#2573">2573 </a>            <span class="php-quote">'poster_link'</span> =&gt; <span class="php-keyword1">empty</span>(<span class="php-var">$row</span>[<span class="php-quote">'id_member'</span>]) ? <span class="php-var">$row</span>[<span class="php-quote">'real_name_col'</span>] : <span class="php-quote">'&lt;a href=&quot;'</span> . <span class="php-var">$scripturl</span> . <span class="php-quote">'?action=profile;u='</span> . <span class="php-var">$row</span>[<span class="php-quote">'id_member'</span>] . <span class="php-quote">'&quot;&gt;'</span> . <span class="php-var">$row</span>[<span class="php-quote">'real_name_col'</span>] . <span class="php-quote">'&lt;/a&gt;'</span>,
+</span><span id="2574" class="l"><a class="l" href="#2574">2574 </a>            <span class="php-quote">'poster_updated_link'</span> =&gt; <span class="php-keyword1">empty</span>(<span class="php-var">$row</span>[<span class="php-quote">'id_member_updated'</span>]) ? <span class="php-var">$row</span>[<span class="php-quote">'last_real_name'</span>] : <span class="php-quote">'&lt;a href=&quot;'</span> . <span class="php-var">$scripturl</span> . <span class="php-quote">'?action=profile;u='</span> . <span class="php-var">$row</span>[<span class="php-quote">'id_member_updated'</span>] . <span class="php-quote">'&quot;&gt;'</span> . <span class="php-var">$row</span>[<span class="php-quote">'last_real_name'</span>] . <span class="php-quote">'&lt;/a&gt;'</span>,
+</span><span id="2575" class="l"><a class="l" href="#2575">2575 </a>            <span class="php-quote">'subject'</span> =&gt; <span class="php-var">$row</span>[<span class="php-quote">'subject'</span>],
+</span><span id="2576" class="l"><a class="l" href="#2576">2576 </a>            <span class="php-quote">'href'</span> =&gt; <span class="php-var">$scripturl</span> . <span class="php-quote">'?topic='</span> . <span class="php-var">$row</span>[<span class="php-quote">'id_topic'</span>] . <span class="php-quote">'.0'</span>,
+</span><span id="2577" class="l"><a class="l" href="#2577">2577 </a>            <span class="php-quote">'link'</span> =&gt; <span class="php-quote">'&lt;a href=&quot;'</span> . <span class="php-var">$scripturl</span> . <span class="php-quote">'?topic='</span> . <span class="php-var">$row</span>[<span class="php-quote">'id_topic'</span>] . <span class="php-quote">'.0&quot;&gt;'</span> . <span class="php-var">$row</span>[<span class="php-quote">'subject'</span>] . <span class="php-quote">'&lt;/a&gt;'</span>,
+</span><span id="2578" class="l"><a class="l" href="#2578">2578 </a>            <span class="php-quote">'new'</span> =&gt; <span class="php-var">$row</span>[<span class="php-quote">'new_from'</span>] &lt;= <span class="php-var">$row</span>[<span class="php-quote">'id_msg_modified'</span>],
+</span><span id="2579" class="l"><a class="l" href="#2579">2579 </a>            <span class="php-quote">'new_from'</span> =&gt; <span class="php-var">$row</span>[<span class="php-quote">'new_from'</span>],
+</span><span id="2580" class="l"><a class="l" href="#2580">2580 </a>            <span class="php-quote">'updated'</span> =&gt; standardTime(<span class="php-var">$row</span>[<span class="php-quote">'poster_time'</span>]),
+</span><span id="2581" class="l"><a class="l" href="#2581">2581 </a>            <span class="php-quote">'new_href'</span> =&gt; <span class="php-var">$scripturl</span> . <span class="php-quote">'?topic='</span> . <span class="php-var">$row</span>[<span class="php-quote">'id_topic'</span>] . <span class="php-quote">'.msg'</span> . <span class="php-var">$row</span>[<span class="php-quote">'new_from'</span>] . <span class="php-quote">'#new'</span>,
+</span><span id="2582" class="l"><a class="l" href="#2582">2582 </a>            <span class="php-quote">'new_link'</span> =&gt; <span class="php-quote">'&lt;a href=&quot;'</span> . <span class="php-var">$scripturl</span> . <span class="php-quote">'?topic='</span> . <span class="php-var">$row</span>[<span class="php-quote">'id_topic'</span>] . <span class="php-quote">'.msg'</span> . <span class="php-var">$row</span>[<span class="php-quote">'new_from'</span>] . <span class="php-quote">'#new&quot;&gt;'</span> . <span class="php-var">$row</span>[<span class="php-quote">'subject'</span>] . <span class="php-quote">'&lt;/a&gt;'</span>,
+</span><span id="2583" class="l"><a class="l" href="#2583">2583 </a>            <span class="php-quote">'board_link'</span> =&gt; <span class="php-quote">'&lt;a href=&quot;'</span> . <span class="php-var">$scripturl</span> . <span class="php-quote">'?board='</span> . <span class="php-var">$row</span>[<span class="php-quote">'id_board'</span>] . <span class="php-quote">'.0&quot;&gt;'</span> . <span class="php-var">$row</span>[<span class="php-quote">'name'</span>] . <span class="php-quote">'&lt;/a&gt;'</span>,
+</span><span id="2584" class="l"><a class="l" href="#2584">2584 </a>        );
+</span><span id="2585" class="l"><a class="l" href="#2585">2585 </a>    }
+</span><span id="2586" class="l"><a class="l" href="#2586">2586 </a>    <span class="php-var">$db</span>-&gt;free_result(<span class="php-var">$request</span>);
+</span><span id="2587" class="l"><a class="l" href="#2587">2587 </a>
+</span><span id="2588" class="l"><a class="l" href="#2588">2588 </a>    <span class="php-keyword1">return</span> <span class="php-var">$notification_topics</span>;
+</span><span id="2589" class="l"><a class="l" href="#2589">2589 </a>}
+</span><span id="2590" class="l"><a class="l" href="#2590">2590 </a>
+</span><span id="2591" class="l"><a class="l" href="#2591">2591 </a><span class="php-comment">/**
+</span></span><span id="2592" class="l"><a class="l" href="#2592">2592 </a><span class="php-comment"> * Get a list of posters in this topic, and their posts counts in the topic.
+</span></span><span id="2593" class="l"><a class="l" href="#2593">2593 </a><span class="php-comment"> * Used to update users posts counts when topics are moved or are deleted.
+</span></span><span id="2594" class="l"><a class="l" href="#2594">2594 </a><span class="php-comment"> *
+</span></span><span id="2595" class="l"><a class="l" href="#2595">2595 </a><span class="php-comment"> * @param int $id_topic topic id to work with
+</span></span><span id="2596" class="l"><a class="l" href="#2596">2596 </a><span class="php-comment"> */</span>
+</span><span id="2597" class="l"><a class="l" href="#2597">2597 </a><span class="php-keyword1">function</span> <a id="_postersCount" href="#_postersCount">postersCount</a>(<span class="php-var">$id_topic</span>)
+</span><span id="2598" class="l"><a class="l" href="#2598">2598 </a>{
+</span><span id="2599" class="l"><a class="l" href="#2599">2599 </a>    <span class="php-var">$db</span> = database();
+</span><span id="2600" class="l"><a class="l" href="#2600">2600 </a>
+</span><span id="2601" class="l"><a class="l" href="#2601">2601 </a>    <span class="php-comment">// We only care about approved topics, the rest don't count.</span>
+</span><span id="2602" class="l"><a class="l" href="#2602">2602 </a>    <span class="php-var">$request</span> = <span class="php-var">$db</span>-&gt;query(<span class="php-quote">''</span>, <span class="php-quote">'
+</span></span><span id="2603" class="l"><a class="l" href="#2603">2603 </a><span class="php-quote">        SELECT id_member
+</span></span><span id="2604" class="l"><a class="l" href="#2604">2604 </a><span class="php-quote">        FROM {db_prefix}messages
+</span></span><span id="2605" class="l"><a class="l" href="#2605">2605 </a><span class="php-quote">        WHERE id_topic = {int:current_topic}
+</span></span><span id="2606" class="l"><a class="l" href="#2606">2606 </a><span class="php-quote">            AND approved = {int:is_approved}'</span>,
+</span><span id="2607" class="l"><a class="l" href="#2607">2607 </a>        <span class="php-keyword1">array</span>(
+</span><span id="2608" class="l"><a class="l" href="#2608">2608 </a>            <span class="php-quote">'current_topic'</span> =&gt; <span class="php-var">$id_topic</span>,
+</span><span id="2609" class="l"><a class="l" href="#2609">2609 </a>            <span class="php-quote">'is_approved'</span> =&gt; <span class="php-num">1</span>,
+</span><span id="2610" class="l"><a class="l" href="#2610">2610 </a>        )
+</span><span id="2611" class="l"><a class="l" href="#2611">2611 </a>    );
+</span><span id="2612" class="l"><a class="l" href="#2612">2612 </a>    <span class="php-var">$posters</span> = <span class="php-keyword1">array</span>();
+</span><span id="2613" class="l"><a class="l" href="#2613">2613 </a>    <span class="php-keyword1">while</span> (<span class="php-var">$row</span> = <span class="php-var">$db</span>-&gt;fetch_assoc(<span class="php-var">$request</span>))
+</span><span id="2614" class="l"><a class="l" href="#2614">2614 </a>    {
+</span><span id="2615" class="l"><a class="l" href="#2615">2615 </a>        <span class="php-keyword1">if</span> (!<span class="php-keyword1">isset</span>(<span class="php-var">$posters</span>[<span class="php-var">$row</span>[<span class="php-quote">'id_member'</span>]]))
+</span><span id="2616" class="l"><a class="l" href="#2616">2616 </a>            <span class="php-var">$posters</span>[<span class="php-var">$row</span>[<span class="php-quote">'id_member'</span>]] = <span class="php-num">0</span>;
+</span><span id="2617" class="l"><a class="l" href="#2617">2617 </a>
+</span><span id="2618" class="l"><a class="l" href="#2618">2618 </a>        <span class="php-var">$posters</span>[<span class="php-var">$row</span>[<span class="php-quote">'id_member'</span>]]++;
+</span><span id="2619" class="l"><a class="l" href="#2619">2619 </a>    }
+</span><span id="2620" class="l"><a class="l" href="#2620">2620 </a>    <span class="php-var">$db</span>-&gt;free_result(<span class="php-var">$request</span>);
+</span><span id="2621" class="l"><a class="l" href="#2621">2621 </a>
+</span><span id="2622" class="l"><a class="l" href="#2622">2622 </a>    <span class="php-keyword1">return</span> <span class="php-var">$posters</span>;
+</span><span id="2623" class="l"><a class="l" href="#2623">2623 </a>}
+</span><span id="2624" class="l"><a class="l" href="#2624">2624 </a>
+</span><span id="2625" class="l"><a class="l" href="#2625">2625 </a><span class="php-comment">/**
+</span></span><span id="2626" class="l"><a class="l" href="#2626">2626 </a><span class="php-comment"> * Counts topics from the given id_board.
+</span></span><span id="2627" class="l"><a class="l" href="#2627">2627 </a><span class="php-comment"> *
+</span></span><span id="2628" class="l"><a class="l" href="#2628">2628 </a><span class="php-comment"> * @param int $board
+</span></span><span id="2629" class="l"><a class="l" href="#2629">2629 </a><span class="php-comment"> * @param bool $approved
+</span></span><span id="2630" class="l"><a class="l" href="#2630">2630 </a><span class="php-comment"> * @return int
+</span></span><span id="2631" class="l"><a class="l" href="#2631">2631 </a><span class="php-comment"> */</span>
+</span><span id="2632" class="l"><a class="l" href="#2632">2632 </a><span class="php-keyword1">function</span> <a id="_countTopicsByBoard" href="#_countTopicsByBoard">countTopicsByBoard</a>(<span class="php-var">$board</span>, <span class="php-var">$approved</span> = <span class="php-keyword1">false</span>)
+</span><span id="2633" class="l"><a class="l" href="#2633">2633 </a>{
+</span><span id="2634" class="l"><a class="l" href="#2634">2634 </a>    <span class="php-var">$db</span> = database();
+</span><span id="2635" class="l"><a class="l" href="#2635">2635 </a>
+</span><span id="2636" class="l"><a class="l" href="#2636">2636 </a>    <span class="php-comment">// How many topics are on this board?  (used for paging.)</span>
+</span><span id="2637" class="l"><a class="l" href="#2637">2637 </a>    <span class="php-var">$request</span> = <span class="php-var">$db</span>-&gt;query(<span class="php-quote">''</span>, <span class="php-quote">'
+</span></span><span id="2638" class="l"><a class="l" href="#2638">2638 </a><span class="php-quote">        SELECT COUNT(*)
+</span></span><span id="2639" class="l"><a class="l" href="#2639">2639 </a><span class="php-quote">        FROM {db_prefix}topics AS t
+</span></span><span id="2640" class="l"><a class="l" href="#2640">2640 </a><span class="php-quote">        WHERE t.id_board = {int:id_board}'</span> . (<span class="php-keyword1">empty</span>(<span class="php-var">$approved</span>) ? <span class="php-quote">'
+</span></span><span id="2641" class="l"><a class="l" href="#2641">2641 </a><span class="php-quote">            AND t.approved = {int:is_approved}'</span> : <span class="php-quote">''</span>),
+</span><span id="2642" class="l"><a class="l" href="#2642">2642 </a>        <span class="php-keyword1">array</span>(
+</span><span id="2643" class="l"><a class="l" href="#2643">2643 </a>            <span class="php-quote">'id_board'</span> =&gt; <span class="php-var">$board</span>,
+</span><span id="2644" class="l"><a class="l" href="#2644">2644 </a>            <span class="php-quote">'is_approved'</span> =&gt; <span class="php-num">1</span>,
+</span><span id="2645" class="l"><a class="l" href="#2645">2645 </a>        )
+</span><span id="2646" class="l"><a class="l" href="#2646">2646 </a>    );
+</span><span id="2647" class="l"><a class="l" href="#2647">2647 </a>    <span class="php-keyword1">list</span> (<span class="php-var">$topics</span>) = <span class="php-var">$db</span>-&gt;fetch_row(<span class="php-var">$request</span>);
+</span><span id="2648" class="l"><a class="l" href="#2648">2648 </a>    <span class="php-var">$db</span>-&gt;free_result(<span class="php-var">$request</span>);
+</span><span id="2649" class="l"><a class="l" href="#2649">2649 </a>
+</span><span id="2650" class="l"><a class="l" href="#2650">2650 </a>    <span class="php-keyword1">return</span> <span class="php-var">$topics</span>;
+</span><span id="2651" class="l"><a class="l" href="#2651">2651 </a>}
+</span><span id="2652" class="l"><a class="l" href="#2652">2652 </a>
+</span><span id="2653" class="l"><a class="l" href="#2653">2653 </a><span class="php-comment">/**
+</span></span><span id="2654" class="l"><a class="l" href="#2654">2654 </a><span class="php-comment"> * Determines topics which can be merged from a specific board.
+</span></span><span id="2655" class="l"><a class="l" href="#2655">2655 </a><span class="php-comment"> *
+</span></span><span id="2656" class="l"><a class="l" href="#2656">2656 </a><span class="php-comment"> * @param int $id_board
+</span></span><span id="2657" class="l"><a class="l" href="#2657">2657 </a><span class="php-comment"> * @param int $id_topic
+</span></span><span id="2658" class="l"><a class="l" href="#2658">2658 </a><span class="php-comment"> * @param bool $approved
+</span></span><span id="2659" class="l"><a class="l" href="#2659">2659 </a><span class="php-comment"> * @param int $offset
+</span></span><span id="2660" class="l"><a class="l" href="#2660">2660 </a><span class="php-comment"> * @return array
+</span></span><span id="2661" class="l"><a class="l" href="#2661">2661 </a><span class="php-comment"> */</span>
+</span><span id="2662" class="l"><a class="l" href="#2662">2662 </a><span class="php-keyword1">function</span> <a id="_mergeableTopics" href="#_mergeableTopics">mergeableTopics</a>(<span class="php-var">$id_board</span>, <span class="php-var">$id_topic</span>, <span class="php-var">$approved</span>, <span class="php-var">$offset</span>)
+</span><span id="2663" class="l"><a class="l" href="#2663">2663 </a>{
+</span><span id="2664" class="l"><a class="l" href="#2664">2664 </a>    <span class="php-keyword1">global</span> <span class="php-var">$modSettings</span>, <span class="php-var">$scripturl</span>;
+</span><span id="2665" class="l"><a class="l" href="#2665">2665 </a>
+</span><span id="2666" class="l"><a class="l" href="#2666">2666 </a>    <span class="php-var">$db</span> = database();
+</span><span id="2667" class="l"><a class="l" href="#2667">2667 </a>
+</span><span id="2668" class="l"><a class="l" href="#2668">2668 </a>    <span class="php-comment">// Get some topics to merge it with.</span>
+</span><span id="2669" class="l"><a class="l" href="#2669">2669 </a>    <span class="php-var">$request</span> = <span class="php-var">$db</span>-&gt;query(<span class="php-quote">''</span>, <span class="php-quote">'
+</span></span><span id="2670" class="l"><a class="l" href="#2670">2670 </a><span class="php-quote">        SELECT t.id_topic, m.subject, m.id_member, IFNULL(mem.real_name, m.poster_name) AS poster_name
+</span></span><span id="2671" class="l"><a class="l" href="#2671">2671 </a><span class="php-quote">        FROM {db_prefix}topics AS t
+</span></span><span id="2672" class="l"><a class="l" href="#2672">2672 </a><span class="php-quote">            INNER JOIN {db_prefix}messages AS m ON (m.id_msg = t.id_first_msg)
+</span></span><span id="2673" class="l"><a class="l" href="#2673">2673 </a><span class="php-quote">            LEFT JOIN {db_prefix}members AS mem ON (mem.id_member = m.id_member)
+</span></span><span id="2674" class="l"><a class="l" href="#2674">2674 </a><span class="php-quote">        WHERE t.id_board = {int:id_board}
+</span></span><span id="2675" class="l"><a class="l" href="#2675">2675 </a><span class="php-quote">            AND t.id_topic != {int:id_topic}'</span> . (<span class="php-keyword1">empty</span>(<span class="php-var">$approved</span>) ? <span class="php-quote">'
+</span></span><span id="2676" class="l"><a class="l" href="#2676">2676 </a><span class="php-quote">            AND t.approved = {int:is_approved}'</span> : <span class="php-quote">''</span>) . <span class="php-quote">'
+</span></span><span id="2677" class="l"><a class="l" href="#2677">2677 </a><span class="php-quote">        ORDER BY {raw:sort}
+</span></span><span id="2678" class="l"><a class="l" href="#2678">2678 </a><span class="php-quote">        LIMIT {int:offset}, {int:limit}'</span>,
+</span><span id="2679" class="l"><a class="l" href="#2679">2679 </a>        <span class="php-keyword1">array</span>(
+</span><span id="2680" class="l"><a class="l" href="#2680">2680 </a>            <span class="php-quote">'id_board'</span> =&gt; <span class="php-var">$id_board</span>,
+</span><span id="2681" class="l"><a class="l" href="#2681">2681 </a>            <span class="php-quote">'id_topic'</span> =&gt; <span class="php-var">$id_topic</span>,
+</span><span id="2682" class="l"><a class="l" href="#2682">2682 </a>            <span class="php-quote">'sort'</span> =&gt; (!<span class="php-keyword1">empty</span>(<span class="php-var">$modSettings</span>[<span class="php-quote">'enableStickyTopics'</span>]) ? <span class="php-quote">'t.is_sticky DESC, '</span> : <span class="php-quote">''</span>) . <span class="php-quote">'t.id_last_msg DESC'</span>,
+</span><span id="2683" class="l"><a class="l" href="#2683">2683 </a>            <span class="php-quote">'offset'</span> =&gt; <span class="php-var">$offset</span>,
+</span><span id="2684" class="l"><a class="l" href="#2684">2684 </a>            <span class="php-quote">'limit'</span> =&gt; <span class="php-var">$modSettings</span>[<span class="php-quote">'defaultMaxTopics'</span>],
+</span><span id="2685" class="l"><a class="l" href="#2685">2685 </a>            <span class="php-quote">'is_approved'</span> =&gt; <span class="php-num">1</span>,
+</span><span id="2686" class="l"><a class="l" href="#2686">2686 </a>        )
+</span><span id="2687" class="l"><a class="l" href="#2687">2687 </a>    );
+</span><span id="2688" class="l"><a class="l" href="#2688">2688 </a>    <span class="php-var">$topics</span> = <span class="php-keyword1">array</span>();
+</span><span id="2689" class="l"><a class="l" href="#2689">2689 </a>    <span class="php-keyword1">while</span> (<span class="php-var">$row</span> = <span class="php-var">$db</span>-&gt;fetch_assoc(<span class="php-var">$request</span>))
+</span><span id="2690" class="l"><a class="l" href="#2690">2690 </a>    {
+</span><span id="2691" class="l"><a class="l" href="#2691">2691 </a>        censorText(<span class="php-var">$row</span>[<span class="php-quote">'subject'</span>]);
+</span><span id="2692" class="l"><a class="l" href="#2692">2692 </a>
+</span><span id="2693" class="l"><a class="l" href="#2693">2693 </a>        <span class="php-var">$topics</span>[] = <span class="php-keyword1">array</span>(
+</span><span id="2694" class="l"><a class="l" href="#2694">2694 </a>            <span class="php-quote">'id'</span> =&gt; <span class="php-var">$row</span>[<span class="php-quote">'id_topic'</span>],
+</span><span id="2695" class="l"><a class="l" href="#2695">2695 </a>            <span class="php-quote">'poster'</span> =&gt; <span class="php-keyword1">array</span>(
+</span><span id="2696" class="l"><a class="l" href="#2696">2696 </a>                <span class="php-quote">'id'</span> =&gt; <span class="php-var">$row</span>[<span class="php-quote">'id_member'</span>],
+</span><span id="2697" class="l"><a class="l" href="#2697">2697 </a>                <span class="php-quote">'name'</span> =&gt; <span class="php-var">$row</span>[<span class="php-quote">'poster_name'</span>],
+</span><span id="2698" class="l"><a class="l" href="#2698">2698 </a>                <span class="php-quote">'href'</span> =&gt; <span class="php-keyword1">empty</span>(<span class="php-var">$row</span>[<span class="php-quote">'id_member'</span>]) ? <span class="php-quote">''</span> : <span class="php-var">$scripturl</span> . <span class="php-quote">'?action=profile;u='</span> . <span class="php-var">$row</span>[<span class="php-quote">'id_member'</span>],
+</span><span id="2699" class="l"><a class="l" href="#2699">2699 </a>                <span class="php-quote">'link'</span> =&gt; <span class="php-keyword1">empty</span>(<span class="php-var">$row</span>[<span class="php-quote">'id_member'</span>]) ? <span class="php-var">$row</span>[<span class="php-quote">'poster_name'</span>] : <span class="php-quote">'&lt;a href=&quot;'</span> . <span class="php-var">$scripturl</span> . <span class="php-quote">'?action=profile;u='</span> . <span class="php-var">$row</span>[<span class="php-quote">'id_member'</span>] . <span class="php-quote">'&quot; target=&quot;_blank&quot; class=&quot;new_win&quot;&gt;'</span> . <span class="php-var">$row</span>[<span class="php-quote">'poster_name'</span>] . <span class="php-quote">'&lt;/a&gt;'</span>
+</span><span id="2700" class="l"><a class="l" href="#2700">2700 </a>            ),
+</span><span id="2701" class="l"><a class="l" href="#2701">2701 </a>            <span class="php-quote">'subject'</span> =&gt; <span class="php-var">$row</span>[<span class="php-quote">'subject'</span>],
+</span><span id="2702" class="l"><a class="l" href="#2702">2702 </a>            <span class="php-quote">'js_subject'</span> =&gt; <span class="php-keyword2">addcslashes</span>(<span class="php-keyword2">addslashes</span>(<span class="php-var">$row</span>[<span class="php-quote">'subject'</span>]), <span class="php-quote">'/'</span>)
+</span><span id="2703" class="l"><a class="l" href="#2703">2703 </a>        );
+</span><span id="2704" class="l"><a class="l" href="#2704">2704 </a>    }
+</span><span id="2705" class="l"><a class="l" href="#2705">2705 </a>    <span class="php-var">$db</span>-&gt;free_result(<span class="php-var">$request</span>);
+</span><span id="2706" class="l"><a class="l" href="#2706">2706 </a>
+</span><span id="2707" class="l"><a class="l" href="#2707">2707 </a>    <span class="php-keyword1">return</span> <span class="php-var">$topics</span>;
+</span><span id="2708" class="l"><a class="l" href="#2708">2708 </a>}
+</span><span id="2709" class="l"><a class="l" href="#2709">2709 </a>
+</span><span id="2710" class="l"><a class="l" href="#2710">2710 </a><span class="php-comment">/**
+</span></span><span id="2711" class="l"><a class="l" href="#2711">2711 </a><span class="php-comment"> * Determines all messages from a given array of topics.
+</span></span><span id="2712" class="l"><a class="l" href="#2712">2712 </a><span class="php-comment"> *
+</span></span><span id="2713" class="l"><a class="l" href="#2713">2713 </a><span class="php-comment"> * @param int[] $topics integer array of topics to work with
+</span></span><span id="2714" class="l"><a class="l" href="#2714">2714 </a><span class="php-comment"> * @return array
+</span></span><span id="2715" class="l"><a class="l" href="#2715">2715 </a><span class="php-comment"> */</span>
+</span><span id="2716" class="l"><a class="l" href="#2716">2716 </a><span class="php-keyword1">function</span> <a id="_messagesInTopics" href="#_messagesInTopics">messagesInTopics</a>(<span class="php-var">$topics</span>)
+</span><span id="2717" class="l"><a class="l" href="#2717">2717 </a>{
+</span><span id="2718" class="l"><a class="l" href="#2718">2718 </a>    <span class="php-var">$db</span> = database();
+</span><span id="2719" class="l"><a class="l" href="#2719">2719 </a>
+</span><span id="2720" class="l"><a class="l" href="#2720">2720 </a>    <span class="php-comment">// Obtain all the message ids we are going to affect.</span>
+</span><span id="2721" class="l"><a class="l" href="#2721">2721 </a>    <span class="php-var">$request</span> = <span class="php-var">$db</span>-&gt;query(<span class="php-quote">''</span>, <span class="php-quote">'
+</span></span><span id="2722" class="l"><a class="l" href="#2722">2722 </a><span class="php-quote">        SELECT id_msg
+</span></span><span id="2723" class="l"><a class="l" href="#2723">2723 </a><span class="php-quote">        FROM {db_prefix}messages
+</span></span><span id="2724" class="l"><a class="l" href="#2724">2724 </a><span class="php-quote">        WHERE id_topic IN ({array_int:topic_list})'</span>,
+</span><span id="2725" class="l"><a class="l" href="#2725">2725 </a>        <span class="php-keyword1">array</span>(
+</span><span id="2726" class="l"><a class="l" href="#2726">2726 </a>            <span class="php-quote">'topic_list'</span> =&gt; <span class="php-var">$topics</span>,
+</span><span id="2727" class="l"><a class="l" href="#2727">2727 </a>    ));
+</span><span id="2728" class="l"><a class="l" href="#2728">2728 </a>    <span class="php-var">$messages</span> = <span class="php-keyword1">array</span>();
+</span><span id="2729" class="l"><a class="l" href="#2729">2729 </a>    <span class="php-keyword1">while</span> (<span class="php-var">$row</span> = <span class="php-var">$db</span>-&gt;fetch_assoc(<span class="php-var">$request</span>))
+</span><span id="2730" class="l"><a class="l" href="#2730">2730 </a>        <span class="php-var">$messages</span>[] = <span class="php-var">$row</span>[<span class="php-quote">'id_msg'</span>];
+</span><span id="2731" class="l"><a class="l" href="#2731">2731 </a>    <span class="php-var">$db</span>-&gt;free_result(<span class="php-var">$request</span>);
+</span><span id="2732" class="l"><a class="l" href="#2732">2732 </a>
+</span><span id="2733" class="l"><a class="l" href="#2733">2733 </a>    <span class="php-keyword1">return</span> <span class="php-var">$messages</span>;
+</span><span id="2734" class="l"><a class="l" href="#2734">2734 </a>}
+</span><span id="2735" class="l"><a class="l" href="#2735">2735 </a>
+</span><span id="2736" class="l"><a class="l" href="#2736">2736 </a><span class="php-comment">/**
+</span></span><span id="2737" class="l"><a class="l" href="#2737">2737 </a><span class="php-comment"> * Retrieves the members that posted in a group of topics.
+</span></span><span id="2738" class="l"><a class="l" href="#2738">2738 </a><span class="php-comment"> *
+</span></span><span id="2739" class="l"><a class="l" href="#2739">2739 </a><span class="php-comment"> * @param int[] $topics integer array of topics to work with
+</span></span><span id="2740" class="l"><a class="l" href="#2740">2740 </a><span class="php-comment"> * @return array of topics each member posted in (grouped by members)
+</span></span><span id="2741" class="l"><a class="l" href="#2741">2741 </a><span class="php-comment"> */</span>
+</span><span id="2742" class="l"><a class="l" href="#2742">2742 </a><span class="php-keyword1">function</span> <a id="_topicsPosters" href="#_topicsPosters">topicsPosters</a>(<span class="php-var">$topics</span>)
+</span><span id="2743" class="l"><a class="l" href="#2743">2743 </a>{
+</span><span id="2744" class="l"><a class="l" href="#2744">2744 </a>    <span class="php-var">$db</span> = database();
+</span><span id="2745" class="l"><a class="l" href="#2745">2745 </a>
+</span><span id="2746" class="l"><a class="l" href="#2746">2746 </a>    <span class="php-comment">// Obtain all the member ids</span>
+</span><span id="2747" class="l"><a class="l" href="#2747">2747 </a>    <span class="php-var">$members</span> = <span class="php-keyword1">array</span>();
+</span><span id="2748" class="l"><a class="l" href="#2748">2748 </a>    <span class="php-var">$request</span> = <span class="php-var">$db</span>-&gt;query(<span class="php-quote">''</span>, <span class="php-quote">'
+</span></span><span id="2749" class="l"><a class="l" href="#2749">2749 </a><span class="php-quote">        SELECT id_member, id_topic
+</span></span><span id="2750" class="l"><a class="l" href="#2750">2750 </a><span class="php-quote">        FROM {db_prefix}messages
+</span></span><span id="2751" class="l"><a class="l" href="#2751">2751 </a><span class="php-quote">        WHERE id_topic IN ({array_int:topic_list})'</span>,
+</span><span id="2752" class="l"><a class="l" href="#2752">2752 </a>        <span class="php-keyword1">array</span>(
+</span><span id="2753" class="l"><a class="l" href="#2753">2753 </a>            <span class="php-quote">'topic_list'</span> =&gt; <span class="php-var">$topics</span>,
+</span><span id="2754" class="l"><a class="l" href="#2754">2754 </a>    ));
+</span><span id="2755" class="l"><a class="l" href="#2755">2755 </a>    <span class="php-keyword1">while</span> (<span class="php-var">$row</span> = <span class="php-var">$db</span>-&gt;fetch_assoc(<span class="php-var">$request</span>))
+</span><span id="2756" class="l"><a class="l" href="#2756">2756 </a>        <span class="php-var">$members</span>[<span class="php-var">$row</span>[<span class="php-quote">'id_member'</span>]][] = <span class="php-var">$row</span>[<span class="php-quote">'id_topic'</span>];
+</span><span id="2757" class="l"><a class="l" href="#2757">2757 </a>    <span class="php-var">$db</span>-&gt;free_result(<span class="php-var">$request</span>);
+</span><span id="2758" class="l"><a class="l" href="#2758">2758 </a>
+</span><span id="2759" class="l"><a class="l" href="#2759">2759 </a>    <span class="php-keyword1">return</span> <span class="php-var">$members</span>;
+</span><span id="2760" class="l"><a class="l" href="#2760">2760 </a>}
+</span><span id="2761" class="l"><a class="l" href="#2761">2761 </a>
+</span><span id="2762" class="l"><a class="l" href="#2762">2762 </a><span class="php-comment">/**
+</span></span><span id="2763" class="l"><a class="l" href="#2763">2763 </a><span class="php-comment"> * Updates all the tables involved when two or more topics are merged
+</span></span><span id="2764" class="l"><a class="l" href="#2764">2764 </a><span class="php-comment"> *
+</span></span><span id="2765" class="l"><a class="l" href="#2765">2765 </a><span class="php-comment"> * @param int $first_msg the first message of the new topic
+</span></span><span id="2766" class="l"><a class="l" href="#2766">2766 </a><span class="php-comment"> * @param int[] $topics ids of all the topics merged
+</span></span><span id="2767" class="l"><a class="l" href="#2767">2767 </a><span class="php-comment"> * @param int $id_topic id of the merged topic
+</span></span><span id="2768" class="l"><a class="l" href="#2768">2768 </a><span class="php-comment"> * @param int $target_board id of the target board where the topic will resides
+</span></span><span id="2769" class="l"><a class="l" href="#2769">2769 </a><span class="php-comment"> * @param string $target_subject subject of the new topic
+</span></span><span id="2770" class="l"><a class="l" href="#2770">2770 </a><span class="php-comment"> * @param string $enforce_subject if not empty all the messages will be set to the same subject
+</span></span><span id="2771" class="l"><a class="l" href="#2771">2771 </a><span class="php-comment"> * @param int[] $notifications array of topics with active notifications
+</span></span><span id="2772" class="l"><a class="l" href="#2772">2772 </a><span class="php-comment"> */</span>
+</span><span id="2773" class="l"><a class="l" href="#2773">2773 </a><span class="php-keyword1">function</span> <a id="_fixMergedTopics" href="#_fixMergedTopics">fixMergedTopics</a>(<span class="php-var">$first_msg</span>, <span class="php-var">$topics</span>, <span class="php-var">$id_topic</span>, <span class="php-var">$target_board</span>, <span class="php-var">$target_subject</span>, <span class="php-var">$enforce_subject</span>, <span class="php-var">$notifications</span>)
+</span><span id="2774" class="l"><a class="l" href="#2774">2774 </a>{
+</span><span id="2775" class="l"><a class="l" href="#2775">2775 </a>    <span class="php-keyword1">global</span> <span class="php-var">$context</span>;
+</span><span id="2776" class="l"><a class="l" href="#2776">2776 </a>
+</span><span id="2777" class="l"><a class="l" href="#2777">2777 </a>    <span class="php-var">$db</span> = database();
+</span><span id="2778" class="l"><a class="l" href="#2778">2778 </a>
+</span><span id="2779" class="l"><a class="l" href="#2779">2779 </a>    <span class="php-comment">// Delete the remaining topics.</span>
+</span><span id="2780" class="l"><a class="l" href="#2780">2780 </a>    <span class="php-var">$deleted_topics</span> = <span class="php-keyword2">array_diff</span>(<span class="php-var">$topics</span>, <span class="php-keyword1">array</span>(<span class="php-var">$id_topic</span>));
+</span><span id="2781" class="l"><a class="l" href="#2781">2781 </a>    <span class="php-var">$db</span>-&gt;query(<span class="php-quote">''</span>, <span class="php-quote">'
+</span></span><span id="2782" class="l"><a class="l" href="#2782">2782 </a><span class="php-quote">        DELETE FROM {db_prefix}topics
+</span></span><span id="2783" class="l"><a class="l" href="#2783">2783 </a><span class="php-quote">        WHERE id_topic IN ({array_int:deleted_topics})'</span>,
+</span><span id="2784" class="l"><a class="l" href="#2784">2784 </a>        <span class="php-keyword1">array</span>(
+</span><span id="2785" class="l"><a class="l" href="#2785">2785 </a>            <span class="php-quote">'deleted_topics'</span> =&gt; <span class="php-var">$deleted_topics</span>,
+</span><span id="2786" class="l"><a class="l" href="#2786">2786 </a>        )
+</span><span id="2787" class="l"><a class="l" href="#2787">2787 </a>    );
+</span><span id="2788" class="l"><a class="l" href="#2788">2788 </a>
+</span><span id="2789" class="l"><a class="l" href="#2789">2789 </a>    <span class="php-var">$db</span>-&gt;query(<span class="php-quote">''</span>, <span class="php-quote">'
+</span></span><span id="2790" class="l"><a class="l" href="#2790">2790 </a><span class="php-quote">        DELETE FROM {db_prefix}log_search_subjects
+</span></span><span id="2791" class="l"><a class="l" href="#2791">2791 </a><span class="php-quote">        WHERE id_topic IN ({array_int:deleted_topics})'</span>,
+</span><span id="2792" class="l"><a class="l" href="#2792">2792 </a>        <span class="php-keyword1">array</span>(
+</span><span id="2793" class="l"><a class="l" href="#2793">2793 </a>            <span class="php-quote">'deleted_topics'</span> =&gt; <span class="php-var">$deleted_topics</span>,
+</span><span id="2794" class="l"><a class="l" href="#2794">2794 </a>        )
+</span><span id="2795" class="l"><a class="l" href="#2795">2795 </a>    );
+</span><span id="2796" class="l"><a class="l" href="#2796">2796 </a>
+</span><span id="2797" class="l"><a class="l" href="#2797">2797 </a>    <span class="php-comment">// Change the topic IDs of all messages that will be merged.  Also adjust subjects if 'enforce subject' was checked.</span>
 </span><span id="2798" class="l"><a class="l" href="#2798">2798 </a>    <span class="php-var">$db</span>-&gt;query(<span class="php-quote">''</span>, <span class="php-quote">'
-</span></span><span id="2799" class="l"><a class="l" href="#2799">2799 </a><span class="php-quote">        DELETE FROM {db_prefix}log_search_subjects
-</span></span><span id="2800" class="l"><a class="l" href="#2800">2800 </a><span class="php-quote">        WHERE id_topic IN ({array_int:deleted_topics})'</span>,
-</span><span id="2801" class="l"><a class="l" href="#2801">2801 </a>        <span class="php-keyword1">array</span>(
-</span><span id="2802" class="l"><a class="l" href="#2802">2802 </a>            <span class="php-quote">'deleted_topics'</span> =&gt; <span class="php-var">$deleted_topics</span>,
-</span><span id="2803" class="l"><a class="l" href="#2803">2803 </a>        )
-</span><span id="2804" class="l"><a class="l" href="#2804">2804 </a>    );
-</span><span id="2805" class="l"><a class="l" href="#2805">2805 </a>
-</span><span id="2806" class="l"><a class="l" href="#2806">2806 </a>    <span class="php-comment">// Change the topic IDs of all messages that will be merged.  Also adjust subjects if 'enforce subject' was checked.</span>
-</span><span id="2807" class="l"><a class="l" href="#2807">2807 </a>    <span class="php-var">$db</span>-&gt;query(<span class="php-quote">''</span>, <span class="php-quote">'
-</span></span><span id="2808" class="l"><a class="l" href="#2808">2808 </a><span class="php-quote">        UPDATE {db_prefix}messages
-</span></span><span id="2809" class="l"><a class="l" href="#2809">2809 </a><span class="php-quote">        SET
-</span></span><span id="2810" class="l"><a class="l" href="#2810">2810 </a><span class="php-quote">            id_topic = {int:id_topic},
-</span></span><span id="2811" class="l"><a class="l" href="#2811">2811 </a><span class="php-quote">            id_board = {int:target_board}'</span> . (<span class="php-keyword1">empty</span>(<span class="php-var">$enforce_subject</span>) ? <span class="php-quote">''</span> : <span class="php-quote">',
-</span></span><span id="2812" class="l"><a class="l" href="#2812">2812 </a><span class="php-quote">            subject = {string:subject}'</span>) . <span class="php-quote">'
-</span></span><span id="2813" class="l"><a class="l" href="#2813">2813 </a><span class="php-quote">        WHERE id_topic IN ({array_int:topic_list})'</span>,
-</span><span id="2814" class="l"><a class="l" href="#2814">2814 </a>        <span class="php-keyword1">array</span>(
-</span><span id="2815" class="l"><a class="l" href="#2815">2815 </a>            <span class="php-quote">'topic_list'</span> =&gt; <span class="php-var">$topics</span>,
-</span><span id="2816" class="l"><a class="l" href="#2816">2816 </a>            <span class="php-quote">'id_topic'</span> =&gt; <span class="php-var">$id_topic</span>,
-</span><span id="2817" class="l"><a class="l" href="#2817">2817 </a>            <span class="php-quote">'target_board'</span> =&gt; <span class="php-var">$target_board</span>,
-</span><span id="2818" class="l"><a class="l" href="#2818">2818 </a>            <span class="php-quote">'subject'</span> =&gt; <span class="php-var">$context</span>[<span class="php-quote">'response_prefix'</span>] . <span class="php-var">$target_subject</span>,
-</span><span id="2819" class="l"><a class="l" href="#2819">2819 </a>        )
-</span><span id="2820" class="l"><a class="l" href="#2820">2820 </a>    );
-</span><span id="2821" class="l"><a class="l" href="#2821">2821 </a>
-</span><span id="2822" class="l"><a class="l" href="#2822">2822 </a>    <span class="php-comment">// Any reported posts should reflect the new board.</span>
-</span><span id="2823" class="l"><a class="l" href="#2823">2823 </a>    <span class="php-var">$db</span>-&gt;query(<span class="php-quote">''</span>, <span class="php-quote">'
-</span></span><span id="2824" class="l"><a class="l" href="#2824">2824 </a><span class="php-quote">        UPDATE {db_prefix}log_reported
-</span></span><span id="2825" class="l"><a class="l" href="#2825">2825 </a><span class="php-quote">        SET
-</span></span><span id="2826" class="l"><a class="l" href="#2826">2826 </a><span class="php-quote">            id_topic = {int:id_topic},
-</span></span><span id="2827" class="l"><a class="l" href="#2827">2827 </a><span class="php-quote">            id_board = {int:target_board}
-</span></span><span id="2828" class="l"><a class="l" href="#2828">2828 </a><span class="php-quote">        WHERE id_topic IN ({array_int:topics_list})'</span>,
-</span><span id="2829" class="l"><a class="l" href="#2829">2829 </a>        <span class="php-keyword1">array</span>(
-</span><span id="2830" class="l"><a class="l" href="#2830">2830 </a>            <span class="php-quote">'topics_list'</span> =&gt; <span class="php-var">$topics</span>,
-</span><span id="2831" class="l"><a class="l" href="#2831">2831 </a>            <span class="php-quote">'id_topic'</span> =&gt; <span class="php-var">$id_topic</span>,
-</span><span id="2832" class="l"><a class="l" href="#2832">2832 </a>            <span class="php-quote">'target_board'</span> =&gt; <span class="php-var">$target_board</span>,
-</span><span id="2833" class="l"><a class="l" href="#2833">2833 </a>        )
-</span><span id="2834" class="l"><a class="l" href="#2834">2834 </a>    );
-</span><span id="2835" class="l"><a class="l" href="#2835">2835 </a>
-</span><span id="2836" class="l"><a class="l" href="#2836">2836 </a>    <span class="php-comment">// Change the subject of the first message...</span>
-</span><span id="2837" class="l"><a class="l" href="#2837">2837 </a>    <span class="php-var">$db</span>-&gt;query(<span class="php-quote">''</span>, <span class="php-quote">'
-</span></span><span id="2838" class="l"><a class="l" href="#2838">2838 </a><span class="php-quote">        UPDATE {db_prefix}messages
-</span></span><span id="2839" class="l"><a class="l" href="#2839">2839 </a><span class="php-quote">        SET subject = {string:target_subject}
-</span></span><span id="2840" class="l"><a class="l" href="#2840">2840 </a><span class="php-quote">        WHERE id_msg = {int:first_msg}'</span>,
-</span><span id="2841" class="l"><a class="l" href="#2841">2841 </a>        <span class="php-keyword1">array</span>(
-</span><span id="2842" class="l"><a class="l" href="#2842">2842 </a>            <span class="php-quote">'first_msg'</span> =&gt; <span class="php-var">$first_msg</span>,
-</span><span id="2843" class="l"><a class="l" href="#2843">2843 </a>            <span class="php-quote">'target_subject'</span> =&gt; <span class="php-var">$target_subject</span>,
-</span><span id="2844" class="l"><a class="l" href="#2844">2844 </a>        )
-</span><span id="2845" class="l"><a class="l" href="#2845">2845 </a>    );
-</span><span id="2846" class="l"><a class="l" href="#2846">2846 </a>
-</span><span id="2847" class="l"><a class="l" href="#2847">2847 </a>    <span class="php-comment">// Adjust all calendar events to point to the new topic.</span>
-</span><span id="2848" class="l"><a class="l" href="#2848">2848 </a>    <span class="php-var">$db</span>-&gt;query(<span class="php-quote">''</span>, <span class="php-quote">'
-</span></span><span id="2849" class="l"><a class="l" href="#2849">2849 </a><span class="php-quote">        UPDATE {db_prefix}calendar
-</span></span><span id="2850" class="l"><a class="l" href="#2850">2850 </a><span class="php-quote">        SET
-</span></span><span id="2851" class="l"><a class="l" href="#2851">2851 </a><span class="php-quote">            id_topic = {int:id_topic},
-</span></span><span id="2852" class="l"><a class="l" href="#2852">2852 </a><span class="php-quote">            id_board = {int:target_board}
-</span></span><span id="2853" class="l"><a class="l" href="#2853">2853 </a><span class="php-quote">        WHERE id_topic IN ({array_int:deleted_topics})'</span>,
-</span><span id="2854" class="l"><a class="l" href="#2854">2854 </a>        <span class="php-keyword1">array</span>(
-</span><span id="2855" class="l"><a class="l" href="#2855">2855 </a>            <span class="php-quote">'deleted_topics'</span> =&gt; <span class="php-var">$deleted_topics</span>,
-</span><span id="2856" class="l"><a class="l" href="#2856">2856 </a>            <span class="php-quote">'id_topic'</span> =&gt; <span class="php-var">$id_topic</span>,
-</span><span id="2857" class="l"><a class="l" href="#2857">2857 </a>            <span class="php-quote">'target_board'</span> =&gt; <span class="php-var">$target_board</span>,
-</span><span id="2858" class="l"><a class="l" href="#2858">2858 </a>        )
-</span><span id="2859" class="l"><a class="l" href="#2859">2859 </a>    );
-</span><span id="2860" class="l"><a class="l" href="#2860">2860 </a>
-</span><span id="2861" class="l"><a class="l" href="#2861">2861 </a>    <span class="php-comment">// Merge log topic entries.</span>
-</span><span id="2862" class="l"><a class="l" href="#2862">2862 </a>    <span class="php-comment">// The unwatched setting comes from the oldest topic</span>
-</span><span id="2863" class="l"><a class="l" href="#2863">2863 </a>    <span class="php-var">$request</span> = <span class="php-var">$db</span>-&gt;query(<span class="php-quote">''</span>, <span class="php-quote">'
-</span></span><span id="2864" class="l"><a class="l" href="#2864">2864 </a><span class="php-quote">        SELECT id_member, MIN(id_msg) AS new_id_msg, unwatched
-</span></span><span id="2865" class="l"><a class="l" href="#2865">2865 </a><span class="php-quote">        FROM {db_prefix}log_topics
-</span></span><span id="2866" class="l"><a class="l" href="#2866">2866 </a><span class="php-quote">        WHERE id_topic IN ({array_int:topics})
-</span></span><span id="2867" class="l"><a class="l" href="#2867">2867 </a><span class="php-quote">        GROUP BY id_member'</span>,
-</span><span id="2868" class="l"><a class="l" href="#2868">2868 </a>        <span class="php-keyword1">array</span>(
-</span><span id="2869" class="l"><a class="l" href="#2869">2869 </a>            <span class="php-quote">'topics'</span> =&gt; <span class="php-var">$topics</span>,
-</span><span id="2870" class="l"><a class="l" href="#2870">2870 </a>        )
-</span><span id="2871" class="l"><a class="l" href="#2871">2871 </a>    );
+</span></span><span id="2799" class="l"><a class="l" href="#2799">2799 </a><span class="php-quote">        UPDATE {db_prefix}messages
+</span></span><span id="2800" class="l"><a class="l" href="#2800">2800 </a><span class="php-quote">        SET
+</span></span><span id="2801" class="l"><a class="l" href="#2801">2801 </a><span class="php-quote">            id_topic = {int:id_topic},
+</span></span><span id="2802" class="l"><a class="l" href="#2802">2802 </a><span class="php-quote">            id_board = {int:target_board}'</span> . (<span class="php-keyword1">empty</span>(<span class="php-var">$enforce_subject</span>) ? <span class="php-quote">''</span> : <span class="php-quote">',
+</span></span><span id="2803" class="l"><a class="l" href="#2803">2803 </a><span class="php-quote">            subject = {string:subject}'</span>) . <span class="php-quote">'
+</span></span><span id="2804" class="l"><a class="l" href="#2804">2804 </a><span class="php-quote">        WHERE id_topic IN ({array_int:topic_list})'</span>,
+</span><span id="2805" class="l"><a class="l" href="#2805">2805 </a>        <span class="php-keyword1">array</span>(
+</span><span id="2806" class="l"><a class="l" href="#2806">2806 </a>            <span class="php-quote">'topic_list'</span> =&gt; <span class="php-var">$topics</span>,
+</span><span id="2807" class="l"><a class="l" href="#2807">2807 </a>            <span class="php-quote">'id_topic'</span> =&gt; <span class="php-var">$id_topic</span>,
+</span><span id="2808" class="l"><a class="l" href="#2808">2808 </a>            <span class="php-quote">'target_board'</span> =&gt; <span class="php-var">$target_board</span>,
+</span><span id="2809" class="l"><a class="l" href="#2809">2809 </a>            <span class="php-quote">'subject'</span> =&gt; <span class="php-var">$context</span>[<span class="php-quote">'response_prefix'</span>] . <span class="php-var">$target_subject</span>,
+</span><span id="2810" class="l"><a class="l" href="#2810">2810 </a>        )
+</span><span id="2811" class="l"><a class="l" href="#2811">2811 </a>    );
+</span><span id="2812" class="l"><a class="l" href="#2812">2812 </a>
+</span><span id="2813" class="l"><a class="l" href="#2813">2813 </a>    <span class="php-comment">// Any reported posts should reflect the new board.</span>
+</span><span id="2814" class="l"><a class="l" href="#2814">2814 </a>    <span class="php-var">$db</span>-&gt;query(<span class="php-quote">''</span>, <span class="php-quote">'
+</span></span><span id="2815" class="l"><a class="l" href="#2815">2815 </a><span class="php-quote">        UPDATE {db_prefix}log_reported
+</span></span><span id="2816" class="l"><a class="l" href="#2816">2816 </a><span class="php-quote">        SET
+</span></span><span id="2817" class="l"><a class="l" href="#2817">2817 </a><span class="php-quote">            id_topic = {int:id_topic},
+</span></span><span id="2818" class="l"><a class="l" href="#2818">2818 </a><span class="php-quote">            id_board = {int:target_board}
+</span></span><span id="2819" class="l"><a class="l" href="#2819">2819 </a><span class="php-quote">        WHERE id_topic IN ({array_int:topics_list})'</span>,
+</span><span id="2820" class="l"><a class="l" href="#2820">2820 </a>        <span class="php-keyword1">array</span>(
+</span><span id="2821" class="l"><a class="l" href="#2821">2821 </a>            <span class="php-quote">'topics_list'</span> =&gt; <span class="php-var">$topics</span>,
+</span><span id="2822" class="l"><a class="l" href="#2822">2822 </a>            <span class="php-quote">'id_topic'</span> =&gt; <span class="php-var">$id_topic</span>,
+</span><span id="2823" class="l"><a class="l" href="#2823">2823 </a>            <span class="php-quote">'target_board'</span> =&gt; <span class="php-var">$target_board</span>,
+</span><span id="2824" class="l"><a class="l" href="#2824">2824 </a>        )
+</span><span id="2825" class="l"><a class="l" href="#2825">2825 </a>    );
+</span><span id="2826" class="l"><a class="l" href="#2826">2826 </a>
+</span><span id="2827" class="l"><a class="l" href="#2827">2827 </a>    <span class="php-comment">// Change the subject of the first message...</span>
+</span><span id="2828" class="l"><a class="l" href="#2828">2828 </a>    <span class="php-var">$db</span>-&gt;query(<span class="php-quote">''</span>, <span class="php-quote">'
+</span></span><span id="2829" class="l"><a class="l" href="#2829">2829 </a><span class="php-quote">        UPDATE {db_prefix}messages
+</span></span><span id="2830" class="l"><a class="l" href="#2830">2830 </a><span class="php-quote">        SET subject = {string:target_subject}
+</span></span><span id="2831" class="l"><a class="l" href="#2831">2831 </a><span class="php-quote">        WHERE id_msg = {int:first_msg}'</span>,
+</span><span id="2832" class="l"><a class="l" href="#2832">2832 </a>        <span class="php-keyword1">array</span>(
+</span><span id="2833" class="l"><a class="l" href="#2833">2833 </a>            <span class="php-quote">'first_msg'</span> =&gt; <span class="php-var">$first_msg</span>,
+</span><span id="2834" class="l"><a class="l" href="#2834">2834 </a>            <span class="php-quote">'target_subject'</span> =&gt; <span class="php-var">$target_subject</span>,
+</span><span id="2835" class="l"><a class="l" href="#2835">2835 </a>        )
+</span><span id="2836" class="l"><a class="l" href="#2836">2836 </a>    );
+</span><span id="2837" class="l"><a class="l" href="#2837">2837 </a>
+</span><span id="2838" class="l"><a class="l" href="#2838">2838 </a>    <span class="php-comment">// Adjust all calendar events to point to the new topic.</span>
+</span><span id="2839" class="l"><a class="l" href="#2839">2839 </a>    <span class="php-var">$db</span>-&gt;query(<span class="php-quote">''</span>, <span class="php-quote">'
+</span></span><span id="2840" class="l"><a class="l" href="#2840">2840 </a><span class="php-quote">        UPDATE {db_prefix}calendar
+</span></span><span id="2841" class="l"><a class="l" href="#2841">2841 </a><span class="php-quote">        SET
+</span></span><span id="2842" class="l"><a class="l" href="#2842">2842 </a><span class="php-quote">            id_topic = {int:id_topic},
+</span></span><span id="2843" class="l"><a class="l" href="#2843">2843 </a><span class="php-quote">            id_board = {int:target_board}
+</span></span><span id="2844" class="l"><a class="l" href="#2844">2844 </a><span class="php-quote">        WHERE id_topic IN ({array_int:deleted_topics})'</span>,
+</span><span id="2845" class="l"><a class="l" href="#2845">2845 </a>        <span class="php-keyword1">array</span>(
+</span><span id="2846" class="l"><a class="l" href="#2846">2846 </a>            <span class="php-quote">'deleted_topics'</span> =&gt; <span class="php-var">$deleted_topics</span>,
+</span><span id="2847" class="l"><a class="l" href="#2847">2847 </a>            <span class="php-quote">'id_topic'</span> =&gt; <span class="php-var">$id_topic</span>,
+</span><span id="2848" class="l"><a class="l" href="#2848">2848 </a>            <span class="php-quote">'target_board'</span> =&gt; <span class="php-var">$target_board</span>,
+</span><span id="2849" class="l"><a class="l" href="#2849">2849 </a>        )
+</span><span id="2850" class="l"><a class="l" href="#2850">2850 </a>    );
+</span><span id="2851" class="l"><a class="l" href="#2851">2851 </a>
+</span><span id="2852" class="l"><a class="l" href="#2852">2852 </a>    <span class="php-comment">// Merge log topic entries.</span>
+</span><span id="2853" class="l"><a class="l" href="#2853">2853 </a>    <span class="php-comment">// The unwatched setting comes from the oldest topic</span>
+</span><span id="2854" class="l"><a class="l" href="#2854">2854 </a>    <span class="php-var">$request</span> = <span class="php-var">$db</span>-&gt;query(<span class="php-quote">''</span>, <span class="php-quote">'
+</span></span><span id="2855" class="l"><a class="l" href="#2855">2855 </a><span class="php-quote">        SELECT id_member, MIN(id_msg) AS new_id_msg, unwatched
+</span></span><span id="2856" class="l"><a class="l" href="#2856">2856 </a><span class="php-quote">        FROM {db_prefix}log_topics
+</span></span><span id="2857" class="l"><a class="l" href="#2857">2857 </a><span class="php-quote">        WHERE id_topic IN ({array_int:topics})
+</span></span><span id="2858" class="l"><a class="l" href="#2858">2858 </a><span class="php-quote">        GROUP BY id_member'</span>,
+</span><span id="2859" class="l"><a class="l" href="#2859">2859 </a>        <span class="php-keyword1">array</span>(
+</span><span id="2860" class="l"><a class="l" href="#2860">2860 </a>            <span class="php-quote">'topics'</span> =&gt; <span class="php-var">$topics</span>,
+</span><span id="2861" class="l"><a class="l" href="#2861">2861 </a>        )
+</span><span id="2862" class="l"><a class="l" href="#2862">2862 </a>    );
+</span><span id="2863" class="l"><a class="l" href="#2863">2863 </a>
+</span><span id="2864" class="l"><a class="l" href="#2864">2864 </a>    <span class="php-keyword1">if</span> (<span class="php-var">$db</span>-&gt;num_rows(<span class="php-var">$request</span>) &gt; <span class="php-num">0</span>)
+</span><span id="2865" class="l"><a class="l" href="#2865">2865 </a>    {
+</span><span id="2866" class="l"><a class="l" href="#2866">2866 </a>        <span class="php-var">$replaceEntries</span> = <span class="php-keyword1">array</span>();
+</span><span id="2867" class="l"><a class="l" href="#2867">2867 </a>        <span class="php-keyword1">while</span> (<span class="php-var">$row</span> = <span class="php-var">$db</span>-&gt;fetch_assoc(<span class="php-var">$request</span>))
+</span><span id="2868" class="l"><a class="l" href="#2868">2868 </a>            <span class="php-var">$replaceEntries</span>[] = <span class="php-keyword1">array</span>(<span class="php-var">$row</span>[<span class="php-quote">'id_member'</span>], <span class="php-var">$id_topic</span>, <span class="php-var">$row</span>[<span class="php-quote">'new_id_msg'</span>], <span class="php-var">$row</span>[<span class="php-quote">'unwatched'</span>]);
+</span><span id="2869" class="l"><a class="l" href="#2869">2869 </a>
+</span><span id="2870" class="l"><a class="l" href="#2870">2870 </a>        markTopicsRead(<span class="php-var">$replaceEntries</span>, <span class="php-keyword1">true</span>);
+</span><span id="2871" class="l"><a class="l" href="#2871">2871 </a>        <span class="php-keyword1">unset</span>(<span class="php-var">$replaceEntries</span>);
 </span><span id="2872" class="l"><a class="l" href="#2872">2872 </a>
-</span><span id="2873" class="l"><a class="l" href="#2873">2873 </a>    <span class="php-keyword1">if</span> (<span class="php-var">$db</span>-&gt;num_rows(<span class="php-var">$request</span>) &gt; <span class="php-num">0</span>)
-</span><span id="2874" class="l"><a class="l" href="#2874">2874 </a>    {
-</span><span id="2875" class="l"><a class="l" href="#2875">2875 </a>        <span class="php-var">$replaceEntries</span> = <span class="php-keyword1">array</span>();
-</span><span id="2876" class="l"><a class="l" href="#2876">2876 </a>        <span class="php-keyword1">while</span> (<span class="php-var">$row</span> = <span class="php-var">$db</span>-&gt;fetch_assoc(<span class="php-var">$request</span>))
-</span><span id="2877" class="l"><a class="l" href="#2877">2877 </a>            <span class="php-var">$replaceEntries</span>[] = <span class="php-keyword1">array</span>(<span class="php-var">$row</span>[<span class="php-quote">'id_member'</span>], <span class="php-var">$id_topic</span>, <span class="php-var">$row</span>[<span class="php-quote">'new_id_msg'</span>], <span class="php-var">$row</span>[<span class="php-quote">'unwatched'</span>]);
-</span><span id="2878" class="l"><a class="l" href="#2878">2878 </a>
-</span><span id="2879" class="l"><a class="l" href="#2879">2879 </a>        markTopicsRead(<span class="php-var">$replaceEntries</span>, <span class="php-keyword1">true</span>);
-</span><span id="2880" class="l"><a class="l" href="#2880">2880 </a>        <span class="php-keyword1">unset</span>(<span class="php-var">$replaceEntries</span>);
-</span><span id="2881" class="l"><a class="l" href="#2881">2881 </a>
-</span><span id="2882" class="l"><a class="l" href="#2882">2882 </a>        <span class="php-comment">// Get rid of the old log entries.</span>
-</span><span id="2883" class="l"><a class="l" href="#2883">2883 </a>        <span class="php-var">$db</span>-&gt;query(<span class="php-quote">''</span>, <span class="php-quote">'
-</span></span><span id="2884" class="l"><a class="l" href="#2884">2884 </a><span class="php-quote">            DELETE FROM {db_prefix}log_topics
-</span></span><span id="2885" class="l"><a class="l" href="#2885">2885 </a><span class="php-quote">            WHERE id_topic IN ({array_int:deleted_topics})'</span>,
-</span><span id="2886" class="l"><a class="l" href="#2886">2886 </a>            <span class="php-keyword1">array</span>(
-</span><span id="2887" class="l"><a class="l" href="#2887">2887 </a>                <span class="php-quote">'deleted_topics'</span> =&gt; <span class="php-var">$deleted_topics</span>,
-</span><span id="2888" class="l"><a class="l" href="#2888">2888 </a>            )
-</span><span id="2889" class="l"><a class="l" href="#2889">2889 </a>        );
-</span><span id="2890" class="l"><a class="l" href="#2890">2890 </a>    }
-</span><span id="2891" class="l"><a class="l" href="#2891">2891 </a>    <span class="php-var">$db</span>-&gt;free_result(<span class="php-var">$request</span>);
-</span><span id="2892" class="l"><a class="l" href="#2892">2892 </a>
-</span><span id="2893" class="l"><a class="l" href="#2893">2893 </a>    <span class="php-keyword1">if</span> (!<span class="php-keyword1">empty</span>(<span class="php-var">$notifications</span>))
-</span><span id="2894" class="l"><a class="l" href="#2894">2894 </a>    {
-</span><span id="2895" class="l"><a class="l" href="#2895">2895 </a>        <span class="php-var">$request</span> = <span class="php-var">$db</span>-&gt;query(<span class="php-quote">''</span>, <span class="php-quote">'
-</span></span><span id="2896" class="l"><a class="l" href="#2896">2896 </a><span class="php-quote">            SELECT id_member, MAX(sent) AS sent
-</span></span><span id="2897" class="l"><a class="l" href="#2897">2897 </a><span class="php-quote">            FROM {db_prefix}log_notify
-</span></span><span id="2898" class="l"><a class="l" href="#2898">2898 </a><span class="php-quote">            WHERE id_topic IN ({array_int:topics_list})
-</span></span><span id="2899" class="l"><a class="l" href="#2899">2899 </a><span class="php-quote">            GROUP BY id_member'</span>,
-</span><span id="2900" class="l"><a class="l" href="#2900">2900 </a>            <span class="php-keyword1">array</span>(
-</span><span id="2901" class="l"><a class="l" href="#2901">2901 </a>                <span class="php-quote">'topics_list'</span> =&gt; <span class="php-var">$notifications</span>,
-</span><span id="2902" class="l"><a class="l" href="#2902">2902 </a>            )
-</span><span id="2903" class="l"><a class="l" href="#2903">2903 </a>        );
-</span><span id="2904" class="l"><a class="l" href="#2904">2904 </a>        <span class="php-keyword1">if</span> (<span class="php-var">$db</span>-&gt;num_rows(<span class="php-var">$request</span>) &gt; <span class="php-num">0</span>)
-</span><span id="2905" class="l"><a class="l" href="#2905">2905 </a>        {
-</span><span id="2906" class="l"><a class="l" href="#2906">2906 </a>            <span class="php-var">$replaceEntries</span> = <span class="php-keyword1">array</span>();
-</span><span id="2907" class="l"><a class="l" href="#2907">2907 </a>            <span class="php-keyword1">while</span> (<span class="php-var">$row</span> = <span class="php-var">$db</span>-&gt;fetch_assoc(<span class="php-var">$request</span>))
-</span><span id="2908" class="l"><a class="l" href="#2908">2908 </a>                <span class="php-var">$replaceEntries</span>[] = <span class="php-keyword1">array</span>(<span class="php-var">$row</span>[<span class="php-quote">'id_member'</span>], <span class="php-var">$id_topic</span>, <span class="php-num">0</span>, <span class="php-var">$row</span>[<span class="php-quote">'sent'</span>]);
-</span><span id="2909" class="l"><a class="l" href="#2909">2909 </a>
-</span><span id="2910" class="l"><a class="l" href="#2910">2910 </a>            <span class="php-var">$db</span>-&gt;insert(<span class="php-quote">'replace'</span>,
-</span><span id="2911" class="l"><a class="l" href="#2911">2911 </a>                    <span class="php-quote">'{db_prefix}log_notify'</span>,
-</span><span id="2912" class="l"><a class="l" href="#2912">2912 </a>                    <span class="php-keyword1">array</span>(<span class="php-quote">'id_member'</span> =&gt; <span class="php-quote">'int'</span>, <span class="php-quote">'id_topic'</span> =&gt; <span class="php-quote">'int'</span>, <span class="php-quote">'id_board'</span> =&gt; <span class="php-quote">'int'</span>, <span class="php-quote">'sent'</span> =&gt; <span class="php-quote">'int'</span>),
-</span><span id="2913" class="l"><a class="l" href="#2913">2913 </a>                    <span class="php-var">$replaceEntries</span>,
-</span><span id="2914" class="l"><a class="l" href="#2914">2914 </a>                    <span class="php-keyword1">array</span>(<span class="php-quote">'id_member'</span>, <span class="php-quote">'id_topic'</span>, <span class="php-quote">'id_board'</span>)
-</span><span id="2915" class="l"><a class="l" href="#2915">2915 </a>                );
-</span><span id="2916" class="l"><a class="l" href="#2916">2916 </a>            <span class="php-keyword1">unset</span>(<span class="php-var">$replaceEntries</span>);
-</span><span id="2917" class="l"><a class="l" href="#2917">2917 </a>
-</span><span id="2918" class="l"><a class="l" href="#2918">2918 </a>            <span class="php-var">$db</span>-&gt;query(<span class="php-quote">''</span>, <span class="php-quote">'
-</span></span><span id="2919" class="l"><a class="l" href="#2919">2919 </a><span class="php-quote">                DELETE FROM {db_prefix}log_topics
-</span></span><span id="2920" class="l"><a class="l" href="#2920">2920 </a><span class="php-quote">                WHERE id_topic IN ({array_int:deleted_topics})'</span>,
-</span><span id="2921" class="l"><a class="l" href="#2921">2921 </a>                <span class="php-keyword1">array</span>(
-</span><span id="2922" class="l"><a class="l" href="#2922">2922 </a>                    <span class="php-quote">'deleted_topics'</span> =&gt; <span class="php-var">$deleted_topics</span>,
-</span><span id="2923" class="l"><a class="l" href="#2923">2923 </a>                )
-</span><span id="2924" class="l"><a class="l" href="#2924">2924 </a>            );
-</span><span id="2925" class="l"><a class="l" href="#2925">2925 </a>        }
-</span><span id="2926" class="l"><a class="l" href="#2926">2926 </a>        <span class="php-var">$db</span>-&gt;free_result(<span class="php-var">$request</span>);
-</span><span id="2927" class="l"><a class="l" href="#2927">2927 </a>    }
-</span><span id="2928" class="l"><a class="l" href="#2928">2928 </a>}
-</span><span id="2929" class="l"><a class="l" href="#2929">2929 </a>
-</span><span id="2930" class="l"><a class="l" href="#2930">2930 </a><span class="php-comment">/**
-</span></span><span id="2931" class="l"><a class="l" href="#2931">2931 </a><span class="php-comment"> * Load the subject from a given topic id.
-</span></span><span id="2932" class="l"><a class="l" href="#2932">2932 </a><span class="php-comment"> *
-</span></span><span id="2933" class="l"><a class="l" href="#2933">2933 </a><span class="php-comment"> * @param int $id_topic
-</span></span><span id="2934" class="l"><a class="l" href="#2934">2934 </a><span class="php-comment"> * @return string
-</span></span><span id="2935" class="l"><a class="l" href="#2935">2935 </a><span class="php-comment"> */</span>
-</span><span id="2936" class="l"><a class="l" href="#2936">2936 </a><span class="php-keyword1">function</span> <a id="_getSubject" href="#_getSubject">getSubject</a>(<span class="php-var">$id_topic</span>)
-</span><span id="2937" class="l"><a class="l" href="#2937">2937 </a>{
-</span><span id="2938" class="l"><a class="l" href="#2938">2938 </a>    <span class="php-keyword1">global</span> <span class="php-var">$modSettings</span>;
-</span><span id="2939" class="l"><a class="l" href="#2939">2939 </a>
-</span><span id="2940" class="l"><a class="l" href="#2940">2940 </a>    <span class="php-var">$db</span> = database();
-</span><span id="2941" class="l"><a class="l" href="#2941">2941 </a>
-</span><span id="2942" class="l"><a class="l" href="#2942">2942 </a>    <span class="php-var">$request</span> = <span class="php-var">$db</span>-&gt;query(<span class="php-quote">''</span>, <span class="php-quote">'
-</span></span><span id="2943" class="l"><a class="l" href="#2943">2943 </a><span class="php-quote">        SELECT ms.subject
-</span></span><span id="2944" class="l"><a class="l" href="#2944">2944 </a><span class="php-quote">        FROM {db_prefix}topics AS t
-</span></span><span id="2945" class="l"><a class="l" href="#2945">2945 </a><span class="php-quote">            INNER JOIN {db_prefix}boards AS b ON (b.id_board = t.id_board)
-</span></span><span id="2946" class="l"><a class="l" href="#2946">2946 </a><span class="php-quote">            INNER JOIN {db_prefix}messages AS ms ON (ms.id_msg = t.id_first_msg)
-</span></span><span id="2947" class="l"><a class="l" href="#2947">2947 </a><span class="php-quote">        WHERE t.id_topic = {int:search_topic_id}
-</span></span><span id="2948" class="l"><a class="l" href="#2948">2948 </a><span class="php-quote">            AND {query_see_board}'</span> . (<span class="php-var">$modSettings</span>[<span class="php-quote">'postmod_active'</span>] ? <span class="php-quote">'
-</span></span><span id="2949" class="l"><a class="l" href="#2949">2949 </a><span class="php-quote">            AND t.approved = {int:is_approved_true}'</span> : <span class="php-quote">''</span>) . <span class="php-quote">'
-</span></span><span id="2950" class="l"><a class="l" href="#2950">2950 </a><span class="php-quote">        LIMIT 1'</span>,
-</span><span id="2951" class="l"><a class="l" href="#2951">2951 </a>        <span class="php-keyword1">array</span>(
-</span><span id="2952" class="l"><a class="l" href="#2952">2952 </a>            <span class="php-quote">'is_approved_true'</span> =&gt; <span class="php-num">1</span>,
-</span><span id="2953" class="l"><a class="l" href="#2953">2953 </a>            <span class="php-quote">'search_topic_id'</span> =&gt; <span class="php-var">$id_topic</span>,
-</span><span id="2954" class="l"><a class="l" href="#2954">2954 </a>        )
-</span><span id="2955" class="l"><a class="l" href="#2955">2955 </a>    );
+</span><span id="2873" class="l"><a class="l" href="#2873">2873 </a>        <span class="php-comment">// Get rid of the old log entries.</span>
+</span><span id="2874" class="l"><a class="l" href="#2874">2874 </a>        <span class="php-var">$db</span>-&gt;query(<span class="php-quote">''</span>, <span class="php-quote">'
+</span></span><span id="2875" class="l"><a class="l" href="#2875">2875 </a><span class="php-quote">            DELETE FROM {db_prefix}log_topics
+</span></span><span id="2876" class="l"><a class="l" href="#2876">2876 </a><span class="php-quote">            WHERE id_topic IN ({array_int:deleted_topics})'</span>,
+</span><span id="2877" class="l"><a class="l" href="#2877">2877 </a>            <span class="php-keyword1">array</span>(
+</span><span id="2878" class="l"><a class="l" href="#2878">2878 </a>                <span class="php-quote">'deleted_topics'</span> =&gt; <span class="php-var">$deleted_topics</span>,
+</span><span id="2879" class="l"><a class="l" href="#2879">2879 </a>            )
+</span><span id="2880" class="l"><a class="l" href="#2880">2880 </a>        );
+</span><span id="2881" class="l"><a class="l" href="#2881">2881 </a>    }
+</span><span id="2882" class="l"><a class="l" href="#2882">2882 </a>    <span class="php-var">$db</span>-&gt;free_result(<span class="php-var">$request</span>);
+</span><span id="2883" class="l"><a class="l" href="#2883">2883 </a>
+</span><span id="2884" class="l"><a class="l" href="#2884">2884 </a>    <span class="php-keyword1">if</span> (!<span class="php-keyword1">empty</span>(<span class="php-var">$notifications</span>))
+</span><span id="2885" class="l"><a class="l" href="#2885">2885 </a>    {
+</span><span id="2886" class="l"><a class="l" href="#2886">2886 </a>        <span class="php-var">$request</span> = <span class="php-var">$db</span>-&gt;query(<span class="php-quote">''</span>, <span class="php-quote">'
+</span></span><span id="2887" class="l"><a class="l" href="#2887">2887 </a><span class="php-quote">            SELECT id_member, MAX(sent) AS sent
+</span></span><span id="2888" class="l"><a class="l" href="#2888">2888 </a><span class="php-quote">            FROM {db_prefix}log_notify
+</span></span><span id="2889" class="l"><a class="l" href="#2889">2889 </a><span class="php-quote">            WHERE id_topic IN ({array_int:topics_list})
+</span></span><span id="2890" class="l"><a class="l" href="#2890">2890 </a><span class="php-quote">            GROUP BY id_member'</span>,
+</span><span id="2891" class="l"><a class="l" href="#2891">2891 </a>            <span class="php-keyword1">array</span>(
+</span><span id="2892" class="l"><a class="l" href="#2892">2892 </a>                <span class="php-quote">'topics_list'</span> =&gt; <span class="php-var">$notifications</span>,
+</span><span id="2893" class="l"><a class="l" href="#2893">2893 </a>            )
+</span><span id="2894" class="l"><a class="l" href="#2894">2894 </a>        );
+</span><span id="2895" class="l"><a class="l" href="#2895">2895 </a>        <span class="php-keyword1">if</span> (<span class="php-var">$db</span>-&gt;num_rows(<span class="php-var">$request</span>) &gt; <span class="php-num">0</span>)
+</span><span id="2896" class="l"><a class="l" href="#2896">2896 </a>        {
+</span><span id="2897" class="l"><a class="l" href="#2897">2897 </a>            <span class="php-var">$replaceEntries</span> = <span class="php-keyword1">array</span>();
+</span><span id="2898" class="l"><a class="l" href="#2898">2898 </a>            <span class="php-keyword1">while</span> (<span class="php-var">$row</span> = <span class="php-var">$db</span>-&gt;fetch_assoc(<span class="php-var">$request</span>))
+</span><span id="2899" class="l"><a class="l" href="#2899">2899 </a>                <span class="php-var">$replaceEntries</span>[] = <span class="php-keyword1">array</span>(<span class="php-var">$row</span>[<span class="php-quote">'id_member'</span>], <span class="php-var">$id_topic</span>, <span class="php-num">0</span>, <span class="php-var">$row</span>[<span class="php-quote">'sent'</span>]);
+</span><span id="2900" class="l"><a class="l" href="#2900">2900 </a>
+</span><span id="2901" class="l"><a class="l" href="#2901">2901 </a>            <span class="php-var">$db</span>-&gt;insert(<span class="php-quote">'replace'</span>,
+</span><span id="2902" class="l"><a class="l" href="#2902">2902 </a>                    <span class="php-quote">'{db_prefix}log_notify'</span>,
+</span><span id="2903" class="l"><a class="l" href="#2903">2903 </a>                    <span class="php-keyword1">array</span>(<span class="php-quote">'id_member'</span> =&gt; <span class="php-quote">'int'</span>, <span class="php-quote">'id_topic'</span> =&gt; <span class="php-quote">'int'</span>, <span class="php-quote">'id_board'</span> =&gt; <span class="php-quote">'int'</span>, <span class="php-quote">'sent'</span> =&gt; <span class="php-quote">'int'</span>),
+</span><span id="2904" class="l"><a class="l" href="#2904">2904 </a>                    <span class="php-var">$replaceEntries</span>,
+</span><span id="2905" class="l"><a class="l" href="#2905">2905 </a>                    <span class="php-keyword1">array</span>(<span class="php-quote">'id_member'</span>, <span class="php-quote">'id_topic'</span>, <span class="php-quote">'id_board'</span>)
+</span><span id="2906" class="l"><a class="l" href="#2906">2906 </a>                );
+</span><span id="2907" class="l"><a class="l" href="#2907">2907 </a>            <span class="php-keyword1">unset</span>(<span class="php-var">$replaceEntries</span>);
+</span><span id="2908" class="l"><a class="l" href="#2908">2908 </a>
+</span><span id="2909" class="l"><a class="l" href="#2909">2909 </a>            <span class="php-var">$db</span>-&gt;query(<span class="php-quote">''</span>, <span class="php-quote">'
+</span></span><span id="2910" class="l"><a class="l" href="#2910">2910 </a><span class="php-quote">                DELETE FROM {db_prefix}log_topics
+</span></span><span id="2911" class="l"><a class="l" href="#2911">2911 </a><span class="php-quote">                WHERE id_topic IN ({array_int:deleted_topics})'</span>,
+</span><span id="2912" class="l"><a class="l" href="#2912">2912 </a>                <span class="php-keyword1">array</span>(
+</span><span id="2913" class="l"><a class="l" href="#2913">2913 </a>                    <span class="php-quote">'deleted_topics'</span> =&gt; <span class="php-var">$deleted_topics</span>,
+</span><span id="2914" class="l"><a class="l" href="#2914">2914 </a>                )
+</span><span id="2915" class="l"><a class="l" href="#2915">2915 </a>            );
+</span><span id="2916" class="l"><a class="l" href="#2916">2916 </a>        }
+</span><span id="2917" class="l"><a class="l" href="#2917">2917 </a>        <span class="php-var">$db</span>-&gt;free_result(<span class="php-var">$request</span>);
+</span><span id="2918" class="l"><a class="l" href="#2918">2918 </a>    }
+</span><span id="2919" class="l"><a class="l" href="#2919">2919 </a>}
+</span><span id="2920" class="l"><a class="l" href="#2920">2920 </a>
+</span><span id="2921" class="l"><a class="l" href="#2921">2921 </a><span class="php-comment">/**
+</span></span><span id="2922" class="l"><a class="l" href="#2922">2922 </a><span class="php-comment"> * Load the subject from a given topic id.
+</span></span><span id="2923" class="l"><a class="l" href="#2923">2923 </a><span class="php-comment"> *
+</span></span><span id="2924" class="l"><a class="l" href="#2924">2924 </a><span class="php-comment"> * @param int $id_topic
+</span></span><span id="2925" class="l"><a class="l" href="#2925">2925 </a><span class="php-comment"> * @return string
+</span></span><span id="2926" class="l"><a class="l" href="#2926">2926 </a><span class="php-comment"> */</span>
+</span><span id="2927" class="l"><a class="l" href="#2927">2927 </a><span class="php-keyword1">function</span> <a id="_getSubject" href="#_getSubject">getSubject</a>(<span class="php-var">$id_topic</span>)
+</span><span id="2928" class="l"><a class="l" href="#2928">2928 </a>{
+</span><span id="2929" class="l"><a class="l" href="#2929">2929 </a>    <span class="php-keyword1">global</span> <span class="php-var">$modSettings</span>;
+</span><span id="2930" class="l"><a class="l" href="#2930">2930 </a>
+</span><span id="2931" class="l"><a class="l" href="#2931">2931 </a>    <span class="php-var">$db</span> = database();
+</span><span id="2932" class="l"><a class="l" href="#2932">2932 </a>
+</span><span id="2933" class="l"><a class="l" href="#2933">2933 </a>    <span class="php-var">$request</span> = <span class="php-var">$db</span>-&gt;query(<span class="php-quote">''</span>, <span class="php-quote">'
+</span></span><span id="2934" class="l"><a class="l" href="#2934">2934 </a><span class="php-quote">        SELECT ms.subject
+</span></span><span id="2935" class="l"><a class="l" href="#2935">2935 </a><span class="php-quote">        FROM {db_prefix}topics AS t
+</span></span><span id="2936" class="l"><a class="l" href="#2936">2936 </a><span class="php-quote">            INNER JOIN {db_prefix}boards AS b ON (b.id_board = t.id_board)
+</span></span><span id="2937" class="l"><a class="l" href="#2937">2937 </a><span class="php-quote">            INNER JOIN {db_prefix}messages AS ms ON (ms.id_msg = t.id_first_msg)
+</span></span><span id="2938" class="l"><a class="l" href="#2938">2938 </a><span class="php-quote">        WHERE t.id_topic = {int:search_topic_id}
+</span></span><span id="2939" class="l"><a class="l" href="#2939">2939 </a><span class="php-quote">            AND {query_see_board}'</span> . (<span class="php-var">$modSettings</span>[<span class="php-quote">'postmod_active'</span>] ? <span class="php-quote">'
+</span></span><span id="2940" class="l"><a class="l" href="#2940">2940 </a><span class="php-quote">            AND t.approved = {int:is_approved_true}'</span> : <span class="php-quote">''</span>) . <span class="php-quote">'
+</span></span><span id="2941" class="l"><a class="l" href="#2941">2941 </a><span class="php-quote">        LIMIT 1'</span>,
+</span><span id="2942" class="l"><a class="l" href="#2942">2942 </a>        <span class="php-keyword1">array</span>(
+</span><span id="2943" class="l"><a class="l" href="#2943">2943 </a>            <span class="php-quote">'is_approved_true'</span> =&gt; <span class="php-num">1</span>,
+</span><span id="2944" class="l"><a class="l" href="#2944">2944 </a>            <span class="php-quote">'search_topic_id'</span> =&gt; <span class="php-var">$id_topic</span>,
+</span><span id="2945" class="l"><a class="l" href="#2945">2945 </a>        )
+</span><span id="2946" class="l"><a class="l" href="#2946">2946 </a>    );
+</span><span id="2947" class="l"><a class="l" href="#2947">2947 </a>
+</span><span id="2948" class="l"><a class="l" href="#2948">2948 </a>    <span class="php-keyword1">if</span> (<span class="php-var">$db</span>-&gt;num_rows(<span class="php-var">$request</span>) == <span class="php-num">0</span>)
+</span><span id="2949" class="l"><a class="l" href="#2949">2949 </a>        fatal_lang_error(<span class="php-quote">'topic_gone'</span>, <span class="php-keyword1">false</span>);
+</span><span id="2950" class="l"><a class="l" href="#2950">2950 </a>
+</span><span id="2951" class="l"><a class="l" href="#2951">2951 </a>    <span class="php-keyword1">list</span> (<span class="php-var">$subject</span>) = <span class="php-var">$db</span>-&gt;fetch_row(<span class="php-var">$request</span>);
+</span><span id="2952" class="l"><a class="l" href="#2952">2952 </a>    <span class="php-var">$db</span>-&gt;free_result(<span class="php-var">$request</span>);
+</span><span id="2953" class="l"><a class="l" href="#2953">2953 </a>
+</span><span id="2954" class="l"><a class="l" href="#2954">2954 </a>    <span class="php-keyword1">return</span> <span class="php-var">$subject</span>;
+</span><span id="2955" class="l"><a class="l" href="#2955">2955 </a>}
 </span><span id="2956" class="l"><a class="l" href="#2956">2956 </a>
-</span><span id="2957" class="l"><a class="l" href="#2957">2957 </a>    <span class="php-keyword1">if</span> (<span class="php-var">$db</span>-&gt;num_rows(<span class="php-var">$request</span>) == <span class="php-num">0</span>)
-</span><span id="2958" class="l"><a class="l" href="#2958">2958 </a>        fatal_lang_error(<span class="php-quote">'topic_gone'</span>, <span class="php-keyword1">false</span>);
-</span><span id="2959" class="l"><a class="l" href="#2959">2959 </a>
-</span><span id="2960" class="l"><a class="l" href="#2960">2960 </a>    <span class="php-keyword1">list</span> (<span class="php-var">$subject</span>) = <span class="php-var">$db</span>-&gt;fetch_row(<span class="php-var">$request</span>);
-</span><span id="2961" class="l"><a class="l" href="#2961">2961 </a>    <span class="php-var">$db</span>-&gt;free_result(<span class="php-var">$request</span>);
-</span><span id="2962" class="l"><a class="l" href="#2962">2962 </a>
-</span><span id="2963" class="l"><a class="l" href="#2963">2963 </a>    <span class="php-keyword1">return</span> <span class="php-var">$subject</span>;
-</span><span id="2964" class="l"><a class="l" href="#2964">2964 </a>}
-</span><span id="2965" class="l"><a class="l" href="#2965">2965 </a>
-</span><span id="2966" class="l"><a class="l" href="#2966">2966 </a><span class="php-comment">/**
-</span></span><span id="2967" class="l"><a class="l" href="#2967">2967 </a><span class="php-comment"> * This function updates the total number of topics,
-</span></span><span id="2968" class="l"><a class="l" href="#2968">2968 </a><span class="php-comment"> * or if parameter $increment is true it simply increments them.
-</span></span><span id="2969" class="l"><a class="l" href="#2969">2969 </a><span class="php-comment"> * Used by updateStats('topic').
-</span></span><span id="2970" class="l"><a class="l" href="#2970">2970 </a><span class="php-comment"> *
-</span></span><span id="2971" class="l"><a class="l" href="#2971">2971 </a><span class="php-comment"> * @param bool|null $increment = null if true, increment + 1 the total topics, otherwise recount all topics
-</span></span><span id="2972" class="l"><a class="l" href="#2972">2972 </a><span class="php-comment"> */</span>
-</span><span id="2973" class="l"><a class="l" href="#2973">2973 </a><span class="php-keyword1">function</span> <a id="_updateTopicStats" href="#_updateTopicStats">updateTopicStats</a>(<span class="php-var">$increment</span> = <span class="php-keyword1">null</span>)
-</span><span id="2974" class="l"><a class="l" href="#2974">2974 </a>{
-</span><span id="2975" class="l"><a class="l" href="#2975">2975 </a>    <span class="php-keyword1">global</span> <span class="php-var">$modSettings</span>;
-</span><span id="2976" class="l"><a class="l" href="#2976">2976 </a>
-</span><span id="2977" class="l"><a class="l" href="#2977">2977 </a>    <span class="php-var">$db</span> = database();
-</span><span id="2978" class="l"><a class="l" href="#2978">2978 </a>
-</span><span id="2979" class="l"><a class="l" href="#2979">2979 </a>    <span class="php-keyword1">if</span> (<span class="php-var">$increment</span> === <span class="php-keyword1">true</span>)
-</span><span id="2980" class="l"><a class="l" href="#2980">2980 </a>        updateSettings(<span class="php-keyword1">array</span>(<span class="php-quote">'totalTopics'</span> =&gt; <span class="php-keyword1">true</span>), <span class="php-keyword1">true</span>);
-</span><span id="2981" class="l"><a class="l" href="#2981">2981 </a>    <span class="php-keyword1">else</span>
-</span><span id="2982" class="l"><a class="l" href="#2982">2982 </a>    {
-</span><span id="2983" class="l"><a class="l" href="#2983">2983 </a>        <span class="php-comment">// Get the number of topics - a SUM is better for InnoDB tables.</span>
-</span><span id="2984" class="l"><a class="l" href="#2984">2984 </a>        <span class="php-comment">// We also ignore the recycle bin here because there will probably be a bunch of one-post topics there.</span>
-</span><span id="2985" class="l"><a class="l" href="#2985">2985 </a>        <span class="php-var">$request</span> = <span class="php-var">$db</span>-&gt;query(<span class="php-quote">''</span>, <span class="php-quote">'
-</span></span><span id="2986" class="l"><a class="l" href="#2986">2986 </a><span class="php-quote">            SELECT SUM(num_topics + unapproved_topics) AS total_topics
-</span></span><span id="2987" class="l"><a class="l" href="#2987">2987 </a><span class="php-quote">            FROM {db_prefix}boards'</span> . (!<span class="php-keyword1">empty</span>(<span class="php-var">$modSettings</span>[<span class="php-quote">'recycle_enable'</span>]) &amp;&amp; <span class="php-var">$modSettings</span>[<span class="php-quote">'recycle_board'</span>] &gt; <span class="php-num">0</span> ? <span class="php-quote">'
-</span></span><span id="2988" class="l"><a class="l" href="#2988">2988 </a><span class="php-quote">            WHERE id_board != {int:recycle_board}'</span> : <span class="php-quote">''</span>),
-</span><span id="2989" class="l"><a class="l" href="#2989">2989 </a>            <span class="php-keyword1">array</span>(
-</span><span id="2990" class="l"><a class="l" href="#2990">2990 </a>                <span class="php-quote">'recycle_board'</span> =&gt; !<span class="php-keyword1">empty</span>(<span class="php-var">$modSettings</span>[<span class="php-quote">'recycle_board'</span>]) ? <span class="php-var">$modSettings</span>[<span class="php-quote">'recycle_board'</span>] : <span class="php-num">0</span>,
-</span><span id="2991" class="l"><a class="l" href="#2991">2991 </a>            )
-</span><span id="2992" class="l"><a class="l" href="#2992">2992 </a>        );
-</span><span id="2993" class="l"><a class="l" href="#2993">2993 </a>        <span class="php-var">$row</span> = <span class="php-var">$db</span>-&gt;fetch_assoc(<span class="php-var">$request</span>);
-</span><span id="2994" class="l"><a class="l" href="#2994">2994 </a>        <span class="php-var">$db</span>-&gt;free_result(<span class="php-var">$request</span>);
-</span><span id="2995" class="l"><a class="l" href="#2995">2995 </a>
-</span><span id="2996" class="l"><a class="l" href="#2996">2996 </a>        updateSettings(<span class="php-keyword1">array</span>(<span class="php-quote">'totalTopics'</span> =&gt; <span class="php-var">$row</span>[<span class="php-quote">'total_topics'</span>] === <span class="php-keyword1">null</span> ? <span class="php-num">0</span> : <span class="php-var">$row</span>[<span class="php-quote">'total_topics'</span>]));
-</span><span id="2997" class="l"><a class="l" href="#2997">2997 </a>    }
-</span><span id="2998" class="l"><a class="l" href="#2998">2998 </a></span>}</code></pre>
+</span><span id="2957" class="l"><a class="l" href="#2957">2957 </a><span class="php-comment">/**
+</span></span><span id="2958" class="l"><a class="l" href="#2958">2958 </a><span class="php-comment"> * This function updates the total number of topics,
+</span></span><span id="2959" class="l"><a class="l" href="#2959">2959 </a><span class="php-comment"> * or if parameter $increment is true it simply increments them.
+</span></span><span id="2960" class="l"><a class="l" href="#2960">2960 </a><span class="php-comment"> * Used by updateStats('topic').
+</span></span><span id="2961" class="l"><a class="l" href="#2961">2961 </a><span class="php-comment"> *
+</span></span><span id="2962" class="l"><a class="l" href="#2962">2962 </a><span class="php-comment"> * @param bool|null $increment = null if true, increment + 1 the total topics, otherwise recount all topics
+</span></span><span id="2963" class="l"><a class="l" href="#2963">2963 </a><span class="php-comment"> */</span>
+</span><span id="2964" class="l"><a class="l" href="#2964">2964 </a><span class="php-keyword1">function</span> <a id="_updateTopicStats" href="#_updateTopicStats">updateTopicStats</a>(<span class="php-var">$increment</span> = <span class="php-keyword1">null</span>)
+</span><span id="2965" class="l"><a class="l" href="#2965">2965 </a>{
+</span><span id="2966" class="l"><a class="l" href="#2966">2966 </a>    <span class="php-keyword1">global</span> <span class="php-var">$modSettings</span>;
+</span><span id="2967" class="l"><a class="l" href="#2967">2967 </a>
+</span><span id="2968" class="l"><a class="l" href="#2968">2968 </a>    <span class="php-var">$db</span> = database();
+</span><span id="2969" class="l"><a class="l" href="#2969">2969 </a>
+</span><span id="2970" class="l"><a class="l" href="#2970">2970 </a>    <span class="php-keyword1">if</span> (<span class="php-var">$increment</span> === <span class="php-keyword1">true</span>)
+</span><span id="2971" class="l"><a class="l" href="#2971">2971 </a>        updateSettings(<span class="php-keyword1">array</span>(<span class="php-quote">'totalTopics'</span> =&gt; <span class="php-keyword1">true</span>), <span class="php-keyword1">true</span>);
+</span><span id="2972" class="l"><a class="l" href="#2972">2972 </a>    <span class="php-keyword1">else</span>
+</span><span id="2973" class="l"><a class="l" href="#2973">2973 </a>    {
+</span><span id="2974" class="l"><a class="l" href="#2974">2974 </a>        <span class="php-comment">// Get the number of topics - a SUM is better for InnoDB tables.</span>
+</span><span id="2975" class="l"><a class="l" href="#2975">2975 </a>        <span class="php-comment">// We also ignore the recycle bin here because there will probably be a bunch of one-post topics there.</span>
+</span><span id="2976" class="l"><a class="l" href="#2976">2976 </a>        <span class="php-var">$request</span> = <span class="php-var">$db</span>-&gt;query(<span class="php-quote">''</span>, <span class="php-quote">'
+</span></span><span id="2977" class="l"><a class="l" href="#2977">2977 </a><span class="php-quote">            SELECT SUM(num_topics + unapproved_topics) AS total_topics
+</span></span><span id="2978" class="l"><a class="l" href="#2978">2978 </a><span class="php-quote">            FROM {db_prefix}boards'</span> . (!<span class="php-keyword1">empty</span>(<span class="php-var">$modSettings</span>[<span class="php-quote">'recycle_enable'</span>]) &amp;&amp; <span class="php-var">$modSettings</span>[<span class="php-quote">'recycle_board'</span>] &gt; <span class="php-num">0</span> ? <span class="php-quote">'
+</span></span><span id="2979" class="l"><a class="l" href="#2979">2979 </a><span class="php-quote">            WHERE id_board != {int:recycle_board}'</span> : <span class="php-quote">''</span>),
+</span><span id="2980" class="l"><a class="l" href="#2980">2980 </a>            <span class="php-keyword1">array</span>(
+</span><span id="2981" class="l"><a class="l" href="#2981">2981 </a>                <span class="php-quote">'recycle_board'</span> =&gt; !<span class="php-keyword1">empty</span>(<span class="php-var">$modSettings</span>[<span class="php-quote">'recycle_board'</span>]) ? <span class="php-var">$modSettings</span>[<span class="php-quote">'recycle_board'</span>] : <span class="php-num">0</span>,
+</span><span id="2982" class="l"><a class="l" href="#2982">2982 </a>            )
+</span><span id="2983" class="l"><a class="l" href="#2983">2983 </a>        );
+</span><span id="2984" class="l"><a class="l" href="#2984">2984 </a>        <span class="php-var">$row</span> = <span class="php-var">$db</span>-&gt;fetch_assoc(<span class="php-var">$request</span>);
+</span><span id="2985" class="l"><a class="l" href="#2985">2985 </a>        <span class="php-var">$db</span>-&gt;free_result(<span class="php-var">$request</span>);
+</span><span id="2986" class="l"><a class="l" href="#2986">2986 </a>
+</span><span id="2987" class="l"><a class="l" href="#2987">2987 </a>        updateSettings(<span class="php-keyword1">array</span>(<span class="php-quote">'totalTopics'</span> =&gt; <span class="php-var">$row</span>[<span class="php-quote">'total_topics'</span>] === <span class="php-keyword1">null</span> ? <span class="php-num">0</span> : <span class="php-var">$row</span>[<span class="php-quote">'total_topics'</span>]));
+</span><span id="2988" class="l"><a class="l" href="#2988">2988 </a>    }
+</span><span id="2989" class="l"><a class="l" href="#2989">2989 </a></span>}</code></pre>
 	</div>
 
 	<div id="footer">
-		ElkArte Documentation API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+		ElkArte 1.0.2 Documentation API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
 	</div>
 </div>
 </body>

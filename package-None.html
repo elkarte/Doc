@@ -4,10 +4,10 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="generator" content="ApiGen 2.8.0" />
 
-	<title>No package | ElkArte Documentation</title>
+	<title>No package | ElkArte 1.0.2 Documentation</title>
 
 	<script type="text/javascript" src="resources/combined.js?3648714599"></script>
-	<script type="text/javascript" src="elementlist.js?97495842"></script>
+	<script type="text/javascript" src="elementlist.js?2133182458"></script>
 	<link rel="stylesheet" type="text/css" media="all" href="resources/bootstrap.min.css?260161822" />
 	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?2015443609" />
 
@@ -17,7 +17,7 @@
 	<div id="navigation" class="navbar navbar-fixed-top">
 		<div class="navbar-inner">
 			<div class="container">
-				<a href="index.html" class="brand">ElkArte Documentation</a>
+				<a href="index.html" class="brand">ElkArte 1.0.2 Documentation</a>
 				<div class="nav-collapse">
 					<ul class="nav">
 						<li class="active">
@@ -336,6 +336,7 @@
 				<li><a href="function-destroyMenu.html">destroyMenu</a></li>
 				<li><a href="function-detectBrowser.html">detectBrowser</a></li>
 				<li><a href="function-detectServer.html">detectServer</a></li>
+				<li><a href="function-detectServerCores.html">detectServerCores</a></li>
 				<li><a href="function-detectServerLoad.html">detectServerLoad</a></li>
 				<li><a href="function-determineActions.html">determineActions</a></li>
 				<li><a href="function-determineAvatar.html">determineAvatar</a></li>
@@ -444,6 +445,7 @@
 				<li><a href="function-isAllowedTo.html">isAllowedTo</a></li>
 				<li><a href="function-isBrowser.html">isBrowser</a></li>
 				<li><a href="function-isSmileySetInstalled.html">isSmileySetInstalled</a></li>
+				<li><a href="function-isValidEmail.html">isValidEmail</a></li>
 				<li><a href="function-isValidIPv6.html">isValidIPv6</a></li>
 				<li><a href="function-JavaScriptEscape.html">JavaScriptEscape</a></li>
 				<li><a href="function-linkMessages.html">linkMessages</a></li>
@@ -564,6 +566,7 @@
 				<li><a href="function-parsesmileys.html">parsesmileys</a></li>
 				<li><a href="function-pauseRepairProcess.html">pauseRepairProcess</a></li>
 				<li><a href="function-pauseSignatureApplySettings.html">pauseSignatureApplySettings</a></li>
+				<li><a href="function-pbe_run_parsers.html">pbe_run_parsers</a></li>
 				<li><a href="function-permute.html">permute</a></li>
 				<li><a href="function-pollInfo.html">pollInfo</a></li>
 				<li><a href="function-pollInfoForTopic.html">pollInfoForTopic</a></li>
@@ -599,6 +602,7 @@
 				<li><a href="function-quote_callback.html">quote_callback</a></li>
 				<li><a href="function-quote_callback_2.html">quote_callback_2</a></li>
 				<li><a href="function-reapplySubscriptions.html">reapplySubscriptions</a></li>
+				<li><a href="function-recentlyLogged.html">recentlyLogged</a></li>
 				<li><a href="function-recordReport.html">recordReport</a></li>
 				<li><a href="function-recountFailedEmails.html">recountFailedEmails</a></li>
 				<li><a href="function-recountOpenReports.html">recountOpenReports</a></li>
@@ -1701,6 +1705,10 @@ $context</td>
 	<td>Get information about the server</td>
 </tr>
 <tr>
+	<td class="name"><a href="function-detectServerCores.html">detectServerCores</a></td>
+	<td>Determines the number of cpu cores available</td>
+</tr>
+<tr>
 	<td class="name"><a href="function-detectServerLoad.html">detectServerLoad</a></td>
 	<td>Returns the current server load for nix systems</td>
 </tr>
@@ -2166,6 +2174,12 @@ permission.</td>
 <tr>
 	<td class="name"><a href="function-isSmileySetInstalled.html">isSmileySetInstalled</a></td>
 	<td>Validates, if a smiley set was properly installed.</td>
+</tr>
+<tr>
+	<td class="name"><a href="function-isValidEmail.html">isValidEmail</a></td>
+	<td>A very simple function to determine if an email address is "valid" for Elkarte.
+A valid email for ElkArte is something that resebles an email (filter_var) and
+is less than 255 characters (for database limits)</td>
 </tr>
 <tr>
 	<td class="name"><a href="function-isValidIPv6.html">isValidIPv6</a></td>
@@ -2697,6 +2711,11 @@ $_GET['substep'] / $max_substep is the percent done this step is.</td>
 	<td>Just pause the signature applying thing.</td>
 </tr>
 <tr>
+	<td class="name"><a href="function-pbe_run_parsers.html">pbe_run_parsers</a></td>
+	<td>Runs the ACP email parsers - returns cut email or original if the cut would
+result in a blank message</td>
+</tr>
+<tr>
 	<td class="name"><a href="function-permute.html">permute</a></td>
 	<td>Calculates all the possible permutations (orders) of an array.</td>
 </tr>
@@ -2843,6 +2862,10 @@ context for tempate use</td>
 <tr>
 	<td class="name"><a href="function-reapplySubscriptions.html">reapplySubscriptions</a></td>
 	<td>Reapplies all subscription rules for each of the users.</td>
+</tr>
+<tr>
+	<td class="name"><a href="function-recentlyLogged.html">recentlyLogged</a></td>
+	<td>Checks if an action has been performed "recently"</td>
 </tr>
 <tr>
 	<td class="name"><a href="function-recordReport.html">recordReport</a></td>
@@ -3776,7 +3799,7 @@ existing theme</td>
 	</div>
 
 	<div id="footer">
-		ElkArte Documentation API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+		ElkArte 1.0.2 Documentation API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
 	</div>
 </div>
 </body>

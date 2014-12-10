@@ -5,10 +5,10 @@
 	<meta name="generator" content="ApiGen 2.8.0" />
 	<meta name="robots" content="noindex" />
 
-	<title>File sources/subs/SearchAPI-Sphinxql.class.php | ElkArte Documentation</title>
+	<title>File sources/subs/SearchAPI-Sphinxql.class.php | ElkArte 1.0.2 Documentation</title>
 
 	<script type="text/javascript" src="resources/combined.js?3648714599"></script>
-	<script type="text/javascript" src="elementlist.js?97495842"></script>
+	<script type="text/javascript" src="elementlist.js?2133182458"></script>
 	<link rel="stylesheet" type="text/css" media="all" href="resources/bootstrap.min.css?260161822" />
 	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?2015443609" />
 
@@ -18,7 +18,7 @@
 	<div id="navigation" class="navbar navbar-fixed-top">
 		<div class="navbar-inner">
 			<div class="container">
-				<a href="index.html" class="brand">ElkArte Documentation</a>
+				<a href="index.html" class="brand">ElkArte 1.0.2 Documentation</a>
 				<div class="nav-collapse">
 					<ul class="nav">
 						<li>
@@ -182,7 +182,7 @@
 </span></span><span id="14" class="l"><a class="l" href="#14"> 14 </a><span class="php-comment"> * copyright:   2011 Simple Machines (http://www.simplemachines.org)
 </span></span><span id="15" class="l"><a class="l" href="#15"> 15 </a><span class="php-comment"> * license:     BSD, See included LICENSE.TXT for terms and conditions.
 </span></span><span id="16" class="l"><a class="l" href="#16"> 16 </a><span class="php-comment"> *
-</span></span><span id="17" class="l"><a class="l" href="#17"> 17 </a><span class="php-comment"> * @version 1.0
+</span></span><span id="17" class="l"><a class="l" href="#17"> 17 </a><span class="php-comment"> * @version 1.0.2
 </span></span><span id="18" class="l"><a class="l" href="#18"> 18 </a><span class="php-comment"> *
 </span></span><span id="19" class="l"><a class="l" href="#19"> 19 </a><span class="php-comment"> */</span>
 </span><span id="20" class="l"><a class="l" href="#20"> 20 </a>
@@ -342,14 +342,14 @@
 </span><span id="174" class="l"><a class="l" href="#174">174 </a>        <span class="php-keyword1">if</span> ((<span class="php-var">$cached_results</span> = cache_get_data(<span class="php-quote">'searchql_results_'</span> . <span class="php-keyword2">md5</span>(<span class="php-var">$user_info</span>[<span class="php-quote">'query_see_board'</span>] . <span class="php-quote">'_'</span> . <span class="php-var">$context</span>[<span class="php-quote">'params'</span>]))) === <span class="php-keyword1">null</span>)
 </span><span id="175" class="l"><a class="l" href="#175">175 </a>        {
 </span><span id="176" class="l"><a class="l" href="#176">176 </a>            <span class="php-comment">// Create an instance of the sphinx client and set a few options.</span>
-</span><span id="177" class="l"><a class="l" href="#177">177 </a>            <span class="php-var">$mySphinx</span> = @<span class="php-keyword2">mysql_connect</span>((<span class="php-var">$modSettings</span>[<span class="php-quote">'sphinx_searchd_server'</span>] === <span class="php-quote">'localhost'</span> ? <span class="php-quote">'127.0.0.1'</span> : <span class="php-var">$modSettings</span>[<span class="php-quote">'sphinx_searchd_server'</span>]) . <span class="php-quote">':'</span> . (int) <span class="php-var">$modSettings</span>[<span class="php-quote">'sphinxql_searchd_port'</span>]);
+</span><span id="177" class="l"><a class="l" href="#177">177 </a>            <span class="php-var">$mySphinx</span> = @<span class="php-keyword2">mysqli_connect</span>((<span class="php-var">$modSettings</span>[<span class="php-quote">'sphinx_searchd_server'</span>] === <span class="php-quote">'localhost'</span> ? <span class="php-quote">'127.0.0.1'</span> : <span class="php-var">$modSettings</span>[<span class="php-quote">'sphinx_searchd_server'</span>]), <span class="php-quote">''</span>, <span class="php-quote">''</span>, <span class="php-quote">''</span>, (int) <span class="php-var">$modSettings</span>[<span class="php-quote">'sphinxql_searchd_port'</span>]);
 </span><span id="178" class="l"><a class="l" href="#178">178 </a>
 </span><span id="179" class="l"><a class="l" href="#179">179 </a>            <span class="php-comment">// No connection, daemon not running?  log the error</span>
 </span><span id="180" class="l"><a class="l" href="#180">180 </a>            <span class="php-keyword1">if</span> (<span class="php-var">$mySphinx</span> === <span class="php-keyword1">false</span>)
 </span><span id="181" class="l"><a class="l" href="#181">181 </a>                fatal_lang_error(<span class="php-quote">'error_no_search_daemon'</span>);
 </span><span id="182" class="l"><a class="l" href="#182">182 </a>
 </span><span id="183" class="l"><a class="l" href="#183">183 </a>            <span class="php-comment">// Compile different options for our query</span>
-</span><span id="184" class="l"><a class="l" href="#184">184 </a>            <span class="php-var">$query</span> = <span class="php-quote">'SELECT *'</span> . (<span class="php-keyword1">empty</span>(<span class="php-var">$search_params</span>[<span class="php-quote">'topic'</span>]) ? <span class="php-quote">', COUNT(*) num'</span> : <span class="php-quote">''</span>) . <span class="php-quote">', (weight() + (relevance/1000)) rank FROM elkarte_index'</span>;
+</span><span id="184" class="l"><a class="l" href="#184">184 </a>            <span class="php-var">$query</span> = <span class="php-quote">'SELECT *'</span> . (<span class="php-keyword1">empty</span>(<span class="php-var">$search_params</span>[<span class="php-quote">'topic'</span>]) ? <span class="php-quote">', COUNT(*) num'</span> : <span class="php-quote">''</span>) . <span class="php-quote">', WEIGHT() weights, (weights + (relevance/1000)) rank FROM elkarte_index'</span>;
 </span><span id="185" class="l"><a class="l" href="#185">185 </a>
 </span><span id="186" class="l"><a class="l" href="#186">186 </a>            <span class="php-comment">// Construct the (binary mode &amp; |) query.</span>
 </span><span id="187" class="l"><a class="l" href="#187">187 </a>            <span class="php-var">$where_match</span> = <span class="php-var">$this</span>-&gt;_constructQuery(<span class="php-var">$search_params</span>[<span class="php-quote">'search'</span>]);
@@ -397,14 +397,14 @@
 </span><span id="229" class="l"><a class="l" href="#229">229 </a>            <span class="php-var">$query</span> .= <span class="php-quote">' OPTION field_weights=(subject='</span> . (!<span class="php-keyword1">empty</span>(<span class="php-var">$modSettings</span>[<span class="php-quote">'search_weight_subject'</span>]) ? <span class="php-var">$modSettings</span>[<span class="php-quote">'search_weight_subject'</span>] * <span class="php-num">200</span> : <span class="php-num">1000</span>) . <span class="php-quote">',body=1000)'</span>;
 </span><span id="230" class="l"><a class="l" href="#230">230 </a>
 </span><span id="231" class="l"><a class="l" href="#231">231 </a>            <span class="php-comment">// Execute the search query.</span>
-</span><span id="232" class="l"><a class="l" href="#232">232 </a>            <span class="php-var">$request</span> = <span class="php-keyword2">mysql_query</span>(<span class="php-var">$query</span>, <span class="php-var">$mySphinx</span>);
+</span><span id="232" class="l"><a class="l" href="#232">232 </a>            <span class="php-var">$request</span> = <span class="php-keyword2">mysqli_query</span>(<span class="php-var">$mySphinx</span>, <span class="php-var">$query</span>);
 </span><span id="233" class="l"><a class="l" href="#233">233 </a>
 </span><span id="234" class="l"><a class="l" href="#234">234 </a>            <span class="php-comment">// Can a connection to the daemon be made?</span>
 </span><span id="235" class="l"><a class="l" href="#235">235 </a>            <span class="php-keyword1">if</span> (<span class="php-var">$request</span> === <span class="php-keyword1">false</span>)
 </span><span id="236" class="l"><a class="l" href="#236">236 </a>            {
 </span><span id="237" class="l"><a class="l" href="#237">237 </a>                <span class="php-comment">// Just log the error.</span>
-</span><span id="238" class="l"><a class="l" href="#238">238 </a>                <span class="php-keyword1">if</span> (<span class="php-keyword2">mysql_error</span>(<span class="php-var">$mySphinx</span>))
-</span><span id="239" class="l"><a class="l" href="#239">239 </a>                    log_error(<span class="php-keyword2">mysql_error</span>(<span class="php-var">$mySphinx</span>));
+</span><span id="238" class="l"><a class="l" href="#238">238 </a>                <span class="php-keyword1">if</span> (<span class="php-keyword2">mysqli_error</span>(<span class="php-var">$mySphinx</span>))
+</span><span id="239" class="l"><a class="l" href="#239">239 </a>                    log_error(<span class="php-keyword2">mysqli_error</span>(<span class="php-var">$mySphinx</span>));
 </span><span id="240" class="l"><a class="l" href="#240">240 </a>
 </span><span id="241" class="l"><a class="l" href="#241">241 </a>                fatal_lang_error(<span class="php-quote">'error_no_search_daemon'</span>);
 </span><span id="242" class="l"><a class="l" href="#242">242 </a>            }
@@ -415,9 +415,9 @@
 </span><span id="247" class="l"><a class="l" href="#247">247 </a>                <span class="php-quote">'matches'</span> =&gt; <span class="php-keyword1">array</span>(),
 </span><span id="248" class="l"><a class="l" href="#248">248 </a>            );
 </span><span id="249" class="l"><a class="l" href="#249">249 </a>
-</span><span id="250" class="l"><a class="l" href="#250">250 </a>            <span class="php-keyword1">if</span> (<span class="php-keyword2">mysql_num_rows</span>(<span class="php-var">$request</span>) != <span class="php-num">0</span>)
+</span><span id="250" class="l"><a class="l" href="#250">250 </a>            <span class="php-keyword1">if</span> (<span class="php-keyword2">mysqli_num_rows</span>(<span class="php-var">$request</span>) != <span class="php-num">0</span>)
 </span><span id="251" class="l"><a class="l" href="#251">251 </a>            {
-</span><span id="252" class="l"><a class="l" href="#252">252 </a>                <span class="php-keyword1">while</span> (<span class="php-var">$match</span> = <span class="php-keyword2">mysql_fetch_assoc</span>(<span class="php-var">$request</span>))
+</span><span id="252" class="l"><a class="l" href="#252">252 </a>                <span class="php-keyword1">while</span> (<span class="php-var">$match</span> = <span class="php-keyword2">mysqli_fetch_assoc</span>(<span class="php-var">$request</span>))
 </span><span id="253" class="l"><a class="l" href="#253">253 </a>                {
 </span><span id="254" class="l"><a class="l" href="#254">254 </a>                    <span class="php-keyword1">if</span> (<span class="php-keyword1">empty</span>(<span class="php-var">$search_params</span>[<span class="php-quote">'topic'</span>]))
 </span><span id="255" class="l"><a class="l" href="#255">255 </a>                        <span class="php-var">$num</span> = <span class="php-keyword1">isset</span>(<span class="php-var">$match</span>[<span class="php-quote">'num'</span>]) ? <span class="php-var">$match</span>[<span class="php-quote">'num'</span>] : (<span class="php-keyword1">isset</span>(<span class="php-var">$match</span>[<span class="php-quote">'@count'</span>]) ? <span class="php-var">$match</span>[<span class="php-quote">'@count'</span>] : <span class="php-num">0</span>);
@@ -432,8 +432,8 @@
 </span><span id="264" class="l"><a class="l" href="#264">264 </a>                    );
 </span><span id="265" class="l"><a class="l" href="#265">265 </a>                }
 </span><span id="266" class="l"><a class="l" href="#266">266 </a>            }
-</span><span id="267" class="l"><a class="l" href="#267">267 </a>            <span class="php-keyword2">mysql_free_result</span>(<span class="php-var">$request</span>);
-</span><span id="268" class="l"><a class="l" href="#268">268 </a>            <span class="php-keyword2">mysql_close</span>(<span class="php-var">$mySphinx</span>);
+</span><span id="267" class="l"><a class="l" href="#267">267 </a>            <span class="php-keyword2">mysqli_free_result</span>(<span class="php-var">$request</span>);
+</span><span id="268" class="l"><a class="l" href="#268">268 </a>            <span class="php-keyword2">mysqli_close</span>(<span class="php-var">$mySphinx</span>);
 </span><span id="269" class="l"><a class="l" href="#269">269 </a>
 </span><span id="270" class="l"><a class="l" href="#270">270 </a>            <span class="php-var">$cached_results</span>[<span class="php-quote">'num_results'</span>] = <span class="php-keyword2">count</span>(<span class="php-var">$cached_results</span>[<span class="php-quote">'matches'</span>]);
 </span><span id="271" class="l"><a class="l" href="#271">271 </a>
@@ -563,7 +563,7 @@
 	</div>
 
 	<div id="footer">
-		ElkArte Documentation API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+		ElkArte 1.0.2 Documentation API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
 	</div>
 </div>
 </body>

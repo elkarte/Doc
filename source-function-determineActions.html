@@ -5,10 +5,10 @@
 	<meta name="generator" content="ApiGen 2.8.0" />
 	<meta name="robots" content="noindex" />
 
-	<title>File sources/subs/Who.subs.php | ElkArte Documentation</title>
+	<title>File sources/subs/Who.subs.php | ElkArte 1.0.2 Documentation</title>
 
 	<script type="text/javascript" src="resources/combined.js?3648714599"></script>
-	<script type="text/javascript" src="elementlist.js?97495842"></script>
+	<script type="text/javascript" src="elementlist.js?2133182458"></script>
 	<link rel="stylesheet" type="text/css" media="all" href="resources/bootstrap.min.css?260161822" />
 	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?2015443609" />
 
@@ -18,7 +18,7 @@
 	<div id="navigation" class="navbar navbar-fixed-top">
 		<div class="navbar-inner">
 			<div class="container">
-				<a href="index.html" class="brand">ElkArte Documentation</a>
+				<a href="index.html" class="brand">ElkArte 1.0.2 Documentation</a>
 				<div class="nav-collapse">
 					<ul class="nav">
 						<li>
@@ -339,6 +339,7 @@
 				<li><a href="function-destroyMenu.html">destroyMenu</a></li>
 				<li><a href="function-detectBrowser.html">detectBrowser</a></li>
 				<li><a href="function-detectServer.html">detectServer</a></li>
+				<li><a href="function-detectServerCores.html">detectServerCores</a></li>
 				<li><a href="function-detectServerLoad.html">detectServerLoad</a></li>
 				<li class="active"><a href="function-determineActions.html">determineActions</a></li>
 				<li><a href="function-determineAvatar.html">determineAvatar</a></li>
@@ -447,6 +448,7 @@
 				<li><a href="function-isAllowedTo.html">isAllowedTo</a></li>
 				<li><a href="function-isBrowser.html">isBrowser</a></li>
 				<li><a href="function-isSmileySetInstalled.html">isSmileySetInstalled</a></li>
+				<li><a href="function-isValidEmail.html">isValidEmail</a></li>
 				<li><a href="function-isValidIPv6.html">isValidIPv6</a></li>
 				<li><a href="function-JavaScriptEscape.html">JavaScriptEscape</a></li>
 				<li><a href="function-linkMessages.html">linkMessages</a></li>
@@ -567,6 +569,7 @@
 				<li><a href="function-parsesmileys.html">parsesmileys</a></li>
 				<li><a href="function-pauseRepairProcess.html">pauseRepairProcess</a></li>
 				<li><a href="function-pauseSignatureApplySettings.html">pauseSignatureApplySettings</a></li>
+				<li><a href="function-pbe_run_parsers.html">pbe_run_parsers</a></li>
 				<li><a href="function-permute.html">permute</a></li>
 				<li><a href="function-pollInfo.html">pollInfo</a></li>
 				<li><a href="function-pollInfoForTopic.html">pollInfoForTopic</a></li>
@@ -602,6 +605,7 @@
 				<li><a href="function-quote_callback.html">quote_callback</a></li>
 				<li><a href="function-quote_callback_2.html">quote_callback_2</a></li>
 				<li><a href="function-reapplySubscriptions.html">reapplySubscriptions</a></li>
+				<li><a href="function-recentlyLogged.html">recentlyLogged</a></li>
 				<li><a href="function-recordReport.html">recordReport</a></li>
 				<li><a href="function-recountFailedEmails.html">recountFailedEmails</a></li>
 				<li><a href="function-recountOpenReports.html">recountOpenReports</a></li>
@@ -829,7 +833,7 @@
 </span></span><span id="7" class="l"><a class="l" href="#7">  7 </a><span class="php-comment"> * @copyright ElkArte Forum contributors
 </span></span><span id="8" class="l"><a class="l" href="#8">  8 </a><span class="php-comment"> * @license   BSD http://opensource.org/licenses/BSD-3-Clause
 </span></span><span id="9" class="l"><a class="l" href="#9">  9 </a><span class="php-comment"> *
-</span></span><span id="10" class="l"><a class="l" href="#10"> 10 </a><span class="php-comment"> * @version 1.0
+</span></span><span id="10" class="l"><a class="l" href="#10"> 10 </a><span class="php-comment"> * @version 1.0.1
 </span></span><span id="11" class="l"><a class="l" href="#11"> 11 </a><span class="php-comment"> *
 </span></span><span id="12" class="l"><a class="l" href="#12"> 12 </a><span class="php-comment"> */</span>
 </span><span id="13" class="l"><a class="l" href="#13"> 13 </a>
@@ -1315,37 +1319,38 @@
 </span><span id="493" class="l"><a class="l" href="#493">493 </a>            <span class="php-quote">'&lt;a href=&quot;http://openfontlibrary.org/en/font/vshexagonica-v1-0-1&quot;&gt;vSHexagonica&lt;/a&gt; | &amp;copy; 2012 T.B. von Strong | This font is licensed under the SIL Open Font License, Version 1.1'</span>,
 </span><span id="494" class="l"><a class="l" href="#494">494 </a>        ),
 </span><span id="495" class="l"><a class="l" href="#495">495 </a>        <span class="php-quote">'software'</span> =&gt; <span class="php-keyword1">array</span>(
-</span><span id="496" class="l"><a class="l" href="#496">496 </a>            <span class="php-quote">'&lt;a href=&quot;http://bad-behavior.ioerror.us/&quot;&gt;Bad Behavior&lt;/a&gt; | &amp;copy; Michael Hampton | Licensed under &lt;a href=&quot;http://opensource.org/licenses/LGPL-3.0&quot;&gt;GNU Lesser General Public License&lt;/a&gt;'</span>,
-</span><span id="497" class="l"><a class="l" href="#497">497 </a>            <span class="php-quote">'&lt;a href=&quot;https://code.google.com/p/google-code-prettify/&quot;&gt;Google Code Prettify&lt;/a&gt; | Licensed under &lt;a href=&quot;http://opensource.org/licenses/Apache-2.0&quot;&gt;Apache License, Version 2.0&lt;/a&gt;'</span>,
-</span><span id="498" class="l"><a class="l" href="#498">498 </a>            <span class="php-quote">'&lt;a href=&quot;http://cherne.net/brian/resources/jquery.hoverIntent.html&quot;&gt;hoverIntent&lt;/a&gt; | &amp;copy; Brian Cherne | Licensed under &lt;a href=&quot;http://opensource.org/licenses/MIT&quot;&gt;The MIT License (MIT)&lt;/a&gt;'</span>,
-</span><span id="499" class="l"><a class="l" href="#499">499 </a>            <span class="php-quote">'&lt;a href=&quot;http://pajhome.org.uk/crypt/md5&quot;&gt;Javascript Crypt&lt;/a&gt; | &amp;copy; Angel Marin, Paul Johnston | Licensed under &lt;a href=&quot;http://opensource.org/licenses/BSD-3-Clause&quot;&gt;The BSD License&lt;/a&gt;'</span>,
-</span><span id="500" class="l"><a class="l" href="#500">500 </a>            <span class="php-quote">'&lt;a href=&quot;http://jquery.org/&quot;&gt;JQuery&lt;/a&gt; | &amp;copy; jQuery Foundation and other contributors | Licensed under &lt;a href=&quot;http://opensource.org/licenses/MIT&quot;&gt;The MIT License (MIT)&lt;/a&gt;'</span>,
-</span><span id="501" class="l"><a class="l" href="#501">501 </a>            <span class="php-quote">'&lt;a href=&quot;http://jqueryui.com/&quot;&gt;JQuery UI&lt;/a&gt; | &amp;copy; jQuery Foundation and other contributors | Licensed under &lt;a href=&quot;http://opensource.org/licenses/MIT&quot;&gt;The MIT License (MIT)&lt;/a&gt;'</span>,
-</span><span id="502" class="l"><a class="l" href="#502">502 </a>            <span class="php-quote">'&lt;a href=&quot;http://crisp.tweakblogs.net/blog/6861/jsmin%2B-version-14.html&quot;&gt;JSMinPlus&lt;/a&gt; | Licensed under &lt;a href=&quot;http://opensource.org/licenses/MPL-1.1&quot;&gt;Mozilla_Public_License, Version 1.1&lt;/a&gt;'</span>,
-</span><span id="503" class="l"><a class="l" href="#503">503 </a>            <span class="php-quote">'&lt;a href=&quot;http://www.openwall.com/phpass/&quot;&gt;PH Pass&lt;/a&gt; | Author: Solar Designer | Placed in the public domain&lt;/a&gt;'</span>,
-</span><span id="504" class="l"><a class="l" href="#504">504 </a>            <span class="php-quote">'&lt;a href=&quot;http://www.sceditor.com/&quot;&gt;SCEditor&lt;/a&gt; | &amp;copy; Sam Clarke | Licensed under &lt;a href=&quot;http://opensource.org/licenses/MIT&quot;&gt;The MIT License (MIT)&lt;/a&gt;'</span>,
-</span><span id="505" class="l"><a class="l" href="#505">505 </a>            <span class="php-quote">'&lt;a href=&quot;http://sourceforge.net/projects/simplehtmldom/&quot;&gt;Simple HTML DOM&lt;/a&gt; | Licensed under &lt;a href=&quot;http://opensource.org/licenses/MIT&quot;&gt;The MIT License (MIT)&lt;/a&gt;'</span>,
-</span><span id="506" class="l"><a class="l" href="#506">506 </a>            <span class="php-quote">'&lt;a href=&quot;http://www.simplemachines.org/&quot;&gt;Simple Machines&lt;/a&gt; | &amp;copy; Simple Machines | Licensed under &lt;a href=&quot;http://www.simplemachines.org/about/smf/license.php&quot;&gt;The BSD License&lt;/a&gt;'</span>,
-</span><span id="507" class="l"><a class="l" href="#507">507 </a>            <span class="php-quote">'&lt;a href=&quot;http://users.tpg.com.au/j_birch/plugins/superfish/&quot;&gt;Superfish&lt;/a&gt; | &amp;copy; Joel Birch | Licensed under &lt;a href=&quot;http://opensource.org/licenses/MIT&quot;&gt;The MIT License (MIT)&lt;/a&gt;'</span>,
-</span><span id="508" class="l"><a class="l" href="#508">508 </a>            <span class="php-quote">'&lt;a href=&quot;https://github.com/tubalmartin/YUI-CSS-compressor-PHP-port&quot;&gt;YUI-CSS compressor (PHP port)&lt;/a&gt; | &amp;copy; Yahoo! Inc | Licensed under &lt;a href=&quot;http://opensource.org/licenses/BSD-3-Clause&quot;&gt;The BSD License&lt;/a&gt;'</span>,
-</span><span id="509" class="l"><a class="l" href="#509">509 </a>        ),
-</span><span id="510" class="l"><a class="l" href="#510">510 </a>    );
-</span><span id="511" class="l"><a class="l" href="#511">511 </a>
-</span><span id="512" class="l"><a class="l" href="#512">512 </a>    <span class="php-comment">// Add-ons authors: to add credits, the simpler and better way is to add in your package.xml the &lt;credits&gt; &lt;license&gt; tags.</span>
-</span><span id="513" class="l"><a class="l" href="#513">513 </a>    <span class="php-comment">// Support for addons that use the &lt;credits&gt; tag via the package manager</span>
-</span><span id="514" class="l"><a class="l" href="#514">514 </a>    <span class="php-var">$credits</span>[<span class="php-quote">'credits_addons'</span>] = addonsCredits();
-</span><span id="515" class="l"><a class="l" href="#515">515 </a>
-</span><span id="516" class="l"><a class="l" href="#516">516 </a>    <span class="php-comment">// An alternative for addons credits is to use a hook.</span>
-</span><span id="517" class="l"><a class="l" href="#517">517 </a>    call_integration_hook(<span class="php-quote">'integrate_credits'</span>, <span class="php-keyword1">array</span>(&amp;<span class="php-var">$credits</span>));
-</span><span id="518" class="l"><a class="l" href="#518">518 </a>
-</span><span id="519" class="l"><a class="l" href="#519">519 </a>    <span class="php-comment">// Copyright information</span>
-</span><span id="520" class="l"><a class="l" href="#520">520 </a>    <span class="php-var">$credits</span>[<span class="php-quote">'copyrights'</span>][<span class="php-quote">'elkarte'</span>] = <span class="php-quote">'&amp;copy; 2012 - 2014 ElkArte Forum contributors'</span>;
-</span><span id="521" class="l"><a class="l" href="#521">521 </a>    <span class="php-keyword1">return</span> <span class="php-var">$credits</span>;
-</span><span id="522" class="l"><a class="l" href="#522">522 </a></span>}</code></pre>
+</span><span id="496" class="l"><a class="l" href="#496">496 </a>            <span class="php-quote">'&lt;a href=&quot;http://ichord.github.com/At.js&quot;&gt;At.js&lt;/a&gt; | &amp;copy; Chord Luo | Licensed under &lt;a href=&quot;http://opensource.org/licenses/MIT&quot;&gt;The MIT License (MIT)&lt;/a&gt;'</span>,
+</span><span id="497" class="l"><a class="l" href="#497">497 </a>            <span class="php-quote">'&lt;a href=&quot;http://bad-behavior.ioerror.us/&quot;&gt;Bad Behavior&lt;/a&gt; | &amp;copy; Michael Hampton | Licensed under &lt;a href=&quot;http://opensource.org/licenses/LGPL-3.0&quot;&gt;GNU Lesser General Public License&lt;/a&gt;'</span>,
+</span><span id="498" class="l"><a class="l" href="#498">498 </a>            <span class="php-quote">'&lt;a href=&quot;https://code.google.com/p/google-code-prettify/&quot;&gt;Google Code Prettify&lt;/a&gt; | Licensed under &lt;a href=&quot;http://opensource.org/licenses/Apache-2.0&quot;&gt;Apache License, Version 2.0&lt;/a&gt;'</span>,
+</span><span id="499" class="l"><a class="l" href="#499">499 </a>            <span class="php-quote">'&lt;a href=&quot;http://cherne.net/brian/resources/jquery.hoverIntent.html&quot;&gt;hoverIntent&lt;/a&gt; | &amp;copy; Brian Cherne | Licensed under &lt;a href=&quot;http://opensource.org/licenses/MIT&quot;&gt;The MIT License (MIT)&lt;/a&gt;'</span>,
+</span><span id="500" class="l"><a class="l" href="#500">500 </a>            <span class="php-quote">'&lt;a href=&quot;http://pajhome.org.uk/crypt/md5&quot;&gt;Javascript Crypt&lt;/a&gt; | &amp;copy; Angel Marin, Paul Johnston | Licensed under &lt;a href=&quot;http://opensource.org/licenses/BSD-3-Clause&quot;&gt;The BSD License&lt;/a&gt;'</span>,
+</span><span id="501" class="l"><a class="l" href="#501">501 </a>            <span class="php-quote">'&lt;a href=&quot;http://jquery.org/&quot;&gt;JQuery&lt;/a&gt; | &amp;copy; jQuery Foundation and other contributors | Licensed under &lt;a href=&quot;http://opensource.org/licenses/MIT&quot;&gt;The MIT License (MIT)&lt;/a&gt;'</span>,
+</span><span id="502" class="l"><a class="l" href="#502">502 </a>            <span class="php-quote">'&lt;a href=&quot;http://jqueryui.com/&quot;&gt;JQuery UI&lt;/a&gt; | &amp;copy; jQuery Foundation and other contributors | Licensed under &lt;a href=&quot;http://opensource.org/licenses/MIT&quot;&gt;The MIT License (MIT)&lt;/a&gt;'</span>,
+</span><span id="503" class="l"><a class="l" href="#503">503 </a>            <span class="php-quote">'&lt;a href=&quot;http://crisp.tweakblogs.net/blog/6861/jsmin%2B-version-14.html&quot;&gt;JSMinPlus&lt;/a&gt; | Licensed under &lt;a href=&quot;http://opensource.org/licenses/MPL-1.1&quot;&gt;Mozilla_Public_License, Version 1.1&lt;/a&gt;'</span>,
+</span><span id="504" class="l"><a class="l" href="#504">504 </a>            <span class="php-quote">'&lt;a href=&quot;http://www.openwall.com/phpass/&quot;&gt;PH Pass&lt;/a&gt; | Author: Solar Designer | Placed in the public domain&lt;/a&gt;'</span>,
+</span><span id="505" class="l"><a class="l" href="#505">505 </a>            <span class="php-quote">'&lt;a href=&quot;http://www.sceditor.com/&quot;&gt;SCEditor&lt;/a&gt; | &amp;copy; Sam Clarke | Licensed under &lt;a href=&quot;http://opensource.org/licenses/MIT&quot;&gt;The MIT License (MIT)&lt;/a&gt;'</span>,
+</span><span id="506" class="l"><a class="l" href="#506">506 </a>            <span class="php-quote">'&lt;a href=&quot;http://sourceforge.net/projects/simplehtmldom/&quot;&gt;Simple HTML DOM&lt;/a&gt; | Licensed under &lt;a href=&quot;http://opensource.org/licenses/MIT&quot;&gt;The MIT License (MIT)&lt;/a&gt;'</span>,
+</span><span id="507" class="l"><a class="l" href="#507">507 </a>            <span class="php-quote">'&lt;a href=&quot;http://www.simplemachines.org/&quot;&gt;Simple Machines&lt;/a&gt; | &amp;copy; Simple Machines | Licensed under &lt;a href=&quot;http://www.simplemachines.org/about/smf/license.php&quot;&gt;The BSD License&lt;/a&gt;'</span>,
+</span><span id="508" class="l"><a class="l" href="#508">508 </a>            <span class="php-quote">'&lt;a href=&quot;http://users.tpg.com.au/j_birch/plugins/superfish/&quot;&gt;Superfish&lt;/a&gt; | &amp;copy; Joel Birch | Licensed under &lt;a href=&quot;http://opensource.org/licenses/MIT&quot;&gt;The MIT License (MIT)&lt;/a&gt;'</span>,
+</span><span id="509" class="l"><a class="l" href="#509">509 </a>            <span class="php-quote">'&lt;a href=&quot;https://github.com/tubalmartin/YUI-CSS-compressor-PHP-port&quot;&gt;YUI-CSS compressor (PHP port)&lt;/a&gt; | &amp;copy; Yahoo! Inc | Licensed under &lt;a href=&quot;http://opensource.org/licenses/BSD-3-Clause&quot;&gt;The BSD License&lt;/a&gt;'</span>,
+</span><span id="510" class="l"><a class="l" href="#510">510 </a>        ),
+</span><span id="511" class="l"><a class="l" href="#511">511 </a>    );
+</span><span id="512" class="l"><a class="l" href="#512">512 </a>
+</span><span id="513" class="l"><a class="l" href="#513">513 </a>    <span class="php-comment">// Add-ons authors: to add credits, the simpler and better way is to add in your package.xml the &lt;credits&gt; &lt;license&gt; tags.</span>
+</span><span id="514" class="l"><a class="l" href="#514">514 </a>    <span class="php-comment">// Support for addons that use the &lt;credits&gt; tag via the package manager</span>
+</span><span id="515" class="l"><a class="l" href="#515">515 </a>    <span class="php-var">$credits</span>[<span class="php-quote">'credits_addons'</span>] = addonsCredits();
+</span><span id="516" class="l"><a class="l" href="#516">516 </a>
+</span><span id="517" class="l"><a class="l" href="#517">517 </a>    <span class="php-comment">// An alternative for addons credits is to use a hook.</span>
+</span><span id="518" class="l"><a class="l" href="#518">518 </a>    call_integration_hook(<span class="php-quote">'integrate_credits'</span>, <span class="php-keyword1">array</span>(&amp;<span class="php-var">$credits</span>));
+</span><span id="519" class="l"><a class="l" href="#519">519 </a>
+</span><span id="520" class="l"><a class="l" href="#520">520 </a>    <span class="php-comment">// Copyright information</span>
+</span><span id="521" class="l"><a class="l" href="#521">521 </a>    <span class="php-var">$credits</span>[<span class="php-quote">'copyrights'</span>][<span class="php-quote">'elkarte'</span>] = <span class="php-quote">'&amp;copy; 2012 - 2014 ElkArte Forum contributors'</span>;
+</span><span id="522" class="l"><a class="l" href="#522">522 </a>    <span class="php-keyword1">return</span> <span class="php-var">$credits</span>;
+</span><span id="523" class="l"><a class="l" href="#523">523 </a></span>}</code></pre>
 	</div>
 
 	<div id="footer">
-		ElkArte Documentation API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+		ElkArte 1.0.2 Documentation API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
 	</div>
 </div>
 </body>

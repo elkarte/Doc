@@ -20,7 +20,8 @@
 		<error severity="error" line="176" message="Missing documentation of return value of method CoreFeatures_Controller::settings()" source="ApiGen.Documentation.Documentation"/>
 	</file>
 	<file name="C:\wamp\www\ElkMaster\sources\admin\Maintenance.controller.php">
-		<error severity="error" line="1417" message="Missing documentation of return value of method Maintenance_Controller::list_getIntegrationHooks()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="955" message="Missing documentation of return value of method Maintenance_Controller::action_backup_display()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="1480" message="Missing documentation of return value of method Maintenance_Controller::list_getIntegrationHooks()" source="ApiGen.Documentation.Documentation"/>
 	</file>
 	<file name="C:\wamp\www\ElkMaster\sources\admin\ManageAttachments.controller.php">
 		<error severity="error" line="198" message="Missing documentation of return value of method ManageAttachments_Controller::_initAttachSettingsForm()" source="ApiGen.Documentation.Documentation"/>
@@ -28,9 +29,9 @@
 		<error severity="error" line="317" message="Missing documentation of return value of method ManageAttachments_Controller::settings_search()" source="ApiGen.Documentation.Documentation"/>
 	</file>
 	<file name="C:\wamp\www\ElkMaster\sources\admin\ManageAvatars.controller.php">
-		<error severity="error" line="118" message="Missing documentation of return value of method ManageAvatars_Controller::_initAvatarSettingsForm()" source="ApiGen.Documentation.Documentation"/>
-		<error severity="error" line="136" message="Missing documentation of return value of method ManageAvatars_Controller::_settings()" source="ApiGen.Documentation.Documentation"/>
-		<error severity="error" line="206" message="Missing documentation of return value of method ManageAvatars_Controller::settings_search()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="116" message="Missing documentation of return value of method ManageAvatars_Controller::_initAvatarSettingsForm()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="133" message="Missing documentation of return value of method ManageAvatars_Controller::_settings()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="200" message="Missing documentation of return value of method ManageAvatars_Controller::settings_search()" source="ApiGen.Documentation.Documentation"/>
 	</file>
 	<file name="C:\wamp\www\ElkMaster\sources\admin\ManageBans.controller.php">
 		<error severity="error" line="661" message="Missing documentation of return value of method ManageBans_Controller::action_edit2()" source="ApiGen.Documentation.Documentation"/>
@@ -41,14 +42,14 @@
 		<error severity="error" line="164" message="Missing documentation of return value of method ManageBBC_Controller::settings_search()" source="ApiGen.Documentation.Documentation"/>
 	</file>
 	<file name="C:\wamp\www\ElkMaster\sources\admin\ManageBoards.controller.php">
-		<error severity="error" line="787" message="Missing documentation of return value of method ManageBoards_Controller::_initBoardSettingsForm()" source="ApiGen.Documentation.Documentation"/>
-		<error severity="error" line="802" message="Missing documentation of return value of method ManageBoards_Controller::_settings()" source="ApiGen.Documentation.Documentation"/>
-		<error severity="error" line="839" message="Missing documentation of return value of method ManageBoards_Controller::settings_search()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="784" message="Missing documentation of return value of method ManageBoards_Controller::_initBoardSettingsForm()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="799" message="Missing documentation of return value of method ManageBoards_Controller::_settings()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="836" message="Missing documentation of return value of method ManageBoards_Controller::settings_search()" source="ApiGen.Documentation.Documentation"/>
 	</file>
 	<file name="C:\wamp\www\ElkMaster\sources\admin\ManageCalendar.controller.php">
-		<error severity="error" line="307" message="Missing documentation of return value of method ManageCalendar_Controller::_initCalendarSettingsForm()" source="ApiGen.Documentation.Documentation"/>
-		<error severity="error" line="332" message="Missing documentation of return value of method ManageCalendar_Controller::_settings()" source="ApiGen.Documentation.Documentation"/>
-		<error severity="error" line="383" message="Missing documentation of return value of method ManageCalendar_Controller::settings_search()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="308" message="Missing documentation of return value of method ManageCalendar_Controller::_initCalendarSettingsForm()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="333" message="Missing documentation of return value of method ManageCalendar_Controller::_settings()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="384" message="Missing documentation of return value of method ManageCalendar_Controller::settings_search()" source="ApiGen.Documentation.Documentation"/>
 	</file>
 	<file name="C:\wamp\www\ElkMaster\sources\admin\ManageDrafts.controller.php">
 		<error severity="error" line="113" message="Missing documentation of return value of method ManageDrafts_Controller::_initDraftSettingsForm()" source="ApiGen.Documentation.Documentation"/>
@@ -122,9 +123,9 @@
 		<error severity="error" line="799" message="Missing documentation of return value of method ManagePaid_Controller::action_modifyuser()" source="ApiGen.Documentation.Documentation"/>
 	</file>
 	<file name="C:\wamp\www\ElkMaster\sources\admin\ManagePermissions.controller.php">
-		<error severity="error" line="917" message="Missing documentation of return value of method ManagePermissions_Controller::_initPermSettingsForm()" source="ApiGen.Documentation.Documentation"/>
-		<error severity="error" line="931" message="Missing documentation of return value of method ManagePermissions_Controller::_settings()" source="ApiGen.Documentation.Documentation"/>
-		<error severity="error" line="955" message="Missing documentation of return value of method ManagePermissions_Controller::settings_search()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="922" message="Missing documentation of return value of method ManagePermissions_Controller::_initPermSettingsForm()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="936" message="Missing documentation of return value of method ManagePermissions_Controller::_settings()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="960" message="Missing documentation of return value of method ManagePermissions_Controller::settings_search()" source="ApiGen.Documentation.Documentation"/>
 	</file>
 	<file name="C:\wamp\www\ElkMaster\sources\admin\ManagePosts.controller.php">
 		<error severity="error" line="283" message="Missing documentation of return value of method ManagePosts_Controller::_initPostSettingsForm()" source="ApiGen.Documentation.Documentation"/>
@@ -311,7 +312,7 @@
 	</file>
 	<file name="C:\wamp\www\ElkMaster\sources\controllers\Post.controller.php">
 		<error severity="error" line="42" message="Missing documentation of return value of method Post_Controller::action_post()" source="ApiGen.Documentation.Documentation"/>
-		<error severity="error" line="987" message="Missing documentation of return value of method Post_Controller::action_post2()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="1004" message="Missing documentation of return value of method Post_Controller::action_post2()" source="ApiGen.Documentation.Documentation"/>
 	</file>
 	<file name="C:\wamp\www\ElkMaster\sources\controllers\ProfileInfo.controller.php">
 		<error severity="error" line="388" message="Missing documentation of return value of method ProfileInfo_Controller::action_showPosts()" source="ApiGen.Documentation.Documentation"/>
@@ -344,7 +345,7 @@
 	</file>
 	<file name="C:\wamp\www\ElkMaster\sources\controllers\SplitTopics.controller.php">
 		<error severity="error" line="84" message="Missing documentation of return value of method SplitTopics_Controller::action_splitIndex()" source="ApiGen.Documentation.Documentation"/>
-		<error severity="error" line="146" message="Missing documentation of return value of method SplitTopics_Controller::action_splitExecute()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="147" message="Missing documentation of return value of method SplitTopics_Controller::action_splitExecute()" source="ApiGen.Documentation.Documentation"/>
 	</file>
 	<file name="C:\wamp\www\ElkMaster\sources\CurlFetchWebdata.class.php">
 		<error severity="error" line="116" message="Missing documentation of return value of method Curl_Fetch_Webdata::get_url_data()" source="ApiGen.Documentation.Documentation"/>
@@ -353,7 +354,7 @@
 		<error severity="error" line="226" message="Missing documentation of return value of method Curl_Fetch_Webdata::result()" source="ApiGen.Documentation.Documentation"/>
 		<error severity="error" line="246" message="Missing documentation of return value of method Curl_Fetch_Webdata::result_raw()" source="ApiGen.Documentation.Documentation"/>
 		<error severity="error" line="266" message="Missing documentation of return value of method Curl_Fetch_Webdata::_buildPostData()" source="ApiGen.Documentation.Documentation"/>
-		<error severity="error" line="339" message="Missing documentation of return value of method Curl_Fetch_Webdata::_headerCallback()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="338" message="Missing documentation of return value of method Curl_Fetch_Webdata::_headerCallback()" source="ApiGen.Documentation.Documentation"/>
 	</file>
 	<file name="C:\wamp\www\ElkMaster\sources\database\Db-mysql.class.php">
 		<error severity="error" line="129" message="Missing documentation of return value of method Database_MySQL::replacement__callback()" source="ApiGen.Documentation.Documentation"/>
@@ -440,7 +441,7 @@
 		<error severity="error" line="2384" message="Missing documentation of return value of function getBoardParents()" source="ApiGen.Documentation.Documentation"/>
 		<error severity="error" line="2457" message="Missing documentation of return value of function getLanguages()" source="ApiGen.Documentation.Documentation"/>
 		<error severity="error" line="2527" message="Missing documentation of return value of function censorText()" source="ApiGen.Documentation.Documentation"/>
-		<error severity="error" line="3059" message="Missing documentation of return value of function detectServerLoad()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="3087" message="Missing documentation of return value of function detectServerLoad()" source="ApiGen.Documentation.Documentation"/>
 	</file>
 	<file name="C:\wamp\www\ElkMaster\sources\Logging.php">
 		<error severity="error" line="168" message="Missing documentation of return value of function logLastDatabaseError()" source="ApiGen.Documentation.Documentation"/>
@@ -480,11 +481,11 @@
 		<error severity="error" line="347" message="Missing documentation of return value of function constructPageIndex()" source="ApiGen.Documentation.Documentation"/>
 		<error severity="error" line="490" message="Missing documentation of return value of function comma_format()" source="ApiGen.Documentation.Documentation"/>
 		<error severity="error" line="523" message="Missing documentation of return value of function standardTime()" source="ApiGen.Documentation.Documentation"/>
-		<error severity="error" line="2255" message="Missing documentation of return value of method ParseSmileysReplacement::callback()" source="ApiGen.Documentation.Documentation"/>
-		<error severity="error" line="2350" message="Missing documentation of return value of function redirectexit_callback()" source="ApiGen.Documentation.Documentation"/>
-		<error severity="error" line="3029" message="Missing documentation of return value of function getAttachmentFilename()" source="ApiGen.Documentation.Documentation"/>
-		<error severity="error" line="3186" message="Missing documentation of return value of function text2words()" source="ApiGen.Documentation.Documentation"/>
-		<error severity="error" line="4148" message="Missing documentation of return value of function elk_array_insert()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="2269" message="Missing documentation of return value of method ParseSmileysReplacement::callback()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="2364" message="Missing documentation of return value of function redirectexit_callback()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="3038" message="Missing documentation of return value of function getAttachmentFilename()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="3195" message="Missing documentation of return value of function text2words()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="4157" message="Missing documentation of return value of function elk_array_insert()" source="ApiGen.Documentation.Documentation"/>
 	</file>
 	<file name="C:\wamp\www\ElkMaster\sources\subs\Action.class.php">
 		<error severity="error" line="191" message="Missing documentation of return value of method Action::subaction()" source="ApiGen.Documentation.Documentation"/>
@@ -617,8 +618,10 @@
 	</file>
 	<file name="C:\wamp\www\ElkMaster\sources\subs\EmailFormat.class.php">
 		<error severity="error" line="128" message="Missing documentation of return value of method Email_Format::reflow()" source="ApiGen.Documentation.Documentation"/>
-		<error severity="error" line="389" message="Missing documentation of return value of method Email_Format::_in_sig()" source="ApiGen.Documentation.Documentation"/>
-		<error severity="error" line="443" message="Missing documentation of return value of method Email_Format::_in_plainlist()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="128" message="Missing documentation of parameter Email_Format::reflow($bbc_br)" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="155" message="Missing documentation of parameter Email_Format::_prep_data($bbc_br)" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="391" message="Missing documentation of return value of method Email_Format::_in_sig()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="448" message="Missing documentation of return value of method Email_Format::_in_plainlist()" source="ApiGen.Documentation.Documentation"/>
 	</file>
 	<file name="C:\wamp\www\ElkMaster\sources\subs\EmailParse.class.php">
 		<error severity="error" line="216" message="Missing documentation of return value of method Email_Parse::_query_load_email()" source="ApiGen.Documentation.Documentation"/>
@@ -627,25 +630,25 @@
 	</file>
 	<file name="C:\wamp\www\ElkMaster\sources\subs\Emailpost.subs.php">
 		<error severity="error" line="18" message="Missing documentation of return value of function pbe_email_to_bbc()" source="ApiGen.Documentation.Documentation"/>
-		<error severity="error" line="103" message="Missing documentation of return value of function pbe_fix_email_body()" source="ApiGen.Documentation.Documentation"/>
-		<error severity="error" line="152" message="Missing documentation of return value of function pbe_fix_email_quotes()" source="ApiGen.Documentation.Documentation"/>
-		<error severity="error" line="268" message="Missing documentation of return value of function pbe_email_quote_depth()" source="ApiGen.Documentation.Documentation"/>
-		<error severity="error" line="376" message="Missing documentation of return value of function pbe_filter_email_message()" source="ApiGen.Documentation.Documentation"/>
-		<error severity="error" line="424" message="Missing documentation of return value of function pbe_clean_email_subject()" source="ApiGen.Documentation.Documentation"/>
-		<error severity="error" line="471" message="Missing documentation of return value of function pbe_fix_client_quotes()" source="ApiGen.Documentation.Documentation"/>
-		<error severity="error" line="598" message="Missing documentation of return value of function pbe_emailError()" source="ApiGen.Documentation.Documentation"/>
-		<error severity="error" line="726" message="Missing documentation of return value of function pbe_email_attachments()" source="ApiGen.Documentation.Documentation"/>
-		<error severity="error" line="832" message="Missing documentation of return value of function pbe_find_board_number()" source="ApiGen.Documentation.Documentation"/>
-		<error severity="error" line="968" message="Missing documentation of return value of function quote_callback()" source="ApiGen.Documentation.Documentation"/>
-		<error severity="error" line="984" message="Missing documentation of return value of function quote_callback_2()" source="ApiGen.Documentation.Documentation"/>
-		<error severity="error" line="1000" message="Missing documentation of return value of function query_load_user_info()" source="ApiGen.Documentation.Documentation"/>
-		<error severity="error" line="1138" message="Missing documentation of return value of function query_sender_wrapper()" source="ApiGen.Documentation.Documentation"/>
-		<error severity="error" line="1175" message="Missing documentation of return value of function query_user_keys()" source="ApiGen.Documentation.Documentation"/>
-		<error severity="error" line="1240" message="Missing documentation of return value of function query_load_subject()" source="ApiGen.Documentation.Documentation"/>
-		<error severity="error" line="1332" message="Missing documentation of return value of function query_load_message()" source="ApiGen.Documentation.Documentation"/>
-		<error severity="error" line="1410" message="Missing documentation of return value of function query_load_board()" source="ApiGen.Documentation.Documentation"/>
-		<error severity="error" line="1436" message="Missing documentation of return value of function query_load_board_details()" source="ApiGen.Documentation.Documentation"/>
-		<error severity="error" line="1464" message="Missing documentation of return value of function query_get_theme()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="116" message="Missing documentation of return value of function pbe_fix_email_body()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="165" message="Missing documentation of return value of function pbe_fix_email_quotes()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="281" message="Missing documentation of return value of function pbe_email_quote_depth()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="389" message="Missing documentation of return value of function pbe_filter_email_message()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="437" message="Missing documentation of return value of function pbe_clean_email_subject()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="484" message="Missing documentation of return value of function pbe_fix_client_quotes()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="617" message="Missing documentation of return value of function pbe_emailError()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="745" message="Missing documentation of return value of function pbe_email_attachments()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="851" message="Missing documentation of return value of function pbe_find_board_number()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="987" message="Missing documentation of return value of function quote_callback()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="1003" message="Missing documentation of return value of function quote_callback_2()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="1019" message="Missing documentation of return value of function query_load_user_info()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="1157" message="Missing documentation of return value of function query_sender_wrapper()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="1194" message="Missing documentation of return value of function query_user_keys()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="1259" message="Missing documentation of return value of function query_load_subject()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="1351" message="Missing documentation of return value of function query_load_message()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="1429" message="Missing documentation of return value of function query_load_board()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="1455" message="Missing documentation of return value of function query_load_board_details()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="1483" message="Missing documentation of return value of function query_get_theme()" source="ApiGen.Documentation.Documentation"/>
 	</file>
 	<file name="C:\wamp\www\ElkMaster\sources\subs\Error.subs.php">
 		<error severity="error" line="84" message="Missing documentation of return value of function getErrorLogData()" source="ApiGen.Documentation.Documentation"/>
@@ -668,24 +671,24 @@
 		<error severity="error" line="1019" message="Missing documentation of return value of function showLetterImage()" source="ApiGen.Documentation.Documentation"/>
 	</file>
 	<file name="C:\wamp\www\ElkMaster\sources\subs\Html2BBC.class.php">
-		<error severity="error" line="131" message="Missing documentation of return value of method Html_2_BBC::get_bbc()" source="ApiGen.Documentation.Documentation"/>
-		<error severity="error" line="182" message="Missing documentation of return value of method Html_2_BBC::_has_parent_code()" source="ApiGen.Documentation.Documentation"/>
-		<error severity="error" line="407" message="Missing documentation of return value of method Html_2_BBC::_convert_abbr()" source="ApiGen.Documentation.Documentation"/>
-		<error severity="error" line="428" message="Missing documentation of return value of method Html_2_BBC::_convert_anchor()" source="ApiGen.Documentation.Documentation"/>
-		<error severity="error" line="493" message="Missing documentation of return value of method Html_2_BBC::_convert_bdo()" source="ApiGen.Documentation.Documentation"/>
-		<error severity="error" line="514" message="Missing documentation of return value of method Html_2_BBC::_convert_code()" source="ApiGen.Documentation.Documentation"/>
-		<error severity="error" line="555" message="Missing documentation of return value of method Html_2_BBC::_convert_font()" source="ApiGen.Documentation.Documentation"/>
-		<error severity="error" line="584" message="Missing documentation of return value of method Html_2_BBC::_convert_header()" source="ApiGen.Documentation.Documentation"/>
-		<error severity="error" line="603" message="Missing documentation of return value of method Html_2_BBC::_convert_image()" source="ApiGen.Documentation.Documentation"/>
-		<error severity="error" line="665" message="Missing documentation of return value of method Html_2_BBC::_convert_styles()" source="ApiGen.Documentation.Documentation"/>
-		<error severity="error" line="736" message="Missing documentation of return value of method Html_2_BBC::_convert_table_cell()" source="ApiGen.Documentation.Documentation"/>
-		<error severity="error" line="772" message="Missing documentation of return value of method Html_2_BBC::_get_item()" source="ApiGen.Documentation.Documentation"/>
-		<error severity="error" line="786" message="Missing documentation of return value of method Html_2_BBC::_get_length()" source="ApiGen.Documentation.Documentation"/>
-		<error severity="error" line="799" message="Missing documentation of return value of method Html_2_BBC::_get_value()" source="ApiGen.Documentation.Documentation"/>
-		<error severity="error" line="815" message="Missing documentation of return value of method Html_2_BBC::_get_name()" source="ApiGen.Documentation.Documentation"/>
-		<error severity="error" line="852" message="Missing documentation of return value of method Html_2_BBC::_get_outerHTML()" source="ApiGen.Documentation.Documentation"/>
-		<error severity="error" line="885" message="Missing documentation of return value of method Html_2_BBC::_get_style_values()" source="ApiGen.Documentation.Documentation"/>
-		<error severity="error" line="911" message="Missing documentation of return value of method Html_2_BBC::_recursive_decode()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="153" message="Missing documentation of return value of method Html_2_BBC::get_bbc()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="203" message="Missing documentation of return value of method Html_2_BBC::_has_parent_code()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="428" message="Missing documentation of return value of method Html_2_BBC::_convert_abbr()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="449" message="Missing documentation of return value of method Html_2_BBC::_convert_anchor()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="514" message="Missing documentation of return value of method Html_2_BBC::_convert_bdo()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="535" message="Missing documentation of return value of method Html_2_BBC::_convert_code()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="576" message="Missing documentation of return value of method Html_2_BBC::_convert_font()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="608" message="Missing documentation of return value of method Html_2_BBC::_convert_header()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="627" message="Missing documentation of return value of method Html_2_BBC::_convert_image()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="689" message="Missing documentation of return value of method Html_2_BBC::_convert_styles()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="765" message="Missing documentation of return value of method Html_2_BBC::_convert_table_cell()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="801" message="Missing documentation of return value of method Html_2_BBC::_get_item()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="815" message="Missing documentation of return value of method Html_2_BBC::_get_length()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="828" message="Missing documentation of return value of method Html_2_BBC::_get_value()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="844" message="Missing documentation of return value of method Html_2_BBC::_get_name()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="881" message="Missing documentation of return value of method Html_2_BBC::_get_outerHTML()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="913" message="Missing documentation of return value of method Html_2_BBC::_get_style_values()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="939" message="Missing documentation of return value of method Html_2_BBC::_recursive_decode()" source="ApiGen.Documentation.Documentation"/>
 	</file>
 	<file name="C:\wamp\www\ElkMaster\sources\subs\Html2Md.class.php">
 		<error severity="error" line="117" message="Missing documentation of return value of method Html_2_Md::get_markdown()" source="ApiGen.Documentation.Documentation"/>
@@ -784,16 +787,16 @@
 		<error severity="error" line="122" message="Missing documentation of return value of function list_getProfileFieldSize()" source="ApiGen.Documentation.Documentation"/>
 	</file>
 	<file name="C:\wamp\www\ElkMaster\sources\subs\ManagePermissions.subs.php">
-		<error severity="error" line="1028" message="Missing documentation of return value of function fetchBoardPermissions()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="1024" message="Missing documentation of return value of function fetchBoardPermissions()" source="ApiGen.Documentation.Documentation"/>
 	</file>
 	<file name="C:\wamp\www\ElkMaster\sources\subs\ManageSearch.subs.php">
-		<error severity="error" line="281" message="Missing documentation of return value of function createSearchIndex()" source="ApiGen.Documentation.Documentation"/>
-		<error severity="error" line="403" message="Missing documentation of return value of function removeCommonWordsFromIndex()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="277" message="Missing documentation of return value of function createSearchIndex()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="399" message="Missing documentation of return value of function removeCommonWordsFromIndex()" source="ApiGen.Documentation.Documentation"/>
 	</file>
 	<file name="C:\wamp\www\ElkMaster\sources\subs\Membergroups.subs.php">
 		<error severity="error" line="572" message="Missing documentation of return value of function cache_getMembergroupList()" source="ApiGen.Documentation.Documentation"/>
 		<error severity="error" line="610" message="Missing documentation of return value of function list_getMembergroups()" source="ApiGen.Documentation.Documentation"/>
-		<error severity="error" line="936" message="Missing documentation of return value of function membergroupById()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="969" message="Missing documentation of return value of function membergroupById()" source="ApiGen.Documentation.Documentation"/>
 	</file>
 	<file name="C:\wamp\www\ElkMaster\sources\subs\Memberlist.subs.php">
 		<error severity="error" line="23" message="Missing documentation of return value of function ml_CustomProfile()" source="ApiGen.Documentation.Documentation"/>
@@ -869,6 +872,7 @@
 		<error severity="error" line="23" message="Missing documentation of return value of function list_getModLogEntryCount()" source="ApiGen.Documentation.Documentation"/>
 		<error severity="error" line="62" message="Missing documentation of return value of function list_getModLogEntries()" source="ApiGen.Documentation.Documentation"/>
 		<error severity="error" line="358" message="Missing documentation of return value of method ModLogEntriesReplacement::callback()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="396" message="Missing documentation of return value of function recentlyLogged()" source="ApiGen.Documentation.Documentation"/>
 	</file>
 	<file name="C:\wamp\www\ElkMaster\sources\subs\News.subs.php">
 		<error severity="error" line="194" message="Missing documentation of return value of function getXMLNews()" source="ApiGen.Documentation.Documentation"/>
@@ -898,7 +902,7 @@
 		<error severity="error" line="685" message="Missing documentation of return value of function insertSubscription()" source="ApiGen.Documentation.Documentation"/>
 	</file>
 	<file name="C:\wamp\www\ElkMaster\sources\subs\Permission.subs.php">
-		<error severity="error" line="82" message="Missing documentation of return value of function updateChildPermissions()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="80" message="Missing documentation of return value of function updateChildPermissions()" source="ApiGen.Documentation.Documentation"/>
 	</file>
 	<file name="C:\wamp\www\ElkMaster\sources\subs\PersonalMessage.subs.php">
 		<error severity="error" line="928" message="Missing documentation of return value of function loadPMs()" source="ApiGen.Documentation.Documentation"/>
@@ -927,40 +931,37 @@
 		<error severity="error" line="557" message="Missing documentation of return value of function checkVote()" source="ApiGen.Documentation.Documentation"/>
 	</file>
 	<file name="C:\wamp\www\ElkMaster\sources\subs\Post.subs.php">
-		<error severity="error" line="215" message="Missing documentation of return value of function preparsetable()" source="ApiGen.Documentation.Documentation"/>
-		<error severity="error" line="289" message="Missing documentation of return value of function preparsecode_nobbc_callback()" source="ApiGen.Documentation.Documentation"/>
-		<error severity="error" line="300" message="Missing documentation of return value of function preparsecode_html_callback()" source="ApiGen.Documentation.Documentation"/>
-		<error severity="error" line="311" message="Missing documentation of return value of function preparsecode_lowertags_callback()" source="ApiGen.Documentation.Documentation"/>
-		<error severity="error" line="322" message="Missing documentation of return value of function un_preparsecode()" source="ApiGen.Documentation.Documentation"/>
-		<error severity="error" line="346" message="Missing documentation of return value of function preparsecode_unhtml_callback()" source="ApiGen.Documentation.Documentation"/>
-		<error severity="error" line="425" message="Missing documentation of return value of function fixTags_img_callback()" source="ApiGen.Documentation.Documentation"/>
-		<error severity="error" line="593" message="Missing documentation of return value of function createPost()" source="ApiGen.Documentation.Documentation"/>
-		<error severity="error" line="956" message="Missing documentation of return value of function modifyPost()" source="ApiGen.Documentation.Documentation"/>
-		<error severity="error" line="1105" message="Missing documentation of return value of function approvePosts()" source="ApiGen.Documentation.Documentation"/>
-		<error severity="error" line="1345" message="Missing documentation of return value of function updateLastMessages()" source="ApiGen.Documentation.Documentation"/>
-		<error severity="error" line="1543" message="Missing documentation of return value of function getFormMsgSubject()" source="ApiGen.Documentation.Documentation"/>
-		<error severity="error" line="1649" message="Missing documentation of return value of function getFormMsgSubject_br_callback()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="203" message="Missing documentation of return value of function preparsetable()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="277" message="Missing documentation of return value of function preparsecode_nobbc_callback()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="288" message="Missing documentation of return value of function preparsecode_lowertags_callback()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="299" message="Missing documentation of return value of function un_preparsecode()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="387" message="Missing documentation of return value of function fixTags_img_callback()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="555" message="Missing documentation of return value of function createPost()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="931" message="Missing documentation of return value of function modifyPost()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="1080" message="Missing documentation of return value of function approvePosts()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="1320" message="Missing documentation of return value of function updateLastMessages()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="1518" message="Missing documentation of return value of function getFormMsgSubject()" source="ApiGen.Documentation.Documentation"/>
 	</file>
 	<file name="C:\wamp\www\ElkMaster\sources\subs\Profile.subs.php">
 		<error severity="error" line="1124" message="Missing documentation of return value of function profileValidateEmail()" source="ApiGen.Documentation.Documentation"/>
-		<error severity="error" line="1734" message="Missing documentation of return value of function profileLoadGroups()" source="ApiGen.Documentation.Documentation"/>
-		<error severity="error" line="1792" message="Missing documentation of return value of function profileLoadLanguages()" source="ApiGen.Documentation.Documentation"/>
-		<error severity="error" line="1832" message="Missing documentation of return value of function profileValidateSignature()" source="ApiGen.Documentation.Documentation"/>
-		<error severity="error" line="2295" message="Missing documentation of return value of function profileSaveGroups()" source="ApiGen.Documentation.Documentation"/>
-		<error severity="error" line="2397" message="Missing documentation of return value of function list_getUserWarnings()" source="ApiGen.Documentation.Documentation"/>
-		<error severity="error" line="2447" message="Missing documentation of return value of function list_getUserWarningCount()" source="ApiGen.Documentation.Documentation"/>
-		<error severity="error" line="2473" message="Missing documentation of return value of function profileLoadAttachments()" source="ApiGen.Documentation.Documentation"/>
-		<error severity="error" line="2550" message="Missing documentation of return value of function getNumAttachments()" source="ApiGen.Documentation.Documentation"/>
-		<error severity="error" line="2590" message="Missing documentation of return value of function getUnwatchedBy()" source="ApiGen.Documentation.Documentation"/>
-		<error severity="error" line="2652" message="Missing documentation of return value of function getNumUnwatchedBy()" source="ApiGen.Documentation.Documentation"/>
-		<error severity="error" line="2754" message="Missing documentation of return value of function findMinMaxUserMessage()" source="ApiGen.Documentation.Documentation"/>
-		<error severity="error" line="2789" message="Missing documentation of return value of function findMinMaxUserTopic()" source="ApiGen.Documentation.Documentation"/>
-		<error severity="error" line="2824" message="Missing documentation of return value of function load_user_posts()" source="ApiGen.Documentation.Documentation"/>
-		<error severity="error" line="2889" message="Missing documentation of return value of function load_user_topics()" source="ApiGen.Documentation.Documentation"/>
-		<error severity="error" line="2954" message="Missing documentation of return value of function getMemberGeneralPermissions()" source="ApiGen.Documentation.Documentation"/>
-		<error severity="error" line="3017" message="Missing documentation of return value of function getMemberBoardPermissions()" source="ApiGen.Documentation.Documentation"/>
-		<error severity="error" line="3085" message="Missing documentation of return value of function getMembersIPs()" source="ApiGen.Documentation.Documentation"/>
-		<error severity="error" line="3162" message="Missing documentation of return value of function getMembersInRange()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="1740" message="Missing documentation of return value of function profileLoadGroups()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="1798" message="Missing documentation of return value of function profileLoadLanguages()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="1838" message="Missing documentation of return value of function profileValidateSignature()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="2327" message="Missing documentation of return value of function profileSaveGroups()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="2429" message="Missing documentation of return value of function list_getUserWarnings()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="2479" message="Missing documentation of return value of function list_getUserWarningCount()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="2505" message="Missing documentation of return value of function profileLoadAttachments()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="2582" message="Missing documentation of return value of function getNumAttachments()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="2622" message="Missing documentation of return value of function getUnwatchedBy()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="2684" message="Missing documentation of return value of function getNumUnwatchedBy()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="2786" message="Missing documentation of return value of function findMinMaxUserMessage()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="2821" message="Missing documentation of return value of function findMinMaxUserTopic()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="2856" message="Missing documentation of return value of function load_user_posts()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="2921" message="Missing documentation of return value of function load_user_topics()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="2986" message="Missing documentation of return value of function getMemberGeneralPermissions()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="3049" message="Missing documentation of return value of function getMemberBoardPermissions()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="3117" message="Missing documentation of return value of function getMembersIPs()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="3194" message="Missing documentation of return value of function getMembersInRange()" source="ApiGen.Documentation.Documentation"/>
 	</file>
 	<file name="C:\wamp\www\ElkMaster\sources\subs\Recent.subs.php">
 		<error severity="error" line="101" message="Missing documentation of return value of function cache_getLastPosts()" source="ApiGen.Documentation.Documentation"/>
@@ -982,13 +983,13 @@
 		<error severity="error" line="807" message="Missing documentation of return value of method Scheduled_Task::weekly_digest()" source="ApiGen.Documentation.Documentation"/>
 		<error severity="error" line="834" message="Missing documentation of return value of method Scheduled_Task::birthdayemails()" source="ApiGen.Documentation.Documentation"/>
 		<error severity="error" line="918" message="Missing documentation of return value of method Scheduled_Task::weekly_maintenance()" source="ApiGen.Documentation.Documentation"/>
-		<error severity="error" line="1123" message="Missing documentation of return value of method Scheduled_Task::paid_subscriptions()" source="ApiGen.Documentation.Documentation"/>
-		<error severity="error" line="1212" message="Missing documentation of return value of method Scheduled_Task::remove_temp_attachments()" source="ApiGen.Documentation.Documentation"/>
-		<error severity="error" line="1257" message="Missing documentation of return value of method Scheduled_Task::remove_topic_redirect()" source="ApiGen.Documentation.Documentation"/>
-		<error severity="error" line="1297" message="Missing documentation of return value of method Scheduled_Task::remove_old_drafts()" source="ApiGen.Documentation.Documentation"/>
-		<error severity="error" line="1338" message="Missing documentation of return value of method Scheduled_Task::maillist_fetch_IMAP()" source="ApiGen.Documentation.Documentation"/>
-		<error severity="error" line="1351" message="Missing documentation of return value of method Scheduled_Task::remove_old_followups()" source="ApiGen.Documentation.Documentation"/>
-		<error severity="error" line="1388" message="Missing documentation of return value of method Scheduled_Task::user_access_mentions()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="1121" message="Missing documentation of return value of method Scheduled_Task::paid_subscriptions()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="1210" message="Missing documentation of return value of method Scheduled_Task::remove_temp_attachments()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="1255" message="Missing documentation of return value of method Scheduled_Task::remove_topic_redirect()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="1295" message="Missing documentation of return value of method Scheduled_Task::remove_old_drafts()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="1336" message="Missing documentation of return value of method Scheduled_Task::maillist_fetch_IMAP()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="1349" message="Missing documentation of return value of method Scheduled_Task::remove_old_followups()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="1386" message="Missing documentation of return value of method Scheduled_Task::user_access_mentions()" source="ApiGen.Documentation.Documentation"/>
 	</file>
 	<file name="C:\wamp\www\ElkMaster\sources\subs\Search.subs.php">
 		<error severity="error" line="33" message="Missing documentation of return value of function findSearchAPI()" source="ApiGen.Documentation.Documentation"/>
@@ -1020,7 +1021,7 @@
 		<error severity="error" line="579" message="Missing documentation of return value of function spidersStatsDates()" source="ApiGen.Documentation.Documentation"/>
 	</file>
 	<file name="C:\wamp\www\ElkMaster\sources\subs\SettingsForm.class.php">
-		<error severity="error" line="748" message="Missing documentation of return value of method Settings_Form::settings()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="774" message="Missing documentation of return value of method Settings_Form::settings()" source="ApiGen.Documentation.Documentation"/>
 	</file>
 	<file name="C:\wamp\www\ElkMaster\sources\subs\Smileys.subs.php">
 		<error severity="error" line="78" message="Missing documentation of return value of function nextSmileyLocation()" source="ApiGen.Documentation.Documentation"/>
@@ -1083,8 +1084,8 @@
 		<error severity="error" line="290" message="Missing documentation of return value of function loadThemesAffected()" source="ApiGen.Documentation.Documentation"/>
 		<error severity="error" line="316" message="Missing documentation of return value of function get_file_listing()" source="ApiGen.Documentation.Documentation"/>
 		<error severity="error" line="418" message="Missing documentation of return value of function availableThemes()" source="ApiGen.Documentation.Documentation"/>
-		<error severity="error" line="860" message="Missing documentation of return value of function loadThemeOptionsInto()" source="ApiGen.Documentation.Documentation"/>
-		<error severity="error" line="900" message="Missing documentation of return value of function loadBasedOnTheme()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="862" message="Missing documentation of return value of function loadThemeOptionsInto()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="902" message="Missing documentation of return value of function loadBasedOnTheme()" source="ApiGen.Documentation.Documentation"/>
 	</file>
 	<file name="C:\wamp\www\ElkMaster\sources\subs\Topic.subs.php">
 		<error severity="error" line="715" message="Missing documentation of return value of function moveTopicConcurrence()" source="ApiGen.Documentation.Documentation"/>
@@ -1101,7 +1102,8 @@
 		<error severity="error" line="1832" message="Missing documentation of return value of function toggleTopicSticky()" source="ApiGen.Documentation.Documentation"/>
 		<error severity="error" line="1886" message="Missing documentation of return value of function topicsList()" source="ApiGen.Documentation.Documentation"/>
 		<error severity="error" line="2041" message="Missing documentation of return value of function approveTopics()" source="ApiGen.Documentation.Documentation"/>
-		<error severity="error" line="2600" message="Missing documentation of return value of function postersCount()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="2462" message="Missing documentation of parameter splitDestinationBoard($toboard)" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="2591" message="Missing documentation of return value of function postersCount()" source="ApiGen.Documentation.Documentation"/>
 	</file>
 	<file name="C:\wamp\www\ElkMaster\sources\subs\Util.class.php">
 		<error severity="error" line="23" message="Missing documentation of property Util::$_entity_check_reg" source="ApiGen.Documentation.Documentation"/>
@@ -1172,9 +1174,9 @@
 		<error severity="error" line="1535" message="Missing documentation of return value of function ssi_todaysEvents()" source="ApiGen.Documentation.Documentation"/>
 		<error severity="error" line="1566" message="Missing documentation of return value of function ssi_todaysCalendar()" source="ApiGen.Documentation.Documentation"/>
 		<error severity="error" line="1619" message="Missing documentation of return value of function ssi_boardNews()" source="ApiGen.Documentation.Documentation"/>
-		<error severity="error" line="1771" message="Missing documentation of return value of function ssi_recentEvents()" source="ApiGen.Documentation.Documentation"/>
-		<error severity="error" line="1828" message="Missing documentation of return value of function ssi_checkPassword()" source="ApiGen.Documentation.Documentation"/>
-		<error severity="error" line="1849" message="Missing documentation of return value of function ssi_recentAttachments()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="1772" message="Missing documentation of return value of function ssi_recentEvents()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="1829" message="Missing documentation of return value of function ssi_checkPassword()" source="ApiGen.Documentation.Documentation"/>
+		<error severity="error" line="1850" message="Missing documentation of return value of function ssi_recentAttachments()" source="ApiGen.Documentation.Documentation"/>
 	</file>
 	<file name="C:\wamp\www\ElkMaster\ssi_examples.php">
 		<error severity="error" line="490" message="Missing description of function template_ssi_above()" source="ApiGen.Documentation.Documentation"/>
