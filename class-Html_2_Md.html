@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>Class Html_2_Md | ElkArte 1.0.5 Documentation</title>
+	<title>Class Html_2_Md | ElkArte 1.0.7 Documentation</title>
 
 	<link rel="stylesheet" href="resources/bootstrap.min.css?973e37a8502921d56bc02bb55321f45b072b6f71">
 	<link rel="stylesheet" href="resources/style.css?70c1d062672daa3f906b72e4f5d03d4bc5c4174d">
@@ -14,7 +14,7 @@
 	<nav id="navigation" class="navbar navbar-default navbar-fixed-top">
 		<div class="container-fluid">
 			<div class="navbar-header">
-				<a href="index.html" class="navbar-brand">ElkArte 1.0.5 Documentation</a>
+				<a href="index.html" class="navbar-brand">ElkArte 1.0.7 Documentation</a>
 			</div>
 			<div class="collapse navbar-collapse">
 
@@ -362,6 +362,7 @@
 				<li><a href="function-call_integration_hook.html">call_integration_hook</a></li>
 				<li><a href="function-call_integration_include_hook.html">call_integration_include_hook</a></li>
 				<li><a href="function-callMenu.html">callMenu</a></li>
+				<li><a href="function-can_see_button_strip.html">can_see_button_strip</a></li>
 				<li><a href="function-canAccessMessage.html">canAccessMessage</a></li>
 				<li><a href="function-categoryName.html">categoryName</a></li>
 				<li><a href="function-cdata_parse.html">cdata_parse</a></li>
@@ -943,7 +944,7 @@
 				ElkArte Forum contributors<br>
 				<b>License:</b>
 				<a href="BSD">http://opensource.org/licenses/BSD-3-Clause</a><br>
-			<b>Located at</b> <a href="source-class-Html_2_Md.html#17-978" title="Go to source code">sources/subs/Html2Md.class.php</a>
+			<b>Located at</b> <a href="source-class-Html_2_Md.html#17-1023" title="Go to source code">sources/subs/Html2Md.class.php</a>
 		<br>
 	</div>
 
@@ -963,7 +964,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#___construct">#</a>
-			<code><a href="source-class-Html_2_Md.html#64-118" title="Go to source code">__construct</a>( <span>string <var>$html</var></span> )</code>
+			<code><a href="source-class-Html_2_Md.html#76-114" title="Go to source code">__construct</a>( <span>string <var>$html</var></span> )</code>
 
 			<div class="description short">
 				<p>Gets everything started using the built in or external parser</p>
@@ -986,6 +987,35 @@
 			</div>
 			</div></td>
 		</tr>
+		<tr data-order="_set_parser" id="__set_parser">
+
+			<td class="attributes"><code>
+				 private 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#__set_parser">#</a>
+			<code><a href="source-class-Html_2_Md.html#116-144" title="Go to source code">_set_parser</a>( )</code>
+
+			<div class="description short">
+				<p>Set the DOM parser for class, loads the supplied HTML</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Set the DOM parser for class, loads the supplied HTML</p>
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
 		<tr data-order="get_markdown" id="_get_markdown">
 
 			<td class="attributes"><code>
@@ -997,7 +1027,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_get_markdown">#</a>
-			<code><a href="source-class-Html_2_Md.html#120-165" title="Go to source code">get_markdown</a>( )</code>
+			<code><a href="source-class-Html_2_Md.html#146-182" title="Go to source code">get_markdown</a>( )</code>
 
 			<div class="description short">
 				<p>Loads the html body and sends it to the parsing loop to convert all
@@ -1007,6 +1037,35 @@ DOM nodes to markup</p>
 			<div class="description detailed hidden">
 				<p>Loads the html body and sends it to the parsing loop to convert all
 DOM nodes to markup</p>
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="_clean_markdown" id="__clean_markdown">
+
+			<td class="attributes"><code>
+				 private 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#__clean_markdown">#</a>
+			<code><a href="source-class-Html_2_Md.html#184-209" title="Go to source code">_clean_markdown</a>( )</code>
+
+			<div class="description short">
+				<p>Normalize any spacing and excess blank lines that may have been generated</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Normalize any spacing and excess blank lines that may have been generated</p>
 
 
 
@@ -1028,7 +1087,7 @@ DOM nodes to markup</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#__has_parent_code">#</a>
-			<code><a href="source-class-Html_2_Md.html#167-192" title="Go to source code">_has_parent_code</a>( <span>object <var>$node</var></span>, <span>boolean <var>$parser</var></span> )</code>
+			<code><a href="source-class-Html_2_Md.html#211-236" title="Go to source code">_has_parent_code</a>( <span>object <var>$node</var></span>, <span>boolean <var>$parser</var></span> )</code>
 
 			<div class="description short">
 				<p>For a given node, checks if it is anywhere nested inside of a code block
@@ -1065,7 +1124,7 @@ DOM nodes to markup</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#__has_parent_list">#</a>
-			<code><a href="source-class-Html_2_Md.html#194-218" title="Go to source code">_has_parent_list</a>( <span>object <var>$node</var></span>, <span>boolean <var>$parser</var></span> )</code>
+			<code><a href="source-class-Html_2_Md.html#238-262" title="Go to source code">_has_parent_list</a>( <span>object <var>$node</var></span>, <span>boolean <var>$parser</var></span> )</code>
 
 			<div class="description short">
 				<p>Get the nesting level when inside a list</p>
@@ -1101,7 +1160,7 @@ DOM nodes to markup</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#__convert_childNodes">#</a>
-			<code><a href="source-class-Html_2_Md.html#220-243" title="Go to source code">_convert_childNodes</a>( <span>object <var>$node</var></span> )</code>
+			<code><a href="source-class-Html_2_Md.html#264-287" title="Go to source code">_convert_childNodes</a>( <span>object <var>$node</var></span> )</code>
 
 			<div class="description short">
 				<p>Traverse each node to its base, then convert tags to markup on the way back out</p>
@@ -1135,7 +1194,7 @@ DOM nodes to markup</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#__convert_to_markdown">#</a>
-			<code><a href="source-class-Html_2_Md.html#245-373" title="Go to source code">_convert_to_markdown</a>( <span>object <var>$node</var></span> )</code>
+			<code><a href="source-class-Html_2_Md.html#289-418" title="Go to source code">_convert_to_markdown</a>( <span>object <var>$node</var></span> )</code>
 
 			<div class="description short">
 				<p>Convert the supplied node into its markdown equivalent
@@ -1170,7 +1229,7 @@ DOM nodes to markup</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#__convert_abbr">#</a>
-			<code><a href="source-class-Html_2_Md.html#375-394" title="Go to source code">_convert_abbr</a>( <span>object <var>$node</var></span> )</code>
+			<code><a href="source-class-Html_2_Md.html#420-439" title="Go to source code">_convert_abbr</a>( <span>object <var>$node</var></span> )</code>
 
 			<div class="description short">
 				<p>Converts <abbr> tags to markdown (extra)</p>
@@ -1207,7 +1266,7 @@ md:   *[HTML]: Hyper Text Markup Language</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#__convert_anchor">#</a>
-			<code><a href="source-class-Html_2_Md.html#396-432" title="Go to source code">_convert_anchor</a>( <span>object <var>$node</var></span> )</code>
+			<code><a href="source-class-Html_2_Md.html#441-477" title="Go to source code">_convert_anchor</a>( <span>object <var>$node</var></span> )</code>
 
 			<div class="description short">
 				<p>Converts <a> tags to markdown</p>
@@ -1248,7 +1307,7 @@ md: <a href="http://somesite.com" title="Title">Awesome Site</a></p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#__convert_blockquote">#</a>
-			<code><a href="source-class-Html_2_Md.html#434-459" title="Go to source code">_convert_blockquote</a>( <span>object <var>$node</var></span> )</code>
+			<code><a href="source-class-Html_2_Md.html#479-504" title="Go to source code">_convert_blockquote</a>( <span>object <var>$node</var></span> )</code>
 
 			<div class="description short">
 				<p>Converts blockquotes to markdown > quote style</p>
@@ -1288,7 +1347,7 @@ md: <a href="http://somesite.com" title="Title">Awesome Site</a></p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#__convert_code">#</a>
-			<code><a href="source-class-Html_2_Md.html#461-534" title="Go to source code">_convert_code</a>( <span>object <var>$node</var></span> )</code>
+			<code><a href="source-class-Html_2_Md.html#506-579" title="Go to source code">_convert_code</a>( <span>object <var>$node</var></span> )</code>
 
 			<div class="description short">
 				<p>Converts code tags to markdown span <code>code</code> or block code
@@ -1332,7 +1391,7 @@ Converts multi line to 4 space indented code</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#__convert_header">#</a>
-			<code><a href="source-class-Html_2_Md.html#536-564" title="Go to source code">_convert_header</a>( <span>integer <var>$level</var></span>, <span>string <var>$content</var></span> )</code>
+			<code><a href="source-class-Html_2_Md.html#581-609" title="Go to source code">_convert_header</a>( <span>integer <var>$level</var></span>, <span>string <var>$content</var></span> )</code>
 
 			<div class="description short">
 				<p>Converts</p>
@@ -1398,7 +1457,7 @@ all other headers are returned as atx style ### h3</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#__convert_image">#</a>
-			<code><a href="source-class-Html_2_Md.html#566-586" title="Go to source code">_convert_image</a>( <span>object <var>$node</var></span> )</code>
+			<code><a href="source-class-Html_2_Md.html#611-631" title="Go to source code">_convert_image</a>( <span>object <var>$node</var></span> )</code>
 
 			<div class="description short">
 				<p>Converts <img> tags to markdown</p>
@@ -1435,7 +1494,7 @@ md: <img src="source" alt="alt" title="title" /></p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#__convert_list">#</a>
-			<code><a href="source-class-Html_2_Md.html#588-615" title="Go to source code">_convert_list</a>( <span>object <var>$node</var></span> )</code>
+			<code><a href="source-class-Html_2_Md.html#633-660" title="Go to source code">_convert_list</a>( <span>object <var>$node</var></span> )</code>
 
 			<div class="description short">
 				<p>Converts ordered</p>
@@ -1491,7 +1550,7 @@ md: <img src="source" alt="alt" title="title" /></p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#__convert_table">#</a>
-			<code><a href="source-class-Html_2_Md.html#617-713" title="Go to source code">_convert_table</a>( <span>object <var>$node</var></span> )</code>
+			<code><a href="source-class-Html_2_Md.html#662-758" title="Go to source code">_convert_table</a>( <span>object <var>$node</var></span> )</code>
 
 			<div class="description short">
 				<p>Converts tables tags to markdown extra table syntax</p>
@@ -1529,7 +1588,7 @@ md: <img src="source" alt="alt" title="title" /></p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#__get_item">#</a>
-			<code><a href="source-class-Html_2_Md.html#715-727" title="Go to source code">_get_item</a>( <span>object <var>$node</var></span>, <span>integer <var>$item</var></span> )</code>
+			<code><a href="source-class-Html_2_Md.html#760-772" title="Go to source code">_get_item</a>( <span>object <var>$node</var></span>, <span>integer <var>$item</var></span> )</code>
 
 			<div class="description short">
 				<p>Helper function for getting a node object</p>
@@ -1565,7 +1624,7 @@ md: <img src="source" alt="alt" title="title" /></p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#__get_length">#</a>
-			<code><a href="source-class-Html_2_Md.html#729-740" title="Go to source code">_get_length</a>( <span>object <var>$node</var></span> )</code>
+			<code><a href="source-class-Html_2_Md.html#774-785" title="Go to source code">_get_length</a>( <span>object <var>$node</var></span> )</code>
 
 			<div class="description short">
 				<p>Helper function for getting a node length</p>
@@ -1599,7 +1658,7 @@ md: <img src="source" alt="alt" title="title" /></p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#__get_value">#</a>
-			<code><a href="source-class-Html_2_Md.html#742-756" title="Go to source code">_get_value</a>( <span>object <var>$node</var></span> )</code>
+			<code><a href="source-class-Html_2_Md.html#787-801" title="Go to source code">_get_value</a>( <span>object <var>$node</var></span> )</code>
 
 			<div class="description short">
 				<p>Helper function for getting a node value</p>
@@ -1633,7 +1692,7 @@ md: <img src="source" alt="alt" title="title" /></p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#__get_name">#</a>
-			<code><a href="source-class-Html_2_Md.html#758-772" title="Go to source code">_get_name</a>( <span>object <var>$node</var></span> )</code>
+			<code><a href="source-class-Html_2_Md.html#803-817" title="Go to source code">_get_name</a>( <span>object <var>$node</var></span> )</code>
 
 			<div class="description short">
 				<p>Helper function for getting a node name</p>
@@ -1667,7 +1726,7 @@ md: <img src="source" alt="alt" title="title" /></p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#__get_list_position">#</a>
-			<code><a href="source-class-Html_2_Md.html#774-798" title="Go to source code">_get_list_position</a>( <span>object <var>$node</var></span> )</code>
+			<code><a href="source-class-Html_2_Md.html#819-843" title="Go to source code">_get_list_position</a>( <span>object <var>$node</var></span> )</code>
 
 			<div class="description short">
 				<p>Helper function for creating ol's</p>
@@ -1709,7 +1768,7 @@ md: <img src="source" alt="alt" title="title" /></p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#__align_row_content">#</a>
-			<code><a href="source-class-Html_2_Md.html#800-830" title="Go to source code">_align_row_content</a>( <span>string <var>$align</var></span>, <span>integer <var>$width</var></span>, <span>string <var>$content</var></span>, <span>integer <var>$max</var></span> )</code>
+			<code><a href="source-class-Html_2_Md.html#845-875" title="Go to source code">_align_row_content</a>( <span>string <var>$align</var></span>, <span>integer <var>$width</var></span>, <span>string <var>$content</var></span>, <span>integer <var>$max</var></span> )</code>
 
 			<div class="description short">
 				<p>Helper function for table creation</p>
@@ -1753,7 +1812,7 @@ md: <img src="source" alt="alt" title="title" /></p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#__get_innerHTML">#</a>
-			<code><a href="source-class-Html_2_Md.html#832-850" title="Go to source code">_get_innerHTML</a>( <span>object <var>$node</var></span> )</code>
+			<code><a href="source-class-Html_2_Md.html#877-895" title="Go to source code">_get_innerHTML</a>( <span>object <var>$node</var></span> )</code>
 
 			<div class="description short">
 				<p>Gets the inner html of a node</p>
@@ -1787,7 +1846,7 @@ md: <img src="source" alt="alt" title="title" /></p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#__get_outerHTML">#</a>
-			<code><a href="source-class-Html_2_Md.html#852-883" title="Go to source code">_get_outerHTML</a>( <span>object <var>$node</var></span> )</code>
+			<code><a href="source-class-Html_2_Md.html#897-928" title="Go to source code">_get_outerHTML</a>( <span>object <var>$node</var></span> )</code>
 
 			<div class="description short">
 				<p>Gets the outer html of a node</p>
@@ -1821,7 +1880,7 @@ md: <img src="source" alt="alt" title="title" /></p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#__escape_text">#</a>
-			<code><a href="source-class-Html_2_Md.html#885-900" title="Go to source code">_escape_text</a>( <span>string <var>$value</var></span> )</code>
+			<code><a href="source-class-Html_2_Md.html#930-945" title="Go to source code">_escape_text</a>( <span>string <var>$value</var></span> )</code>
 
 			<div class="description short">
 				<p>Escapes markup looking text in html to prevent accidental assignment</p>
@@ -1860,7 +1919,7 @@ be converted by md to html as <strong>stuff</strong></p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#__has_ticks">#</a>
-			<code><a href="source-class-Html_2_Md.html#902-937" title="Go to source code">_has_ticks</a>( <span>object <var>$node</var></span>, <span>string <var>$value</var></span> )</code>
+			<code><a href="source-class-Html_2_Md.html#947-982" title="Go to source code">_has_ticks</a>( <span>object <var>$node</var></span>, <span>string <var>$value</var></span> )</code>
 
 			<div class="description short">
 				<p>If inline code contains backticks <code>as part of its content, we need to wrap them so
@@ -1898,7 +1957,7 @@ when markdown is run we don't interpret the</code> as additional code blocks</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#__utf8_wordwrap">#</a>
-			<code><a href="source-class-Html_2_Md.html#939-977" title="Go to source code">_utf8_wordwrap</a>( <span>string <var>$string</var></span>, <span>integer <var>$width</var> = <span class="php-num">75</span></span>, <span>string <var>$break</var> = <span class="php-quote">&quot;\n&quot;</span></span> )</code>
+			<code><a href="source-class-Html_2_Md.html#984-1022" title="Go to source code">_utf8_wordwrap</a>( <span>string <var>$string</var></span>, <span>integer <var>$width</var> = <span class="php-num">75</span></span>, <span>string <var>$break</var> = <span class="php-quote">&quot;\n&quot;</span></span> )</code>
 
 			<div class="description short">
 				<p>Breaks a string up so its no more than width characters long</p>
@@ -2121,6 +2180,56 @@ when markdown is run we don't interpret the</code> as additional code blocks</p>
 				</div>
 			</td>
 		</tr>
+		<tr data-order="html" id="$html">
+			<td class="attributes"><code>
+				public  
+				string
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-Html_2_Md.html#64-68" title="Go to source code"><var>$html</var></a>
+
+				<div class="description short">
+					<p>The passed html string to convert</p>
+				</div>
+
+				<div class="description detailed hidden">
+					<p>The passed html string to convert</p>
+
+				</div>
+			</td>
+			<td class="value">
+				<div>
+					<a href="#$html" class="anchor">#</a>
+					<code></code>
+				</div>
+			</td>
+		</tr>
+		<tr data-order="markdown" id="$markdown">
+			<td class="attributes"><code>
+				public  
+				string
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-Html_2_Md.html#70-74" title="Go to source code"><var>$markdown</var></a>
+
+				<div class="description short">
+					<p>The markdown equivalent to the  html string</p>
+				</div>
+
+				<div class="description detailed hidden">
+					<p>The markdown equivalent to the  html string</p>
+
+				</div>
+			</td>
+			<td class="value">
+				<div>
+					<a href="#$markdown" class="anchor">#</a>
+					<code></code>
+				</div>
+			</td>
+		</tr>
 			</table>
 		</div>
 
@@ -2133,7 +2242,7 @@ when markdown is run we don't interpret the</code> as additional code blocks</p>
 	</div>
 
 	<div id="footer">
-		ElkArte 1.0.5 Documentation API documentation generated by <a href="http://apigen.org">ApiGen</a>
+		ElkArte 1.0.7 Documentation API documentation generated by <a href="http://apigen.org">ApiGen</a>
 	</div>
 </div>
 <script src="resources/combined.js"></script>

@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<meta name="robots" content="noindex">
 
-	<title>File sources/subs/Mail.subs.php | ElkArte 1.0.5 Documentation</title>
+	<title>File sources/subs/Mail.subs.php | ElkArte 1.0.7 Documentation</title>
 
 	<link rel="stylesheet" href="resources/bootstrap.min.css?973e37a8502921d56bc02bb55321f45b072b6f71">
 	<link rel="stylesheet" href="resources/style.css?70c1d062672daa3f906b72e4f5d03d4bc5c4174d">
@@ -15,7 +15,7 @@
 	<nav id="navigation" class="navbar navbar-default navbar-fixed-top">
 		<div class="container-fluid">
 			<div class="navbar-header">
-				<a href="index.html" class="navbar-brand">ElkArte 1.0.5 Documentation</a>
+				<a href="index.html" class="navbar-brand">ElkArte 1.0.7 Documentation</a>
 			</div>
 			<div class="collapse navbar-collapse">
 
@@ -470,6 +470,7 @@
 				<li><a href="function-call_integration_hook.html">call_integration_hook</a></li>
 				<li><a href="function-call_integration_include_hook.html">call_integration_include_hook</a></li>
 				<li><a href="function-callMenu.html">callMenu</a></li>
+				<li><a href="function-can_see_button_strip.html">can_see_button_strip</a></li>
 				<li><a href="function-canAccessMessage.html">canAccessMessage</a></li>
 				<li><a href="function-canContact.html">canContact</a></li>
 				<li><a href="function-canLinkEvent.html">canLinkEvent</a></li>
@@ -1552,7 +1553,7 @@
 </span></span><span id="14" class="l"><span class="php-comment"> * copyright:   2011 Simple Machines (http://www.simplemachines.org)
 </span></span><span id="15" class="l"><span class="php-comment"> * license:     BSD, See included LICENSE.TXT for terms and conditions.
 </span></span><span id="16" class="l"><span class="php-comment"> *
-</span></span><span id="17" class="l"><span class="php-comment"> * @version 1.0.3
+</span></span><span id="17" class="l"><span class="php-comment"> * @version 1.0.7
 </span></span><span id="18" class="l"><span class="php-comment"> *
 </span></span><span id="19" class="l"><span class="php-comment"> */</span>
 </span><span id="20" class="l">
@@ -2849,24 +2850,24 @@
 </span><span id="1311" class="l">        <span class="php-keyword1">if</span> (<span class="php-var">$use_sendmail</span>)
 </span><span id="1312" class="l">        {
 </span><span id="1313" class="l">            <span class="php-var">$email</span>[<span class="php-quote">'subject'</span>] = <span class="php-keyword2">strtr</span>(<span class="php-var">$email</span>[<span class="php-quote">'subject'</span>], <span class="php-keyword1">array</span>(<span class="php-quote">&quot;\r&quot;</span> =&gt; <span class="php-quote">''</span>, <span class="php-quote">&quot;\n&quot;</span> =&gt; <span class="php-quote">''</span>));
-</span><span id="1314" class="l">
-</span><span id="1315" class="l">            <span class="php-keyword1">if</span> (!<span class="php-keyword1">empty</span>(<span class="php-var">$modSettings</span>[<span class="php-quote">'mail_strip_carriage'</span>]))
-</span><span id="1316" class="l">            {
-</span><span id="1317" class="l">                <span class="php-var">$email</span>[<span class="php-quote">'body'</span>] = <span class="php-keyword2">strtr</span>(<span class="php-var">$email</span>[<span class="php-quote">'body'</span>], <span class="php-keyword1">array</span>(<span class="php-quote">&quot;\r&quot;</span> =&gt; <span class="php-quote">''</span>));
-</span><span id="1318" class="l">                <span class="php-var">$email</span>[<span class="php-quote">'headers'</span>] = <span class="php-keyword2">strtr</span>(<span class="php-var">$email</span>[<span class="php-quote">'headers'</span>], <span class="php-keyword1">array</span>(<span class="php-quote">&quot;\r&quot;</span> =&gt; <span class="php-quote">''</span>));
-</span><span id="1319" class="l">            }
-</span><span id="1320" class="l">
-</span><span id="1321" class="l">            <span class="php-var">$need_break</span> = <span class="php-keyword2">substr</span>(<span class="php-var">$email</span>[<span class="php-quote">'headers'</span>], -<span class="php-num">1</span>) === <span class="php-quote">&quot;\n&quot;</span> || <span class="php-keyword2">substr</span>(<span class="php-var">$email</span>[<span class="php-quote">'headers'</span>], -<span class="php-num">1</span>) === <span class="php-quote">&quot;\r&quot;</span> ? <span class="php-keyword1">false</span> : <span class="php-keyword1">true</span>;
-</span><span id="1322" class="l">
-</span><span id="1323" class="l">            <span class="php-comment">// Create our unique reply to email header if this message needs one</span>
-</span><span id="1324" class="l">            <span class="php-var">$unq_id</span> = <span class="php-quote">''</span>;
-</span><span id="1325" class="l">            <span class="php-var">$unq_head</span> = <span class="php-quote">''</span>;
-</span><span id="1326" class="l">            <span class="php-keyword1">if</span> (!<span class="php-keyword1">empty</span>(<span class="php-var">$modSettings</span>[<span class="php-quote">'maillist_enabled'</span>]) &amp;&amp; <span class="php-var">$email</span>[<span class="php-quote">'message_id'</span>] !== <span class="php-keyword1">null</span> &amp;&amp; <span class="php-keyword2">strpos</span>(<span class="php-var">$email</span>[<span class="php-quote">'headers'</span>], <span class="php-quote">'List-Id: &lt;'</span>) !== <span class="php-keyword1">false</span>)
-</span><span id="1327" class="l">            {
-</span><span id="1328" class="l">                <span class="php-var">$unq_head</span> = <span class="php-keyword2">md5</span>(<span class="php-var">$scripturl</span> . <span class="php-keyword2">microtime</span>() . <span class="php-keyword2">rand</span>()) . <span class="php-quote">'-'</span> . <span class="php-var">$email</span>[<span class="php-quote">'message_id'</span>];
-</span><span id="1329" class="l">                <span class="php-var">$encoded_unq_head</span> = <span class="php-keyword2">base64_encode</span>(<span class="php-var">$line_break</span> . <span class="php-var">$line_break</span> . <span class="php-quote">'['</span> . <span class="php-var">$unq_head</span> . <span class="php-quote">']'</span> . <span class="php-var">$line_break</span>);
-</span><span id="1330" class="l">                <span class="php-var">$unq_id</span> = (<span class="php-var">$need_break</span> ? <span class="php-var">$line_break</span> : <span class="php-quote">''</span>) . <span class="php-quote">'Message-ID: &lt;'</span> . <span class="php-var">$unq_head</span> . <span class="php-keyword2">strstr</span>(<span class="php-keyword1">empty</span>(<span class="php-var">$modSettings</span>[<span class="php-quote">'maillist_mail_from'</span>]) ? <span class="php-var">$webmaster_email</span> : <span class="php-var">$modSettings</span>[<span class="php-quote">'maillist_mail_from'</span>], <span class="php-quote">'@'</span>) . <span class="php-quote">'&gt;'</span>;
-</span><span id="1331" class="l">                <span class="php-var">$email</span>[<span class="php-quote">'body_fail'</span>] = <span class="php-var">$email</span>[<span class="php-quote">'body'</span>];
+</span><span id="1314" class="l">            <span class="php-var">$email</span>[<span class="php-quote">'body_fail'</span>] = <span class="php-var">$email</span>[<span class="php-quote">'body'</span>];
+</span><span id="1315" class="l">
+</span><span id="1316" class="l">            <span class="php-keyword1">if</span> (!<span class="php-keyword1">empty</span>(<span class="php-var">$modSettings</span>[<span class="php-quote">'mail_strip_carriage'</span>]))
+</span><span id="1317" class="l">            {
+</span><span id="1318" class="l">                <span class="php-var">$email</span>[<span class="php-quote">'body'</span>] = <span class="php-keyword2">strtr</span>(<span class="php-var">$email</span>[<span class="php-quote">'body'</span>], <span class="php-keyword1">array</span>(<span class="php-quote">&quot;\r&quot;</span> =&gt; <span class="php-quote">''</span>));
+</span><span id="1319" class="l">                <span class="php-var">$email</span>[<span class="php-quote">'headers'</span>] = <span class="php-keyword2">strtr</span>(<span class="php-var">$email</span>[<span class="php-quote">'headers'</span>], <span class="php-keyword1">array</span>(<span class="php-quote">&quot;\r&quot;</span> =&gt; <span class="php-quote">''</span>));
+</span><span id="1320" class="l">            }
+</span><span id="1321" class="l">
+</span><span id="1322" class="l">            <span class="php-var">$need_break</span> = <span class="php-keyword2">substr</span>(<span class="php-var">$email</span>[<span class="php-quote">'headers'</span>], -<span class="php-num">1</span>) === <span class="php-quote">&quot;\n&quot;</span> || <span class="php-keyword2">substr</span>(<span class="php-var">$email</span>[<span class="php-quote">'headers'</span>], -<span class="php-num">1</span>) === <span class="php-quote">&quot;\r&quot;</span> ? <span class="php-keyword1">false</span> : <span class="php-keyword1">true</span>;
+</span><span id="1323" class="l">
+</span><span id="1324" class="l">            <span class="php-comment">// Create our unique reply to email header if this message needs one</span>
+</span><span id="1325" class="l">            <span class="php-var">$unq_id</span> = <span class="php-quote">''</span>;
+</span><span id="1326" class="l">            <span class="php-var">$unq_head</span> = <span class="php-quote">''</span>;
+</span><span id="1327" class="l">            <span class="php-keyword1">if</span> (!<span class="php-keyword1">empty</span>(<span class="php-var">$modSettings</span>[<span class="php-quote">'maillist_enabled'</span>]) &amp;&amp; <span class="php-var">$email</span>[<span class="php-quote">'message_id'</span>] !== <span class="php-keyword1">null</span> &amp;&amp; <span class="php-keyword2">strpos</span>(<span class="php-var">$email</span>[<span class="php-quote">'headers'</span>], <span class="php-quote">'List-Id: &lt;'</span>) !== <span class="php-keyword1">false</span>)
+</span><span id="1328" class="l">            {
+</span><span id="1329" class="l">                <span class="php-var">$unq_head</span> = <span class="php-keyword2">md5</span>(<span class="php-var">$scripturl</span> . <span class="php-keyword2">microtime</span>() . <span class="php-keyword2">rand</span>()) . <span class="php-quote">'-'</span> . <span class="php-var">$email</span>[<span class="php-quote">'message_id'</span>];
+</span><span id="1330" class="l">                <span class="php-var">$encoded_unq_head</span> = <span class="php-keyword2">base64_encode</span>(<span class="php-var">$line_break</span> . <span class="php-var">$line_break</span> . <span class="php-quote">'['</span> . <span class="php-var">$unq_head</span> . <span class="php-quote">']'</span> . <span class="php-var">$line_break</span>);
+</span><span id="1331" class="l">                <span class="php-var">$unq_id</span> = (<span class="php-var">$need_break</span> ? <span class="php-var">$line_break</span> : <span class="php-quote">''</span>) . <span class="php-quote">'Message-ID: &lt;'</span> . <span class="php-var">$unq_head</span> . <span class="php-keyword2">strstr</span>(<span class="php-keyword1">empty</span>(<span class="php-var">$modSettings</span>[<span class="php-quote">'maillist_mail_from'</span>]) ? <span class="php-var">$webmaster_email</span> : <span class="php-var">$modSettings</span>[<span class="php-quote">'maillist_mail_from'</span>], <span class="php-quote">'@'</span>) . <span class="php-quote">'&gt;'</span>;
 </span><span id="1332" class="l">                <span class="php-var">$email</span>[<span class="php-quote">'body'</span>] = mail_insert_key(<span class="php-var">$email</span>[<span class="php-quote">'body'</span>], <span class="php-var">$unq_head</span>, <span class="php-var">$encoded_unq_head</span>, <span class="php-var">$line_break</span>);
 </span><span id="1333" class="l">            }
 </span><span id="1334" class="l">            <span class="php-keyword1">elseif</span> (<span class="php-var">$email</span>[<span class="php-quote">'message_id'</span>] !== <span class="php-keyword1">null</span> &amp;&amp; <span class="php-keyword1">empty</span>(<span class="php-var">$modSettings</span>[<span class="php-quote">'mail_no_message_id'</span>]))
@@ -2991,10 +2992,10 @@
 	</div>
 
 	<div id="footer">
-		ElkArte 1.0.5 Documentation API documentation generated by <a href="http://apigen.org">ApiGen</a>
+		ElkArte 1.0.7 Documentation API documentation generated by <a href="http://apigen.org">ApiGen</a>
 	</div>
 </div>
 <script src="resources/combined.js?4b00732ce0340a2e67fb74c587c1d96491e067bc"></script>
-<script src="elementlist.js?31ac3c05882d46f2466f71cb6adae7ed8d25df7c"></script>
+<script src="elementlist.js?451d275addfb941a2849699d5d5defa91056a858"></script>
 </body>
 </html>

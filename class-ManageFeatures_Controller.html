@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>Class ManageFeatures_Controller | ElkArte 1.0.5 Documentation</title>
+	<title>Class ManageFeatures_Controller | ElkArte 1.0.7 Documentation</title>
 
 	<link rel="stylesheet" href="resources/bootstrap.min.css?973e37a8502921d56bc02bb55321f45b072b6f71">
 	<link rel="stylesheet" href="resources/style.css?70c1d062672daa3f906b72e4f5d03d4bc5c4174d">
@@ -14,7 +14,7 @@
 	<nav id="navigation" class="navbar navbar-default navbar-fixed-top">
 		<div class="container-fluid">
 			<div class="navbar-header">
-				<a href="index.html" class="navbar-brand">ElkArte 1.0.5 Documentation</a>
+				<a href="index.html" class="navbar-brand">ElkArte 1.0.7 Documentation</a>
 			</div>
 			<div class="collapse navbar-collapse">
 
@@ -362,6 +362,7 @@
 				<li><a href="function-call_integration_hook.html">call_integration_hook</a></li>
 				<li><a href="function-call_integration_include_hook.html">call_integration_include_hook</a></li>
 				<li><a href="function-callMenu.html">callMenu</a></li>
+				<li><a href="function-can_see_button_strip.html">can_see_button_strip</a></li>
 				<li><a href="function-canAccessMessage.html">canAccessMessage</a></li>
 				<li><a href="function-categoryName.html">categoryName</a></li>
 				<li><a href="function-cdata_parse.html">cdata_parse</a></li>
@@ -966,7 +967,7 @@ This software is a derived product, based on:
 Simple Machines Forum (SMF)
 copyright:	2011 Simple Machines (http://www.simplemachines.org)
 license:		BSD, See included LICENSE.TXT for terms and conditions.</a><br>
-			<b>Located at</b> <a href="source-class-ManageFeatures_Controller.html#23-1715" title="Go to source code">sources/admin/ManageFeatures.controller.php</a>
+			<b>Located at</b> <a href="source-class-ManageFeatures_Controller.html#23-1731" title="Go to source code">sources/admin/ManageFeatures.controller.php</a>
 		<br>
 	</div>
 
@@ -1334,7 +1335,7 @@ license:		BSD, See included LICENSE.TXT for terms and conditions.</a><br>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_action_signatureSettings_display">#</a>
-			<code><a href="source-class-ManageFeatures_Controller.html#460-779" title="Go to source code">action_signatureSettings_display</a>( )</code>
+			<code><a href="source-class-ManageFeatures_Controller.html#460-792" title="Go to source code">action_signatureSettings_display</a>( )</code>
 
 			<div class="description short">
 				<p>Display configuration settings for signatures on forum.</p>
@@ -1367,7 +1368,7 @@ license:		BSD, See included LICENSE.TXT for terms and conditions.</a><br>
 
 			<td class="name"><div>
 			<a class="anchor" href="#__initSignatureSettingsForm">#</a>
-			<code><a href="source-class-ManageFeatures_Controller.html#781-796" title="Go to source code">_initSignatureSettingsForm</a>( )</code>
+			<code><a href="source-class-ManageFeatures_Controller.html#794-809" title="Go to source code">_initSignatureSettingsForm</a>( )</code>
 
 			<div class="description short">
 				<p>Initializes signature settings form.</p>
@@ -1396,7 +1397,7 @@ license:		BSD, See included LICENSE.TXT for terms and conditions.</a><br>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_action_profile">#</a>
-			<code><a href="source-class-ManageFeatures_Controller.html#798-1072" title="Go to source code">action_profile</a>( )</code>
+			<code><a href="source-class-ManageFeatures_Controller.html#811-1085" title="Go to source code">action_profile</a>( )</code>
 
 			<div class="description short">
 				<p>Show all the custom profile fields available to the user.</p>
@@ -1434,7 +1435,7 @@ license:		BSD, See included LICENSE.TXT for terms and conditions.</a><br>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_action_profileedit">#</a>
-			<code><a href="source-class-ManageFeatures_Controller.html#1074-1362" title="Go to source code">action_profileedit</a>( )</code>
+			<code><a href="source-class-ManageFeatures_Controller.html#1087-1378" title="Go to source code">action_profileedit</a>( )</code>
 
 			<div class="description short">
 				<p>Edit some profile fields?</p>
@@ -1471,7 +1472,7 @@ license:		BSD, See included LICENSE.TXT for terms and conditions.</a><br>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_action_pmsettings">#</a>
-			<code><a href="source-class-ManageFeatures_Controller.html#1364-1409" title="Go to source code">action_pmsettings</a>( )</code>
+			<code><a href="source-class-ManageFeatures_Controller.html#1380-1425" title="Go to source code">action_pmsettings</a>( )</code>
 
 			<div class="description short">
 				<p>Editing personal messages settings</p>
@@ -1504,7 +1505,7 @@ license:		BSD, See included LICENSE.TXT for terms and conditions.</a><br>
 
 			<td class="name"><div>
 			<a class="anchor" href="#__initPMSettingsForm">#</a>
-			<code><a href="source-class-ManageFeatures_Controller.html#1411-1430" title="Go to source code">_initPMSettingsForm</a>( )</code>
+			<code><a href="source-class-ManageFeatures_Controller.html#1427-1446" title="Go to source code">_initPMSettingsForm</a>( )</code>
 
 			<div class="description short">
 				<p>Initializes the personal messages settings admin page.</p>
@@ -1533,7 +1534,7 @@ license:		BSD, See included LICENSE.TXT for terms and conditions.</a><br>
 
 			<td class="name"><div>
 			<a class="anchor" href="#__basicSettings">#</a>
-			<code><a href="source-class-ManageFeatures_Controller.html#1432-1500" title="Go to source code">_basicSettings</a>( )</code>
+			<code><a href="source-class-ManageFeatures_Controller.html#1448-1516" title="Go to source code">_basicSettings</a>( )</code>
 
 			<div class="description short">
 				<p>Return basic feature settings.</p>
@@ -1562,7 +1563,7 @@ license:		BSD, See included LICENSE.TXT for terms and conditions.</a><br>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_basicSettings_search">#</a>
-			<code><a href="source-class-ManageFeatures_Controller.html#1502-1508" title="Go to source code">basicSettings_search</a>( )</code>
+			<code><a href="source-class-ManageFeatures_Controller.html#1518-1524" title="Go to source code">basicSettings_search</a>( )</code>
 
 			<div class="description short">
 				<p>Public method to return the basic settings, used for admin search</p>
@@ -1591,7 +1592,7 @@ license:		BSD, See included LICENSE.TXT for terms and conditions.</a><br>
 
 			<td class="name"><div>
 			<a class="anchor" href="#__layoutSettings">#</a>
-			<code><a href="source-class-ManageFeatures_Controller.html#1510-1540" title="Go to source code">_layoutSettings</a>( )</code>
+			<code><a href="source-class-ManageFeatures_Controller.html#1526-1556" title="Go to source code">_layoutSettings</a>( )</code>
 
 			<div class="description short">
 				<p>Return layout settings.</p>
@@ -1620,7 +1621,7 @@ license:		BSD, See included LICENSE.TXT for terms and conditions.</a><br>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_layoutSettings_search">#</a>
-			<code><a href="source-class-ManageFeatures_Controller.html#1542-1548" title="Go to source code">layoutSettings_search</a>( )</code>
+			<code><a href="source-class-ManageFeatures_Controller.html#1558-1564" title="Go to source code">layoutSettings_search</a>( )</code>
 
 			<div class="description short">
 				<p>Public method to return the layout settings, used for admin search</p>
@@ -1649,7 +1650,7 @@ license:		BSD, See included LICENSE.TXT for terms and conditions.</a><br>
 
 			<td class="name"><div>
 			<a class="anchor" href="#__karmaSettings">#</a>
-			<code><a href="source-class-ManageFeatures_Controller.html#1550-1576" title="Go to source code">_karmaSettings</a>( )</code>
+			<code><a href="source-class-ManageFeatures_Controller.html#1566-1592" title="Go to source code">_karmaSettings</a>( )</code>
 
 			<div class="description short">
 				<p>Return karma settings.</p>
@@ -1678,7 +1679,7 @@ license:		BSD, See included LICENSE.TXT for terms and conditions.</a><br>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_karmaSettings_search">#</a>
-			<code><a href="source-class-ManageFeatures_Controller.html#1578-1584" title="Go to source code">karmaSettings_search</a>( )</code>
+			<code><a href="source-class-ManageFeatures_Controller.html#1594-1600" title="Go to source code">karmaSettings_search</a>( )</code>
 
 			<div class="description short">
 				<p>Public method to return the karma settings, used for admin search</p>
@@ -1707,7 +1708,7 @@ license:		BSD, See included LICENSE.TXT for terms and conditions.</a><br>
 
 			<td class="name"><div>
 			<a class="anchor" href="#__likesSettings">#</a>
-			<code><a href="source-class-ManageFeatures_Controller.html#1586-1610" title="Go to source code">_likesSettings</a>( )</code>
+			<code><a href="source-class-ManageFeatures_Controller.html#1602-1626" title="Go to source code">_likesSettings</a>( )</code>
 
 			<div class="description short">
 				<p>Return likes settings.</p>
@@ -1736,7 +1737,7 @@ license:		BSD, See included LICENSE.TXT for terms and conditions.</a><br>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_likesSettings_search">#</a>
-			<code><a href="source-class-ManageFeatures_Controller.html#1612-1618" title="Go to source code">likesSettings_search</a>( )</code>
+			<code><a href="source-class-ManageFeatures_Controller.html#1628-1634" title="Go to source code">likesSettings_search</a>( )</code>
 
 			<div class="description short">
 				<p>Public method to return the likes settings, used for admin search</p>
@@ -1765,7 +1766,7 @@ license:		BSD, See included LICENSE.TXT for terms and conditions.</a><br>
 
 			<td class="name"><div>
 			<a class="anchor" href="#__mentionSettings">#</a>
-			<code><a href="source-class-ManageFeatures_Controller.html#1620-1636" title="Go to source code">_mentionSettings</a>( )</code>
+			<code><a href="source-class-ManageFeatures_Controller.html#1636-1652" title="Go to source code">_mentionSettings</a>( )</code>
 
 			<div class="description short">
 				<p>Return mentions settings.</p>
@@ -1794,7 +1795,7 @@ license:		BSD, See included LICENSE.TXT for terms and conditions.</a><br>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_mentionSettings_search">#</a>
-			<code><a href="source-class-ManageFeatures_Controller.html#1638-1644" title="Go to source code">mentionSettings_search</a>( )</code>
+			<code><a href="source-class-ManageFeatures_Controller.html#1654-1660" title="Go to source code">mentionSettings_search</a>( )</code>
 
 			<div class="description short">
 				<p>Public method to return the mention settings, used for admin search</p>
@@ -1823,7 +1824,7 @@ license:		BSD, See included LICENSE.TXT for terms and conditions.</a><br>
 
 			<td class="name"><div>
 			<a class="anchor" href="#__signatureSettings">#</a>
-			<code><a href="source-class-ManageFeatures_Controller.html#1646-1677" title="Go to source code">_signatureSettings</a>( )</code>
+			<code><a href="source-class-ManageFeatures_Controller.html#1662-1693" title="Go to source code">_signatureSettings</a>( )</code>
 
 			<div class="description short">
 				<p>Return signature settings.</p>
@@ -1856,7 +1857,7 @@ license:		BSD, See included LICENSE.TXT for terms and conditions.</a><br>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_signatureSettings_search">#</a>
-			<code><a href="source-class-ManageFeatures_Controller.html#1679-1685" title="Go to source code">signatureSettings_search</a>( )</code>
+			<code><a href="source-class-ManageFeatures_Controller.html#1695-1701" title="Go to source code">signatureSettings_search</a>( )</code>
 
 			<div class="description short">
 				<p>Public method to return the signature settings, used for admin search</p>
@@ -1885,7 +1886,7 @@ license:		BSD, See included LICENSE.TXT for terms and conditions.</a><br>
 
 			<td class="name"><div>
 			<a class="anchor" href="#__pmSettings">#</a>
-			<code><a href="source-class-ManageFeatures_Controller.html#1687-1714" title="Go to source code">_pmSettings</a>( )</code>
+			<code><a href="source-class-ManageFeatures_Controller.html#1703-1730" title="Go to source code">_pmSettings</a>( )</code>
 
 			<div class="description short">
 				<p>Return pm settings.</p>
@@ -2116,7 +2117,7 @@ license:		BSD, See included LICENSE.TXT for terms and conditions.</a><br>
 	</div>
 
 	<div id="footer">
-		ElkArte 1.0.5 Documentation API documentation generated by <a href="http://apigen.org">ApiGen</a>
+		ElkArte 1.0.7 Documentation API documentation generated by <a href="http://apigen.org">ApiGen</a>
 	</div>
 </div>
 <script src="resources/combined.js"></script>

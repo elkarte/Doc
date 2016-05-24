@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<meta name="robots" content="noindex">
 
-	<title>File sources/subs/PersonalMessage.subs.php | ElkArte 1.0.5 Documentation</title>
+	<title>File sources/subs/PersonalMessage.subs.php | ElkArte 1.0.7 Documentation</title>
 
 	<link rel="stylesheet" href="resources/bootstrap.min.css?973e37a8502921d56bc02bb55321f45b072b6f71">
 	<link rel="stylesheet" href="resources/style.css?70c1d062672daa3f906b72e4f5d03d4bc5c4174d">
@@ -15,7 +15,7 @@
 	<nav id="navigation" class="navbar navbar-default navbar-fixed-top">
 		<div class="container-fluid">
 			<div class="navbar-header">
-				<a href="index.html" class="navbar-brand">ElkArte 1.0.5 Documentation</a>
+				<a href="index.html" class="navbar-brand">ElkArte 1.0.7 Documentation</a>
 			</div>
 			<div class="collapse navbar-collapse">
 
@@ -470,6 +470,7 @@
 				<li><a href="function-call_integration_hook.html">call_integration_hook</a></li>
 				<li><a href="function-call_integration_include_hook.html">call_integration_include_hook</a></li>
 				<li><a href="function-callMenu.html">callMenu</a></li>
+				<li><a href="function-can_see_button_strip.html">can_see_button_strip</a></li>
 				<li><a href="function-canAccessMessage.html">canAccessMessage</a></li>
 				<li><a href="function-canContact.html">canContact</a></li>
 				<li><a href="function-canLinkEvent.html">canLinkEvent</a></li>
@@ -1555,7 +1556,7 @@
 </span></span><span id="17" class="l"><span class="php-comment"> * copyright:   2011 Simple Machines (http://www.simplemachines.org)
 </span></span><span id="18" class="l"><span class="php-comment"> * license:     BSD, See included LICENSE.TXT for terms and conditions.
 </span></span><span id="19" class="l"><span class="php-comment"> *
-</span></span><span id="20" class="l"><span class="php-comment"> * @version 1.0.5
+</span></span><span id="20" class="l"><span class="php-comment"> * @version 1.0.6
 </span></span><span id="21" class="l"><span class="php-comment"> *
 </span></span><span id="22" class="l"><span class="php-comment"> */</span>
 </span><span id="23" class="l">
@@ -3417,7 +3418,7 @@
 </span></span><span id="1879" class="l"><span class="php-comment"> */</span>
 </span><span id="1880" class="l"><span class="php-keyword1">function</span> loadPMRecipientInfo(<span class="php-var">$all_pms</span>, &amp;<span class="php-var">$recipients</span>, <span class="php-var">$folder</span> = <span class="php-quote">''</span>, <span class="php-var">$search</span> = <span class="php-keyword1">false</span>)
 </span><span id="1881" class="l">{
-</span><span id="1882" class="l">    <span class="php-keyword1">global</span> <span class="php-var">$txt</span>, <span class="php-var">$user_info</span>, <span class="php-var">$scripturl</span>;
+</span><span id="1882" class="l">    <span class="php-keyword1">global</span> <span class="php-var">$txt</span>, <span class="php-var">$user_info</span>, <span class="php-var">$scripturl</span>, <span class="php-var">$context</span>;
 </span><span id="1883" class="l">
 </span><span id="1884" class="l">    <span class="php-var">$db</span> = database();
 </span><span id="1885" class="l">
@@ -3453,8 +3454,8 @@
 </span><span id="1915" class="l">            <span class="php-var">$row</span>[<span class="php-quote">'labels'</span>] = <span class="php-var">$row</span>[<span class="php-quote">'labels'</span>] == <span class="php-quote">''</span> ? <span class="php-keyword1">array</span>() : <span class="php-keyword2">explode</span>(<span class="php-quote">','</span>, <span class="php-var">$row</span>[<span class="php-quote">'labels'</span>]);
 </span><span id="1916" class="l">            <span class="php-keyword1">foreach</span> (<span class="php-var">$row</span>[<span class="php-quote">'labels'</span>] <span class="php-keyword1">as</span> <span class="php-var">$v</span>)
 </span><span id="1917" class="l">            {
-</span><span id="1918" class="l">                <span class="php-keyword1">if</span> (<span class="php-keyword1">isset</span>(<span class="php-var">$message_labels</span>[(int) <span class="php-var">$v</span>]))
-</span><span id="1919" class="l">                    <span class="php-var">$message_labels</span>[<span class="php-var">$row</span>[<span class="php-quote">'id_pm'</span>]][(int) <span class="php-var">$v</span>] = <span class="php-keyword1">array</span>(<span class="php-quote">'id'</span> =&gt; <span class="php-var">$v</span>, <span class="php-quote">'name'</span> =&gt; <span class="php-var">$message_labels</span>[(int) <span class="php-var">$v</span>][<span class="php-quote">'name'</span>]);
+</span><span id="1918" class="l">                <span class="php-keyword1">if</span> (<span class="php-keyword1">isset</span>(<span class="php-var">$context</span>[<span class="php-quote">'labels'</span>][(int) <span class="php-var">$v</span>]))
+</span><span id="1919" class="l">                    <span class="php-var">$message_labels</span>[<span class="php-var">$row</span>[<span class="php-quote">'id_pm'</span>]][(int) <span class="php-var">$v</span>] = <span class="php-keyword1">array</span>(<span class="php-quote">'id'</span> =&gt; <span class="php-var">$v</span>, <span class="php-quote">'name'</span> =&gt; <span class="php-var">$context</span>[<span class="php-quote">'labels'</span>][(int) <span class="php-var">$v</span>][<span class="php-quote">'name'</span>]);
 </span><span id="1920" class="l">
 </span><span id="1921" class="l">                <span class="php-comment">// Here we find the first label on a message - used for linking to posts</span>
 </span><span id="1922" class="l">                <span class="php-keyword1">if</span> (<span class="php-var">$search</span> &amp;&amp; (!<span class="php-keyword1">isset</span>(<span class="php-var">$message_first_label</span>[<span class="php-var">$row</span>[<span class="php-quote">'id_pm'</span>]]) &amp;&amp; !<span class="php-keyword2">in_array</span>(<span class="php-quote">'-1'</span>, <span class="php-var">$row</span>[<span class="php-quote">'labels'</span>])))
@@ -3863,10 +3864,10 @@
 	</div>
 
 	<div id="footer">
-		ElkArte 1.0.5 Documentation API documentation generated by <a href="http://apigen.org">ApiGen</a>
+		ElkArte 1.0.7 Documentation API documentation generated by <a href="http://apigen.org">ApiGen</a>
 	</div>
 </div>
 <script src="resources/combined.js?4b00732ce0340a2e67fb74c587c1d96491e067bc"></script>
-<script src="elementlist.js?31ac3c05882d46f2466f71cb6adae7ed8d25df7c"></script>
+<script src="elementlist.js?451d275addfb941a2849699d5d5defa91056a858"></script>
 </body>
 </html>

@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>Class Html_2_BBC | ElkArte 1.0.5 Documentation</title>
+	<title>Class Html_2_BBC | ElkArte 1.0.7 Documentation</title>
 
 	<link rel="stylesheet" href="resources/bootstrap.min.css?973e37a8502921d56bc02bb55321f45b072b6f71">
 	<link rel="stylesheet" href="resources/style.css?70c1d062672daa3f906b72e4f5d03d4bc5c4174d">
@@ -14,7 +14,7 @@
 	<nav id="navigation" class="navbar navbar-default navbar-fixed-top">
 		<div class="container-fluid">
 			<div class="navbar-header">
-				<a href="index.html" class="navbar-brand">ElkArte 1.0.5 Documentation</a>
+				<a href="index.html" class="navbar-brand">ElkArte 1.0.7 Documentation</a>
 			</div>
 			<div class="collapse navbar-collapse">
 
@@ -362,6 +362,7 @@
 				<li><a href="function-call_integration_hook.html">call_integration_hook</a></li>
 				<li><a href="function-call_integration_include_hook.html">call_integration_include_hook</a></li>
 				<li><a href="function-callMenu.html">callMenu</a></li>
+				<li><a href="function-can_see_button_strip.html">can_see_button_strip</a></li>
 				<li><a href="function-canAccessMessage.html">canAccessMessage</a></li>
 				<li><a href="function-categoryName.html">categoryName</a></li>
 				<li><a href="function-cdata_parse.html">cdata_parse</a></li>
@@ -949,7 +950,7 @@
 				ElkArte Forum contributors<br>
 				<b>License:</b>
 				<a href="BSD">http://opensource.org/licenses/BSD-3-Clause</a><br>
-			<b>Located at</b> <a href="source-class-Html_2_BBC.html#17-955" title="Go to source code">sources/subs/Html2BBC.class.php</a>
+			<b>Located at</b> <a href="source-class-Html_2_BBC.html#17-956" title="Go to source code">sources/subs/Html2BBC.class.php</a>
 		<br>
 	</div>
 
@@ -1176,7 +1177,7 @@ DOM nodes to BBC</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#__convert_to_bbc">#</a>
-			<code><a href="source-class-Html_2_BBC.html#255-426" title="Go to source code">_convert_to_bbc</a>( <span>object <var>$node</var></span> )</code>
+			<code><a href="source-class-Html_2_BBC.html#255-427" title="Go to source code">_convert_to_bbc</a>( <span>object <var>$node</var></span> )</code>
 
 			<div class="description short">
 				<p>Convert the supplied node into its bbc equivalent</p>
@@ -1210,7 +1211,7 @@ DOM nodes to BBC</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#__convert_abbr">#</a>
-			<code><a href="source-class-Html_2_BBC.html#428-447" title="Go to source code">_convert_abbr</a>( <span>object <var>$node</var></span> )</code>
+			<code><a href="source-class-Html_2_BBC.html#429-448" title="Go to source code">_convert_abbr</a>( <span>object <var>$node</var></span> )</code>
 
 			<div class="description short">
 				<p>Converts <abbr> tags to bbc</p>
@@ -1247,7 +1248,7 @@ bbc:  [abbr=Hyper Text Markup Language]HTML[/abbr]</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#__convert_anchor">#</a>
-			<code><a href="source-class-Html_2_BBC.html#449-512" title="Go to source code">_convert_anchor</a>( <span>object <var>$node</var></span> )</code>
+			<code><a href="source-class-Html_2_BBC.html#450-513" title="Go to source code">_convert_anchor</a>( <span>object <var>$node</var></span> )</code>
 
 			<div class="description short">
 				<p>Converts <a> tags to bbc</p>
@@ -1284,7 +1285,7 @@ bbc: [url=http://somesite.com]Awesome Site[/url]</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#__convert_bdo">#</a>
-			<code><a href="source-class-Html_2_BBC.html#514-533" title="Go to source code">_convert_bdo</a>( <span>object <var>$node</var></span> )</code>
+			<code><a href="source-class-Html_2_BBC.html#515-534" title="Go to source code">_convert_bdo</a>( <span>object <var>$node</var></span> )</code>
 
 			<div class="description short">
 				<p>Converts <bdo> tags to bbc</p>
@@ -1321,7 +1322,7 @@ bbc: [bdo=rtl]Some Text[/bdo]</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#__convert_code">#</a>
-			<code><a href="source-class-Html_2_BBC.html#535-574" title="Go to source code">_convert_code</a>( <span>object <var>$node</var></span> )</code>
+			<code><a href="source-class-Html_2_BBC.html#536-575" title="Go to source code">_convert_code</a>( <span>object <var>$node</var></span> )</code>
 
 			<div class="description short">
 				<p>Converts code tags to bbc block code</p>
@@ -1355,7 +1356,7 @@ bbc: [bdo=rtl]Some Text[/bdo]</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#__convert_font">#</a>
-			<code><a href="source-class-Html_2_BBC.html#576-606" title="Go to source code">_convert_font</a>( <span>object <var>$node</var></span> )</code>
+			<code><a href="source-class-Html_2_BBC.html#577-607" title="Go to source code">_convert_font</a>( <span>object <var>$node</var></span> )</code>
 
 			<div class="description short">
 				<p>Convert font tags to the appropriate sequence of bbc tags
@@ -1393,7 +1394,7 @@ bbc: [color=red][size=12pt]This is some text![/size][/color]</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#__convert_header">#</a>
-			<code><a href="source-class-Html_2_BBC.html#608-625" title="Go to source code">_convert_header</a>( <span>integer <var>$level</var></span>, <span>string <var>$content</var></span> )</code>
+			<code><a href="source-class-Html_2_BBC.html#609-626" title="Go to source code">_convert_header</a>( <span>integer <var>$level</var></span>, <span>string <var>$content</var></span> )</code>
 
 			<div class="description short">
 				<p>Converts</p>
@@ -1447,7 +1448,7 @@ html:</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#__convert_image">#</a>
-			<code><a href="source-class-Html_2_BBC.html#627-687" title="Go to source code">_convert_image</a>( <span>object <var>$node</var></span> )</code>
+			<code><a href="source-class-Html_2_BBC.html#628-688" title="Go to source code">_convert_image</a>( <span>object <var>$node</var></span> )</code>
 
 			<div class="description short">
 				<p>Converts <img> tags to bbc</p>
@@ -1484,7 +1485,7 @@ bbc: [img]src[/img]</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#__convert_styles">#</a>
-			<code><a href="source-class-Html_2_BBC.html#689-763" title="Go to source code">_convert_styles</a>( <span>object <var>$node</var></span> )</code>
+			<code><a href="source-class-Html_2_BBC.html#690-764" title="Go to source code">_convert_styles</a>( <span>object <var>$node</var></span> )</code>
 
 			<div class="description short">
 				<p>Searches an inline tag for style attributes and if found converts them to basic bbc</p>
@@ -1521,7 +1522,7 @@ bbc: [b]Some Text[/b]</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#__convert_table_cell">#</a>
-			<code><a href="source-class-Html_2_BBC.html#765-799" title="Go to source code">_convert_table_cell</a>( <span>object <var>$node</var></span> )</code>
+			<code><a href="source-class-Html_2_BBC.html#766-800" title="Go to source code">_convert_table_cell</a>( <span>object <var>$node</var></span> )</code>
 
 			<div class="description short">
 				<p>Checks if an td/th has colspan set, if so repeat those as a number of td's
@@ -1560,7 +1561,7 @@ bbc: [td]Some Text[/td][td][/td]</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#__get_item">#</a>
-			<code><a href="source-class-Html_2_BBC.html#801-813" title="Go to source code">_get_item</a>( <span>object <var>$node</var></span>, <span>integer <var>$item</var></span> )</code>
+			<code><a href="source-class-Html_2_BBC.html#802-814" title="Go to source code">_get_item</a>( <span>object <var>$node</var></span>, <span>integer <var>$item</var></span> )</code>
 
 			<div class="description short">
 				<p>Helper function for getting a node object</p>
@@ -1596,7 +1597,7 @@ bbc: [td]Some Text[/td][td][/td]</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#__get_length">#</a>
-			<code><a href="source-class-Html_2_BBC.html#815-826" title="Go to source code">_get_length</a>( <span>object <var>$node</var></span> )</code>
+			<code><a href="source-class-Html_2_BBC.html#816-827" title="Go to source code">_get_length</a>( <span>object <var>$node</var></span> )</code>
 
 			<div class="description short">
 				<p>Helper function for getting a node length</p>
@@ -1630,7 +1631,7 @@ bbc: [td]Some Text[/td][td][/td]</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#__get_value">#</a>
-			<code><a href="source-class-Html_2_BBC.html#828-842" title="Go to source code">_get_value</a>( <span>object <var>$node</var></span> )</code>
+			<code><a href="source-class-Html_2_BBC.html#829-843" title="Go to source code">_get_value</a>( <span>object <var>$node</var></span> )</code>
 
 			<div class="description short">
 				<p>Helper function for getting a node value</p>
@@ -1664,7 +1665,7 @@ bbc: [td]Some Text[/td][td][/td]</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#__get_name">#</a>
-			<code><a href="source-class-Html_2_BBC.html#844-858" title="Go to source code">_get_name</a>( <span>object <var>$node</var></span> )</code>
+			<code><a href="source-class-Html_2_BBC.html#845-859" title="Go to source code">_get_name</a>( <span>object <var>$node</var></span> )</code>
 
 			<div class="description short">
 				<p>Helper function for getting a node name</p>
@@ -1698,7 +1699,7 @@ bbc: [td]Some Text[/td][td][/td]</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#__get_innerHTML">#</a>
-			<code><a href="source-class-Html_2_BBC.html#860-879" title="Go to source code">_get_innerHTML</a>( <span>object <var>$node</var></span> )</code>
+			<code><a href="source-class-Html_2_BBC.html#861-880" title="Go to source code">_get_innerHTML</a>( <span>object <var>$node</var></span> )</code>
 
 			<div class="description short">
 				<p>Gets the inner html of a node</p>
@@ -1736,7 +1737,7 @@ bbc: [td]Some Text[/td][td][/td]</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#__get_outerHTML">#</a>
-			<code><a href="source-class-Html_2_BBC.html#881-911" title="Go to source code">_get_outerHTML</a>( <span>object <var>$node</var></span> )</code>
+			<code><a href="source-class-Html_2_BBC.html#882-912" title="Go to source code">_get_outerHTML</a>( <span>object <var>$node</var></span> )</code>
 
 			<div class="description short">
 				<p>Gets the outer html of a node</p>
@@ -1770,7 +1771,7 @@ bbc: [td]Some Text[/td][td][/td]</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#__get_style_values">#</a>
-			<code><a href="source-class-Html_2_BBC.html#913-937" title="Go to source code">_get_style_values</a>( <span>string <var>$style</var></span> )</code>
+			<code><a href="source-class-Html_2_BBC.html#914-938" title="Go to source code">_get_style_values</a>( <span>string <var>$style</var></span> )</code>
 
 			<div class="description short">
 				<p>If there are inline styles, returns an array of $array['attribute'] => $value
@@ -1806,7 +1807,7 @@ $style['width'] = '150px'</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#__recursive_decode">#</a>
-			<code><a href="source-class-Html_2_BBC.html#939-954" title="Go to source code">_recursive_decode</a>( <span>string <var>$text</var></span> )</code>
+			<code><a href="source-class-Html_2_BBC.html#940-955" title="Go to source code">_recursive_decode</a>( <span>string <var>$text</var></span> )</code>
 
 			<div class="description short">
 				<p>Looks for double html encoding items and continues to decode until fixed</p>
@@ -2082,7 +2083,7 @@ $style['width'] = '150px'</p>
 	</div>
 
 	<div id="footer">
-		ElkArte 1.0.5 Documentation API documentation generated by <a href="http://apigen.org">ApiGen</a>
+		ElkArte 1.0.7 Documentation API documentation generated by <a href="http://apigen.org">ApiGen</a>
 	</div>
 </div>
 <script src="resources/combined.js"></script>
