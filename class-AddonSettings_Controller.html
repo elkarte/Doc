@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>Class AddonSettings_Controller | ElkArte 1.0.7 Documentation</title>
+	<title>Class AddonSettings_Controller | ElkArte 1.0.10 Documentation</title>
 
 	<link rel="stylesheet" href="resources/bootstrap.min.css?973e37a8502921d56bc02bb55321f45b072b6f71">
 	<link rel="stylesheet" href="resources/style.css?70c1d062672daa3f906b72e4f5d03d4bc5c4174d">
@@ -14,7 +14,7 @@
 	<nav id="navigation" class="navbar navbar-default navbar-fixed-top">
 		<div class="container-fluid">
 			<div class="navbar-header">
-				<a href="index.html" class="navbar-brand">ElkArte 1.0.7 Documentation</a>
+				<a href="index.html" class="navbar-brand">ElkArte 1.0.10 Documentation</a>
 			</div>
 			<div class="collapse navbar-collapse">
 
@@ -39,21 +39,17 @@
 					</li>
 
 						<li>
-							<a href="annotation-group-deprecated.html" title="List of elements with deprecated annotation">
-								<span>Deprecated</span>
-							</a>
-						</li>
-						<li>
 							<a href="annotation-group-todo.html" title="List of elements with todo annotation">
 								<span>Todo</span>
 							</a>
 						</li>
+						<li>
+							<a href="annotation-group-deprecated.html" title="List of elements with deprecated annotation">
+								<span>Deprecated</span>
+							</a>
+						</li>
 
-					<li class="divider-vertical"></li>
 
-					<li>
-						<a href="-API-documentation.zip" title="Download documentation as ZIP archive"><span>Download</span></a>
-					</li>
 				</ul>
 			</div>
 		</div>
@@ -246,7 +242,8 @@
 	<p>AddonSettings controller handles administration settings added
 in the common area for all addons in admin panel.</p>
 
-<p>What it does: - Some addons will define their own areas, but for simple cases,
+<p>What it does:
+ - Some addons will define their own areas, but for simple cases,
 when you have only a setting or two, this area will allow you
 to hook into it seamlessly, and your additions will be sent
 to admin search and otherwise benefit from admin areas security,
@@ -285,7 +282,7 @@ checks and display.</p>
 				ElkArte Forum contributors<br>
 				<b>License:</b>
 				<a href="BSD">http://opensource.org/licenses/BSD-3-Clause</a><br>
-			<b>Located at</b> <a href="source-class-AddonSettings_Controller.html#17-190" title="Go to source code">sources/admin/AddonSettings.controller.php</a>
+			<b>Located at</b> <a href="source-class-AddonSettings_Controller.html#17-191" title="Go to source code">sources/admin/AddonSettings.controller.php</a>
 		<br>
 	</div>
 
@@ -305,7 +302,7 @@ checks and display.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_action_index">#</a>
-			<code><a href="source-class-AddonSettings_Controller.html#38-81" title="Go to source code">action_index</a>( )</code>
+			<code><a href="source-class-AddonSettings_Controller.html#39-82" title="Go to source code">action_index</a>( )</code>
 
 			<div class="description short">
 				<p>This, my friend, is for all the authors of addons out there.</p>
@@ -320,7 +317,7 @@ checks and display.</p>
 
 					<h4>See</h4>
 					<div class="list">
-							<code><a href="class-Action_Controller.html#_action_index">Action_Controller::action_index()</a></code><br>
+							Action_Controller::action_index()<br>
 					</div>
 
 
@@ -338,7 +335,7 @@ checks and display.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_action_addonSettings_display">#</a>
-			<code><a href="source-class-AddonSettings_Controller.html#83-107" title="Go to source code">action_addonSettings_display</a>( )</code>
+			<code><a href="source-class-AddonSettings_Controller.html#84-108" title="Go to source code">action_addonSettings_display</a>( )</code>
 
 			<div class="description short">
 				<p>If you have a general mod setting to add stick it here.</p>
@@ -367,7 +364,7 @@ checks and display.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#__initAddonSettingsForm">#</a>
-			<code><a href="source-class-AddonSettings_Controller.html#109-135" title="Go to source code">_initAddonSettingsForm</a>( )</code>
+			<code><a href="source-class-AddonSettings_Controller.html#110-136" title="Go to source code">_initAddonSettingsForm</a>( )</code>
 
 			<div class="description short">
 				<p>Initialize the customSettings form with any custom admin settings for or from addons.</p>
@@ -396,7 +393,7 @@ checks and display.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#__settings">#</a>
-			<code><a href="source-class-AddonSettings_Controller.html#137-148" title="Go to source code">_settings</a>( )</code>
+			<code><a href="source-class-AddonSettings_Controller.html#138-149" title="Go to source code">_settings</a>( )</code>
 
 			<div class="description short">
 				<p>Retrieve any custom admin settings for or from addons.</p>
@@ -425,7 +422,7 @@ checks and display.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_settings_search">#</a>
-			<code><a href="source-class-AddonSettings_Controller.html#150-156" title="Go to source code">settings_search</a>( )</code>
+			<code><a href="source-class-AddonSettings_Controller.html#151-157" title="Go to source code">settings_search</a>( )</code>
 
 			<div class="description short">
 				<p>Public method to return admin settings for search</p>
@@ -454,7 +451,7 @@ checks and display.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_loadGeneralSettingParameters">#</a>
-			<code><a href="source-class-AddonSettings_Controller.html#158-189" title="Go to source code">loadGeneralSettingParameters</a>( <span>mixed[] <var>$subActions</var> = <span class="php-keyword1">array</span>()</span>, <span>string <var>$defaultAction</var> = <span class="php-quote">''</span></span> )</code>
+			<code><a href="source-class-AddonSettings_Controller.html#159-190" title="Go to source code">loadGeneralSettingParameters</a>( <span>mixed[] <var>$subActions</var> = <span class="php-keyword1">array</span>()</span>, <span>string <var>$defaultAction</var> = <span class="php-quote">''</span></span> )</code>
 
 			<div class="description short">
 				<p>This function makes sure the requested subaction does exist,
@@ -510,7 +507,7 @@ if it doesn't, it sets a default action or.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-AddonSettings_Controller.html#32-36" title="Go to source code"><var>$_addonSettings</var></a>
+					<a href="source-class-AddonSettings_Controller.html#33-37" title="Go to source code"><var>$_addonSettings</var></a>
 
 				<div class="description short">
 					<p>General addon settings form.</p>
@@ -540,10 +537,10 @@ if it doesn't, it sets a default action or.</p>
 	</div>
 
 	<div id="footer">
-		ElkArte 1.0.7 Documentation API documentation generated by <a href="http://apigen.org">ApiGen</a>
+		ElkArte 1.0.10 Documentation API documentation generated by <a href="http://apigen.org">ApiGen</a>
 	</div>
 </div>
 <script src="resources/combined.js"></script>
-<script src="elementlist.js"></script>
+<script src="elementlist.js?13e5afb1269be6447e403156947b1e9254b743c7"></script>
 </body>
 </html>

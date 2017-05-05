@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>Class News_Controller | ElkArte 1.0.7 Documentation</title>
+	<title>Class News_Controller | ElkArte 1.0.10 Documentation</title>
 
 	<link rel="stylesheet" href="resources/bootstrap.min.css?973e37a8502921d56bc02bb55321f45b072b6f71">
 	<link rel="stylesheet" href="resources/style.css?70c1d062672daa3f906b72e4f5d03d4bc5c4174d">
@@ -14,7 +14,7 @@
 	<nav id="navigation" class="navbar navbar-default navbar-fixed-top">
 		<div class="container-fluid">
 			<div class="navbar-header">
-				<a href="index.html" class="navbar-brand">ElkArte 1.0.7 Documentation</a>
+				<a href="index.html" class="navbar-brand">ElkArte 1.0.10 Documentation</a>
 			</div>
 			<div class="collapse navbar-collapse">
 
@@ -39,21 +39,17 @@
 					</li>
 
 						<li>
-							<a href="annotation-group-deprecated.html" title="List of elements with deprecated annotation">
-								<span>Deprecated</span>
-							</a>
-						</li>
-						<li>
 							<a href="annotation-group-todo.html" title="List of elements with todo annotation">
 								<span>Todo</span>
 							</a>
 						</li>
+						<li>
+							<a href="annotation-group-deprecated.html" title="List of elements with deprecated annotation">
+								<span>Deprecated</span>
+							</a>
+						</li>
 
-					<li class="divider-vertical"></li>
 
-					<li>
-						<a href="-API-documentation.zip" title="Download documentation as ZIP archive"><span>Download</span></a>
-					</li>
 				</ul>
 			</div>
 		</div>
@@ -344,6 +340,7 @@
 				<li><a href="function-associatedPoll.html">associatedPoll</a></li>
 				<li><a href="function-associatedTopic.html">associatedTopic</a></li>
 				<li><a href="function-autoRotateImage.html">autoRotateImage</a></li>
+				<li><a href="function-autoRotateImageWithIM.html">autoRotateImageWithIM</a></li>
 				<li><a href="function-availableThemes.html">availableThemes</a></li>
 				<li><a href="function-basicMessageInfo.html">basicMessageInfo</a></li>
 				<li><a href="function-basicWatchedUsers.html">basicWatchedUsers</a></li>
@@ -743,6 +740,7 @@
 				<li><a href="function-sendApprovalNotifications.html">sendApprovalNotifications</a></li>
 				<li><a href="function-sendBoardNotifications.html">sendBoardNotifications</a></li>
 				<li><a href="function-sendNotifications.html">sendNotifications</a></li>
+				<li><a href="function-serializeToJson.html">serializeToJson</a></li>
 				<li><a href="function-sessionClose.html">sessionClose</a></li>
 				<li><a href="function-sessionDestroy.html">sessionDestroy</a></li>
 				<li><a href="function-sessionGC.html">sessionGC</a></li>
@@ -964,7 +962,7 @@ This software is a derived product, based on:
 Simple Machines Forum (SMF)
 copyright:	2011 Simple Machines (http://www.simplemachines.org)
 license:		BSD, See included LICENSE.TXT for terms and conditions.</a><br>
-			<b>Located at</b> <a href="source-class-News_Controller.html#24-744" title="Go to source code">sources/controllers/News.controller.php</a>
+			<b>Located at</b> <a href="source-class-News_Controller.html#24-745" title="Go to source code">sources/controllers/News.controller.php</a>
 		<br>
 	</div>
 
@@ -999,7 +997,7 @@ license:		BSD, See included LICENSE.TXT for terms and conditions.</a><br>
 
 					<h4>See</h4>
 					<div class="list">
-							<code><a href="class-Action_Controller.html#_action_index">Action_Controller::action_index()</a></code><br>
+							Action_Controller::action_index()<br>
 					</div>
 
 
@@ -1017,7 +1015,7 @@ license:		BSD, See included LICENSE.TXT for terms and conditions.</a><br>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_action_showfeed">#</a>
-			<code><a href="source-class-News_Controller.html#52-345" title="Go to source code">action_showfeed</a>( )</code>
+			<code><a href="source-class-News_Controller.html#52-346" title="Go to source code">action_showfeed</a>( )</code>
 
 			<div class="description short">
 				<p>Outputs xml data representing recent information or a profile.</p>
@@ -1026,13 +1024,16 @@ license:		BSD, See included LICENSE.TXT for terms and conditions.</a><br>
 			<div class="description detailed hidden">
 				<p>Outputs xml data representing recent information or a profile.</p>
 
-<p>What it does:
-- Can be passed 4 subactions which decide what is output: 'recent' for recent posts, 'news' for news topics, 'members' for recently registered members, 'profile' for a member's profile.
-- To display a member's profile, a user id has to be given. (;u=1) e.g. ?action=.xml;sa=profile;u=1;type=atom
-- Outputs an rss feed instead of a proprietary one if the 'type' $_GET
-parameter is 'rss' or 'rss2'.
-- Accessed via ?action=.xml
-- Does not use any templates, sub templates, or template layers.</p>
+<p>What it does:</p>
+
+<ul>
+<li>Can be passed 4 subactions which decide what is output: 'recent' for recent posts, 'news' for news topics, 'members' for recently registered members, 'profile' for a member's profile.</li>
+<li>To display a member's profile, a user id has to be given. (;u=1) e.g. ?action=.xml;sa=profile;u=1;type=atom</li>
+<li>Outputs an rss feed instead of a proprietary one if the 'type' $_GET
+parameter is 'rss' or 'rss2'.</li>
+<li>Accessed via ?action=.xml</li>
+<li>Does not use any templates, sub templates, or template layers.</li>
+</ul>
 
 
 
@@ -1058,7 +1059,7 @@ parameter is 'rss' or 'rss2'.
 
 			<td class="name"><div>
 			<a class="anchor" href="#_action_xmlmembers">#</a>
-			<code><a href="source-class-News_Controller.html#347-403" title="Go to source code">action_xmlmembers</a>( <span>string <var>$xml_format</var></span> )</code>
+			<code><a href="source-class-News_Controller.html#348-404" title="Go to source code">action_xmlmembers</a>( <span>string <var>$xml_format</var></span> )</code>
 
 			<div class="description short">
 				<p>Retrieve the list of members from database.
@@ -1098,7 +1099,7 @@ The array will be generated to match the format.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_action_xmlnews">#</a>
-			<code><a href="source-class-News_Controller.html#405-507" title="Go to source code">action_xmlnews</a>( <span>string <var>$xml_format</var></span> )</code>
+			<code><a href="source-class-News_Controller.html#406-508" title="Go to source code">action_xmlnews</a>( <span>string <var>$xml_format</var></span> )</code>
 
 			<div class="description short">
 				<p>Get the latest topics information from a specific board, to display later.
@@ -1138,7 +1139,7 @@ The returned array will be generated to match the xmf_format.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_action_xmlrecent">#</a>
-			<code><a href="source-class-News_Controller.html#509-618" title="Go to source code">action_xmlrecent</a>( <span>string <var>$xml_format</var></span> )</code>
+			<code><a href="source-class-News_Controller.html#510-619" title="Go to source code">action_xmlrecent</a>( <span>string <var>$xml_format</var></span> )</code>
 
 			<div class="description short">
 				<p>Get the recent topics to display.
@@ -1178,7 +1179,7 @@ The returned array will be generated to match the xml_format.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_action_xmlprofile">#</a>
-			<code><a href="source-class-News_Controller.html#620-743" title="Go to source code">action_xmlprofile</a>( <span>string <var>$xml_format</var></span> )</code>
+			<code><a href="source-class-News_Controller.html#621-744" title="Go to source code">action_xmlprofile</a>( <span>string <var>$xml_format</var></span> )</code>
 
 			<div class="description short">
 				<p>Get the profile information for member into an array,
@@ -1291,10 +1292,10 @@ which will be generated to match the xml_format.</p>
 	</div>
 
 	<div id="footer">
-		ElkArte 1.0.7 Documentation API documentation generated by <a href="http://apigen.org">ApiGen</a>
+		ElkArte 1.0.10 Documentation API documentation generated by <a href="http://apigen.org">ApiGen</a>
 	</div>
 </div>
 <script src="resources/combined.js"></script>
-<script src="elementlist.js"></script>
+<script src="elementlist.js?13e5afb1269be6447e403156947b1e9254b743c7"></script>
 </body>
 </html>

@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<meta name="robots" content="noindex">
 
-	<title>File sources/subs/Html2BBC.class.php | ElkArte 1.0.7 Documentation</title>
+	<title>File sources/subs/Html2BBC.class.php | ElkArte 1.0.10 Documentation</title>
 
 	<link rel="stylesheet" href="resources/bootstrap.min.css?973e37a8502921d56bc02bb55321f45b072b6f71">
 	<link rel="stylesheet" href="resources/style.css?70c1d062672daa3f906b72e4f5d03d4bc5c4174d">
@@ -15,7 +15,7 @@
 	<nav id="navigation" class="navbar navbar-default navbar-fixed-top">
 		<div class="container-fluid">
 			<div class="navbar-header">
-				<a href="index.html" class="navbar-brand">ElkArte 1.0.7 Documentation</a>
+				<a href="index.html" class="navbar-brand">ElkArte 1.0.10 Documentation</a>
 			</div>
 			<div class="collapse navbar-collapse">
 
@@ -40,21 +40,17 @@
 					</li>
 
 						<li>
-							<a href="annotation-group-deprecated.html" title="List of elements with deprecated annotation">
-								<span>Deprecated</span>
-							</a>
-						</li>
-						<li>
 							<a href="annotation-group-todo.html" title="List of elements with todo annotation">
 								<span>Todo</span>
 							</a>
 						</li>
+						<li>
+							<a href="annotation-group-deprecated.html" title="List of elements with deprecated annotation">
+								<span>Deprecated</span>
+							</a>
+						</li>
 
-					<li class="divider-vertical"></li>
 
-					<li>
-						<a href="-API-documentation.zip" title="Download documentation as ZIP archive"><span>Download</span></a>
-					</li>
 				</ul>
 			</div>
 		</div>
@@ -437,6 +433,8 @@
 				<li><a href="function-automanage_attachments_check_directory.html">automanage_attachments_check_directory</a></li>
 				<li><a href="function-automanage_attachments_create_directory.html">automanage_attachments_create_directory</a></li>
 				<li><a href="function-autoRotateImage.html">autoRotateImage</a></li>
+				<li><a href="function-autoRotateImageWithGD.html">autoRotateImageWithGD</a></li>
+				<li><a href="function-autoRotateImageWithIM.html">autoRotateImageWithIM</a></li>
 				<li><a href="function-availableThemes.html">availableThemes</a></li>
 				<li><a href="function-BanCheckUser.html">BanCheckUser</a></li>
 				<li><a href="function-banDetails.html">banDetails</a></li>
@@ -658,6 +656,7 @@
 				<li><a href="function-fetchPermissions.html">fetchPermissions</a></li>
 				<li><a href="function-fetchPerms__recursive.html">fetchPerms__recursive</a></li>
 				<li><a href="function-filter_accessible_attachment.html">filter_accessible_attachment</a></li>
+				<li><a href="function-filter_members_online.html">filter_members_online</a></li>
 				<li><a href="function-findAttachmentsToMove.html">findAttachmentsToMove</a></li>
 				<li><a href="function-findForumErrors.html">findForumErrors</a></li>
 				<li><a href="function-findMemberMention.html">findMemberMention</a></li>
@@ -681,6 +680,8 @@
 				<li><a href="function-fixTag.html">fixTag</a></li>
 				<li><a href="function-fixTags.html">fixTags</a></li>
 				<li><a href="function-fixTags_img_callback.html">fixTags_img_callback</a></li>
+				<li><a href="function-flipImageGD.html">flipImageGD</a></li>
+				<li><a href="function-flopImageGD.html">flopImageGD</a></li>
 				<li><a href="function-flushLogTables.html">flushLogTables</a></li>
 				<li><a href="function-followupTopics.html">followupTopics</a></li>
 				<li><a href="function-footnote_callback.html">footnote_callback</a></li>
@@ -913,7 +914,6 @@
 				<li><a href="function-load_user_drafts.html">load_user_drafts</a></li>
 				<li><a href="function-load_user_posts.html">load_user_posts</a></li>
 				<li><a href="function-load_user_topics.html">load_user_topics</a></li>
-				<li><a href="function-loadAllPermissions.html">loadAllPermissions</a></li>
 				<li><a href="function-loadAllSubsctiptions.html">loadAllSubsctiptions</a></li>
 				<li><a href="function-loadAssetFile.html">loadAssetFile</a></li>
 				<li><a href="function-loadAttachmentContext.html">loadAttachmentContext</a></li>
@@ -1264,6 +1264,7 @@
 				<li><a href="function-response_prefix.html">response_prefix</a></li>
 				<li><a href="function-retrieveMemberData.html">retrieveMemberData</a></li>
 				<li><a href="function-rlikeMentions.html">rlikeMentions</a></li>
+				<li><a href="function-rotateImageGD.html">rotateImageGD</a></li>
 				<li><a href="function-run_this_task.html">run_this_task</a></li>
 				<li><a href="function-sanitizeMSCutPaste.html">sanitizeMSCutPaste</a></li>
 				<li><a href="function-saveAvatar.html">saveAvatar</a></li>
@@ -1285,7 +1286,7 @@
 				<li><a href="function-sendmail.html">sendmail</a></li>
 				<li><a href="function-sendNotifications.html">sendNotifications</a></li>
 				<li><a href="function-sendpm.html">sendpm</a></li>
-				<li><a href="function-server_parse.html">server_parse</a></li>
+				<li><a href="function-serializeToJson.html">serializeToJson</a></li>
 				<li><a href="function-sessionClose.html">sessionClose</a></li>
 				<li><a href="function-sessionDestroy.html">sessionDestroy</a></li>
 				<li><a href="function-sessionGC.html">sessionGC</a></li>
@@ -1300,7 +1301,6 @@
 				<li><a href="function-setMemoryLimit.html">setMemoryLimit</a></li>
 				<li><a href="function-setPackagesAsUninstalled.html">setPackagesAsUninstalled</a></li>
 				<li><a href="function-setPackageState.html">setPackageState</a></li>
-				<li><a href="function-setPermissionLevel.html">setPermissionLevel</a></li>
 				<li><a href="function-setPMRepliedStatus.html">setPMRepliedStatus</a></li>
 				<li><a href="function-setRemovalNotice.html">setRemovalNotice</a></li>
 				<li><a href="function-setTopicAttribute.html">setTopicAttribute</a></li>
@@ -1319,7 +1319,6 @@
 				<li><a href="function-showEmailAddress.html">showEmailAddress</a></li>
 				<li><a href="function-showLetterImage.html">showLetterImage</a></li>
 				<li><a href="function-smileyExists.html">smileyExists</a></li>
-				<li><a href="function-smtp_mail.html">smtp_mail</a></li>
 				<li><a href="function-sortMessageIconTable.html" class="deprecated">sortMessageIconTable</a></li>
 				<li><a href="function-sortSmileyTable.html" class="deprecated">sortSmileyTable</a></li>
 				<li><a href="function-sortSpiderTable.html" class="deprecated">sortSpiderTable</a></li>
@@ -2497,10 +2496,10 @@
 	</div>
 
 	<div id="footer">
-		ElkArte 1.0.7 Documentation API documentation generated by <a href="http://apigen.org">ApiGen</a>
+		ElkArte 1.0.10 Documentation API documentation generated by <a href="http://apigen.org">ApiGen</a>
 	</div>
 </div>
-<script src="resources/combined.js?4b00732ce0340a2e67fb74c587c1d96491e067bc"></script>
-<script src="elementlist.js?451d275addfb941a2849699d5d5defa91056a858"></script>
+<script src="resources/combined.js?33f7621ed1d52ea578c8c2b7910da64276fe7e91"></script>
+<script src="elementlist.js?13e5afb1269be6447e403156947b1e9254b743c7"></script>
 </body>
 </html>

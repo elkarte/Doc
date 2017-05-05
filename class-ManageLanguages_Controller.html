@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>Class ManageLanguages_Controller | ElkArte 1.0.7 Documentation</title>
+	<title>Class ManageLanguages_Controller | ElkArte 1.0.10 Documentation</title>
 
 	<link rel="stylesheet" href="resources/bootstrap.min.css?973e37a8502921d56bc02bb55321f45b072b6f71">
 	<link rel="stylesheet" href="resources/style.css?70c1d062672daa3f906b72e4f5d03d4bc5c4174d">
@@ -14,7 +14,7 @@
 	<nav id="navigation" class="navbar navbar-default navbar-fixed-top">
 		<div class="container-fluid">
 			<div class="navbar-header">
-				<a href="index.html" class="navbar-brand">ElkArte 1.0.7 Documentation</a>
+				<a href="index.html" class="navbar-brand">ElkArte 1.0.10 Documentation</a>
 			</div>
 			<div class="collapse navbar-collapse">
 
@@ -39,21 +39,17 @@
 					</li>
 
 						<li>
-							<a href="annotation-group-deprecated.html" title="List of elements with deprecated annotation">
-								<span>Deprecated</span>
-							</a>
-						</li>
-						<li>
 							<a href="annotation-group-todo.html" title="List of elements with todo annotation">
 								<span>Todo</span>
 							</a>
 						</li>
+						<li>
+							<a href="annotation-group-deprecated.html" title="List of elements with deprecated annotation">
+								<span>Deprecated</span>
+							</a>
+						</li>
 
-					<li class="divider-vertical"></li>
 
-					<li>
-						<a href="-API-documentation.zip" title="Download documentation as ZIP archive"><span>Download</span></a>
-					</li>
 				</ul>
 			</div>
 		</div>
@@ -285,7 +281,7 @@ This software is a derived product, based on:
 Simple Machines Forum (SMF)
 copyright:	2011 Simple Machines (http://www.simplemachines.org)
 license:		BSD, See included LICENSE.TXT for terms and conditions.</a><br>
-			<b>Located at</b> <a href="source-class-ManageLanguages_Controller.html#23-1128" title="Go to source code">sources/admin/ManageLanguages.controller.php</a>
+			<b>Located at</b> <a href="source-class-ManageLanguages_Controller.html#23-1130" title="Go to source code">sources/admin/ManageLanguages.controller.php</a>
 		<br>
 	</div>
 
@@ -305,7 +301,7 @@ license:		BSD, See included LICENSE.TXT for terms and conditions.</a><br>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_action_index">#</a>
-			<code><a href="source-class-ManageLanguages_Controller.html#36-79" title="Go to source code">action_index</a>( )</code>
+			<code><a href="source-class-ManageLanguages_Controller.html#36-80" title="Go to source code">action_index</a>( )</code>
 
 			<div class="description short">
 				<p>This is the main function for the languages area.</p>
@@ -314,9 +310,12 @@ license:		BSD, See included LICENSE.TXT for terms and conditions.</a><br>
 			<div class="description detailed hidden">
 				<p>This is the main function for the languages area.</p>
 
-<p>What it does:
-- It dispatches the requests.
-- Loads the ManageLanguages template. (sub-actions will use it)</p>
+<p>What it does:</p>
+
+<ul>
+<li>It dispatches the requests.</li>
+<li>Loads the ManageLanguages template. (sub-actions will use it)</li>
+</ul>
 
 
 
@@ -324,7 +323,7 @@ license:		BSD, See included LICENSE.TXT for terms and conditions.</a><br>
 
 					<h4>See</h4>
 					<div class="list">
-							<code><a href="class-Action_Controller.html#_action_index">Action_Controller::action_index()</a></code><br>
+							Action_Controller::action_index()<br>
 					</div>
 					<h4>Uses</h4>
 					<div class="list">
@@ -346,7 +345,7 @@ license:		BSD, See included LICENSE.TXT for terms and conditions.</a><br>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_action_add">#</a>
-			<code><a href="source-class-ManageLanguages_Controller.html#81-155" title="Go to source code">action_add</a>( )</code>
+			<code><a href="source-class-ManageLanguages_Controller.html#82-156" title="Go to source code">action_add</a>( )</code>
 
 			<div class="description short">
 				<p>Interface for adding a new language.</p>
@@ -379,7 +378,7 @@ license:		BSD, See included LICENSE.TXT for terms and conditions.</a><br>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_action_edit">#</a>
-			<code><a href="source-class-ManageLanguages_Controller.html#157-287" title="Go to source code">action_edit</a>( )</code>
+			<code><a href="source-class-ManageLanguages_Controller.html#158-288" title="Go to source code">action_edit</a>( )</code>
 
 			<div class="description short">
 				<p>This lists all the current languages and allows editing of them.</p>
@@ -408,7 +407,7 @@ license:		BSD, See included LICENSE.TXT for terms and conditions.</a><br>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_action_downloadlang">#</a>
-			<code><a href="source-class-ManageLanguages_Controller.html#289-625" title="Go to source code">action_downloadlang</a>( )</code>
+			<code><a href="source-class-ManageLanguages_Controller.html#290-627" title="Go to source code">action_downloadlang</a>( )</code>
 
 			<div class="description short">
 				<p>Download a language file from the website.</p>
@@ -417,11 +416,14 @@ license:		BSD, See included LICENSE.TXT for terms and conditions.</a><br>
 			<div class="description detailed hidden">
 				<p>Download a language file from the website.</p>
 
-<p>What it does:
-- Requires a valid download ID ("did") in the URL.
-- Also handles installing language files.
-- Attempts to chmod things as needed.
-- Uses a standard list to display information about all the files and where they'll be put.</p>
+<p>What it does:</p>
+
+<ul>
+<li>Requires a valid download ID ("did") in the URL.</li>
+<li>Also handles installing language files.</li>
+<li>Attempts to chmod things as needed.</li>
+<li>Uses a standard list to display information about all the files and where they'll be put.</li>
+</ul>
 
 
 
@@ -448,7 +450,7 @@ license:		BSD, See included LICENSE.TXT for terms and conditions.</a><br>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_action_editlang">#</a>
-			<code><a href="source-class-ManageLanguages_Controller.html#627-1018" title="Go to source code">action_editlang</a>( )</code>
+			<code><a href="source-class-ManageLanguages_Controller.html#629-1020" title="Go to source code">action_editlang</a>( )</code>
 
 			<div class="description short">
 				<p>Edit a particular set of language entries.</p>
@@ -477,7 +479,7 @@ license:		BSD, See included LICENSE.TXT for terms and conditions.</a><br>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_action_languageSettings_display">#</a>
-			<code><a href="source-class-ManageLanguages_Controller.html#1020-1067" title="Go to source code">action_languageSettings_display</a>( )</code>
+			<code><a href="source-class-ManageLanguages_Controller.html#1022-1069" title="Go to source code">action_languageSettings_display</a>( )</code>
 
 			<div class="description short">
 				<p>Edit language related settings.</p>
@@ -512,7 +514,7 @@ for the _languageSettings form.</li>
 
 			<td class="name"><div>
 			<a class="anchor" href="#__initLanguageSettingsForm">#</a>
-			<code><a href="source-class-ManageLanguages_Controller.html#1069-1094" title="Go to source code">_initLanguageSettingsForm</a>( )</code>
+			<code><a href="source-class-ManageLanguages_Controller.html#1071-1096" title="Go to source code">_initLanguageSettingsForm</a>( )</code>
 
 			<div class="description short">
 				<p>Administration settings for languages area:</p>
@@ -549,7 +551,7 @@ for the _languageSettings form.</li>
 
 			<td class="name"><div>
 			<a class="anchor" href="#__settings">#</a>
-			<code><a href="source-class-ManageLanguages_Controller.html#1096-1119" title="Go to source code">_settings</a>( )</code>
+			<code><a href="source-class-ManageLanguages_Controller.html#1098-1121" title="Go to source code">_settings</a>( )</code>
 
 			<div class="description short">
 				<p>Load up all of the lanaguage settings</p>
@@ -578,7 +580,7 @@ for the _languageSettings form.</li>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_settings_search">#</a>
-			<code><a href="source-class-ManageLanguages_Controller.html#1121-1127" title="Go to source code">settings_search</a>( )</code>
+			<code><a href="source-class-ManageLanguages_Controller.html#1123-1129" title="Go to source code">settings_search</a>( )</code>
 
 			<div class="description short">
 				<p>Return the form settings for use in admin search</p>
@@ -655,10 +657,10 @@ for the _languageSettings form.</li>
 	</div>
 
 	<div id="footer">
-		ElkArte 1.0.7 Documentation API documentation generated by <a href="http://apigen.org">ApiGen</a>
+		ElkArte 1.0.10 Documentation API documentation generated by <a href="http://apigen.org">ApiGen</a>
 	</div>
 </div>
 <script src="resources/combined.js"></script>
-<script src="elementlist.js"></script>
+<script src="elementlist.js?13e5afb1269be6447e403156947b1e9254b743c7"></script>
 </body>
 </html>

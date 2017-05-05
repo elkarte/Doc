@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>Class Display_Controller | ElkArte 1.0.7 Documentation</title>
+	<title>Class Display_Controller | ElkArte 1.0.10 Documentation</title>
 
 	<link rel="stylesheet" href="resources/bootstrap.min.css?973e37a8502921d56bc02bb55321f45b072b6f71">
 	<link rel="stylesheet" href="resources/style.css?70c1d062672daa3f906b72e4f5d03d4bc5c4174d">
@@ -14,7 +14,7 @@
 	<nav id="navigation" class="navbar navbar-default navbar-fixed-top">
 		<div class="container-fluid">
 			<div class="navbar-header">
-				<a href="index.html" class="navbar-brand">ElkArte 1.0.7 Documentation</a>
+				<a href="index.html" class="navbar-brand">ElkArte 1.0.10 Documentation</a>
 			</div>
 			<div class="collapse navbar-collapse">
 
@@ -39,21 +39,17 @@
 					</li>
 
 						<li>
-							<a href="annotation-group-deprecated.html" title="List of elements with deprecated annotation">
-								<span>Deprecated</span>
-							</a>
-						</li>
-						<li>
 							<a href="annotation-group-todo.html" title="List of elements with todo annotation">
 								<span>Todo</span>
 							</a>
 						</li>
+						<li>
+							<a href="annotation-group-deprecated.html" title="List of elements with deprecated annotation">
+								<span>Deprecated</span>
+							</a>
+						</li>
 
-					<li class="divider-vertical"></li>
 
-					<li>
-						<a href="-API-documentation.zip" title="Download documentation as ZIP archive"><span>Download</span></a>
-					</li>
 				</ul>
 			</div>
 		</div>
@@ -344,6 +340,7 @@
 				<li><a href="function-associatedPoll.html">associatedPoll</a></li>
 				<li><a href="function-associatedTopic.html">associatedTopic</a></li>
 				<li><a href="function-autoRotateImage.html">autoRotateImage</a></li>
+				<li><a href="function-autoRotateImageWithIM.html">autoRotateImageWithIM</a></li>
 				<li><a href="function-availableThemes.html">availableThemes</a></li>
 				<li><a href="function-basicMessageInfo.html">basicMessageInfo</a></li>
 				<li><a href="function-basicWatchedUsers.html">basicWatchedUsers</a></li>
@@ -743,6 +740,7 @@
 				<li><a href="function-sendApprovalNotifications.html">sendApprovalNotifications</a></li>
 				<li><a href="function-sendBoardNotifications.html">sendBoardNotifications</a></li>
 				<li><a href="function-sendNotifications.html">sendNotifications</a></li>
+				<li><a href="function-serializeToJson.html">serializeToJson</a></li>
 				<li><a href="function-sessionClose.html">sessionClose</a></li>
 				<li><a href="function-sessionDestroy.html">sessionDestroy</a></li>
 				<li><a href="function-sessionGC.html">sessionGC</a></li>
@@ -951,7 +949,7 @@ This software is a derived product, based on:
 Simple Machines Forum (SMF)
 copyright:	2011 Simple Machines (http://www.simplemachines.org)
 license:		BSD, See included LICENSE.TXT for terms and conditions.</a><br>
-			<b>Located at</b> <a href="source-class-Display_Controller.html#23-1012" title="Go to source code">sources/controllers/Display.controller.php</a>
+			<b>Located at</b> <a href="source-class-Display_Controller.html#23-1016" title="Go to source code">sources/controllers/Display.controller.php</a>
 		<br>
 	</div>
 
@@ -1000,7 +998,7 @@ license:		BSD, See included LICENSE.TXT for terms and conditions.</a><br>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_action_display">#</a>
-			<code><a href="source-class-Display_Controller.html#38-788" title="Go to source code">action_display</a>( )</code>
+			<code><a href="source-class-Display_Controller.html#38-792" title="Go to source code">action_display</a>( )</code>
 
 			<div class="description short">
 				<p>The central part of the board - topic display.</p>
@@ -1009,13 +1007,16 @@ license:		BSD, See included LICENSE.TXT for terms and conditions.</a><br>
 			<div class="description detailed hidden">
 				<p>The central part of the board - topic display.</p>
 
-<p>What it does:
-- This function loads the posts in a topic up so they can be displayed.
-- It uses the main sub template of the Display template.
-- It requires a topic, and can go to the previous or next topic from it.
-- It jumps to the correct post depending on a number/time/IS_MSG passed.
-- It depends on the messages_per_page, defaultMaxMessages and enableAllMessages settings.
-- It is accessed by ?topic=id_topic.START.</p>
+<p>What it does:</p>
+
+<ul>
+<li>This function loads the posts in a topic up so they can be displayed.</li>
+<li>It uses the main sub template of the Display template.</li>
+<li>It requires a topic, and can go to the previous or next topic from it.</li>
+<li>It jumps to the correct post depending on a number/time/IS_MSG passed.</li>
+<li>It depends on the messages_per_page, defaultMaxMessages and enableAllMessages settings.</li>
+<li>It is accessed by ?topic=id_topic.START.</li>
+</ul>
 
 
 
@@ -1037,7 +1038,7 @@ license:		BSD, See included LICENSE.TXT for terms and conditions.</a><br>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_action_quickmod2">#</a>
-			<code><a href="source-class-Display_Controller.html#790-863" title="Go to source code">action_quickmod2</a>( )</code>
+			<code><a href="source-class-Display_Controller.html#794-867" title="Go to source code">action_quickmod2</a>( )</code>
 
 			<div class="description short">
 				<p>In-topic quick moderation.
@@ -1068,7 +1069,7 @@ Accessed by ?action=quickmod2</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_prepareDisplayContext_callback">#</a>
-			<code><a href="source-class-Display_Controller.html#865-1011" title="Go to source code">prepareDisplayContext_callback</a>( <span>boolean <var>$reset</var> = <span class="php-keyword1">false</span></span> )</code>
+			<code><a href="source-class-Display_Controller.html#869-1015" title="Go to source code">prepareDisplayContext_callback</a>( <span>boolean <var>$reset</var> = <span class="php-keyword1">false</span></span> )</code>
 
 			<div class="description short">
 				<p>Callback for the message display.
@@ -1114,10 +1115,10 @@ useful for showing an index before or after the posts.</p>
 	</div>
 
 	<div id="footer">
-		ElkArte 1.0.7 Documentation API documentation generated by <a href="http://apigen.org">ApiGen</a>
+		ElkArte 1.0.10 Documentation API documentation generated by <a href="http://apigen.org">ApiGen</a>
 	</div>
 </div>
 <script src="resources/combined.js"></script>
-<script src="elementlist.js"></script>
+<script src="elementlist.js?13e5afb1269be6447e403156947b1e9254b743c7"></script>
 </body>
 </html>

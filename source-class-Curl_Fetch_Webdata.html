@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<meta name="robots" content="noindex">
 
-	<title>File sources/CurlFetchWebdata.class.php | ElkArte 1.0.7 Documentation</title>
+	<title>File sources/CurlFetchWebdata.class.php | ElkArte 1.0.10 Documentation</title>
 
 	<link rel="stylesheet" href="resources/bootstrap.min.css?973e37a8502921d56bc02bb55321f45b072b6f71">
 	<link rel="stylesheet" href="resources/style.css?70c1d062672daa3f906b72e4f5d03d4bc5c4174d">
@@ -15,7 +15,7 @@
 	<nav id="navigation" class="navbar navbar-default navbar-fixed-top">
 		<div class="container-fluid">
 			<div class="navbar-header">
-				<a href="index.html" class="navbar-brand">ElkArte 1.0.7 Documentation</a>
+				<a href="index.html" class="navbar-brand">ElkArte 1.0.10 Documentation</a>
 			</div>
 			<div class="collapse navbar-collapse">
 
@@ -40,21 +40,17 @@
 					</li>
 
 						<li>
-							<a href="annotation-group-deprecated.html" title="List of elements with deprecated annotation">
-								<span>Deprecated</span>
-							</a>
-						</li>
-						<li>
 							<a href="annotation-group-todo.html" title="List of elements with todo annotation">
 								<span>Todo</span>
 							</a>
 						</li>
+						<li>
+							<a href="annotation-group-deprecated.html" title="List of elements with deprecated annotation">
+								<span>Deprecated</span>
+							</a>
+						</li>
 
-					<li class="divider-vertical"></li>
 
-					<li>
-						<a href="-API-documentation.zip" title="Download documentation as ZIP archive"><span>Download</span></a>
-					</li>
 				</ul>
 			</div>
 		</div>
@@ -437,6 +433,8 @@
 				<li><a href="function-automanage_attachments_check_directory.html">automanage_attachments_check_directory</a></li>
 				<li><a href="function-automanage_attachments_create_directory.html">automanage_attachments_create_directory</a></li>
 				<li><a href="function-autoRotateImage.html">autoRotateImage</a></li>
+				<li><a href="function-autoRotateImageWithGD.html">autoRotateImageWithGD</a></li>
+				<li><a href="function-autoRotateImageWithIM.html">autoRotateImageWithIM</a></li>
 				<li><a href="function-availableThemes.html">availableThemes</a></li>
 				<li><a href="function-BanCheckUser.html">BanCheckUser</a></li>
 				<li><a href="function-banDetails.html">banDetails</a></li>
@@ -658,6 +656,7 @@
 				<li><a href="function-fetchPermissions.html">fetchPermissions</a></li>
 				<li><a href="function-fetchPerms__recursive.html">fetchPerms__recursive</a></li>
 				<li><a href="function-filter_accessible_attachment.html">filter_accessible_attachment</a></li>
+				<li><a href="function-filter_members_online.html">filter_members_online</a></li>
 				<li><a href="function-findAttachmentsToMove.html">findAttachmentsToMove</a></li>
 				<li><a href="function-findForumErrors.html">findForumErrors</a></li>
 				<li><a href="function-findMemberMention.html">findMemberMention</a></li>
@@ -681,6 +680,8 @@
 				<li><a href="function-fixTag.html">fixTag</a></li>
 				<li><a href="function-fixTags.html">fixTags</a></li>
 				<li><a href="function-fixTags_img_callback.html">fixTags_img_callback</a></li>
+				<li><a href="function-flipImageGD.html">flipImageGD</a></li>
+				<li><a href="function-flopImageGD.html">flopImageGD</a></li>
 				<li><a href="function-flushLogTables.html">flushLogTables</a></li>
 				<li><a href="function-followupTopics.html">followupTopics</a></li>
 				<li><a href="function-footnote_callback.html">footnote_callback</a></li>
@@ -913,7 +914,6 @@
 				<li><a href="function-load_user_drafts.html">load_user_drafts</a></li>
 				<li><a href="function-load_user_posts.html">load_user_posts</a></li>
 				<li><a href="function-load_user_topics.html">load_user_topics</a></li>
-				<li><a href="function-loadAllPermissions.html">loadAllPermissions</a></li>
 				<li><a href="function-loadAllSubsctiptions.html">loadAllSubsctiptions</a></li>
 				<li><a href="function-loadAssetFile.html">loadAssetFile</a></li>
 				<li><a href="function-loadAttachmentContext.html">loadAttachmentContext</a></li>
@@ -1264,6 +1264,7 @@
 				<li><a href="function-response_prefix.html">response_prefix</a></li>
 				<li><a href="function-retrieveMemberData.html">retrieveMemberData</a></li>
 				<li><a href="function-rlikeMentions.html">rlikeMentions</a></li>
+				<li><a href="function-rotateImageGD.html">rotateImageGD</a></li>
 				<li><a href="function-run_this_task.html">run_this_task</a></li>
 				<li><a href="function-sanitizeMSCutPaste.html">sanitizeMSCutPaste</a></li>
 				<li><a href="function-saveAvatar.html">saveAvatar</a></li>
@@ -1285,7 +1286,7 @@
 				<li><a href="function-sendmail.html">sendmail</a></li>
 				<li><a href="function-sendNotifications.html">sendNotifications</a></li>
 				<li><a href="function-sendpm.html">sendpm</a></li>
-				<li><a href="function-server_parse.html">server_parse</a></li>
+				<li><a href="function-serializeToJson.html">serializeToJson</a></li>
 				<li><a href="function-sessionClose.html">sessionClose</a></li>
 				<li><a href="function-sessionDestroy.html">sessionDestroy</a></li>
 				<li><a href="function-sessionGC.html">sessionGC</a></li>
@@ -1300,7 +1301,6 @@
 				<li><a href="function-setMemoryLimit.html">setMemoryLimit</a></li>
 				<li><a href="function-setPackagesAsUninstalled.html">setPackagesAsUninstalled</a></li>
 				<li><a href="function-setPackageState.html">setPackageState</a></li>
-				<li><a href="function-setPermissionLevel.html">setPermissionLevel</a></li>
 				<li><a href="function-setPMRepliedStatus.html">setPMRepliedStatus</a></li>
 				<li><a href="function-setRemovalNotice.html">setRemovalNotice</a></li>
 				<li><a href="function-setTopicAttribute.html">setTopicAttribute</a></li>
@@ -1319,7 +1319,6 @@
 				<li><a href="function-showEmailAddress.html">showEmailAddress</a></li>
 				<li><a href="function-showLetterImage.html">showLetterImage</a></li>
 				<li><a href="function-smileyExists.html">smileyExists</a></li>
-				<li><a href="function-smtp_mail.html">smtp_mail</a></li>
 				<li><a href="function-sortMessageIconTable.html" class="deprecated">sortMessageIconTable</a></li>
 				<li><a href="function-sortSmileyTable.html" class="deprecated">sortSmileyTable</a></li>
 				<li><a href="function-sortSpiderTable.html" class="deprecated">sortSpiderTable</a></li>
@@ -1536,7 +1535,7 @@
 <div id="right">
 	<div id="rightInner">
 <div id="source">
-	<pre class="numbers"><code><span class="l"><a href="#1">  1 </a></span><span class="l"><a href="#2">  2 </a></span><span class="l"><a href="#3">  3 </a></span></span><span class="l"><a href="#4">  4 </a></span></span><span class="l"><a href="#5">  5 </a></span></span><span class="l"><a href="#6">  6 </a></span></span><span class="l"><a href="#7">  7 </a></span></span><span class="l"><a href="#8">  8 </a></span></span><span class="l"><a href="#9">  9 </a></span></span><span class="l"><a href="#10"> 10 </a></span></span><span class="l"><a href="#11"> 11 </a></span></span><span class="l"><a href="#12"> 12 </a></span><span class="l"><a href="#13"> 13 </a></span><span class="l"><a href="#14"> 14 </a></span><span class="l"><a href="#15"> 15 </a></span><span class="l"><a href="#16"> 16 </a></span><span class="l"><a href="#17"> 17 </a></span></span><span class="l"><a href="#18"> 18 </a></span></span><span class="l"><a href="#19"> 19 </a></span></span><span class="l"><a href="#20"> 20 </a></span></span><span class="l"><a href="#21"> 21 </a></span></span><span class="l"><a href="#22"> 22 </a></span></span><span class="l"><a href="#23"> 23 </a></span></span><span class="l"><a href="#24"> 24 </a></span></span><span class="l"><a href="#25"> 25 </a></span></span><span class="l"><a href="#26"> 26 </a></span></span><span class="l"><a href="#27"> 27 </a></span></span><span class="l"><a href="#28"> 28 </a></span></span><span class="l"><a href="#29"> 29 </a></span></span><span class="l"><a href="#30"> 30 </a></span></span><span class="l"><a href="#31"> 31 </a></span></span><span class="l"><a href="#32"> 32 </a></span></span><span class="l"><a href="#33"> 33 </a></span></span><span class="l"><a href="#34"> 34 </a></span></span><span class="l"><a href="#35"> 35 </a></span></span><span class="l"><a href="#36"> 36 </a></span></span><span class="l"><a href="#37"> 37 </a></span></span><span class="l"><a href="#38"> 38 </a></span></span><span class="l"><a href="#39"> 39 </a></span><span class="l"><a href="#40"> 40 </a></span><span class="l"><a href="#41"> 41 </a></span><span class="l"><a href="#42"> 42 </a></span></span><span class="l"><a href="#43"> 43 </a></span></span><span class="l"><a href="#44"> 44 </a></span></span><span class="l"><a href="#45"> 45 </a></span><span class="l"><a href="#46"> 46 </a></span><span class="l"><a href="#47"> 47 </a></span><span class="l"><a href="#48"> 48 </a></span><span class="l"><a href="#49"> 49 </a></span><span class="l"><a href="#50"> 50 </a></span><span class="l"><a href="#51"> 51 </a></span><span class="l"><a href="#52"> 52 </a></span><span class="l"><a href="#53"> 53 </a></span><span class="l"><a href="#54"> 54 </a></span><span class="l"><a href="#55"> 55 </a></span><span class="l"><a href="#56"> 56 </a></span><span class="l"><a href="#57"> 57 </a></span><span class="l"><a href="#58"> 58 </a></span><span class="l"><a href="#59"> 59 </a></span><span class="l"><a href="#60"> 60 </a></span></span><span class="l"><a href="#61"> 61 </a></span></span><span class="l"><a href="#62"> 62 </a></span></span><span class="l"><a href="#63"> 63 </a></span><span class="l"><a href="#64"> 64 </a></span><span class="l"><a href="#65"> 65 </a></span><span class="l"><a href="#66"> 66 </a></span></span><span class="l"><a href="#67"> 67 </a></span></span><span class="l"><a href="#68"> 68 </a></span></span><span class="l"><a href="#69"> 69 </a></span><span class="l"><a href="#70"> 70 </a></span><span class="l"><a href="#71"> 71 </a></span><span class="l"><a href="#72"> 72 </a></span></span><span class="l"><a href="#73"> 73 </a></span></span><span class="l"><a href="#74"> 74 </a></span></span><span class="l"><a href="#75"> 75 </a></span><span class="l"><a href="#76"> 76 </a></span><span class="l"><a href="#77"> 77 </a></span><span class="l"><a href="#78"> 78 </a></span></span><span class="l"><a href="#79"> 79 </a></span></span><span class="l"><a href="#80"> 80 </a></span></span><span class="l"><a href="#81"> 81 </a></span><span class="l"><a href="#82"> 82 </a></span><span class="l"><a href="#83"> 83 </a></span><span class="l"><a href="#84"> 84 </a></span></span><span class="l"><a href="#85"> 85 </a></span></span><span class="l"><a href="#86"> 86 </a></span></span><span class="l"><a href="#87"> 87 </a></span><span class="l"><a href="#88"> 88 </a></span><span class="l"><a href="#89"> 89 </a></span><span class="l"><a href="#90"> 90 </a></span></span><span class="l"><a href="#91"> 91 </a></span></span><span class="l"><a href="#92"> 92 </a></span></span><span class="l"><a href="#93"> 93 </a></span><span class="l"><a href="#94"> 94 </a></span><span class="l"><a href="#95"> 95 </a></span><span class="l"><a href="#96"> 96 </a></span></span><span class="l"><a href="#97"> 97 </a></span></span><span class="l"><a href="#98"> 98 </a></span></span><span class="l"><a href="#99"> 99 </a></span><span class="l"><a href="#100">100 </a></span><span class="l"><a href="#101">101 </a></span><span class="l"><a href="#102">102 </a></span></span><span class="l"><a href="#103">103 </a></span></span><span class="l"><a href="#104">104 </a></span></span><span class="l"><a href="#105">105 </a></span></span><span class="l"><a href="#106">106 </a></span></span><span class="l"><a href="#107">107 </a></span></span><span class="l"><a href="#108">108 </a></span><span class="l"><a href="#109">109 </a></span><span class="l"><a href="#110">110 </a></span><span class="l"><a href="#111">111 </a></span><span class="l"><a href="#112">112 </a></span><span class="l"><a href="#113">113 </a></span><span class="l"><a href="#114">114 </a></span><span class="l"><a href="#115">115 </a></span><span class="l"><a href="#116">116 </a></span></span><span class="l"><a href="#117">117 </a></span></span><span class="l"><a href="#118">118 </a></span></span><span class="l"><a href="#119">119 </a></span></span><span class="l"><a href="#120">120 </a></span></span><span class="l"><a href="#121">121 </a></span></span><span class="l"><a href="#122">122 </a></span></span><span class="l"><a href="#123">123 </a></span></span><span class="l"><a href="#124">124 </a></span></span><span class="l"><a href="#125">125 </a></span></span><span class="l"><a href="#126">126 </a></span></span><span class="l"><a href="#127">127 </a></span><span class="l"><a href="#128">128 </a></span><span class="l"><a href="#129">129 </a></span><span class="l"><a href="#130">130 </a></span><span class="l"><a href="#131">131 </a></span><span class="l"><a href="#132">132 </a></span><span class="l"><a href="#133">133 </a></span><span class="l"><a href="#134">134 </a></span><span class="l"><a href="#135">135 </a></span><span class="l"><a href="#136">136 </a></span><span class="l"><a href="#137">137 </a></span><span class="l"><a href="#138">138 </a></span><span class="l"><a href="#139">139 </a></span><span class="l"><a href="#140">140 </a></span><span class="l"><a href="#141">141 </a></span><span class="l"><a href="#142">142 </a></span><span class="l"><a href="#143">143 </a></span></span><span class="l"><a href="#144">144 </a></span></span><span class="l"><a href="#145">145 </a></span></span><span class="l"><a href="#146">146 </a></span></span><span class="l"><a href="#147">147 </a></span></span><span class="l"><a href="#148">148 </a></span></span><span class="l"><a href="#149">149 </a></span></span><span class="l"><a href="#150">150 </a></span></span><span class="l"><a href="#151">151 </a></span></span><span class="l"><a href="#152">152 </a></span><span class="l"><a href="#153">153 </a></span><span class="l"><a href="#154">154 </a></span><span class="l"><a href="#155">155 </a></span><span class="l"><a href="#156">156 </a></span><span class="l"><a href="#157">157 </a></span><span class="l"><a href="#158">158 </a></span><span class="l"><a href="#159">159 </a></span><span class="l"><a href="#160">160 </a></span><span class="l"><a href="#161">161 </a></span><span class="l"><a href="#162">162 </a></span><span class="l"><a href="#163">163 </a></span><span class="l"><a href="#164">164 </a></span><span class="l"><a href="#165">165 </a></span><span class="l"><a href="#166">166 </a></span><span class="l"><a href="#167">167 </a></span><span class="l"><a href="#168">168 </a></span><span class="l"><a href="#169">169 </a></span><span class="l"><a href="#170">170 </a></span><span class="l"><a href="#171">171 </a></span><span class="l"><a href="#172">172 </a></span><span class="l"><a href="#173">173 </a></span><span class="l"><a href="#174">174 </a></span><span class="l"><a href="#175">175 </a></span><span class="l"><a href="#176">176 </a></span><span class="l"><a href="#177">177 </a></span><span class="l"><a href="#178">178 </a></span><span class="l"><a href="#179">179 </a></span><span class="l"><a href="#180">180 </a></span><span class="l"><a href="#181">181 </a></span><span class="l"><a href="#182">182 </a></span><span class="l"><a href="#183">183 </a></span><span class="l"><a href="#184">184 </a></span><span class="l"><a href="#185">185 </a></span><span class="l"><a href="#186">186 </a></span><span class="l"><a href="#187">187 </a></span><span class="l"><a href="#188">188 </a></span><span class="l"><a href="#189">189 </a></span><span class="l"><a href="#190">190 </a></span><span class="l"><a href="#191">191 </a></span><span class="l"><a href="#192">192 </a></span><span class="l"><a href="#193">193 </a></span><span class="l"><a href="#194">194 </a></span><span class="l"><a href="#195">195 </a></span><span class="l"><a href="#196">196 </a></span><span class="l"><a href="#197">197 </a></span><span class="l"><a href="#198">198 </a></span><span class="l"><a href="#199">199 </a></span><span class="l"><a href="#200">200 </a></span><span class="l"><a href="#201">201 </a></span><span class="l"><a href="#202">202 </a></span><span class="l"><a href="#203">203 </a></span></span><span class="l"><a href="#204">204 </a></span></span><span class="l"><a href="#205">205 </a></span></span><span class="l"><a href="#206">206 </a></span></span><span class="l"><a href="#207">207 </a></span></span><span class="l"><a href="#208">208 </a></span></span><span class="l"><a href="#209">209 </a></span><span class="l"><a href="#210">210 </a></span><span class="l"><a href="#211">211 </a></span><span class="l"><a href="#212">212 </a></span><span class="l"><a href="#213">213 </a></span><span class="l"><a href="#214">214 </a></span><span class="l"><a href="#215">215 </a></span><span class="l"><a href="#216">216 </a></span><span class="l"><a href="#217">217 </a></span><span class="l"><a href="#218">218 </a></span><span class="l"><a href="#219">219 </a></span><span class="l"><a href="#220">220 </a></span><span class="l"><a href="#221">221 </a></span><span class="l"><a href="#222">222 </a></span><span class="l"><a href="#223">223 </a></span><span class="l"><a href="#224">224 </a></span><span class="l"><a href="#225">225 </a></span><span class="l"><a href="#226">226 </a></span></span><span class="l"><a href="#227">227 </a></span></span><span class="l"><a href="#228">228 </a></span></span><span class="l"><a href="#229">229 </a></span></span><span class="l"><a href="#230">230 </a></span></span><span class="l"><a href="#231">231 </a></span></span><span class="l"><a href="#232">232 </a></span></span><span class="l"><a href="#233">233 </a></span></span><span class="l"><a href="#234">234 </a></span><span class="l"><a href="#235">235 </a></span><span class="l"><a href="#236">236 </a></span><span class="l"><a href="#237">237 </a></span><span class="l"><a href="#238">238 </a></span><span class="l"><a href="#239">239 </a></span><span class="l"><a href="#240">240 </a></span><span class="l"><a href="#241">241 </a></span><span class="l"><a href="#242">242 </a></span><span class="l"><a href="#243">243 </a></span><span class="l"><a href="#244">244 </a></span><span class="l"><a href="#245">245 </a></span><span class="l"><a href="#246">246 </a></span></span><span class="l"><a href="#247">247 </a></span></span><span class="l"><a href="#248">248 </a></span></span><span class="l"><a href="#249">249 </a></span></span><span class="l"><a href="#250">250 </a></span></span><span class="l"><a href="#251">251 </a></span></span><span class="l"><a href="#252">252 </a></span></span><span class="l"><a href="#253">253 </a></span></span><span class="l"><a href="#254">254 </a></span><span class="l"><a href="#255">255 </a></span><span class="l"><a href="#256">256 </a></span><span class="l"><a href="#257">257 </a></span><span class="l"><a href="#258">258 </a></span><span class="l"><a href="#259">259 </a></span><span class="l"><a href="#260">260 </a></span><span class="l"><a href="#261">261 </a></span><span class="l"><a href="#262">262 </a></span><span class="l"><a href="#263">263 </a></span><span class="l"><a href="#264">264 </a></span><span class="l"><a href="#265">265 </a></span><span class="l"><a href="#266">266 </a></span></span><span class="l"><a href="#267">267 </a></span></span><span class="l"><a href="#268">268 </a></span></span><span class="l"><a href="#269">269 </a></span></span><span class="l"><a href="#270">270 </a></span></span><span class="l"><a href="#271">271 </a></span></span><span class="l"><a href="#272">272 </a></span></span><span class="l"><a href="#273">273 </a></span></span><span class="l"><a href="#274">274 </a></span><span class="l"><a href="#275">275 </a></span><span class="l"><a href="#276">276 </a></span><span class="l"><a href="#277">277 </a></span><span class="l"><a href="#278">278 </a></span><span class="l"><a href="#279">279 </a></span><span class="l"><a href="#280">280 </a></span><span class="l"><a href="#281">281 </a></span><span class="l"><a href="#282">282 </a></span><span class="l"><a href="#283">283 </a></span><span class="l"><a href="#284">284 </a></span><span class="l"><a href="#285">285 </a></span><span class="l"><a href="#286">286 </a></span><span class="l"><a href="#287">287 </a></span><span class="l"><a href="#288">288 </a></span><span class="l"><a href="#289">289 </a></span><span class="l"><a href="#290">290 </a></span><span class="l"><a href="#291">291 </a></span></span><span class="l"><a href="#292">292 </a></span></span><span class="l"><a href="#293">293 </a></span></span><span class="l"><a href="#294">294 </a></span></span><span class="l"><a href="#295">295 </a></span></span><span class="l"><a href="#296">296 </a></span></span><span class="l"><a href="#297">297 </a></span><span class="l"><a href="#298">298 </a></span><span class="l"><a href="#299">299 </a></span><span class="l"><a href="#300">300 </a></span><span class="l"><a href="#301">301 </a></span><span class="l"><a href="#302">302 </a></span><span class="l"><a href="#303">303 </a></span><span class="l"><a href="#304">304 </a></span><span class="l"><a href="#305">305 </a></span><span class="l"><a href="#306">306 </a></span><span class="l"><a href="#307">307 </a></span><span class="l"><a href="#308">308 </a></span><span class="l"><a href="#309">309 </a></span><span class="l"><a href="#310">310 </a></span><span class="l"><a href="#311">311 </a></span><span class="l"><a href="#312">312 </a></span><span class="l"><a href="#313">313 </a></span><span class="l"><a href="#314">314 </a></span><span class="l"><a href="#315">315 </a></span><span class="l"><a href="#316">316 </a></span><span class="l"><a href="#317">317 </a></span><span class="l"><a href="#318">318 </a></span><span class="l"><a href="#319">319 </a></span><span class="l"><a href="#320">320 </a></span><span class="l"><a href="#321">321 </a></span></span><span class="l"><a href="#322">322 </a></span></span><span class="l"><a href="#323">323 </a></span></span><span class="l"><a href="#324">324 </a></span></span><span class="l"><a href="#325">325 </a></span></span><span class="l"><a href="#326">326 </a></span></span><span class="l"><a href="#327">327 </a></span></span><span class="l"><a href="#328">328 </a></span></span><span class="l"><a href="#329">329 </a></span><span class="l"><a href="#330">330 </a></span><span class="l"><a href="#331">331 </a></span><span class="l"><a href="#332">332 </a></span><span class="l"><a href="#333">333 </a></span><span class="l"><a href="#334">334 </a></span><span class="l"><a href="#335">335 </a></span><span class="l"><a href="#336">336 </a></span><span class="l"><a href="#337">337 </a></span><span class="l"><a href="#338">338 </a></span></span><span class="l"><a href="#339">339 </a></span></span><span class="l"><a href="#340">340 </a></span></span><span class="l"><a href="#341">341 </a></span></span><span class="l"><a href="#342">342 </a></span></span><span class="l"><a href="#343">343 </a></span></span><span class="l"><a href="#344">344 </a></span></span><span class="l"><a href="#345">345 </a></span></span><span class="l"><a href="#346">346 </a></span><span class="l"><a href="#347">347 </a></span><span class="l"><a href="#348">348 </a></span><span class="l"><a href="#349">349 </a></span><span class="l"><a href="#350">350 </a></span><span class="l"><a href="#351">351 </a></span><span class="l"><a href="#352">352 </a></span><span class="l"><a href="#353">353 </a></span><span class="l"><a href="#354">354 </a></span><span class="l"><a href="#355">355 </a></span><span class="l"><a href="#356">356 </a></span><span class="l"><a href="#357">357 </a></span><span class="l"><a href="#358">358 </a></span><span class="l"><a href="#359">359 </a></span></code></pre>
+	<pre class="numbers"><code><span class="l"><a href="#1">  1 </a></span><span class="l"><a href="#2">  2 </a></span><span class="l"><a href="#3">  3 </a></span></span><span class="l"><a href="#4">  4 </a></span></span><span class="l"><a href="#5">  5 </a></span></span><span class="l"><a href="#6">  6 </a></span></span><span class="l"><a href="#7">  7 </a></span></span><span class="l"><a href="#8">  8 </a></span></span><span class="l"><a href="#9">  9 </a></span></span><span class="l"><a href="#10"> 10 </a></span></span><span class="l"><a href="#11"> 11 </a></span></span><span class="l"><a href="#12"> 12 </a></span><span class="l"><a href="#13"> 13 </a></span><span class="l"><a href="#14"> 14 </a></span><span class="l"><a href="#15"> 15 </a></span><span class="l"><a href="#16"> 16 </a></span><span class="l"><a href="#17"> 17 </a></span></span><span class="l"><a href="#18"> 18 </a></span></span><span class="l"><a href="#19"> 19 </a></span></span><span class="l"><a href="#20"> 20 </a></span></span><span class="l"><a href="#21"> 21 </a></span></span><span class="l"><a href="#22"> 22 </a></span></span><span class="l"><a href="#23"> 23 </a></span></span><span class="l"><a href="#24"> 24 </a></span></span><span class="l"><a href="#25"> 25 </a></span></span><span class="l"><a href="#26"> 26 </a></span></span><span class="l"><a href="#27"> 27 </a></span></span><span class="l"><a href="#28"> 28 </a></span></span><span class="l"><a href="#29"> 29 </a></span></span><span class="l"><a href="#30"> 30 </a></span></span><span class="l"><a href="#31"> 31 </a></span></span><span class="l"><a href="#32"> 32 </a></span></span><span class="l"><a href="#33"> 33 </a></span></span><span class="l"><a href="#34"> 34 </a></span></span><span class="l"><a href="#35"> 35 </a></span></span><span class="l"><a href="#36"> 36 </a></span></span><span class="l"><a href="#37"> 37 </a></span></span><span class="l"><a href="#38"> 38 </a></span></span><span class="l"><a href="#39"> 39 </a></span><span class="l"><a href="#40"> 40 </a></span><span class="l"><a href="#41"> 41 </a></span><span class="l"><a href="#42"> 42 </a></span></span><span class="l"><a href="#43"> 43 </a></span></span><span class="l"><a href="#44"> 44 </a></span></span><span class="l"><a href="#45"> 45 </a></span><span class="l"><a href="#46"> 46 </a></span><span class="l"><a href="#47"> 47 </a></span><span class="l"><a href="#48"> 48 </a></span><span class="l"><a href="#49"> 49 </a></span><span class="l"><a href="#50"> 50 </a></span><span class="l"><a href="#51"> 51 </a></span><span class="l"><a href="#52"> 52 </a></span><span class="l"><a href="#53"> 53 </a></span><span class="l"><a href="#54"> 54 </a></span><span class="l"><a href="#55"> 55 </a></span><span class="l"><a href="#56"> 56 </a></span><span class="l"><a href="#57"> 57 </a></span><span class="l"><a href="#58"> 58 </a></span><span class="l"><a href="#59"> 59 </a></span><span class="l"><a href="#60"> 60 </a></span></span><span class="l"><a href="#61"> 61 </a></span></span><span class="l"><a href="#62"> 62 </a></span></span><span class="l"><a href="#63"> 63 </a></span><span class="l"><a href="#64"> 64 </a></span><span class="l"><a href="#65"> 65 </a></span><span class="l"><a href="#66"> 66 </a></span></span><span class="l"><a href="#67"> 67 </a></span></span><span class="l"><a href="#68"> 68 </a></span></span><span class="l"><a href="#69"> 69 </a></span><span class="l"><a href="#70"> 70 </a></span><span class="l"><a href="#71"> 71 </a></span><span class="l"><a href="#72"> 72 </a></span></span><span class="l"><a href="#73"> 73 </a></span></span><span class="l"><a href="#74"> 74 </a></span></span><span class="l"><a href="#75"> 75 </a></span><span class="l"><a href="#76"> 76 </a></span><span class="l"><a href="#77"> 77 </a></span><span class="l"><a href="#78"> 78 </a></span></span><span class="l"><a href="#79"> 79 </a></span></span><span class="l"><a href="#80"> 80 </a></span></span><span class="l"><a href="#81"> 81 </a></span><span class="l"><a href="#82"> 82 </a></span><span class="l"><a href="#83"> 83 </a></span><span class="l"><a href="#84"> 84 </a></span></span><span class="l"><a href="#85"> 85 </a></span></span><span class="l"><a href="#86"> 86 </a></span></span><span class="l"><a href="#87"> 87 </a></span><span class="l"><a href="#88"> 88 </a></span><span class="l"><a href="#89"> 89 </a></span><span class="l"><a href="#90"> 90 </a></span></span><span class="l"><a href="#91"> 91 </a></span></span><span class="l"><a href="#92"> 92 </a></span></span><span class="l"><a href="#93"> 93 </a></span><span class="l"><a href="#94"> 94 </a></span><span class="l"><a href="#95"> 95 </a></span><span class="l"><a href="#96"> 96 </a></span></span><span class="l"><a href="#97"> 97 </a></span></span><span class="l"><a href="#98"> 98 </a></span></span><span class="l"><a href="#99"> 99 </a></span><span class="l"><a href="#100">100 </a></span><span class="l"><a href="#101">101 </a></span><span class="l"><a href="#102">102 </a></span></span><span class="l"><a href="#103">103 </a></span></span><span class="l"><a href="#104">104 </a></span></span><span class="l"><a href="#105">105 </a></span></span><span class="l"><a href="#106">106 </a></span></span><span class="l"><a href="#107">107 </a></span></span><span class="l"><a href="#108">108 </a></span><span class="l"><a href="#109">109 </a></span><span class="l"><a href="#110">110 </a></span><span class="l"><a href="#111">111 </a></span><span class="l"><a href="#112">112 </a></span><span class="l"><a href="#113">113 </a></span><span class="l"><a href="#114">114 </a></span><span class="l"><a href="#115">115 </a></span><span class="l"><a href="#116">116 </a></span></span><span class="l"><a href="#117">117 </a></span></span><span class="l"><a href="#118">118 </a></span></span><span class="l"><a href="#119">119 </a></span></span><span class="l"><a href="#120">120 </a></span></span><span class="l"><a href="#121">121 </a></span></span><span class="l"><a href="#122">122 </a></span></span><span class="l"><a href="#123">123 </a></span></span><span class="l"><a href="#124">124 </a></span></span><span class="l"><a href="#125">125 </a></span></span><span class="l"><a href="#126">126 </a></span></span><span class="l"><a href="#127">127 </a></span></span><span class="l"><a href="#128">128 </a></span><span class="l"><a href="#129">129 </a></span><span class="l"><a href="#130">130 </a></span><span class="l"><a href="#131">131 </a></span><span class="l"><a href="#132">132 </a></span><span class="l"><a href="#133">133 </a></span><span class="l"><a href="#134">134 </a></span><span class="l"><a href="#135">135 </a></span><span class="l"><a href="#136">136 </a></span><span class="l"><a href="#137">137 </a></span><span class="l"><a href="#138">138 </a></span><span class="l"><a href="#139">139 </a></span><span class="l"><a href="#140">140 </a></span><span class="l"><a href="#141">141 </a></span><span class="l"><a href="#142">142 </a></span><span class="l"><a href="#143">143 </a></span><span class="l"><a href="#144">144 </a></span></span><span class="l"><a href="#145">145 </a></span></span><span class="l"><a href="#146">146 </a></span></span><span class="l"><a href="#147">147 </a></span></span><span class="l"><a href="#148">148 </a></span></span><span class="l"><a href="#149">149 </a></span></span><span class="l"><a href="#150">150 </a></span></span><span class="l"><a href="#151">151 </a></span></span><span class="l"><a href="#152">152 </a></span></span><span class="l"><a href="#153">153 </a></span><span class="l"><a href="#154">154 </a></span><span class="l"><a href="#155">155 </a></span><span class="l"><a href="#156">156 </a></span><span class="l"><a href="#157">157 </a></span><span class="l"><a href="#158">158 </a></span><span class="l"><a href="#159">159 </a></span><span class="l"><a href="#160">160 </a></span><span class="l"><a href="#161">161 </a></span><span class="l"><a href="#162">162 </a></span><span class="l"><a href="#163">163 </a></span><span class="l"><a href="#164">164 </a></span><span class="l"><a href="#165">165 </a></span><span class="l"><a href="#166">166 </a></span><span class="l"><a href="#167">167 </a></span><span class="l"><a href="#168">168 </a></span><span class="l"><a href="#169">169 </a></span><span class="l"><a href="#170">170 </a></span><span class="l"><a href="#171">171 </a></span><span class="l"><a href="#172">172 </a></span><span class="l"><a href="#173">173 </a></span><span class="l"><a href="#174">174 </a></span><span class="l"><a href="#175">175 </a></span><span class="l"><a href="#176">176 </a></span><span class="l"><a href="#177">177 </a></span><span class="l"><a href="#178">178 </a></span><span class="l"><a href="#179">179 </a></span><span class="l"><a href="#180">180 </a></span><span class="l"><a href="#181">181 </a></span><span class="l"><a href="#182">182 </a></span><span class="l"><a href="#183">183 </a></span><span class="l"><a href="#184">184 </a></span><span class="l"><a href="#185">185 </a></span><span class="l"><a href="#186">186 </a></span><span class="l"><a href="#187">187 </a></span><span class="l"><a href="#188">188 </a></span><span class="l"><a href="#189">189 </a></span><span class="l"><a href="#190">190 </a></span><span class="l"><a href="#191">191 </a></span><span class="l"><a href="#192">192 </a></span><span class="l"><a href="#193">193 </a></span><span class="l"><a href="#194">194 </a></span><span class="l"><a href="#195">195 </a></span><span class="l"><a href="#196">196 </a></span><span class="l"><a href="#197">197 </a></span><span class="l"><a href="#198">198 </a></span><span class="l"><a href="#199">199 </a></span><span class="l"><a href="#200">200 </a></span><span class="l"><a href="#201">201 </a></span><span class="l"><a href="#202">202 </a></span><span class="l"><a href="#203">203 </a></span><span class="l"><a href="#204">204 </a></span></span><span class="l"><a href="#205">205 </a></span></span><span class="l"><a href="#206">206 </a></span></span><span class="l"><a href="#207">207 </a></span></span><span class="l"><a href="#208">208 </a></span></span><span class="l"><a href="#209">209 </a></span></span><span class="l"><a href="#210">210 </a></span><span class="l"><a href="#211">211 </a></span><span class="l"><a href="#212">212 </a></span><span class="l"><a href="#213">213 </a></span><span class="l"><a href="#214">214 </a></span><span class="l"><a href="#215">215 </a></span><span class="l"><a href="#216">216 </a></span><span class="l"><a href="#217">217 </a></span><span class="l"><a href="#218">218 </a></span><span class="l"><a href="#219">219 </a></span><span class="l"><a href="#220">220 </a></span><span class="l"><a href="#221">221 </a></span><span class="l"><a href="#222">222 </a></span><span class="l"><a href="#223">223 </a></span><span class="l"><a href="#224">224 </a></span><span class="l"><a href="#225">225 </a></span><span class="l"><a href="#226">226 </a></span><span class="l"><a href="#227">227 </a></span></span><span class="l"><a href="#228">228 </a></span></span><span class="l"><a href="#229">229 </a></span></span><span class="l"><a href="#230">230 </a></span></span><span class="l"><a href="#231">231 </a></span></span><span class="l"><a href="#232">232 </a></span></span><span class="l"><a href="#233">233 </a></span></span><span class="l"><a href="#234">234 </a></span></span><span class="l"><a href="#235">235 </a></span></span><span class="l"><a href="#236">236 </a></span><span class="l"><a href="#237">237 </a></span><span class="l"><a href="#238">238 </a></span><span class="l"><a href="#239">239 </a></span><span class="l"><a href="#240">240 </a></span><span class="l"><a href="#241">241 </a></span><span class="l"><a href="#242">242 </a></span><span class="l"><a href="#243">243 </a></span><span class="l"><a href="#244">244 </a></span><span class="l"><a href="#245">245 </a></span><span class="l"><a href="#246">246 </a></span><span class="l"><a href="#247">247 </a></span><span class="l"><a href="#248">248 </a></span></span><span class="l"><a href="#249">249 </a></span></span><span class="l"><a href="#250">250 </a></span></span><span class="l"><a href="#251">251 </a></span></span><span class="l"><a href="#252">252 </a></span></span><span class="l"><a href="#253">253 </a></span></span><span class="l"><a href="#254">254 </a></span></span><span class="l"><a href="#255">255 </a></span></span><span class="l"><a href="#256">256 </a></span></span><span class="l"><a href="#257">257 </a></span><span class="l"><a href="#258">258 </a></span><span class="l"><a href="#259">259 </a></span><span class="l"><a href="#260">260 </a></span><span class="l"><a href="#261">261 </a></span><span class="l"><a href="#262">262 </a></span><span class="l"><a href="#263">263 </a></span><span class="l"><a href="#264">264 </a></span><span class="l"><a href="#265">265 </a></span><span class="l"><a href="#266">266 </a></span><span class="l"><a href="#267">267 </a></span><span class="l"><a href="#268">268 </a></span><span class="l"><a href="#269">269 </a></span></span><span class="l"><a href="#270">270 </a></span></span><span class="l"><a href="#271">271 </a></span></span><span class="l"><a href="#272">272 </a></span></span><span class="l"><a href="#273">273 </a></span></span><span class="l"><a href="#274">274 </a></span></span><span class="l"><a href="#275">275 </a></span></span><span class="l"><a href="#276">276 </a></span></span><span class="l"><a href="#277">277 </a></span></span><span class="l"><a href="#278">278 </a></span><span class="l"><a href="#279">279 </a></span><span class="l"><a href="#280">280 </a></span><span class="l"><a href="#281">281 </a></span><span class="l"><a href="#282">282 </a></span><span class="l"><a href="#283">283 </a></span><span class="l"><a href="#284">284 </a></span><span class="l"><a href="#285">285 </a></span><span class="l"><a href="#286">286 </a></span><span class="l"><a href="#287">287 </a></span><span class="l"><a href="#288">288 </a></span><span class="l"><a href="#289">289 </a></span><span class="l"><a href="#290">290 </a></span><span class="l"><a href="#291">291 </a></span><span class="l"><a href="#292">292 </a></span><span class="l"><a href="#293">293 </a></span><span class="l"><a href="#294">294 </a></span><span class="l"><a href="#295">295 </a></span></span><span class="l"><a href="#296">296 </a></span></span><span class="l"><a href="#297">297 </a></span></span><span class="l"><a href="#298">298 </a></span></span><span class="l"><a href="#299">299 </a></span></span><span class="l"><a href="#300">300 </a></span></span><span class="l"><a href="#301">301 </a></span></span><span class="l"><a href="#302">302 </a></span><span class="l"><a href="#303">303 </a></span><span class="l"><a href="#304">304 </a></span><span class="l"><a href="#305">305 </a></span><span class="l"><a href="#306">306 </a></span><span class="l"><a href="#307">307 </a></span><span class="l"><a href="#308">308 </a></span><span class="l"><a href="#309">309 </a></span><span class="l"><a href="#310">310 </a></span><span class="l"><a href="#311">311 </a></span><span class="l"><a href="#312">312 </a></span><span class="l"><a href="#313">313 </a></span><span class="l"><a href="#314">314 </a></span><span class="l"><a href="#315">315 </a></span><span class="l"><a href="#316">316 </a></span><span class="l"><a href="#317">317 </a></span><span class="l"><a href="#318">318 </a></span><span class="l"><a href="#319">319 </a></span><span class="l"><a href="#320">320 </a></span><span class="l"><a href="#321">321 </a></span><span class="l"><a href="#322">322 </a></span><span class="l"><a href="#323">323 </a></span><span class="l"><a href="#324">324 </a></span><span class="l"><a href="#325">325 </a></span><span class="l"><a href="#326">326 </a></span></span><span class="l"><a href="#327">327 </a></span></span><span class="l"><a href="#328">328 </a></span></span><span class="l"><a href="#329">329 </a></span></span><span class="l"><a href="#330">330 </a></span></span><span class="l"><a href="#331">331 </a></span></span><span class="l"><a href="#332">332 </a></span></span><span class="l"><a href="#333">333 </a></span></span><span class="l"><a href="#334">334 </a></span><span class="l"><a href="#335">335 </a></span><span class="l"><a href="#336">336 </a></span><span class="l"><a href="#337">337 </a></span><span class="l"><a href="#338">338 </a></span><span class="l"><a href="#339">339 </a></span><span class="l"><a href="#340">340 </a></span><span class="l"><a href="#341">341 </a></span><span class="l"><a href="#342">342 </a></span><span class="l"><a href="#343">343 </a></span></span><span class="l"><a href="#344">344 </a></span></span><span class="l"><a href="#345">345 </a></span></span><span class="l"><a href="#346">346 </a></span></span><span class="l"><a href="#347">347 </a></span></span><span class="l"><a href="#348">348 </a></span></span><span class="l"><a href="#349">349 </a></span></span><span class="l"><a href="#350">350 </a></span></span><span class="l"><a href="#351">351 </a></span></span><span class="l"><a href="#352">352 </a></span><span class="l"><a href="#353">353 </a></span><span class="l"><a href="#354">354 </a></span><span class="l"><a href="#355">355 </a></span><span class="l"><a href="#356">356 </a></span><span class="l"><a href="#357">357 </a></span><span class="l"><a href="#358">358 </a></span><span class="l"><a href="#359">359 </a></span><span class="l"><a href="#360">360 </a></span><span class="l"><a href="#361">361 </a></span><span class="l"><a href="#362">362 </a></span><span class="l"><a href="#363">363 </a></span><span class="l"><a href="#364">364 </a></span><span class="l"><a href="#365">365 </a></span><span class="l"><a href="#366">366 </a></span></code></pre>
 	<pre class="code"><code><span id="1" class="l"><span class="xlang">&lt;?php</span>
 </span><span id="2" class="l">
 </span><span id="3" class="l"><span class="php-comment">/**
@@ -1656,254 +1655,261 @@
 </span></span><span id="117" class="l"><span class="php-comment">     * Main calling function
 </span></span><span id="118" class="l"><span class="php-comment">     *
 </span></span><span id="119" class="l"><span class="php-comment">     * What it does:
-</span></span><span id="120" class="l"><span class="php-comment">     * - will request the page data from a given $url
-</span></span><span id="121" class="l"><span class="php-comment">     * - optionally will post data to the page form if post data is supplied
-</span></span><span id="122" class="l"><span class="php-comment">     * - passed arrays will be converted to a post string joined with &amp;'s
-</span></span><span id="123" class="l"><span class="php-comment">     * - calls _setOptions to set the curl opts array values based on the defaults and user input
-</span></span><span id="124" class="l"><span class="php-comment">     *
-</span></span><span id="125" class="l"><span class="php-comment">     * @param string $url the site we are going to fetch
-</span></span><span id="126" class="l"><span class="php-comment">     * @param mixed[]|string $post_data data to send in the curl request as post data
-</span></span><span id="127" class="l"><span class="php-comment">     */</span>
-</span><span id="128" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> get_url_data(<span class="php-var">$url</span>, <span class="php-var">$post_data</span> = <span class="php-keyword1">array</span>())
-</span><span id="129" class="l">    {
-</span><span id="130" class="l">        <span class="php-comment">// POSTing some data perhaps?</span>
-</span><span id="131" class="l">        <span class="php-keyword1">if</span> (!<span class="php-keyword1">empty</span>(<span class="php-var">$post_data</span>) &amp;&amp; <span class="php-keyword2">is_array</span>(<span class="php-var">$post_data</span>))
-</span><span id="132" class="l">            <span class="php-var">$this</span>-&gt;_post_data = <span class="php-var">$this</span>-&gt;_buildPostData(<span class="php-var">$post_data</span>);
-</span><span id="133" class="l">        <span class="php-keyword1">elseif</span> (!<span class="php-keyword1">empty</span>(<span class="php-var">$post_data</span>))
-</span><span id="134" class="l">            <span class="php-var">$this</span>-&gt;_post_data = <span class="php-keyword2">trim</span>(<span class="php-var">$post_data</span>);
-</span><span id="135" class="l">
-</span><span id="136" class="l">        <span class="php-comment">// Set the options and get it</span>
-</span><span id="137" class="l">        <span class="php-var">$this</span>-&gt;_setOptions();
-</span><span id="138" class="l">        <span class="php-var">$this</span>-&gt;_curlRequest(<span class="php-keyword2">str_replace</span>(<span class="php-quote">' '</span>, <span class="php-quote">'%20'</span>, <span class="php-var">$url</span>));
-</span><span id="139" class="l">
-</span><span id="140" class="l">        <span class="php-keyword1">return</span> <span class="php-var">$this</span>;
-</span><span id="141" class="l">    }
-</span><span id="142" class="l">
-</span><span id="143" class="l">    <span class="php-comment">/**
-</span></span><span id="144" class="l"><span class="php-comment">     * Makes the actual cURL call
-</span></span><span id="145" class="l"><span class="php-comment">     *
-</span></span><span id="146" class="l"><span class="php-comment">     * What it does
-</span></span><span id="147" class="l"><span class="php-comment">     * - stores responses (url, code, error, headers, body) in the response array
-</span></span><span id="148" class="l"><span class="php-comment">     * - detects 301, 302, 307 codes and will redirect to the given response header location
-</span></span><span id="149" class="l"><span class="php-comment">     *
-</span></span><span id="150" class="l"><span class="php-comment">     * @param string $url site to fetch
-</span></span><span id="151" class="l"><span class="php-comment">     * @param bool $redirect flag to indicate if this was a redirect request or not
-</span></span><span id="152" class="l"><span class="php-comment">     */</span>
-</span><span id="153" class="l">    <span class="php-keyword1">private</span> <span class="php-keyword1">function</span> _curlRequest(<span class="php-var">$url</span>, <span class="php-var">$redirect</span> = <span class="php-keyword1">false</span>)
-</span><span id="154" class="l">    {
-</span><span id="155" class="l">        <span class="php-comment">// We do have a url I hope</span>
-</span><span id="156" class="l">        <span class="php-keyword1">if</span> (<span class="php-var">$url</span> == <span class="php-quote">''</span>)
-</span><span id="157" class="l">            <span class="php-keyword1">return</span> <span class="php-keyword1">false</span>;
-</span><span id="158" class="l">        <span class="php-keyword1">else</span>
-</span><span id="159" class="l">            <span class="php-var">$this</span>-&gt;_options[CURLOPT_URL] = <span class="php-var">$url</span>;
-</span><span id="160" class="l">
-</span><span id="161" class="l">        <span class="php-comment">// If we have not already been redirected, set it up so we can</span>
-</span><span id="162" class="l">        <span class="php-keyword1">if</span> (!<span class="php-var">$redirect</span>)
-</span><span id="163" class="l">        {
-</span><span id="164" class="l">            <span class="php-var">$this</span>-&gt;_current_redirect = <span class="php-num">1</span>;
-</span><span id="165" class="l">            <span class="php-var">$this</span>-&gt;_response = <span class="php-keyword1">array</span>();
-</span><span id="166" class="l">        }
-</span><span id="167" class="l">
-</span><span id="168" class="l">        <span class="php-comment">// Initialize the curl object and make the call</span>
-</span><span id="169" class="l">        <span class="php-var">$cr</span> = <span class="php-keyword2">curl_init</span>();
-</span><span id="170" class="l">        <span class="php-keyword2">curl_setopt_array</span>(<span class="php-var">$cr</span>, <span class="php-var">$this</span>-&gt;_options);
-</span><span id="171" class="l">        <span class="php-keyword2">curl_exec</span>(<span class="php-var">$cr</span>);
-</span><span id="172" class="l">
-</span><span id="173" class="l">        <span class="php-comment">// Get what was returned</span>
-</span><span id="174" class="l">        <span class="php-var">$curl_info</span> = <span class="php-keyword2">curl_getinfo</span>(<span class="php-var">$cr</span>);
-</span><span id="175" class="l">        <span class="php-var">$curl_content</span> = <span class="php-keyword2">curl_multi_getcontent</span>(<span class="php-var">$cr</span>);
-</span><span id="176" class="l">        <span class="php-var">$url</span> = <span class="php-var">$curl_info</span>[<span class="php-quote">'url'</span>]; <span class="php-comment">// Last effective URL</span>
-</span><span id="177" class="l">        <span class="php-var">$http_code</span> = <span class="php-var">$curl_info</span>[<span class="php-quote">'http_code'</span>]; <span class="php-comment">// Last HTTP code</span>
-</span><span id="178" class="l">        <span class="php-var">$body</span> = (!<span class="php-keyword2">curl_error</span>(<span class="php-var">$cr</span>)) ? <span class="php-keyword2">substr</span>(<span class="php-var">$curl_content</span>, <span class="php-var">$curl_info</span>[<span class="php-quote">'header_size'</span>]) : <span class="php-keyword1">false</span>;
-</span><span id="179" class="l">        <span class="php-var">$error</span> = (<span class="php-keyword2">curl_error</span>(<span class="php-var">$cr</span>)) ? <span class="php-keyword2">curl_error</span>(<span class="php-var">$cr</span>) : <span class="php-keyword1">false</span>;
-</span><span id="180" class="l">
-</span><span id="181" class="l">        <span class="php-comment">// Close this request</span>
-</span><span id="182" class="l">        <span class="php-keyword2">curl_close</span>(<span class="php-var">$cr</span>);
-</span><span id="183" class="l">
-</span><span id="184" class="l">        <span class="php-comment">// Store this 'loops' data, someone may want all of these :O</span>
-</span><span id="185" class="l">        <span class="php-var">$this</span>-&gt;_response[] = <span class="php-keyword1">array</span>(
-</span><span id="186" class="l">            <span class="php-quote">'url'</span> =&gt; <span class="php-var">$url</span>,
-</span><span id="187" class="l">            <span class="php-quote">'code'</span> =&gt; <span class="php-var">$http_code</span>,
-</span><span id="188" class="l">            <span class="php-quote">'error'</span> =&gt; <span class="php-var">$error</span>,
-</span><span id="189" class="l">            <span class="php-quote">'size'</span> =&gt; !<span class="php-keyword1">empty</span>(<span class="php-var">$curl_info</span>[<span class="php-quote">'download_content_length'</span>]) ? <span class="php-var">$curl_info</span>[<span class="php-quote">'download_content_length'</span>] : <span class="php-num">0</span>,
-</span><span id="190" class="l">            <span class="php-quote">'headers'</span> =&gt; !<span class="php-keyword1">empty</span>(<span class="php-var">$this</span>-&gt;_headers) ? <span class="php-var">$this</span>-&gt;_headers : <span class="php-keyword1">false</span>,
-</span><span id="191" class="l">            <span class="php-quote">'body'</span> =&gt; <span class="php-var">$body</span>,
-</span><span id="192" class="l">        );
-</span><span id="193" class="l">
-</span><span id="194" class="l">        <span class="php-comment">// If this a redirect with a location header and we have not given up, then we play it again Sam</span>
-</span><span id="195" class="l">        <span class="php-keyword1">if</span> (<span class="php-keyword2">preg_match</span>(<span class="php-quote">'~30[127]~i'</span>, <span class="php-var">$http_code</span>) === <span class="php-num">1</span> &amp;&amp; !<span class="php-keyword1">empty</span>(<span class="php-var">$this</span>-&gt;_headers[<span class="php-quote">'location'</span>]) &amp;&amp; <span class="php-var">$this</span>-&gt;_current_redirect &lt;= <span class="php-var">$this</span>-&gt;_max_redirect)
-</span><span id="196" class="l">        {
-</span><span id="197" class="l">            <span class="php-var">$this</span>-&gt;_current_redirect++;
-</span><span id="198" class="l">            <span class="php-var">$header_location</span> = <span class="php-var">$this</span>-&gt;_getRedirectURL(<span class="php-var">$url</span>, <span class="php-var">$this</span>-&gt;_headers[<span class="php-quote">'location'</span>]);
-</span><span id="199" class="l">            <span class="php-var">$this</span>-&gt;_redirect(<span class="php-var">$header_location</span>, <span class="php-var">$url</span>);
-</span><span id="200" class="l">        }
-</span><span id="201" class="l">    }
-</span><span id="202" class="l">
-</span><span id="203" class="l">    <span class="php-comment">/**
-</span></span><span id="204" class="l"><span class="php-comment">     * Used if being redirected to ensure we have a fully qualified address
-</span></span><span id="205" class="l"><span class="php-comment">     * returns the new url location for the redirect
-</span></span><span id="206" class="l"><span class="php-comment">     *
-</span></span><span id="207" class="l"><span class="php-comment">     * @param string $last_url where we went to
-</span></span><span id="208" class="l"><span class="php-comment">     * @param string $new_url where we were redirected to
-</span></span><span id="209" class="l"><span class="php-comment">     */</span>
-</span><span id="210" class="l">    <span class="php-keyword1">private</span> <span class="php-keyword1">function</span> _getRedirectURL(<span class="php-var">$last_url</span> = <span class="php-quote">''</span>, <span class="php-var">$new_url</span> = <span class="php-quote">''</span>)
-</span><span id="211" class="l">    {
-</span><span id="212" class="l">        <span class="php-comment">// Get the elements for these urls</span>
-</span><span id="213" class="l">        <span class="php-var">$last_url_parse</span> = <span class="php-keyword2">parse_url</span>(<span class="php-var">$last_url</span>);
-</span><span id="214" class="l">        <span class="php-var">$new_url_parse</span>  = <span class="php-keyword2">parse_url</span>(<span class="php-var">$new_url</span>);
-</span><span id="215" class="l">
-</span><span id="216" class="l">        <span class="php-comment">// Redirect headers are often incomplete / relative so we need to make sure they are fully qualified</span>
-</span><span id="217" class="l">        <span class="php-var">$new_url_parse</span>[<span class="php-quote">'path'</span>] = <span class="php-keyword1">isset</span>(<span class="php-var">$new_url_parse</span>[<span class="php-quote">'path'</span>]) ? <span class="php-var">$new_url_parse</span>[<span class="php-quote">'path'</span>] : (<span class="php-keyword1">isset</span>(<span class="php-var">$new_url_parse</span>[<span class="php-quote">'host'</span>]) ? <span class="php-quote">''</span> : <span class="php-var">$last_url_parse</span>[<span class="php-quote">'path'</span>]);
-</span><span id="218" class="l">        <span class="php-var">$new_url_parse</span>[<span class="php-quote">'scheme'</span>] = <span class="php-keyword1">isset</span>(<span class="php-var">$new_url_parse</span>[<span class="php-quote">'scheme'</span>]) ? <span class="php-var">$new_url_parse</span>[<span class="php-quote">'scheme'</span>] : <span class="php-var">$last_url_parse</span>[<span class="php-quote">'scheme'</span>];
-</span><span id="219" class="l">        <span class="php-var">$new_url_parse</span>[<span class="php-quote">'host'</span>] = <span class="php-keyword1">isset</span>(<span class="php-var">$new_url_parse</span>[<span class="php-quote">'host'</span>]) ? <span class="php-var">$new_url_parse</span>[<span class="php-quote">'host'</span>] : <span class="php-var">$last_url_parse</span>[<span class="php-quote">'host'</span>];
-</span><span id="220" class="l">        <span class="php-var">$new_url_parse</span>[<span class="php-quote">'query'</span>] = <span class="php-keyword1">isset</span>(<span class="php-var">$new_url_parse</span>[<span class="php-quote">'query'</span>]) ? <span class="php-var">$new_url_parse</span>[<span class="php-quote">'query'</span>] : <span class="php-quote">''</span>;
-</span><span id="221" class="l">
-</span><span id="222" class="l">        <span class="php-comment">// Build the new URL that was in the http header</span>
-</span><span id="223" class="l">        <span class="php-keyword1">return</span> <span class="php-var">$new_url_parse</span>[<span class="php-quote">'scheme'</span>] . <span class="php-quote">'://'</span> . <span class="php-var">$new_url_parse</span>[<span class="php-quote">'host'</span>] . <span class="php-var">$new_url_parse</span>[<span class="php-quote">'path'</span>] . (!<span class="php-keyword1">empty</span>(<span class="php-var">$new_url_parse</span>[<span class="php-quote">'query'</span>]) ? <span class="php-quote">'?'</span> . <span class="php-var">$new_url_parse</span>[<span class="php-quote">'query'</span>] : <span class="php-quote">''</span>);
-</span><span id="224" class="l">    }
-</span><span id="225" class="l">
-</span><span id="226" class="l">    <span class="php-comment">/**
-</span></span><span id="227" class="l"><span class="php-comment">     * Used to return the results to the calling program
-</span></span><span id="228" class="l"><span class="php-comment">     *
-</span></span><span id="229" class="l"><span class="php-comment">     * What it does:
-</span></span><span id="230" class="l"><span class="php-comment">     * - called as -&gt;result() will return the full final array
-</span></span><span id="231" class="l"><span class="php-comment">     * - called as -&gt;result('body') to just return the page source of the result
-</span></span><span id="232" class="l"><span class="php-comment">     *
-</span></span><span id="233" class="l"><span class="php-comment">     * @param string $area used to return an area such as body, header, error
-</span></span><span id="234" class="l"><span class="php-comment">     */</span>
-</span><span id="235" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> result(<span class="php-var">$area</span> = <span class="php-quote">''</span>)
-</span><span id="236" class="l">    {
-</span><span id="237" class="l">        <span class="php-var">$max_result</span> = <span class="php-keyword2">count</span>(<span class="php-var">$this</span>-&gt;_response) - <span class="php-num">1</span>;
-</span><span id="238" class="l">
-</span><span id="239" class="l">        <span class="php-comment">// just return a specified area or the entire result?</span>
-</span><span id="240" class="l">        <span class="php-keyword1">if</span> (<span class="php-var">$area</span> == <span class="php-quote">''</span>)
-</span><span id="241" class="l">            <span class="php-keyword1">return</span> <span class="php-var">$this</span>-&gt;_response[<span class="php-var">$max_result</span>];
-</span><span id="242" class="l">        <span class="php-keyword1">else</span>
-</span><span id="243" class="l">            <span class="php-keyword1">return</span> <span class="php-keyword1">isset</span>(<span class="php-var">$this</span>-&gt;_response[<span class="php-var">$max_result</span>][<span class="php-var">$area</span>]) ? <span class="php-var">$this</span>-&gt;_response[<span class="php-var">$max_result</span>][<span class="php-var">$area</span>] : <span class="php-var">$this</span>-&gt;_response[<span class="php-var">$max_result</span>];
-</span><span id="244" class="l">    }
-</span><span id="245" class="l">
-</span><span id="246" class="l">    <span class="php-comment">/**
-</span></span><span id="247" class="l"><span class="php-comment">     * Will return all results from all loops (redirects)
-</span></span><span id="248" class="l"><span class="php-comment">     *
-</span></span><span id="249" class="l"><span class="php-comment">     * What it does:
-</span></span><span id="250" class="l"><span class="php-comment">     * - Can be called as -&gt;result_raw(x) where x is a specific loop results.
-</span></span><span id="251" class="l"><span class="php-comment">     * - Call as -&gt;result_raw() for everything.
+</span></span><span id="120" class="l"><span class="php-comment">     *
+</span></span><span id="121" class="l"><span class="php-comment">     * - will request the page data from a given $url
+</span></span><span id="122" class="l"><span class="php-comment">     * - optionally will post data to the page form if post data is supplied
+</span></span><span id="123" class="l"><span class="php-comment">     * - passed arrays will be converted to a post string joined with &amp;'s
+</span></span><span id="124" class="l"><span class="php-comment">     * - calls _setOptions to set the curl opts array values based on the defaults and user input
+</span></span><span id="125" class="l"><span class="php-comment">     *
+</span></span><span id="126" class="l"><span class="php-comment">     * @param string $url the site we are going to fetch
+</span></span><span id="127" class="l"><span class="php-comment">     * @param mixed[]|string $post_data data to send in the curl request as post data
+</span></span><span id="128" class="l"><span class="php-comment">     */</span>
+</span><span id="129" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> get_url_data(<span class="php-var">$url</span>, <span class="php-var">$post_data</span> = <span class="php-keyword1">array</span>())
+</span><span id="130" class="l">    {
+</span><span id="131" class="l">        <span class="php-comment">// POSTing some data perhaps?</span>
+</span><span id="132" class="l">        <span class="php-keyword1">if</span> (!<span class="php-keyword1">empty</span>(<span class="php-var">$post_data</span>) &amp;&amp; <span class="php-keyword2">is_array</span>(<span class="php-var">$post_data</span>))
+</span><span id="133" class="l">            <span class="php-var">$this</span>-&gt;_post_data = <span class="php-var">$this</span>-&gt;_buildPostData(<span class="php-var">$post_data</span>);
+</span><span id="134" class="l">        <span class="php-keyword1">elseif</span> (!<span class="php-keyword1">empty</span>(<span class="php-var">$post_data</span>))
+</span><span id="135" class="l">            <span class="php-var">$this</span>-&gt;_post_data = <span class="php-keyword2">trim</span>(<span class="php-var">$post_data</span>);
+</span><span id="136" class="l">
+</span><span id="137" class="l">        <span class="php-comment">// Set the options and get it</span>
+</span><span id="138" class="l">        <span class="php-var">$this</span>-&gt;_setOptions();
+</span><span id="139" class="l">        <span class="php-var">$this</span>-&gt;_curlRequest(<span class="php-keyword2">str_replace</span>(<span class="php-quote">' '</span>, <span class="php-quote">'%20'</span>, <span class="php-var">$url</span>));
+</span><span id="140" class="l">
+</span><span id="141" class="l">        <span class="php-keyword1">return</span> <span class="php-var">$this</span>;
+</span><span id="142" class="l">    }
+</span><span id="143" class="l">
+</span><span id="144" class="l">    <span class="php-comment">/**
+</span></span><span id="145" class="l"><span class="php-comment">     * Makes the actual cURL call
+</span></span><span id="146" class="l"><span class="php-comment">     *
+</span></span><span id="147" class="l"><span class="php-comment">     * What it does
+</span></span><span id="148" class="l"><span class="php-comment">     * - stores responses (url, code, error, headers, body) in the response array
+</span></span><span id="149" class="l"><span class="php-comment">     * - detects 301, 302, 307 codes and will redirect to the given response header location
+</span></span><span id="150" class="l"><span class="php-comment">     *
+</span></span><span id="151" class="l"><span class="php-comment">     * @param string $url site to fetch
+</span></span><span id="152" class="l"><span class="php-comment">     * @param bool $redirect flag to indicate if this was a redirect request or not
+</span></span><span id="153" class="l"><span class="php-comment">     */</span>
+</span><span id="154" class="l">    <span class="php-keyword1">private</span> <span class="php-keyword1">function</span> _curlRequest(<span class="php-var">$url</span>, <span class="php-var">$redirect</span> = <span class="php-keyword1">false</span>)
+</span><span id="155" class="l">    {
+</span><span id="156" class="l">        <span class="php-comment">// We do have a url I hope</span>
+</span><span id="157" class="l">        <span class="php-keyword1">if</span> (<span class="php-var">$url</span> == <span class="php-quote">''</span>)
+</span><span id="158" class="l">            <span class="php-keyword1">return</span> <span class="php-keyword1">false</span>;
+</span><span id="159" class="l">        <span class="php-keyword1">else</span>
+</span><span id="160" class="l">            <span class="php-var">$this</span>-&gt;_options[CURLOPT_URL] = <span class="php-var">$url</span>;
+</span><span id="161" class="l">
+</span><span id="162" class="l">        <span class="php-comment">// If we have not already been redirected, set it up so we can</span>
+</span><span id="163" class="l">        <span class="php-keyword1">if</span> (!<span class="php-var">$redirect</span>)
+</span><span id="164" class="l">        {
+</span><span id="165" class="l">            <span class="php-var">$this</span>-&gt;_current_redirect = <span class="php-num">1</span>;
+</span><span id="166" class="l">            <span class="php-var">$this</span>-&gt;_response = <span class="php-keyword1">array</span>();
+</span><span id="167" class="l">        }
+</span><span id="168" class="l">
+</span><span id="169" class="l">        <span class="php-comment">// Initialize the curl object and make the call</span>
+</span><span id="170" class="l">        <span class="php-var">$cr</span> = <span class="php-keyword2">curl_init</span>();
+</span><span id="171" class="l">        <span class="php-keyword2">curl_setopt_array</span>(<span class="php-var">$cr</span>, <span class="php-var">$this</span>-&gt;_options);
+</span><span id="172" class="l">        <span class="php-keyword2">curl_exec</span>(<span class="php-var">$cr</span>);
+</span><span id="173" class="l">
+</span><span id="174" class="l">        <span class="php-comment">// Get what was returned</span>
+</span><span id="175" class="l">        <span class="php-var">$curl_info</span> = <span class="php-keyword2">curl_getinfo</span>(<span class="php-var">$cr</span>);
+</span><span id="176" class="l">        <span class="php-var">$curl_content</span> = <span class="php-keyword2">curl_multi_getcontent</span>(<span class="php-var">$cr</span>);
+</span><span id="177" class="l">        <span class="php-var">$url</span> = <span class="php-var">$curl_info</span>[<span class="php-quote">'url'</span>]; <span class="php-comment">// Last effective URL</span>
+</span><span id="178" class="l">        <span class="php-var">$http_code</span> = <span class="php-var">$curl_info</span>[<span class="php-quote">'http_code'</span>]; <span class="php-comment">// Last HTTP code</span>
+</span><span id="179" class="l">        <span class="php-var">$body</span> = (!<span class="php-keyword2">curl_error</span>(<span class="php-var">$cr</span>)) ? <span class="php-keyword2">substr</span>(<span class="php-var">$curl_content</span>, <span class="php-var">$curl_info</span>[<span class="php-quote">'header_size'</span>]) : <span class="php-keyword1">false</span>;
+</span><span id="180" class="l">        <span class="php-var">$error</span> = (<span class="php-keyword2">curl_error</span>(<span class="php-var">$cr</span>)) ? <span class="php-keyword2">curl_error</span>(<span class="php-var">$cr</span>) : <span class="php-keyword1">false</span>;
+</span><span id="181" class="l">
+</span><span id="182" class="l">        <span class="php-comment">// Close this request</span>
+</span><span id="183" class="l">        <span class="php-keyword2">curl_close</span>(<span class="php-var">$cr</span>);
+</span><span id="184" class="l">
+</span><span id="185" class="l">        <span class="php-comment">// Store this 'loops' data, someone may want all of these :O</span>
+</span><span id="186" class="l">        <span class="php-var">$this</span>-&gt;_response[] = <span class="php-keyword1">array</span>(
+</span><span id="187" class="l">            <span class="php-quote">'url'</span> =&gt; <span class="php-var">$url</span>,
+</span><span id="188" class="l">            <span class="php-quote">'code'</span> =&gt; <span class="php-var">$http_code</span>,
+</span><span id="189" class="l">            <span class="php-quote">'error'</span> =&gt; <span class="php-var">$error</span>,
+</span><span id="190" class="l">            <span class="php-quote">'size'</span> =&gt; !<span class="php-keyword1">empty</span>(<span class="php-var">$curl_info</span>[<span class="php-quote">'download_content_length'</span>]) ? <span class="php-var">$curl_info</span>[<span class="php-quote">'download_content_length'</span>] : <span class="php-num">0</span>,
+</span><span id="191" class="l">            <span class="php-quote">'headers'</span> =&gt; !<span class="php-keyword1">empty</span>(<span class="php-var">$this</span>-&gt;_headers) ? <span class="php-var">$this</span>-&gt;_headers : <span class="php-keyword1">false</span>,
+</span><span id="192" class="l">            <span class="php-quote">'body'</span> =&gt; <span class="php-var">$body</span>,
+</span><span id="193" class="l">        );
+</span><span id="194" class="l">
+</span><span id="195" class="l">        <span class="php-comment">// If this a redirect with a location header and we have not given up, then we play it again Sam</span>
+</span><span id="196" class="l">        <span class="php-keyword1">if</span> (<span class="php-keyword2">preg_match</span>(<span class="php-quote">'~30[127]~i'</span>, <span class="php-var">$http_code</span>) === <span class="php-num">1</span> &amp;&amp; !<span class="php-keyword1">empty</span>(<span class="php-var">$this</span>-&gt;_headers[<span class="php-quote">'location'</span>]) &amp;&amp; <span class="php-var">$this</span>-&gt;_current_redirect &lt;= <span class="php-var">$this</span>-&gt;_max_redirect)
+</span><span id="197" class="l">        {
+</span><span id="198" class="l">            <span class="php-var">$this</span>-&gt;_current_redirect++;
+</span><span id="199" class="l">            <span class="php-var">$header_location</span> = <span class="php-var">$this</span>-&gt;_getRedirectURL(<span class="php-var">$url</span>, <span class="php-var">$this</span>-&gt;_headers[<span class="php-quote">'location'</span>]);
+</span><span id="200" class="l">            <span class="php-var">$this</span>-&gt;_redirect(<span class="php-var">$header_location</span>, <span class="php-var">$url</span>);
+</span><span id="201" class="l">        }
+</span><span id="202" class="l">    }
+</span><span id="203" class="l">
+</span><span id="204" class="l">    <span class="php-comment">/**
+</span></span><span id="205" class="l"><span class="php-comment">     * Used if being redirected to ensure we have a fully qualified address
+</span></span><span id="206" class="l"><span class="php-comment">     * returns the new url location for the redirect
+</span></span><span id="207" class="l"><span class="php-comment">     *
+</span></span><span id="208" class="l"><span class="php-comment">     * @param string $last_url where we went to
+</span></span><span id="209" class="l"><span class="php-comment">     * @param string $new_url where we were redirected to
+</span></span><span id="210" class="l"><span class="php-comment">     */</span>
+</span><span id="211" class="l">    <span class="php-keyword1">private</span> <span class="php-keyword1">function</span> _getRedirectURL(<span class="php-var">$last_url</span> = <span class="php-quote">''</span>, <span class="php-var">$new_url</span> = <span class="php-quote">''</span>)
+</span><span id="212" class="l">    {
+</span><span id="213" class="l">        <span class="php-comment">// Get the elements for these urls</span>
+</span><span id="214" class="l">        <span class="php-var">$last_url_parse</span> = <span class="php-keyword2">parse_url</span>(<span class="php-var">$last_url</span>);
+</span><span id="215" class="l">        <span class="php-var">$new_url_parse</span>  = <span class="php-keyword2">parse_url</span>(<span class="php-var">$new_url</span>);
+</span><span id="216" class="l">
+</span><span id="217" class="l">        <span class="php-comment">// Redirect headers are often incomplete / relative so we need to make sure they are fully qualified</span>
+</span><span id="218" class="l">        <span class="php-var">$new_url_parse</span>[<span class="php-quote">'path'</span>] = <span class="php-keyword1">isset</span>(<span class="php-var">$new_url_parse</span>[<span class="php-quote">'path'</span>]) ? <span class="php-var">$new_url_parse</span>[<span class="php-quote">'path'</span>] : (<span class="php-keyword1">isset</span>(<span class="php-var">$new_url_parse</span>[<span class="php-quote">'host'</span>]) ? <span class="php-quote">''</span> : <span class="php-var">$last_url_parse</span>[<span class="php-quote">'path'</span>]);
+</span><span id="219" class="l">        <span class="php-var">$new_url_parse</span>[<span class="php-quote">'scheme'</span>] = <span class="php-keyword1">isset</span>(<span class="php-var">$new_url_parse</span>[<span class="php-quote">'scheme'</span>]) ? <span class="php-var">$new_url_parse</span>[<span class="php-quote">'scheme'</span>] : <span class="php-var">$last_url_parse</span>[<span class="php-quote">'scheme'</span>];
+</span><span id="220" class="l">        <span class="php-var">$new_url_parse</span>[<span class="php-quote">'host'</span>] = <span class="php-keyword1">isset</span>(<span class="php-var">$new_url_parse</span>[<span class="php-quote">'host'</span>]) ? <span class="php-var">$new_url_parse</span>[<span class="php-quote">'host'</span>] : <span class="php-var">$last_url_parse</span>[<span class="php-quote">'host'</span>];
+</span><span id="221" class="l">        <span class="php-var">$new_url_parse</span>[<span class="php-quote">'query'</span>] = <span class="php-keyword1">isset</span>(<span class="php-var">$new_url_parse</span>[<span class="php-quote">'query'</span>]) ? <span class="php-var">$new_url_parse</span>[<span class="php-quote">'query'</span>] : <span class="php-quote">''</span>;
+</span><span id="222" class="l">
+</span><span id="223" class="l">        <span class="php-comment">// Build the new URL that was in the http header</span>
+</span><span id="224" class="l">        <span class="php-keyword1">return</span> <span class="php-var">$new_url_parse</span>[<span class="php-quote">'scheme'</span>] . <span class="php-quote">'://'</span> . <span class="php-var">$new_url_parse</span>[<span class="php-quote">'host'</span>] . <span class="php-var">$new_url_parse</span>[<span class="php-quote">'path'</span>] . (!<span class="php-keyword1">empty</span>(<span class="php-var">$new_url_parse</span>[<span class="php-quote">'query'</span>]) ? <span class="php-quote">'?'</span> . <span class="php-var">$new_url_parse</span>[<span class="php-quote">'query'</span>] : <span class="php-quote">''</span>);
+</span><span id="225" class="l">    }
+</span><span id="226" class="l">
+</span><span id="227" class="l">    <span class="php-comment">/**
+</span></span><span id="228" class="l"><span class="php-comment">     * Used to return the results to the calling program
+</span></span><span id="229" class="l"><span class="php-comment">     *
+</span></span><span id="230" class="l"><span class="php-comment">     * What it does:
+</span></span><span id="231" class="l"><span class="php-comment">     *
+</span></span><span id="232" class="l"><span class="php-comment">     * - called as -&gt;result() will return the full final array
+</span></span><span id="233" class="l"><span class="php-comment">     * - called as -&gt;result('body') to just return the page source of the result
+</span></span><span id="234" class="l"><span class="php-comment">     *
+</span></span><span id="235" class="l"><span class="php-comment">     * @param string $area used to return an area such as body, header, error
+</span></span><span id="236" class="l"><span class="php-comment">     */</span>
+</span><span id="237" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> result(<span class="php-var">$area</span> = <span class="php-quote">''</span>)
+</span><span id="238" class="l">    {
+</span><span id="239" class="l">        <span class="php-var">$max_result</span> = <span class="php-keyword2">count</span>(<span class="php-var">$this</span>-&gt;_response) - <span class="php-num">1</span>;
+</span><span id="240" class="l">
+</span><span id="241" class="l">        <span class="php-comment">// just return a specified area or the entire result?</span>
+</span><span id="242" class="l">        <span class="php-keyword1">if</span> (<span class="php-var">$area</span> == <span class="php-quote">''</span>)
+</span><span id="243" class="l">            <span class="php-keyword1">return</span> <span class="php-var">$this</span>-&gt;_response[<span class="php-var">$max_result</span>];
+</span><span id="244" class="l">        <span class="php-keyword1">else</span>
+</span><span id="245" class="l">            <span class="php-keyword1">return</span> <span class="php-keyword1">isset</span>(<span class="php-var">$this</span>-&gt;_response[<span class="php-var">$max_result</span>][<span class="php-var">$area</span>]) ? <span class="php-var">$this</span>-&gt;_response[<span class="php-var">$max_result</span>][<span class="php-var">$area</span>] : <span class="php-var">$this</span>-&gt;_response[<span class="php-var">$max_result</span>];
+</span><span id="246" class="l">    }
+</span><span id="247" class="l">
+</span><span id="248" class="l">    <span class="php-comment">/**
+</span></span><span id="249" class="l"><span class="php-comment">     * Will return all results from all loops (redirects)
+</span></span><span id="250" class="l"><span class="php-comment">     *
+</span></span><span id="251" class="l"><span class="php-comment">     * What it does:
 </span></span><span id="252" class="l"><span class="php-comment">     *
-</span></span><span id="253" class="l"><span class="php-comment">     * @param int|string $response_number
-</span></span><span id="254" class="l"><span class="php-comment">     */</span>
-</span><span id="255" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> result_raw(<span class="php-var">$response_number</span> = <span class="php-quote">''</span>)
-</span><span id="256" class="l">    {
-</span><span id="257" class="l">        <span class="php-keyword1">if</span> (!<span class="php-keyword2">is_numeric</span>(<span class="php-var">$response_number</span>))
-</span><span id="258" class="l">            <span class="php-keyword1">return</span> <span class="php-var">$this</span>-&gt;_response;
-</span><span id="259" class="l">        <span class="php-keyword1">else</span>
-</span><span id="260" class="l">        {
-</span><span id="261" class="l">            <span class="php-var">$response_number</span> = <span class="php-keyword2">min</span>(<span class="php-var">$response_number</span>, <span class="php-keyword2">count</span>(<span class="php-var">$this</span>-&gt;_response) - <span class="php-num">1</span>);
-</span><span id="262" class="l">            <span class="php-keyword1">return</span> <span class="php-var">$this</span>-&gt;_response[<span class="php-var">$response_number</span>];
-</span><span id="263" class="l">        }
-</span><span id="264" class="l">    }
-</span><span id="265" class="l">
-</span><span id="266" class="l">    <span class="php-comment">/**
-</span></span><span id="267" class="l"><span class="php-comment">     * Takes supplied POST data and url encodes it
-</span></span><span id="268" class="l"><span class="php-comment">     *
-</span></span><span id="269" class="l"><span class="php-comment">     * What it does:
-</span></span><span id="270" class="l"><span class="php-comment">     * - forms the date (for post) in to a string var=xyz&amp;var2=abc&amp;var3=123
-</span></span><span id="271" class="l"><span class="php-comment">     * - drops vars with @ since we don't support sending files (uploading)
-</span></span><span id="272" class="l"><span class="php-comment">     *
-</span></span><span id="273" class="l"><span class="php-comment">     * @param mixed[] $post_data
-</span></span><span id="274" class="l"><span class="php-comment">    */</span>
-</span><span id="275" class="l">    <span class="php-keyword1">private</span> <span class="php-keyword1">function</span> _buildPostData(<span class="php-var">$post_data</span>)
-</span><span id="276" class="l">    {
-</span><span id="277" class="l">        <span class="php-keyword1">if</span> (<span class="php-keyword2">is_array</span>(<span class="php-var">$post_data</span>))
-</span><span id="278" class="l">        {
-</span><span id="279" class="l">            <span class="php-var">$postvars</span> = <span class="php-keyword1">array</span>();
-</span><span id="280" class="l">
-</span><span id="281" class="l">            <span class="php-comment">// Build the post data, drop ones with leading @'s since those can be used to send files, we don't support that.</span>
-</span><span id="282" class="l">            <span class="php-keyword1">foreach</span> (<span class="php-var">$post_data</span> <span class="php-keyword1">as</span> <span class="php-var">$name</span> =&gt; <span class="php-var">$value</span>)
-</span><span id="283" class="l">                <span class="php-var">$postvars</span>[] = <span class="php-var">$name</span> . <span class="php-quote">'='</span> . <span class="php-keyword2">urlencode</span>(<span class="php-var">$value</span>[<span class="php-num">0</span>] == <span class="php-quote">'@'</span> ? <span class="php-quote">''</span> : <span class="php-var">$value</span>);
+</span></span><span id="253" class="l"><span class="php-comment">     * - Can be called as -&gt;result_raw(x) where x is a specific loop results.
+</span></span><span id="254" class="l"><span class="php-comment">     * - Call as -&gt;result_raw() for everything.
+</span></span><span id="255" class="l"><span class="php-comment">     *
+</span></span><span id="256" class="l"><span class="php-comment">     * @param int|string $response_number
+</span></span><span id="257" class="l"><span class="php-comment">     */</span>
+</span><span id="258" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> result_raw(<span class="php-var">$response_number</span> = <span class="php-quote">''</span>)
+</span><span id="259" class="l">    {
+</span><span id="260" class="l">        <span class="php-keyword1">if</span> (!<span class="php-keyword2">is_numeric</span>(<span class="php-var">$response_number</span>))
+</span><span id="261" class="l">            <span class="php-keyword1">return</span> <span class="php-var">$this</span>-&gt;_response;
+</span><span id="262" class="l">        <span class="php-keyword1">else</span>
+</span><span id="263" class="l">        {
+</span><span id="264" class="l">            <span class="php-var">$response_number</span> = <span class="php-keyword2">min</span>(<span class="php-var">$response_number</span>, <span class="php-keyword2">count</span>(<span class="php-var">$this</span>-&gt;_response) - <span class="php-num">1</span>);
+</span><span id="265" class="l">            <span class="php-keyword1">return</span> <span class="php-var">$this</span>-&gt;_response[<span class="php-var">$response_number</span>];
+</span><span id="266" class="l">        }
+</span><span id="267" class="l">    }
+</span><span id="268" class="l">
+</span><span id="269" class="l">    <span class="php-comment">/**
+</span></span><span id="270" class="l"><span class="php-comment">     * Takes supplied POST data and url encodes it
+</span></span><span id="271" class="l"><span class="php-comment">     *
+</span></span><span id="272" class="l"><span class="php-comment">     * What it does:
+</span></span><span id="273" class="l"><span class="php-comment">     *
+</span></span><span id="274" class="l"><span class="php-comment">     * - forms the date (for post) in to a string var=xyz&amp;var2=abc&amp;var3=123
+</span></span><span id="275" class="l"><span class="php-comment">     * - drops vars with @ since we don't support sending files (uploading)
+</span></span><span id="276" class="l"><span class="php-comment">     *
+</span></span><span id="277" class="l"><span class="php-comment">     * @param mixed[] $post_data
+</span></span><span id="278" class="l"><span class="php-comment">    */</span>
+</span><span id="279" class="l">    <span class="php-keyword1">private</span> <span class="php-keyword1">function</span> _buildPostData(<span class="php-var">$post_data</span>)
+</span><span id="280" class="l">    {
+</span><span id="281" class="l">        <span class="php-keyword1">if</span> (<span class="php-keyword2">is_array</span>(<span class="php-var">$post_data</span>))
+</span><span id="282" class="l">        {
+</span><span id="283" class="l">            <span class="php-var">$postvars</span> = <span class="php-keyword1">array</span>();
 </span><span id="284" class="l">
-</span><span id="285" class="l">            <span class="php-keyword1">return</span> <span class="php-keyword2">implode</span>(<span class="php-quote">'&amp;'</span>, <span class="php-var">$postvars</span>);
-</span><span id="286" class="l">        }
-</span><span id="287" class="l">        <span class="php-keyword1">else</span>
-</span><span id="288" class="l">            <span class="php-keyword1">return</span> <span class="php-var">$post_data</span>;
-</span><span id="289" class="l">    }
-</span><span id="290" class="l">
-</span><span id="291" class="l">    <span class="php-comment">/**
-</span></span><span id="292" class="l"><span class="php-comment">     * Sets the final cURL options for the current call
-</span></span><span id="293" class="l"><span class="php-comment">     *
-</span></span><span id="294" class="l"><span class="php-comment">     * What it does:
-</span></span><span id="295" class="l"><span class="php-comment">     * - overwrites our default values with user supplied ones or appends new user ones to what we have
-</span></span><span id="296" class="l"><span class="php-comment">     * - sets the callback function now that $this exists
-</span></span><span id="297" class="l"><span class="php-comment">     */</span>
-</span><span id="298" class="l">    <span class="php-keyword1">private</span> <span class="php-keyword1">function</span> _setOptions()
-</span><span id="299" class="l">    {
-</span><span id="300" class="l">        <span class="php-comment">// Callback to parse the returned headers, if any</span>
-</span><span id="301" class="l">        <span class="php-var">$this</span>-&gt;default_options[CURLOPT_HEADERFUNCTION] = <span class="php-keyword1">array</span>(<span class="php-var">$this</span>, <span class="php-quote">'_headerCallback'</span>);
-</span><span id="302" class="l">
-</span><span id="303" class="l">        <span class="php-comment">// Any user options to account for</span>
-</span><span id="304" class="l">        <span class="php-keyword1">if</span> (<span class="php-keyword2">is_array</span>(<span class="php-var">$this</span>-&gt;_user_options))
-</span><span id="305" class="l">        {
-</span><span id="306" class="l">            <span class="php-var">$keys</span> = <span class="php-keyword2">array_merge</span>(<span class="php-keyword2">array_keys</span>(<span class="php-var">$this</span>-&gt;default_options), <span class="php-keyword2">array_keys</span>(<span class="php-var">$this</span>-&gt;_user_options));
-</span><span id="307" class="l">            <span class="php-var">$vals</span> = <span class="php-keyword2">array_merge</span>(<span class="php-var">$this</span>-&gt;default_options, <span class="php-var">$this</span>-&gt;_user_options);
-</span><span id="308" class="l">            <span class="php-var">$this</span>-&gt;_options = <span class="php-keyword2">array_combine</span>(<span class="php-var">$keys</span>, <span class="php-var">$vals</span>);
-</span><span id="309" class="l">        }
-</span><span id="310" class="l">        <span class="php-keyword1">else</span>
-</span><span id="311" class="l">            <span class="php-var">$this</span>-&gt;_options = <span class="php-var">$this</span>-&gt;default_options;
-</span><span id="312" class="l">
-</span><span id="313" class="l">        <span class="php-comment">// POST data options, here we don't allow any override</span>
-</span><span id="314" class="l">        <span class="php-keyword1">if</span> (!<span class="php-keyword1">empty</span>(<span class="php-var">$this</span>-&gt;_post_data))
-</span><span id="315" class="l">        {
-</span><span id="316" class="l">            <span class="php-var">$this</span>-&gt;_options[CURLOPT_POST] = <span class="php-num">1</span>;
-</span><span id="317" class="l">            <span class="php-var">$this</span>-&gt;_options[CURLOPT_POSTFIELDS] = <span class="php-var">$this</span>-&gt;_post_data;
-</span><span id="318" class="l">        }
-</span><span id="319" class="l">    }
-</span><span id="320" class="l">
-</span><span id="321" class="l">    <span class="php-comment">/**
-</span></span><span id="322" class="l"><span class="php-comment">     * Called to initiate a redirect from a 301, 302 or 307 header
-</span></span><span id="323" class="l"><span class="php-comment">     *
-</span></span><span id="324" class="l"><span class="php-comment">     * What it does
-</span></span><span id="325" class="l"><span class="php-comment">     * - resets the cURL options for the loop, sets the referrer flag
-</span></span><span id="326" class="l"><span class="php-comment">     *
-</span></span><span id="327" class="l"><span class="php-comment">     * @param string $target_url
-</span></span><span id="328" class="l"><span class="php-comment">     * @param string $referer_url
-</span></span><span id="329" class="l"><span class="php-comment">     */</span>
-</span><span id="330" class="l">    <span class="php-keyword1">private</span> <span class="php-keyword1">function</span> _redirect(<span class="php-var">$target_url</span>, <span class="php-var">$referer_url</span>)
-</span><span id="331" class="l">    {
-</span><span id="332" class="l">        <span class="php-comment">// No no I last saw that over there ... really, 301, 302, 307</span>
-</span><span id="333" class="l">        <span class="php-var">$this</span>-&gt;_setOptions();
-</span><span id="334" class="l">        <span class="php-var">$this</span>-&gt;_options[CURLOPT_REFERER] = <span class="php-var">$referer_url</span>;
-</span><span id="335" class="l">        <span class="php-var">$this</span>-&gt;_curlRequest(<span class="php-var">$target_url</span>, <span class="php-keyword1">true</span>);
-</span><span id="336" class="l">    }
-</span><span id="337" class="l">
-</span><span id="338" class="l">    <span class="php-comment">/**
-</span></span><span id="339" class="l"><span class="php-comment">     * Callback function to parse returned headers
-</span></span><span id="340" class="l"><span class="php-comment">     *
-</span></span><span id="341" class="l"><span class="php-comment">     * What it does:
-</span></span><span id="342" class="l"><span class="php-comment">     * - lowercases everything to make it consistent
-</span></span><span id="343" class="l"><span class="php-comment">     *
-</span></span><span id="344" class="l"><span class="php-comment">     * @param object $cr
-</span></span><span id="345" class="l"><span class="php-comment">     * @param string $header
-</span></span><span id="346" class="l"><span class="php-comment">     */</span>
-</span><span id="347" class="l">    <span class="php-keyword1">private</span> <span class="php-keyword1">function</span> _headerCallback(<span class="php-var">$cr</span>, <span class="php-var">$header</span>)
-</span><span id="348" class="l">    {
-</span><span id="349" class="l">        <span class="php-var">$_header</span> = <span class="php-keyword2">trim</span>(<span class="php-var">$header</span>);
-</span><span id="350" class="l">        <span class="php-var">$temp</span> = <span class="php-keyword2">explode</span>(<span class="php-quote">': '</span>, <span class="php-var">$_header</span>, <span class="php-num">2</span>);
-</span><span id="351" class="l">
-</span><span id="352" class="l">        <span class="php-comment">// set proper headers only</span>
-</span><span id="353" class="l">        <span class="php-keyword1">if</span> (<span class="php-keyword1">isset</span>(<span class="php-var">$temp</span>[<span class="php-num">0</span>]) &amp;&amp; <span class="php-keyword1">isset</span>(<span class="php-var">$temp</span>[<span class="php-num">1</span>]))
-</span><span id="354" class="l">            <span class="php-var">$this</span>-&gt;_headers[<span class="php-keyword2">strtolower</span>(<span class="php-var">$temp</span>[<span class="php-num">0</span>])] = <span class="php-keyword2">trim</span>(<span class="php-var">$temp</span>[<span class="php-num">1</span>]);
-</span><span id="355" class="l">
-</span><span id="356" class="l">        <span class="php-comment">// return the length of what was *passed* unless you want a Failed writing header error ;)</span>
-</span><span id="357" class="l">        <span class="php-keyword1">return</span> <span class="php-keyword2">strlen</span>(<span class="php-var">$header</span>);
-</span><span id="358" class="l">    }
-</span><span id="359" class="l">}</span></code></pre>
+</span><span id="285" class="l">            <span class="php-comment">// Build the post data, drop ones with leading @'s since those can be used to send files, we don't support that.</span>
+</span><span id="286" class="l">            <span class="php-keyword1">foreach</span> (<span class="php-var">$post_data</span> <span class="php-keyword1">as</span> <span class="php-var">$name</span> =&gt; <span class="php-var">$value</span>)
+</span><span id="287" class="l">                <span class="php-var">$postvars</span>[] = <span class="php-var">$name</span> . <span class="php-quote">'='</span> . <span class="php-keyword2">urlencode</span>(<span class="php-var">$value</span>[<span class="php-num">0</span>] == <span class="php-quote">'@'</span> ? <span class="php-quote">''</span> : <span class="php-var">$value</span>);
+</span><span id="288" class="l">
+</span><span id="289" class="l">            <span class="php-keyword1">return</span> <span class="php-keyword2">implode</span>(<span class="php-quote">'&amp;'</span>, <span class="php-var">$postvars</span>);
+</span><span id="290" class="l">        }
+</span><span id="291" class="l">        <span class="php-keyword1">else</span>
+</span><span id="292" class="l">            <span class="php-keyword1">return</span> <span class="php-var">$post_data</span>;
+</span><span id="293" class="l">    }
+</span><span id="294" class="l">
+</span><span id="295" class="l">    <span class="php-comment">/**
+</span></span><span id="296" class="l"><span class="php-comment">     * Sets the final cURL options for the current call
+</span></span><span id="297" class="l"><span class="php-comment">     *
+</span></span><span id="298" class="l"><span class="php-comment">     * What it does:
+</span></span><span id="299" class="l"><span class="php-comment">     *
+</span></span><span id="300" class="l"><span class="php-comment">     * - overwrites our default values with user supplied ones or appends new user ones to what we have
+</span></span><span id="301" class="l"><span class="php-comment">     * - sets the callback function now that $this exists
+</span></span><span id="302" class="l"><span class="php-comment">     */</span>
+</span><span id="303" class="l">    <span class="php-keyword1">private</span> <span class="php-keyword1">function</span> _setOptions()
+</span><span id="304" class="l">    {
+</span><span id="305" class="l">        <span class="php-comment">// Callback to parse the returned headers, if any</span>
+</span><span id="306" class="l">        <span class="php-var">$this</span>-&gt;default_options[CURLOPT_HEADERFUNCTION] = <span class="php-keyword1">array</span>(<span class="php-var">$this</span>, <span class="php-quote">'_headerCallback'</span>);
+</span><span id="307" class="l">
+</span><span id="308" class="l">        <span class="php-comment">// Any user options to account for</span>
+</span><span id="309" class="l">        <span class="php-keyword1">if</span> (<span class="php-keyword2">is_array</span>(<span class="php-var">$this</span>-&gt;_user_options))
+</span><span id="310" class="l">        {
+</span><span id="311" class="l">            <span class="php-var">$keys</span> = <span class="php-keyword2">array_merge</span>(<span class="php-keyword2">array_keys</span>(<span class="php-var">$this</span>-&gt;default_options), <span class="php-keyword2">array_keys</span>(<span class="php-var">$this</span>-&gt;_user_options));
+</span><span id="312" class="l">            <span class="php-var">$vals</span> = <span class="php-keyword2">array_merge</span>(<span class="php-var">$this</span>-&gt;default_options, <span class="php-var">$this</span>-&gt;_user_options);
+</span><span id="313" class="l">            <span class="php-var">$this</span>-&gt;_options = <span class="php-keyword2">array_combine</span>(<span class="php-var">$keys</span>, <span class="php-var">$vals</span>);
+</span><span id="314" class="l">        }
+</span><span id="315" class="l">        <span class="php-keyword1">else</span>
+</span><span id="316" class="l">            <span class="php-var">$this</span>-&gt;_options = <span class="php-var">$this</span>-&gt;default_options;
+</span><span id="317" class="l">
+</span><span id="318" class="l">        <span class="php-comment">// POST data options, here we don't allow any override</span>
+</span><span id="319" class="l">        <span class="php-keyword1">if</span> (!<span class="php-keyword1">empty</span>(<span class="php-var">$this</span>-&gt;_post_data))
+</span><span id="320" class="l">        {
+</span><span id="321" class="l">            <span class="php-var">$this</span>-&gt;_options[CURLOPT_POST] = <span class="php-num">1</span>;
+</span><span id="322" class="l">            <span class="php-var">$this</span>-&gt;_options[CURLOPT_POSTFIELDS] = <span class="php-var">$this</span>-&gt;_post_data;
+</span><span id="323" class="l">        }
+</span><span id="324" class="l">    }
+</span><span id="325" class="l">
+</span><span id="326" class="l">    <span class="php-comment">/**
+</span></span><span id="327" class="l"><span class="php-comment">     * Called to initiate a redirect from a 301, 302 or 307 header
+</span></span><span id="328" class="l"><span class="php-comment">     *
+</span></span><span id="329" class="l"><span class="php-comment">     * What it does
+</span></span><span id="330" class="l"><span class="php-comment">     * - resets the cURL options for the loop, sets the referrer flag
+</span></span><span id="331" class="l"><span class="php-comment">     *
+</span></span><span id="332" class="l"><span class="php-comment">     * @param string $target_url
+</span></span><span id="333" class="l"><span class="php-comment">     * @param string $referer_url
+</span></span><span id="334" class="l"><span class="php-comment">     */</span>
+</span><span id="335" class="l">    <span class="php-keyword1">private</span> <span class="php-keyword1">function</span> _redirect(<span class="php-var">$target_url</span>, <span class="php-var">$referer_url</span>)
+</span><span id="336" class="l">    {
+</span><span id="337" class="l">        <span class="php-comment">// No no I last saw that over there ... really, 301, 302, 307</span>
+</span><span id="338" class="l">        <span class="php-var">$this</span>-&gt;_setOptions();
+</span><span id="339" class="l">        <span class="php-var">$this</span>-&gt;_options[CURLOPT_REFERER] = <span class="php-var">$referer_url</span>;
+</span><span id="340" class="l">        <span class="php-var">$this</span>-&gt;_curlRequest(<span class="php-var">$target_url</span>, <span class="php-keyword1">true</span>);
+</span><span id="341" class="l">    }
+</span><span id="342" class="l">
+</span><span id="343" class="l">    <span class="php-comment">/**
+</span></span><span id="344" class="l"><span class="php-comment">     * Callback function to parse returned headers
+</span></span><span id="345" class="l"><span class="php-comment">     *
+</span></span><span id="346" class="l"><span class="php-comment">     * What it does:
+</span></span><span id="347" class="l"><span class="php-comment">     *
+</span></span><span id="348" class="l"><span class="php-comment">     * - lowercases everything to make it consistent
+</span></span><span id="349" class="l"><span class="php-comment">     *
+</span></span><span id="350" class="l"><span class="php-comment">     * @param object $cr
+</span></span><span id="351" class="l"><span class="php-comment">     * @param string $header
+</span></span><span id="352" class="l"><span class="php-comment">     */</span>
+</span><span id="353" class="l">    <span class="php-keyword1">private</span> <span class="php-keyword1">function</span> _headerCallback(<span class="php-var">$cr</span>, <span class="php-var">$header</span>)
+</span><span id="354" class="l">    {
+</span><span id="355" class="l">        <span class="php-var">$_header</span> = <span class="php-keyword2">trim</span>(<span class="php-var">$header</span>);
+</span><span id="356" class="l">        <span class="php-var">$temp</span> = <span class="php-keyword2">explode</span>(<span class="php-quote">': '</span>, <span class="php-var">$_header</span>, <span class="php-num">2</span>);
+</span><span id="357" class="l">
+</span><span id="358" class="l">        <span class="php-comment">// set proper headers only</span>
+</span><span id="359" class="l">        <span class="php-keyword1">if</span> (<span class="php-keyword1">isset</span>(<span class="php-var">$temp</span>[<span class="php-num">0</span>]) &amp;&amp; <span class="php-keyword1">isset</span>(<span class="php-var">$temp</span>[<span class="php-num">1</span>]))
+</span><span id="360" class="l">            <span class="php-var">$this</span>-&gt;_headers[<span class="php-keyword2">strtolower</span>(<span class="php-var">$temp</span>[<span class="php-num">0</span>])] = <span class="php-keyword2">trim</span>(<span class="php-var">$temp</span>[<span class="php-num">1</span>]);
+</span><span id="361" class="l">
+</span><span id="362" class="l">        <span class="php-comment">// return the length of what was *passed* unless you want a Failed writing header error ;)</span>
+</span><span id="363" class="l">        <span class="php-keyword1">return</span> <span class="php-keyword2">strlen</span>(<span class="php-var">$header</span>);
+</span><span id="364" class="l">    }
+</span><span id="365" class="l">}
+</span><span id="366" class="l"></span></code></pre>
 </div>
 	</div>
 
 	<div id="footer">
-		ElkArte 1.0.7 Documentation API documentation generated by <a href="http://apigen.org">ApiGen</a>
+		ElkArte 1.0.10 Documentation API documentation generated by <a href="http://apigen.org">ApiGen</a>
 	</div>
 </div>
-<script src="resources/combined.js?4b00732ce0340a2e67fb74c587c1d96491e067bc"></script>
-<script src="elementlist.js?451d275addfb941a2849699d5d5defa91056a858"></script>
+<script src="resources/combined.js?33f7621ed1d52ea578c8c2b7910da64276fe7e91"></script>
+<script src="elementlist.js?13e5afb1269be6447e403156947b1e9254b743c7"></script>
 </body>
 </html>

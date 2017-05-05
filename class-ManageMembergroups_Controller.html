@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>Class ManageMembergroups_Controller | ElkArte 1.0.7 Documentation</title>
+	<title>Class ManageMembergroups_Controller | ElkArte 1.0.10 Documentation</title>
 
 	<link rel="stylesheet" href="resources/bootstrap.min.css?973e37a8502921d56bc02bb55321f45b072b6f71">
 	<link rel="stylesheet" href="resources/style.css?70c1d062672daa3f906b72e4f5d03d4bc5c4174d">
@@ -14,7 +14,7 @@
 	<nav id="navigation" class="navbar navbar-default navbar-fixed-top">
 		<div class="container-fluid">
 			<div class="navbar-header">
-				<a href="index.html" class="navbar-brand">ElkArte 1.0.7 Documentation</a>
+				<a href="index.html" class="navbar-brand">ElkArte 1.0.10 Documentation</a>
 			</div>
 			<div class="collapse navbar-collapse">
 
@@ -39,21 +39,17 @@
 					</li>
 
 						<li>
-							<a href="annotation-group-deprecated.html" title="List of elements with deprecated annotation">
-								<span>Deprecated</span>
-							</a>
-						</li>
-						<li>
 							<a href="annotation-group-todo.html" title="List of elements with todo annotation">
 								<span>Todo</span>
 							</a>
 						</li>
+						<li>
+							<a href="annotation-group-deprecated.html" title="List of elements with deprecated annotation">
+								<span>Deprecated</span>
+							</a>
+						</li>
 
-					<li class="divider-vertical"></li>
 
-					<li>
-						<a href="-API-documentation.zip" title="Download documentation as ZIP archive"><span>Download</span></a>
-					</li>
 				</ul>
 			</div>
 		</div>
@@ -315,7 +311,7 @@ This software is a derived product, based on:
 Simple Machines Forum (SMF)
 copyright:	2011 Simple Machines (http://www.simplemachines.org)
 license:		BSD, See included LICENSE.TXT for terms and conditions.</a><br>
-			<b>Located at</b> <a href="source-class-ManageMembergroups_Controller.html#23-854" title="Go to source code">sources/admin/ManageMembergroups.controller.php</a>
+			<b>Located at</b> <a href="source-class-ManageMembergroups_Controller.html#23-860" title="Go to source code">sources/admin/ManageMembergroups.controller.php</a>
 		<br>
 	</div>
 
@@ -335,7 +331,7 @@ license:		BSD, See included LICENSE.TXT for terms and conditions.</a><br>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_action_index">#</a>
-			<code><a href="source-class-ManageMembergroups_Controller.html#36-107" title="Go to source code">action_index</a>( )</code>
+			<code><a href="source-class-ManageMembergroups_Controller.html#36-108" title="Go to source code">action_index</a>( )</code>
 
 			<div class="description short">
 				<p>Main dispatcher, the entrance point for all 'Manage Membergroup' actions.</p>
@@ -344,11 +340,14 @@ license:		BSD, See included LICENSE.TXT for terms and conditions.</a><br>
 			<div class="description detailed hidden">
 				<p>Main dispatcher, the entrance point for all 'Manage Membergroup' actions.</p>
 
-<p>What it does:
-- It forwards to a function based on the given subaction, default being subaction 'index', or, without manage_membergroup
-permissions, then 'settings'.
-- Called by ?action=admin;area=membergroups.
-- Requires the manage_membergroups or the admin_forum permission.</p>
+<p>What it does:</p>
+
+<ul>
+<li>It forwards to a function based on the given subaction, default being subaction 'index', or, without manage_membergroup
+permissions, then 'settings'.</li>
+<li>Called by ?action=admin;area=membergroups.</li>
+<li>Requires the manage_membergroups or the admin_forum permission.</li>
+</ul>
 
 
 
@@ -356,7 +355,7 @@ permissions, then 'settings'.
 
 					<h4>See</h4>
 					<div class="list">
-							<code><a href="class-Action_Controller.html#_action_index">Action_Controller::action_index()</a></code><br>
+							Action_Controller::action_index()<br>
 					</div>
 					<h4>Uses</h4>
 					<div class="list">
@@ -379,7 +378,7 @@ permissions, then 'settings'.
 
 			<td class="name"><div>
 			<a class="anchor" href="#_action_list">#</a>
-			<code><a href="source-class-ManageMembergroups_Controller.html#109-339" title="Go to source code">action_list</a>( )</code>
+			<code><a href="source-class-ManageMembergroups_Controller.html#110-341" title="Go to source code">action_list</a>( )</code>
 
 			<div class="description short">
 				<p>Shows an overview of the current membergroups.</p>
@@ -388,11 +387,14 @@ permissions, then 'settings'.
 			<div class="description detailed hidden">
 				<p>Shows an overview of the current membergroups.</p>
 
-<p>What it does:
-- Called by ?action=admin;area=membergroups.
-- Requires the manage_membergroups permission.
-- Splits the membergroups in regular ones and post count based groups.
-- It also counts the number of members part of each membergroup.</p>
+<p>What it does:</p>
+
+<ul>
+<li>Called by ?action=admin;area=membergroups.</li>
+<li>Requires the manage_membergroups permission.</li>
+<li>Splits the membergroups in regular ones and post count based groups.</li>
+<li>It also counts the number of members part of each membergroup.</li>
+</ul>
 
 
 
@@ -418,7 +420,7 @@ permissions, then 'settings'.
 
 			<td class="name"><div>
 			<a class="anchor" href="#_action_add">#</a>
-			<code><a href="source-class-ManageMembergroups_Controller.html#341-477" title="Go to source code">action_add</a>( )</code>
+			<code><a href="source-class-ManageMembergroups_Controller.html#343-480" title="Go to source code">action_add</a>( )</code>
 
 			<div class="description short">
 				<p>This function handles adding a membergroup and setting some initial properties.</p>
@@ -427,8 +429,9 @@ permissions, then 'settings'.
 			<div class="description detailed hidden">
 				<p>This function handles adding a membergroup and setting some initial properties.</p>
 
-<p>What it does:
--Called by ?action=admin;area=membergroups;sa=add.
+<p>What it does:</p>
+
+<p>-Called by ?action=admin;area=membergroups;sa=add.
 -It requires the manage_membergroups permission.
 -Allows to use a predefined permission profile or copy one from another group.
 -Redirects to action=admin;area=membergroups;sa=edit;group=x.</p>
@@ -457,7 +460,7 @@ permissions, then 'settings'.
 
 			<td class="name"><div>
 			<a class="anchor" href="#_action_delete">#</a>
-			<code><a href="source-class-ManageMembergroups_Controller.html#479-498" title="Go to source code">action_delete</a>( )</code>
+			<code><a href="source-class-ManageMembergroups_Controller.html#482-502" title="Go to source code">action_delete</a>( )</code>
 
 			<div class="description short">
 				<p>Deleting a membergroup by URL (not implemented).</p>
@@ -466,10 +469,13 @@ permissions, then 'settings'.
 			<div class="description detailed hidden">
 				<p>Deleting a membergroup by URL (not implemented).</p>
 
-<p>What it does:
-- Called by ?action=admin;area=membergroups;sa=delete;group=x;session_var=y.
-- Requires the manage_membergroups permission.
-- Redirects to ?action=admin;area=membergroups.</p>
+<p>What it does:</p>
+
+<ul>
+<li>Called by ?action=admin;area=membergroups;sa=delete;group=x;session_var=y.</li>
+<li>Requires the manage_membergroups permission.</li>
+<li>Redirects to ?action=admin;area=membergroups.</li>
+</ul>
 
 
 
@@ -495,7 +501,7 @@ permissions, then 'settings'.
 
 			<td class="name"><div>
 			<a class="anchor" href="#_action_edit">#</a>
-			<code><a href="source-class-ManageMembergroups_Controller.html#500-767" title="Go to source code">action_edit</a>( )</code>
+			<code><a href="source-class-ManageMembergroups_Controller.html#504-772" title="Go to source code">action_edit</a>( )</code>
 
 			<div class="description short">
 				<p>Editing a membergroup.</p>
@@ -504,12 +510,15 @@ permissions, then 'settings'.
 			<div class="description detailed hidden">
 				<p>Editing a membergroup.</p>
 
-<p>What it does:
-- Screen to edit a specific membergroup.
-- Called by ?action=admin;area=membergroups;sa=edit;group=x.
-- It requires the manage_membergroups permission.
-- Also handles the delete button of the edit form.
-- Redirects to ?action=admin;area=membergroups.</p>
+<p>What it does:</p>
+
+<ul>
+<li>Screen to edit a specific membergroup.</li>
+<li>Called by ?action=admin;area=membergroups;sa=edit;group=x.</li>
+<li>It requires the manage_membergroups permission.</li>
+<li>Also handles the delete button of the edit form.</li>
+<li>Redirects to ?action=admin;area=membergroups.</li>
+</ul>
 
 
 
@@ -535,7 +544,7 @@ permissions, then 'settings'.
 
 			<td class="name"><div>
 			<a class="anchor" href="#_action_groupSettings_display">#</a>
-			<code><a href="source-class-ManageMembergroups_Controller.html#769-815" title="Go to source code">action_groupSettings_display</a>( )</code>
+			<code><a href="source-class-ManageMembergroups_Controller.html#774-821" title="Go to source code">action_groupSettings_display</a>( )</code>
 
 			<div class="description short">
 				<p>Set some general membergroup settings and permissions.</p>
@@ -544,10 +553,13 @@ permissions, then 'settings'.
 			<div class="description detailed hidden">
 				<p>Set some general membergroup settings and permissions.</p>
 
-<p>What it does:
-- Called by ?action=admin;area=membergroups;sa=settings
-- Requires the admin_forum permission (and manage_permissions for changing permissions)
-- Redirects to itself.</p>
+<p>What it does:</p>
+
+<ul>
+<li>Called by ?action=admin;area=membergroups;sa=settings</li>
+<li>Requires the admin_forum permission (and manage_permissions for changing permissions)</li>
+<li>Redirects to itself.</li>
+</ul>
 
 
 
@@ -573,7 +585,7 @@ permissions, then 'settings'.
 
 			<td class="name"><div>
 			<a class="anchor" href="#__initGroupSettingsForm">#</a>
-			<code><a href="source-class-ManageMembergroups_Controller.html#817-829" title="Go to source code">_initGroupSettingsForm</a>( )</code>
+			<code><a href="source-class-ManageMembergroups_Controller.html#823-835" title="Go to source code">_initGroupSettingsForm</a>( )</code>
 
 			<div class="description short">
 				<p>Return the configuration settings for membergroups management.</p>
@@ -602,7 +614,7 @@ permissions, then 'settings'.
 
 			<td class="name"><div>
 			<a class="anchor" href="#__settings">#</a>
-			<code><a href="source-class-ManageMembergroups_Controller.html#831-845" title="Go to source code">_settings</a>( )</code>
+			<code><a href="source-class-ManageMembergroups_Controller.html#837-851" title="Go to source code">_settings</a>( )</code>
 
 			<div class="description short">
 				<p>Return the configuration settings for membergroups management.</p>
@@ -631,7 +643,7 @@ permissions, then 'settings'.
 
 			<td class="name"><div>
 			<a class="anchor" href="#_settings_search">#</a>
-			<code><a href="source-class-ManageMembergroups_Controller.html#847-853" title="Go to source code">settings_search</a>( )</code>
+			<code><a href="source-class-ManageMembergroups_Controller.html#853-859" title="Go to source code">settings_search</a>( )</code>
 
 			<div class="description short">
 				<p>Return the form settings for use in admin search</p>
@@ -708,10 +720,10 @@ permissions, then 'settings'.
 	</div>
 
 	<div id="footer">
-		ElkArte 1.0.7 Documentation API documentation generated by <a href="http://apigen.org">ApiGen</a>
+		ElkArte 1.0.10 Documentation API documentation generated by <a href="http://apigen.org">ApiGen</a>
 	</div>
 </div>
 <script src="resources/combined.js"></script>
-<script src="elementlist.js"></script>
+<script src="elementlist.js?13e5afb1269be6447e403156947b1e9254b743c7"></script>
 </body>
 </html>

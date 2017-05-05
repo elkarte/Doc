@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>Class Sphinxql_Search | ElkArte 1.0.7 Documentation</title>
+	<title>Class Sphinxql_Search | ElkArte 1.0.10 Documentation</title>
 
 	<link rel="stylesheet" href="resources/bootstrap.min.css?973e37a8502921d56bc02bb55321f45b072b6f71">
 	<link rel="stylesheet" href="resources/style.css?70c1d062672daa3f906b72e4f5d03d4bc5c4174d">
@@ -14,7 +14,7 @@
 	<nav id="navigation" class="navbar navbar-default navbar-fixed-top">
 		<div class="container-fluid">
 			<div class="navbar-header">
-				<a href="index.html" class="navbar-brand">ElkArte 1.0.7 Documentation</a>
+				<a href="index.html" class="navbar-brand">ElkArte 1.0.10 Documentation</a>
 			</div>
 			<div class="collapse navbar-collapse">
 
@@ -39,21 +39,17 @@
 					</li>
 
 						<li>
-							<a href="annotation-group-deprecated.html" title="List of elements with deprecated annotation">
-								<span>Deprecated</span>
-							</a>
-						</li>
-						<li>
 							<a href="annotation-group-todo.html" title="List of elements with todo annotation">
 								<span>Todo</span>
 							</a>
 						</li>
+						<li>
+							<a href="annotation-group-deprecated.html" title="List of elements with deprecated annotation">
+								<span>Deprecated</span>
+							</a>
+						</li>
 
-					<li class="divider-vertical"></li>
 
-					<li>
-						<a href="-API-documentation.zip" title="Download documentation as ZIP archive"><span>Download</span></a>
-					</li>
 				</ul>
 			</div>
 		</div>
@@ -254,10 +250,13 @@
 	<div class="description">
 	<p>SearchAPI-Sphinxql.class.php, SphinxQL API,</p>
 
-<p>What it does:
-- Used when an Sphinx search daemon is running
-- Access is via Sphinx's own implementation of MySQL network protocol (SphinxQL)
-- requires Sphinx 2 or higher</p>
+<p>What it does:</p>
+
+<ul>
+<li>Used when an Sphinx search daemon is running</li>
+<li>Access is via Sphinx's own implementation of MySQL network protocol (SphinxQL)</li>
+<li>requires Sphinx 2 or higher</li>
+</ul>
 	</div>
 
 
@@ -284,7 +283,7 @@ This software is a derived product, based on:
 Simple Machines Forum (SMF)
 copyright:	2011 Simple Machines (http://www.simplemachines.org)
 license:  	BSD, See included LICENSE.TXT for terms and conditions.</a><br>
-			<b>Located at</b> <a href="source-class-Sphinxql_Search.html#24-394" title="Go to source code">sources/subs/SearchAPI-Sphinxql.class.php</a>
+			<b>Located at</b> <a href="source-class-Sphinxql_Search.html#24-396" title="Go to source code">sources/subs/SearchAPI-Sphinxql.class.php</a>
 		<br>
 	</div>
 
@@ -304,7 +303,7 @@ license:  	BSD, See included LICENSE.TXT for terms and conditions.</a><br>
 
 			<td class="name"><div>
 			<a class="anchor" href="#___construct">#</a>
-			<code><a href="source-class-Sphinxql_Search.html#72-87" title="Go to source code">__construct</a>( )</code>
+			<code><a href="source-class-Sphinxql_Search.html#73-88" title="Go to source code">__construct</a>( )</code>
 
 			<div class="description short">
 				<p>Nothing to do ...</p>
@@ -333,7 +332,7 @@ license:  	BSD, See included LICENSE.TXT for terms and conditions.</a><br>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_supportsMethod">#</a>
-			<code><a href="source-class-Sphinxql_Search.html#89-111" title="Go to source code">supportsMethod</a>( <span>string <var>$methodName</var></span>, <span>string|null <var>$query_params</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-Sphinxql_Search.html#90-112" title="Go to source code">supportsMethod</a>( <span>string <var>$methodName</var></span>, <span>string|null <var>$query_params</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				<p>Check whether the method can be performed by this API.</p>
@@ -369,7 +368,7 @@ license:  	BSD, See included LICENSE.TXT for terms and conditions.</a><br>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_isValid">#</a>
-			<code><a href="source-class-Sphinxql_Search.html#113-121" title="Go to source code">isValid</a>( )</code>
+			<code><a href="source-class-Sphinxql_Search.html#114-122" title="Go to source code">isValid</a>( )</code>
 
 			<div class="description short">
 				<p>If the settings don't exist we can't continue.</p>
@@ -398,7 +397,7 @@ license:  	BSD, See included LICENSE.TXT for terms and conditions.</a><br>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_searchSort">#</a>
-			<code><a href="source-class-Sphinxql_Search.html#123-140" title="Go to source code">searchSort</a>( <span>string <var>$a</var></span>, <span>string <var>$b</var></span> )</code>
+			<code><a href="source-class-Sphinxql_Search.html#124-141" title="Go to source code">searchSort</a>( <span>string <var>$a</var></span>, <span>string <var>$b</var></span> )</code>
 
 			<div class="description short">
 				<p>callback function for usort used to sort the results.
@@ -442,7 +441,7 @@ are excluded from the search, small words that are excluded.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_prepareIndexes">#</a>
-			<code><a href="source-class-Sphinxql_Search.html#142-158" title="Go to source code">prepareIndexes</a>( <span>string[] <var>$word</var></span>, <span>mixed[] <var>&amp; $wordsSearch</var></span>, <span>string[] <var>&amp; $wordsExclude</var></span>, <span>boolean <var>$isExcluded</var></span> )</code>
+			<code><a href="source-class-Sphinxql_Search.html#143-159" title="Go to source code">prepareIndexes</a>( <span>string[] <var>$word</var></span>, <span>mixed[] <var>&amp; $wordsSearch</var></span>, <span>string[] <var>&amp; $wordsExclude</var></span>, <span>boolean <var>$isExcluded</var></span> )</code>
 
 			<div class="description short">
 				<p>Do we have to do some work with the words we are searching for to prepare them?</p>
@@ -482,7 +481,7 @@ are excluded from the search, small words that are excluded.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_searchQuery">#</a>
-			<code><a href="source-class-Sphinxql_Search.html#160-289" title="Go to source code">searchQuery</a>( <span>mixed[] <var>$search_params</var></span>, <span>mixed[] <var>$search_words</var></span>, <span>string[] <var>$excluded_words</var></span>, <span>int[] <var>&amp; $participants</var></span>, <span>string[] <var>&amp; $search_results</var></span> )</code>
+			<code><a href="source-class-Sphinxql_Search.html#161-291" title="Go to source code">searchQuery</a>( <span>mixed[] <var>$search_params</var></span>, <span>mixed[] <var>$search_words</var></span>, <span>string[] <var>$excluded_words</var></span>, <span>int[] <var>&amp; $participants</var></span>, <span>string[] <var>&amp; $search_results</var></span> )</code>
 
 			<div class="description short">
 				<p>This has it's own custom search.</p>
@@ -524,7 +523,7 @@ are excluded from the search, small words that are excluded.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#__constructQuery">#</a>
-			<code><a href="source-class-Sphinxql_Search.html#291-370" title="Go to source code">_constructQuery</a>( <span>string <var>$string</var></span> )</code>
+			<code><a href="source-class-Sphinxql_Search.html#293-372" title="Go to source code">_constructQuery</a>( <span>string <var>$string</var></span> )</code>
 
 			<div class="description short">
 				<p>Constructs a binary mode query to pass back to sphinx</p>
@@ -562,7 +561,7 @@ are excluded from the search, small words that are excluded.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#__cleanString">#</a>
-			<code><a href="source-class-Sphinxql_Search.html#372-393" title="Go to source code">_cleanString</a>( <span>string <var>$string</var></span> )</code>
+			<code><a href="source-class-Sphinxql_Search.html#374-395" title="Go to source code">_cleanString</a>( <span>string <var>$string</var></span> )</code>
 
 			<div class="description short">
 				<p>Cleans a string of everything but alphanumeric characters</p>
@@ -612,7 +611,7 @@ are excluded from the search, small words that are excluded.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Sphinxql_Search.html#36-40" title="Go to source code"><var>$version_compatible</var></a>
+					<a href="source-class-Sphinxql_Search.html#37-41" title="Go to source code"><var>$version_compatible</var></a>
 
 				<div class="description short">
 					<p>This is the last version of ElkArte that this was tested on, to protect against API changes.</p>
@@ -637,7 +636,7 @@ are excluded from the search, small words that are excluded.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Sphinxql_Search.html#42-46" title="Go to source code"><var>$min_elk_version</var></a>
+					<a href="source-class-Sphinxql_Search.html#43-47" title="Go to source code"><var>$min_elk_version</var></a>
 
 				<div class="description short">
 					<p>This won't work with versions of ElkArte less than this.</p>
@@ -662,7 +661,7 @@ are excluded from the search, small words that are excluded.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Sphinxql_Search.html#48-52" title="Go to source code"><var>$is_supported</var></a>
+					<a href="source-class-Sphinxql_Search.html#49-53" title="Go to source code"><var>$is_supported</var></a>
 
 				<div class="description short">
 					<p>Is it supported?</p>
@@ -687,7 +686,7 @@ are excluded from the search, small words that are excluded.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Sphinxql_Search.html#54-58" title="Go to source code"><var>$bannedWords</var></a>
+					<a href="source-class-Sphinxql_Search.html#55-59" title="Go to source code"><var>$bannedWords</var></a>
 
 				<div class="description short">
 					<p>What words are banned?</p>
@@ -712,7 +711,7 @@ are excluded from the search, small words that are excluded.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Sphinxql_Search.html#60-64" title="Go to source code"><var>$min_word_length</var></a>
+					<a href="source-class-Sphinxql_Search.html#61-65" title="Go to source code"><var>$min_word_length</var></a>
 
 				<div class="description short">
 					<p>What is the minimum word length?</p>
@@ -737,7 +736,7 @@ are excluded from the search, small words that are excluded.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Sphinxql_Search.html#66-70" title="Go to source code"><var>$supported_databases</var></a>
+					<a href="source-class-Sphinxql_Search.html#67-71" title="Go to source code"><var>$supported_databases</var></a>
 
 				<div class="description short">
 					<p>What databases are supported?</p>
@@ -767,10 +766,10 @@ are excluded from the search, small words that are excluded.</p>
 	</div>
 
 	<div id="footer">
-		ElkArte 1.0.7 Documentation API documentation generated by <a href="http://apigen.org">ApiGen</a>
+		ElkArte 1.0.10 Documentation API documentation generated by <a href="http://apigen.org">ApiGen</a>
 	</div>
 </div>
 <script src="resources/combined.js"></script>
-<script src="elementlist.js"></script>
+<script src="elementlist.js?13e5afb1269be6447e403156947b1e9254b743c7"></script>
 </body>
 </html>

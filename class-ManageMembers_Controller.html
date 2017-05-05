@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>Class ManageMembers_Controller | ElkArte 1.0.7 Documentation</title>
+	<title>Class ManageMembers_Controller | ElkArte 1.0.10 Documentation</title>
 
 	<link rel="stylesheet" href="resources/bootstrap.min.css?973e37a8502921d56bc02bb55321f45b072b6f71">
 	<link rel="stylesheet" href="resources/style.css?70c1d062672daa3f906b72e4f5d03d4bc5c4174d">
@@ -14,7 +14,7 @@
 	<nav id="navigation" class="navbar navbar-default navbar-fixed-top">
 		<div class="container-fluid">
 			<div class="navbar-header">
-				<a href="index.html" class="navbar-brand">ElkArte 1.0.7 Documentation</a>
+				<a href="index.html" class="navbar-brand">ElkArte 1.0.10 Documentation</a>
 			</div>
 			<div class="collapse navbar-collapse">
 
@@ -39,21 +39,17 @@
 					</li>
 
 						<li>
-							<a href="annotation-group-deprecated.html" title="List of elements with deprecated annotation">
-								<span>Deprecated</span>
-							</a>
-						</li>
-						<li>
 							<a href="annotation-group-todo.html" title="List of elements with todo annotation">
 								<span>Todo</span>
 							</a>
 						</li>
+						<li>
+							<a href="annotation-group-deprecated.html" title="List of elements with deprecated annotation">
+								<span>Deprecated</span>
+							</a>
+						</li>
 
-					<li class="divider-vertical"></li>
 
-					<li>
-						<a href="-API-documentation.zip" title="Download documentation as ZIP archive"><span>Download</span></a>
-					</li>
 				</ul>
 			</div>
 		</div>
@@ -235,6 +231,7 @@
 				<li><a href="function-countMembersOnline.html">countMembersOnline</a></li>
 				<li><a href="function-deleteMembers.html">deleteMembers</a></li>
 				<li><a href="function-enforceReactivation.html">enforceReactivation</a></li>
+				<li><a href="function-filter_members_online.html">filter_members_online</a></li>
 				<li><a href="function-getBasicMemberData.html">getBasicMemberData</a></li>
 				<li><a href="function-getConcernedMembers.html">getConcernedMembers</a></li>
 				<li><a href="function-getMember.html">getMember</a></li>
@@ -313,7 +310,7 @@ This software is a derived product, based on:
 Simple Machines Forum (SMF)
 copyright:	2011 Simple Machines (http://www.simplemachines.org)
 license:		BSD, See included LICENSE.TXT for terms and conditions.</a><br>
-			<b>Located at</b> <a href="source-class-ManageMembers_Controller.html#23-1163" title="Go to source code">sources/admin/ManageMembers.controller.php</a>
+			<b>Located at</b> <a href="source-class-ManageMembers_Controller.html#23-1167" title="Go to source code">sources/admin/ManageMembers.controller.php</a>
 		<br>
 	</div>
 
@@ -333,7 +330,7 @@ license:		BSD, See included LICENSE.TXT for terms and conditions.</a><br>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_action_index">#</a>
-			<code><a href="source-class-ManageMembers_Controller.html#31-164" title="Go to source code">action_index</a>( )</code>
+			<code><a href="source-class-ManageMembers_Controller.html#31-165" title="Go to source code">action_index</a>( )</code>
 
 			<div class="description short">
 				<p>The main entrance point for the Manage Members screen.</p>
@@ -342,10 +339,13 @@ license:		BSD, See included LICENSE.TXT for terms and conditions.</a><br>
 			<div class="description detailed hidden">
 				<p>The main entrance point for the Manage Members screen.</p>
 
-<p>What it does:
-- As everyone else, it calls a function based on the given sub-action.
-- Called by ?action=admin;area=viewmembers.
-- Requires the moderate_forum permission.</p>
+<p>What it does:</p>
+
+<ul>
+<li>As everyone else, it calls a function based on the given sub-action.</li>
+<li>Called by ?action=admin;area=viewmembers.</li>
+<li>Requires the moderate_forum permission.</li>
+</ul>
 
 
 
@@ -353,7 +353,7 @@ license:		BSD, See included LICENSE.TXT for terms and conditions.</a><br>
 
 					<h4>See</h4>
 					<div class="list">
-							<code><a href="class-Action_Controller.html#_action_index">Action_Controller::action_index()</a></code><br>
+							Action_Controller::action_index()<br>
 					</div>
 					<h4>Uses</h4>
 					<div class="list">
@@ -376,7 +376,7 @@ license:		BSD, See included LICENSE.TXT for terms and conditions.</a><br>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_action_list">#</a>
-			<code><a href="source-class-ManageMembers_Controller.html#166-605" title="Go to source code">action_list</a>( )</code>
+			<code><a href="source-class-ManageMembers_Controller.html#167-606" title="Go to source code">action_list</a>( )</code>
 
 			<div class="description short">
 				<p>View all members list. It allows sorting on several columns, and deletion of
@@ -417,7 +417,7 @@ selected members.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_action_search">#</a>
-			<code><a href="source-class-ManageMembers_Controller.html#607-631" title="Go to source code">action_search</a>( )</code>
+			<code><a href="source-class-ManageMembers_Controller.html#608-633" title="Go to source code">action_search</a>( )</code>
 
 			<div class="description short">
 				<p>Search the member list, using one or more criteria.</p>
@@ -426,10 +426,13 @@ selected members.</p>
 			<div class="description detailed hidden">
 				<p>Search the member list, using one or more criteria.</p>
 
-<p>What it does:
-- Called by ?action=admin;area=viewmembers;sa=search.
-- Requires the moderate_forum permission.
-- form is submitted to action=admin;area=viewmembers;sa=query.</p>
+<p>What it does:</p>
+
+<ul>
+<li>Called by ?action=admin;area=viewmembers;sa=search.</li>
+<li>Requires the moderate_forum permission.</li>
+<li>form is submitted to action=admin;area=viewmembers;sa=query.</li>
+</ul>
 
 
 
@@ -455,7 +458,7 @@ selected members.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_action_browse">#</a>
-			<code><a href="source-class-ManageMembers_Controller.html#633-977" title="Go to source code">action_browse</a>( )</code>
+			<code><a href="source-class-ManageMembers_Controller.html#635-980" title="Go to source code">action_browse</a>( )</code>
 
 			<div class="description short">
 				<p>List all members who are awaiting approval / activation, sortable on different columns.</p>
@@ -464,12 +467,15 @@ selected members.</p>
 			<div class="description detailed hidden">
 				<p>List all members who are awaiting approval / activation, sortable on different columns.</p>
 
-<p>What it does:
-- It allows instant approval or activation of (a selection of) members.
-- Called by ?action=admin;area=viewmembers;sa=browse;type=approve
-or ?action=admin;area=viewmembers;sa=browse;type=activate.
-- The form submits to ?action=admin;area=viewmembers;sa=approve.
-- Requires the moderate_forum permission.</p>
+<p>What it does:</p>
+
+<ul>
+<li>It allows instant approval or activation of (a selection of) members.</li>
+<li>Called by ?action=admin;area=viewmembers;sa=browse;type=approve
+or ?action=admin;area=viewmembers;sa=browse;type=activate.</li>
+<li>The form submits to ?action=admin;area=viewmembers;sa=approve.</li>
+<li>Requires the moderate_forum permission.</li>
+</ul>
 
 
 
@@ -495,7 +501,7 @@ or ?action=admin;area=viewmembers;sa=browse;type=activate.
 
 			<td class="name"><div>
 			<a class="anchor" href="#_action_approve">#</a>
-			<code><a href="source-class-ManageMembers_Controller.html#979-1162" title="Go to source code">action_approve</a>( )</code>
+			<code><a href="source-class-ManageMembers_Controller.html#982-1166" title="Go to source code">action_approve</a>( )</code>
 
 			<div class="description short">
 				<p>This function handles the approval, rejection, activation or deletion of members.</p>
@@ -504,11 +510,14 @@ or ?action=admin;area=viewmembers;sa=browse;type=activate.
 			<div class="description detailed hidden">
 				<p>This function handles the approval, rejection, activation or deletion of members.</p>
 
-<p>What it does:
-- Called by ?action=admin;area=viewmembers;sa=approve.
-- Requires the moderate_forum permission.
-- Redirects to ?action=admin;area=viewmembers;sa=browse
-with the same parameters as the calling page.</p>
+<p>What it does:</p>
+
+<ul>
+<li>Called by ?action=admin;area=viewmembers;sa=approve.</li>
+<li>Requires the moderate_forum permission.</li>
+<li>Redirects to ?action=admin;area=viewmembers;sa=browse
+with the same parameters as the calling page.</li>
+</ul>
 
 
 
@@ -542,10 +551,10 @@ with the same parameters as the calling page.</p>
 	</div>
 
 	<div id="footer">
-		ElkArte 1.0.7 Documentation API documentation generated by <a href="http://apigen.org">ApiGen</a>
+		ElkArte 1.0.10 Documentation API documentation generated by <a href="http://apigen.org">ApiGen</a>
 	</div>
 </div>
 <script src="resources/combined.js"></script>
-<script src="elementlist.js"></script>
+<script src="elementlist.js?13e5afb1269be6447e403156947b1e9254b743c7"></script>
 </body>
 </html>

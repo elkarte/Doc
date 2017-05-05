@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>Class ManageBoards_Controller | ElkArte 1.0.7 Documentation</title>
+	<title>Class ManageBoards_Controller | ElkArte 1.0.10 Documentation</title>
 
 	<link rel="stylesheet" href="resources/bootstrap.min.css?973e37a8502921d56bc02bb55321f45b072b6f71">
 	<link rel="stylesheet" href="resources/style.css?70c1d062672daa3f906b72e4f5d03d4bc5c4174d">
@@ -14,7 +14,7 @@
 	<nav id="navigation" class="navbar navbar-default navbar-fixed-top">
 		<div class="container-fluid">
 			<div class="navbar-header">
-				<a href="index.html" class="navbar-brand">ElkArte 1.0.7 Documentation</a>
+				<a href="index.html" class="navbar-brand">ElkArte 1.0.10 Documentation</a>
 			</div>
 			<div class="collapse navbar-collapse">
 
@@ -39,21 +39,17 @@
 					</li>
 
 						<li>
-							<a href="annotation-group-deprecated.html" title="List of elements with deprecated annotation">
-								<span>Deprecated</span>
-							</a>
-						</li>
-						<li>
 							<a href="annotation-group-todo.html" title="List of elements with todo annotation">
 								<span>Todo</span>
 							</a>
 						</li>
+						<li>
+							<a href="annotation-group-deprecated.html" title="List of elements with deprecated annotation">
+								<span>Deprecated</span>
+							</a>
+						</li>
 
-					<li class="divider-vertical"></li>
 
-					<li>
-						<a href="-API-documentation.zip" title="Download documentation as ZIP archive"><span>Download</span></a>
-					</li>
 				</ul>
 			</div>
 		</div>
@@ -310,7 +306,7 @@ This software is a derived product, based on:
 Simple Machines Forum (SMF)
 copyright:	2011 Simple Machines (http://www.simplemachines.org)
 license:		BSD, See included LICENSE.TXT for terms and conditions.</a><br>
-			<b>Located at</b> <a href="source-class-ManageBoards_Controller.html#23-843" title="Go to source code">sources/admin/ManageBoards.controller.php</a>
+			<b>Located at</b> <a href="source-class-ManageBoards_Controller.html#23-848" title="Go to source code">sources/admin/ManageBoards.controller.php</a>
 		<br>
 	</div>
 
@@ -330,7 +326,7 @@ license:		BSD, See included LICENSE.TXT for terms and conditions.</a><br>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_action_index">#</a>
-			<code><a href="source-class-ManageBoards_Controller.html#37-121" title="Go to source code">action_index</a>( )</code>
+			<code><a href="source-class-ManageBoards_Controller.html#37-122" title="Go to source code">action_index</a>( )</code>
 
 			<div class="description short">
 				<p>The main dispatcher; delegates.</p>
@@ -339,10 +335,13 @@ license:		BSD, See included LICENSE.TXT for terms and conditions.</a><br>
 			<div class="description detailed hidden">
 				<p>The main dispatcher; delegates.</p>
 
-<p>What it does:
-- This is the main entry point for all the manageboards admin screens.
-- Called by ?action=admin;area=manageboards.
-- It checks the permissions, based on the sub-action, and calls a function based on the sub-action.</p>
+<p>What it does:</p>
+
+<ul>
+<li>This is the main entry point for all the manageboards admin screens.</li>
+<li>Called by ?action=admin;area=manageboards.</li>
+<li>It checks the permissions, based on the sub-action, and calls a function based on the sub-action.</li>
+</ul>
 
 
 
@@ -368,7 +367,7 @@ license:		BSD, See included LICENSE.TXT for terms and conditions.</a><br>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_action_main">#</a>
-			<code><a href="source-class-ManageBoards_Controller.html#123-266" title="Go to source code">action_main</a>( )</code>
+			<code><a href="source-class-ManageBoards_Controller.html#124-268" title="Go to source code">action_main</a>( )</code>
 
 			<div class="description short">
 				<p>The main control panel thing, the screen showing all boards and categories.</p>
@@ -377,10 +376,13 @@ license:		BSD, See included LICENSE.TXT for terms and conditions.</a><br>
 			<div class="description detailed hidden">
 				<p>The main control panel thing, the screen showing all boards and categories.</p>
 
-<p>What it does:
-- Called by ?action=admin;area=manageboards or ?action=admin;area=manageboards;sa=move.
-- Requires manage_boards permission.
-- It also handles the interface for moving boards.</p>
+<p>What it does:</p>
+
+<ul>
+<li>Called by ?action=admin;area=manageboards or ?action=admin;area=manageboards;sa=move.</li>
+<li>Requires manage_boards permission.</li>
+<li>It also handles the interface for moving boards.</li>
+</ul>
 
 
 
@@ -406,7 +408,7 @@ license:		BSD, See included LICENSE.TXT for terms and conditions.</a><br>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_action_cat">#</a>
-			<code><a href="source-class-ManageBoards_Controller.html#268-361" title="Go to source code">action_cat</a>( )</code>
+			<code><a href="source-class-ManageBoards_Controller.html#270-364" title="Go to source code">action_cat</a>( )</code>
 
 			<div class="description short">
 				<p>Modify a specific category.</p>
@@ -415,11 +417,14 @@ license:		BSD, See included LICENSE.TXT for terms and conditions.</a><br>
 			<div class="description detailed hidden">
 				<p>Modify a specific category.</p>
 
-<p>What it does:
-- screen for editing and repositioning a category.
-- Also used to show the confirm deletion of category screen
-- Called by ?action=admin;area=manageboards;sa=cat
-- Requires manage_boards permission.</p>
+<p>What it does:</p>
+
+<ul>
+<li>screen for editing and repositioning a category.</li>
+<li>Also used to show the confirm deletion of category screen</li>
+<li>Called by ?action=admin;area=manageboards;sa=cat</li>
+<li>Requires manage_boards permission.</li>
+</ul>
 
 
 
@@ -445,7 +450,7 @@ license:		BSD, See included LICENSE.TXT for terms and conditions.</a><br>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_action_cat2">#</a>
-			<code><a href="source-class-ManageBoards_Controller.html#363-422" title="Go to source code">action_cat2</a>( )</code>
+			<code><a href="source-class-ManageBoards_Controller.html#366-426" title="Go to source code">action_cat2</a>( )</code>
 
 			<div class="description short">
 				<p>Function for handling a submitted form saving the category.</p>
@@ -454,12 +459,15 @@ license:		BSD, See included LICENSE.TXT for terms and conditions.</a><br>
 			<div class="description detailed hidden">
 				<p>Function for handling a submitted form saving the category.</p>
 
-<p>What it does:
-- complete the modifications to a specific category.
-- It also handles deletion of a category.
-- It requires manage_boards permission.
-- Called by ?action=admin;area=manageboards;sa=cat2
-- Redirects to ?action=admin;area=manageboards.</p>
+<p>What it does:</p>
+
+<ul>
+<li>complete the modifications to a specific category.</li>
+<li>It also handles deletion of a category.</li>
+<li>It requires manage_boards permission.</li>
+<li>Called by ?action=admin;area=manageboards;sa=cat2</li>
+<li>Redirects to ?action=admin;area=manageboards.</li>
+</ul>
 
 
 
@@ -481,7 +489,7 @@ license:		BSD, See included LICENSE.TXT for terms and conditions.</a><br>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_action_board">#</a>
-			<code><a href="source-class-ManageBoards_Controller.html#424-594" title="Go to source code">action_board</a>( )</code>
+			<code><a href="source-class-ManageBoards_Controller.html#428-598" title="Go to source code">action_board</a>( )</code>
 
 			<div class="description short">
 				<p>Modify a specific board...</p>
@@ -521,7 +529,7 @@ license:		BSD, See included LICENSE.TXT for terms and conditions.</a><br>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_action_board2">#</a>
-			<code><a href="source-class-ManageBoards_Controller.html#596-733" title="Go to source code">action_board2</a>( )</code>
+			<code><a href="source-class-ManageBoards_Controller.html#600-738" title="Go to source code">action_board2</a>( )</code>
 
 			<div class="description short">
 				<p>Make changes to/delete a board.</p>
@@ -530,12 +538,15 @@ license:		BSD, See included LICENSE.TXT for terms and conditions.</a><br>
 			<div class="description detailed hidden">
 				<p>Make changes to/delete a board.</p>
 
-<p>What it does:
-- function for handling a submitted form saving the board.
-- It also handles deletion of a board.
-- Called by ?action=admin;area=manageboards;sa=board2
-- Redirects to ?action=admin;area=manageboards.
-- It requires manage_boards permission.</p>
+<p>What it does:</p>
+
+<ul>
+<li>function for handling a submitted form saving the board.</li>
+<li>It also handles deletion of a board.</li>
+<li>Called by ?action=admin;area=manageboards;sa=board2</li>
+<li>Redirects to ?action=admin;area=manageboards.</li>
+<li>It requires manage_boards permission.</li>
+</ul>
 
 
 
@@ -557,7 +568,7 @@ license:		BSD, See included LICENSE.TXT for terms and conditions.</a><br>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_action_boardSettings_display">#</a>
-			<code><a href="source-class-ManageBoards_Controller.html#735-782" title="Go to source code">action_boardSettings_display</a>( )</code>
+			<code><a href="source-class-ManageBoards_Controller.html#740-787" title="Go to source code">action_boardSettings_display</a>( )</code>
 
 			<div class="description short">
 				<p>A screen to display and allow to set a few general board and category settings.</p>
@@ -590,7 +601,7 @@ license:		BSD, See included LICENSE.TXT for terms and conditions.</a><br>
 
 			<td class="name"><div>
 			<a class="anchor" href="#__initBoardSettingsForm">#</a>
-			<code><a href="source-class-ManageBoards_Controller.html#784-797" title="Go to source code">_initBoardSettingsForm</a>( )</code>
+			<code><a href="source-class-ManageBoards_Controller.html#789-802" title="Go to source code">_initBoardSettingsForm</a>( )</code>
 
 			<div class="description short">
 				<p>Initialize the boardSettings form, with the current configuration
@@ -621,7 +632,7 @@ options for admin board settings screen.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#__settings">#</a>
-			<code><a href="source-class-ManageBoards_Controller.html#799-834" title="Go to source code">_settings</a>( )</code>
+			<code><a href="source-class-ManageBoards_Controller.html#804-839" title="Go to source code">_settings</a>( )</code>
 
 			<div class="description short">
 				<p>Retrieve and return all admin settings for boards management.</p>
@@ -650,7 +661,7 @@ options for admin board settings screen.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_settings_search">#</a>
-			<code><a href="source-class-ManageBoards_Controller.html#836-842" title="Go to source code">settings_search</a>( )</code>
+			<code><a href="source-class-ManageBoards_Controller.html#841-847" title="Go to source code">settings_search</a>( )</code>
 
 			<div class="description short">
 				<p>Return the form settings for use in admin search</p>
@@ -727,10 +738,10 @@ options for admin board settings screen.</p>
 	</div>
 
 	<div id="footer">
-		ElkArte 1.0.7 Documentation API documentation generated by <a href="http://apigen.org">ApiGen</a>
+		ElkArte 1.0.10 Documentation API documentation generated by <a href="http://apigen.org">ApiGen</a>
 	</div>
 </div>
 <script src="resources/combined.js"></script>
-<script src="elementlist.js"></script>
+<script src="elementlist.js?13e5afb1269be6447e403156947b1e9254b743c7"></script>
 </body>
 </html>

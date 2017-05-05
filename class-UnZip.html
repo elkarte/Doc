@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>Class UnZip | ElkArte 1.0.7 Documentation</title>
+	<title>Class UnZip | ElkArte 1.0.10 Documentation</title>
 
 	<link rel="stylesheet" href="resources/bootstrap.min.css?973e37a8502921d56bc02bb55321f45b072b6f71">
 	<link rel="stylesheet" href="resources/style.css?70c1d062672daa3f906b72e4f5d03d4bc5c4174d">
@@ -14,7 +14,7 @@
 	<nav id="navigation" class="navbar navbar-default navbar-fixed-top">
 		<div class="container-fluid">
 			<div class="navbar-header">
-				<a href="index.html" class="navbar-brand">ElkArte 1.0.7 Documentation</a>
+				<a href="index.html" class="navbar-brand">ElkArte 1.0.10 Documentation</a>
 			</div>
 			<div class="collapse navbar-collapse">
 
@@ -39,21 +39,17 @@
 					</li>
 
 						<li>
-							<a href="annotation-group-deprecated.html" title="List of elements with deprecated annotation">
-								<span>Deprecated</span>
-							</a>
-						</li>
-						<li>
 							<a href="annotation-group-todo.html" title="List of elements with todo annotation">
 								<span>Todo</span>
 							</a>
 						</li>
+						<li>
+							<a href="annotation-group-deprecated.html" title="List of elements with deprecated annotation">
+								<span>Deprecated</span>
+							</a>
+						</li>
 
-					<li class="divider-vertical"></li>
 
-					<li>
-						<a href="-API-documentation.zip" title="Download documentation as ZIP archive"><span>Download</span></a>
-					</li>
 				</ul>
 			</div>
 		</div>
@@ -344,6 +340,7 @@
 				<li><a href="function-associatedPoll.html">associatedPoll</a></li>
 				<li><a href="function-associatedTopic.html">associatedTopic</a></li>
 				<li><a href="function-autoRotateImage.html">autoRotateImage</a></li>
+				<li><a href="function-autoRotateImageWithIM.html">autoRotateImageWithIM</a></li>
 				<li><a href="function-availableThemes.html">availableThemes</a></li>
 				<li><a href="function-basicMessageInfo.html">basicMessageInfo</a></li>
 				<li><a href="function-basicWatchedUsers.html">basicWatchedUsers</a></li>
@@ -743,6 +740,7 @@
 				<li><a href="function-sendApprovalNotifications.html">sendApprovalNotifications</a></li>
 				<li><a href="function-sendBoardNotifications.html">sendBoardNotifications</a></li>
 				<li><a href="function-sendNotifications.html">sendNotifications</a></li>
+				<li><a href="function-serializeToJson.html">serializeToJson</a></li>
 				<li><a href="function-sessionClose.html">sessionClose</a></li>
 				<li><a href="function-sessionDestroy.html">sessionDestroy</a></li>
 				<li><a href="function-sessionGC.html">sessionGC</a></li>
@@ -956,7 +954,7 @@
 				ElkArte Forum contributors<br>
 				<b>License:</b>
 				<a href="BSD">http://opensource.org/licenses/BSD-3-Clause</a><br>
-			<b>Located at</b> <a href="source-class-UnZip.html#17-521" title="Go to source code">sources/subs/UnZip.class.php</a>
+			<b>Located at</b> <a href="source-class-UnZip.html#17-525" title="Go to source code">sources/subs/UnZip.class.php</a>
 		<br>
 	</div>
 
@@ -1084,7 +1082,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#__read_endof_cdr">#</a>
-			<code><a href="source-class-UnZip.html#213-241" title="Go to source code">_read_endof_cdr</a>( )</code>
+			<code><a href="source-class-UnZip.html#213-242" title="Go to source code">_read_endof_cdr</a>( )</code>
 
 			<div class="description short">
 				<p>Finds and reads the end of central directory record.</p>
@@ -1093,7 +1091,8 @@
 			<div class="description detailed hidden">
 				<p>Finds and reads the end of central directory record.</p>
 
-<p>What it does: - Read so we can find the actual central directory record for processing.</p>
+<p>What it does:
+ - Read so we can find the actual central directory record for processing.</p>
 
 <p>Signature Definition:
 - end of central dir signature: 4 bytes, always(0x06054b50)
@@ -1126,7 +1125,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#__load_file_headers">#</a>
-			<code><a href="source-class-UnZip.html#243-301" title="Go to source code">_load_file_headers</a>( )</code>
+			<code><a href="source-class-UnZip.html#244-303" title="Go to source code">_load_file_headers</a>( )</code>
 
 			<div class="description short">
 				<p>Used to process the actual CDR record</p>
@@ -1135,10 +1134,13 @@
 			<div class="description detailed hidden">
 				<p>Used to process the actual CDR record</p>
 
-<p>What it does:
-- is a repeated sequence of [file header] . . .  until the end of central dir record.
-- relative offset, used so we can find the actual data entry for each file in the archive
-- validates the number of found files in the CDR matches what the ECDR record claims</p>
+<p>What it does:</p>
+
+<ul>
+<li>is a repeated sequence of [file header] . . .  until the end of central dir record.</li>
+<li>relative offset, used so we can find the actual data entry for each file in the archive</li>
+<li>validates the number of found files in the CDR matches what the ECDR record claims</li>
+</ul>
 
 <p>Signature Definition:
 - central file header signature: 4 bytes always(0x02014b50)
@@ -1179,7 +1181,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#__process_files">#</a>
-			<code><a href="source-class-UnZip.html#303-369" title="Go to source code">_process_files</a>( )</code>
+			<code><a href="source-class-UnZip.html#305-371" title="Go to source code">_process_files</a>( )</code>
 
 			<div class="description short">
 				<p>Does the actual uncompressing of the files if they achieve necessary conditions</p>
@@ -1216,7 +1218,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#__read_local_header">#</a>
-			<code><a href="source-class-UnZip.html#371-403" title="Go to source code">_read_local_header</a>( )</code>
+			<code><a href="source-class-UnZip.html#373-406" title="Go to source code">_read_local_header</a>( )</code>
 
 			<div class="description short">
 				<p>Reads the local header, [local file header + file data + data_descriptor]</p>
@@ -1225,10 +1227,13 @@
 			<div class="description detailed hidden">
 				<p>Reads the local header, [local file header + file data + data_descriptor]</p>
 
-<p>What it does:
-- Unpacks the local file header, 26 bytes after the signature
-- Updates certain CDR fields based on the variable length data found
-- Sets the compressed data in to the array for processing</p>
+<p>What it does:</p>
+
+<ul>
+<li>Unpacks the local file header, 26 bytes after the signature</li>
+<li>Updates certain CDR fields based on the variable length data found</li>
+<li>Sets the compressed data in to the array for processing</li>
+</ul>
 
 <p>Signature Definition:
 - local file header signature: 4 bytes, always (0x04034b50)
@@ -1265,7 +1270,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#__determine_write_this">#</a>
-			<code><a href="source-class-UnZip.html#405-428" title="Go to source code">_determine_write_this</a>( )</code>
+			<code><a href="source-class-UnZip.html#408-431" title="Go to source code">_determine_write_this</a>( )</code>
 
 			<div class="description short">
 				<p>Does what it says, determines if we are writing this file or not</p>
@@ -1294,7 +1299,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#__write_this_file">#</a>
-			<code><a href="source-class-UnZip.html#430-463" title="Go to source code">_write_this_file</a>( )</code>
+			<code><a href="source-class-UnZip.html#433-466" title="Go to source code">_write_this_file</a>( )</code>
 
 			<div class="description short">
 				<p>Does the actual writing of the file</p>
@@ -1328,7 +1333,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#__check_general_purpose_flag">#</a>
-			<code><a href="source-class-UnZip.html#465-505" title="Go to source code">_check_general_purpose_flag</a>( )</code>
+			<code><a href="source-class-UnZip.html#468-509" title="Go to source code">_check_general_purpose_flag</a>( )</code>
 
 			<div class="description short">
 				<p>Alters processing based on the general purpose flag bits</p>
@@ -1337,9 +1342,12 @@
 			<div class="description detailed hidden">
 				<p>Alters processing based on the general purpose flag bits</p>
 
-<p>What it does:
-- if bit 1 is set the file is protected, so it returns an empty one
-- if bit 3 is set then the data descriptor is read and processed</p>
+<p>What it does:</p>
+
+<ul>
+<li>if bit 1 is set the file is protected, so it returns an empty one</li>
+<li>if bit 3 is set then the data descriptor is read and processed</li>
+</ul>
 
 <p>The data descriptor, if it exists, is structured as
 - local header signature: 4 bytes, optional (0x08074b50)
@@ -1372,7 +1380,7 @@ file, e.g., when the output zip file was standard output or a non seekable devic
 
 			<td class="name"><div>
 			<a class="anchor" href="#__check_crc">#</a>
-			<code><a href="source-class-UnZip.html#507-520" title="Go to source code">_check_crc</a>( )</code>
+			<code><a href="source-class-UnZip.html#511-524" title="Go to source code">_check_crc</a>( )</code>
 
 			<div class="description short">
 				<p>Checks the saved vs calculated crc values</p>
@@ -1793,10 +1801,10 @@ file, e.g., when the output zip file was standard output or a non seekable devic
 	</div>
 
 	<div id="footer">
-		ElkArte 1.0.7 Documentation API documentation generated by <a href="http://apigen.org">ApiGen</a>
+		ElkArte 1.0.10 Documentation API documentation generated by <a href="http://apigen.org">ApiGen</a>
 	</div>
 </div>
 <script src="resources/combined.js"></script>
-<script src="elementlist.js"></script>
+<script src="elementlist.js?13e5afb1269be6447e403156947b1e9254b743c7"></script>
 </body>
 </html>

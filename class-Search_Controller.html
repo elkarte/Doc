@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>Class Search_Controller | ElkArte 1.0.7 Documentation</title>
+	<title>Class Search_Controller | ElkArte 1.0.10 Documentation</title>
 
 	<link rel="stylesheet" href="resources/bootstrap.min.css?973e37a8502921d56bc02bb55321f45b072b6f71">
 	<link rel="stylesheet" href="resources/style.css?70c1d062672daa3f906b72e4f5d03d4bc5c4174d">
@@ -14,7 +14,7 @@
 	<nav id="navigation" class="navbar navbar-default navbar-fixed-top">
 		<div class="container-fluid">
 			<div class="navbar-header">
-				<a href="index.html" class="navbar-brand">ElkArte 1.0.7 Documentation</a>
+				<a href="index.html" class="navbar-brand">ElkArte 1.0.10 Documentation</a>
 			</div>
 			<div class="collapse navbar-collapse">
 
@@ -39,21 +39,17 @@
 					</li>
 
 						<li>
-							<a href="annotation-group-deprecated.html" title="List of elements with deprecated annotation">
-								<span>Deprecated</span>
-							</a>
-						</li>
-						<li>
 							<a href="annotation-group-todo.html" title="List of elements with todo annotation">
 								<span>Todo</span>
 							</a>
 						</li>
+						<li>
+							<a href="annotation-group-deprecated.html" title="List of elements with deprecated annotation">
+								<span>Deprecated</span>
+							</a>
+						</li>
 
-					<li class="divider-vertical"></li>
 
-					<li>
-						<a href="-API-documentation.zip" title="Download documentation as ZIP archive"><span>Download</span></a>
-					</li>
 				</ul>
 			</div>
 		</div>
@@ -293,7 +289,7 @@ This software is a derived product, based on:
 Simple Machines Forum (SMF)
 copyright:	2011 Simple Machines (http://www.simplemachines.org)
 license:		BSD, See included LICENSE.TXT for terms and conditions.</a><br>
-			<b>Located at</b> <a href="source-class-Search_Controller.html#23-2215" title="Go to source code">sources/controllers/Search.controller.php</a>
+			<b>Located at</b> <a href="source-class-Search_Controller.html#23-2218" title="Go to source code">sources/controllers/Search.controller.php</a>
 		<br>
 	</div>
 
@@ -368,7 +364,7 @@ license:		BSD, See included LICENSE.TXT for terms and conditions.</a><br>
 
 					<h4>See</h4>
 					<div class="list">
-							<code><a href="class-Action_Controller.html#_action_index">Action_Controller::action_index()</a></code><br>
+							Action_Controller::action_index()<br>
 					</div>
 
 
@@ -386,7 +382,7 @@ license:		BSD, See included LICENSE.TXT for terms and conditions.</a><br>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_action_search">#</a>
-			<code><a href="source-class-Search_Controller.html#94-242" title="Go to source code">action_search</a>( )</code>
+			<code><a href="source-class-Search_Controller.html#94-243" title="Go to source code">action_search</a>( )</code>
 
 			<div class="description short">
 				<p>Ask the user what they want to search for.</p>
@@ -395,13 +391,16 @@ license:		BSD, See included LICENSE.TXT for terms and conditions.</a><br>
 			<div class="description detailed hidden">
 				<p>Ask the user what they want to search for.</p>
 
-<p>What it does:
-- shows the screen to search forum posts (action=search),
-- uses the main sub template of the Search template.
-- uses the Search language file.
-- requires the search_posts permission.
-- decodes and loads search parameters given in the URL (if any).
-- the form redirects to index.php?action=search;sa=results.</p>
+<p>What it does:</p>
+
+<ul>
+<li>shows the screen to search forum posts (action=search),</li>
+<li>uses the main sub template of the Search template.</li>
+<li>uses the Search language file.</li>
+<li>requires the search_posts permission.</li>
+<li>decodes and loads search parameters given in the URL (if any).</li>
+<li>the form redirects to index.php?action=search;sa=results.</li>
+</ul>
 
 
 
@@ -428,7 +427,7 @@ license:		BSD, See included LICENSE.TXT for terms and conditions.</a><br>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_action_results">#</a>
-			<code><a href="source-class-Search_Controller.html#244-1688" title="Go to source code">action_results</a>( )</code>
+			<code><a href="source-class-Search_Controller.html#245-1690" title="Go to source code">action_results</a>( )</code>
 
 			<div class="description short">
 				<p>Gather the results and show them.</p>
@@ -437,13 +436,16 @@ license:		BSD, See included LICENSE.TXT for terms and conditions.</a><br>
 			<div class="description detailed hidden">
 				<p>Gather the results and show them.</p>
 
-<p>What it does:
-- checks user input and searches the messages table for messages matching the query.
-- requires the search_posts permission.
-- uses the results sub template of the Search template.
-- uses the Search language file.
-- stores the results into the search cache.
-- show the results of the search query.</p>
+<p>What it does:</p>
+
+<ul>
+<li>checks user input and searches the messages table for messages matching the query.</li>
+<li>requires the search_posts permission.</li>
+<li>uses the results sub template of the Search template.</li>
+<li>uses the Search language file.</li>
+<li>stores the results into the search cache.</li>
+<li>show the results of the search query.</li>
+</ul>
 
 
 
@@ -465,7 +467,7 @@ license:		BSD, See included LICENSE.TXT for terms and conditions.</a><br>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_prepareSearchContext_callback">#</a>
-			<code><a href="source-class-Search_Controller.html#1690-1984" title="Go to source code">prepareSearchContext_callback</a>( <span>boolean <var>$reset</var> = <span class="php-keyword1">false</span></span> )</code>
+			<code><a href="source-class-Search_Controller.html#1692-1987" title="Go to source code">prepareSearchContext_callback</a>( <span>boolean <var>$reset</var> = <span class="php-keyword1">false</span></span> )</code>
 
 			<div class="description short">
 				<p>Callback to return messages - saves memory.</p>
@@ -494,9 +496,12 @@ Note that the call to loadAttachmentContext() doesn't work:
 this function doesn't fulfill the pre-condition to fill $attachments global...
 So all it does is to fallback and return.</p>
 
-<p>What it does:
-- callback function for the results sub template.
-- loads the necessary contextual data to show a search result.</p><br>
+<p>What it does:</p>
+
+<ul>
+<li>callback function for the results sub template.</li>
+<li>loads the necessary contextual data to show a search result.</li>
+</ul><br>
 					</div>
 
 
@@ -514,7 +519,7 @@ So all it does is to fallback and return.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#__highlighted_callback">#</a>
-			<code><a href="source-class-Search_Controller.html#1986-1996" title="Go to source code">_highlighted_callback</a>( <span>string[] <var>$matches</var></span> )</code>
+			<code><a href="source-class-Search_Controller.html#1989-1999" title="Go to source code">_highlighted_callback</a>( <span>string[] <var>$matches</var></span> )</code>
 
 			<div class="description short">
 				<p>Used to highlight body text with strings that match the search term</p>
@@ -550,7 +555,7 @@ So all it does is to fallback and return.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#__setup_weight_factors">#</a>
-			<code><a href="source-class-Search_Controller.html#1998-2070" title="Go to source code">_setup_weight_factors</a>( )</code>
+			<code><a href="source-class-Search_Controller.html#2001-2073" title="Go to source code">_setup_weight_factors</a>( )</code>
 
 			<div class="description short">
 				<p>Prepares the weighting factors and</p>
@@ -579,7 +584,7 @@ So all it does is to fallback and return.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#__fill_default_search_params">#</a>
-			<code><a href="source-class-Search_Controller.html#2072-2101" title="Go to source code">_fill_default_search_params</a>( <span>mixed[] <var>$array</var></span> )</code>
+			<code><a href="source-class-Search_Controller.html#2075-2104" title="Go to source code">_fill_default_search_params</a>( <span>mixed[] <var>$array</var></span> )</code>
 
 			<div class="description short">
 				<p>Fills the empty spaces in an array with the default values for search params</p>
@@ -613,7 +618,7 @@ So all it does is to fallback and return.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#__load_suggestions">#</a>
-			<code><a href="source-class-Search_Controller.html#2103-2214" title="Go to source code">_load_suggestions</a>( <span>string[] <var>$search_params</var></span>, <span>string[] <var>$searchArray</var> = <span class="php-keyword1">array</span>()</span> )</code>
+			<code><a href="source-class-Search_Controller.html#2106-2217" title="Go to source code">_load_suggestions</a>( <span>string[] <var>$search_params</var></span>, <span>string[] <var>$searchArray</var> = <span class="php-keyword1">array</span>()</span> )</code>
 
 			<div class="description short">
 				<p>Setup spellchecking suggestions and load them into $context</p>
@@ -741,10 +746,10 @@ So all it does is to fallback and return.</p>
 	</div>
 
 	<div id="footer">
-		ElkArte 1.0.7 Documentation API documentation generated by <a href="http://apigen.org">ApiGen</a>
+		ElkArte 1.0.10 Documentation API documentation generated by <a href="http://apigen.org">ApiGen</a>
 	</div>
 </div>
 <script src="resources/combined.js"></script>
-<script src="elementlist.js"></script>
+<script src="elementlist.js?13e5afb1269be6447e403156947b1e9254b743c7"></script>
 </body>
 </html>

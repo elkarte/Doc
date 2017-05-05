@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>Class ManageServer_Controller | ElkArte 1.0.7 Documentation</title>
+	<title>Class ManageServer_Controller | ElkArte 1.0.10 Documentation</title>
 
 	<link rel="stylesheet" href="resources/bootstrap.min.css?973e37a8502921d56bc02bb55321f45b072b6f71">
 	<link rel="stylesheet" href="resources/style.css?70c1d062672daa3f906b72e4f5d03d4bc5c4174d">
@@ -14,7 +14,7 @@
 	<nav id="navigation" class="navbar navbar-default navbar-fixed-top">
 		<div class="container-fluid">
 			<div class="navbar-header">
-				<a href="index.html" class="navbar-brand">ElkArte 1.0.7 Documentation</a>
+				<a href="index.html" class="navbar-brand">ElkArte 1.0.10 Documentation</a>
 			</div>
 			<div class="collapse navbar-collapse">
 
@@ -39,21 +39,17 @@
 					</li>
 
 						<li>
-							<a href="annotation-group-deprecated.html" title="List of elements with deprecated annotation">
-								<span>Deprecated</span>
-							</a>
-						</li>
-						<li>
 							<a href="annotation-group-todo.html" title="List of elements with todo annotation">
 								<span>Todo</span>
 							</a>
 						</li>
+						<li>
+							<a href="annotation-group-deprecated.html" title="List of elements with deprecated annotation">
+								<span>Deprecated</span>
+							</a>
+						</li>
 
-					<li class="divider-vertical"></li>
 
-					<li>
-						<a href="-API-documentation.zip" title="Download documentation as ZIP archive"><span>Download</span></a>
-					</li>
 				</ul>
 			</div>
 		</div>
@@ -344,6 +340,7 @@
 				<li><a href="function-associatedPoll.html">associatedPoll</a></li>
 				<li><a href="function-associatedTopic.html">associatedTopic</a></li>
 				<li><a href="function-autoRotateImage.html">autoRotateImage</a></li>
+				<li><a href="function-autoRotateImageWithIM.html">autoRotateImageWithIM</a></li>
 				<li><a href="function-availableThemes.html">availableThemes</a></li>
 				<li><a href="function-basicMessageInfo.html">basicMessageInfo</a></li>
 				<li><a href="function-basicWatchedUsers.html">basicWatchedUsers</a></li>
@@ -743,6 +740,7 @@
 				<li><a href="function-sendApprovalNotifications.html">sendApprovalNotifications</a></li>
 				<li><a href="function-sendBoardNotifications.html">sendBoardNotifications</a></li>
 				<li><a href="function-sendNotifications.html">sendNotifications</a></li>
+				<li><a href="function-serializeToJson.html">serializeToJson</a></li>
 				<li><a href="function-sessionClose.html">sessionClose</a></li>
 				<li><a href="function-sessionDestroy.html">sessionDestroy</a></li>
 				<li><a href="function-sessionGC.html">sessionGC</a></li>
@@ -968,7 +966,7 @@ This software is a derived product, based on:
 Simple Machines Forum (SMF)
 copyright:	2011 Simple Machines (http://www.simplemachines.org)
 license:		BSD, See included LICENSE.TXT for terms and conditions.</a><br>
-			<b>Located at</b> <a href="source-class-ManageServer_Controller.html#25-753" title="Go to source code">sources/admin/ManageServer.controller.php</a>
+			<b>Located at</b> <a href="source-class-ManageServer_Controller.html#25-757" title="Go to source code">sources/admin/ManageServer.controller.php</a>
 		<br>
 	</div>
 
@@ -988,7 +986,7 @@ license:		BSD, See included LICENSE.TXT for terms and conditions.</a><br>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_action_index">#</a>
-			<code><a href="source-class-ManageServer_Controller.html#64-141" title="Go to source code">action_index</a>( )</code>
+			<code><a href="source-class-ManageServer_Controller.html#64-142" title="Go to source code">action_index</a>( )</code>
 
 			<div class="description short">
 				<p>This is the main dispatcher. Sets up all the available sub-actions, all the tabs and selects
@@ -999,9 +997,12 @@ the appropriate one based on the sub-action.</p>
 				<p>This is the main dispatcher. Sets up all the available sub-actions, all the tabs and selects
 the appropriate one based on the sub-action.</p>
 
-<p>What it does:
-- Requires the admin_forum permission.
-- Redirects to the appropriate function based on the sub-action.</p>
+<p>What it does:</p>
+
+<ul>
+<li>Requires the admin_forum permission.</li>
+<li>Redirects to the appropriate function based on the sub-action.</li>
+</ul>
 
 
 
@@ -1009,7 +1010,7 @@ the appropriate one based on the sub-action.</p>
 
 					<h4>See</h4>
 					<div class="list">
-							<code><a href="class-Action_Controller.html#_action_index">Action_Controller::action_index()</a></code><br>
+							Action_Controller::action_index()<br>
 					</div>
 					<h4>Uses</h4>
 					<div class="list">
@@ -1031,7 +1032,7 @@ the appropriate one based on the sub-action.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_action_generalSettings_display">#</a>
-			<code><a href="source-class-ManageServer_Controller.html#143-178" title="Go to source code">action_generalSettings_display</a>( )</code>
+			<code><a href="source-class-ManageServer_Controller.html#144-180" title="Go to source code">action_generalSettings_display</a>( )</code>
 
 			<div class="description short">
 				<p>General forum settings - forum name, maintenance mode, etc.</p>
@@ -1044,11 +1045,14 @@ the appropriate one based on the sub-action.</p>
 be changed. The method handles the display, allows to edit, and saves
 the result for generalSettings form.</p>
 
-<p>What it does:
-- Requires the admin_forum permission.
-- Uses the edit_settings administration area.
-- Contains the actual array of settings to show from Settings.php.
-- Accessed from ?action=admin;area=serversettings;sa=general.</p>
+<p>What it does:</p>
+
+<ul>
+<li>Requires the admin_forum permission.</li>
+<li>Uses the edit_settings administration area.</li>
+<li>Contains the actual array of settings to show from Settings.php.</li>
+<li>Accessed from ?action=admin;area=serversettings;sa=general.</li>
+</ul>
 
 
 
@@ -1070,7 +1074,7 @@ the result for generalSettings form.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#__initGeneralSettingsForm">#</a>
-			<code><a href="source-class-ManageServer_Controller.html#180-193" title="Go to source code">_initGeneralSettingsForm</a>( )</code>
+			<code><a href="source-class-ManageServer_Controller.html#182-195" title="Go to source code">_initGeneralSettingsForm</a>( )</code>
 
 			<div class="description short">
 				<p>Initialize _generalSettings form.</p>
@@ -1099,7 +1103,7 @@ the result for generalSettings form.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_action_databaseSettings_display">#</a>
-			<code><a href="source-class-ManageServer_Controller.html#195-231" title="Go to source code">action_databaseSettings_display</a>( )</code>
+			<code><a href="source-class-ManageServer_Controller.html#197-234" title="Go to source code">action_databaseSettings_display</a>( )</code>
 
 			<div class="description short">
 				<p>Basic database and paths settings - database name, host, etc.</p>
@@ -1111,12 +1115,15 @@ the result for generalSettings form.</p>
 <p>This method handles the display, allows to edit, and saves the results
 for _databaseSettings.</p>
 
-<p>What it does:
-- It shows an interface for the settings in Settings.php to be changed.
-- It contains the actual array of settings to show from Settings.php.
-- Requires the admin_forum permission.
-- Uses the edit_settings administration area.
-- Accessed from ?action=admin;area=serversettings;sa=database.</p>
+<p>What it does:</p>
+
+<ul>
+<li>It shows an interface for the settings in Settings.php to be changed.</li>
+<li>It contains the actual array of settings to show from Settings.php.</li>
+<li>Requires the admin_forum permission.</li>
+<li>Uses the edit_settings administration area.</li>
+<li>Accessed from ?action=admin;area=serversettings;sa=database.</li>
+</ul>
 
 
 
@@ -1138,7 +1145,7 @@ for _databaseSettings.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#__initDatabaseSettingsForm">#</a>
-			<code><a href="source-class-ManageServer_Controller.html#233-244" title="Go to source code">_initDatabaseSettingsForm</a>( )</code>
+			<code><a href="source-class-ManageServer_Controller.html#236-247" title="Go to source code">_initDatabaseSettingsForm</a>( )</code>
 
 			<div class="description short">
 				<p>Initialize _databaseSettings form.</p>
@@ -1167,7 +1174,7 @@ for _databaseSettings.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_action_cookieSettings_display">#</a>
-			<code><a href="source-class-ManageServer_Controller.html#246-308" title="Go to source code">action_cookieSettings_display</a>( )</code>
+			<code><a href="source-class-ManageServer_Controller.html#249-311" title="Go to source code">action_cookieSettings_display</a>( )</code>
 
 			<div class="description short">
 				<p>Modify cookies settings.</p>
@@ -1199,7 +1206,7 @@ for the _cookieSettings form.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#__initCookieSettingsForm">#</a>
-			<code><a href="source-class-ManageServer_Controller.html#310-323" title="Go to source code">_initCookieSettingsForm</a>( )</code>
+			<code><a href="source-class-ManageServer_Controller.html#313-326" title="Go to source code">_initCookieSettingsForm</a>( )</code>
 
 			<div class="description short">
 				<p>Initialize _cookieSettings form.</p>
@@ -1228,7 +1235,7 @@ for the _cookieSettings form.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_action_cacheSettings_display">#</a>
-			<code><a href="source-class-ManageServer_Controller.html#325-384" title="Go to source code">action_cacheSettings_display</a>( )</code>
+			<code><a href="source-class-ManageServer_Controller.html#328-387" title="Go to source code">action_cacheSettings_display</a>( )</code>
 
 			<div class="description short">
 				<p>Cache settings editing and submission.</p>
@@ -1260,7 +1267,7 @@ for _cacheSettings form.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#__initCacheSettingsForm">#</a>
-			<code><a href="source-class-ManageServer_Controller.html#386-399" title="Go to source code">_initCacheSettingsForm</a>( )</code>
+			<code><a href="source-class-ManageServer_Controller.html#389-402" title="Go to source code">_initCacheSettingsForm</a>( )</code>
 
 			<div class="description short">
 				<p>Initialize _cacheSettings form.</p>
@@ -1289,7 +1296,7 @@ for _cacheSettings form.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_action_balancingSettings_display">#</a>
-			<code><a href="source-class-ManageServer_Controller.html#401-447" title="Go to source code">action_balancingSettings_display</a>( )</code>
+			<code><a href="source-class-ManageServer_Controller.html#404-450" title="Go to source code">action_balancingSettings_display</a>( )</code>
 
 			<div class="description short">
 				<p>Allows to edit load balancing settings.</p>
@@ -1321,7 +1328,7 @@ for the _balancingSettings form.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#__initBalancingSettingsForm">#</a>
-			<code><a href="source-class-ManageServer_Controller.html#449-462" title="Go to source code">_initBalancingSettingsForm</a>( )</code>
+			<code><a href="source-class-ManageServer_Controller.html#452-465" title="Go to source code">_initBalancingSettingsForm</a>( )</code>
 
 			<div class="description short">
 				<p>Initialize balancingSettings form.</p>
@@ -1350,7 +1357,7 @@ for the _balancingSettings form.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_action_phpinfo">#</a>
-			<code><a href="source-class-ManageServer_Controller.html#464-515" title="Go to source code">action_phpinfo</a>( )</code>
+			<code><a href="source-class-ManageServer_Controller.html#467-519" title="Go to source code">action_phpinfo</a>( )</code>
 
 			<div class="description short">
 				<p>Allows us to see the servers php settings</p>
@@ -1359,9 +1366,12 @@ for the _balancingSettings form.</p>
 			<div class="description detailed hidden">
 				<p>Allows us to see the servers php settings</p>
 
-<p>What it does:
-- loads the settings into an array for display in a template
-- drops cookie values just in case</p>
+<p>What it does:</p>
+
+<ul>
+<li>loads the settings into an array for display in a template</li>
+<li>drops cookie values just in case</li>
+</ul>
 
 
 
@@ -1387,7 +1397,7 @@ for the _balancingSettings form.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#__generalSettings">#</a>
-			<code><a href="source-class-ManageServer_Controller.html#517-543" title="Go to source code">_generalSettings</a>( )</code>
+			<code><a href="source-class-ManageServer_Controller.html#521-547" title="Go to source code">_generalSettings</a>( )</code>
 
 			<div class="description short">
 				<p>This function returns all general settings.</p>
@@ -1416,7 +1426,7 @@ for the _balancingSettings form.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_generalSettings_search">#</a>
-			<code><a href="source-class-ManageServer_Controller.html#545-551" title="Go to source code">generalSettings_search</a>( )</code>
+			<code><a href="source-class-ManageServer_Controller.html#549-555" title="Go to source code">generalSettings_search</a>( )</code>
 
 			<div class="description short">
 				<p>Return the search settings for use in admin search</p>
@@ -1445,7 +1455,7 @@ for the _balancingSettings form.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#__databaseSettings">#</a>
-			<code><a href="source-class-ManageServer_Controller.html#553-585" title="Go to source code">_databaseSettings</a>( )</code>
+			<code><a href="source-class-ManageServer_Controller.html#557-589" title="Go to source code">_databaseSettings</a>( )</code>
 
 			<div class="description short">
 				<p>This function returns database settings.</p>
@@ -1474,7 +1484,7 @@ for the _balancingSettings form.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_databaseSettings_search">#</a>
-			<code><a href="source-class-ManageServer_Controller.html#587-593" title="Go to source code">databaseSettings_search</a>( )</code>
+			<code><a href="source-class-ManageServer_Controller.html#591-597" title="Go to source code">databaseSettings_search</a>( )</code>
 
 			<div class="description short">
 				<p>Return the search settings for use in admin search</p>
@@ -1503,7 +1513,7 @@ for the _balancingSettings form.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#__cookieSettings">#</a>
-			<code><a href="source-class-ManageServer_Controller.html#595-624" title="Go to source code">_cookieSettings</a>( )</code>
+			<code><a href="source-class-ManageServer_Controller.html#599-628" title="Go to source code">_cookieSettings</a>( )</code>
 
 			<div class="description short">
 				<p>This little function returns all cookie settings.</p>
@@ -1532,7 +1542,7 @@ for the _balancingSettings form.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_cookieSettings_search">#</a>
-			<code><a href="source-class-ManageServer_Controller.html#626-632" title="Go to source code">cookieSettings_search</a>( )</code>
+			<code><a href="source-class-ManageServer_Controller.html#630-636" title="Go to source code">cookieSettings_search</a>( )</code>
 
 			<div class="description short">
 				<p>Return the search settings for use in admin search</p>
@@ -1561,7 +1571,7 @@ for the _balancingSettings form.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#__cacheSettings">#</a>
-			<code><a href="source-class-ManageServer_Controller.html#634-680" title="Go to source code">_cacheSettings</a>( )</code>
+			<code><a href="source-class-ManageServer_Controller.html#638-684" title="Go to source code">_cacheSettings</a>( )</code>
 
 			<div class="description short">
 				<p>This little function returns all cache settings.</p>
@@ -1590,7 +1600,7 @@ for the _balancingSettings form.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_cacheSettings_search">#</a>
-			<code><a href="source-class-ManageServer_Controller.html#682-688" title="Go to source code">cacheSettings_search</a>( )</code>
+			<code><a href="source-class-ManageServer_Controller.html#686-692" title="Go to source code">cacheSettings_search</a>( )</code>
 
 			<div class="description short">
 				<p>Return the search settings for use in admin search</p>
@@ -1619,7 +1629,7 @@ for the _balancingSettings form.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#__balancingSettings">#</a>
-			<code><a href="source-class-ManageServer_Controller.html#690-744" title="Go to source code">_balancingSettings</a>( )</code>
+			<code><a href="source-class-ManageServer_Controller.html#694-748" title="Go to source code">_balancingSettings</a>( )</code>
 
 			<div class="description short">
 				<p>This little function returns load balancing settings.</p>
@@ -1648,7 +1658,7 @@ for the _balancingSettings form.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_balancingSettings_search">#</a>
-			<code><a href="source-class-ManageServer_Controller.html#746-752" title="Go to source code">balancingSettings_search</a>( )</code>
+			<code><a href="source-class-ManageServer_Controller.html#750-756" title="Go to source code">balancingSettings_search</a>( )</code>
 
 			<div class="description short">
 				<p>Return the search settings for use in admin search</p>
@@ -1825,10 +1835,10 @@ for the _balancingSettings form.</p>
 	</div>
 
 	<div id="footer">
-		ElkArte 1.0.7 Documentation API documentation generated by <a href="http://apigen.org">ApiGen</a>
+		ElkArte 1.0.10 Documentation API documentation generated by <a href="http://apigen.org">ApiGen</a>
 	</div>
 </div>
 <script src="resources/combined.js"></script>
-<script src="elementlist.js"></script>
+<script src="elementlist.js?13e5afb1269be6447e403156947b1e9254b743c7"></script>
 </body>
 </html>

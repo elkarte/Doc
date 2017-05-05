@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>Class Email_Parse | ElkArte 1.0.7 Documentation</title>
+	<title>Class Email_Parse | ElkArte 1.0.10 Documentation</title>
 
 	<link rel="stylesheet" href="resources/bootstrap.min.css?973e37a8502921d56bc02bb55321f45b072b6f71">
 	<link rel="stylesheet" href="resources/style.css?70c1d062672daa3f906b72e4f5d03d4bc5c4174d">
@@ -14,7 +14,7 @@
 	<nav id="navigation" class="navbar navbar-default navbar-fixed-top">
 		<div class="container-fluid">
 			<div class="navbar-header">
-				<a href="index.html" class="navbar-brand">ElkArte 1.0.7 Documentation</a>
+				<a href="index.html" class="navbar-brand">ElkArte 1.0.10 Documentation</a>
 			</div>
 			<div class="collapse navbar-collapse">
 
@@ -39,21 +39,17 @@
 					</li>
 
 						<li>
-							<a href="annotation-group-deprecated.html" title="List of elements with deprecated annotation">
-								<span>Deprecated</span>
-							</a>
-						</li>
-						<li>
 							<a href="annotation-group-todo.html" title="List of elements with todo annotation">
 								<span>Todo</span>
 							</a>
 						</li>
+						<li>
+							<a href="annotation-group-deprecated.html" title="List of elements with deprecated annotation">
+								<span>Deprecated</span>
+							</a>
+						</li>
 
-					<li class="divider-vertical"></li>
 
-					<li>
-						<a href="-API-documentation.zip" title="Download documentation as ZIP archive"><span>Download</span></a>
-					</li>
 				</ul>
 			</div>
 		</div>
@@ -289,11 +285,14 @@
 	<div class="description">
 	<p>Class to parse and email in to its header and body parts for use in posting</p>
 
-<p>What it does:
-- Can read from a supplied string, stdin or from the failed email database
-- Parses and decodes headers, return them in a named array $headers
-- Parses, decodes and translates message body returns body and plain_body sections
-- Parses and decodes attachments returns attachments and inline_files</p>
+<p>What it does:</p>
+
+<ul>
+<li>Can read from a supplied string, stdin or from the failed email database</li>
+<li>Parses and decodes headers, return them in a named array $headers</li>
+<li>Parses, decodes and translates message body returns body and plain_body sections</li>
+<li>Parses and decodes attachments returns attachments and inline_files</li>
+</ul>
 
 <p>Load class
 Initiate as - $email_message = new EmailParse();</p>
@@ -339,7 +338,7 @@ message_key_id, message_type and message_id
 				ElkArte Forum contributors<br>
 				<b>License:</b>
 				<a href="BSD">http://opensource.org/licenses/BSD-3-Clause</a><br>
-			<b>Located at</b> <a href="source-class-Email_Parse.html#17-1070" title="Go to source code">sources/subs/EmailParse.class.php</a>
+			<b>Located at</b> <a href="source-class-Email_Parse.html#17-1075" title="Go to source code">sources/subs/EmailParse.class.php</a>
 		<br>
 	</div>
 
@@ -359,7 +358,7 @@ message_key_id, message_type and message_id
 
 			<td class="name"><div>
 			<a class="anchor" href="#_read_data">#</a>
-			<code><a href="source-class-Email_Parse.html#182-214" title="Go to source code">read_data</a>( <span>string <var>$data</var> = <span class="php-quote">''</span></span>, <span>string <var>$location</var> = <span class="php-quote">''</span></span> )</code>
+			<code><a href="source-class-Email_Parse.html#183-215" title="Go to source code">read_data</a>( <span>string <var>$data</var> = <span class="php-quote">''</span></span>, <span>string <var>$location</var> = <span class="php-quote">''</span></span> )</code>
 
 			<div class="description short">
 				<p>Loads an email message from stdin, file or from a supplied string</p>
@@ -395,7 +394,7 @@ message_key_id, message_type and message_id
 
 			<td class="name"><div>
 			<a class="anchor" href="#__query_load_email">#</a>
-			<code><a href="source-class-Email_Parse.html#216-242" title="Go to source code">_query_load_email</a>( <span>integer <var>$id</var></span> )</code>
+			<code><a href="source-class-Email_Parse.html#217-243" title="Go to source code">_query_load_email</a>( <span>integer <var>$id</var></span> )</code>
 
 			<div class="description short">
 				<p>Loads an email message from the database</p>
@@ -429,7 +428,7 @@ message_key_id, message_type and message_id
 
 			<td class="name"><div>
 			<a class="anchor" href="#_read_email">#</a>
-			<code><a href="source-class-Email_Parse.html#244-271" title="Go to source code">read_email</a>( <span>boolean <var>$html</var> = <span class="php-keyword1">false</span></span>, <span>string <var>$data</var> = <span class="php-quote">''</span></span>, <span>string <var>$location</var> = <span class="php-quote">''</span></span> )</code>
+			<code><a href="source-class-Email_Parse.html#245-273" title="Go to source code">read_email</a>( <span>boolean <var>$html</var> = <span class="php-keyword1">false</span></span>, <span>string <var>$data</var> = <span class="php-quote">''</span></span>, <span>string <var>$location</var> = <span class="php-quote">''</span></span> )</code>
 
 			<div class="description short">
 				<p>Main email routine, calls the needed functions to parse the data so that
@@ -440,12 +439,15 @@ its available.</p>
 				<p>Main email routine, calls the needed functions to parse the data so that
 its available.</p>
 
-<p>What it does:
-- read/load data
-- split headers from the body
-- break header string in to individual header keys
-- determine content type and character encoding
-- convert message body's</p>
+<p>What it does:</p>
+
+<ul>
+<li>read/load data</li>
+<li>split headers from the body</li>
+<li>break header string in to individual header keys</li>
+<li>determine content type and character encoding</li>
+<li>convert message body's</li>
+</ul>
 
 
 					<h4>Parameters</h4>
@@ -482,7 +484,7 @@ its available.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#__split_headers">#</a>
-			<code><a href="source-class-Email_Parse.html#273-295" title="Go to source code">_split_headers</a>( )</code>
+			<code><a href="source-class-Email_Parse.html#275-297" title="Go to source code">_split_headers</a>( )</code>
 
 			<div class="description short">
 				<p>Separate the email message headers from the message body</p>
@@ -515,7 +517,7 @@ its available.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#__parse_headers">#</a>
-			<code><a href="source-class-Email_Parse.html#297-331" title="Go to source code">_parse_headers</a>( )</code>
+			<code><a href="source-class-Email_Parse.html#299-333" title="Go to source code">_parse_headers</a>( )</code>
 
 			<div class="description short">
 				<p>Takes the header block created with _split_headers and separates it
@@ -546,7 +548,7 @@ in to header keys => value pairs</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#__parse_content_headers">#</a>
-			<code><a href="source-class-Email_Parse.html#333-369" title="Go to source code">_parse_content_headers</a>( )</code>
+			<code><a href="source-class-Email_Parse.html#335-372" title="Go to source code">_parse_content_headers</a>( )</code>
 
 			<div class="description short">
 				<p>Content headers need to be set so we can properly decode the message body.</p>
@@ -555,11 +557,14 @@ in to header keys => value pairs</p>
 			<div class="description detailed hidden">
 				<p>Content headers need to be set so we can properly decode the message body.</p>
 
-<p>What it does:
-- Content headers often use the optional parameter value syntax which need to be
-specially processed.
-- Parses or sets defaults for the following:
-content-type, content-disposition, content-transfer-encoding</p>
+<p>What it does:</p>
+
+<ul>
+<li>Content headers often use the optional parameter value syntax which need to be
+specially processed.</li>
+<li>Parses or sets defaults for the following:
+content-type, content-disposition, content-transfer-encoding</li>
+</ul>
 
 
 
@@ -581,7 +586,7 @@ content-type, content-disposition, content-transfer-encoding</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#__parse_content_header_parameters">#</a>
-			<code><a href="source-class-Email_Parse.html#371-408" title="Go to source code">_parse_content_header_parameters</a>( <span>string <var>$value</var></span>, <span>string <var>$key</var></span> )</code>
+			<code><a href="source-class-Email_Parse.html#374-411" title="Go to source code">_parse_content_header_parameters</a>( <span>string <var>$value</var></span>, <span>string <var>$key</var></span> )</code>
 
 			<div class="description short">
 				<p>Checks if a given header has any optional parameter values</p>
@@ -625,7 +630,7 @@ overwriting a primary header key with a secondary one</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#__parse_body">#</a>
-			<code><a href="source-class-Email_Parse.html#410-581" title="Go to source code">_parse_body</a>( <span>boolean <var>$html</var> = <span class="php-keyword1">false</span></span> )</code>
+			<code><a href="source-class-Email_Parse.html#413-584" title="Go to source code">_parse_body</a>( <span>boolean <var>$html</var> = <span class="php-keyword1">false</span></span> )</code>
 
 			<div class="description short">
 				<p>Based on the the message content type, determine how to best proceed</p>
@@ -659,7 +664,7 @@ overwriting a primary header key with a secondary one</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#__boundary_split">#</a>
-			<code><a href="source-class-Email_Parse.html#583-610" title="Go to source code">_boundary_split</a>( <span>string <var>$boundary</var></span>, <span>boolean <var>$html</var></span> )</code>
+			<code><a href="source-class-Email_Parse.html#586-613" title="Go to source code">_boundary_split</a>( <span>string <var>$boundary</var></span>, <span>boolean <var>$html</var></span> )</code>
 
 			<div class="description short">
 				<p>Split up multipart messages and process each section separately
@@ -699,7 +704,7 @@ as its own email object</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#__decode_header">#</a>
-			<code><a href="source-class-Email_Parse.html#612-685" title="Go to source code">_decode_header</a>( <span>string <var>$val</var></span>, <span>boolean <var>$strict</var> = <span class="php-keyword1">false</span></span> )</code>
+			<code><a href="source-class-Email_Parse.html#615-689" title="Go to source code">_decode_header</a>( <span>string <var>$val</var></span>, <span>boolean <var>$strict</var> = <span class="php-keyword1">false</span></span> )</code>
 
 			<div class="description short">
 				<p>Converts a header string to ascii/UTF8</p>
@@ -708,11 +713,14 @@ as its own email object</p>
 			<div class="description detailed hidden">
 				<p>Converts a header string to ascii/UTF8</p>
 
-<p>What it does:
-- Headers, mostly subject and names may be encoded as quoted printable or base64
-to allow for non ascii characters in those fields.
-- This encoding is separate from the message body encoding and must be
-determined since this encoding is not directly specified by the headers themselves</p>
+<p>What it does:</p>
+
+<ul>
+<li>Headers, mostly subject and names may be encoded as quoted printable or base64
+to allow for non ascii characters in those fields.</li>
+<li>This encoding is separate from the message body encoding and must be
+determined since this encoding is not directly specified by the headers themselves</li>
+</ul>
 
 
 					<h4>Parameters</h4>
@@ -745,7 +753,7 @@ determined since this encoding is not directly specified by the headers themselv
 
 			<td class="name"><div>
 			<a class="anchor" href="#__decode_body">#</a>
-			<code><a href="source-class-Email_Parse.html#687-733" title="Go to source code">_decode_body</a>( <span>string <var>$val</var></span> )</code>
+			<code><a href="source-class-Email_Parse.html#691-738" title="Go to source code">_decode_body</a>( <span>string <var>$val</var></span> )</code>
 
 			<div class="description short">
 				<p>Checks the body text to see if it may need to be further decoded</p>
@@ -754,11 +762,14 @@ determined since this encoding is not directly specified by the headers themselv
 			<div class="description detailed hidden">
 				<p>Checks the body text to see if it may need to be further decoded</p>
 
-<p>What it does:
-- Sadly whats in the body text is not always what the header claims, or the
+<p>What it does:</p>
+
+<ul>
+<li>Sadly whats in the body text is not always what the header claims, or the
 header is just wrong. Copy/paste in to email from other apps etc.
 This does an extra check for quoted printable DNA and if found decodes the
-message as such.</p>
+message as such.</li>
+</ul>
 
 
 					<h4>Parameters</h4>
@@ -789,7 +800,7 @@ message as such.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_load_returnpath">#</a>
-			<code><a href="source-class-Email_Parse.html#735-752" title="Go to source code">load_returnpath</a>( )</code>
+			<code><a href="source-class-Email_Parse.html#740-757" title="Go to source code">load_returnpath</a>( )</code>
 
 			<div class="description short">
 				<p>Find the message return_path and well return it</p>
@@ -822,7 +833,7 @@ message as such.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_load_subject">#</a>
-			<code><a href="source-class-Email_Parse.html#754-771" title="Go to source code">load_subject</a>( )</code>
+			<code><a href="source-class-Email_Parse.html#759-776" title="Go to source code">load_subject</a>( )</code>
 
 			<div class="description short">
 				<p>Returns the decoded subject of the email</p>
@@ -859,7 +870,7 @@ message as such.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_load_key">#</a>
-			<code><a href="source-class-Email_Parse.html#773-845" title="Go to source code">load_key</a>( <span>string <var>$key</var> = <span class="php-quote">''</span></span> )</code>
+			<code><a href="source-class-Email_Parse.html#778-850" title="Go to source code">load_key</a>( <span>string <var>$key</var> = <span class="php-quote">''</span></span> )</code>
 
 			<div class="description short">
 				<p>Check for the message security key in common headers, in-reply-to and references</p>
@@ -903,7 +914,7 @@ message as such.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_load_address">#</a>
-			<code><a href="source-class-Email_Parse.html#847-894" title="Go to source code">load_address</a>( )</code>
+			<code><a href="source-class-Email_Parse.html#852-899" title="Go to source code">load_address</a>( )</code>
 
 			<div class="description short">
 				<p>Loads in the most email from, to and cc address</p>
@@ -941,7 +952,7 @@ message as such.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_load_ip">#</a>
-			<code><a href="source-class-Email_Parse.html#896-921" title="Go to source code">load_ip</a>( )</code>
+			<code><a href="source-class-Email_Parse.html#901-926" title="Go to source code">load_ip</a>( )</code>
 
 			<div class="description short">
 				<p>Finds the message sending ip and returns it</p>
@@ -979,7 +990,7 @@ message as such.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_load_spam">#</a>
-			<code><a href="source-class-Email_Parse.html#923-948" title="Go to source code">load_spam</a>( )</code>
+			<code><a href="source-class-Email_Parse.html#928-953" title="Go to source code">load_spam</a>( )</code>
 
 			<div class="description short">
 				<p>Finds if any spam headers have been positively set and returns that flag</p>
@@ -1016,7 +1027,7 @@ message as such.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#__parse_ip">#</a>
-			<code><a href="source-class-Email_Parse.html#950-965" title="Go to source code">_parse_ip</a>( <span>string <var>$string</var></span> )</code>
+			<code><a href="source-class-Email_Parse.html#955-970" title="Go to source code">_parse_ip</a>( <span>string <var>$string</var></span> )</code>
 
 			<div class="description short">
 				<p>Validates that the ip is a valid ip4 address</p>
@@ -1054,7 +1065,7 @@ message as such.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#__parse_address">#</a>
-			<code><a href="source-class-Email_Parse.html#967-1006" title="Go to source code">_parse_address</a>( <span>string <var>$val</var></span> )</code>
+			<code><a href="source-class-Email_Parse.html#972-1011" title="Go to source code">_parse_address</a>( <span>string <var>$val</var></span> )</code>
 
 			<div class="description short">
 				<p>Take an email address and parse out the email address and email name</p>
@@ -1088,7 +1099,7 @@ message as such.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#__decode_string">#</a>
-			<code><a href="source-class-Email_Parse.html#1008-1028" title="Go to source code">_decode_string</a>( <span>string <var>$string</var></span>, <span>string <var>$encoding</var></span>, <span>string <var>$charset</var> = <span class="php-quote">''</span></span> )</code>
+			<code><a href="source-class-Email_Parse.html#1013-1033" title="Go to source code">_decode_string</a>( <span>string <var>$string</var></span>, <span>string <var>$encoding</var></span>, <span>string <var>$charset</var> = <span class="php-quote">''</span></span> )</code>
 
 			<div class="description short">
 				<p>Decodes base64 or quoted-printable strings
@@ -1128,7 +1139,7 @@ Converts from one character set to utf-8</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#__charset_convert">#</a>
-			<code><a href="source-class-Email_Parse.html#1030-1069" title="Go to source code">_charset_convert</a>( <span>string <var>$string</var></span>, <span>string <var>$from</var></span>, <span>string <var>$to</var></span> )</code>
+			<code><a href="source-class-Email_Parse.html#1035-1074" title="Go to source code">_charset_convert</a>( <span>string <var>$string</var></span>, <span>string <var>$from</var></span>, <span>string <var>$to</var></span> )</code>
 
 			<div class="description short">
 				<p>Pick the best possible function to convert a strings character set, if any exist</p>
@@ -1178,7 +1189,7 @@ Converts from one character set to utf-8</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Email_Parse.html#56-60" title="Go to source code"><var>$raw_message</var></a>
+					<a href="source-class-Email_Parse.html#57-61" title="Go to source code"><var>$raw_message</var></a>
 
 				<div class="description short">
 					<p>The full message section (headers, body, etc) we are working on</p>
@@ -1203,7 +1214,7 @@ Converts from one character set to utf-8</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Email_Parse.html#62-66" title="Go to source code"><var>$attachments</var></a>
+					<a href="source-class-Email_Parse.html#63-67" title="Go to source code"><var>$attachments</var></a>
 
 				<div class="description short">
 					<p>Attachments found after the message</p>
@@ -1228,7 +1239,7 @@ Converts from one character set to utf-8</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Email_Parse.html#68-72" title="Go to source code"><var>$inline_files</var></a>
+					<a href="source-class-Email_Parse.html#69-73" title="Go to source code"><var>$inline_files</var></a>
 
 				<div class="description short">
 					<p>Attachments that we designated as inline with the text</p>
@@ -1253,7 +1264,7 @@ Converts from one character set to utf-8</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Email_Parse.html#74-78" title="Go to source code"><var>$body</var></a>
+					<a href="source-class-Email_Parse.html#75-79" title="Go to source code"><var>$body</var></a>
 
 				<div class="description short">
 					<p>Parsed and decoded message body, may be plain text or html</p>
@@ -1278,7 +1289,7 @@ Converts from one character set to utf-8</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Email_Parse.html#80-84" title="Go to source code"><var>$plain_body</var></a>
+					<a href="source-class-Email_Parse.html#81-85" title="Go to source code"><var>$plain_body</var></a>
 
 				<div class="description short">
 					<p>Parsed and decoded message body, only plain text version</p>
@@ -1303,7 +1314,7 @@ Converts from one character set to utf-8</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Email_Parse.html#86-90" title="Go to source code"><var>$headers</var></a>
+					<a href="source-class-Email_Parse.html#87-91" title="Go to source code"><var>$headers</var></a>
 
 				<div class="description short">
 					<p>All of the parsed message headers</p>
@@ -1328,7 +1339,7 @@ Converts from one character set to utf-8</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Email_Parse.html#92-96" title="Go to source code"><var>$message_key_id</var></a>
+					<a href="source-class-Email_Parse.html#93-97" title="Go to source code"><var>$message_key_id</var></a>
 
 				<div class="description short">
 					<p>Full security key</p>
@@ -1353,7 +1364,7 @@ Converts from one character set to utf-8</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Email_Parse.html#98-102" title="Go to source code"><var>$message_type</var></a>
+					<a href="source-class-Email_Parse.html#99-103" title="Go to source code"><var>$message_type</var></a>
 
 				<div class="description short">
 					<p>Message type of the key p, m or t</p>
@@ -1378,7 +1389,7 @@ Converts from one character set to utf-8</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Email_Parse.html#104-108" title="Go to source code"><var>$html_found</var></a>
+					<a href="source-class-Email_Parse.html#105-109" title="Go to source code"><var>$html_found</var></a>
 
 				<div class="description short">
 					<p>If an html was found in the message</p>
@@ -1403,7 +1414,7 @@ Converts from one character set to utf-8</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Email_Parse.html#110-114" title="Go to source code"><var>$spam_found</var></a>
+					<a href="source-class-Email_Parse.html#111-115" title="Go to source code"><var>$spam_found</var></a>
 
 				<div class="description short">
 					<p>If any positive spam headers were found in the message</p>
@@ -1428,7 +1439,7 @@ Converts from one character set to utf-8</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Email_Parse.html#116-120" title="Go to source code"><var>$message_id</var></a>
+					<a href="source-class-Email_Parse.html#117-121" title="Go to source code"><var>$message_id</var></a>
 
 				<div class="description short">
 					<p>Message id of the key</p>
@@ -1453,7 +1464,7 @@ Converts from one character set to utf-8</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Email_Parse.html#122-126" title="Go to source code"><var>$return_path</var></a>
+					<a href="source-class-Email_Parse.html#123-127" title="Go to source code"><var>$return_path</var></a>
 
 				<div class="description short">
 					<p>Holds the return path as set in the email header</p>
@@ -1478,7 +1489,7 @@ Converts from one character set to utf-8</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Email_Parse.html#128-132" title="Go to source code"><var>$subject</var></a>
+					<a href="source-class-Email_Parse.html#129-133" title="Go to source code"><var>$subject</var></a>
 
 				<div class="description short">
 					<p>Holds the message subject</p>
@@ -1503,7 +1514,7 @@ Converts from one character set to utf-8</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Email_Parse.html#134-138" title="Go to source code"><var>$email</var></a>
+					<a href="source-class-Email_Parse.html#135-139" title="Go to source code"><var>$email</var></a>
 
 				<div class="description short">
 					<p>Holds the email to from &amp; cc emails and names</p>
@@ -1528,7 +1539,7 @@ Converts from one character set to utf-8</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Email_Parse.html#140-144" title="Go to source code"><var>$ip</var></a>
+					<a href="source-class-Email_Parse.html#141-145" title="Go to source code"><var>$ip</var></a>
 
 				<div class="description short">
 					<p>Holds the sending ip of the email</p>
@@ -1553,7 +1564,7 @@ Converts from one character set to utf-8</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Email_Parse.html#146-150" title="Go to source code"><var>$_converted_utf8</var></a>
+					<a href="source-class-Email_Parse.html#147-151" title="Go to source code"><var>$_converted_utf8</var></a>
 
 				<div class="description short">
 					<p>If the file was converted to utf8</p>
@@ -1578,7 +1589,7 @@ Converts from one character set to utf-8</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Email_Parse.html#152-156" title="Go to source code"><var>$_email_address</var></a>
+					<a href="source-class-Email_Parse.html#153-157" title="Go to source code"><var>$_email_address</var></a>
 
 				<div class="description short">
 					<p>Holds the current email address, to, from, cc</p>
@@ -1603,7 +1614,7 @@ Converts from one character set to utf-8</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Email_Parse.html#158-162" title="Go to source code"><var>$_email_name</var></a>
+					<a href="source-class-Email_Parse.html#159-163" title="Go to source code"><var>$_email_name</var></a>
 
 				<div class="description short">
 					<p>Holds the current email name</p>
@@ -1628,7 +1639,7 @@ Converts from one character set to utf-8</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Email_Parse.html#164-168" title="Go to source code"><var>$_boundary_section</var></a>
+					<a href="source-class-Email_Parse.html#165-169" title="Go to source code"><var>$_boundary_section</var></a>
 
 				<div class="description short">
 					<p>Holds each boundary section of the message</p>
@@ -1653,7 +1664,7 @@ Converts from one character set to utf-8</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Email_Parse.html#170-174" title="Go to source code"><var>$_boundary_section_count</var></a>
+					<a href="source-class-Email_Parse.html#171-175" title="Go to source code"><var>$_boundary_section_count</var></a>
 
 				<div class="description short">
 					<p>The total number of boundary sections</p>
@@ -1678,7 +1689,7 @@ Converts from one character set to utf-8</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Email_Parse.html#176-180" title="Go to source code"><var>$_header_block</var></a>
+					<a href="source-class-Email_Parse.html#177-181" title="Go to source code"><var>$_header_block</var></a>
 
 				<div class="description short">
 					<p>The message header block</p>
@@ -1708,10 +1719,10 @@ Converts from one character set to utf-8</p>
 	</div>
 
 	<div id="footer">
-		ElkArte 1.0.7 Documentation API documentation generated by <a href="http://apigen.org">ApiGen</a>
+		ElkArte 1.0.10 Documentation API documentation generated by <a href="http://apigen.org">ApiGen</a>
 	</div>
 </div>
 <script src="resources/combined.js"></script>
-<script src="elementlist.js"></script>
+<script src="elementlist.js?13e5afb1269be6447e403156947b1e9254b743c7"></script>
 </body>
 </html>

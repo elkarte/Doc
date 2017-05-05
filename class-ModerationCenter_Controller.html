@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>Class ModerationCenter_Controller | ElkArte 1.0.7 Documentation</title>
+	<title>Class ModerationCenter_Controller | ElkArte 1.0.10 Documentation</title>
 
 	<link rel="stylesheet" href="resources/bootstrap.min.css?973e37a8502921d56bc02bb55321f45b072b6f71">
 	<link rel="stylesheet" href="resources/style.css?70c1d062672daa3f906b72e4f5d03d4bc5c4174d">
@@ -14,7 +14,7 @@
 	<nav id="navigation" class="navbar navbar-default navbar-fixed-top">
 		<div class="container-fluid">
 			<div class="navbar-header">
-				<a href="index.html" class="navbar-brand">ElkArte 1.0.7 Documentation</a>
+				<a href="index.html" class="navbar-brand">ElkArte 1.0.10 Documentation</a>
 			</div>
 			<div class="collapse navbar-collapse">
 
@@ -39,21 +39,17 @@
 					</li>
 
 						<li>
-							<a href="annotation-group-deprecated.html" title="List of elements with deprecated annotation">
-								<span>Deprecated</span>
-							</a>
-						</li>
-						<li>
 							<a href="annotation-group-todo.html" title="List of elements with todo annotation">
 								<span>Todo</span>
 							</a>
 						</li>
+						<li>
+							<a href="annotation-group-deprecated.html" title="List of elements with deprecated annotation">
+								<span>Deprecated</span>
+							</a>
+						</li>
 
-					<li class="divider-vertical"></li>
 
-					<li>
-						<a href="-API-documentation.zip" title="Download documentation as ZIP archive"><span>Download</span></a>
-					</li>
 				</ul>
 			</div>
 		</div>
@@ -344,6 +340,7 @@
 				<li><a href="function-associatedPoll.html">associatedPoll</a></li>
 				<li><a href="function-associatedTopic.html">associatedTopic</a></li>
 				<li><a href="function-autoRotateImage.html">autoRotateImage</a></li>
+				<li><a href="function-autoRotateImageWithIM.html">autoRotateImageWithIM</a></li>
 				<li><a href="function-availableThemes.html">availableThemes</a></li>
 				<li><a href="function-basicMessageInfo.html">basicMessageInfo</a></li>
 				<li><a href="function-basicWatchedUsers.html">basicWatchedUsers</a></li>
@@ -743,6 +740,7 @@
 				<li><a href="function-sendApprovalNotifications.html">sendApprovalNotifications</a></li>
 				<li><a href="function-sendBoardNotifications.html">sendBoardNotifications</a></li>
 				<li><a href="function-sendNotifications.html">sendNotifications</a></li>
+				<li><a href="function-serializeToJson.html">serializeToJson</a></li>
 				<li><a href="function-sessionClose.html">sessionClose</a></li>
 				<li><a href="function-sessionDestroy.html">sessionDestroy</a></li>
 				<li><a href="function-sessionGC.html">sessionGC</a></li>
@@ -964,7 +962,7 @@ This software is a derived product, based on:
 Simple Machines Forum (SMF)
 copyright:	2011 Simple Machines (http://www.simplemachines.org)
 license:		BSD, See included LICENSE.TXT for terms and conditions.</a><br>
-			<b>Located at</b> <a href="source-class-ModerationCenter_Controller.html#23-1813" title="Go to source code">sources/controllers/ModerationCenter.controller.php</a>
+			<b>Located at</b> <a href="source-class-ModerationCenter_Controller.html#23-1827" title="Go to source code">sources/controllers/ModerationCenter.controller.php</a>
 		<br>
 	</div>
 
@@ -999,7 +997,7 @@ license:		BSD, See included LICENSE.TXT for terms and conditions.</a><br>
 
 					<h4>See</h4>
 					<div class="list">
-							<code><a href="class-Action_Controller.html#_action_index">Action_Controller::action_index()</a></code><br>
+							Action_Controller::action_index()<br>
 					</div>
 
 
@@ -1017,7 +1015,7 @@ license:		BSD, See included LICENSE.TXT for terms and conditions.</a><br>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_prepareModcenter">#</a>
-			<code><a href="source-class-ModerationCenter_Controller.html#52-298" title="Go to source code">prepareModcenter</a>( )</code>
+			<code><a href="source-class-ModerationCenter_Controller.html#52-312" title="Go to source code">prepareModcenter</a>( )</code>
 
 			<div class="description short">
 				<p>Prepare menu, make checks, load files, and create moderation menu.
@@ -1050,7 +1048,7 @@ set up moderation menu.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_action_moderationHome">#</a>
-			<code><a href="source-class-ModerationCenter_Controller.html#300-351" title="Go to source code">action_moderationHome</a>( )</code>
+			<code><a href="source-class-ModerationCenter_Controller.html#314-365" title="Go to source code">action_moderationHome</a>( )</code>
 
 			<div class="description short">
 				<p>This handler presents the home page of the moderation center.</p>
@@ -1079,7 +1077,7 @@ set up moderation menu.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_action_modEndSession">#</a>
-			<code><a href="source-class-ModerationCenter_Controller.html#353-365" title="Go to source code">action_modEndSession</a>( )</code>
+			<code><a href="source-class-ModerationCenter_Controller.html#367-379" title="Go to source code">action_modEndSession</a>( )</code>
 
 			<div class="description short">
 				<p>This ends a moderator session, requiring authentication to access the MCP again.</p>
@@ -1108,7 +1106,7 @@ set up moderation menu.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_action_showNotice">#</a>
-			<code><a href="source-class-ModerationCenter_Controller.html#367-390" title="Go to source code">action_showNotice</a>( )</code>
+			<code><a href="source-class-ModerationCenter_Controller.html#381-404" title="Go to source code">action_showNotice</a>( )</code>
 
 			<div class="description short">
 				<p>Show a warning notice sent to a user.</p>
@@ -1137,7 +1135,7 @@ set up moderation menu.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_action_reportedPosts">#</a>
-			<code><a href="source-class-ModerationCenter_Controller.html#392-551" title="Go to source code">action_reportedPosts</a>( )</code>
+			<code><a href="source-class-ModerationCenter_Controller.html#406-565" title="Go to source code">action_reportedPosts</a>( )</code>
 
 			<div class="description short">
 				<p>Browse all the reported posts...</p>
@@ -1170,7 +1168,7 @@ set up moderation menu.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_action_moderationSettings">#</a>
-			<code><a href="source-class-ModerationCenter_Controller.html#553-652" title="Go to source code">action_moderationSettings</a>( )</code>
+			<code><a href="source-class-ModerationCenter_Controller.html#567-666" title="Go to source code">action_moderationSettings</a>( )</code>
 
 			<div class="description short">
 				<p>Change moderation preferences.</p>
@@ -1199,7 +1197,7 @@ set up moderation menu.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_action_modifyWarningTemplate">#</a>
-			<code><a href="source-class-ModerationCenter_Controller.html#654-755" title="Go to source code">action_modifyWarningTemplate</a>( )</code>
+			<code><a href="source-class-ModerationCenter_Controller.html#668-769" title="Go to source code">action_modifyWarningTemplate</a>( )</code>
 
 			<div class="description short">
 				<p>Edit a warning template.</p>
@@ -1232,7 +1230,7 @@ set up moderation menu.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_action_modReport">#</a>
-			<code><a href="source-class-ModerationCenter_Controller.html#757-971" title="Go to source code">action_modReport</a>( )</code>
+			<code><a href="source-class-ModerationCenter_Controller.html#771-985" title="Go to source code">action_modReport</a>( )</code>
 
 			<div class="description short">
 				<p>Get details about the moderation report...
@@ -1263,7 +1261,7 @@ specified in $_REQUEST['report'].</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_action_viewWatchedUsers">#</a>
-			<code><a href="source-class-ModerationCenter_Controller.html#973-1183" title="Go to source code">action_viewWatchedUsers</a>( )</code>
+			<code><a href="source-class-ModerationCenter_Controller.html#987-1197" title="Go to source code">action_viewWatchedUsers</a>( )</code>
 
 			<div class="description short">
 				<p>View watched users and their posts</p>
@@ -1292,7 +1290,7 @@ specified in $_REQUEST['report'].</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_action_viewWarningLog">#</a>
-			<code><a href="source-class-ModerationCenter_Controller.html#1185-1357" title="Go to source code">action_viewWarningLog</a>( )</code>
+			<code><a href="source-class-ModerationCenter_Controller.html#1199-1371" title="Go to source code">action_viewWarningLog</a>( )</code>
 
 			<div class="description short">
 				<p>Simply put, look at the warning log!</p>
@@ -1321,7 +1319,7 @@ specified in $_REQUEST['report'].</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_action_viewWarningTemplates">#</a>
-			<code><a href="source-class-ModerationCenter_Controller.html#1359-1478" title="Go to source code">action_viewWarningTemplates</a>( )</code>
+			<code><a href="source-class-ModerationCenter_Controller.html#1373-1492" title="Go to source code">action_viewWarningTemplates</a>( )</code>
 
 			<div class="description short">
 				<p>View all the custom warning templates.
@@ -1352,7 +1350,7 @@ specified in $_REQUEST['report'].</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_action_viewWarnings">#</a>
-			<code><a href="source-class-ModerationCenter_Controller.html#1480-1510" title="Go to source code">action_viewWarnings</a>( )</code>
+			<code><a href="source-class-ModerationCenter_Controller.html#1494-1524" title="Go to source code">action_viewWarnings</a>( )</code>
 
 			<div class="description short">
 				<p>Entry point for viewing warning related stuff.</p>
@@ -1381,7 +1379,7 @@ specified in $_REQUEST['report'].</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_list_getWatchedUserCount">#</a>
-			<code><a href="source-class-ModerationCenter_Controller.html#1512-1522" title="Go to source code">list_getWatchedUserCount</a>( <span>string <var>$approve_query</var></span> )</code>
+			<code><a href="source-class-ModerationCenter_Controller.html#1526-1536" title="Go to source code">list_getWatchedUserCount</a>( <span>string <var>$approve_query</var></span> )</code>
 
 			<div class="description short">
 				<p>Callback for createList().</p>
@@ -1419,7 +1417,7 @@ specified in $_REQUEST['report'].</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_list_getWatchedUsers">#</a>
-			<code><a href="source-class-ModerationCenter_Controller.html#1524-1537" title="Go to source code">list_getWatchedUsers</a>( <span>integer <var>$start</var></span>, <span>integer <var>$items_per_page</var></span>, <span>string <var>$sort</var></span>, <span>string <var>$approve_query</var></span>, <span>string <var>$dummy</var></span> )</code>
+			<code><a href="source-class-ModerationCenter_Controller.html#1538-1551" title="Go to source code">list_getWatchedUsers</a>( <span>integer <var>$start</var></span>, <span>integer <var>$items_per_page</var></span>, <span>string <var>$sort</var></span>, <span>string <var>$approve_query</var></span>, <span>string <var>$dummy</var></span> )</code>
 
 			<div class="description short">
 				<p>Callback for createList().</p>
@@ -1461,7 +1459,7 @@ specified in $_REQUEST['report'].</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_list_getWatchedUserPostsCount">#</a>
-			<code><a href="source-class-ModerationCenter_Controller.html#1539-1549" title="Go to source code">list_getWatchedUserPostsCount</a>( <span>string <var>$approve_query</var></span> )</code>
+			<code><a href="source-class-ModerationCenter_Controller.html#1553-1563" title="Go to source code">list_getWatchedUserPostsCount</a>( <span>string <var>$approve_query</var></span> )</code>
 
 			<div class="description short">
 				<p>Callback for createList().</p>
@@ -1495,7 +1493,7 @@ specified in $_REQUEST['report'].</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_list_getWatchedUserPosts">#</a>
-			<code><a href="source-class-ModerationCenter_Controller.html#1551-1564" title="Go to source code">list_getWatchedUserPosts</a>( <span>integer <var>$start</var></span>, <span>integer <var>$items_per_page</var></span>, <span>string <var>$sort</var></span>, <span>string <var>$approve_query</var></span>, <span>int[] <var>$delete_boards</var></span> )</code>
+			<code><a href="source-class-ModerationCenter_Controller.html#1565-1578" title="Go to source code">list_getWatchedUserPosts</a>( <span>integer <var>$start</var></span>, <span>integer <var>$items_per_page</var></span>, <span>string <var>$sort</var></span>, <span>string <var>$approve_query</var></span>, <span>int[] <var>$delete_boards</var></span> )</code>
 
 			<div class="description short">
 				<p>Callback for createList().</p>
@@ -1537,7 +1535,7 @@ specified in $_REQUEST['report'].</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_list_getWarningTemplates">#</a>
-			<code><a href="source-class-ModerationCenter_Controller.html#1566-1577" title="Go to source code">list_getWarningTemplates</a>( <span>integer <var>$start</var></span>, <span>integer <var>$items_per_page</var></span>, <span>string <var>$sort</var></span>, <span>string <var>$template_type</var> = <span class="php-quote">'warntpl'</span></span> )</code>
+			<code><a href="source-class-ModerationCenter_Controller.html#1580-1591" title="Go to source code">list_getWarningTemplates</a>( <span>integer <var>$start</var></span>, <span>integer <var>$items_per_page</var></span>, <span>string <var>$sort</var></span>, <span>string <var>$template_type</var> = <span class="php-quote">'warntpl'</span></span> )</code>
 
 			<div class="description short">
 				<p>Callback for createList() to get all the templates of a type from the system</p>
@@ -1577,7 +1575,7 @@ specified in $_REQUEST['report'].</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_list_getWarningTemplateCount">#</a>
-			<code><a href="source-class-ModerationCenter_Controller.html#1579-1587" title="Go to source code">list_getWarningTemplateCount</a>( <span>string <var>$template_type</var> = <span class="php-quote">'warntpl'</span></span> )</code>
+			<code><a href="source-class-ModerationCenter_Controller.html#1593-1601" title="Go to source code">list_getWarningTemplateCount</a>( <span>string <var>$template_type</var> = <span class="php-quote">'warntpl'</span></span> )</code>
 
 			<div class="description short">
 				<p>Callback for createList() to get the number of templates of a type in the system</p>
@@ -1611,7 +1609,7 @@ specified in $_REQUEST['report'].</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_list_getWarnings">#</a>
-			<code><a href="source-class-ModerationCenter_Controller.html#1589-1603" title="Go to source code">list_getWarnings</a>( <span>integer <var>$start</var></span>, <span>integer <var>$items_per_page</var></span>, <span>string <var>$sort</var></span>, <span>string <var>$query_string</var></span>, <span>mixed[] <var>$query_params</var></span> )</code>
+			<code><a href="source-class-ModerationCenter_Controller.html#1603-1617" title="Go to source code">list_getWarnings</a>( <span>integer <var>$start</var></span>, <span>integer <var>$items_per_page</var></span>, <span>string <var>$sort</var></span>, <span>string <var>$query_string</var></span>, <span>mixed[] <var>$query_params</var></span> )</code>
 
 			<div class="description short">
 				<p>Callback for createList()
@@ -1657,7 +1655,7 @@ Uses warnings function in moderation.subs</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_list_getWarningCount">#</a>
-			<code><a href="source-class-ModerationCenter_Controller.html#1605-1616" title="Go to source code">list_getWarningCount</a>( <span>string <var>$query_string</var></span>, <span>mixed[] <var>$query_params</var></span> )</code>
+			<code><a href="source-class-ModerationCenter_Controller.html#1619-1630" title="Go to source code">list_getWarningCount</a>( <span>string <var>$query_string</var></span>, <span>mixed[] <var>$query_params</var></span> )</code>
 
 			<div class="description short">
 				<p>Callback for createList()
@@ -1697,7 +1695,7 @@ Uses warningCount function in moderation.subs</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_block_groupRequests">#</a>
-			<code><a href="source-class-ModerationCenter_Controller.html#1618-1633" title="Go to source code">block_groupRequests</a>( )</code>
+			<code><a href="source-class-ModerationCenter_Controller.html#1632-1647" title="Go to source code">block_groupRequests</a>( )</code>
 
 			<div class="description short">
 				<p>Show a list of all the group requests they can see.
@@ -1728,7 +1726,7 @@ Checks permissions for group moderation.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_block_latestNews">#</a>
-			<code><a href="source-class-ModerationCenter_Controller.html#1635-1646" title="Go to source code">block_latestNews</a>( )</code>
+			<code><a href="source-class-ModerationCenter_Controller.html#1649-1660" title="Go to source code">block_latestNews</a>( )</code>
 
 			<div class="description short">
 				<p>Just prepares the time stuff for the latest news.</p>
@@ -1757,7 +1755,7 @@ Checks permissions for group moderation.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_block_watchedUsers">#</a>
-			<code><a href="source-class-ModerationCenter_Controller.html#1648-1670" title="Go to source code">block_watchedUsers</a>( )</code>
+			<code><a href="source-class-ModerationCenter_Controller.html#1662-1684" title="Go to source code">block_watchedUsers</a>( )</code>
 
 			<div class="description short">
 				<p>Show a list of the most active watched users.</p>
@@ -1786,7 +1784,7 @@ Checks permissions for group moderation.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_block_actionRequired">#</a>
-			<code><a href="source-class-ModerationCenter_Controller.html#1672-1700" title="Go to source code">block_actionRequired</a>( )</code>
+			<code><a href="source-class-ModerationCenter_Controller.html#1686-1714" title="Go to source code">block_actionRequired</a>( )</code>
 
 			<div class="description short">
 				<p>Shows a list of items requiring moderation action
@@ -1817,7 +1815,7 @@ Includes post, topic, attachment, group, member and PBE values with links to eac
 
 			<td class="name"><div>
 			<a class="anchor" href="#_block_notes">#</a>
-			<code><a href="source-class-ModerationCenter_Controller.html#1702-1777" title="Go to source code">block_notes</a>( )</code>
+			<code><a href="source-class-ModerationCenter_Controller.html#1716-1791" title="Go to source code">block_notes</a>( )</code>
 
 			<div class="description short">
 				<p>Show an area for the moderator to type into.</p>
@@ -1846,7 +1844,7 @@ Includes post, topic, attachment, group, member and PBE values with links to eac
 
 			<td class="name"><div>
 			<a class="anchor" href="#_block_reportedPosts">#</a>
-			<code><a href="source-class-ModerationCenter_Controller.html#1779-1812" title="Go to source code">block_reportedPosts</a>( )</code>
+			<code><a href="source-class-ModerationCenter_Controller.html#1793-1826" title="Go to source code">block_reportedPosts</a>( )</code>
 
 			<div class="description short">
 				<p>Show a list of the most recent reported posts.</p>
@@ -1923,10 +1921,10 @@ Includes post, topic, attachment, group, member and PBE values with links to eac
 	</div>
 
 	<div id="footer">
-		ElkArte 1.0.7 Documentation API documentation generated by <a href="http://apigen.org">ApiGen</a>
+		ElkArte 1.0.10 Documentation API documentation generated by <a href="http://apigen.org">ApiGen</a>
 	</div>
 </div>
 <script src="resources/combined.js"></script>
-<script src="elementlist.js"></script>
+<script src="elementlist.js?13e5afb1269be6447e403156947b1e9254b743c7"></script>
 </body>
 </html>

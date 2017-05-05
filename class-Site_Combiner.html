@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>Class Site_Combiner | ElkArte 1.0.7 Documentation</title>
+	<title>Class Site_Combiner | ElkArte 1.0.10 Documentation</title>
 
 	<link rel="stylesheet" href="resources/bootstrap.min.css?973e37a8502921d56bc02bb55321f45b072b6f71">
 	<link rel="stylesheet" href="resources/style.css?70c1d062672daa3f906b72e4f5d03d4bc5c4174d">
@@ -14,7 +14,7 @@
 	<nav id="navigation" class="navbar navbar-default navbar-fixed-top">
 		<div class="container-fluid">
 			<div class="navbar-header">
-				<a href="index.html" class="navbar-brand">ElkArte 1.0.7 Documentation</a>
+				<a href="index.html" class="navbar-brand">ElkArte 1.0.10 Documentation</a>
 			</div>
 			<div class="collapse navbar-collapse">
 
@@ -39,21 +39,17 @@
 					</li>
 
 						<li>
-							<a href="annotation-group-deprecated.html" title="List of elements with deprecated annotation">
-								<span>Deprecated</span>
-							</a>
-						</li>
-						<li>
 							<a href="annotation-group-todo.html" title="List of elements with todo annotation">
 								<span>Todo</span>
 							</a>
 						</li>
+						<li>
+							<a href="annotation-group-deprecated.html" title="List of elements with deprecated annotation">
+								<span>Deprecated</span>
+							</a>
+						</li>
 
-					<li class="divider-vertical"></li>
 
-					<li>
-						<a href="-API-documentation.zip" title="Download documentation as ZIP archive"><span>Download</span></a>
-					</li>
 				</ul>
 			</div>
 		</div>
@@ -344,6 +340,7 @@
 				<li><a href="function-associatedPoll.html">associatedPoll</a></li>
 				<li><a href="function-associatedTopic.html">associatedTopic</a></li>
 				<li><a href="function-autoRotateImage.html">autoRotateImage</a></li>
+				<li><a href="function-autoRotateImageWithIM.html">autoRotateImageWithIM</a></li>
 				<li><a href="function-availableThemes.html">availableThemes</a></li>
 				<li><a href="function-basicMessageInfo.html">basicMessageInfo</a></li>
 				<li><a href="function-basicWatchedUsers.html">basicWatchedUsers</a></li>
@@ -743,6 +740,7 @@
 				<li><a href="function-sendApprovalNotifications.html">sendApprovalNotifications</a></li>
 				<li><a href="function-sendBoardNotifications.html">sendBoardNotifications</a></li>
 				<li><a href="function-sendNotifications.html">sendNotifications</a></li>
+				<li><a href="function-serializeToJson.html">serializeToJson</a></li>
 				<li><a href="function-sessionClose.html">sessionClose</a></li>
 				<li><a href="function-sessionDestroy.html">sessionDestroy</a></li>
 				<li><a href="function-sessionGC.html">sessionGC</a></li>
@@ -925,10 +923,13 @@
 	<div class="description">
 	<p>Used to combine css or js files in to a single file</p>
 
-<p>What it does:
-- Checks if the files have changed, and if so rebuilds the amalgamation
-- Calls minification classes to reduce size of css and js file saving bandwidth
-- Can creates a .gz file, be would require .htaccess or the like to use</p>
+<p>What it does:</p>
+
+<ul>
+<li>Checks if the files have changed, and if so rebuilds the amalgamation</li>
+<li>Calls minification classes to reduce size of css and js file saving bandwidth</li>
+<li>Can creates a .gz file, be would require .htaccess or the like to use</li>
+</ul>
 	</div>
 
 
@@ -949,7 +950,7 @@
 				ElkArte Forum contributors<br>
 				<b>License:</b>
 				<a href="BSD">http://opensource.org/licenses/BSD-3-Clause</a><br>
-			<b>Located at</b> <a href="source-class-Site_Combiner.html#16-538" title="Go to source code">sources/SiteCombiner.class.php</a>
+			<b>Located at</b> <a href="source-class-Site_Combiner.html#16-545" title="Go to source code">sources/SiteCombiner.class.php</a>
 		<br>
 	</div>
 
@@ -969,7 +970,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#___construct">#</a>
-			<code><a href="source-class-Site_Combiner.html#122-133" title="Go to source code">__construct</a>( <span>string <var>$cachedir</var></span>, <span>string <var>$cacheurl</var></span> )</code>
+			<code><a href="source-class-Site_Combiner.html#123-134" title="Go to source code">__construct</a>( <span>string <var>$cachedir</var></span>, <span>string <var>$cacheurl</var></span> )</code>
 
 			<div class="description short">
 				<p>Nothing much to do but start</p>
@@ -1005,7 +1006,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_site_js_combine">#</a>
-			<code><a href="source-class-Site_Combiner.html#135-185" title="Go to source code">site_js_combine</a>( <span>mixed[] <var>$files</var></span>, <span>boolean <var>$do_defered</var></span> )</code>
+			<code><a href="source-class-Site_Combiner.html#136-186" title="Go to source code">site_js_combine</a>( <span>mixed[] <var>$files</var></span>, <span>boolean <var>$do_defered</var></span> )</code>
 
 			<div class="description short">
 				<p>Combine javascript files in to a single file to save requests</p>
@@ -1041,7 +1042,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_site_css_combine">#</a>
-			<code><a href="source-class-Site_Combiner.html#187-232" title="Go to source code">site_css_combine</a>( <span>string[] <var>$files</var></span> )</code>
+			<code><a href="source-class-Site_Combiner.html#188-233" title="Go to source code">site_css_combine</a>( <span>string[] <var>$files</var></span> )</code>
 
 			<div class="description short">
 				<p>Combine css files in to a single file</p>
@@ -1075,7 +1076,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getSpares">#</a>
-			<code><a href="source-class-Site_Combiner.html#234-242" title="Go to source code">getSpares</a>( )</code>
+			<code><a href="source-class-Site_Combiner.html#235-243" title="Go to source code">getSpares</a>( )</code>
 
 			<div class="description short">
 				<p>Returns the info of the files that were not combined</p>
@@ -1108,7 +1109,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#__addFile">#</a>
-			<code><a href="source-class-Site_Combiner.html#244-277" title="Go to source code">_addFile</a>( <span>string[] <var>$options</var></span> )</code>
+			<code><a href="source-class-Site_Combiner.html#245-279" title="Go to source code">_addFile</a>( <span>string[] <var>$options</var></span> )</code>
 
 			<div class="description short">
 				<p>Add all the file parameters to the $_combine_files array</p>
@@ -1117,9 +1118,12 @@
 			<div class="description detailed hidden">
 				<p>Add all the file parameters to the $_combine_files array</p>
 
-<p>What it does:
-- If the file has a 'stale' option defined it will be added to the $_stales array as well to be used later
-- Tags any files that are pre-minimized by filename matching .min.js</p>
+<p>What it does:</p>
+
+<ul>
+<li>If the file has a 'stale' option defined it will be added to the $_stales array as well to be used later</li>
+<li>Tags any files that are pre-minimized by filename matching .min.js</li>
+</ul>
 
 
 					<h4>Parameters</h4>
@@ -1151,7 +1155,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#__isStale">#</a>
-			<code><a href="source-class-Site_Combiner.html#279-296" title="Go to source code">_isStale</a>( )</code>
+			<code><a href="source-class-Site_Combiner.html#281-298" title="Go to source code">_isStale</a>( )</code>
 
 			<div class="description short">
 				<p>Determines if the existing combined file is stale</p>
@@ -1184,7 +1188,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#__buildName">#</a>
-			<code><a href="source-class-Site_Combiner.html#298-320" title="Go to source code">_buildName</a>( <span>string <var>$type</var></span> )</code>
+			<code><a href="source-class-Site_Combiner.html#300-322" title="Go to source code">_buildName</a>( <span>string <var>$type</var></span> )</code>
 
 			<div class="description short">
 				<p>Creates a new archive name</p>
@@ -1220,7 +1224,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#__combineFiles">#</a>
-			<code><a href="source-class-Site_Combiner.html#322-367" title="Go to source code">_combineFiles</a>( <span>string <var>$type</var></span> )</code>
+			<code><a href="source-class-Site_Combiner.html#324-370" title="Go to source code">_combineFiles</a>( <span>string <var>$type</var></span> )</code>
 
 			<div class="description short">
 				<p>Reads each files contents in to the _combine_files array</p>
@@ -1229,10 +1233,13 @@
 			<div class="description detailed hidden">
 				<p>Reads each files contents in to the _combine_files array</p>
 
-<p>What it does:
-- For each file, loads its contents in to the content key
-- If the file is CSS will convert some common relative links to the
-location of the hive</p>
+<p>What it does:</p>
+
+<ul>
+<li>For each file, loads its contents in to the content key</li>
+<li>If the file is CSS will convert some common relative links to the
+location of the hive</li>
+</ul>
 
 
 					<h4>Parameters</h4>
@@ -1259,7 +1266,7 @@ location of the hive</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#__saveFiles">#</a>
-			<code><a href="source-class-Site_Combiner.html#369-387" title="Go to source code">_saveFiles</a>( )</code>
+			<code><a href="source-class-Site_Combiner.html#372-390" title="Go to source code">_saveFiles</a>( )</code>
 
 			<div class="description short">
 				<p>Save a compilation as text and optionally a compressed .gz file</p>
@@ -1288,7 +1295,7 @@ location of the hive</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#__jsCompiler">#</a>
-			<code><a href="source-class-Site_Combiner.html#389-428" title="Go to source code">_jsCompiler</a>( )</code>
+			<code><a href="source-class-Site_Combiner.html#392-432" title="Go to source code">_jsCompiler</a>( )</code>
 
 			<div class="description short">
 				<p>Takes a js file and compresses it to save space, will try several methods
@@ -1299,11 +1306,14 @@ to minimize the code</p>
 				<p>Takes a js file and compresses it to save space, will try several methods
 to minimize the code</p>
 
-<p>What it does:
-- Attempt to use the closure-compiler API using code_url
-- Failing that will use jsminplus
-- Failing that it will use the closure-compiler API using js_code a) single block if it can or b) as multiple calls
-- Failing that will return original uncompressed file</p>
+<p>What it does:</p>
+
+<ul>
+<li>Attempt to use the closure-compiler API using code_url</li>
+<li>Failing that will use jsminplus</li>
+<li>Failing that it will use the closure-compiler API using js_code a) single block if it can or b) as multiple calls</li>
+<li>Failing that will return original uncompressed file</li>
+</ul>
 
 
 
@@ -1325,7 +1335,7 @@ to minimize the code</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#__closure_code_url">#</a>
-			<code><a href="source-class-Site_Combiner.html#430-449" title="Go to source code">_closure_code_url</a>( )</code>
+			<code><a href="source-class-Site_Combiner.html#434-454" title="Go to source code">_closure_code_url</a>( )</code>
 
 			<div class="description short">
 				<p>Makes a request to the closure compiler using the code_url syntax</p>
@@ -1334,9 +1344,12 @@ to minimize the code</p>
 			<div class="description detailed hidden">
 				<p>Makes a request to the closure compiler using the code_url syntax</p>
 
-<p>What it does:
-- Allows us to make a single request and let the compiler fetch the files from us
-- Best option if its available (closure can see the files)</p>
+<p>What it does:</p>
+
+<ul>
+<li>Allows us to make a single request and let the compiler fetch the files from us</li>
+<li>Best option if its available (closure can see the files)</li>
+</ul>
 
 
 
@@ -1358,7 +1371,7 @@ to minimize the code</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#__closure_js_code">#</a>
-			<code><a href="source-class-Site_Combiner.html#451-472" title="Go to source code">_closure_js_code</a>( )</code>
+			<code><a href="source-class-Site_Combiner.html#456-478" title="Go to source code">_closure_js_code</a>( )</code>
 
 			<div class="description short">
 				<p>Makes a request to the closure compiler using the js_code syntax</p>
@@ -1367,10 +1380,13 @@ to minimize the code</p>
 			<div class="description detailed hidden">
 				<p>Makes a request to the closure compiler using the js_code syntax</p>
 
-<p>What it does:
-- If our combined file size allows, this is done as a single post to the compiler
-- If the combined string is to large, then it is processed as chunks done
-to minimize the number of posts required</p>
+<p>What it does:</p>
+
+<ul>
+<li>If our combined file size allows, this is done as a single post to the compiler</li>
+<li>If the combined string is to large, then it is processed as chunks done
+to minimize the number of posts required</li>
+</ul>
 
 
 
@@ -1392,7 +1408,7 @@ to minimize the number of posts required</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#__closure_js_code_chunks">#</a>
-			<code><a href="source-class-Site_Combiner.html#474-537" title="Go to source code">_closure_js_code_chunks</a>( )</code>
+			<code><a href="source-class-Site_Combiner.html#480-544" title="Go to source code">_closure_js_code_chunks</a>( )</code>
 
 			<div class="description short">
 				<p>Combine files in to &lt;200k chunks and make closure compiler requests</p>
@@ -1401,11 +1417,14 @@ to minimize the number of posts required</p>
 			<div class="description detailed hidden">
 				<p>Combine files in to &lt;200k chunks and make closure compiler requests</p>
 
-<p>What it does:
-- Loads as many files as it can in to a single post request while
-keeping the post size within the limits accepted by the service
-- Will do multiple requests until done, combining the results
-- Returns the compressed string or the original if an error occurs</p>
+<p>What it does:</p>
+
+<ul>
+<li>Loads as many files as it can in to a single post request while
+keeping the post size within the limits accepted by the service</li>
+<li>Will do multiple requests until done, combining the results</li>
+<li>Returns the compressed string or the original if an error occurs</li>
+</ul>
 
 
 
@@ -1439,7 +1458,7 @@ keeping the post size within the limits accepted by the service
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Site_Combiner.html#26-31" title="Go to source code"><var>$_combine_files</var></a>
+					<a href="source-class-Site_Combiner.html#27-32" title="Go to source code"><var>$_combine_files</var></a>
 
 				<div class="description short">
 					<p>Holds all the files contents that we have joined in to one</p>
@@ -1464,7 +1483,7 @@ keeping the post size within the limits accepted by the service
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Site_Combiner.html#33-38" title="Go to source code"><var>$_archive_name</var></a>
+					<a href="source-class-Site_Combiner.html#34-39" title="Go to source code"><var>$_archive_name</var></a>
 
 				<div class="description short">
 					<p>Holds the file name of our newly created file</p>
@@ -1489,7 +1508,7 @@ keeping the post size within the limits accepted by the service
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Site_Combiner.html#40-45" title="Go to source code"><var>$_archive_filenames</var></a>
+					<a href="source-class-Site_Combiner.html#41-46" title="Go to source code"><var>$_archive_filenames</var></a>
 
 				<div class="description short">
 					<p>Holds the file names of the files in the compilation</p>
@@ -1514,7 +1533,7 @@ keeping the post size within the limits accepted by the service
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Site_Combiner.html#47-52" title="Go to source code"><var>$_archive_header</var></a>
+					<a href="source-class-Site_Combiner.html#48-53" title="Go to source code"><var>$_archive_header</var></a>
 
 				<div class="description short">
 					<p>Holds the comment line to add at the start of the compressed compilation</p>
@@ -1539,7 +1558,7 @@ keeping the post size within the limits accepted by the service
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Site_Combiner.html#54-59" title="Go to source code"><var>$_cache</var></a>
+					<a href="source-class-Site_Combiner.html#55-60" title="Go to source code"><var>$_cache</var></a>
 
 				<div class="description short">
 					<p>Holds the file data of the combined files</p>
@@ -1564,7 +1583,7 @@ keeping the post size within the limits accepted by the service
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Site_Combiner.html#61-66" title="Go to source code"><var>$_min_cache</var></a>
+					<a href="source-class-Site_Combiner.html#62-67" title="Go to source code"><var>$_min_cache</var></a>
 
 				<div class="description short">
 					<p>Holds the file data of pre minimized files</p>
@@ -1589,7 +1608,7 @@ keeping the post size within the limits accepted by the service
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Site_Combiner.html#68-73" title="Go to source code"><var>$_minified_cache</var></a>
+					<a href="source-class-Site_Combiner.html#69-74" title="Go to source code"><var>$_minified_cache</var></a>
 
 				<div class="description short">
 					<p>Holds the minified data of the combined files</p>
@@ -1614,7 +1633,7 @@ keeping the post size within the limits accepted by the service
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Site_Combiner.html#75-80" title="Go to source code"><var>$_archive_dir</var></a>
+					<a href="source-class-Site_Combiner.html#76-81" title="Go to source code"><var>$_archive_dir</var></a>
 
 				<div class="description short">
 					<p>The directory where we will save the combined and packed files</p>
@@ -1639,7 +1658,7 @@ keeping the post size within the limits accepted by the service
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Site_Combiner.html#82-87" title="Go to source code"><var>$_archive_url</var></a>
+					<a href="source-class-Site_Combiner.html#83-88" title="Go to source code"><var>$_archive_url</var></a>
 
 				<div class="description short">
 					<p>The url where we will save the combined and packed files</p>
@@ -1664,7 +1683,7 @@ keeping the post size within the limits accepted by the service
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Site_Combiner.html#89-94" title="Go to source code"><var>$_archive_stale</var></a>
+					<a href="source-class-Site_Combiner.html#90-95" title="Go to source code"><var>$_archive_stale</var></a>
 
 				<div class="description short">
 					<p>The stale parameter added to the url</p>
@@ -1689,7 +1708,7 @@ keeping the post size within the limits accepted by the service
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Site_Combiner.html#96-101" title="Go to source code"><var>$_stales</var></a>
+					<a href="source-class-Site_Combiner.html#97-102" title="Go to source code"><var>$_stales</var></a>
 
 				<div class="description short">
 					<p>All the cache-stale params added to the file urls</p>
@@ -1714,7 +1733,7 @@ keeping the post size within the limits accepted by the service
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Site_Combiner.html#103-108" title="Go to source code"><var>$_spares</var></a>
+					<a href="source-class-Site_Combiner.html#104-109" title="Go to source code"><var>$_spares</var></a>
 
 				<div class="description short">
 					<p>All files that was not possible to combine</p>
@@ -1739,7 +1758,7 @@ keeping the post size within the limits accepted by the service
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Site_Combiner.html#110-114" title="Go to source code"><var>$_url</var></a>
+					<a href="source-class-Site_Combiner.html#111-115" title="Go to source code"><var>$_url</var></a>
 
 				<div class="description short">
 					<p>Location of the closure compiler</p>
@@ -1764,7 +1783,7 @@ keeping the post size within the limits accepted by the service
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Site_Combiner.html#116-120" title="Go to source code"><var>$_post_header</var></a>
+					<a href="source-class-Site_Combiner.html#117-121" title="Go to source code"><var>$_post_header</var></a>
 
 				<div class="description short">
 					<p>Base post header to send to the closure complier</p>
@@ -1794,10 +1813,10 @@ keeping the post size within the limits accepted by the service
 	</div>
 
 	<div id="footer">
-		ElkArte 1.0.7 Documentation API documentation generated by <a href="http://apigen.org">ApiGen</a>
+		ElkArte 1.0.10 Documentation API documentation generated by <a href="http://apigen.org">ApiGen</a>
 	</div>
 </div>
 <script src="resources/combined.js"></script>
-<script src="elementlist.js"></script>
+<script src="elementlist.js?13e5afb1269be6447e403156947b1e9254b743c7"></script>
 </body>
 </html>

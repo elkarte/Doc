@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>Class PackageServers_Controller | ElkArte 1.0.7 Documentation</title>
+	<title>Class PackageServers_Controller | ElkArte 1.0.10 Documentation</title>
 
 	<link rel="stylesheet" href="resources/bootstrap.min.css?973e37a8502921d56bc02bb55321f45b072b6f71">
 	<link rel="stylesheet" href="resources/style.css?70c1d062672daa3f906b72e4f5d03d4bc5c4174d">
@@ -14,7 +14,7 @@
 	<nav id="navigation" class="navbar navbar-default navbar-fixed-top">
 		<div class="container-fluid">
 			<div class="navbar-header">
-				<a href="index.html" class="navbar-brand">ElkArte 1.0.7 Documentation</a>
+				<a href="index.html" class="navbar-brand">ElkArte 1.0.10 Documentation</a>
 			</div>
 			<div class="collapse navbar-collapse">
 
@@ -39,21 +39,17 @@
 					</li>
 
 						<li>
-							<a href="annotation-group-deprecated.html" title="List of elements with deprecated annotation">
-								<span>Deprecated</span>
-							</a>
-						</li>
-						<li>
 							<a href="annotation-group-todo.html" title="List of elements with todo annotation">
 								<span>Todo</span>
 							</a>
 						</li>
+						<li>
+							<a href="annotation-group-deprecated.html" title="List of elements with deprecated annotation">
+								<span>Deprecated</span>
+							</a>
+						</li>
 
-					<li class="divider-vertical"></li>
 
-					<li>
-						<a href="-API-documentation.zip" title="Download documentation as ZIP archive"><span>Download</span></a>
-					</li>
 				</ul>
 			</div>
 		</div>
@@ -319,7 +315,7 @@ This software is a derived product, based on:
 Simple Machines Forum (SMF)
 copyright:	2011 Simple Machines (http://www.simplemachines.org)
 license:		BSD, See included LICENSE.TXT for terms and conditions.</a><br>
-			<b>Located at</b> <a href="source-class-PackageServers_Controller.html#24-787" title="Go to source code">sources/admin/PackageServers.controller.php</a>
+			<b>Located at</b> <a href="source-class-PackageServers_Controller.html#24-788" title="Go to source code">sources/admin/PackageServers.controller.php</a>
 		<br>
 	</div>
 
@@ -395,7 +391,7 @@ load files, and forwards to the right method.</p>
 
 					<h4>See</h4>
 					<div class="list">
-							<code><a href="class-Action_Controller.html#_action_index">Action_Controller::action_index()</a></code><br>
+							Action_Controller::action_index()<br>
 					</div>
 
 
@@ -651,7 +647,7 @@ common ones based on author:package patterns</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_action_download">#</a>
-			<code><a href="source-class-PackageServers_Controller.html#368-491" title="Go to source code">action_download</a>( )</code>
+			<code><a href="source-class-PackageServers_Controller.html#368-492" title="Go to source code">action_download</a>( )</code>
 
 			<div class="description short">
 				<p>Download a package.</p>
@@ -660,12 +656,15 @@ common ones based on author:package patterns</p>
 			<div class="description detailed hidden">
 				<p>Download a package.</p>
 
-<p>What it does:
-- Accessed by action=admin;area=packageservers;sa=download
-- If server is set, loads json file from package server - requires both section and num values to validate the file to download from the json file
-- If $_POST['byurl']) $_POST['filename'])) are set, will download a file from the url and save it as filename
-- If just $_POST['byurl']) is set will fetch that file and save it - github and bitbucket master files are renamed to repo name to avoid collisions
-- Files are saved to the package directory and validate to be ElkArte packages</p>
+<p>What it does:</p>
+
+<ul>
+<li>Accessed by action=admin;area=packageservers;sa=download</li>
+<li>If server is set, loads json file from package server - requires both section and num values to validate the file to download from the json file</li>
+<li>If $_POST['byurl']) $_POST['filename'])) are set, will download a file from the url and save it as filename</li>
+<li>If just $_POST['byurl']) is set will fetch that file and save it - github and bitbucket master files are renamed to repo name to avoid collisions</li>
+<li>Files are saved to the package directory and validate to be ElkArte packages</li>
+</ul>
 
 
 
@@ -687,7 +686,7 @@ common ones based on author:package patterns</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#__package_server">#</a>
-			<code><a href="source-class-PackageServers_Controller.html#493-525" title="Go to source code">_package_server</a>( )</code>
+			<code><a href="source-class-PackageServers_Controller.html#494-526" title="Go to source code">_package_server</a>( )</code>
 
 			<div class="description short">
 				<p>Returns the contact details for a server</p>
@@ -724,7 +723,7 @@ common ones based on author:package patterns</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_action_upload2">#</a>
-			<code><a href="source-class-PackageServers_Controller.html#527-617" title="Go to source code">action_upload2</a>( )</code>
+			<code><a href="source-class-PackageServers_Controller.html#528-618" title="Go to source code">action_upload2</a>( )</code>
 
 			<div class="description short">
 				<p>Upload a new package to the packages directory.</p>
@@ -757,7 +756,7 @@ common ones based on author:package patterns</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_action_add">#</a>
-			<code><a href="source-class-PackageServers_Controller.html#619-648" title="Go to source code">action_add</a>( )</code>
+			<code><a href="source-class-PackageServers_Controller.html#620-649" title="Go to source code">action_add</a>( )</code>
 
 			<div class="description short">
 				<p>Add a package server to the list.</p>
@@ -790,7 +789,7 @@ common ones based on author:package patterns</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_action_remove">#</a>
-			<code><a href="source-class-PackageServers_Controller.html#650-666" title="Go to source code">action_remove</a>( )</code>
+			<code><a href="source-class-PackageServers_Controller.html#651-667" title="Go to source code">action_remove</a>( )</code>
 
 			<div class="description short">
 				<p>Remove a server from the list.</p>
@@ -823,7 +822,7 @@ common ones based on author:package patterns</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_action_upload">#</a>
-			<code><a href="source-class-PackageServers_Controller.html#668-694" title="Go to source code">action_upload</a>( )</code>
+			<code><a href="source-class-PackageServers_Controller.html#669-695" title="Go to source code">action_upload</a>( )</code>
 
 			<div class="description short">
 				<p>Display the upload package form.</p>
@@ -852,7 +851,7 @@ common ones based on author:package patterns</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_ftp_connect">#</a>
-			<code><a href="source-class-PackageServers_Controller.html#696-786" title="Go to source code">ftp_connect</a>( )</code>
+			<code><a href="source-class-PackageServers_Controller.html#697-787" title="Go to source code">ftp_connect</a>( )</code>
 
 			<div class="description short">
 				<p>This method attempts to chmod packages and installed.list</p>
@@ -893,10 +892,10 @@ common ones based on author:package patterns</p>
 	</div>
 
 	<div id="footer">
-		ElkArte 1.0.7 Documentation API documentation generated by <a href="http://apigen.org">ApiGen</a>
+		ElkArte 1.0.10 Documentation API documentation generated by <a href="http://apigen.org">ApiGen</a>
 	</div>
 </div>
 <script src="resources/combined.js"></script>
-<script src="elementlist.js"></script>
+<script src="elementlist.js?13e5afb1269be6447e403156947b1e9254b743c7"></script>
 </body>
 </html>

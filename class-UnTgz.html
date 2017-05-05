@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>Class UnTgz | ElkArte 1.0.7 Documentation</title>
+	<title>Class UnTgz | ElkArte 1.0.10 Documentation</title>
 
 	<link rel="stylesheet" href="resources/bootstrap.min.css?973e37a8502921d56bc02bb55321f45b072b6f71">
 	<link rel="stylesheet" href="resources/style.css?70c1d062672daa3f906b72e4f5d03d4bc5c4174d">
@@ -14,7 +14,7 @@
 	<nav id="navigation" class="navbar navbar-default navbar-fixed-top">
 		<div class="container-fluid">
 			<div class="navbar-header">
-				<a href="index.html" class="navbar-brand">ElkArte 1.0.7 Documentation</a>
+				<a href="index.html" class="navbar-brand">ElkArte 1.0.10 Documentation</a>
 			</div>
 			<div class="collapse navbar-collapse">
 
@@ -39,21 +39,17 @@
 					</li>
 
 						<li>
-							<a href="annotation-group-deprecated.html" title="List of elements with deprecated annotation">
-								<span>Deprecated</span>
-							</a>
-						</li>
-						<li>
 							<a href="annotation-group-todo.html" title="List of elements with todo annotation">
 								<span>Todo</span>
 							</a>
 						</li>
+						<li>
+							<a href="annotation-group-deprecated.html" title="List of elements with deprecated annotation">
+								<span>Deprecated</span>
+							</a>
+						</li>
 
-					<li class="divider-vertical"></li>
 
-					<li>
-						<a href="-API-documentation.zip" title="Download documentation as ZIP archive"><span>Download</span></a>
-					</li>
 				</ul>
 			</div>
 		</div>
@@ -344,6 +340,7 @@
 				<li><a href="function-associatedPoll.html">associatedPoll</a></li>
 				<li><a href="function-associatedTopic.html">associatedTopic</a></li>
 				<li><a href="function-autoRotateImage.html">autoRotateImage</a></li>
+				<li><a href="function-autoRotateImageWithIM.html">autoRotateImageWithIM</a></li>
 				<li><a href="function-availableThemes.html">availableThemes</a></li>
 				<li><a href="function-basicMessageInfo.html">basicMessageInfo</a></li>
 				<li><a href="function-basicWatchedUsers.html">basicWatchedUsers</a></li>
@@ -743,6 +740,7 @@
 				<li><a href="function-sendApprovalNotifications.html">sendApprovalNotifications</a></li>
 				<li><a href="function-sendBoardNotifications.html">sendBoardNotifications</a></li>
 				<li><a href="function-sendNotifications.html">sendNotifications</a></li>
+				<li><a href="function-serializeToJson.html">serializeToJson</a></li>
 				<li><a href="function-sessionClose.html">sessionClose</a></li>
 				<li><a href="function-sessionDestroy.html">sessionDestroy</a></li>
 				<li><a href="function-sessionGC.html">sessionGC</a></li>
@@ -925,17 +923,23 @@
 	<div class="description">
 	<p>Utility class to un gzip + un tar package files</p>
 
-<p>if destination is null
-- returns a list of files in the archive.</p>
+<p>if destination is null</p>
 
-<p>if single_file is true
-- returns the contents of the file specified by destination, if it exists, or false.
-- destination can start with * and / to signify that the file may come from any directory.
-- destination should not begin with a / if single_file is true.
-- overwrites existing files with newer modification times if and only if overwrite is true.
-- creates the destination directory if it doesn't exist, and is is specified.
-- requires zlib support be built into PHP.
-- returns an array of the files extracted on success</p>
+<ul>
+<li>returns a list of files in the archive.</li>
+</ul>
+
+<p>if single_file is true</p>
+
+<ul>
+<li>returns the contents of the file specified by destination, if it exists, or false.</li>
+<li>destination can start with * and / to signify that the file may come from any directory.</li>
+<li>destination should not begin with a / if single_file is true.</li>
+<li>overwrites existing files with newer modification times if and only if overwrite is true.</li>
+<li>creates the destination directory if it doesn't exist, and is is specified.</li>
+<li>requires zlib support be built into PHP.</li>
+<li>returns an array of the files extracted on success</li>
+</ul>
 	</div>
 
 
@@ -956,7 +960,7 @@
 				ElkArte Forum contributors<br>
 				<b>License:</b>
 				<a href="BSD">http://opensource.org/licenses/BSD-3-Clause</a><br>
-			<b>Located at</b> <a href="source-class-UnTgz.html#17-480" title="Go to source code">sources/subs/UnTgz.class.php</a>
+			<b>Located at</b> <a href="source-class-UnTgz.html#17-486" title="Go to source code">sources/subs/UnTgz.class.php</a>
 		<br>
 	</div>
 
@@ -976,7 +980,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#___construct">#</a>
-			<code><a href="source-class-UnTgz.html#124-156" title="Go to source code">__construct</a>( <span>string <var>$data</var></span>, <span>string <var>$destination</var></span>, <span>boolean|string <var>$single_file</var> = <span class="php-keyword1">false</span></span>, <span>boolean <var>$overwrite</var> = <span class="php-keyword1">false</span></span>, <span>null|string[] <var>$files_to_extract</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-UnTgz.html#126-158" title="Go to source code">__construct</a>( <span>string <var>$data</var></span>, <span>string <var>$destination</var></span>, <span>boolean|string <var>$single_file</var> = <span class="php-keyword1">false</span></span>, <span>boolean <var>$overwrite</var> = <span class="php-keyword1">false</span></span>, <span>null|string[] <var>$files_to_extract</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				<p>Class initialization, passes variables, loads dependencies</p>
@@ -1018,7 +1022,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_read_tgz_data">#</a>
-			<code><a href="source-class-UnTgz.html#158-192" title="Go to source code">read_tgz_data</a>( )</code>
+			<code><a href="source-class-UnTgz.html#160-194" title="Go to source code">read_tgz_data</a>( )</code>
 
 			<div class="description short">
 				<p>Class controller, calls the ungzip / untar functions in required order</p>
@@ -1051,7 +1055,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_check_valid_tgz">#</a>
-			<code><a href="source-class-UnTgz.html#194-210" title="Go to source code">check_valid_tgz</a>( )</code>
+			<code><a href="source-class-UnTgz.html#196-212" title="Go to source code">check_valid_tgz</a>( )</code>
 
 			<div class="description short">
 				<p>Loads the 10 byte header and validates its a tgz file</p>
@@ -1084,7 +1088,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#__read_header_tgz">#</a>
-			<code><a href="source-class-UnTgz.html#212-272" title="Go to source code">_read_header_tgz</a>( )</code>
+			<code><a href="source-class-UnTgz.html#214-276" title="Go to source code">_read_header_tgz</a>( )</code>
 
 			<div class="description short">
 				<p>Reads the archive file header</p>
@@ -1093,18 +1097,24 @@
 			<div class="description detailed hidden">
 				<p>Reads the archive file header</p>
 
-<p>What it does:
-- validates that the file is a tar.gz
-- validates that its compressed with deflate
-- processes header information so we can set the start of archive data - archive comment - archive filename - header CRC</p>
+<p>What it does:</p>
 
-<p>Signature Definition:
-- identification byte 1 and 2: 2 bytes, 0x1f 0x8b
-- Compression Method: 1 byte
-- Flags: 1 byte
-- Last modification time Contains a POSIX timestamp, 4 bytes
-- Compression flags (or extra flags): 1 byte
-- Operating system, Value that indicates on which operating system file was created, 1 byte</p>
+<ul>
+<li>validates that the file is a tar.gz</li>
+<li>validates that its compressed with deflate</li>
+<li>processes header information so we can set the start of archive data - archive comment - archive filename - header CRC</li>
+</ul>
+
+<p>Signature Definition:</p>
+
+<ul>
+<li>identification byte 1 and 2: 2 bytes, 0x1f 0x8b</li>
+<li>Compression Method: 1 byte</li>
+<li>Flags: 1 byte</li>
+<li>Last modification time Contains a POSIX timestamp, 4 bytes</li>
+<li>Compression flags (or extra flags): 1 byte</li>
+<li>Operating system, Value that indicates on which operating system file was created, 1 byte</li>
+</ul>
 
 
 
@@ -1126,7 +1136,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#__ungzip_data">#</a>
-			<code><a href="source-class-UnTgz.html#274-291" title="Go to source code">_ungzip_data</a>( )</code>
+			<code><a href="source-class-UnTgz.html#278-295" title="Go to source code">_ungzip_data</a>( )</code>
 
 			<div class="description short">
 				<p>We now know where the start of the compressed data is in the archive
@@ -1157,7 +1167,7 @@ The data is terminated with 4 bytes of CRC and 4 bytes of the original input siz
 
 			<td class="name"><div>
 			<a class="anchor" href="#__process_files">#</a>
-			<code><a href="source-class-UnTgz.html#293-353" title="Go to source code">_process_files</a>( )</code>
+			<code><a href="source-class-UnTgz.html#297-358" title="Go to source code">_process_files</a>( )</code>
 
 			<div class="description short">
 				<p>Does the work of un tarballing the now ungzip'ed tar file</p>
@@ -1166,8 +1176,11 @@ The data is terminated with 4 bytes of CRC and 4 bytes of the original input siz
 			<div class="description detailed hidden">
 				<p>Does the work of un tarballing the now ungzip'ed tar file</p>
 
-<p>What it does
-- Assumes its Ustar format</p>
+<p>What it does:</p>
+
+<ul>
+<li>Assumes its Ustar format</li>
+</ul>
 
 
 
@@ -1189,7 +1202,7 @@ The data is terminated with 4 bytes of CRC and 4 bytes of the original input siz
 
 			<td class="name"><div>
 			<a class="anchor" href="#__read_current_header">#</a>
-			<code><a href="source-class-UnTgz.html#355-394" title="Go to source code">_read_current_header</a>( )</code>
+			<code><a href="source-class-UnTgz.html#360-400" title="Go to source code">_read_current_header</a>( )</code>
 
 			<div class="description short">
 				<p>Reads the tar file header block, its a 512 block and contains the following:</p>
@@ -1198,23 +1211,26 @@ The data is terminated with 4 bytes of CRC and 4 bytes of the original input siz
 			<div class="description detailed hidden">
 				<p>Reads the tar file header block, its a 512 block and contains the following:</p>
 
-<p>Signature Definition:
-- char filename[100]; File name
-- char mode[8]; File mode
-- char uid[8]; Owner's numeric user ID
-- char gid[8]; Group's numeric user ID
-- char size[12]; File size in bytes (octal base)
-- char mtime[12]; Last modification time in numeric Unix time format (octal)
-- char checksum[8]; Checksum for header record
-- char type[1]; Link indicator (file type 0=normal, 1=hard, 2=symlink ... 5=directory ...
-- char linkname[100]; Name of linked file
-- char magic[6]; UStar indicator "ustar"
-- char version[2]; UStar version "00"
-- char uname[32]; Owner user name
-- char gname[32]; Owner group name
-- char devmajor[8]; Device major number
-- char devminor[8]; Device minor number
-- char path[155]; Filename prefix</p>
+<p>Signature Definition:</p>
+
+<ul>
+<li>char filename[100]; File name</li>
+<li>char mode[8]; File mode</li>
+<li>char uid[8]; Owner's numeric user ID</li>
+<li>char gid[8]; Group's numeric user ID</li>
+<li>char size[12]; File size in bytes (octal base)</li>
+<li>char mtime[12]; Last modification time in numeric Unix time format (octal)</li>
+<li>char checksum[8]; Checksum for header record</li>
+<li>char type[1]; Link indicator (file type 0=normal, 1=hard, 2=symlink ... 5=directory ...</li>
+<li>char linkname[100]; Name of linked file</li>
+<li>char magic[6]; UStar indicator "ustar"</li>
+<li>char version[2]; UStar version "00"</li>
+<li>char uname[32]; Owner user name</li>
+<li>char gname[32]; Owner group name</li>
+<li>char devmajor[8]; Device major number</li>
+<li>char devminor[8]; Device minor number</li>
+<li>char path[155]; Filename prefix</li>
+</ul>
 
 
 
@@ -1236,7 +1252,7 @@ The data is terminated with 4 bytes of CRC and 4 bytes of the original input siz
 
 			<td class="name"><div>
 			<a class="anchor" href="#__determine_write_this">#</a>
-			<code><a href="source-class-UnTgz.html#396-419" title="Go to source code">_determine_write_this</a>( )</code>
+			<code><a href="source-class-UnTgz.html#402-425" title="Go to source code">_determine_write_this</a>( )</code>
 
 			<div class="description short">
 				<p>Does what it says, determines if we are writing this file or not</p>
@@ -1265,7 +1281,7 @@ The data is terminated with 4 bytes of CRC and 4 bytes of the original input siz
 
 			<td class="name"><div>
 			<a class="anchor" href="#__write_this_file">#</a>
-			<code><a href="source-class-UnTgz.html#421-449" title="Go to source code">_write_this_file</a>( )</code>
+			<code><a href="source-class-UnTgz.html#427-455" title="Go to source code">_write_this_file</a>( )</code>
 
 			<div class="description short">
 				<p>Does the actual writing of the file</p>
@@ -1299,7 +1315,7 @@ The data is terminated with 4 bytes of CRC and 4 bytes of the original input siz
 
 			<td class="name"><div>
 			<a class="anchor" href="#__check_crc">#</a>
-			<code><a href="source-class-UnTgz.html#451-461" title="Go to source code">_check_crc</a>( )</code>
+			<code><a href="source-class-UnTgz.html#457-467" title="Go to source code">_check_crc</a>( )</code>
 
 			<div class="description short">
 				<p>Checks the saved vs calculated crc values</p>
@@ -1328,7 +1344,7 @@ The data is terminated with 4 bytes of CRC and 4 bytes of the original input siz
 
 			<td class="name"><div>
 			<a class="anchor" href="#__check_header_crc">#</a>
-			<code><a href="source-class-UnTgz.html#463-479" title="Go to source code">_check_header_crc</a>( )</code>
+			<code><a href="source-class-UnTgz.html#469-485" title="Go to source code">_check_header_crc</a>( )</code>
 
 			<div class="description short">
 				<p>Checks the saved vs calculated crc values</p>
@@ -1369,7 +1385,7 @@ The data is terminated with 4 bytes of CRC and 4 bytes of the original input siz
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-UnTgz.html#34-38" title="Go to source code"><var>$return</var></a>
+					<a href="source-class-UnTgz.html#36-40" title="Go to source code"><var>$return</var></a>
 
 				<div class="description short">
 					<p>Holds the return array of files processed</p>
@@ -1394,7 +1410,7 @@ The data is terminated with 4 bytes of CRC and 4 bytes of the original input siz
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-UnTgz.html#40-44" title="Go to source code"><var>$_current</var></a>
+					<a href="source-class-UnTgz.html#42-46" title="Go to source code"><var>$_current</var></a>
 
 				<div class="description short">
 					<p>Holds the data found in each tar file header block</p>
@@ -1419,7 +1435,7 @@ The data is terminated with 4 bytes of CRC and 4 bytes of the original input siz
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-UnTgz.html#46-50" title="Go to source code"><var>$_offset</var></a>
+					<a href="source-class-UnTgz.html#48-52" title="Go to source code"><var>$_offset</var></a>
 
 				<div class="description short">
 					<p>Holds the file pointer, generally to the 512 block we are working on</p>
@@ -1444,7 +1460,7 @@ The data is terminated with 4 bytes of CRC and 4 bytes of the original input siz
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-UnTgz.html#52-56" title="Go to source code"><var>$_crc_check</var></a>
+					<a href="source-class-UnTgz.html#54-58" title="Go to source code"><var>$_crc_check</var></a>
 
 				<div class="description short">
 					<p>If the file passes or fails crc check</p>
@@ -1469,7 +1485,7 @@ The data is terminated with 4 bytes of CRC and 4 bytes of the original input siz
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-UnTgz.html#58-62" title="Go to source code"><var>$_crc</var></a>
+					<a href="source-class-UnTgz.html#60-64" title="Go to source code"><var>$_crc</var></a>
 
 				<div class="description short">
 					<p>The currnt crc value of the data</p>
@@ -1494,7 +1510,7 @@ The data is terminated with 4 bytes of CRC and 4 bytes of the original input siz
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-UnTgz.html#64-68" title="Go to source code"><var>$_size</var></a>
+					<a href="source-class-UnTgz.html#66-70" title="Go to source code"><var>$_size</var></a>
 
 				<div class="description short">
 					<p>The claimied size of the data in the tarball</p>
@@ -1519,7 +1535,7 @@ The data is terminated with 4 bytes of CRC and 4 bytes of the original input siz
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-UnTgz.html#70-74" title="Go to source code"><var>$_write_this</var></a>
+					<a href="source-class-UnTgz.html#72-76" title="Go to source code"><var>$_write_this</var></a>
 
 				<div class="description short">
 					<p>If we are going to write out the files processed</p>
@@ -1544,7 +1560,7 @@ The data is terminated with 4 bytes of CRC and 4 bytes of the original input siz
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-UnTgz.html#76-80" title="Go to source code"><var>$_skip</var></a>
+					<a href="source-class-UnTgz.html#78-82" title="Go to source code"><var>$_skip</var></a>
 
 				<div class="description short">
 					<p>If we will skip a file we found</p>
@@ -1569,7 +1585,7 @@ The data is terminated with 4 bytes of CRC and 4 bytes of the original input siz
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-UnTgz.html#82-86" title="Go to source code"><var>$_found</var></a>
+					<a href="source-class-UnTgz.html#84-88" title="Go to source code"><var>$_found</var></a>
 
 				<div class="description short">
 					<p>If we found a file that was requested ($files_to_extract)</p>
@@ -1594,7 +1610,7 @@ The data is terminated with 4 bytes of CRC and 4 bytes of the original input siz
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-UnTgz.html#88-92" title="Go to source code"><var>$_header</var></a>
+					<a href="source-class-UnTgz.html#90-94" title="Go to source code"><var>$_header</var></a>
 
 				<div class="description short">
 					<p>Current file header we are working on</p>
@@ -1619,7 +1635,7 @@ The data is terminated with 4 bytes of CRC and 4 bytes of the original input siz
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-UnTgz.html#94-98" title="Go to source code"><var>$files_to_extract</var></a>
+					<a href="source-class-UnTgz.html#96-100" title="Go to source code"><var>$files_to_extract</var></a>
 
 				<div class="description short">
 					<p>Array of file names we want to extract from the archive</p>
@@ -1644,7 +1660,7 @@ The data is terminated with 4 bytes of CRC and 4 bytes of the original input siz
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-UnTgz.html#100-104" title="Go to source code"><var>$data</var></a>
+					<a href="source-class-UnTgz.html#102-106" title="Go to source code"><var>$data</var></a>
 
 				<div class="description short">
 					<p>Holds the data string passed to the function</p>
@@ -1669,7 +1685,7 @@ The data is terminated with 4 bytes of CRC and 4 bytes of the original input siz
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-UnTgz.html#106-110" title="Go to source code"><var>$destination</var></a>
+					<a href="source-class-UnTgz.html#108-112" title="Go to source code"><var>$destination</var></a>
 
 				<div class="description short">
 					<p>Location to write the files.</p>
@@ -1694,7 +1710,7 @@ The data is terminated with 4 bytes of CRC and 4 bytes of the original input siz
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-UnTgz.html#112-116" title="Go to source code"><var>$single_file</var></a>
+					<a href="source-class-UnTgz.html#114-118" title="Go to source code"><var>$single_file</var></a>
 
 				<div class="description short">
 					<p>If we are looking for a single specific file</p>
@@ -1719,7 +1735,7 @@ The data is terminated with 4 bytes of CRC and 4 bytes of the original input siz
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-UnTgz.html#118-122" title="Go to source code"><var>$overwrite</var></a>
+					<a href="source-class-UnTgz.html#120-124" title="Go to source code"><var>$overwrite</var></a>
 
 				<div class="description short">
 					<p>If we can overwrite a file with the same name in the destination</p>
@@ -1749,10 +1765,10 @@ The data is terminated with 4 bytes of CRC and 4 bytes of the original input siz
 	</div>
 
 	<div id="footer">
-		ElkArte 1.0.7 Documentation API documentation generated by <a href="http://apigen.org">ApiGen</a>
+		ElkArte 1.0.10 Documentation API documentation generated by <a href="http://apigen.org">ApiGen</a>
 	</div>
 </div>
 <script src="resources/combined.js"></script>
-<script src="elementlist.js"></script>
+<script src="elementlist.js?13e5afb1269be6447e403156947b1e9254b743c7"></script>
 </body>
 </html>

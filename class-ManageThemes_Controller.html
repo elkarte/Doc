@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>Class ManageThemes_Controller | ElkArte 1.0.7 Documentation</title>
+	<title>Class ManageThemes_Controller | ElkArte 1.0.10 Documentation</title>
 
 	<link rel="stylesheet" href="resources/bootstrap.min.css?973e37a8502921d56bc02bb55321f45b072b6f71">
 	<link rel="stylesheet" href="resources/style.css?70c1d062672daa3f906b72e4f5d03d4bc5c4174d">
@@ -14,7 +14,7 @@
 	<nav id="navigation" class="navbar navbar-default navbar-fixed-top">
 		<div class="container-fluid">
 			<div class="navbar-header">
-				<a href="index.html" class="navbar-brand">ElkArte 1.0.7 Documentation</a>
+				<a href="index.html" class="navbar-brand">ElkArte 1.0.10 Documentation</a>
 			</div>
 			<div class="collapse navbar-collapse">
 
@@ -39,21 +39,17 @@
 					</li>
 
 						<li>
-							<a href="annotation-group-deprecated.html" title="List of elements with deprecated annotation">
-								<span>Deprecated</span>
-							</a>
-						</li>
-						<li>
 							<a href="annotation-group-todo.html" title="List of elements with todo annotation">
 								<span>Todo</span>
 							</a>
 						</li>
+						<li>
+							<a href="annotation-group-deprecated.html" title="List of elements with deprecated annotation">
+								<span>Deprecated</span>
+							</a>
+						</li>
 
-					<li class="divider-vertical"></li>
 
-					<li>
-						<a href="-API-documentation.zip" title="Download documentation as ZIP archive"><span>Download</span></a>
-					</li>
 				</ul>
 			</div>
 		</div>
@@ -280,7 +276,7 @@ This software is a derived product, based on:
 Simple Machines Forum (SMF)
 copyright:	2011 Simple Machines (http://www.simplemachines.org)
 license:		BSD, See included LICENSE.TXT for terms and conditions.</a><br>
-			<b>Located at</b> <a href="source-class-ManageThemes_Controller.html#40-1987" title="Go to source code">sources/admin/ManageThemes.controller.php</a>
+			<b>Located at</b> <a href="source-class-ManageThemes_Controller.html#40-2023" title="Go to source code">sources/admin/ManageThemes.controller.php</a>
 		<br>
 	</div>
 
@@ -300,7 +296,7 @@ license:		BSD, See included LICENSE.TXT for terms and conditions.</a><br>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_action_index">#</a>
-			<code><a href="source-class-ManageThemes_Controller.html#50-133" title="Go to source code">action_index</a>( )</code>
+			<code><a href="source-class-ManageThemes_Controller.html#50-134" title="Go to source code">action_index</a>( )</code>
 
 			<div class="description short">
 				<p>Subaction handler - manages the action and delegates control to the proper
@@ -311,11 +307,14 @@ sub-action.</p>
 				<p>Subaction handler - manages the action and delegates control to the proper
 sub-action.</p>
 
-<p>What it does:
-- It loads both the Themes and Settings language files.
-- Checks the session by GET or POST to verify the sent data.
-- Requires the user to not be a guest.
-- Accessed via ?action=admin;area=theme.</p>
+<p>What it does:</p>
+
+<ul>
+<li>It loads both the Themes and Settings language files.</li>
+<li>Checks the session by GET or POST to verify the sent data.</li>
+<li>Requires the user to not be a guest.</li>
+<li>Accessed via ?action=admin;area=theme.</li>
+</ul>
 
 
 
@@ -323,7 +322,7 @@ sub-action.</p>
 
 					<h4>See</h4>
 					<div class="list">
-							<code><a href="class-Action_Controller.html#_action_index">Action_Controller::action_index()</a></code><br>
+							Action_Controller::action_index()<br>
 					</div>
 
 
@@ -341,7 +340,7 @@ sub-action.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_action_index_api">#</a>
-			<code><a href="source-class-ManageThemes_Controller.html#135-190" title="Go to source code">action_index_api</a>( )</code>
+			<code><a href="source-class-ManageThemes_Controller.html#136-191" title="Go to source code">action_index_api</a>( )</code>
 
 			<div class="description short">
 				<p>Responds to an ajax button request, currently only for remove</p>
@@ -374,7 +373,7 @@ sub-action.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_action_admin">#</a>
-			<code><a href="source-class-ManageThemes_Controller.html#192-263" title="Go to source code">action_admin</a>( )</code>
+			<code><a href="source-class-ManageThemes_Controller.html#193-265" title="Go to source code">action_admin</a>( )</code>
 
 			<div class="description short">
 				<p>This function allows administration of themes and their settings,
@@ -385,10 +384,13 @@ as well as global theme settings.</p>
 				<p>This function allows administration of themes and their settings,
 as well as global theme settings.</p>
 
-<p>What it does:
-- sets the settings theme_allow, theme_guests, and knownThemes.
-- requires the admin_forum permission.
-- accessed with ?action=admin;area=theme;sa=admin.</p>
+<p>What it does:</p>
+
+<ul>
+<li>sets the settings theme_allow, theme_guests, and knownThemes.</li>
+<li>requires the admin_forum permission.</li>
+<li>accessed with ?action=admin;area=theme;sa=admin.</li>
+</ul>
 
 
 
@@ -415,7 +417,7 @@ as well as global theme settings.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_action_list">#</a>
-			<code><a href="source-class-ManageThemes_Controller.html#265-348" title="Go to source code">action_list</a>( )</code>
+			<code><a href="source-class-ManageThemes_Controller.html#267-350" title="Go to source code">action_list</a>( )</code>
 
 			<div class="description short">
 				<p>This function lists the available themes and provides an interface
@@ -450,7 +452,7 @@ to reset the paths of all the installed themes.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_action_options">#</a>
-			<code><a href="source-class-ManageThemes_Controller.html#350-556" title="Go to source code">action_options</a>( )</code>
+			<code><a href="source-class-ManageThemes_Controller.html#352-558" title="Go to source code">action_options</a>( )</code>
 
 			<div class="description short">
 				<p>Administrative global settings.</p>
@@ -488,7 +490,7 @@ to reset the paths of all the installed themes.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_action_setthemesettings">#</a>
-			<code><a href="source-class-ManageThemes_Controller.html#558-737" title="Go to source code">action_setthemesettings</a>( )</code>
+			<code><a href="source-class-ManageThemes_Controller.html#560-740" title="Go to source code">action_setthemesettings</a>( )</code>
 
 			<div class="description short">
 				<p>Administrative global settings.</p>
@@ -497,12 +499,15 @@ to reset the paths of all the installed themes.</p>
 			<div class="description detailed hidden">
 				<p>Administrative global settings.</p>
 
-<p>What it does:
-- Saves and requests global theme settings. ($settings)
-- Loads the Admin language file.
-- Calls action_admin() if no theme is specified. (the theme center.)
-- Requires admin_forum permission.
-- Accessed with ?action=admin;area=theme;sa=list&amp;th=xx.</p>
+<p>What it does:</p>
+
+<ul>
+<li>Saves and requests global theme settings. ($settings)</li>
+<li>Loads the Admin language file.</li>
+<li>Calls action_admin() if no theme is specified. (the theme center.)</li>
+<li>Requires admin_forum permission.</li>
+<li>Accessed with ?action=admin;area=theme;sa=list&amp;th=xx.</li>
+</ul>
 
 
 
@@ -524,7 +529,7 @@ to reset the paths of all the installed themes.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_action_remove">#</a>
-			<code><a href="source-class-ManageThemes_Controller.html#739-782" title="Go to source code">action_remove</a>( )</code>
+			<code><a href="source-class-ManageThemes_Controller.html#742-786" title="Go to source code">action_remove</a>( )</code>
 
 			<div class="description short">
 				<p>Remove a theme from the database.</p>
@@ -533,10 +538,13 @@ to reset the paths of all the installed themes.</p>
 			<div class="description detailed hidden">
 				<p>Remove a theme from the database.</p>
 
-<p>What it does:
-- Removes an installed theme.
-- Requires an administrator.
-- Accessed with ?action=admin;area=theme;sa=remove.</p>
+<p>What it does:</p>
+
+<ul>
+<li>Removes an installed theme.</li>
+<li>Requires an administrator.</li>
+<li>Accessed with ?action=admin;area=theme;sa=remove.</li>
+</ul>
 
 
 
@@ -558,7 +566,7 @@ to reset the paths of all the installed themes.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_action_remove_api">#</a>
-			<code><a href="source-class-ManageThemes_Controller.html#784-873" title="Go to source code">action_remove_api</a>( )</code>
+			<code><a href="source-class-ManageThemes_Controller.html#788-878" title="Go to source code">action_remove_api</a>( )</code>
 
 			<div class="description short">
 				<p>Remove a theme from the database in response to an ajax api request</p>
@@ -567,10 +575,13 @@ to reset the paths of all the installed themes.</p>
 			<div class="description detailed hidden">
 				<p>Remove a theme from the database in response to an ajax api request</p>
 
-<p>What it does:
-- Removes an installed theme.
-- Requires an administrator.
-- Accessed with ?action=admin;area=theme;sa=remove;api</p>
+<p>What it does:</p>
+
+<ul>
+<li>Removes an installed theme.</li>
+<li>Requires an administrator.</li>
+<li>Accessed with ?action=admin;area=theme;sa=remove;api</li>
+</ul>
 
 
 
@@ -592,7 +603,7 @@ to reset the paths of all the installed themes.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_action_pick">#</a>
-			<code><a href="source-class-ManageThemes_Controller.html#875-1046" title="Go to source code">action_pick</a>( )</code>
+			<code><a href="source-class-ManageThemes_Controller.html#880-1052" title="Go to source code">action_pick</a>( )</code>
 
 			<div class="description short">
 				<p>Choose a theme from a list.
@@ -603,10 +614,13 @@ Allows a user or administrator to pick a new theme with an interface.</p>
 				<p>Choose a theme from a list.
 Allows a user or administrator to pick a new theme with an interface.</p>
 
-<p>What it does:
-- Can edit everyone's (u = 0), guests' (u = -1), or a specific user's.
-- Uses the Themes template. (pick sub template.)
-- Accessed with ?action=admin;area=theme;sa=pick.</p>
+<p>What it does:</p>
+
+<ul>
+<li>Can edit everyone's (u = 0), guests' (u = -1), or a specific user's.</li>
+<li>Uses the Themes template. (pick sub template.)</li>
+<li>Accessed with ?action=admin;area=theme;sa=pick.</li>
+</ul>
 
 
 
@@ -638,7 +652,7 @@ with centralized admin permissions on ManageThemes.</p><br>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_action_install">#</a>
-			<code><a href="source-class-ManageThemes_Controller.html#1048-1268" title="Go to source code">action_install</a>( )</code>
+			<code><a href="source-class-ManageThemes_Controller.html#1054-1275" title="Go to source code">action_install</a>( )</code>
 
 			<div class="description short">
 				<p>Installs new themes, either from a gzip or copy of the default.</p>
@@ -647,11 +661,14 @@ with centralized admin permissions on ManageThemes.</p><br>
 			<div class="description detailed hidden">
 				<p>Installs new themes, either from a gzip or copy of the default.</p>
 
-<p>What it does:
-- Puts themes in $boardurl/themes.
-- Assumes the gzip has a root directory in it. (ie default.)
-- Requires admin_forum.
-- Accessed with ?action=admin;area=theme;sa=install.</p>
+<p>What it does:</p>
+
+<ul>
+<li>Puts themes in $boardurl/themes.</li>
+<li>Assumes the gzip has a root directory in it. (ie default.)</li>
+<li>Requires admin_forum.</li>
+<li>Accessed with ?action=admin;area=theme;sa=install.</li>
+</ul>
 
 
 
@@ -677,7 +694,7 @@ with centralized admin permissions on ManageThemes.</p><br>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_action_jsoption">#</a>
-			<code><a href="source-class-ManageThemes_Controller.html#1270-1365" title="Go to source code">action_jsoption</a>( )</code>
+			<code><a href="source-class-ManageThemes_Controller.html#1277-1399" title="Go to source code">action_jsoption</a>( )</code>
 
 			<div class="description short">
 				<p>Set a theme option via javascript.</p>
@@ -686,13 +703,16 @@ with centralized admin permissions on ManageThemes.</p><br>
 			<div class="description detailed hidden">
 				<p>Set a theme option via javascript.</p>
 
-<p>What it does:
-- sets a theme option without outputting anything.
-- can be used with javascript, via a dummy image... (which doesn't require the page to reload.)
-- requires someone who is logged in.
-- accessed via ?action=jsoption;var=variable;val=value;session_var=sess_id.
-- optionally contains &amp;th=theme id
-- does not log access to the Who's Online log. (in index.php..)</p>
+<p>What it does:</p>
+
+<ul>
+<li>sets a theme option without outputting anything.</li>
+<li>can be used with javascript, via a dummy image... (which doesn't require the page to reload.)</li>
+<li>requires someone who is logged in.</li>
+<li>accessed via ?action=jsoption;var=variable;val=value;session_var=sess_id.</li>
+<li>optionally contains &amp;th=theme id</li>
+<li>does not log access to the Who's Online log. (in index.php..)</li>
+</ul>
 
 
 
@@ -714,7 +734,7 @@ with centralized admin permissions on ManageThemes.</p><br>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_action_edit">#</a>
-			<code><a href="source-class-ManageThemes_Controller.html#1367-1429" title="Go to source code">action_edit</a>( )</code>
+			<code><a href="source-class-ManageThemes_Controller.html#1401-1464" title="Go to source code">action_edit</a>( )</code>
 
 			<div class="description short">
 				<p>Allows choosing, browsing, and editing a themes files.</p>
@@ -723,9 +743,12 @@ with centralized admin permissions on ManageThemes.</p><br>
 			<div class="description detailed hidden">
 				<p>Allows choosing, browsing, and editing a themes files.</p>
 
-<p>What it does:
-- Its subactions handle several features: - edit_template: display and edit a PHP template file - edit_style: display and edit a CSS file - edit_file: display and edit other files in the theme
-- accessed via ?action=admin;area=theme;sa=edit</p>
+<p>What it does:</p>
+
+<ul>
+<li>Its subactions handle several features: - edit_template: display and edit a PHP template file - edit_style: display and edit a CSS file - edit_file: display and edit other files in the theme</li>
+<li>accessed via ?action=admin;area=theme;sa=edit</li>
+</ul>
 
 
 
@@ -751,7 +774,7 @@ with centralized admin permissions on ManageThemes.</p><br>
 
 			<td class="name"><div>
 			<a class="anchor" href="#__action_edit_style">#</a>
-			<code><a href="source-class-ManageThemes_Controller.html#1431-1454" title="Go to source code">_action_edit_style</a>( <span>string <var>$theme_dir</var></span> )</code>
+			<code><a href="source-class-ManageThemes_Controller.html#1466-1489" title="Go to source code">_action_edit_style</a>( <span>string <var>$theme_dir</var></span> )</code>
 
 			<div class="description short">
 				<p>Displays for edition in admin panel a css file.</p>
@@ -788,7 +811,7 @@ with centralized admin permissions on ManageThemes.</p><br>
 
 			<td class="name"><div>
 			<a class="anchor" href="#__action_edit_template">#</a>
-			<code><a href="source-class-ManageThemes_Controller.html#1456-1497" title="Go to source code">_action_edit_template</a>( <span>string <var>$theme_dir</var></span> )</code>
+			<code><a href="source-class-ManageThemes_Controller.html#1491-1532" title="Go to source code">_action_edit_template</a>( <span>string <var>$theme_dir</var></span> )</code>
 
 			<div class="description short">
 				<p>Displays for editing in the admin panel a template file.</p>
@@ -825,7 +848,7 @@ with centralized admin permissions on ManageThemes.</p><br>
 
 			<td class="name"><div>
 			<a class="anchor" href="#__action_edit_file">#</a>
-			<code><a href="source-class-ManageThemes_Controller.html#1499-1515" title="Go to source code">_action_edit_file</a>( <span>string <var>$theme_dir</var></span> )</code>
+			<code><a href="source-class-ManageThemes_Controller.html#1534-1550" title="Go to source code">_action_edit_file</a>( <span>string <var>$theme_dir</var></span> )</code>
 
 			<div class="description short">
 				<p>Handles editing in admin of other types of files from a theme,
@@ -864,7 +887,7 @@ except templates and css.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#__action_edit_submit">#</a>
-			<code><a href="source-class-ManageThemes_Controller.html#1517-1686" title="Go to source code">_action_edit_submit</a>( )</code>
+			<code><a href="source-class-ManageThemes_Controller.html#1552-1721" title="Go to source code">_action_edit_submit</a>( )</code>
 
 			<div class="description short">
 				<p>This function handles submission of a template file.
@@ -898,7 +921,7 @@ It checks the file for syntax errors, and if it passes, it saves it.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_action_browse">#</a>
-			<code><a href="source-class-ManageThemes_Controller.html#1688-1754" title="Go to source code">action_browse</a>( )</code>
+			<code><a href="source-class-ManageThemes_Controller.html#1723-1790" title="Go to source code">action_browse</a>( )</code>
 
 			<div class="description short">
 				<p>Handles user browsing in theme directories.</p>
@@ -907,10 +930,13 @@ It checks the file for syntax errors, and if it passes, it saves it.</p>
 			<div class="description detailed hidden">
 				<p>Handles user browsing in theme directories.</p>
 
-<p>What it does:
-- The display will allow to choose a file for editing,
-if it is writable.
-- accessed with ?action=admin;area=theme;sa=browse</p>
+<p>What it does:</p>
+
+<ul>
+<li>The display will allow to choose a file for editing,
+if it is writable.</li>
+<li>accessed with ?action=admin;area=theme;sa=browse</li>
+</ul>
 
 
 
@@ -932,7 +958,7 @@ if it is writable.
 
 			<td class="name"><div>
 			<a class="anchor" href="#_action_themelist">#</a>
-			<code><a href="source-class-ManageThemes_Controller.html#1756-1805" title="Go to source code">action_themelist</a>( )</code>
+			<code><a href="source-class-ManageThemes_Controller.html#1792-1841" title="Go to source code">action_themelist</a>( )</code>
 
 			<div class="description short">
 				<p>List installed themes.
@@ -963,7 +989,7 @@ The listing will allow editing if the files are writable.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_action_copy">#</a>
-			<code><a href="source-class-ManageThemes_Controller.html#1807-1950" title="Go to source code">action_copy</a>( )</code>
+			<code><a href="source-class-ManageThemes_Controller.html#1843-1986" title="Go to source code">action_copy</a>( )</code>
 
 			<div class="description short">
 				<p>Makes a copy of a template file in a new location</p>
@@ -996,7 +1022,7 @@ The listing will allow editing if the files are writable.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_prepareThemeEditContext">#</a>
-			<code><a href="source-class-ManageThemes_Controller.html#1952-1986" title="Go to source code">prepareThemeEditContext</a>( <span>string <var>$theme_dir</var></span> )</code>
+			<code><a href="source-class-ManageThemes_Controller.html#1988-2022" title="Go to source code">prepareThemeEditContext</a>( <span>string <var>$theme_dir</var></span> )</code>
 
 			<div class="description short">
 				<p>This function makes necessary pre-checks and fills
@@ -1044,10 +1070,10 @@ the contextual data as needed by theme editing functions.</p>
 	</div>
 
 	<div id="footer">
-		ElkArte 1.0.7 Documentation API documentation generated by <a href="http://apigen.org">ApiGen</a>
+		ElkArte 1.0.10 Documentation API documentation generated by <a href="http://apigen.org">ApiGen</a>
 	</div>
 </div>
 <script src="resources/combined.js"></script>
-<script src="elementlist.js"></script>
+<script src="elementlist.js?13e5afb1269be6447e403156947b1e9254b743c7"></script>
 </body>
 </html>

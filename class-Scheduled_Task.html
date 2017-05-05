@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>Class Scheduled_Task | ElkArte 1.0.7 Documentation</title>
+	<title>Class Scheduled_Task | ElkArte 1.0.10 Documentation</title>
 
 	<link rel="stylesheet" href="resources/bootstrap.min.css?973e37a8502921d56bc02bb55321f45b072b6f71">
 	<link rel="stylesheet" href="resources/style.css?70c1d062672daa3f906b72e4f5d03d4bc5c4174d">
@@ -14,7 +14,7 @@
 	<nav id="navigation" class="navbar navbar-default navbar-fixed-top">
 		<div class="container-fluid">
 			<div class="navbar-header">
-				<a href="index.html" class="navbar-brand">ElkArte 1.0.7 Documentation</a>
+				<a href="index.html" class="navbar-brand">ElkArte 1.0.10 Documentation</a>
 			</div>
 			<div class="collapse navbar-collapse">
 
@@ -39,21 +39,17 @@
 					</li>
 
 						<li>
-							<a href="annotation-group-deprecated.html" title="List of elements with deprecated annotation">
-								<span>Deprecated</span>
-							</a>
-						</li>
-						<li>
 							<a href="annotation-group-todo.html" title="List of elements with todo annotation">
 								<span>Todo</span>
 							</a>
 						</li>
+						<li>
+							<a href="annotation-group-deprecated.html" title="List of elements with deprecated annotation">
+								<span>Deprecated</span>
+							</a>
+						</li>
 
-					<li class="divider-vertical"></li>
 
-					<li>
-						<a href="-API-documentation.zip" title="Download documentation as ZIP archive"><span>Download</span></a>
-					</li>
 				</ul>
 			</div>
 		</div>
@@ -286,7 +282,7 @@ This software is a derived product, based on:
 Simple Machines Forum (SMF)
 copyright:	2011 Simple Machines (http://www.simplemachines.org)
 license:  	BSD, See included LICENSE.TXT for terms and conditions.</a><br>
-			<b>Located at</b> <a href="source-class-Scheduled_Task.html#23-1581" title="Go to source code">sources/subs/ScheduledTask.class.php</a>
+			<b>Located at</b> <a href="source-class-Scheduled_Task.html#23-1582" title="Go to source code">sources/subs/ScheduledTask.class.php</a>
 		<br>
 	</div>
 
@@ -541,7 +537,7 @@ This task is no longer used and the method remains only to avoid
 
 			<td class="name"><div>
 			<a class="anchor" href="#_weekly_maintenance">#</a>
-			<code><a href="source-class-Scheduled_Task.html#920-1121" title="Go to source code">weekly_maintenance</a>( )</code>
+			<code><a href="source-class-Scheduled_Task.html#920-1122" title="Go to source code">weekly_maintenance</a>( )</code>
 
 			<div class="description short">
 				<p>Weekly maintenance taks</p>
@@ -550,11 +546,14 @@ This task is no longer used and the method remains only to avoid
 			<div class="description detailed hidden">
 				<p>Weekly maintenance taks</p>
 
-<p>What it does:
-- remove empty or temporary settings
-- prune logs
-- obsolete paid subscriptions
-- clear sessions table</p>
+<p>What it does:</p>
+
+<ul>
+<li>remove empty or temporary settings</li>
+<li>prune logs</li>
+<li>obsolete paid subscriptions</li>
+<li>clear sessions table</li>
+</ul>
 
 
 
@@ -576,7 +575,7 @@ This task is no longer used and the method remains only to avoid
 
 			<td class="name"><div>
 			<a class="anchor" href="#_paid_subscriptions">#</a>
-			<code><a href="source-class-Scheduled_Task.html#1123-1210" title="Go to source code">paid_subscriptions</a>( )</code>
+			<code><a href="source-class-Scheduled_Task.html#1124-1211" title="Go to source code">paid_subscriptions</a>( )</code>
 
 			<div class="description short">
 				<p>Perform the standard checks on expiring/near expiring subscriptions:</p>
@@ -610,7 +609,7 @@ This task is no longer used and the method remains only to avoid
 
 			<td class="name"><div>
 			<a class="anchor" href="#_remove_temp_attachments">#</a>
-			<code><a href="source-class-Scheduled_Task.html#1212-1255" title="Go to source code">remove_temp_attachments</a>( )</code>
+			<code><a href="source-class-Scheduled_Task.html#1213-1256" title="Go to source code">remove_temp_attachments</a>( )</code>
 
 			<div class="description short">
 				<p>Check for un-posted attachments is something we can do once in a while :P</p>
@@ -643,7 +642,7 @@ This task is no longer used and the method remains only to avoid
 
 			<td class="name"><div>
 			<a class="anchor" href="#_remove_topic_redirect">#</a>
-			<code><a href="source-class-Scheduled_Task.html#1257-1295" title="Go to source code">remove_topic_redirect</a>( )</code>
+			<code><a href="source-class-Scheduled_Task.html#1258-1296" title="Go to source code">remove_topic_redirect</a>( )</code>
 
 			<div class="description short">
 				<p>Check for move topic notices that have past their best by date:</p>
@@ -676,7 +675,7 @@ This task is no longer used and the method remains only to avoid
 
 			<td class="name"><div>
 			<a class="anchor" href="#_remove_old_drafts">#</a>
-			<code><a href="source-class-Scheduled_Task.html#1297-1336" title="Go to source code">remove_old_drafts</a>( )</code>
+			<code><a href="source-class-Scheduled_Task.html#1298-1337" title="Go to source code">remove_old_drafts</a>( )</code>
 
 			<div class="description short">
 				<p>Check for old drafts and remove them</p>
@@ -705,7 +704,7 @@ This task is no longer used and the method remains only to avoid
 
 			<td class="name"><div>
 			<a class="anchor" href="#_maillist_fetch_IMAP">#</a>
-			<code><a href="source-class-Scheduled_Task.html#1338-1349" title="Go to source code">maillist_fetch_IMAP</a>( )</code>
+			<code><a href="source-class-Scheduled_Task.html#1339-1350" title="Go to source code">maillist_fetch_IMAP</a>( )</code>
 
 			<div class="description short">
 				<p>Fetch emails from an imap box and process them</p>
@@ -738,7 +737,7 @@ This task is no longer used and the method remains only to avoid
 
 			<td class="name"><div>
 			<a class="anchor" href="#_remove_old_followups">#</a>
-			<code><a href="source-class-Scheduled_Task.html#1351-1386" title="Go to source code">remove_old_followups</a>( )</code>
+			<code><a href="source-class-Scheduled_Task.html#1352-1387" title="Go to source code">remove_old_followups</a>( )</code>
 
 			<div class="description short">
 				<p>Check for followups from removed topics and remove them from the table</p>
@@ -767,7 +766,7 @@ This task is no longer used and the method remains only to avoid
 
 			<td class="name"><div>
 			<a class="anchor" href="#_user_access_mentions">#</a>
-			<code><a href="source-class-Scheduled_Task.html#1388-1580" title="Go to source code">user_access_mentions</a>( )</code>
+			<code><a href="source-class-Scheduled_Task.html#1389-1581" title="Go to source code">user_access_mentions</a>( )</code>
 
 			<div class="description short">
 				<p>Re-syncs if a user can access a mention,</p>
@@ -808,10 +807,10 @@ as a scheduled immediate task</li>
 	</div>
 
 	<div id="footer">
-		ElkArte 1.0.7 Documentation API documentation generated by <a href="http://apigen.org">ApiGen</a>
+		ElkArte 1.0.10 Documentation API documentation generated by <a href="http://apigen.org">ApiGen</a>
 	</div>
 </div>
 <script src="resources/combined.js"></script>
-<script src="elementlist.js"></script>
+<script src="elementlist.js?13e5afb1269be6447e403156947b1e9254b743c7"></script>
 </body>
 </html>

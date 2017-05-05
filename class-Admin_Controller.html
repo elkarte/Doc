@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>Class Admin_Controller | ElkArte 1.0.7 Documentation</title>
+	<title>Class Admin_Controller | ElkArte 1.0.10 Documentation</title>
 
 	<link rel="stylesheet" href="resources/bootstrap.min.css?973e37a8502921d56bc02bb55321f45b072b6f71">
 	<link rel="stylesheet" href="resources/style.css?70c1d062672daa3f906b72e4f5d03d4bc5c4174d">
@@ -14,7 +14,7 @@
 	<nav id="navigation" class="navbar navbar-default navbar-fixed-top">
 		<div class="container-fluid">
 			<div class="navbar-header">
-				<a href="index.html" class="navbar-brand">ElkArte 1.0.7 Documentation</a>
+				<a href="index.html" class="navbar-brand">ElkArte 1.0.10 Documentation</a>
 			</div>
 			<div class="collapse navbar-collapse">
 
@@ -39,21 +39,17 @@
 					</li>
 
 						<li>
-							<a href="annotation-group-deprecated.html" title="List of elements with deprecated annotation">
-								<span>Deprecated</span>
-							</a>
-						</li>
-						<li>
 							<a href="annotation-group-todo.html" title="List of elements with todo annotation">
 								<span>Todo</span>
 							</a>
 						</li>
+						<li>
+							<a href="annotation-group-deprecated.html" title="List of elements with deprecated annotation">
+								<span>Deprecated</span>
+							</a>
+						</li>
 
-					<li class="divider-vertical"></li>
 
-					<li>
-						<a href="-API-documentation.zip" title="Download documentation as ZIP archive"><span>Download</span></a>
-					</li>
 				</ul>
 			</div>
 		</div>
@@ -251,9 +247,12 @@
 	<div class="description">
 	<p>Admin controller class.</p>
 
-<p>What it does:
-- This class handles the first general admin screens: home,
-- Handles admin area search actions and end admin session.</p>
+<p>What it does:</p>
+
+<ul>
+<li>This class handles the first general admin screens: home,</li>
+<li>Handles admin area search actions and end admin session.</li>
+</ul>
 	</div>
 
 	<dl class="tree well">
@@ -294,7 +293,7 @@ This software is a derived product, based on:
 Simple Machines Forum (SMF)
 copyright:	2011 Simple Machines (http://www.simplemachines.org)
 license:		BSD, See included LICENSE.TXT for terms and conditions.</a><br>
-			<b>Located at</b> <a href="source-class-Admin_Controller.html#23-1056" title="Go to source code">sources/admin/Admin.controller.php</a>
+			<b>Located at</b> <a href="source-class-Admin_Controller.html#23-1060" title="Go to source code">sources/admin/Admin.controller.php</a>
 		<br>
 	</div>
 
@@ -314,7 +313,7 @@ license:		BSD, See included LICENSE.TXT for terms and conditions.</a><br>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_action_index">#</a>
-			<code><a href="source-class-Admin_Controller.html#34-613" title="Go to source code">action_index</a>( )</code>
+			<code><a href="source-class-Admin_Controller.html#35-615" title="Go to source code">action_index</a>( )</code>
 
 			<div class="description short">
 				<p>The main admin handling function.</p>
@@ -323,11 +322,14 @@ license:		BSD, See included LICENSE.TXT for terms and conditions.</a><br>
 			<div class="description detailed hidden">
 				<p>The main admin handling function.</p>
 
-<p>What it does:
-- It initialises all the basic context required for the admin center.
-- It passes execution onto the relevant admin section.
-- If the passed section is not found it shows the admin home page.
-- Accessed by ?action=admin.</p>
+<p>What it does:</p>
+
+<ul>
+<li>It initialises all the basic context required for the admin center.</li>
+<li>It passes execution onto the relevant admin section.</li>
+<li>If the passed section is not found it shows the admin home page.</li>
+<li>Accessed by ?action=admin.</li>
+</ul>
 
 
 
@@ -349,7 +351,7 @@ license:		BSD, See included LICENSE.TXT for terms and conditions.</a><br>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_action_home">#</a>
-			<code><a href="source-class-Admin_Controller.html#615-679" title="Go to source code">action_home</a>( )</code>
+			<code><a href="source-class-Admin_Controller.html#617-682" title="Go to source code">action_home</a>( )</code>
 
 			<div class="description short">
 				<p>The main administration section.</p>
@@ -358,14 +360,17 @@ license:		BSD, See included LICENSE.TXT for terms and conditions.</a><br>
 			<div class="description detailed hidden">
 				<p>The main administration section.</p>
 
-<p>What it does:
-- It prepares all the data necessary for the administration front page.
-- It uses the Admin template along with the admin sub template.
-- It requires the moderate_forum, manage_membergroups, manage_bans,
+<p>What it does:</p>
+
+<ul>
+<li>It prepares all the data necessary for the administration front page.</li>
+<li>It uses the Admin template along with the admin sub template.</li>
+<li>It requires the moderate_forum, manage_membergroups, manage_bans,
 admin_forum, manage_permissions, manage_attachments, manage_smileys,
-manage_boards, edit_news, or send_mail permission.
-- It uses the index administrative area.
-- Accessed by ?action=admin.</p>
+manage_boards, edit_news, or send_mail permission.</li>
+<li>It uses the index administrative area.</li>
+<li>Accessed by ?action=admin.</li>
+</ul>
 
 
 
@@ -387,7 +392,7 @@ manage_boards, edit_news, or send_mail permission.
 
 			<td class="name"><div>
 			<a class="anchor" href="#_action_credits">#</a>
-			<code><a href="source-class-Admin_Controller.html#681-753" title="Go to source code">action_credits</a>( )</code>
+			<code><a href="source-class-Admin_Controller.html#684-757" title="Go to source code">action_credits</a>( )</code>
 
 			<div class="description short">
 				<p>The credits section in admin panel.</p>
@@ -396,10 +401,13 @@ manage_boards, edit_news, or send_mail permission.
 			<div class="description detailed hidden">
 				<p>The credits section in admin panel.</p>
 
-<p>What it does:
-- Determines the current level of support functions from the server, such as
-current level of caching engine or graphics librayrs installed.
-- Accessed by ?action=admin;area=credits</p>
+<p>What it does:</p>
+
+<ul>
+<li>Determines the current level of support functions from the server, such as
+current level of caching engine or graphics librayrs installed.</li>
+<li>Accessed by ?action=admin;area=credits</li>
+</ul>
 
 
 
@@ -421,7 +429,7 @@ current level of caching engine or graphics librayrs installed.
 
 			<td class="name"><div>
 			<a class="anchor" href="#_action_search">#</a>
-			<code><a href="source-class-Admin_Controller.html#755-794" title="Go to source code">action_search</a>( )</code>
+			<code><a href="source-class-Admin_Controller.html#759-798" title="Go to source code">action_search</a>( )</code>
 
 			<div class="description short">
 				<p>This function allocates out all the search stuff.</p>
@@ -450,7 +458,7 @@ current level of caching engine or graphics librayrs installed.
 
 			<td class="name"><div>
 			<a class="anchor" href="#_action_search_internal">#</a>
-			<code><a href="source-class-Admin_Controller.html#796-962" title="Go to source code">action_search_internal</a>( )</code>
+			<code><a href="source-class-Admin_Controller.html#800-966" title="Go to source code">action_search_internal</a>( )</code>
 
 			<div class="description short">
 				<p>A complicated but relatively quick internal search.</p>
@@ -479,7 +487,7 @@ current level of caching engine or graphics librayrs installed.
 
 			<td class="name"><div>
 			<a class="anchor" href="#_action_search_member">#</a>
-			<code><a href="source-class-Admin_Controller.html#964-979" title="Go to source code">action_search_member</a>( )</code>
+			<code><a href="source-class-Admin_Controller.html#968-983" title="Go to source code">action_search_member</a>( )</code>
 
 			<div class="description short">
 				<p>All this does is pass through to manage members.</p>
@@ -508,7 +516,7 @@ current level of caching engine or graphics librayrs installed.
 
 			<td class="name"><div>
 			<a class="anchor" href="#_action_search_doc">#</a>
-			<code><a href="source-class-Admin_Controller.html#981-1038" title="Go to source code">action_search_doc</a>( )</code>
+			<code><a href="source-class-Admin_Controller.html#985-1042" title="Go to source code">action_search_doc</a>( )</code>
 
 			<div class="description short">
 				<p>This file allows the user to search the wiki documentation
@@ -539,7 +547,7 @@ for a little help.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_action_endsession">#</a>
-			<code><a href="source-class-Admin_Controller.html#1040-1055" title="Go to source code">action_endsession</a>( )</code>
+			<code><a href="source-class-Admin_Controller.html#1044-1059" title="Go to source code">action_endsession</a>( )</code>
 
 			<div class="description short">
 				<p>This ends a admin session, requiring authentication to access the ACP again.</p>
@@ -580,10 +588,10 @@ for a little help.</p>
 	</div>
 
 	<div id="footer">
-		ElkArte 1.0.7 Documentation API documentation generated by <a href="http://apigen.org">ApiGen</a>
+		ElkArte 1.0.10 Documentation API documentation generated by <a href="http://apigen.org">ApiGen</a>
 	</div>
 </div>
 <script src="resources/combined.js"></script>
-<script src="elementlist.js"></script>
+<script src="elementlist.js?13e5afb1269be6447e403156947b1e9254b743c7"></script>
 </body>
 </html>

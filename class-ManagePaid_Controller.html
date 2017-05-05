@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>Class ManagePaid_Controller | ElkArte 1.0.7 Documentation</title>
+	<title>Class ManagePaid_Controller | ElkArte 1.0.10 Documentation</title>
 
 	<link rel="stylesheet" href="resources/bootstrap.min.css?973e37a8502921d56bc02bb55321f45b072b6f71">
 	<link rel="stylesheet" href="resources/style.css?70c1d062672daa3f906b72e4f5d03d4bc5c4174d">
@@ -14,7 +14,7 @@
 	<nav id="navigation" class="navbar navbar-default navbar-fixed-top">
 		<div class="container-fluid">
 			<div class="navbar-header">
-				<a href="index.html" class="navbar-brand">ElkArte 1.0.7 Documentation</a>
+				<a href="index.html" class="navbar-brand">ElkArte 1.0.10 Documentation</a>
 			</div>
 			<div class="collapse navbar-collapse">
 
@@ -39,21 +39,17 @@
 					</li>
 
 						<li>
-							<a href="annotation-group-deprecated.html" title="List of elements with deprecated annotation">
-								<span>Deprecated</span>
-							</a>
-						</li>
-						<li>
 							<a href="annotation-group-todo.html" title="List of elements with todo annotation">
 								<span>Todo</span>
 							</a>
 						</li>
+						<li>
+							<a href="annotation-group-deprecated.html" title="List of elements with deprecated annotation">
+								<span>Deprecated</span>
+							</a>
+						</li>
 
-					<li class="divider-vertical"></li>
 
-					<li>
-						<a href="-API-documentation.zip" title="Download documentation as ZIP archive"><span>Download</span></a>
-					</li>
 				</ul>
 			</div>
 		</div>
@@ -283,7 +279,7 @@ This software is a derived product, based on:
 Simple Machines Forum (SMF)
 copyright:	2011 Simple Machines (http://www.simplemachines.org)
 license:		BSD, See included LICENSE.TXT for terms and conditions.</a><br>
-			<b>Located at</b> <a href="source-class-ManagePaid_Controller.html#24-1048" title="Go to source code">sources/admin/ManagePaid.controller.php</a>
+			<b>Located at</b> <a href="source-class-ManagePaid_Controller.html#24-1049" title="Go to source code">sources/admin/ManagePaid.controller.php</a>
 		<br>
 	</div>
 
@@ -303,7 +299,7 @@ license:		BSD, See included LICENSE.TXT for terms and conditions.</a><br>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_action_index">#</a>
-			<code><a href="source-class-ManagePaid_Controller.html#37-109" title="Go to source code">action_index</a>( )</code>
+			<code><a href="source-class-ManagePaid_Controller.html#37-110" title="Go to source code">action_index</a>( )</code>
 
 			<div class="description short">
 				<p>The main entrance point for the 'Paid Subscription' screen,</p>
@@ -312,11 +308,14 @@ license:		BSD, See included LICENSE.TXT for terms and conditions.</a><br>
 			<div class="description detailed hidden">
 				<p>The main entrance point for the 'Paid Subscription' screen,</p>
 
-<p>What it does:
-- calling the right function based on the given sub-action.
-- It defaults to sub-action 'view'.
-- Accessed from ?action=admin;area=paidsubscribe.
-- It requires admin_forum permission for admin based actions.</p>
+<p>What it does:</p>
+
+<ul>
+<li>calling the right function based on the given sub-action.</li>
+<li>It defaults to sub-action 'view'.</li>
+<li>Accessed from ?action=admin;area=paidsubscribe.</li>
+<li>It requires admin_forum permission for admin based actions.</li>
+</ul>
 
 
 
@@ -324,7 +323,7 @@ license:		BSD, See included LICENSE.TXT for terms and conditions.</a><br>
 
 					<h4>See</h4>
 					<div class="list">
-							<code><a href="class-Action_Controller.html#_action_index">Action_Controller::action_index()</a></code><br>
+							Action_Controller::action_index()<br>
 					</div>
 
 
@@ -342,7 +341,7 @@ license:		BSD, See included LICENSE.TXT for terms and conditions.</a><br>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_action_paidSettings_display">#</a>
-			<code><a href="source-class-ManagePaid_Controller.html#111-207" title="Go to source code">action_paidSettings_display</a>( )</code>
+			<code><a href="source-class-ManagePaid_Controller.html#112-208" title="Go to source code">action_paidSettings_display</a>( )</code>
 
 			<div class="description short">
 				<p>Set any setting related to paid subscriptions,</p>
@@ -377,7 +376,7 @@ license:		BSD, See included LICENSE.TXT for terms and conditions.</a><br>
 
 			<td class="name"><div>
 			<a class="anchor" href="#__init_paidSettingsForm">#</a>
-			<code><a href="source-class-ManagePaid_Controller.html#209-224" title="Go to source code">_init_paidSettingsForm</a>( )</code>
+			<code><a href="source-class-ManagePaid_Controller.html#210-225" title="Go to source code">_init_paidSettingsForm</a>( )</code>
 
 			<div class="description short">
 				<p>Retrieve subscriptions settings and initialize the form.</p>
@@ -406,7 +405,7 @@ license:		BSD, See included LICENSE.TXT for terms and conditions.</a><br>
 
 			<td class="name"><div>
 			<a class="anchor" href="#__settings">#</a>
-			<code><a href="source-class-ManagePaid_Controller.html#226-252" title="Go to source code">_settings</a>( )</code>
+			<code><a href="source-class-ManagePaid_Controller.html#227-253" title="Go to source code">_settings</a>( )</code>
 
 			<div class="description short">
 				<p>Retrieve subscriptions settings.</p>
@@ -435,7 +434,7 @@ license:		BSD, See included LICENSE.TXT for terms and conditions.</a><br>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_settings_search">#</a>
-			<code><a href="source-class-ManagePaid_Controller.html#254-260" title="Go to source code">settings_search</a>( )</code>
+			<code><a href="source-class-ManagePaid_Controller.html#255-261" title="Go to source code">settings_search</a>( )</code>
 
 			<div class="description short">
 				<p>Return the paid sub settings for use in admin search</p>
@@ -464,7 +463,7 @@ license:		BSD, See included LICENSE.TXT for terms and conditions.</a><br>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_action_view">#</a>
-			<code><a href="source-class-ManagePaid_Controller.html#262-418" title="Go to source code">action_view</a>( )</code>
+			<code><a href="source-class-ManagePaid_Controller.html#263-419" title="Go to source code">action_view</a>( )</code>
 
 			<div class="description short">
 				<p>View a list of all the current subscriptions</p>
@@ -498,7 +497,7 @@ license:		BSD, See included LICENSE.TXT for terms and conditions.</a><br>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_action_modify">#</a>
-			<code><a href="source-class-ManagePaid_Controller.html#420-586" title="Go to source code">action_modify</a>( )</code>
+			<code><a href="source-class-ManagePaid_Controller.html#421-587" title="Go to source code">action_modify</a>( )</code>
 
 			<div class="description short">
 				<p>Adding, editing and deleting subscriptions.</p>
@@ -531,7 +530,7 @@ license:		BSD, See included LICENSE.TXT for terms and conditions.</a><br>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_action_viewsub">#</a>
-			<code><a href="source-class-ManagePaid_Controller.html#588-766" title="Go to source code">action_viewsub</a>( )</code>
+			<code><a href="source-class-ManagePaid_Controller.html#589-767" title="Go to source code">action_viewsub</a>( )</code>
 
 			<div class="description short">
 				<p>View all the users subscribed to a particular subscription.</p>
@@ -566,7 +565,7 @@ license:		BSD, See included LICENSE.TXT for terms and conditions.</a><br>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getSubscribedUserCount">#</a>
-			<code><a href="source-class-ManagePaid_Controller.html#768-780" title="Go to source code">getSubscribedUserCount</a>( <span>integer <var>$id_sub</var></span>, <span>string <var>$search_string</var></span>, <span>mixed[] <var>$search_vars</var></span> )</code>
+			<code><a href="source-class-ManagePaid_Controller.html#769-781" title="Go to source code">getSubscribedUserCount</a>( <span>integer <var>$id_sub</var></span>, <span>string <var>$search_string</var></span>, <span>mixed[] <var>$search_vars</var></span> )</code>
 
 			<div class="description short">
 				<p>Returns the number of subscribers to a specific subscription in the system</p>
@@ -608,7 +607,7 @@ license:		BSD, See included LICENSE.TXT for terms and conditions.</a><br>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getSubscribedUsers">#</a>
-			<code><a href="source-class-ManagePaid_Controller.html#782-797" title="Go to source code">getSubscribedUsers</a>( <span>integer <var>$start</var></span>, <span>integer <var>$items_per_page</var></span>, <span>string <var>$sort</var></span>, <span>integer <var>$id_sub</var></span>, <span>string <var>$search_string</var></span>, <span>mixed[] <var>$search_vars</var></span> )</code>
+			<code><a href="source-class-ManagePaid_Controller.html#783-798" title="Go to source code">getSubscribedUsers</a>( <span>integer <var>$start</var></span>, <span>integer <var>$items_per_page</var></span>, <span>string <var>$sort</var></span>, <span>integer <var>$id_sub</var></span>, <span>string <var>$search_string</var></span>, <span>mixed[] <var>$search_vars</var></span> )</code>
 
 			<div class="description short">
 				<p>Returns an array of subscription details and members for a specific subscription</p>
@@ -656,7 +655,7 @@ license:		BSD, See included LICENSE.TXT for terms and conditions.</a><br>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_action_modifyuser">#</a>
-			<code><a href="source-class-ManagePaid_Controller.html#799-1047" title="Go to source code">action_modifyuser</a>( )</code>
+			<code><a href="source-class-ManagePaid_Controller.html#800-1048" title="Go to source code">action_modifyuser</a>( )</code>
 
 			<div class="description short">
 				<p>Edit or add a user subscription.</p>
@@ -737,10 +736,10 @@ license:		BSD, See included LICENSE.TXT for terms and conditions.</a><br>
 	</div>
 
 	<div id="footer">
-		ElkArte 1.0.7 Documentation API documentation generated by <a href="http://apigen.org">ApiGen</a>
+		ElkArte 1.0.10 Documentation API documentation generated by <a href="http://apigen.org">ApiGen</a>
 	</div>
 </div>
 <script src="resources/combined.js"></script>
-<script src="elementlist.js"></script>
+<script src="elementlist.js?13e5afb1269be6447e403156947b1e9254b743c7"></script>
 </body>
 </html>

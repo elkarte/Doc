@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>Class Register_Controller | ElkArte 1.0.7 Documentation</title>
+	<title>Class Register_Controller | ElkArte 1.0.10 Documentation</title>
 
 	<link rel="stylesheet" href="resources/bootstrap.min.css?973e37a8502921d56bc02bb55321f45b072b6f71">
 	<link rel="stylesheet" href="resources/style.css?70c1d062672daa3f906b72e4f5d03d4bc5c4174d">
@@ -14,7 +14,7 @@
 	<nav id="navigation" class="navbar navbar-default navbar-fixed-top">
 		<div class="container-fluid">
 			<div class="navbar-header">
-				<a href="index.html" class="navbar-brand">ElkArte 1.0.7 Documentation</a>
+				<a href="index.html" class="navbar-brand">ElkArte 1.0.10 Documentation</a>
 			</div>
 			<div class="collapse navbar-collapse">
 
@@ -39,21 +39,17 @@
 					</li>
 
 						<li>
-							<a href="annotation-group-deprecated.html" title="List of elements with deprecated annotation">
-								<span>Deprecated</span>
-							</a>
-						</li>
-						<li>
 							<a href="annotation-group-todo.html" title="List of elements with todo annotation">
 								<span>Todo</span>
 							</a>
 						</li>
+						<li>
+							<a href="annotation-group-deprecated.html" title="List of elements with deprecated annotation">
+								<span>Deprecated</span>
+							</a>
+						</li>
 
-					<li class="divider-vertical"></li>
 
-					<li>
-						<a href="-API-documentation.zip" title="Download documentation as ZIP archive"><span>Download</span></a>
-					</li>
 				</ul>
 			</div>
 		</div>
@@ -344,6 +340,7 @@
 				<li><a href="function-associatedPoll.html">associatedPoll</a></li>
 				<li><a href="function-associatedTopic.html">associatedTopic</a></li>
 				<li><a href="function-autoRotateImage.html">autoRotateImage</a></li>
+				<li><a href="function-autoRotateImageWithIM.html">autoRotateImageWithIM</a></li>
 				<li><a href="function-availableThemes.html">availableThemes</a></li>
 				<li><a href="function-basicMessageInfo.html">basicMessageInfo</a></li>
 				<li><a href="function-basicWatchedUsers.html">basicWatchedUsers</a></li>
@@ -743,6 +740,7 @@
 				<li><a href="function-sendApprovalNotifications.html">sendApprovalNotifications</a></li>
 				<li><a href="function-sendBoardNotifications.html">sendBoardNotifications</a></li>
 				<li><a href="function-sendNotifications.html">sendNotifications</a></li>
+				<li><a href="function-serializeToJson.html">serializeToJson</a></li>
 				<li><a href="function-sessionClose.html">sessionClose</a></li>
 				<li><a href="function-sessionDestroy.html">sessionDestroy</a></li>
 				<li><a href="function-sessionGC.html">sessionGC</a></li>
@@ -965,7 +963,7 @@ This software is a derived product, based on:
 Simple Machines Forum (SMF)
 copyright:	2011 Simple Machines (http://www.simplemachines.org)
 license:		BSD, See included LICENSE.TXT for terms and conditions.</a><br>
-			<b>Located at</b> <a href="source-class-Register_Controller.html#25-1008" title="Go to source code">sources/controllers/Register.controller.php</a>
+			<b>Located at</b> <a href="source-class-Register_Controller.html#25-1012" title="Go to source code">sources/controllers/Register.controller.php</a>
 		<br>
 	</div>
 
@@ -1002,7 +1000,7 @@ By default, this is called for action=register</p>
 
 					<h4>See</h4>
 					<div class="list">
-							<code><a href="class-Action_Controller.html#_action_index">Action_Controller::action_index()</a></code><br>
+							Action_Controller::action_index()<br>
 					</div>
 
 
@@ -1020,7 +1018,7 @@ By default, this is called for action=register</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_action_register">#</a>
-			<code><a href="source-class-Register_Controller.html#43-246" title="Go to source code">action_register</a>( )</code>
+			<code><a href="source-class-Register_Controller.html#43-247" title="Go to source code">action_register</a>( )</code>
 
 			<div class="description short">
 				<p>Begin the registration process.
@@ -1056,7 +1054,7 @@ Accessed by ?action=register</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_action_register2">#</a>
-			<code><a href="source-class-Register_Controller.html#248-599" title="Go to source code">action_register2</a>( <span>boolean <var>$verifiedOpenID</var> = <span class="php-keyword1">false</span></span> )</code>
+			<code><a href="source-class-Register_Controller.html#249-600" title="Go to source code">action_register2</a>( <span>boolean <var>$verifiedOpenID</var> = <span class="php-keyword1">false</span></span> )</code>
 
 			<div class="description short">
 				<p>Actually register the member.</p>
@@ -1096,7 +1094,7 @@ Accessed by ?action=register</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_action_activate">#</a>
-			<code><a href="source-class-Register_Controller.html#601-742" title="Go to source code">action_activate</a>( )</code>
+			<code><a href="source-class-Register_Controller.html#602-746" title="Go to source code">action_activate</a>( )</code>
 
 			<div class="description short">
 				<p>Verify the activation code, and activate the user if correct.
@@ -1127,7 +1125,7 @@ Accessed by ?action=activate</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_action_coppa">#</a>
-			<code><a href="source-class-Register_Controller.html#744-818" title="Go to source code">action_coppa</a>( )</code>
+			<code><a href="source-class-Register_Controller.html#748-822" title="Go to source code">action_coppa</a>( )</code>
 
 			<div class="description short">
 				<p>This function will display the contact information for the forum, as well a form to fill in.
@@ -1158,7 +1156,7 @@ Accessed by action=coppa</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_action_verificationcode">#</a>
-			<code><a href="source-class-Register_Controller.html#820-883" title="Go to source code">action_verificationcode</a>( )</code>
+			<code><a href="source-class-Register_Controller.html#824-887" title="Go to source code">action_verificationcode</a>( )</code>
 
 			<div class="description short">
 				<p>Show the verification code or let it hear.
@@ -1189,7 +1187,7 @@ Accessed by ?action=verificationcode</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_action_contact">#</a>
-			<code><a href="source-class-Register_Controller.html#885-983" title="Go to source code">action_contact</a>( )</code>
+			<code><a href="source-class-Register_Controller.html#889-987" title="Go to source code">action_contact</a>( )</code>
 
 			<div class="description short">
 				<p>Shows the contact form for the user to fill out
@@ -1220,7 +1218,7 @@ Needs to be enabled to be used</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#__registerCheckUsername">#</a>
-			<code><a href="source-class-Register_Controller.html#985-1007" title="Go to source code">_registerCheckUsername</a>( )</code>
+			<code><a href="source-class-Register_Controller.html#989-1011" title="Go to source code">_registerCheckUsername</a>( )</code>
 
 			<div class="description short">
 				<p>See if a username already exists.</p>
@@ -1261,10 +1259,10 @@ Needs to be enabled to be used</p>
 	</div>
 
 	<div id="footer">
-		ElkArte 1.0.7 Documentation API documentation generated by <a href="http://apigen.org">ApiGen</a>
+		ElkArte 1.0.10 Documentation API documentation generated by <a href="http://apigen.org">ApiGen</a>
 	</div>
 </div>
 <script src="resources/combined.js"></script>
-<script src="elementlist.js"></script>
+<script src="elementlist.js?13e5afb1269be6447e403156947b1e9254b743c7"></script>
 </body>
 </html>

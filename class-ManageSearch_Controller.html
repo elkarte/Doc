@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>Class ManageSearch_Controller | ElkArte 1.0.7 Documentation</title>
+	<title>Class ManageSearch_Controller | ElkArte 1.0.10 Documentation</title>
 
 	<link rel="stylesheet" href="resources/bootstrap.min.css?973e37a8502921d56bc02bb55321f45b072b6f71">
 	<link rel="stylesheet" href="resources/style.css?70c1d062672daa3f906b72e4f5d03d4bc5c4174d">
@@ -14,7 +14,7 @@
 	<nav id="navigation" class="navbar navbar-default navbar-fixed-top">
 		<div class="container-fluid">
 			<div class="navbar-header">
-				<a href="index.html" class="navbar-brand">ElkArte 1.0.7 Documentation</a>
+				<a href="index.html" class="navbar-brand">ElkArte 1.0.10 Documentation</a>
 			</div>
 			<div class="collapse navbar-collapse">
 
@@ -39,21 +39,17 @@
 					</li>
 
 						<li>
-							<a href="annotation-group-deprecated.html" title="List of elements with deprecated annotation">
-								<span>Deprecated</span>
-							</a>
-						</li>
-						<li>
 							<a href="annotation-group-todo.html" title="List of elements with todo annotation">
 								<span>Todo</span>
 							</a>
 						</li>
+						<li>
+							<a href="annotation-group-deprecated.html" title="List of elements with deprecated annotation">
+								<span>Deprecated</span>
+							</a>
+						</li>
 
-					<li class="divider-vertical"></li>
 
-					<li>
-						<a href="-API-documentation.zip" title="Download documentation as ZIP archive"><span>Download</span></a>
-					</li>
 				</ul>
 			</div>
 		</div>
@@ -293,7 +289,7 @@ This software is a derived product, based on:
 Simple Machines Forum (SMF)
 copyright:	2011 Simple Machines (http://www.simplemachines.org)
 license:		BSD, See included LICENSE.TXT for terms and conditions.</a><br>
-			<b>Located at</b> <a href="source-class-ManageSearch_Controller.html#24-677" title="Go to source code">sources/admin/ManageSearch.controller.php</a>
+			<b>Located at</b> <a href="source-class-ManageSearch_Controller.html#24-683" title="Go to source code">sources/admin/ManageSearch.controller.php</a>
 		<br>
 	</div>
 
@@ -313,7 +309,7 @@ license:		BSD, See included LICENSE.TXT for terms and conditions.</a><br>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_action_index">#</a>
-			<code><a href="source-class-ManageSearch_Controller.html#37-100" title="Go to source code">action_index</a>( )</code>
+			<code><a href="source-class-ManageSearch_Controller.html#37-101" title="Go to source code">action_index</a>( )</code>
 
 			<div class="description short">
 				<p>Main entry point for the admin search settings screen.</p>
@@ -322,12 +318,15 @@ license:		BSD, See included LICENSE.TXT for terms and conditions.</a><br>
 			<div class="description detailed hidden">
 				<p>Main entry point for the admin search settings screen.</p>
 
-<p>What it does:
-- It checks permissions, and it forwards to the appropriate function based on
-the given sub-action.
-- Defaults to sub-action 'settings'.
-- Called by ?action=admin;area=managesearch.
-- Requires the admin_forum permission.</p>
+<p>What it does:</p>
+
+<ul>
+<li>It checks permissions, and it forwards to the appropriate function based on
+the given sub-action.</li>
+<li>Defaults to sub-action 'settings'.</li>
+<li>Called by ?action=admin;area=managesearch.</li>
+<li>Requires the admin_forum permission.</li>
+</ul>
 
 
 
@@ -335,7 +334,7 @@ the given sub-action.
 
 					<h4>See</h4>
 					<div class="list">
-							<code><a href="class-Action_Controller.html#_action_index">Action_Controller::action_index()</a></code><br>
+							Action_Controller::action_index()<br>
 					</div>
 					<h4>Uses</h4>
 					<div class="list">
@@ -358,7 +357,7 @@ the given sub-action.
 
 			<td class="name"><div>
 			<a class="anchor" href="#_action_searchSettings_display">#</a>
-			<code><a href="source-class-ManageSearch_Controller.html#102-178" title="Go to source code">action_searchSettings_display</a>( )</code>
+			<code><a href="source-class-ManageSearch_Controller.html#103-179" title="Go to source code">action_searchSettings_display</a>( )</code>
 
 			<div class="description short">
 				<p>Edit some general settings related to the search function.</p>
@@ -396,7 +395,7 @@ the given sub-action.
 
 			<td class="name"><div>
 			<a class="anchor" href="#__initSearchSettingsForm">#</a>
-			<code><a href="source-class-ManageSearch_Controller.html#180-196" title="Go to source code">_initSearchSettingsForm</a>( )</code>
+			<code><a href="source-class-ManageSearch_Controller.html#181-197" title="Go to source code">_initSearchSettingsForm</a>( )</code>
 
 			<div class="description short">
 				<p>Initialize admin searchSettings form with the existing forum settings
@@ -427,7 +426,7 @@ for search.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#__settings">#</a>
-			<code><a href="source-class-ManageSearch_Controller.html#198-224" title="Go to source code">_settings</a>( )</code>
+			<code><a href="source-class-ManageSearch_Controller.html#199-225" title="Go to source code">_settings</a>( )</code>
 
 			<div class="description short">
 				<p>Retrieve admin search settings</p>
@@ -456,7 +455,7 @@ for search.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_settings_search">#</a>
-			<code><a href="source-class-ManageSearch_Controller.html#226-232" title="Go to source code">settings_search</a>( )</code>
+			<code><a href="source-class-ManageSearch_Controller.html#227-233" title="Go to source code">settings_search</a>( )</code>
 
 			<div class="description short">
 				<p>Return the search settings for use in admin search</p>
@@ -485,7 +484,7 @@ for search.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_action_weight">#</a>
-			<code><a href="source-class-ManageSearch_Controller.html#234-282" title="Go to source code">action_weight</a>( )</code>
+			<code><a href="source-class-ManageSearch_Controller.html#235-283" title="Go to source code">action_weight</a>( )</code>
 
 			<div class="description short">
 				<p>Edit the relative weight of the search factors.</p>
@@ -523,7 +522,7 @@ for search.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_action_edit">#</a>
-			<code><a href="source-class-ManageSearch_Controller.html#284-404" title="Go to source code">action_edit</a>( )</code>
+			<code><a href="source-class-ManageSearch_Controller.html#285-406" title="Go to source code">action_edit</a>( )</code>
 
 			<div class="description short">
 				<p>Edit the search method and search index used.</p>
@@ -532,12 +531,15 @@ for search.</p>
 			<div class="description detailed hidden">
 				<p>Edit the search method and search index used.</p>
 
-<p>What it does:
-- Calculates the size of the current search indexes in use.
-- Allows to create and delete a fulltext index on the messages table.
-- Allows to delete a custom index (that action_create() created).
-- Called by ?action=admin;area=managesearch;sa=method.
-- Requires the admin_forum permission.</p>
+<p>What it does:</p>
+
+<ul>
+<li>Calculates the size of the current search indexes in use.</li>
+<li>Allows to create and delete a fulltext index on the messages table.</li>
+<li>Allows to delete a custom index (that action_create() created).</li>
+<li>Called by ?action=admin;area=managesearch;sa=method.</li>
+<li>Requires the admin_forum permission.</li>
+</ul>
 
 
 
@@ -563,7 +565,7 @@ for search.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_action_create">#</a>
-			<code><a href="source-class-ManageSearch_Controller.html#406-518" title="Go to source code">action_create</a>( )</code>
+			<code><a href="source-class-ManageSearch_Controller.html#408-522" title="Go to source code">action_create</a>( )</code>
 
 			<div class="description short">
 				<p>Create a custom search index for the messages table.</p>
@@ -572,11 +574,14 @@ for search.</p>
 			<div class="description detailed hidden">
 				<p>Create a custom search index for the messages table.</p>
 
-<p>What it does:
-- Called by ?action=admin;area=managesearch;sa=createmsgindex.
-- Linked from the action_edit screen.
-- Requires the admin_forum permission.
-- Depending on the size of the message table, the process is divided in steps.</p>
+<p>What it does:</p>
+
+<ul>
+<li>Called by ?action=admin;area=managesearch;sa=createmsgindex.</li>
+<li>Linked from the action_edit screen.</li>
+<li>Requires the admin_forum permission.</li>
+<li>Depending on the size of the message table, the process is divided in steps.</li>
+</ul>
 
 
 
@@ -603,7 +608,7 @@ sub-templates.</p><br>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_action_managesphinx">#</a>
-			<code><a href="source-class-ManageSearch_Controller.html#520-623" title="Go to source code">action_managesphinx</a>( )</code>
+			<code><a href="source-class-ManageSearch_Controller.html#524-629" title="Go to source code">action_managesphinx</a>( )</code>
 
 			<div class="description short">
 				<p>Edit settings related to the sphinx or sphinxQL search function.</p>
@@ -637,7 +642,7 @@ sub-templates.</p><br>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_loadSearchAPIs">#</a>
-			<code><a href="source-class-ManageSearch_Controller.html#625-676" title="Go to source code">loadSearchAPIs</a>( )</code>
+			<code><a href="source-class-ManageSearch_Controller.html#631-682" title="Go to source code">loadSearchAPIs</a>( )</code>
 
 			<div class="description short">
 				<p>Get the installed Search API implementations.</p>
@@ -721,10 +726,10 @@ sub-templates.</p><br>
 	</div>
 
 	<div id="footer">
-		ElkArte 1.0.7 Documentation API documentation generated by <a href="http://apigen.org">ApiGen</a>
+		ElkArte 1.0.10 Documentation API documentation generated by <a href="http://apigen.org">ApiGen</a>
 	</div>
 </div>
 <script src="resources/combined.js"></script>
-<script src="elementlist.js"></script>
+<script src="elementlist.js?13e5afb1269be6447e403156947b1e9254b743c7"></script>
 </body>
 </html>

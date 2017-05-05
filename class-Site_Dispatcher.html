@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>Class Site_Dispatcher | ElkArte 1.0.7 Documentation</title>
+	<title>Class Site_Dispatcher | ElkArte 1.0.10 Documentation</title>
 
 	<link rel="stylesheet" href="resources/bootstrap.min.css?973e37a8502921d56bc02bb55321f45b072b6f71">
 	<link rel="stylesheet" href="resources/style.css?70c1d062672daa3f906b72e4f5d03d4bc5c4174d">
@@ -14,7 +14,7 @@
 	<nav id="navigation" class="navbar navbar-default navbar-fixed-top">
 		<div class="container-fluid">
 			<div class="navbar-header">
-				<a href="index.html" class="navbar-brand">ElkArte 1.0.7 Documentation</a>
+				<a href="index.html" class="navbar-brand">ElkArte 1.0.10 Documentation</a>
 			</div>
 			<div class="collapse navbar-collapse">
 
@@ -39,21 +39,17 @@
 					</li>
 
 						<li>
-							<a href="annotation-group-deprecated.html" title="List of elements with deprecated annotation">
-								<span>Deprecated</span>
-							</a>
-						</li>
-						<li>
 							<a href="annotation-group-todo.html" title="List of elements with todo annotation">
 								<span>Todo</span>
 							</a>
 						</li>
+						<li>
+							<a href="annotation-group-deprecated.html" title="List of elements with deprecated annotation">
+								<span>Deprecated</span>
+							</a>
+						</li>
 
-					<li class="divider-vertical"></li>
 
-					<li>
-						<a href="-API-documentation.zip" title="Download documentation as ZIP archive"><span>Download</span></a>
-					</li>
 				</ul>
 			</div>
 		</div>
@@ -344,6 +340,7 @@
 				<li><a href="function-associatedPoll.html">associatedPoll</a></li>
 				<li><a href="function-associatedTopic.html">associatedTopic</a></li>
 				<li><a href="function-autoRotateImage.html">autoRotateImage</a></li>
+				<li><a href="function-autoRotateImageWithIM.html">autoRotateImageWithIM</a></li>
 				<li><a href="function-availableThemes.html">availableThemes</a></li>
 				<li><a href="function-basicMessageInfo.html">basicMessageInfo</a></li>
 				<li><a href="function-basicWatchedUsers.html">basicWatchedUsers</a></li>
@@ -743,6 +740,7 @@
 				<li><a href="function-sendApprovalNotifications.html">sendApprovalNotifications</a></li>
 				<li><a href="function-sendBoardNotifications.html">sendBoardNotifications</a></li>
 				<li><a href="function-sendNotifications.html">sendNotifications</a></li>
+				<li><a href="function-serializeToJson.html">serializeToJson</a></li>
 				<li><a href="function-sessionClose.html">sessionClose</a></li>
 				<li><a href="function-sessionDestroy.html">sessionDestroy</a></li>
 				<li><a href="function-sessionGC.html">sessionGC</a></li>
@@ -925,12 +923,15 @@
 	<div class="description">
 	<p>Dispatch the request to the function or method registered to handle it.</p>
 
-<p>What it does:
-- Try first the critical functionality (maintenance, no guest access)
-- Then, in order: * forum's main actions: board index, message index, display topic the current/legacy file/functions registered by ElkArte core
-- Fall back to naming patterns: * filename=[action].php function=[sa] * filename=[action].controller.php method=action_[sa] * filename=[action]-Controller.php method=action_[sa]
-- An addon files to handle custom actions will be called if they follow
-any of these patterns.</p>
+<p>What it does:</p>
+
+<ul>
+<li>Try first the critical functionality (maintenance, no guest access)</li>
+<li>Then, in order: * forum's main actions: board index, message index, display topic the current/legacy file/functions registered by ElkArte core</li>
+<li>Fall back to naming patterns: * filename=[action].php function=[sa] * filename=[action].controller.php method=action_[sa] * filename=[action]-Controller.php method=action_[sa]</li>
+<li>An addon files to handle custom actions will be called if they follow
+any of these patterns.</li>
+</ul>
 	</div>
 
 
@@ -951,7 +952,7 @@ any of these patterns.</p>
 				ElkArte Forum contributors<br>
 				<b>License:</b>
 				<a href="BSD">http://opensource.org/licenses/BSD-3-Clause</a><br>
-			<b>Located at</b> <a href="source-class-Site_Dispatcher.html#18-354" title="Go to source code">sources/SiteDispatcher.class.php</a>
+			<b>Located at</b> <a href="source-class-Site_Dispatcher.html#18-355" title="Go to source code">sources/SiteDispatcher.class.php</a>
 		<br>
 	</div>
 
@@ -971,7 +972,7 @@ any of these patterns.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#___construct">#</a>
-			<code><a href="source-class-Site_Dispatcher.html#59-283" title="Go to source code">__construct</a>( )</code>
+			<code><a href="source-class-Site_Dispatcher.html#60-284" title="Go to source code">__construct</a>( )</code>
 
 			<div class="description short">
 				<p>Create an instance and initialize it.
@@ -1002,7 +1003,7 @@ This does all the work to figure out which file and function/method needs called
 
 			<td class="name"><div>
 			<a class="anchor" href="#_dispatch">#</a>
-			<code><a href="source-class-Site_Dispatcher.html#285-337" title="Go to source code">dispatch</a>( )</code>
+			<code><a href="source-class-Site_Dispatcher.html#286-338" title="Go to source code">dispatch</a>( )</code>
 
 			<div class="description short">
 				<p>Relay control to the respective function or method.</p>
@@ -1031,7 +1032,7 @@ This does all the work to figure out which file and function/method needs called
 
 			<td class="name"><div>
 			<a class="anchor" href="#_site_action">#</a>
-			<code><a href="source-class-Site_Dispatcher.html#339-353" title="Go to source code">site_action</a>( )</code>
+			<code><a href="source-class-Site_Dispatcher.html#340-354" title="Go to source code">site_action</a>( )</code>
 
 			<div class="description short">
 				<p>Returns the current action for the system</p>
@@ -1076,7 +1077,7 @@ This does all the work to figure out which file and function/method needs called
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Site_Dispatcher.html#35-39" title="Go to source code"><var>$_file_name</var></a>
+					<a href="source-class-Site_Dispatcher.html#36-40" title="Go to source code"><var>$_file_name</var></a>
 
 				<div class="description short">
 					<p>File name to load</p>
@@ -1101,7 +1102,7 @@ This does all the work to figure out which file and function/method needs called
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Site_Dispatcher.html#41-45" title="Go to source code"><var>$_function_name</var></a>
+					<a href="source-class-Site_Dispatcher.html#42-46" title="Go to source code"><var>$_function_name</var></a>
 
 				<div class="description short">
 					<p>Function or method to call</p>
@@ -1126,7 +1127,7 @@ This does all the work to figure out which file and function/method needs called
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Site_Dispatcher.html#47-51" title="Go to source code"><var>$_controller_name</var></a>
+					<a href="source-class-Site_Dispatcher.html#48-52" title="Go to source code"><var>$_controller_name</var></a>
 
 				<div class="description short">
 					<p>Class name, for object oriented controllers</p>
@@ -1151,7 +1152,7 @@ This does all the work to figure out which file and function/method needs called
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Site_Dispatcher.html#53-57" title="Go to source code"><var>$_pre_dispatch_func</var></a>
+					<a href="source-class-Site_Dispatcher.html#54-58" title="Go to source code"><var>$_pre_dispatch_func</var></a>
 
 				<div class="description short">
 					<p>Name of pre_dispatch function, for procedural controllers</p>
@@ -1181,10 +1182,10 @@ This does all the work to figure out which file and function/method needs called
 	</div>
 
 	<div id="footer">
-		ElkArte 1.0.7 Documentation API documentation generated by <a href="http://apigen.org">ApiGen</a>
+		ElkArte 1.0.10 Documentation API documentation generated by <a href="http://apigen.org">ApiGen</a>
 	</div>
 </div>
 <script src="resources/combined.js"></script>
-<script src="elementlist.js"></script>
+<script src="elementlist.js?13e5afb1269be6447e403156947b1e9254b743c7"></script>
 </body>
 </html>

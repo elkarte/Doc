@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>Class Request | ElkArte 1.0.7 Documentation</title>
+	<title>Class Request | ElkArte 1.0.10 Documentation</title>
 
 	<link rel="stylesheet" href="resources/bootstrap.min.css?973e37a8502921d56bc02bb55321f45b072b6f71">
 	<link rel="stylesheet" href="resources/style.css?70c1d062672daa3f906b72e4f5d03d4bc5c4174d">
@@ -14,7 +14,7 @@
 	<nav id="navigation" class="navbar navbar-default navbar-fixed-top">
 		<div class="container-fluid">
 			<div class="navbar-header">
-				<a href="index.html" class="navbar-brand">ElkArte 1.0.7 Documentation</a>
+				<a href="index.html" class="navbar-brand">ElkArte 1.0.10 Documentation</a>
 			</div>
 			<div class="collapse navbar-collapse">
 
@@ -39,21 +39,17 @@
 					</li>
 
 						<li>
-							<a href="annotation-group-deprecated.html" title="List of elements with deprecated annotation">
-								<span>Deprecated</span>
-							</a>
-						</li>
-						<li>
 							<a href="annotation-group-todo.html" title="List of elements with todo annotation">
 								<span>Todo</span>
 							</a>
 						</li>
+						<li>
+							<a href="annotation-group-deprecated.html" title="List of elements with deprecated annotation">
+								<span>Deprecated</span>
+							</a>
+						</li>
 
-					<li class="divider-vertical"></li>
 
-					<li>
-						<a href="-API-documentation.zip" title="Download documentation as ZIP archive"><span>Download</span></a>
-					</li>
 				</ul>
 			</div>
 		</div>
@@ -344,6 +340,7 @@
 				<li><a href="function-associatedPoll.html">associatedPoll</a></li>
 				<li><a href="function-associatedTopic.html">associatedTopic</a></li>
 				<li><a href="function-autoRotateImage.html">autoRotateImage</a></li>
+				<li><a href="function-autoRotateImageWithIM.html">autoRotateImageWithIM</a></li>
 				<li><a href="function-availableThemes.html">availableThemes</a></li>
 				<li><a href="function-basicMessageInfo.html">basicMessageInfo</a></li>
 				<li><a href="function-basicWatchedUsers.html">basicWatchedUsers</a></li>
@@ -743,6 +740,7 @@
 				<li><a href="function-sendApprovalNotifications.html">sendApprovalNotifications</a></li>
 				<li><a href="function-sendBoardNotifications.html">sendBoardNotifications</a></li>
 				<li><a href="function-sendNotifications.html">sendNotifications</a></li>
+				<li><a href="function-serializeToJson.html">serializeToJson</a></li>
 				<li><a href="function-sessionClose.html">sessionClose</a></li>
 				<li><a href="function-sessionDestroy.html">sessionDestroy</a></li>
 				<li><a href="function-sessionGC.html">sessionGC</a></li>
@@ -925,9 +923,12 @@
 	<div class="description">
 	<p>Class to parse $_REQUEST for always necessary data, such as 'action', 'board', 'topic', 'start'.</p>
 
-<p>What it does:
-- Sanitizes the necessary data
-- Determines the origin of $_REQUEST for use in security checks</p>
+<p>What it does:</p>
+
+<ul>
+<li>Sanitizes the necessary data</li>
+<li>Determines the origin of $_REQUEST for use in security checks</li>
+</ul>
 	</div>
 
 
@@ -948,7 +949,7 @@
 				ElkArte Forum contributors<br>
 				<b>License:</b>
 				<a href="BSD">http://opensource.org/licenses/BSD-3-Clause</a><br>
-			<b>Located at</b> <a href="source-class-Request.html#14-302" title="Go to source code">sources/Request.php</a>
+			<b>Located at</b> <a href="source-class-Request.html#14-303" title="Go to source code">sources/Request.php</a>
 		<br>
 	</div>
 
@@ -968,7 +969,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_client_ip">#</a>
-			<code><a href="source-class-Request.html#65-71" title="Go to source code">client_ip</a>( )</code>
+			<code><a href="source-class-Request.html#66-72" title="Go to source code">client_ip</a>( )</code>
 
 			<div class="description short">
 				<p>Retrieves client IP</p>
@@ -997,7 +998,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_ban_ip">#</a>
-			<code><a href="source-class-Request.html#73-82" title="Go to source code">ban_ip</a>( )</code>
+			<code><a href="source-class-Request.html#74-83" title="Go to source code">ban_ip</a>( )</code>
 
 			<div class="description short">
 				<p>Return a secondary IP, result of a deeper check for the IP</p>
@@ -1031,7 +1032,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_scheme">#</a>
-			<code><a href="source-class-Request.html#84-90" title="Go to source code">scheme</a>( )</code>
+			<code><a href="source-class-Request.html#85-91" title="Go to source code">scheme</a>( )</code>
 
 			<div class="description short">
 				<p>Return the HTTP scheme</p>
@@ -1060,7 +1061,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_user_agent">#</a>
-			<code><a href="source-class-Request.html#92-98" title="Go to source code">user_agent</a>( )</code>
+			<code><a href="source-class-Request.html#93-99" title="Go to source code">user_agent</a>( )</code>
 
 			<div class="description short">
 				<p>Return the user agent</p>
@@ -1089,7 +1090,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_is_xml">#</a>
-			<code><a href="source-class-Request.html#100-106" title="Go to source code">is_xml</a>( )</code>
+			<code><a href="source-class-Request.html#101-107" title="Go to source code">is_xml</a>( )</code>
 
 			<div class="description short">
 				<p>Returns whether the request is XML</p>
@@ -1118,7 +1119,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_server_software">#</a>
-			<code><a href="source-class-Request.html#108-114" title="Go to source code">server_software</a>( )</code>
+			<code><a href="source-class-Request.html#109-115" title="Go to source code">server_software</a>( )</code>
 
 			<div class="description short">
 				<p>Returns server software (or empty string if it wasn't set for PHP)</p>
@@ -1147,7 +1148,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#___construct">#</a>
-			<code><a href="source-class-Request.html#116-210" title="Go to source code">__construct</a>( )</code>
+			<code><a href="source-class-Request.html#117-211" title="Go to source code">__construct</a>( )</code>
 
 			<div class="description short">
 				<p>Private constructor.
@@ -1178,7 +1179,7 @@ It parses PHP server variables, and initializes its variables.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_parseRequest">#</a>
-			<code><a href="source-class-Request.html#212-288" title="Go to source code">parseRequest</a>( )</code>
+			<code><a href="source-class-Request.html#213-289" title="Go to source code">parseRequest</a>( )</code>
 
 			<div class="description short">
 				<p>Parse the $_REQUEST, for always necessary data, such as 'action', 'board', 'topic', 'start'.
@@ -1209,7 +1210,7 @@ Also figures out if this is an xml request.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_instance">#</a>
-			<code><a href="source-class-Request.html#290-301" title="Go to source code">instance</a>( )</code>
+			<code><a href="source-class-Request.html#291-302" title="Go to source code">instance</a>( )</code>
 
 			<div class="description short">
 				<p>Retrieve easily the sole instance of this class.</p>
@@ -1254,7 +1255,7 @@ Also figures out if this is an xml request.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Request.html#23-27" title="Go to source code"><var>$_client_ip</var></a>
+					<a href="source-class-Request.html#24-28" title="Go to source code"><var>$_client_ip</var></a>
 
 				<div class="description short">
 					<p>Remote IP, if we can know it easily (as found in $_SERVER['REMOTE_ADDR'])</p>
@@ -1279,7 +1280,7 @@ Also figures out if this is an xml request.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Request.html#29-33" title="Go to source code"><var>$_ban_ip</var></a>
+					<a href="source-class-Request.html#30-34" title="Go to source code"><var>$_ban_ip</var></a>
 
 				<div class="description short">
 					<p>Secondary IP, a double-check for the most accurate client IP we can get</p>
@@ -1304,7 +1305,7 @@ Also figures out if this is an xml request.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Request.html#35-39" title="Go to source code"><var>$_scheme</var></a>
+					<a href="source-class-Request.html#36-40" title="Go to source code"><var>$_scheme</var></a>
 
 				<div class="description short">
 					<p>HTTP or HTTPS scheme</p>
@@ -1329,7 +1330,7 @@ Also figures out if this is an xml request.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Request.html#41-45" title="Go to source code"><var>$_user_agent</var></a>
+					<a href="source-class-Request.html#42-46" title="Go to source code"><var>$_user_agent</var></a>
 
 				<div class="description short">
 					<p>User agent</p>
@@ -1354,7 +1355,7 @@ Also figures out if this is an xml request.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Request.html#47-51" title="Go to source code"><var>$_xml</var></a>
+					<a href="source-class-Request.html#48-52" title="Go to source code"><var>$_xml</var></a>
 
 				<div class="description short">
 					<p>Whether the request is an XmlHttpRequest</p>
@@ -1379,7 +1380,7 @@ Also figures out if this is an xml request.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Request.html#53-57" title="Go to source code"><var>$_server_software</var></a>
+					<a href="source-class-Request.html#54-58" title="Go to source code"><var>$_server_software</var></a>
 
 				<div class="description short">
 					<p>Web server software</p>
@@ -1404,7 +1405,7 @@ Also figures out if this is an xml request.</p>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Request.html#59-63" title="Go to source code"><var>$_req</var></a>
+					<a href="source-class-Request.html#60-64" title="Go to source code"><var>$_req</var></a>
 
 				<div class="description short">
 					<p>Sole private Request instance</p>
@@ -1434,10 +1435,10 @@ Also figures out if this is an xml request.</p>
 	</div>
 
 	<div id="footer">
-		ElkArte 1.0.7 Documentation API documentation generated by <a href="http://apigen.org">ApiGen</a>
+		ElkArte 1.0.10 Documentation API documentation generated by <a href="http://apigen.org">ApiGen</a>
 	</div>
 </div>
 <script src="resources/combined.js"></script>
-<script src="elementlist.js"></script>
+<script src="elementlist.js?13e5afb1269be6447e403156947b1e9254b743c7"></script>
 </body>
 </html>

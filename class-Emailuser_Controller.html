@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>Class Emailuser_Controller | ElkArte 1.0.7 Documentation</title>
+	<title>Class Emailuser_Controller | ElkArte 1.0.10 Documentation</title>
 
 	<link rel="stylesheet" href="resources/bootstrap.min.css?973e37a8502921d56bc02bb55321f45b072b6f71">
 	<link rel="stylesheet" href="resources/style.css?70c1d062672daa3f906b72e4f5d03d4bc5c4174d">
@@ -14,7 +14,7 @@
 	<nav id="navigation" class="navbar navbar-default navbar-fixed-top">
 		<div class="container-fluid">
 			<div class="navbar-header">
-				<a href="index.html" class="navbar-brand">ElkArte 1.0.7 Documentation</a>
+				<a href="index.html" class="navbar-brand">ElkArte 1.0.10 Documentation</a>
 			</div>
 			<div class="collapse navbar-collapse">
 
@@ -39,21 +39,17 @@
 					</li>
 
 						<li>
-							<a href="annotation-group-deprecated.html" title="List of elements with deprecated annotation">
-								<span>Deprecated</span>
-							</a>
-						</li>
-						<li>
 							<a href="annotation-group-todo.html" title="List of elements with todo annotation">
 								<span>Todo</span>
 							</a>
 						</li>
+						<li>
+							<a href="annotation-group-deprecated.html" title="List of elements with deprecated annotation">
+								<span>Deprecated</span>
+							</a>
+						</li>
 
-					<li class="divider-vertical"></li>
 
-					<li>
-						<a href="-API-documentation.zip" title="Download documentation as ZIP archive"><span>Download</span></a>
-					</li>
 				</ul>
 			</div>
 		</div>
@@ -344,6 +340,7 @@
 				<li><a href="function-associatedPoll.html">associatedPoll</a></li>
 				<li><a href="function-associatedTopic.html">associatedTopic</a></li>
 				<li><a href="function-autoRotateImage.html">autoRotateImage</a></li>
+				<li><a href="function-autoRotateImageWithIM.html">autoRotateImageWithIM</a></li>
 				<li><a href="function-availableThemes.html">availableThemes</a></li>
 				<li><a href="function-basicMessageInfo.html">basicMessageInfo</a></li>
 				<li><a href="function-basicWatchedUsers.html">basicWatchedUsers</a></li>
@@ -743,6 +740,7 @@
 				<li><a href="function-sendApprovalNotifications.html">sendApprovalNotifications</a></li>
 				<li><a href="function-sendBoardNotifications.html">sendBoardNotifications</a></li>
 				<li><a href="function-sendNotifications.html">sendNotifications</a></li>
+				<li><a href="function-serializeToJson.html">serializeToJson</a></li>
 				<li><a href="function-sessionClose.html">sessionClose</a></li>
 				<li><a href="function-sessionDestroy.html">sessionDestroy</a></li>
 				<li><a href="function-sessionGC.html">sessionGC</a></li>
@@ -964,7 +962,7 @@ This software is a derived product, based on:
 Simple Machines Forum (SMF)
 copyright:	2011 Simple Machines (http://www.simplemachines.org)
 license:		BSD, See included LICENSE.TXT for terms and conditions.</a><br>
-			<b>Located at</b> <a href="source-class-Emailuser_Controller.html#24-656" title="Go to source code">sources/controllers/Emailuser.controller.php</a>
+			<b>Located at</b> <a href="source-class-Emailuser_Controller.html#24-657" title="Go to source code">sources/controllers/Emailuser.controller.php</a>
 		<br>
 	</div>
 
@@ -1030,7 +1028,7 @@ license:		BSD, See included LICENSE.TXT for terms and conditions.</a><br>
 
 					<h4>See</h4>
 					<div class="list">
-							<code><a href="class-Action_Controller.html#_action_index">Action_Controller::action_index()</a></code><br>
+							Action_Controller::action_index()<br>
 					</div>
 
 
@@ -1048,7 +1046,7 @@ license:		BSD, See included LICENSE.TXT for terms and conditions.</a><br>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_action_sendtopic">#</a>
-			<code><a href="source-class-Emailuser_Controller.html#54-106" title="Go to source code">action_sendtopic</a>( )</code>
+			<code><a href="source-class-Emailuser_Controller.html#54-107" title="Go to source code">action_sendtopic</a>( )</code>
 
 			<div class="description short">
 				<p>Send a topic to a friend.</p>
@@ -1057,11 +1055,14 @@ license:		BSD, See included LICENSE.TXT for terms and conditions.</a><br>
 			<div class="description detailed hidden">
 				<p>Send a topic to a friend.</p>
 
-<p>What it does:
-- Uses the Emailuser template, with the main sub template.
-- Requires the send_topic permission.
-- Redirects back to the first page of the topic when done.
-- Is accessed via ?action=emailuser;sa=sendtopic.</p>
+<p>What it does:</p>
+
+<ul>
+<li>Uses the Emailuser template, with the main sub template.</li>
+<li>Requires the send_topic permission.</li>
+<li>Redirects back to the first page of the topic when done.</li>
+<li>Is accessed via ?action=emailuser;sa=sendtopic.</li>
+</ul>
 
 
 
@@ -1083,7 +1084,7 @@ license:		BSD, See included LICENSE.TXT for terms and conditions.</a><br>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_action_sendtopic_api">#</a>
-			<code><a href="source-class-Emailuser_Controller.html#108-196" title="Go to source code">action_sendtopic_api</a>( )</code>
+			<code><a href="source-class-Emailuser_Controller.html#109-197" title="Go to source code">action_sendtopic_api</a>( )</code>
 
 			<div class="description short">
 				<p>Like action_sendtopic, but done via ajax from an API request</p>
@@ -1116,7 +1117,7 @@ license:		BSD, See included LICENSE.TXT for terms and conditions.</a><br>
 
 			<td class="name"><div>
 			<a class="anchor" href="#__sendTopic">#</a>
-			<code><a href="source-class-Emailuser_Controller.html#198-270" title="Go to source code">_sendTopic</a>( <span>mixed[] <var>$row</var></span> )</code>
+			<code><a href="source-class-Emailuser_Controller.html#199-271" title="Go to source code">_sendTopic</a>( <span>mixed[] <var>$row</var></span> )</code>
 
 			<div class="description short">
 				<p>Prepares the form data and database data for sending in an email format
@@ -1152,7 +1153,7 @@ Does the actual sending of the email if everthing checks out as OK</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_action_email">#</a>
-			<code><a href="source-class-Emailuser_Controller.html#272-425" title="Go to source code">action_email</a>( )</code>
+			<code><a href="source-class-Emailuser_Controller.html#273-426" title="Go to source code">action_email</a>( )</code>
 
 			<div class="description short">
 				<p>Allow a user to send an email.</p>
@@ -1188,7 +1189,7 @@ Does the actual sending of the email if everthing checks out as OK</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_action_reporttm">#</a>
-			<code><a href="source-class-Emailuser_Controller.html#427-514" title="Go to source code">action_reporttm</a>( )</code>
+			<code><a href="source-class-Emailuser_Controller.html#428-515" title="Go to source code">action_reporttm</a>( )</code>
 
 			<div class="description short">
 				<p>Report a post to the moderator... ask for a comment.</p>
@@ -1224,7 +1225,7 @@ Does the actual sending of the email if everthing checks out as OK</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_action_reporttm2">#</a>
-			<code><a href="source-class-Emailuser_Controller.html#516-655" title="Go to source code">action_reporttm2</a>( )</code>
+			<code><a href="source-class-Emailuser_Controller.html#517-656" title="Go to source code">action_reporttm2</a>( )</code>
 
 			<div class="description short">
 				<p>Send the emails.</p>
@@ -1266,10 +1267,10 @@ Does the actual sending of the email if everthing checks out as OK</p>
 	</div>
 
 	<div id="footer">
-		ElkArte 1.0.7 Documentation API documentation generated by <a href="http://apigen.org">ApiGen</a>
+		ElkArte 1.0.10 Documentation API documentation generated by <a href="http://apigen.org">ApiGen</a>
 	</div>
 </div>
 <script src="resources/combined.js"></script>
-<script src="elementlist.js"></script>
+<script src="elementlist.js?13e5afb1269be6447e403156947b1e9254b743c7"></script>
 </body>
 </html>

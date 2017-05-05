@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>Class ManageBans_Controller | ElkArte 1.0.7 Documentation</title>
+	<title>Class ManageBans_Controller | ElkArte 1.0.10 Documentation</title>
 
 	<link rel="stylesheet" href="resources/bootstrap.min.css?973e37a8502921d56bc02bb55321f45b072b6f71">
 	<link rel="stylesheet" href="resources/style.css?70c1d062672daa3f906b72e4f5d03d4bc5c4174d">
@@ -14,7 +14,7 @@
 	<nav id="navigation" class="navbar navbar-default navbar-fixed-top">
 		<div class="container-fluid">
 			<div class="navbar-header">
-				<a href="index.html" class="navbar-brand">ElkArte 1.0.7 Documentation</a>
+				<a href="index.html" class="navbar-brand">ElkArte 1.0.10 Documentation</a>
 			</div>
 			<div class="collapse navbar-collapse">
 
@@ -39,21 +39,17 @@
 					</li>
 
 						<li>
-							<a href="annotation-group-deprecated.html" title="List of elements with deprecated annotation">
-								<span>Deprecated</span>
-							</a>
-						</li>
-						<li>
 							<a href="annotation-group-todo.html" title="List of elements with todo annotation">
 								<span>Todo</span>
 							</a>
 						</li>
+						<li>
+							<a href="annotation-group-deprecated.html" title="List of elements with deprecated annotation">
+								<span>Deprecated</span>
+							</a>
+						</li>
 
-					<li class="divider-vertical"></li>
 
-					<li>
-						<a href="-API-documentation.zip" title="Download documentation as ZIP archive"><span>Download</span></a>
-					</li>
 				</ul>
 			</div>
 		</div>
@@ -306,7 +302,7 @@ of the admin panel.</p>
 				ElkArte Forum contributors<br>
 				<b>License:</b>
 				<a href="BSD">http://opensource.org/licenses/BSD-3-Clause</a><br>
-			<b>Located at</b> <a href="source-class-ManageBans_Controller.html#17-1100" title="Go to source code">sources/admin/ManageBans.controller.php</a>
+			<b>Located at</b> <a href="source-class-ManageBans_Controller.html#17-1104" title="Go to source code">sources/admin/ManageBans.controller.php</a>
 		<br>
 	</div>
 
@@ -326,7 +322,7 @@ of the admin panel.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_action_index">#</a>
-			<code><a href="source-class-ManageBans_Controller.html#25-99" title="Go to source code">action_index</a>( )</code>
+			<code><a href="source-class-ManageBans_Controller.html#25-100" title="Go to source code">action_index</a>( )</code>
 
 			<div class="description short">
 				<p>Ban center. The main entrance point for all ban center functions.</p>
@@ -335,12 +331,15 @@ of the admin panel.</p>
 			<div class="description detailed hidden">
 				<p>Ban center. The main entrance point for all ban center functions.</p>
 
-<p>What it does:
-- It is accesssed by ?action=admin;area=ban.
-- It choses a function based on the 'sa' parameter, like many others.
-- The default sub-action is action_list().
-- It requires the ban_members permission.
-- It initializes the admin tabs.</p>
+<p>What it does:</p>
+
+<ul>
+<li>It is accesssed by ?action=admin;area=ban.</li>
+<li>It choses a function based on the 'sa' parameter, like many others.</li>
+<li>The default sub-action is action_list().</li>
+<li>It requires the ban_members permission.</li>
+<li>It initializes the admin tabs.</li>
+</ul>
 
 
 
@@ -366,7 +365,7 @@ of the admin panel.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_action_list">#</a>
-			<code><a href="source-class-ManageBans_Controller.html#101-293" title="Go to source code">action_list</a>( )</code>
+			<code><a href="source-class-ManageBans_Controller.html#102-295" title="Go to source code">action_list</a>( )</code>
 
 			<div class="description short">
 				<p>Shows a list of bans currently set.</p>
@@ -375,11 +374,14 @@ of the admin panel.</p>
 			<div class="description detailed hidden">
 				<p>Shows a list of bans currently set.</p>
 
-<p>What it does:
-- It is accesssed by ?action=admin;area=ban;sa=list.
-- It removes expired bans.
-- It allows sorting on different criteria.
-- It also handles removal of selected ban items.</p>
+<p>What it does:</p>
+
+<ul>
+<li>It is accesssed by ?action=admin;area=ban;sa=list.</li>
+<li>It removes expired bans.</li>
+<li>It allows sorting on different criteria.</li>
+<li>It also handles removal of selected ban items.</li>
+</ul>
 
 
 
@@ -405,7 +407,7 @@ of the admin panel.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_action_edit">#</a>
-			<code><a href="source-class-ManageBans_Controller.html#295-509" title="Go to source code">action_edit</a>( )</code>
+			<code><a href="source-class-ManageBans_Controller.html#297-511" title="Go to source code">action_edit</a>( )</code>
 
 			<div class="description short">
 				<p>This function is behind the screen for adding new bans and modifying existing ones.</p>
@@ -438,7 +440,7 @@ of the admin panel.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_action_log">#</a>
-			<code><a href="source-class-ManageBans_Controller.html#511-659" title="Go to source code">action_log</a>( )</code>
+			<code><a href="source-class-ManageBans_Controller.html#513-662" title="Go to source code">action_log</a>( )</code>
 
 			<div class="description short">
 				<p>This handles the listing of ban log entries, and allows their deletion.</p>
@@ -447,11 +449,14 @@ of the admin panel.</p>
 			<div class="description detailed hidden">
 				<p>This handles the listing of ban log entries, and allows their deletion.</p>
 
-<p>What it does:
-- Shows a list of logged access attempts by banned users.
-- It is accessed by ?action=admin;area=ban;sa=log.
-- allows sorting of several columns.
-- also handles deletion of (a selection of) log entries.</p>
+<p>What it does:</p>
+
+<ul>
+<li>Shows a list of logged access attempts by banned users.</li>
+<li>It is accessed by ?action=admin;area=ban;sa=log.</li>
+<li>allows sorting of several columns.</li>
+<li>also handles deletion of (a selection of) log entries.</li>
+</ul>
 
 
 
@@ -473,7 +478,7 @@ of the admin panel.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_action_edit2">#</a>
-			<code><a href="source-class-ManageBans_Controller.html#661-762" title="Go to source code">action_edit2</a>( )</code>
+			<code><a href="source-class-ManageBans_Controller.html#664-765" title="Go to source code">action_edit2</a>( )</code>
 
 			<div class="description short">
 				<p>This function handles submitted forms that add, modify or remove ban triggers.</p>
@@ -502,7 +507,7 @@ of the admin panel.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_action_edittrigger">#</a>
-			<code><a href="source-class-ManageBans_Controller.html#764-879" title="Go to source code">action_edittrigger</a>( )</code>
+			<code><a href="source-class-ManageBans_Controller.html#767-882" title="Go to source code">action_edittrigger</a>( )</code>
 
 			<div class="description short">
 				<p>This function handles the ins and outs of the screen for adding new ban
@@ -542,7 +547,7 @@ triggers or modifying existing ones.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_action_browse">#</a>
-			<code><a href="source-class-ManageBans_Controller.html#881-1099" title="Go to source code">action_browse</a>( )</code>
+			<code><a href="source-class-ManageBans_Controller.html#884-1103" title="Go to source code">action_browse</a>( )</code>
 
 			<div class="description short">
 				<p>This handles the screen for showing the banned entities</p>
@@ -551,9 +556,12 @@ triggers or modifying existing ones.</p>
 			<div class="description detailed hidden">
 				<p>This handles the screen for showing the banned entities</p>
 
-<p>What it does:
-- It is accessed by ?action=admin;area=ban;sa=browse
-- It uses sub-tabs for browsing by IP, hostname, email or username.</p>
+<p>What it does:</p>
+
+<ul>
+<li>It is accessed by ?action=admin;area=ban;sa=browse</li>
+<li>It uses sub-tabs for browsing by IP, hostname, email or username.</li>
+</ul>
 
 
 
@@ -591,10 +599,10 @@ triggers or modifying existing ones.</p>
 	</div>
 
 	<div id="footer">
-		ElkArte 1.0.7 Documentation API documentation generated by <a href="http://apigen.org">ApiGen</a>
+		ElkArte 1.0.10 Documentation API documentation generated by <a href="http://apigen.org">ApiGen</a>
 	</div>
 </div>
 <script src="resources/combined.js"></script>
-<script src="elementlist.js"></script>
+<script src="elementlist.js?13e5afb1269be6447e403156947b1e9254b743c7"></script>
 </body>
 </html>

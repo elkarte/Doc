@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<meta name="robots" content="noindex">
 
-	<title>File sources/admin/Packages.controller.php | ElkArte 1.0.7 Documentation</title>
+	<title>File sources/admin/Packages.controller.php | ElkArte 1.0.10 Documentation</title>
 
 	<link rel="stylesheet" href="resources/bootstrap.min.css?973e37a8502921d56bc02bb55321f45b072b6f71">
 	<link rel="stylesheet" href="resources/style.css?70c1d062672daa3f906b72e4f5d03d4bc5c4174d">
@@ -15,7 +15,7 @@
 	<nav id="navigation" class="navbar navbar-default navbar-fixed-top">
 		<div class="container-fluid">
 			<div class="navbar-header">
-				<a href="index.html" class="navbar-brand">ElkArte 1.0.7 Documentation</a>
+				<a href="index.html" class="navbar-brand">ElkArte 1.0.10 Documentation</a>
 			</div>
 			<div class="collapse navbar-collapse">
 
@@ -40,21 +40,17 @@
 					</li>
 
 						<li>
-							<a href="annotation-group-deprecated.html" title="List of elements with deprecated annotation">
-								<span>Deprecated</span>
-							</a>
-						</li>
-						<li>
 							<a href="annotation-group-todo.html" title="List of elements with todo annotation">
 								<span>Todo</span>
 							</a>
 						</li>
+						<li>
+							<a href="annotation-group-deprecated.html" title="List of elements with deprecated annotation">
+								<span>Deprecated</span>
+							</a>
+						</li>
 
-					<li class="divider-vertical"></li>
 
-					<li>
-						<a href="-API-documentation.zip" title="Download documentation as ZIP archive"><span>Download</span></a>
-					</li>
 				</ul>
 			</div>
 		</div>
@@ -437,6 +433,8 @@
 				<li><a href="function-automanage_attachments_check_directory.html">automanage_attachments_check_directory</a></li>
 				<li><a href="function-automanage_attachments_create_directory.html">automanage_attachments_create_directory</a></li>
 				<li><a href="function-autoRotateImage.html">autoRotateImage</a></li>
+				<li><a href="function-autoRotateImageWithGD.html">autoRotateImageWithGD</a></li>
+				<li><a href="function-autoRotateImageWithIM.html">autoRotateImageWithIM</a></li>
 				<li><a href="function-availableThemes.html">availableThemes</a></li>
 				<li><a href="function-BanCheckUser.html">BanCheckUser</a></li>
 				<li><a href="function-banDetails.html">banDetails</a></li>
@@ -658,6 +656,7 @@
 				<li><a href="function-fetchPermissions.html">fetchPermissions</a></li>
 				<li><a href="function-fetchPerms__recursive.html">fetchPerms__recursive</a></li>
 				<li><a href="function-filter_accessible_attachment.html">filter_accessible_attachment</a></li>
+				<li><a href="function-filter_members_online.html">filter_members_online</a></li>
 				<li><a href="function-findAttachmentsToMove.html">findAttachmentsToMove</a></li>
 				<li><a href="function-findForumErrors.html">findForumErrors</a></li>
 				<li><a href="function-findMemberMention.html">findMemberMention</a></li>
@@ -681,6 +680,8 @@
 				<li><a href="function-fixTag.html">fixTag</a></li>
 				<li><a href="function-fixTags.html">fixTags</a></li>
 				<li><a href="function-fixTags_img_callback.html">fixTags_img_callback</a></li>
+				<li><a href="function-flipImageGD.html">flipImageGD</a></li>
+				<li><a href="function-flopImageGD.html">flopImageGD</a></li>
 				<li><a href="function-flushLogTables.html">flushLogTables</a></li>
 				<li><a href="function-followupTopics.html">followupTopics</a></li>
 				<li><a href="function-footnote_callback.html">footnote_callback</a></li>
@@ -913,7 +914,6 @@
 				<li><a href="function-load_user_drafts.html">load_user_drafts</a></li>
 				<li><a href="function-load_user_posts.html">load_user_posts</a></li>
 				<li><a href="function-load_user_topics.html">load_user_topics</a></li>
-				<li><a href="function-loadAllPermissions.html">loadAllPermissions</a></li>
 				<li><a href="function-loadAllSubsctiptions.html">loadAllSubsctiptions</a></li>
 				<li><a href="function-loadAssetFile.html">loadAssetFile</a></li>
 				<li><a href="function-loadAttachmentContext.html">loadAttachmentContext</a></li>
@@ -1264,6 +1264,7 @@
 				<li><a href="function-response_prefix.html">response_prefix</a></li>
 				<li><a href="function-retrieveMemberData.html">retrieveMemberData</a></li>
 				<li><a href="function-rlikeMentions.html">rlikeMentions</a></li>
+				<li><a href="function-rotateImageGD.html">rotateImageGD</a></li>
 				<li><a href="function-run_this_task.html">run_this_task</a></li>
 				<li><a href="function-sanitizeMSCutPaste.html">sanitizeMSCutPaste</a></li>
 				<li><a href="function-saveAvatar.html">saveAvatar</a></li>
@@ -1285,7 +1286,7 @@
 				<li><a href="function-sendmail.html">sendmail</a></li>
 				<li><a href="function-sendNotifications.html">sendNotifications</a></li>
 				<li><a href="function-sendpm.html">sendpm</a></li>
-				<li><a href="function-server_parse.html">server_parse</a></li>
+				<li><a href="function-serializeToJson.html">serializeToJson</a></li>
 				<li><a href="function-sessionClose.html">sessionClose</a></li>
 				<li><a href="function-sessionDestroy.html">sessionDestroy</a></li>
 				<li><a href="function-sessionGC.html">sessionGC</a></li>
@@ -1300,7 +1301,6 @@
 				<li><a href="function-setMemoryLimit.html">setMemoryLimit</a></li>
 				<li><a href="function-setPackagesAsUninstalled.html">setPackagesAsUninstalled</a></li>
 				<li><a href="function-setPackageState.html">setPackageState</a></li>
-				<li><a href="function-setPermissionLevel.html">setPermissionLevel</a></li>
 				<li><a href="function-setPMRepliedStatus.html">setPMRepliedStatus</a></li>
 				<li><a href="function-setRemovalNotice.html">setRemovalNotice</a></li>
 				<li><a href="function-setTopicAttribute.html">setTopicAttribute</a></li>
@@ -1319,7 +1319,6 @@
 				<li><a href="function-showEmailAddress.html">showEmailAddress</a></li>
 				<li><a href="function-showLetterImage.html">showLetterImage</a></li>
 				<li><a href="function-smileyExists.html">smileyExists</a></li>
-				<li><a href="function-smtp_mail.html">smtp_mail</a></li>
 				<li><a href="function-sortMessageIconTable.html" class="deprecated">sortMessageIconTable</a></li>
 				<li><a href="function-sortSmileyTable.html" class="deprecated">sortSmileyTable</a></li>
 				<li><a href="function-sortSpiderTable.html" class="deprecated">sortSpiderTable</a></li>
@@ -1552,7 +1551,7 @@
 </span></span><span id="13" class="l"><span class="php-comment"> * copyright:   2011 Simple Machines (http://www.simplemachines.org)
 </span></span><span id="14" class="l"><span class="php-comment"> * license:     BSD, See included LICENSE.TXT for terms and conditions.
 </span></span><span id="15" class="l"><span class="php-comment"> *
-</span></span><span id="16" class="l"><span class="php-comment"> * @version 1.0.5
+</span></span><span id="16" class="l"><span class="php-comment"> * @version 1.0.8
 </span></span><span id="17" class="l"><span class="php-comment"> *
 </span></span><span id="18" class="l"><span class="php-comment"> */</span>
 </span><span id="19" class="l">
@@ -2238,7 +2237,7 @@
 </span><span id="699" class="l">                                    <span class="php-quote">'type'</span> =&gt; <span class="php-var">$txt</span>[<span class="php-quote">'package_delete'</span>] . <span class="php-quote">' '</span> . (<span class="php-var">$action_data</span>[<span class="php-quote">'type'</span>] == <span class="php-quote">'require-dir'</span> ? <span class="php-var">$txt</span>[<span class="php-quote">'package_tree'</span>] : <span class="php-var">$txt</span>[<span class="php-quote">'package_file'</span>]),
 </span><span id="700" class="l">                                    <span class="php-quote">'action'</span> =&gt; <span class="php-keyword2">strtr</span>(<span class="php-var">$real_path</span>, <span class="php-keyword1">array</span>(<span class="php-quote">'\\'</span> =&gt; <span class="php-quote">'/'</span>, BOARDDIR =&gt; <span class="php-quote">'.'</span>)),
 </span><span id="701" class="l">                                    <span class="php-quote">'description'</span> =&gt; <span class="php-quote">''</span>,
-</span><span id="702" class="l">                                    <span class="php-quote">'value'</span> =&gt; <span class="php-keyword2">base64_encode</span>(<span class="php-keyword2">serialize</span>(<span class="php-keyword1">array</span>(<span class="php-quote">'type'</span> =&gt; <span class="php-var">$action_data</span>[<span class="php-quote">'type'</span>], <span class="php-quote">'orig'</span> =&gt; <span class="php-var">$action_data</span>[<span class="php-quote">'filename'</span>], <span class="php-quote">'future'</span> =&gt; <span class="php-var">$real_path</span>, <span class="php-quote">'id'</span> =&gt; <span class="php-var">$id</span>))),
+</span><span id="702" class="l">                                    <span class="php-quote">'value'</span> =&gt; <span class="php-keyword2">base64_encode</span>(<span class="php-keyword2">json_encode</span>(<span class="php-keyword1">array</span>(<span class="php-quote">'type'</span> =&gt; <span class="php-var">$action_data</span>[<span class="php-quote">'type'</span>], <span class="php-quote">'orig'</span> =&gt; <span class="php-var">$action_data</span>[<span class="php-quote">'filename'</span>], <span class="php-quote">'future'</span> =&gt; <span class="php-var">$real_path</span>, <span class="php-quote">'id'</span> =&gt; <span class="php-var">$id</span>))),
 </span><span id="703" class="l">                                    <span class="php-quote">'not_mod'</span> =&gt; <span class="php-keyword1">true</span>,
 </span><span id="704" class="l">                                );
 </span><span id="705" class="l">                            <span class="php-keyword1">else</span>
@@ -2246,7 +2245,7 @@
 </span><span id="707" class="l">                                    <span class="php-quote">'type'</span> =&gt; <span class="php-var">$txt</span>[<span class="php-quote">'package_extract'</span>] . <span class="php-quote">' '</span> . (<span class="php-var">$action_data</span>[<span class="php-quote">'type'</span>] == <span class="php-quote">'require-dir'</span> ? <span class="php-var">$txt</span>[<span class="php-quote">'package_tree'</span>] : <span class="php-var">$txt</span>[<span class="php-quote">'package_file'</span>]),
 </span><span id="708" class="l">                                    <span class="php-quote">'action'</span> =&gt; <span class="php-keyword2">strtr</span>(<span class="php-var">$real_path</span>, <span class="php-keyword1">array</span>(<span class="php-quote">'\\'</span> =&gt; <span class="php-quote">'/'</span>, BOARDDIR =&gt; <span class="php-quote">'.'</span>)),
 </span><span id="709" class="l">                                    <span class="php-quote">'description'</span> =&gt; <span class="php-quote">''</span>,
-</span><span id="710" class="l">                                    <span class="php-quote">'value'</span> =&gt; <span class="php-keyword2">base64_encode</span>(<span class="php-keyword2">serialize</span>(<span class="php-keyword1">array</span>(<span class="php-quote">'type'</span> =&gt; <span class="php-var">$action_data</span>[<span class="php-quote">'type'</span>], <span class="php-quote">'orig'</span> =&gt; <span class="php-var">$action_data</span>[<span class="php-quote">'destination'</span>], <span class="php-quote">'future'</span> =&gt; <span class="php-var">$real_path</span>, <span class="php-quote">'id'</span> =&gt; <span class="php-var">$id</span>))),
+</span><span id="710" class="l">                                    <span class="php-quote">'value'</span> =&gt; <span class="php-keyword2">base64_encode</span>(<span class="php-keyword2">json_encode</span>(<span class="php-keyword1">array</span>(<span class="php-quote">'type'</span> =&gt; <span class="php-var">$action_data</span>[<span class="php-quote">'type'</span>], <span class="php-quote">'orig'</span> =&gt; <span class="php-var">$action_data</span>[<span class="php-quote">'destination'</span>], <span class="php-quote">'future'</span> =&gt; <span class="php-var">$real_path</span>, <span class="php-quote">'id'</span> =&gt; <span class="php-var">$id</span>))),
 </span><span id="711" class="l">                                    <span class="php-quote">'not_mod'</span> =&gt; <span class="php-keyword1">true</span>,
 </span><span id="712" class="l">                                );
 </span><span id="713" class="l">                        }
@@ -2371,7 +2370,7 @@
 </span><span id="832" class="l">            {
 </span><span id="833" class="l">                <span class="php-keyword1">if</span> (<span class="php-keyword1">empty</span>(<span class="php-var">$change</span>))
 </span><span id="834" class="l">                    <span class="php-keyword1">continue</span>;
-</span><span id="835" class="l">                <span class="php-var">$theme_data</span> = <span class="php-keyword2">unserialize</span>(<span class="php-keyword2">base64_decode</span>(<span class="php-var">$change</span>));
+</span><span id="835" class="l">                <span class="php-var">$theme_data</span> = <span class="php-keyword2">json_decode</span>(<span class="php-keyword2">base64_decode</span>(<span class="php-var">$change</span>), <span class="php-keyword1">true</span>);
 </span><span id="836" class="l">                <span class="php-keyword1">if</span> (<span class="php-keyword1">empty</span>(<span class="php-var">$theme_data</span>[<span class="php-quote">'type'</span>]))
 </span><span id="837" class="l">                    <span class="php-keyword1">continue</span>;
 </span><span id="838" class="l">
@@ -3219,7 +3218,7 @@
 </span><span id="1680" class="l">            <span class="php-keyword1">unset</span>(<span class="php-var">$context</span>[<span class="php-quote">'file_tree'</span>][<span class="php-keyword2">strtr</span>(BOARDDIR, <span class="php-keyword1">array</span>(<span class="php-quote">'\\'</span> =&gt; <span class="php-quote">'/'</span>))][<span class="php-quote">'contents'</span>][<span class="php-quote">'attachments'</span>]);
 </span><span id="1681" class="l">
 </span><span id="1682" class="l">            <span class="php-keyword1">if</span> (!<span class="php-keyword2">is_array</span>(<span class="php-var">$modSettings</span>[<span class="php-quote">'attachmentUploadDir'</span>]))
-</span><span id="1683" class="l">                <span class="php-var">$modSettings</span>[<span class="php-quote">'attachmentUploadDir'</span>] = <span class="php-keyword2">unserialize</span>(<span class="php-var">$modSettings</span>[<span class="php-quote">'attachmentUploadDir'</span>]);
+</span><span id="1683" class="l">                <span class="php-var">$modSettings</span>[<span class="php-quote">'attachmentUploadDir'</span>] = Util::<span class="php-keyword2">unserialize</span>(<span class="php-var">$modSettings</span>[<span class="php-quote">'attachmentUploadDir'</span>]);
 </span><span id="1684" class="l">
 </span><span id="1685" class="l">            <span class="php-comment">// @todo Should we suggest non-current directories be read only?</span>
 </span><span id="1686" class="l">            <span class="php-keyword1">foreach</span> (<span class="php-var">$modSettings</span>[<span class="php-quote">'attachmentUploadDir'</span>] <span class="php-keyword1">as</span> <span class="php-var">$dir</span>)
@@ -3317,7 +3316,7 @@
 </span><span id="1778" class="l">        <span class="php-comment">// Have we got a load of back-catalogue trees to expand from a submit etc?</span>
 </span><span id="1779" class="l">        <span class="php-keyword1">if</span> (!<span class="php-keyword1">empty</span>(<span class="php-var">$_GET</span>[<span class="php-quote">'back_look'</span>]))
 </span><span id="1780" class="l">        {
-</span><span id="1781" class="l">            <span class="php-var">$potententialTrees</span> = <span class="php-keyword2">unserialize</span>(<span class="php-keyword2">base64_decode</span>(<span class="php-var">$_GET</span>[<span class="php-quote">'back_look'</span>]));
+</span><span id="1781" class="l">            <span class="php-var">$potententialTrees</span> = <span class="php-keyword2">json_decode</span>(<span class="php-keyword2">base64_decode</span>(<span class="php-var">$_GET</span>[<span class="php-quote">'back_look'</span>]), <span class="php-keyword1">true</span>);
 </span><span id="1782" class="l">            <span class="php-keyword1">foreach</span> (<span class="php-var">$potententialTrees</span> <span class="php-keyword1">as</span> <span class="php-var">$tree</span>)
 </span><span id="1783" class="l">                <span class="php-var">$context</span>[<span class="php-quote">'look_for'</span>][] = <span class="php-var">$tree</span>;
 </span><span id="1784" class="l">        }
@@ -3326,7 +3325,7 @@
 </span><span id="1787" class="l">        <span class="php-keyword1">if</span> (!<span class="php-keyword1">empty</span>(<span class="php-var">$_POST</span>[<span class="php-quote">'back_look'</span>]))
 </span><span id="1788" class="l">            <span class="php-var">$context</span>[<span class="php-quote">'only_find'</span>] = <span class="php-keyword2">array_merge</span>(<span class="php-var">$context</span>[<span class="php-quote">'only_find'</span>], <span class="php-var">$_POST</span>[<span class="php-quote">'back_look'</span>]);
 </span><span id="1789" class="l">
-</span><span id="1790" class="l">        <span class="php-var">$context</span>[<span class="php-quote">'back_look_data'</span>] = <span class="php-keyword2">base64_encode</span>(<span class="php-keyword2">serialize</span>(<span class="php-keyword2">array_slice</span>(<span class="php-var">$context</span>[<span class="php-quote">'look_for'</span>], <span class="php-num">0</span>, <span class="php-num">15</span>)));
+</span><span id="1790" class="l">        <span class="php-var">$context</span>[<span class="php-quote">'back_look_data'</span>] = <span class="php-keyword2">base64_encode</span>(<span class="php-keyword2">json_encode</span>(<span class="php-keyword2">array_slice</span>(<span class="php-var">$context</span>[<span class="php-quote">'look_for'</span>], <span class="php-num">0</span>, <span class="php-num">15</span>)));
 </span><span id="1791" class="l">
 </span><span id="1792" class="l">        <span class="php-comment">// Are we finding more files than first thought?</span>
 </span><span id="1793" class="l">        <span class="php-var">$context</span>[<span class="php-quote">'file_offset'</span>] = !<span class="php-keyword1">empty</span>(<span class="php-var">$_REQUEST</span>[<span class="php-quote">'fileoffset'</span>]) ? (int) <span class="php-var">$_REQUEST</span>[<span class="php-quote">'fileoffset'</span>] : <span class="php-num">0</span>;
@@ -3404,7 +3403,7 @@
 </span><span id="1865" class="l">
 </span><span id="1866" class="l">            <span class="php-comment">// Continuing?</span>
 </span><span id="1867" class="l">            <span class="php-keyword1">if</span> (<span class="php-keyword1">isset</span>(<span class="php-var">$_POST</span>[<span class="php-quote">'toProcess'</span>]))
-</span><span id="1868" class="l">                <span class="php-var">$_POST</span>[<span class="php-quote">'permStatus'</span>] = <span class="php-keyword2">unserialize</span>(<span class="php-keyword2">base64_decode</span>(<span class="php-var">$_POST</span>[<span class="php-quote">'toProcess'</span>]));
+</span><span id="1868" class="l">                <span class="php-var">$_POST</span>[<span class="php-quote">'permStatus'</span>] = <span class="php-keyword2">json_decode</span>(<span class="php-keyword2">base64_decode</span>(<span class="php-var">$_POST</span>[<span class="php-quote">'toProcess'</span>]), <span class="php-keyword1">true</span>);
 </span><span id="1869" class="l">
 </span><span id="1870" class="l">            <span class="php-keyword1">if</span> (<span class="php-keyword1">isset</span>(<span class="php-var">$_POST</span>[<span class="php-quote">'permStatus'</span>]))
 </span><span id="1871" class="l">            {
@@ -3445,7 +3444,7 @@
 </span><span id="1906" class="l">
 </span><span id="1907" class="l">                <span class="php-comment">// Nothing to do?</span>
 </span><span id="1908" class="l">                <span class="php-keyword1">if</span> (<span class="php-keyword1">empty</span>(<span class="php-var">$context</span>[<span class="php-quote">'to_process'</span>]))
-</span><span id="1909" class="l">                    redirectexit(<span class="php-quote">'action=admin;area=packages;sa=perms'</span> . (!<span class="php-keyword1">empty</span>(<span class="php-var">$context</span>[<span class="php-quote">'back_look_data'</span>]) ? <span class="php-quote">';back_look='</span> . <span class="php-keyword2">base64_encode</span>(<span class="php-keyword2">serialize</span>(<span class="php-var">$context</span>[<span class="php-quote">'back_look_data'</span>])) : <span class="php-quote">''</span>) . <span class="php-quote">';'</span> . <span class="php-var">$context</span>[<span class="php-quote">'session_var'</span>] . <span class="php-quote">'='</span> . <span class="php-var">$context</span>[<span class="php-quote">'session_id'</span>]);
+</span><span id="1909" class="l">                    redirectexit(<span class="php-quote">'action=admin;area=packages;sa=perms'</span> . (!<span class="php-keyword1">empty</span>(<span class="php-var">$context</span>[<span class="php-quote">'back_look_data'</span>]) ? <span class="php-quote">';back_look='</span> . <span class="php-keyword2">base64_encode</span>(<span class="php-keyword2">json_encode</span>(<span class="php-var">$context</span>[<span class="php-quote">'back_look_data'</span>])) : <span class="php-quote">''</span>) . <span class="php-quote">';'</span> . <span class="php-var">$context</span>[<span class="php-quote">'session_var'</span>] . <span class="php-quote">'='</span> . <span class="php-var">$context</span>[<span class="php-quote">'session_id'</span>]);
 </span><span id="1910" class="l">            }
 </span><span id="1911" class="l">            <span class="php-comment">// Should never get here,</span>
 </span><span id="1912" class="l">            <span class="php-keyword1">else</span>
@@ -3484,7 +3483,7 @@
 </span><span id="1945" class="l">        {
 </span><span id="1946" class="l">            <span class="php-var">$context</span>[<span class="php-quote">'predefined_type'</span>] = <span class="php-keyword1">isset</span>(<span class="php-var">$_POST</span>[<span class="php-quote">'predefined'</span>]) ? <span class="php-var">$_POST</span>[<span class="php-quote">'predefined'</span>] : <span class="php-quote">'restricted'</span>;
 </span><span id="1947" class="l">            <span class="php-var">$context</span>[<span class="php-quote">'total_items'</span>] = <span class="php-keyword1">isset</span>(<span class="php-var">$_POST</span>[<span class="php-quote">'totalItems'</span>]) ? (int) <span class="php-var">$_POST</span>[<span class="php-quote">'totalItems'</span>] : <span class="php-num">0</span>;
-</span><span id="1948" class="l">            <span class="php-var">$context</span>[<span class="php-quote">'directory_list'</span>] = <span class="php-keyword1">isset</span>(<span class="php-var">$_POST</span>[<span class="php-quote">'dirList'</span>]) ? <span class="php-keyword2">unserialize</span>(<span class="php-keyword2">base64_decode</span>(<span class="php-var">$_POST</span>[<span class="php-quote">'dirList'</span>])) : <span class="php-keyword1">array</span>();
+</span><span id="1948" class="l">            <span class="php-var">$context</span>[<span class="php-quote">'directory_list'</span>] = <span class="php-keyword1">isset</span>(<span class="php-var">$_POST</span>[<span class="php-quote">'dirList'</span>]) ? <span class="php-keyword2">json_decode</span>(<span class="php-keyword2">base64_decode</span>(<span class="php-var">$_POST</span>[<span class="php-quote">'dirList'</span>]), <span class="php-keyword1">true</span>) : <span class="php-keyword1">array</span>();
 </span><span id="1949" class="l">            <span class="php-var">$context</span>[<span class="php-quote">'file_offset'</span>] = <span class="php-keyword1">isset</span>(<span class="php-var">$_POST</span>[<span class="php-quote">'fileOffset'</span>]) ? (int) <span class="php-var">$_POST</span>[<span class="php-quote">'fileOffset'</span>] : <span class="php-num">0</span>;
 </span><span id="1950" class="l">
 </span><span id="1951" class="l">            <span class="php-comment">// Haven't counted the items yet?</span>
@@ -3513,7 +3512,7 @@
 </span><span id="1974" class="l">            <span class="php-keyword1">elseif</span> (<span class="php-var">$context</span>[<span class="php-quote">'predefined_type'</span>] === <span class="php-quote">'free'</span>)
 </span><span id="1975" class="l">                <span class="php-var">$context</span>[<span class="php-quote">'special_files'</span>] = <span class="php-keyword1">array</span>();
 </span><span id="1976" class="l">            <span class="php-keyword1">else</span>
-</span><span id="1977" class="l">                <span class="php-var">$context</span>[<span class="php-quote">'special_files'</span>] = <span class="php-keyword2">unserialize</span>(<span class="php-keyword2">base64_decode</span>(<span class="php-var">$_POST</span>[<span class="php-quote">'specialFiles'</span>]));
+</span><span id="1977" class="l">                <span class="php-var">$context</span>[<span class="php-quote">'special_files'</span>] = <span class="php-keyword2">json_decode</span>(<span class="php-keyword2">base64_decode</span>(<span class="php-var">$_POST</span>[<span class="php-quote">'specialFiles'</span>]), <span class="php-keyword1">true</span>);
 </span><span id="1978" class="l">
 </span><span id="1979" class="l">            <span class="php-comment">// Now we definitely know where we are, we need to go through again doing the chmod!</span>
 </span><span id="1980" class="l">            <span class="php-keyword1">foreach</span> (<span class="php-var">$context</span>[<span class="php-quote">'directory_list'</span>] <span class="php-keyword1">as</span> <span class="php-var">$path</span> =&gt; <span class="php-var">$dummy</span>)
@@ -3567,7 +3566,7 @@
 </span><span id="2028" class="l">        }
 </span><span id="2029" class="l">
 </span><span id="2030" class="l">        <span class="php-comment">// If we're here we are done!</span>
-</span><span id="2031" class="l">        redirectexit(<span class="php-quote">'action=admin;area=packages;sa=perms'</span> . (!<span class="php-keyword1">empty</span>(<span class="php-var">$context</span>[<span class="php-quote">'back_look_data'</span>]) ? <span class="php-quote">';back_look='</span> . <span class="php-keyword2">base64_encode</span>(<span class="php-keyword2">serialize</span>(<span class="php-var">$context</span>[<span class="php-quote">'back_look_data'</span>])) : <span class="php-quote">''</span>) . <span class="php-quote">';'</span> . <span class="php-var">$context</span>[<span class="php-quote">'session_var'</span>] . <span class="php-quote">'='</span> . <span class="php-var">$context</span>[<span class="php-quote">'session_id'</span>]);
+</span><span id="2031" class="l">        redirectexit(<span class="php-quote">'action=admin;area=packages;sa=perms'</span> . (!<span class="php-keyword1">empty</span>(<span class="php-var">$context</span>[<span class="php-quote">'back_look_data'</span>]) ? <span class="php-quote">';back_look='</span> . <span class="php-keyword2">base64_encode</span>(<span class="php-keyword2">json_decode</span>(<span class="php-var">$context</span>[<span class="php-quote">'back_look_data'</span>], <span class="php-keyword1">true</span>)) : <span class="php-quote">''</span>) . <span class="php-quote">';'</span> . <span class="php-var">$context</span>[<span class="php-quote">'session_var'</span>] . <span class="php-quote">'='</span> . <span class="php-var">$context</span>[<span class="php-quote">'session_id'</span>]);
 </span><span id="2032" class="l">    }
 </span><span id="2033" class="l">
 </span><span id="2034" class="l">    <span class="php-comment">/**
@@ -4113,10 +4112,10 @@
 	</div>
 
 	<div id="footer">
-		ElkArte 1.0.7 Documentation API documentation generated by <a href="http://apigen.org">ApiGen</a>
+		ElkArte 1.0.10 Documentation API documentation generated by <a href="http://apigen.org">ApiGen</a>
 	</div>
 </div>
-<script src="resources/combined.js?4b00732ce0340a2e67fb74c587c1d96491e067bc"></script>
-<script src="elementlist.js?451d275addfb941a2849699d5d5defa91056a858"></script>
+<script src="resources/combined.js?33f7621ed1d52ea578c8c2b7910da64276fe7e91"></script>
+<script src="elementlist.js?13e5afb1269be6447e403156947b1e9254b743c7"></script>
 </body>
 </html>
