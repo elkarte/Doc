@@ -4,115 +4,52 @@
 	<loc>http://elkarte.github.io/Doc/index.html</loc>
 </url>
 <url>
-	<loc>http://elkarte.github.io/Doc/package-AddonSettings.html</loc>
+	<loc>http://elkarte.github.io/Doc/namespace-BBC.html</loc>
 </url>
 <url>
-	<loc>http://elkarte.github.io/Doc/package-Admin.html</loc>
+	<loc>http://elkarte.github.io/Doc/namespace-ElkArte.html</loc>
 </url>
 <url>
-	<loc>http://elkarte.github.io/Doc/package-AdminLog.html</loc>
+	<loc>http://elkarte.github.io/Doc/namespace-ElkArte.Errors.html</loc>
 </url>
 <url>
-	<loc>http://elkarte.github.io/Doc/package-Attachments.html</loc>
+	<loc>http://elkarte.github.io/Doc/namespace-ElkArte.Search.html</loc>
 </url>
 <url>
-	<loc>http://elkarte.github.io/Doc/package-Authorization.html</loc>
+	<loc>http://elkarte.github.io/Doc/namespace-ElkArte.Search.API.html</loc>
 </url>
 <url>
-	<loc>http://elkarte.github.io/Doc/package-Avatars.html</loc>
+	<loc>http://elkarte.github.io/Doc/namespace-ElkArte.sources.html</loc>
 </url>
 <url>
-	<loc>http://elkarte.github.io/Doc/package-BadBehavior.html</loc>
+	<loc>http://elkarte.github.io/Doc/namespace-ElkArte.sources.modules.html</loc>
 </url>
 <url>
-	<loc>http://elkarte.github.io/Doc/package-Bans.html</loc>
+	<loc>http://elkarte.github.io/Doc/namespace-ElkArte.sources.subs.html</loc>
 </url>
 <url>
-	<loc>http://elkarte.github.io/Doc/package-BBC.html</loc>
+	<loc>http://elkarte.github.io/Doc/namespace-ElkArte.sources.subs.CacheMethod.html</loc>
 </url>
 <url>
-	<loc>http://elkarte.github.io/Doc/package-Boards.html</loc>
+	<loc>http://elkarte.github.io/Doc/namespace-ElkArte.sources.subs.MentionType.html</loc>
 </url>
 <url>
-	<loc>http://elkarte.github.io/Doc/package-Calendar.html</loc>
+	<loc>http://elkarte.github.io/Doc/namespace-ElkArte.sources.subs.ScheduledTask.html</loc>
 </url>
 <url>
-	<loc>http://elkarte.github.io/Doc/package-CoreFeatures.html</loc>
+	<loc>http://elkarte.github.io/Doc/namespace-ElkArte.sources.subs.SessionHandler.html</loc>
 </url>
 <url>
-	<loc>http://elkarte.github.io/Doc/package-Drafts.html</loc>
+	<loc>http://elkarte.github.io/Doc/namespace-ElkArte.sources.subs.SettingsFormAdapter.html</loc>
 </url>
 <url>
-	<loc>http://elkarte.github.io/Doc/package-Graphics.html</loc>
-</url>
-<url>
-	<loc>http://elkarte.github.io/Doc/package-Karma.html</loc>
-</url>
-<url>
-	<loc>http://elkarte.github.io/Doc/package-Languages.html</loc>
-</url>
-<url>
-	<loc>http://elkarte.github.io/Doc/package-Likes.html</loc>
-</url>
-<url>
-	<loc>http://elkarte.github.io/Doc/package-Mail.html</loc>
-</url>
-<url>
-	<loc>http://elkarte.github.io/Doc/package-Maillist.html</loc>
-</url>
-<url>
-	<loc>http://elkarte.github.io/Doc/package-Maintenance.html</loc>
-</url>
-<url>
-	<loc>http://elkarte.github.io/Doc/package-Membergroups.html</loc>
-</url>
-<url>
-	<loc>http://elkarte.github.io/Doc/package-Members.html</loc>
-</url>
-<url>
-	<loc>http://elkarte.github.io/Doc/package-Mentions.html</loc>
-</url>
-<url>
-	<loc>http://elkarte.github.io/Doc/package-News.html</loc>
-</url>
-<url>
-	<loc>http://elkarte.github.io/Doc/package-None.html</loc>
-</url>
-<url>
-	<loc>http://elkarte.github.io/Doc/package-Packages.html</loc>
-</url>
-<url>
-	<loc>http://elkarte.github.io/Doc/package-Permissions.html</loc>
-</url>
-<url>
-	<loc>http://elkarte.github.io/Doc/package-PersonalMessage.html</loc>
-</url>
-<url>
-	<loc>http://elkarte.github.io/Doc/package-Posts.html</loc>
-</url>
-<url>
-	<loc>http://elkarte.github.io/Doc/package-Registration.html</loc>
-</url>
-<url>
-	<loc>http://elkarte.github.io/Doc/package-ScheduledTasks.html</loc>
-</url>
-<url>
-	<loc>http://elkarte.github.io/Doc/package-Search.html</loc>
-</url>
-<url>
-	<loc>http://elkarte.github.io/Doc/package-SearchEngines.html</loc>
-</url>
-<url>
-	<loc>http://elkarte.github.io/Doc/package-Security.html</loc>
-</url>
-<url>
-	<loc>http://elkarte.github.io/Doc/package-Subscriptions.html</loc>
-</url>
-<url>
-	<loc>http://elkarte.github.io/Doc/package-Themes.html</loc>
+	<loc>http://elkarte.github.io/Doc/namespace-None.html</loc>
 </url>
 
 
+<url>
+	<loc>http://elkarte.github.io/Doc/class-AbstractModel.html</loc>
+</url>
 <url>
 	<loc>http://elkarte.github.io/Doc/class-Action.html</loc>
 </url>
@@ -130,6 +67,12 @@
 </url>
 <url>
 	<loc>http://elkarte.github.io/Doc/class-AdminLog_Controller.html</loc>
+</url>
+<url>
+	<loc>http://elkarte.github.io/Doc/class-AdminSettings_Search.html</loc>
+</url>
+<url>
+	<loc>http://elkarte.github.io/Doc/class-Agreement.html</loc>
 </url>
 <url>
 	<loc>http://elkarte.github.io/Doc/class-Announce_Controller.html</loc>
@@ -153,16 +96,61 @@
 	<loc>http://elkarte.github.io/Doc/class-BadBehavior_Controller.html</loc>
 </url>
 <url>
+	<loc>http://elkarte.github.io/Doc/class-BBC.Autolink.html</loc>
+</url>
+<url>
+	<loc>http://elkarte.github.io/Doc/class-BBC.BBCParser.html</loc>
+</url>
+<url>
+	<loc>http://elkarte.github.io/Doc/class-BBC.Codes.html</loc>
+</url>
+<url>
+	<loc>http://elkarte.github.io/Doc/class-BBC.HtmlParser.html</loc>
+</url>
+<url>
+	<loc>http://elkarte.github.io/Doc/class-BBC.ParserWrapper.html</loc>
+</url>
+<url>
+	<loc>http://elkarte.github.io/Doc/class-BBC.PreparseCode.html</loc>
+</url>
+<url>
+	<loc>http://elkarte.github.io/Doc/class-BBC.SmileyParser.html</loc>
+</url>
+<url>
 	<loc>http://elkarte.github.io/Doc/class-BoardIndex_Controller.html</loc>
 </url>
 <url>
 	<loc>http://elkarte.github.io/Doc/class-Boards_List.html</loc>
 </url>
 <url>
+	<loc>http://elkarte.github.io/Doc/class-Bootstrap.html</loc>
+</url>
+<url>
 	<loc>http://elkarte.github.io/Doc/class-Browser_Detector.html</loc>
 </url>
 <url>
+	<loc>http://elkarte.github.io/Doc/class-Cache.html</loc>
+</url>
+<url>
+	<loc>http://elkarte.github.io/Doc/class-Calendar_Admin_Module.html</loc>
+</url>
+<url>
+	<loc>http://elkarte.github.io/Doc/class-Calendar_BoardIndex_Module.html</loc>
+</url>
+<url>
 	<loc>http://elkarte.github.io/Doc/class-Calendar_Controller.html</loc>
+</url>
+<url>
+	<loc>http://elkarte.github.io/Doc/class-Calendar_Display_Module.html</loc>
+</url>
+<url>
+	<loc>http://elkarte.github.io/Doc/class-Calendar_Event.html</loc>
+</url>
+<url>
+	<loc>http://elkarte.github.io/Doc/class-Calendar_Post_Module.html</loc>
+</url>
+<url>
+	<loc>http://elkarte.github.io/Doc/class-Censor.html</loc>
 </url>
 <url>
 	<loc>http://elkarte.github.io/Doc/class-CoreFeatures_Controller.html</loc>
@@ -175,6 +163,9 @@
 </url>
 <url>
 	<loc>http://elkarte.github.io/Doc/class-Data_Validator.html</loc>
+</url>
+<url>
+	<loc>http://elkarte.github.io/Doc/class-Database_Abstract.html</loc>
 </url>
 <url>
 	<loc>http://elkarte.github.io/Doc/class-Database_MySQL.html</loc>
@@ -198,10 +189,181 @@
 	<loc>http://elkarte.github.io/Doc/class-DbTable_PostgreSQL.html</loc>
 </url>
 <url>
+	<loc>http://elkarte.github.io/Doc/class-Debug.html</loc>
+</url>
+<url>
 	<loc>http://elkarte.github.io/Doc/class-Display_Controller.html</loc>
 </url>
 <url>
 	<loc>http://elkarte.github.io/Doc/class-Draft_Controller.html</loc>
+</url>
+<url>
+	<loc>http://elkarte.github.io/Doc/class-Drafts_Admin_Module.html</loc>
+</url>
+<url>
+	<loc>http://elkarte.github.io/Doc/class-Drafts_Display_Module.html</loc>
+</url>
+<url>
+	<loc>http://elkarte.github.io/Doc/class-Drafts_Integrate.html</loc>
+</url>
+<url>
+	<loc>http://elkarte.github.io/Doc/class-Drafts_PersonalMessage_Module.html</loc>
+</url>
+<url>
+	<loc>http://elkarte.github.io/Doc/class-Drafts_Post_Module.html</loc>
+</url>
+<url>
+	<loc>http://elkarte.github.io/Doc/class-Drafts_Profile_Module.html</loc>
+</url>
+<url>
+	<loc>http://elkarte.github.io/Doc/class-Elk_Autoloader.html</loc>
+</url>
+<url>
+	<loc>http://elkarte.github.io/Doc/class-ElkArte.Errors.AttachmentErrorContext.html</loc>
+</url>
+<url>
+	<loc>http://elkarte.github.io/Doc/class-ElkArte.Errors.ErrorContext.html</loc>
+</url>
+<url>
+	<loc>http://elkarte.github.io/Doc/class-ElkArte.Errors.Errors.html</loc>
+</url>
+<url>
+	<loc>http://elkarte.github.io/Doc/class-ElkArte.Errors.Log.html</loc>
+</url>
+<url>
+	<loc>http://elkarte.github.io/Doc/class-ElkArte.Search.API.Custom.html</loc>
+</url>
+<url>
+	<loc>http://elkarte.github.io/Doc/class-ElkArte.Search.API.Fulltext.html</loc>
+</url>
+<url>
+	<loc>http://elkarte.github.io/Doc/class-ElkArte.Search.API.SearchAPI.html</loc>
+</url>
+<url>
+	<loc>http://elkarte.github.io/Doc/class-ElkArte.Search.API.Sphinx.html</loc>
+</url>
+<url>
+	<loc>http://elkarte.github.io/Doc/class-ElkArte.Search.API.Sphinxql.html</loc>
+</url>
+<url>
+	<loc>http://elkarte.github.io/Doc/class-ElkArte.Search.API.Standard.html</loc>
+</url>
+<url>
+	<loc>http://elkarte.github.io/Doc/class-ElkArte.Search.Search.html</loc>
+</url>
+<url>
+	<loc>http://elkarte.github.io/Doc/class-ElkArte.sources.modules.Abstract_Module.html</loc>
+</url>
+<url>
+	<loc>http://elkarte.github.io/Doc/class-ElkArte.sources.subs.CacheMethod.Apc.html</loc>
+</url>
+<url>
+	<loc>http://elkarte.github.io/Doc/class-ElkArte.sources.subs.CacheMethod.Cache_Method_Abstract.html</loc>
+</url>
+<url>
+	<loc>http://elkarte.github.io/Doc/class-ElkArte.sources.subs.CacheMethod.Filebased.html</loc>
+</url>
+<url>
+	<loc>http://elkarte.github.io/Doc/class-ElkArte.sources.subs.CacheMethod.Memcache.html</loc>
+</url>
+<url>
+	<loc>http://elkarte.github.io/Doc/class-ElkArte.sources.subs.CacheMethod.Memcached.html</loc>
+</url>
+<url>
+	<loc>http://elkarte.github.io/Doc/class-ElkArte.sources.subs.CacheMethod.Xcache.html</loc>
+</url>
+<url>
+	<loc>http://elkarte.github.io/Doc/class-ElkArte.sources.subs.CacheMethod.Zend.html</loc>
+</url>
+<url>
+	<loc>http://elkarte.github.io/Doc/class-ElkArte.sources.subs.MentionType.Buddy_Mention.html</loc>
+</url>
+<url>
+	<loc>http://elkarte.github.io/Doc/class-ElkArte.sources.subs.MentionType.Likemsg_Mention.html</loc>
+</url>
+<url>
+	<loc>http://elkarte.github.io/Doc/class-ElkArte.sources.subs.MentionType.Mailfail_Mention.html</loc>
+</url>
+<url>
+	<loc>http://elkarte.github.io/Doc/class-ElkArte.sources.subs.MentionType.Mention_BoardAccess_Abstract.html</loc>
+</url>
+<url>
+	<loc>http://elkarte.github.io/Doc/class-ElkArte.sources.subs.MentionType.Mention_Message_Abstract.html</loc>
+</url>
+<url>
+	<loc>http://elkarte.github.io/Doc/class-ElkArte.sources.subs.MentionType.Mentionmem_Mention.html</loc>
+</url>
+<url>
+	<loc>http://elkarte.github.io/Doc/class-ElkArte.sources.subs.MentionType.Quotedmem_Mention.html</loc>
+</url>
+<url>
+	<loc>http://elkarte.github.io/Doc/class-ElkArte.sources.subs.MentionType.Rlikemsg_Mention.html</loc>
+</url>
+<url>
+	<loc>http://elkarte.github.io/Doc/class-ElkArte.sources.subs.ScheduledTask.Approval_Notification.html</loc>
+</url>
+<url>
+	<loc>http://elkarte.github.io/Doc/class-ElkArte.sources.subs.ScheduledTask.Auto_Optimize.html</loc>
+</url>
+<url>
+	<loc>http://elkarte.github.io/Doc/class-ElkArte.sources.subs.ScheduledTask.Birthdayemails.html</loc>
+</url>
+<url>
+	<loc>http://elkarte.github.io/Doc/class-ElkArte.sources.subs.ScheduledTask.Daily_Digest.html</loc>
+</url>
+<url>
+	<loc>http://elkarte.github.io/Doc/class-ElkArte.sources.subs.ScheduledTask.Daily_Maintenance.html</loc>
+</url>
+<url>
+	<loc>http://elkarte.github.io/Doc/class-ElkArte.sources.subs.ScheduledTask.Maillist_Fetch_IMAP.html</loc>
+</url>
+<url>
+	<loc>http://elkarte.github.io/Doc/class-ElkArte.sources.subs.ScheduledTask.Paid_Subscriptions.html</loc>
+</url>
+<url>
+	<loc>http://elkarte.github.io/Doc/class-ElkArte.sources.subs.ScheduledTask.Remove_Old_Drafts.html</loc>
+</url>
+<url>
+	<loc>http://elkarte.github.io/Doc/class-ElkArte.sources.subs.ScheduledTask.Remove_Old_Followups.html</loc>
+</url>
+<url>
+	<loc>http://elkarte.github.io/Doc/class-ElkArte.sources.subs.ScheduledTask.Remove_Temp_Attachments.html</loc>
+</url>
+<url>
+	<loc>http://elkarte.github.io/Doc/class-ElkArte.sources.subs.ScheduledTask.Remove_Topic_Redirect.html</loc>
+</url>
+<url>
+	<loc>http://elkarte.github.io/Doc/class-ElkArte.sources.subs.ScheduledTask.User_Access_Mentions.html</loc>
+</url>
+<url>
+	<loc>http://elkarte.github.io/Doc/class-ElkArte.sources.subs.ScheduledTask.Weekly_Digest.html</loc>
+</url>
+<url>
+	<loc>http://elkarte.github.io/Doc/class-ElkArte.sources.subs.ScheduledTask.Weekly_Maintenance.html</loc>
+</url>
+<url>
+	<loc>http://elkarte.github.io/Doc/class-ElkArte.sources.subs.SessionHandler.DatabaseHandler.html</loc>
+</url>
+<url>
+	<loc>http://elkarte.github.io/Doc/class-ElkArte.sources.subs.SessionHandler.SessionHandler.html</loc>
+</url>
+<url>
+	<loc>http://elkarte.github.io/Doc/class-ElkArte.sources.subs.SettingsFormAdapter.Adapter.html</loc>
+</url>
+<url>
+	<loc>http://elkarte.github.io/Doc/class-ElkArte.sources.subs.SettingsFormAdapter.Db.html</loc>
+</url>
+<url>
+	<loc>http://elkarte.github.io/Doc/class-ElkArte.sources.subs.SettingsFormAdapter.DbTable.html</loc>
+</url>
+<url>
+	<loc>http://elkarte.github.io/Doc/class-ElkArte.sources.subs.SettingsFormAdapter.File.html</loc>
+</url>
+<url>
+	<loc>http://elkarte.github.io/Doc/class-ElkArte.sources.subs.SettingsFormAdapter.InlinePermissions.html</loc>
+</url>
+<url>
+	<loc>http://elkarte.github.io/Doc/class-ElkArte.ValuesContainer.html</loc>
 </url>
 <url>
 	<loc>http://elkarte.github.io/Doc/class-Email_Format.html</loc>
@@ -222,6 +384,15 @@
 	<loc>http://elkarte.github.io/Doc/class-Error_Context.html</loc>
 </url>
 <url>
+	<loc>http://elkarte.github.io/Doc/class-Errors.html</loc>
+</url>
+<url>
+	<loc>http://elkarte.github.io/Doc/class-Event.html</loc>
+</url>
+<url>
+	<loc>http://elkarte.github.io/Doc/class-Event_Manager.html</loc>
+</url>
+<url>
 	<loc>http://elkarte.github.io/Doc/class-Ftp_Connection.html</loc>
 </url>
 <url>
@@ -237,10 +408,19 @@
 	<loc>http://elkarte.github.io/Doc/class-Help_Controller.html</loc>
 </url>
 <url>
+	<loc>http://elkarte.github.io/Doc/class-Hooks.html</loc>
+</url>
+<url>
 	<loc>http://elkarte.github.io/Doc/class-Html_2_BBC.html</loc>
 </url>
 <url>
 	<loc>http://elkarte.github.io/Doc/class-Html_2_Md.html</loc>
+</url>
+<url>
+	<loc>http://elkarte.github.io/Doc/class-HttpReq.html</loc>
+</url>
+<url>
+	<loc>http://elkarte.github.io/Doc/class-Ila_Integrate.html</loc>
 </url>
 <url>
 	<loc>http://elkarte.github.io/Doc/class-InlinePermissions_Form.html</loc>
@@ -276,7 +456,13 @@
 	<loc>http://elkarte.github.io/Doc/class-ManageCalendar_Controller.html</loc>
 </url>
 <url>
+	<loc>http://elkarte.github.io/Doc/class-ManageCalendarModule_Controller.html</loc>
+</url>
+<url>
 	<loc>http://elkarte.github.io/Doc/class-ManageDrafts_Controller.html</loc>
+</url>
+<url>
+	<loc>http://elkarte.github.io/Doc/class-ManageDraftsModule_Controller.html</loc>
 </url>
 <url>
 	<loc>http://elkarte.github.io/Doc/class-ManageErrors_Controller.html</loc>
@@ -348,13 +534,31 @@
 	<loc>http://elkarte.github.io/Doc/class-Members_Controller.html</loc>
 </url>
 <url>
+	<loc>http://elkarte.github.io/Doc/class-Mentioning.html</loc>
+</url>
+<url>
 	<loc>http://elkarte.github.io/Doc/class-Mentions_Controller.html</loc>
+</url>
+<url>
+	<loc>http://elkarte.github.io/Doc/class-Mentions_Display_Module.html</loc>
+</url>
+<url>
+	<loc>http://elkarte.github.io/Doc/class-Mentions_Module_Abstract.html</loc>
+</url>
+<url>
+	<loc>http://elkarte.github.io/Doc/class-Mentions_Post_Module.html</loc>
 </url>
 <url>
 	<loc>http://elkarte.github.io/Doc/class-MergeTopics_Controller.html</loc>
 </url>
 <url>
 	<loc>http://elkarte.github.io/Doc/class-MessageIndex_Controller.html</loc>
+</url>
+<url>
+	<loc>http://elkarte.github.io/Doc/class-MessagesDelete.html</loc>
+</url>
+<url>
+	<loc>http://elkarte.github.io/Doc/class-MessageTopicIcons.html</loc>
 </url>
 <url>
 	<loc>http://elkarte.github.io/Doc/class-ModerateAttachments_Controller.html</loc>
@@ -375,6 +579,12 @@
 	<loc>http://elkarte.github.io/Doc/class-News_Controller.html</loc>
 </url>
 <url>
+	<loc>http://elkarte.github.io/Doc/class-Notifications.html</loc>
+</url>
+<url>
+	<loc>http://elkarte.github.io/Doc/class-Notifications_Task.html</loc>
+</url>
+<url>
 	<loc>http://elkarte.github.io/Doc/class-Notify_Controller.html</loc>
 </url>
 <url>
@@ -384,13 +594,16 @@
 	<loc>http://elkarte.github.io/Doc/class-OpenID_Controller.html</loc>
 </url>
 <url>
+	<loc>http://elkarte.github.io/Doc/class-Package_Actions.html</loc>
+</url>
+<url>
 	<loc>http://elkarte.github.io/Doc/class-Packages_Controller.html</loc>
 </url>
 <url>
 	<loc>http://elkarte.github.io/Doc/class-PackageServers_Controller.html</loc>
 </url>
 <url>
-	<loc>http://elkarte.github.io/Doc/class-ParseSmileysReplacement.html</loc>
+	<loc>http://elkarte.github.io/Doc/class-PackagesFilterIterator.html</loc>
 </url>
 <url>
 	<loc>http://elkarte.github.io/Doc/class-PayPal_Display.html</loc>
@@ -399,16 +612,31 @@
 	<loc>http://elkarte.github.io/Doc/class-PayPal_Payment.html</loc>
 </url>
 <url>
+	<loc>http://elkarte.github.io/Doc/class-Pbe_Imap.html</loc>
+</url>
+<url>
+	<loc>http://elkarte.github.io/Doc/class-Permissions.html</loc>
+</url>
+<url>
 	<loc>http://elkarte.github.io/Doc/class-PersonalMessage_Controller.html</loc>
 </url>
 <url>
 	<loc>http://elkarte.github.io/Doc/class-Poll_Controller.html</loc>
 </url>
 <url>
+	<loc>http://elkarte.github.io/Doc/class-Poll_Display_Module.html</loc>
+</url>
+<url>
+	<loc>http://elkarte.github.io/Doc/class-Poll_Post_Module.html</loc>
+</url>
+<url>
 	<loc>http://elkarte.github.io/Doc/class-Post_Controller.html</loc>
 </url>
 <url>
 	<loc>http://elkarte.github.io/Doc/class-PostModeration_Controller.html</loc>
+</url>
+<url>
+	<loc>http://elkarte.github.io/Doc/class-Priority.html</loc>
 </url>
 <url>
 	<loc>http://elkarte.github.io/Doc/class-Profile_Controller.html</loc>
@@ -427,6 +655,18 @@
 </url>
 <url>
 	<loc>http://elkarte.github.io/Doc/class-ProfileSubscriptions_Controller.html</loc>
+</url>
+<url>
+	<loc>http://elkarte.github.io/Doc/class-Query_Analysis.html</loc>
+</url>
+<url>
+	<loc>http://elkarte.github.io/Doc/class-Random_Display_Module.html</loc>
+</url>
+<url>
+	<loc>http://elkarte.github.io/Doc/class-Random_Post_Module.html</loc>
+</url>
+<url>
+	<loc>http://elkarte.github.io/Doc/class-Recent_Class.html</loc>
 </url>
 <url>
 	<loc>http://elkarte.github.io/Doc/class-Recent_Controller.html</loc>
@@ -459,6 +699,9 @@
 	<loc>http://elkarte.github.io/Doc/class-Search_Controller.html</loc>
 </url>
 <url>
+	<loc>http://elkarte.github.io/Doc/class-Server.html</loc>
+</url>
+<url>
 	<loc>http://elkarte.github.io/Doc/class-Settings_Form.html</loc>
 </url>
 <url>
@@ -466,6 +709,9 @@
 </url>
 <url>
 	<loc>http://elkarte.github.io/Doc/class-Site_Dispatcher.html</loc>
+</url>
+<url>
+	<loc>http://elkarte.github.io/Doc/class-Spellcheck_Controller.html</loc>
 </url>
 <url>
 	<loc>http://elkarte.github.io/Doc/class-Sphinx_Search.html</loc>
@@ -492,7 +738,22 @@
 	<loc>http://elkarte.github.io/Doc/class-Template_Layers.html</loc>
 </url>
 <url>
+	<loc>http://elkarte.github.io/Doc/class-Templates.html</loc>
+</url>
+<url>
+	<loc>http://elkarte.github.io/Doc/class-Theme.html</loc>
+</url>
+<url>
+	<loc>http://elkarte.github.io/Doc/class-Token_Hash.html</loc>
+</url>
+<url>
 	<loc>http://elkarte.github.io/Doc/class-Topic_Controller.html</loc>
+</url>
+<url>
+	<loc>http://elkarte.github.io/Doc/class-Topic_Util.html</loc>
+</url>
+<url>
+	<loc>http://elkarte.github.io/Doc/class-TopicsMerge.html</loc>
 </url>
 <url>
 	<loc>http://elkarte.github.io/Doc/class-twoCheckOut_Display.html</loc>
@@ -501,10 +762,22 @@
 	<loc>http://elkarte.github.io/Doc/class-twoCheckOut_Payment.html</loc>
 </url>
 <url>
+	<loc>http://elkarte.github.io/Doc/class-Unread.html</loc>
+</url>
+<url>
+	<loc>http://elkarte.github.io/Doc/class-Unread_Controller.html</loc>
+</url>
+<url>
 	<loc>http://elkarte.github.io/Doc/class-UnTgz.html</loc>
 </url>
 <url>
 	<loc>http://elkarte.github.io/Doc/class-UnZip.html</loc>
+</url>
+<url>
+	<loc>http://elkarte.github.io/Doc/class-User_Notification.html</loc>
+</url>
+<url>
+	<loc>http://elkarte.github.io/Doc/class-User_Notification_Integrate.html</loc>
 </url>
 <url>
 	<loc>http://elkarte.github.io/Doc/class-Util.html</loc>
@@ -517,6 +790,18 @@
 </url>
 <url>
 	<loc>http://elkarte.github.io/Doc/class-Verification_Controls_Questions.html</loc>
+</url>
+<url>
+	<loc>http://elkarte.github.io/Doc/class-Verification_Display_Module.html</loc>
+</url>
+<url>
+	<loc>http://elkarte.github.io/Doc/class-Verification_PersonalMessage_Module.html</loc>
+</url>
+<url>
+	<loc>http://elkarte.github.io/Doc/class-Verification_Post_Module.html</loc>
+</url>
+<url>
+	<loc>http://elkarte.github.io/Doc/class-Verification_Register_Module.html</loc>
 </url>
 <url>
 	<loc>http://elkarte.github.io/Doc/class-Who_Controller.html</loc>
@@ -537,7 +822,37 @@
 	<loc>http://elkarte.github.io/Doc/class-DbSearch.html</loc>
 </url>
 <url>
+	<loc>http://elkarte.github.io/Doc/class-ElkArte.sources.Frontpage_Interface.html</loc>
+</url>
+<url>
+	<loc>http://elkarte.github.io/Doc/class-ElkArte.sources.modules.Module_Interface.html</loc>
+</url>
+<url>
+	<loc>http://elkarte.github.io/Doc/class-ElkArte.sources.subs.CacheMethod.Cache_Method_Interface.html</loc>
+</url>
+<url>
+	<loc>http://elkarte.github.io/Doc/class-ElkArte.sources.subs.MentionType.Mention_Type_Interface.html</loc>
+</url>
+<url>
+	<loc>http://elkarte.github.io/Doc/class-ElkArte.sources.subs.ScheduledTask.Scheduled_Task_Interface.html</loc>
+</url>
+<url>
+	<loc>http://elkarte.github.io/Doc/class-ElkArte.sources.subs.SessionHandler.SessionHandlerInterface.html</loc>
+</url>
+<url>
+	<loc>http://elkarte.github.io/Doc/class-ElkArte.sources.subs.SettingsFormAdapter.AdapterInterface.html</loc>
+</url>
+<url>
 	<loc>http://elkarte.github.io/Doc/class-Verification_Controls.html</loc>
+</url>
+<url>
+	<loc>http://elkarte.github.io/Doc/class-Controller_Redirect_Exception.html</loc>
+</url>
+<url>
+	<loc>http://elkarte.github.io/Doc/class-Elk_Exception.html</loc>
+</url>
+<url>
+	<loc>http://elkarte.github.io/Doc/class-Pm_Error_Exception.html</loc>
 </url>
 <url>
 	<loc>http://elkarte.github.io/Doc/function-accessibleBoards.html</loc>
@@ -598,6 +913,9 @@
 </url>
 <url>
 	<loc>http://elkarte.github.io/Doc/function-addProfileField.html</loc>
+</url>
+<url>
+	<loc>http://elkarte.github.io/Doc/function-addProtocol.html</loc>
 </url>
 <url>
 	<loc>http://elkarte.github.io/Doc/function-addReportComment.html</loc>
@@ -783,6 +1101,9 @@
 	<loc>http://elkarte.github.io/Doc/function-binary_xor.html</loc>
 </url>
 <url>
+	<loc>http://elkarte.github.io/Doc/function-bindMessageAttachments.html</loc>
+</url>
+<url>
 	<loc>http://elkarte.github.io/Doc/function-boardInfo.html</loc>
 </url>
 <url>
@@ -807,13 +1128,19 @@
 	<loc>http://elkarte.github.io/Doc/function-buffer_callback.html</loc>
 </url>
 <url>
+	<loc>http://elkarte.github.io/Doc/function-build_ical_content.html</loc>
+</url>
+<url>
+	<loc>http://elkarte.github.io/Doc/function-byte_format.html</loc>
+</url>
+<url>
 	<loc>http://elkarte.github.io/Doc/function-cache_get_data.html</loc>
 </url>
 <url>
-	<loc>http://elkarte.github.io/Doc/function-cache_get_key.html</loc>
+	<loc>http://elkarte.github.io/Doc/function-cache_getLastPosts.html</loc>
 </url>
 <url>
-	<loc>http://elkarte.github.io/Doc/function-cache_getLastPosts.html</loc>
+	<loc>http://elkarte.github.io/Doc/function-cache_getLastTopics.html</loc>
 </url>
 <url>
 	<loc>http://elkarte.github.io/Doc/function-cache_getMembergroupList.html</loc>
@@ -864,6 +1191,9 @@
 	<loc>http://elkarte.github.io/Doc/function-cdata_parse.html</loc>
 </url>
 <url>
+	<loc>http://elkarte.github.io/Doc/function-censor.html</loc>
+</url>
+<url>
 	<loc>http://elkarte.github.io/Doc/function-censorText.html</loc>
 </url>
 <url>
@@ -874,9 +1204,6 @@
 </url>
 <url>
 	<loc>http://elkarte.github.io/Doc/function-checkActivation.html</loc>
-</url>
-<url>
-	<loc>http://elkarte.github.io/Doc/function-checkConfirm.html</loc>
 </url>
 <url>
 	<loc>http://elkarte.github.io/Doc/function-checkExistingTriggerIP.html</loc>
@@ -891,13 +1218,22 @@
 	<loc>http://elkarte.github.io/Doc/function-checkImagick.html</loc>
 </url>
 <url>
+	<loc>http://elkarte.github.io/Doc/function-checkMembergroupChange.html</loc>
+</url>
+<url>
 	<loc>http://elkarte.github.io/Doc/function-checkMessagePermissions.html</loc>
 </url>
 <url>
 	<loc>http://elkarte.github.io/Doc/function-checkPackageDependency.html</loc>
 </url>
 <url>
+	<loc>http://elkarte.github.io/Doc/function-checkPassword.html</loc>
+</url>
+<url>
 	<loc>http://elkarte.github.io/Doc/function-checkPMReceived.html</loc>
+</url>
+<url>
+	<loc>http://elkarte.github.io/Doc/function-checkSecurityFiles.html</loc>
 </url>
 <url>
 	<loc>http://elkarte.github.io/Doc/function-checkSession.html</loc>
@@ -1083,6 +1419,9 @@
 	<loc>http://elkarte.github.io/Doc/function-createList.html</loc>
 </url>
 <url>
+	<loc>http://elkarte.github.io/Doc/function-createMembergroup.html</loc>
+</url>
+<url>
 	<loc>http://elkarte.github.io/Doc/function-createMenu.html</loc>
 </url>
 <url>
@@ -1128,10 +1467,37 @@
 	<loc>http://elkarte.github.io/Doc/function-db_extend.html</loc>
 </url>
 <url>
+	<loc>http://elkarte.github.io/Doc/function-db_last_error.html</loc>
+</url>
+<url>
 	<loc>http://elkarte.github.io/Doc/function-db_search.html</loc>
 </url>
 <url>
 	<loc>http://elkarte.github.io/Doc/function-db_table.html</loc>
+</url>
+<url>
+	<loc>http://elkarte.github.io/Doc/function-dbMostLikedBoard.html</loc>
+</url>
+<url>
+	<loc>http://elkarte.github.io/Doc/function-dbMostLikedMessage.html</loc>
+</url>
+<url>
+	<loc>http://elkarte.github.io/Doc/function-dbMostLikedMessagesByTopic.html</loc>
+</url>
+<url>
+	<loc>http://elkarte.github.io/Doc/function-dbMostLikedPostsByUser.html</loc>
+</url>
+<url>
+	<loc>http://elkarte.github.io/Doc/function-dbMostLikedTopic.html</loc>
+</url>
+<url>
+	<loc>http://elkarte.github.io/Doc/function-dbMostLikesGivenUser.html</loc>
+</url>
+<url>
+	<loc>http://elkarte.github.io/Doc/function-dbMostLikesReceivedUser.html</loc>
+</url>
+<url>
+	<loc>http://elkarte.github.io/Doc/function-dbRecentlyLikedPostsGivenUser.html</loc>
 </url>
 <url>
 	<loc>http://elkarte.github.io/Doc/function-decreaseLikeCounts.html</loc>
@@ -1176,10 +1542,16 @@
 	<loc>http://elkarte.github.io/Doc/function-deleteLogAction.html</loc>
 </url>
 <url>
+	<loc>http://elkarte.github.io/Doc/function-deleteLogOnlineInterval.html</loc>
+</url>
+<url>
 	<loc>http://elkarte.github.io/Doc/function-deleteMailQueueItems.html</loc>
 </url>
 <url>
 	<loc>http://elkarte.github.io/Doc/function-deleteMembergroups.html</loc>
+</url>
+<url>
+	<loc>http://elkarte.github.io/Doc/function-deleteMemberLogOnline.html</loc>
 </url>
 <url>
 	<loc>http://elkarte.github.io/Doc/function-deleteMembers.html</loc>
@@ -1272,10 +1644,19 @@
 	<loc>http://elkarte.github.io/Doc/function-determineRemovableMessages.html</loc>
 </url>
 <url>
+	<loc>http://elkarte.github.io/Doc/function-determineSmileySet.html</loc>
+</url>
+<url>
 	<loc>http://elkarte.github.io/Doc/function-determineTopicClass.html</loc>
 </url>
 <url>
 	<loc>http://elkarte.github.io/Doc/function-determineVote.html</loc>
+</url>
+<url>
+	<loc>http://elkarte.github.io/Doc/function-dieGif.html</loc>
+</url>
+<url>
+	<loc>http://elkarte.github.io/Doc/function-disableModules.html</loc>
 </url>
 <url>
 	<loc>http://elkarte.github.io/Doc/function-display_db_error.html</loc>
@@ -1287,16 +1668,10 @@
 	<loc>http://elkarte.github.io/Doc/function-display_maintenance_message.html</loc>
 </url>
 <url>
-	<loc>http://elkarte.github.io/Doc/function-displayDebug.html</loc>
-</url>
-<url>
 	<loc>http://elkarte.github.io/Doc/function-doLogin.html</loc>
 </url>
 <url>
 	<loc>http://elkarte.github.io/Doc/function-doSecurityChecks.html</loc>
-</url>
-<url>
-	<loc>http://elkarte.github.io/Doc/function-drafts_toggle_callback.html</loc>
 </url>
 <url>
 	<loc>http://elkarte.github.io/Doc/function-draftsCount.html</loc>
@@ -1323,7 +1698,13 @@
 	<loc>http://elkarte.github.io/Doc/function-elk_array_insert.html</loc>
 </url>
 <url>
+	<loc>http://elkarte.github.io/Doc/function-elk_chmod.html</loc>
+</url>
+<url>
 	<loc>http://elkarte.github.io/Doc/function-elk_db_initiate.html</loc>
+</url>
+<url>
+	<loc>http://elkarte.github.io/Doc/function-elk_getimagesize.html</loc>
 </url>
 <url>
 	<loc>http://elkarte.github.io/Doc/function-elk_main.html</loc>
@@ -1347,6 +1728,9 @@
 	<loc>http://elkarte.github.io/Doc/function-enable_maillist_imap_cron.html</loc>
 </url>
 <url>
+	<loc>http://elkarte.github.io/Doc/function-enableModules.html</loc>
+</url>
+<url>
 	<loc>http://elkarte.github.io/Doc/function-encode_special.html</loc>
 </url>
 <url>
@@ -1360,9 +1744,6 @@
 </url>
 <url>
 	<loc>http://elkarte.github.io/Doc/function-entityConvert.html</loc>
-</url>
-<url>
-	<loc>http://elkarte.github.io/Doc/function-error_handler.html</loc>
 </url>
 <url>
 	<loc>http://elkarte.github.io/Doc/function-eventInfoForTopic.html</loc>
@@ -1413,6 +1794,9 @@
 	<loc>http://elkarte.github.io/Doc/function-filter_members_online.html</loc>
 </url>
 <url>
+	<loc>http://elkarte.github.io/Doc/function-filterNotificationMethods.html</loc>
+</url>
+<url>
 	<loc>http://elkarte.github.io/Doc/function-findAttachmentsToMove.html</loc>
 </url>
 <url>
@@ -1455,6 +1839,9 @@
 	<loc>http://elkarte.github.io/Doc/function-finishTables.html</loc>
 </url>
 <url>
+	<loc>http://elkarte.github.io/Doc/function-fix_calendar_text.html</loc>
+</url>
+<url>
 	<loc>http://elkarte.github.io/Doc/function-fix_possible_url.html</loc>
 </url>
 <url>
@@ -1473,13 +1860,7 @@
 	<loc>http://elkarte.github.io/Doc/function-fixMergedTopics.html</loc>
 </url>
 <url>
-	<loc>http://elkarte.github.io/Doc/function-fixTag.html</loc>
-</url>
-<url>
-	<loc>http://elkarte.github.io/Doc/function-fixTags.html</loc>
-</url>
-<url>
-	<loc>http://elkarte.github.io/Doc/function-fixTags_img_callback.html</loc>
+	<loc>http://elkarte.github.io/Doc/function-fixThemeUrls.html</loc>
 </url>
 <url>
 	<loc>http://elkarte.github.io/Doc/function-flipImageGD.html</loc>
@@ -1494,9 +1875,6 @@
 	<loc>http://elkarte.github.io/Doc/function-followupTopics.html</loc>
 </url>
 <url>
-	<loc>http://elkarte.github.io/Doc/function-footnote_callback.html</loc>
-</url>
-<url>
 	<loc>http://elkarte.github.io/Doc/function-formatViewers.html</loc>
 </url>
 <url>
@@ -1507,6 +1885,15 @@
 </url>
 <url>
 	<loc>http://elkarte.github.io/Doc/function-generateSubscriptionError.html</loc>
+</url>
+<url>
+	<loc>http://elkarte.github.io/Doc/function-generateTextImage.html</loc>
+</url>
+<url>
+	<loc>http://elkarte.github.io/Doc/function-generateTextImageWithGD.html</loc>
+</url>
+<url>
+	<loc>http://elkarte.github.io/Doc/function-generateTextImageWithIM.html</loc>
 </url>
 <url>
 	<loc>http://elkarte.github.io/Doc/function-generateValidationCode.html</loc>
@@ -1524,12 +1911,6 @@
 	<loc>http://elkarte.github.io/Doc/function-get_integration_hooks.html</loc>
 </url>
 <url>
-	<loc>http://elkarte.github.io/Doc/function-get_memcached_server.html</loc>
-</url>
-<url>
-	<loc>http://elkarte.github.io/Doc/function-get_trash_folder.html</loc>
-</url>
-<url>
 	<loc>http://elkarte.github.io/Doc/function-getAllThemes.html</loc>
 </url>
 <url>
@@ -1545,13 +1926,22 @@
 	<loc>http://elkarte.github.io/Doc/function-getAttachmentFromTopic.html</loc>
 </url>
 <url>
+	<loc>http://elkarte.github.io/Doc/function-getAttachmentIdFromPublic.html</loc>
+</url>
+<url>
 	<loc>http://elkarte.github.io/Doc/function-getAttachmentPath.html</loc>
 </url>
 <url>
 	<loc>http://elkarte.github.io/Doc/function-getAttachmentPathID.html</loc>
 </url>
 <url>
+	<loc>http://elkarte.github.io/Doc/function-getAttachmentPosition.html</loc>
+</url>
+<url>
 	<loc>http://elkarte.github.io/Doc/function-getAttachments.html</loc>
+</url>
+<url>
+	<loc>http://elkarte.github.io/Doc/function-getAttachmentThumbFromTopic.html</loc>
 </url>
 <url>
 	<loc>http://elkarte.github.io/Doc/function-getAvatar.html</loc>
@@ -1608,6 +1998,9 @@
 	<loc>http://elkarte.github.io/Doc/function-getBoardTree.html</loc>
 </url>
 <url>
+	<loc>http://elkarte.github.io/Doc/function-getBuddiesID.html</loc>
+</url>
+<url>
 	<loc>http://elkarte.github.io/Doc/function-getCalendarGrid.html</loc>
 </url>
 <url>
@@ -1615,6 +2008,9 @@
 </url>
 <url>
 	<loc>http://elkarte.github.io/Doc/function-getConcernedMembers.html</loc>
+</url>
+<url>
+	<loc>http://elkarte.github.io/Doc/function-getConfiguredNotificationMethods.html</loc>
 </url>
 <url>
 	<loc>http://elkarte.github.io/Doc/function-getCustomThemes.html</loc>
@@ -1653,10 +2049,16 @@
 	<loc>http://elkarte.github.io/Doc/function-getFormMsgSubject.html</loc>
 </url>
 <url>
+	<loc>http://elkarte.github.io/Doc/function-getFrontPageControllers.html</loc>
+</url>
+<url>
 	<loc>http://elkarte.github.io/Doc/function-getGroupModerators.html</loc>
 </url>
 <url>
 	<loc>http://elkarte.github.io/Doc/function-getGroups.html</loc>
+</url>
+<url>
+	<loc>http://elkarte.github.io/Doc/function-getGroupsList.html</loc>
 </url>
 <url>
 	<loc>http://elkarte.github.io/Doc/function-getHoliday.html</loc>
@@ -1671,16 +2073,31 @@
 	<loc>http://elkarte.github.io/Doc/function-getInheritableGroups.html</loc>
 </url>
 <url>
+	<loc>http://elkarte.github.io/Doc/function-getIPMessageCount.html</loc>
+</url>
+<url>
+	<loc>http://elkarte.github.io/Doc/function-getIPMessages.html</loc>
+</url>
+<url>
 	<loc>http://elkarte.github.io/Doc/function-getLanguages.html</loc>
 </url>
 <url>
 	<loc>http://elkarte.github.io/Doc/function-getLastPosts.html</loc>
 </url>
 <url>
+	<loc>http://elkarte.github.io/Doc/function-getLastTopics.html</loc>
+</url>
+<url>
 	<loc>http://elkarte.github.io/Doc/function-getLegacyAttachmentFilename.html</loc>
 </url>
 <url>
 	<loc>http://elkarte.github.io/Doc/function-getLoggedTopics.html</loc>
+</url>
+<url>
+	<loc>http://elkarte.github.io/Doc/function-getLoginCount.html</loc>
+</url>
+<url>
+	<loc>http://elkarte.github.io/Doc/function-getLogins.html</loc>
 </url>
 <url>
 	<loc>http://elkarte.github.io/Doc/function-getMaxGroupID.html</loc>
@@ -1710,6 +2127,9 @@
 	<loc>http://elkarte.github.io/Doc/function-getMemberGeneralPermissions.html</loc>
 </url>
 <url>
+	<loc>http://elkarte.github.io/Doc/function-getMemberNotificationsProfile.html</loc>
+</url>
+<url>
 	<loc>http://elkarte.github.io/Doc/function-getMembersInRange.html</loc>
 </url>
 <url>
@@ -1717,6 +2137,9 @@
 </url>
 <url>
 	<loc>http://elkarte.github.io/Doc/function-getMembersOnlineStats.html</loc>
+</url>
+<url>
+	<loc>http://elkarte.github.io/Doc/function-getMentionsModules.html</loc>
 </url>
 <url>
 	<loc>http://elkarte.github.io/Doc/function-getMessageIcons.html</loc>
@@ -1734,10 +2157,16 @@
 	<loc>http://elkarte.github.io/Doc/function-getMsgMemberID.html</loc>
 </url>
 <url>
+	<loc>http://elkarte.github.io/Doc/function-getNewMentions.html</loc>
+</url>
+<url>
 	<loc>http://elkarte.github.io/Doc/function-getNews.html</loc>
 </url>
 <url>
 	<loc>http://elkarte.github.io/Doc/function-getNewsletterRecipients.html</loc>
+</url>
+<url>
+	<loc>http://elkarte.github.io/Doc/function-getNotificationTypes.html</loc>
 </url>
 <url>
 	<loc>http://elkarte.github.io/Doc/function-getNumAttachments.html</loc>
@@ -1785,13 +2214,16 @@
 	<loc>http://elkarte.github.io/Doc/function-getPollStarter.html</loc>
 </url>
 <url>
+	<loc>http://elkarte.github.io/Doc/function-getProfileEditCount.html</loc>
+</url>
+<url>
+	<loc>http://elkarte.github.io/Doc/function-getProfileEdits.html</loc>
+</url>
+<url>
 	<loc>http://elkarte.github.io/Doc/function-getProfileField.html</loc>
 </url>
 <url>
 	<loc>http://elkarte.github.io/Doc/function-getQuickAdminTasks.html</loc>
-</url>
-<url>
-	<loc>http://elkarte.github.io/Doc/function-getRecentPosts.html</loc>
 </url>
 <url>
 	<loc>http://elkarte.github.io/Doc/function-getReportModeratorsComments.html</loc>
@@ -1842,16 +2274,31 @@
 	<loc>http://elkarte.github.io/Doc/function-getTaskLogEntries.html</loc>
 </url>
 <url>
+	<loc>http://elkarte.github.io/Doc/function-getTempAttachById.html</loc>
+</url>
+<url>
+	<loc>http://elkarte.github.io/Doc/function-getThemeData.html</loc>
+</url>
+<url>
+	<loc>http://elkarte.github.io/Doc/function-getThemeId.html</loc>
+</url>
+<url>
 	<loc>http://elkarte.github.io/Doc/function-getThemeName.html</loc>
 </url>
 <url>
 	<loc>http://elkarte.github.io/Doc/function-getThemesPathbyID.html</loc>
 </url>
 <url>
+	<loc>http://elkarte.github.io/Doc/function-getTimeLastMention.html</loc>
+</url>
+<url>
 	<loc>http://elkarte.github.io/Doc/function-getTodayInfo.html</loc>
 </url>
 <url>
 	<loc>http://elkarte.github.io/Doc/function-getTopicInfo.html</loc>
+</url>
+<url>
+	<loc>http://elkarte.github.io/Doc/function-getTopicInfoByMsg.html</loc>
 </url>
 <url>
 	<loc>http://elkarte.github.io/Doc/function-getTopicsPostsAndPoster.html</loc>
@@ -1863,13 +2310,28 @@
 	<loc>http://elkarte.github.io/Doc/function-getUnapprovedPosts.html</loc>
 </url>
 <url>
+	<loc>http://elkarte.github.io/Doc/function-getUnassignableGroups.html</loc>
+</url>
+<url>
 	<loc>http://elkarte.github.io/Doc/function-getUnreadCountSince.html</loc>
 </url>
 <url>
 	<loc>http://elkarte.github.io/Doc/function-getUnwatchedBy.html</loc>
 </url>
 <url>
+	<loc>http://elkarte.github.io/Doc/function-getUserErrorCount.html</loc>
+</url>
+<url>
+	<loc>http://elkarte.github.io/Doc/function-getUserErrors.html</loc>
+</url>
+<url>
 	<loc>http://elkarte.github.io/Doc/function-getUserMentions.html</loc>
+</url>
+<url>
+	<loc>http://elkarte.github.io/Doc/function-getUsersNotificationsPreferences.html</loc>
+</url>
+<url>
+	<loc>http://elkarte.github.io/Doc/function-getValidMimeImageType.html</loc>
 </url>
 <url>
 	<loc>http://elkarte.github.io/Doc/function-getXMLNews.html</loc>
@@ -1935,16 +2397,25 @@
 	<loc>http://elkarte.github.io/Doc/function-incrementBoard.html</loc>
 </url>
 <url>
+	<loc>http://elkarte.github.io/Doc/function-initTheme.html</loc>
+</url>
+<url>
 	<loc>http://elkarte.github.io/Doc/function-insertBanGroup.html</loc>
 </url>
 <url>
 	<loc>http://elkarte.github.io/Doc/function-insertBoardPermission.html</loc>
 </url>
 <url>
+	<loc>http://elkarte.github.io/Doc/function-insertdeleteLogOnline.html</loc>
+</url>
+<url>
 	<loc>http://elkarte.github.io/Doc/function-insertEvent.html</loc>
 </url>
 <url>
 	<loc>http://elkarte.github.io/Doc/function-insertHoliday.html</loc>
+</url>
+<url>
+	<loc>http://elkarte.github.io/Doc/function-insertLogActions.html</loc>
 </url>
 <url>
 	<loc>http://elkarte.github.io/Doc/function-insertPollOptions.html</loc>
@@ -1971,10 +2442,16 @@
 	<loc>http://elkarte.github.io/Doc/function-isAccessiblePM.html</loc>
 </url>
 <url>
+	<loc>http://elkarte.github.io/Doc/function-isAdminSessionActive.html</loc>
+</url>
+<url>
 	<loc>http://elkarte.github.io/Doc/function-isAllowedTo.html</loc>
 </url>
 <url>
 	<loc>http://elkarte.github.io/Doc/function-isAnotherAdmin.html</loc>
+</url>
+<url>
+	<loc>http://elkarte.github.io/Doc/function-isAttachmentImage.html</loc>
 </url>
 <url>
 	<loc>http://elkarte.github.io/Doc/function-isAuthorizedServer.html</loc>
@@ -1989,7 +2466,13 @@
 	<loc>http://elkarte.github.io/Doc/function-isChildOf.html</loc>
 </url>
 <url>
+	<loc>http://elkarte.github.io/Doc/function-isCustomFieldValid.html</loc>
+</url>
+<url>
 	<loc>http://elkarte.github.io/Doc/function-isFirstLogin.html</loc>
+</url>
+<url>
+	<loc>http://elkarte.github.io/Doc/function-isModuleEnabled.html</loc>
 </url>
 <url>
 	<loc>http://elkarte.github.io/Doc/function-isPackageInstalled.html</loc>
@@ -2166,6 +2649,9 @@
 	<loc>http://elkarte.github.io/Doc/function-list_MailQueueStatus.html</loc>
 </url>
 <url>
+	<loc>http://elkarte.github.io/Doc/function-list_restoreFiles.html</loc>
+</url>
+<url>
 	<loc>http://elkarte.github.io/Doc/function-listMembergroupMembers_Href.html</loc>
 </url>
 <url>
@@ -2184,6 +2670,12 @@
 	<loc>http://elkarte.github.io/Doc/function-load_user_topics.html</loc>
 </url>
 <url>
+	<loc>http://elkarte.github.io/Doc/function-loadAllCustomFields.html</loc>
+</url>
+<url>
+	<loc>http://elkarte.github.io/Doc/function-loadAllPermissions.html</loc>
+</url>
+<url>
 	<loc>http://elkarte.github.io/Doc/function-loadAllSubsctiptions.html</loc>
 </url>
 <url>
@@ -2199,7 +2691,13 @@
 	<loc>http://elkarte.github.io/Doc/function-loadBasedOnTheme.html</loc>
 </url>
 <url>
+	<loc>http://elkarte.github.io/Doc/function-loadBBCParsers.html</loc>
+</url>
+<url>
 	<loc>http://elkarte.github.io/Doc/function-loadBoard.html</loc>
+</url>
+<url>
+	<loc>http://elkarte.github.io/Doc/function-loadCacheEngines.html</loc>
 </url>
 <url>
 	<loc>http://elkarte.github.io/Doc/function-loadConversationList.html</loc>
@@ -2215,6 +2713,9 @@
 </url>
 <url>
 	<loc>http://elkarte.github.io/Doc/function-loadDatabase.html</loc>
+</url>
+<url>
+	<loc>http://elkarte.github.io/Doc/function-loadDefaultMenuButtons.html</loc>
 </url>
 <url>
 	<loc>http://elkarte.github.io/Doc/function-loadDraft.html</loc>
@@ -2253,10 +2754,19 @@
 	<loc>http://elkarte.github.io/Doc/function-loadLikes.html</loc>
 </url>
 <url>
+	<loc>http://elkarte.github.io/Doc/function-loadLogReported.html</loc>
+</url>
+<url>
 	<loc>http://elkarte.github.io/Doc/function-loadMemberContext.html</loc>
 </url>
 <url>
 	<loc>http://elkarte.github.io/Doc/function-loadMemberData.html</loc>
+</url>
+<url>
+	<loc>http://elkarte.github.io/Doc/function-loadMembergroupsJoin.html</loc>
+</url>
+<url>
+	<loc>http://elkarte.github.io/Doc/function-loadMembersIPs.html</loc>
 </url>
 <url>
 	<loc>http://elkarte.github.io/Doc/function-loadMemberSubscriptions.html</loc>
@@ -2349,7 +2859,7 @@
 	<loc>http://elkarte.github.io/Doc/function-loadTheme.html</loc>
 </url>
 <url>
-	<loc>http://elkarte.github.io/Doc/function-loadThemeOptions.html</loc>
+	<loc>http://elkarte.github.io/Doc/function-loadThemeContext.html</loc>
 </url>
 <url>
 	<loc>http://elkarte.github.io/Doc/function-loadThemeOptionsInto.html</loc>
@@ -2359,6 +2869,12 @@
 </url>
 <url>
 	<loc>http://elkarte.github.io/Doc/function-loadThemesAffected.html</loc>
+</url>
+<url>
+	<loc>http://elkarte.github.io/Doc/function-loadThemeUrls.html</loc>
+</url>
+<url>
+	<loc>http://elkarte.github.io/Doc/function-loadUserContext.html</loc>
 </url>
 <url>
 	<loc>http://elkarte.github.io/Doc/function-loadUserSettings.html</loc>
@@ -2392,6 +2908,9 @@
 </url>
 <url>
 	<loc>http://elkarte.github.io/Doc/function-logLoginHistory.html</loc>
+</url>
+<url>
+	<loc>http://elkarte.github.io/Doc/function-logMembergroupRequest.html</loc>
 </url>
 <url>
 	<loc>http://elkarte.github.io/Doc/function-logNewSubscription.html</loc>
@@ -2463,9 +2982,6 @@
 	<loc>http://elkarte.github.io/Doc/function-markMessagesUnread.html</loc>
 </url>
 <url>
-	<loc>http://elkarte.github.io/Doc/function-markPMsRead.html</loc>
-</url>
-<url>
 	<loc>http://elkarte.github.io/Doc/function-markTopicsRead.html</loc>
 </url>
 <url>
@@ -2508,6 +3024,9 @@
 	<loc>http://elkarte.github.io/Doc/function-membersBy.html</loc>
 </url>
 <url>
+	<loc>http://elkarte.github.io/Doc/function-membersByIP.html</loc>
+</url>
+<url>
 	<loc>http://elkarte.github.io/Doc/function-membersInGroups.html</loc>
 </url>
 <url>
@@ -2523,9 +3042,6 @@
 	<loc>http://elkarte.github.io/Doc/function-messageDetails.html</loc>
 </url>
 <url>
-	<loc>http://elkarte.github.io/Doc/function-messageIndexBar.html</loc>
-</url>
-<url>
 	<loc>http://elkarte.github.io/Doc/function-messageIndexSort.html</loc>
 </url>
 <url>
@@ -2536,9 +3052,6 @@
 </url>
 <url>
 	<loc>http://elkarte.github.io/Doc/function-messagePointer.html</loc>
-</url>
-<url>
-	<loc>http://elkarte.github.io/Doc/function-messagePostError.html</loc>
 </url>
 <url>
 	<loc>http://elkarte.github.io/Doc/function-messagesAttachments.html</loc>
@@ -2643,6 +3156,9 @@
 	<loc>http://elkarte.github.io/Doc/function-moveTopics.html</loc>
 </url>
 <url>
+	<loc>http://elkarte.github.io/Doc/function-moveTopicsPermissions.html</loc>
+</url>
+<url>
 	<loc>http://elkarte.github.io/Doc/function-newTable.html</loc>
 </url>
 <url>
@@ -2679,6 +3195,9 @@
 	<loc>http://elkarte.github.io/Doc/function-obExit.html</loc>
 </url>
 <url>
+	<loc>http://elkarte.github.io/Doc/function-obStart.html</loc>
+</url>
+<url>
 	<loc>http://elkarte.github.io/Doc/function-onlineCount.html</loc>
 </url>
 <url>
@@ -2712,16 +3231,10 @@
 	<loc>http://elkarte.github.io/Doc/function-packageRequireFTP.html</loc>
 </url>
 <url>
-	<loc>http://elkarte.github.io/Doc/function-parse_autolink.html</loc>
-</url>
-<url>
 	<loc>http://elkarte.github.io/Doc/function-parse_bbc.html</loc>
 </url>
 <url>
 	<loc>http://elkarte.github.io/Doc/function-parse_path.html</loc>
-</url>
-<url>
-	<loc>http://elkarte.github.io/Doc/function-parseBoardMod.html</loc>
 </url>
 <url>
 	<loc>http://elkarte.github.io/Doc/function-parseModification.html</loc>
@@ -2731,9 +3244,6 @@
 </url>
 <url>
 	<loc>http://elkarte.github.io/Doc/function-parsesmileys.html</loc>
-</url>
-<url>
-	<loc>http://elkarte.github.io/Doc/function-pauseAttachmentMaintenance.html</loc>
 </url>
 <url>
 	<loc>http://elkarte.github.io/Doc/function-pausePermsSave.html</loc>
@@ -2758,6 +3268,9 @@
 </url>
 <url>
 	<loc>http://elkarte.github.io/Doc/function-pbe_create_topic.html</loc>
+</url>
+<url>
+	<loc>http://elkarte.github.io/Doc/function-pbe_disable_user_notify.html</loc>
 </url>
 <url>
 	<loc>http://elkarte.github.io/Doc/function-pbe_email_attachments.html</loc>
@@ -2838,9 +3351,6 @@
 	<loc>http://elkarte.github.io/Doc/function-populateDuplicateMembers.html</loc>
 </url>
 <url>
-	<loc>http://elkarte.github.io/Doc/function-port_type.html</loc>
-</url>
-<url>
 	<loc>http://elkarte.github.io/Doc/function-postbyemail_imap.html</loc>
 </url>
 <url>
@@ -2865,9 +3375,6 @@
 	<loc>http://elkarte.github.io/Doc/function-prepareDeleteSubscriptions.html</loc>
 </url>
 <url>
-	<loc>http://elkarte.github.io/Doc/function-prepareDraftsContext.html</loc>
-</url>
-<url>
 	<loc>http://elkarte.github.io/Doc/function-prepareLikes.html</loc>
 </url>
 <url>
@@ -2877,28 +3384,22 @@
 	<loc>http://elkarte.github.io/Doc/function-prepareMembergroupPermissions.html</loc>
 </url>
 <url>
+	<loc>http://elkarte.github.io/Doc/function-prepareMembersByQuery.html</loc>
+</url>
+<url>
 	<loc>http://elkarte.github.io/Doc/function-prepareMessageContext.html</loc>
 </url>
 <url>
 	<loc>http://elkarte.github.io/Doc/function-preparePMContext_callback.html</loc>
 </url>
 <url>
+	<loc>http://elkarte.github.io/Doc/function-prepareRecentPosts.html</loc>
+</url>
+<url>
 	<loc>http://elkarte.github.io/Doc/function-prepareSearchEngines.html</loc>
 </url>
 <url>
 	<loc>http://elkarte.github.io/Doc/function-preparsecode.html</loc>
-</url>
-<url>
-	<loc>http://elkarte.github.io/Doc/function-preparsecode_font_callback.html</loc>
-</url>
-<url>
-	<loc>http://elkarte.github.io/Doc/function-preparsecode_lowertags_callback.html</loc>
-</url>
-<url>
-	<loc>http://elkarte.github.io/Doc/function-preparsecode_nobbc_callback.html</loc>
-</url>
-<url>
-	<loc>http://elkarte.github.io/Doc/function-preparsetable.html</loc>
 </url>
 <url>
 	<loc>http://elkarte.github.io/Doc/function-previousMessage.html</loc>
@@ -3000,6 +3501,9 @@
 	<loc>http://elkarte.github.io/Doc/function-quote_callback_2.html</loc>
 </url>
 <url>
+	<loc>http://elkarte.github.io/Doc/function-quoteMessageInfo.html</loc>
+</url>
+<url>
 	<loc>http://elkarte.github.io/Doc/function-range2ip.html</loc>
 </url>
 <url>
@@ -3010,6 +3514,9 @@
 </url>
 <url>
 	<loc>http://elkarte.github.io/Doc/function-read_zip_data.html</loc>
+</url>
+<url>
+	<loc>http://elkarte.github.io/Doc/function-readFileVersions.html</loc>
 </url>
 <url>
 	<loc>http://elkarte.github.io/Doc/function-reapplySubscriptions.html</loc>
@@ -3084,7 +3591,13 @@
 	<loc>http://elkarte.github.io/Doc/function-removeBanTriggers.html</loc>
 </url>
 <url>
+	<loc>http://elkarte.github.io/Doc/function-removeBr.html</loc>
+</url>
+<url>
 	<loc>http://elkarte.github.io/Doc/function-removeCommonWordsFromIndex.html</loc>
+</url>
+<url>
+	<loc>http://elkarte.github.io/Doc/function-removeDeleteConcurrence.html</loc>
 </url>
 <url>
 	<loc>http://elkarte.github.io/Doc/function-removeEvent.html</loc>
@@ -3118,6 +3631,9 @@
 </url>
 <url>
 	<loc>http://elkarte.github.io/Doc/function-removeModeratorPermissions.html</loc>
+</url>
+<url>
+	<loc>http://elkarte.github.io/Doc/function-removeNestedQuotes.html</loc>
 </url>
 <url>
 	<loc>http://elkarte.github.io/Doc/function-removeNonTopicMessages.html</loc>
@@ -3159,6 +3675,9 @@
 	<loc>http://elkarte.github.io/Doc/function-removeTopics.html</loc>
 </url>
 <url>
+	<loc>http://elkarte.github.io/Doc/function-removeTopicsPermissions.html</loc>
+</url>
+<url>
 	<loc>http://elkarte.github.io/Doc/function-removeVote.html</loc>
 </url>
 <url>
@@ -3195,9 +3714,6 @@
 	<loc>http://elkarte.github.io/Doc/function-request.html</loc>
 </url>
 <url>
-	<loc>http://elkarte.github.io/Doc/function-requireTemplate.html</loc>
-</url>
-<url>
 	<loc>http://elkarte.github.io/Doc/function-resetBoardsCounter.html</loc>
 </url>
 <url>
@@ -3211,9 +3727,6 @@
 </url>
 <url>
 	<loc>http://elkarte.github.io/Doc/function-resetVotes.html</loc>
-</url>
-<url>
-	<loc>http://elkarte.github.io/Doc/function-resizeBBCImages.html</loc>
 </url>
 <url>
 	<loc>http://elkarte.github.io/Doc/function-resizeImage.html</loc>
@@ -3231,6 +3744,9 @@
 	<loc>http://elkarte.github.io/Doc/function-retrieveMemberData.html</loc>
 </url>
 <url>
+	<loc>http://elkarte.github.io/Doc/function-returnMimeThumb.html</loc>
+</url>
+<url>
 	<loc>http://elkarte.github.io/Doc/function-rlikeMentions.html</loc>
 </url>
 <url>
@@ -3240,7 +3756,7 @@
 	<loc>http://elkarte.github.io/Doc/function-run_this_task.html</loc>
 </url>
 <url>
-	<loc>http://elkarte.github.io/Doc/function-sanitizeMSCutPaste.html</loc>
+	<loc>http://elkarte.github.io/Doc/function-run_this_task_compat.html</loc>
 </url>
 <url>
 	<loc>http://elkarte.github.io/Doc/function-saveAvatar.html</loc>
@@ -3261,13 +3777,16 @@
 	<loc>http://elkarte.github.io/Doc/function-saveTriggers.html</loc>
 </url>
 <url>
+	<loc>http://elkarte.github.io/Doc/function-saveUserNotificationsPreferences.html</loc>
+</url>
+<url>
+	<loc>http://elkarte.github.io/Doc/function-scanFileSystemForControllers.html</loc>
+</url>
+<url>
 	<loc>http://elkarte.github.io/Doc/function-scheduledTasks.html</loc>
 </url>
 <url>
 	<loc>http://elkarte.github.io/Doc/function-scheduleTaskImmediate.html</loc>
-</url>
-<url>
-	<loc>http://elkarte.github.io/Doc/function-searchSort.html</loc>
 </url>
 <url>
 	<loc>http://elkarte.github.io/Doc/function-secretAnswerInput.html</loc>
@@ -3303,25 +3822,10 @@
 	<loc>http://elkarte.github.io/Doc/function-serializeToJson.html</loc>
 </url>
 <url>
-	<loc>http://elkarte.github.io/Doc/function-sessionClose.html</loc>
+	<loc>http://elkarte.github.io/Doc/function-serverIs.html</loc>
 </url>
 <url>
-	<loc>http://elkarte.github.io/Doc/function-sessionDestroy.html</loc>
-</url>
-<url>
-	<loc>http://elkarte.github.io/Doc/function-sessionGC.html</loc>
-</url>
-<url>
-	<loc>http://elkarte.github.io/Doc/function-sessionOpen.html</loc>
-</url>
-<url>
-	<loc>http://elkarte.github.io/Doc/function-sessionRead.html</loc>
-</url>
-<url>
-	<loc>http://elkarte.github.io/Doc/function-sessionWrite.html</loc>
-</url>
-<url>
-	<loc>http://elkarte.github.io/Doc/function-set_fatal_error_headers.html</loc>
+	<loc>http://elkarte.github.io/Doc/function-set_range.html</loc>
 </url>
 <url>
 	<loc>http://elkarte.github.io/Doc/function-setBoardNotification.html</loc>
@@ -3345,10 +3849,16 @@
 	<loc>http://elkarte.github.io/Doc/function-setPackageState.html</loc>
 </url>
 <url>
+	<loc>http://elkarte.github.io/Doc/function-setPermissionLevel.html</loc>
+</url>
+<url>
 	<loc>http://elkarte.github.io/Doc/function-setPMRepliedStatus.html</loc>
 </url>
 <url>
 	<loc>http://elkarte.github.io/Doc/function-setRemovalNotice.html</loc>
+</url>
+<url>
+	<loc>http://elkarte.github.io/Doc/function-setTimeLimit.html</loc>
 </url>
 <url>
 	<loc>http://elkarte.github.io/Doc/function-setTopicAttribute.html</loc>
@@ -3358,9 +3868,6 @@
 </url>
 <url>
 	<loc>http://elkarte.github.io/Doc/function-setTopicWatch.html</loc>
-</url>
-<url>
-	<loc>http://elkarte.github.io/Doc/function-setup_fatal_error_context.html</loc>
 </url>
 <url>
 	<loc>http://elkarte.github.io/Doc/function-setupMenuContext.html</loc>
@@ -3399,6 +3906,9 @@
 	<loc>http://elkarte.github.io/Doc/function-smileyExists.html</loc>
 </url>
 <url>
+	<loc>http://elkarte.github.io/Doc/function-sort_by_relevance.html</loc>
+</url>
+<url>
 	<loc>http://elkarte.github.io/Doc/function-sortMessageIconTable.html</loc>
 </url>
 <url>
@@ -3409,6 +3919,9 @@
 </url>
 <url>
 	<loc>http://elkarte.github.io/Doc/function-spamProtection.html</loc>
+</url>
+<url>
+	<loc>http://elkarte.github.io/Doc/function-SphinxVersion.html</loc>
 </url>
 <url>
 	<loc>http://elkarte.github.io/Doc/function-spiderCheck.html</loc>
@@ -3540,10 +4053,16 @@
 	<loc>http://elkarte.github.io/Doc/function-standardTime.html</loc>
 </url>
 <url>
+	<loc>http://elkarte.github.io/Doc/function-stop_prefetching.html</loc>
+</url>
+<url>
 	<loc>http://elkarte.github.io/Doc/function-subscriptions_toggle_callback.html</loc>
 </url>
 <url>
 	<loc>http://elkarte.github.io/Doc/function-sumRecentPosts.html</loc>
+</url>
+<url>
+	<loc>http://elkarte.github.io/Doc/function-tabToHtmlTab.html</loc>
 </url>
 <url>
 	<loc>http://elkarte.github.io/Doc/function-template_admin_warning_above.html</loc>
@@ -3567,9 +4086,6 @@
 	<loc>http://elkarte.github.io/Doc/function-template_homepage_sample1_php.html</loc>
 </url>
 <url>
-	<loc>http://elkarte.github.io/Doc/function-template_include.html</loc>
-</url>
-<url>
 	<loc>http://elkarte.github.io/Doc/function-template_javascript.html</loc>
 </url>
 <url>
@@ -3585,6 +4101,9 @@
 	<loc>http://elkarte.github.io/Doc/function-text2words.html</loc>
 </url>
 <url>
+	<loc>http://elkarte.github.io/Doc/function-theme.html</loc>
+</url>
+<url>
 	<loc>http://elkarte.github.io/Doc/function-theme_copyright.html</loc>
 </url>
 <url>
@@ -3595,6 +4114,9 @@
 </url>
 <url>
 	<loc>http://elkarte.github.io/Doc/function-themeUrl.html</loc>
+</url>
+<url>
+	<loc>http://elkarte.github.io/Doc/function-thousands_format.html</loc>
 </url>
 <url>
 	<loc>http://elkarte.github.io/Doc/function-time_since.html</loc>
@@ -3613,6 +4135,9 @@
 </url>
 <url>
 	<loc>http://elkarte.github.io/Doc/function-toggleTaskStatusByName.html</loc>
+</url>
+<url>
+	<loc>http://elkarte.github.io/Doc/function-toggleTopicsLock.html</loc>
 </url>
 <url>
 	<loc>http://elkarte.github.io/Doc/function-toggleTopicSticky.html</loc>
@@ -3708,6 +4233,9 @@
 	<loc>http://elkarte.github.io/Doc/function-updateAdminPreferences.html</loc>
 </url>
 <url>
+	<loc>http://elkarte.github.io/Doc/function-updateAllSignatures.html</loc>
+</url>
+<url>
 	<loc>http://elkarte.github.io/Doc/function-updateAttachmentIdFolder.html</loc>
 </url>
 <url>
@@ -3754,6 +4282,12 @@
 </url>
 <url>
 	<loc>http://elkarte.github.io/Doc/function-updateLike.html</loc>
+</url>
+<url>
+	<loc>http://elkarte.github.io/Doc/function-updateLogActivity.html</loc>
+</url>
+<url>
+	<loc>http://elkarte.github.io/Doc/function-updateLogOnline.html</loc>
 </url>
 <url>
 	<loc>http://elkarte.github.io/Doc/function-updateMemberData.html</loc>
@@ -3942,7 +4476,7 @@
 	<loc>http://elkarte.github.io/Doc/function-validateDuplicateSmiley.html</loc>
 </url>
 <url>
-	<loc>http://elkarte.github.io/Doc/function-validateEventPost.html</loc>
+	<loc>http://elkarte.github.io/Doc/function-validateIPBan.html</loc>
 </url>
 <url>
 	<loc>http://elkarte.github.io/Doc/function-validateLoginPassword.html</loc>
@@ -3976,6 +4510,9 @@
 </url>
 <url>
 	<loc>http://elkarte.github.io/Doc/function-validateUsername.html</loc>
+</url>
+<url>
+	<loc>http://elkarte.github.io/Doc/function-validLoginUrl.html</loc>
 </url>
 <url>
 	<loc>http://elkarte.github.io/Doc/function-viewers.html</loc>

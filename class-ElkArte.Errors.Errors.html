@@ -1,0 +1,939 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>Class ElkArte\Errors\Errors | ElkArte 1.1.1 Documentation</title>
+
+	<link rel="stylesheet" href="resources/bootstrap.min.css?973e37a8502921d56bc02bb55321f45b072b6f71">
+	<link rel="stylesheet" href="resources/style.css?70c1d062672daa3f906b72e4f5d03d4bc5c4174d">
+
+</head>
+
+<body>
+	<nav id="navigation" class="navbar navbar-default navbar-fixed-top">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<a href="index.html" class="navbar-brand">ElkArte 1.1.1 Documentation</a>
+			</div>
+			<div class="collapse navbar-collapse">
+
+                <form id="search" class="navbar-form navbar-left" role="search">
+                    <input type="hidden" name="cx" value="">
+                    <input type="hidden" name="ie" value="UTF-8">
+                    <div class="form-group">
+                        <input type="text" name="q" class="search-query form-control" placeholder="Search">
+					</div>
+				</form>
+
+				<ul class="nav navbar-nav">
+					<li>
+						<a href="namespace-ElkArte.Errors.html" title="Summary of ElkArte\Errors"><span>Namespace</span></a>
+					</li>
+					<li class="active">
+<span>Class</span>					</li>
+
+					<li class="divider-vertical"></li>
+
+					<li>
+						<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+					</li>
+
+						<li>
+							<a href="annotation-group-todo.html" title="List of elements with todo annotation">
+								<span>Todo</span>
+							</a>
+						</li>
+						<li>
+							<a href="annotation-group-deprecated.html" title="List of elements with deprecated annotation">
+								<span>Deprecated</span>
+							</a>
+						</li>
+
+
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<div id="left">
+	<div id="menu">
+
+		<div id="groups">
+				<h3>Namespaces</h3>
+			<ul>
+					<li>
+						<a href="namespace-BBC.html">
+							BBC						</a>
+							</li>
+					<li class="active">
+						<a href="namespace-ElkArte.html">
+							ElkArte<span></span>
+						</a>
+							<ul>
+					<li class="active">
+						<a href="namespace-ElkArte.Errors.html">
+							Errors						</a>
+							</li>
+					<li>
+						<a href="namespace-ElkArte.Search.html">
+							Search<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-ElkArte.Search.API.html">
+							API						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-ElkArte.sources.html">
+							sources<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-ElkArte.sources.modules.html">
+							modules						</a>
+							</li>
+					<li>
+						<a href="namespace-ElkArte.sources.subs.html">
+							subs<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-ElkArte.sources.subs.CacheMethod.html">
+							CacheMethod						</a>
+							</li>
+					<li>
+						<a href="namespace-ElkArte.sources.subs.MentionType.html">
+							MentionType						</a>
+							</li>
+					<li>
+						<a href="namespace-ElkArte.sources.subs.ScheduledTask.html">
+							ScheduledTask						</a>
+							</li>
+					<li>
+						<a href="namespace-ElkArte.sources.subs.SessionHandler.html">
+							SessionHandler						</a>
+							</li>
+					<li>
+						<a href="namespace-ElkArte.sources.subs.SettingsFormAdapter.html">
+							SettingsFormAdapter						</a>
+							</li>
+								</ul></li></ul></li></ul></li>
+					<li>
+						<a href="namespace-None.html">
+							None						</a>
+							</li>
+			</ul>
+		</div>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-ElkArte.Errors.AttachmentErrorContext.html">AttachmentErrorContext</a></li>
+				<li><a href="class-ElkArte.Errors.ErrorContext.html">ErrorContext</a></li>
+				<li class="active"><a href="class-ElkArte.Errors.Errors.html">Errors</a></li>
+				<li><a href="class-ElkArte.Errors.Log.html">Log</a></li>
+			</ul>
+
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+	<div id="rightInner">
+<div id="content" class="class">
+	<h1>Class Errors</h1>
+
+
+	<div class="description">
+	<p>Class to handle all forum errors and exceptions</p>
+	</div>
+
+	<dl class="tree well">
+		<dd style="padding-left:0px">
+			<a href="class-AbstractModel.html"><span>AbstractModel</span></a>
+			
+			
+			
+		</dd>
+		<dd style="padding-left:30px">
+			<img src="resources/inherit.png" alt="Extended by">
+<b><span>ElkArte\Errors\Errors</span></b>			
+			
+			
+		</dd>
+	</dl>
+
+
+
+
+
+
+
+
+	<div class="alert alert-info">
+		
+		
+		<b>Namespace:</b> <a href="namespace-ElkArte.html">ElkArte</a>\<a href="namespace-ElkArte.Errors.html">Errors</a><br>
+		
+
+				<b>Used by:</b>
+				ElkArte\Errors\Errors::_setup_fatal_ErrorContext() template, fatal_error sub template<br>
+			<b>Located at</b> <a href="source-class-ElkArte.Errors.Errors.html#24-490" title="Go to source code">sources/subs/Errors/Errors.php</a>
+		<br>
+	</div>
+
+
+
+		<div class="panel panel-default">
+			<div class="panel-heading"><h2>Methods summary</h2></div>
+			<table class="summary table table-bordered table-striped methods" id="methods">
+		<tr data-order="__construct" id="___construct">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#___construct">#</a>
+			<code><a href="source-class-ElkArte.Errors.Errors.html#43-53" title="Go to source code">__construct</a>( <span> <var>$db</var> = <span class="php-keyword1">null</span></span> )</code>
+
+			<div class="description short">
+				<p>In case of maintenance of very early errors, the database may not be available,
+this __construct will feed AbstractModel with a value just to stop it
+from trying to initialize the database connection.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>In case of maintenance of very early errors, the database may not be available,
+this __construct will feed AbstractModel with a value just to stop it
+from trying to initialize the database connection.</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$db</var></dt>
+						<dd>Database|null</dd>
+					</dl></div>
+
+
+
+
+					<h4>Overrides</h4>
+					<div class="list"><code><a href="class-AbstractModel.html#___construct">AbstractModel::__construct</a></code></div>
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="terminate" id="_terminate">
+
+			<td class="attributes"><code>
+				 protected 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_terminate">#</a>
+			<code><a href="source-class-ElkArte.Errors.Errors.html#55-63" title="Go to source code">terminate</a>( <span>string|integer <var>$error</var> = <span class="php-quote">''</span></span> )</code>
+
+			<div class="description short">
+				<p>Halts execution, optionally displays an error message</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Halts execution, optionally displays an error message</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$error</var></dt>
+						<dd></dd>
+					</dl></div>
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="addErrorTypes" id="_addErrorTypes">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_addErrorTypes">#</a>
+			<code><a href="source-class-ElkArte.Errors.Errors.html#65-71" title="Go to source code">addErrorTypes</a>( <span>string <var>$errorType</var></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$errorType</var></dt>
+						<dd></dd>
+					</dl></div>
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getErrorTypes" id="_getErrorTypes">
+
+			<td class="attributes"><code>
+				 protected 
+				string[]
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getErrorTypes">#</a>
+			<code><a href="source-class-ElkArte.Errors.Errors.html#73-91" title="Go to source code">getErrorTypes</a>( )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						string[]
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="parseQueryString" id="_parseQueryString">
+
+			<td class="attributes"><code>
+				 private 
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_parseQueryString">#</a>
+			<code><a href="source-class-ElkArte.Errors.Errors.html#93-110" title="Go to source code">parseQueryString</a>( )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						string
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="insertLog" id="_insertLog">
+
+			<td class="attributes"><code>
+				 private 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_insertLog">#</a>
+			<code><a href="source-class-ElkArte.Errors.Errors.html#112-146" title="Go to source code">insertLog</a>( <span>string <var>$query_string</var></span>, <span>string <var>$error_message</var></span>, <span>string|boolean <var>$error_type</var></span>, <span>string <var>$file</var></span>, <span>integer <var>$line</var></span> )</code>
+
+			<div class="description short">
+				<p>Insert an error entry in to the log_errors table</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Insert an error entry in to the log_errors table</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$query_string</var></dt>
+						<dd></dd>
+						<dt><var>$error_message</var></dt>
+						<dd></dd>
+						<dt><var>$error_type</var></dt>
+						<dd></dd>
+						<dt><var>$file</var></dt>
+						<dd></dd>
+						<dt><var>$line</var></dt>
+						<dd></dd>
+					</dl></div>
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="log_error" id="_log_error">
+
+			<td class="attributes"><code>
+				 public 
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_log_error">#</a>
+			<code><a href="source-class-ElkArte.Errors.Errors.html#148-190" title="Go to source code">log_error</a>( <span>string <var>$error_message</var></span>, <span>string|boolean <var>$error_type</var> = <span class="php-quote">'general'</span></span>, <span>string <var>$file</var> = <span class="php-quote">''</span></span>, <span>integer <var>$line</var> = <span class="php-num">00</span></span> )</code>
+
+			<div class="description short">
+				<p>Log an error to the error log if the error logging is enabled.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Log an error to the error log if the error logging is enabled.</p>
+
+<ul>
+<li>filename and line should be <strong>FILE</strong> and <strong>LINE</strong>, respectively.</li>
+</ul>
+
+<p>Example use: - die(Errors::instance()->log_error($msg));</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$error_message</var></dt>
+						<dd></dd>
+						<dt><var>$error_type</var></dt>
+						<dd>= 'general'</dd>
+						<dt><var>$file</var></dt>
+						<dd>= ''</dd>
+						<dt><var>$line</var></dt>
+						<dd>= 0</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						string
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="log_lang_error" id="_log_lang_error">
+
+			<td class="attributes"><code>
+				 public 
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_log_lang_error">#</a>
+			<code><a href="source-class-ElkArte.Errors.Errors.html#192-225" title="Go to source code">log_lang_error</a>( <span>string <var>$error</var></span>, <span>string <var>$error_type</var> = <span class="php-quote">'general'</span></span>, <span>string|mixed[] <var>$sprintf</var> = <span class="php-keyword1">array</span>()</span>, <span>string <var>$file</var> = <span class="php-quote">''</span></span>, <span>integer <var>$line</var> = <span class="php-num">0</span></span> )</code>
+
+			<div class="description short">
+				<p>Similar to log_error, it accepts a language index as the error.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Similar to log_error, it accepts a language index as the error.</p>
+
+<p>What it does:</p>
+
+<ul>
+<li>Takes care of loading the forum default language</li>
+<li>Logs the error (forwarding to log_error)</li>
+</ul>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$error</var></dt>
+						<dd></dd>
+						<dt><var>$error_type</var></dt>
+						<dd>= 'general'</dd>
+						<dt><var>$sprintf</var></dt>
+						<dd>= array()</dd>
+						<dt><var>$file</var></dt>
+						<dd>= ''</dd>
+						<dt><var>$line</var></dt>
+						<dd>= 0</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						string
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="fatal_error" id="_fatal_error">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_fatal_error">#</a>
+			<code><a href="source-class-ElkArte.Errors.Errors.html#227-243" title="Go to source code">fatal_error</a>( <span>string <var>$error</var> = <span class="php-quote">''</span></span>, <span>string|boolean <var>$log</var> = <span class="php-quote">'general'</span></span> )</code>
+
+			<div class="description short">
+				<p>An irrecoverable error.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>An irrecoverable error.</p>
+
+<p>What it does:</p>
+
+<ul>
+<li>This function stops execution and displays an error message.</li>
+<li>It logs the error message if $log is specified.</li>
+</ul>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$error</var></dt>
+						<dd></dd>
+						<dt><var>$log</var></dt>
+						<dd>defaults to 'general' false will skip logging, true will use general</dd>
+					</dl></div>
+
+
+					<h4>Throws</h4>
+					<div class="list">
+						<code><a href="class-Elk_Exception.html">Elk_Exception</a></code>
+					</div>
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="fatal_lang_error" id="_fatal_lang_error">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_fatal_lang_error">#</a>
+			<code><a href="source-class-ElkArte.Errors.Errors.html#245-266" title="Go to source code">fatal_lang_error</a>( <span>string <var>$error</var></span>, <span>string|boolean <var>$log</var> = <span class="php-quote">'general'</span></span>, <span>string[] <var>$sprintf</var> = <span class="php-keyword1">array</span>()</span> )</code>
+
+			<div class="description short">
+				<p>Shows a fatal error with a message stored in the language file.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Shows a fatal error with a message stored in the language file.</p>
+
+<p>What it does:</p>
+
+<ul>
+<li>This function stops execution and displays an error message by key.</li>
+<li>uses the string with the error_message_key key.</li>
+<li>logs the error in the forum's default language while displaying the error
+message in the user's language.</li>
+<li>uses Errors language file and applies the $sprintf information if specified.</li>
+<li>the information is logged if log is specified.</li>
+</ul>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$error</var></dt>
+						<dd></dd>
+						<dt><var>$log</var></dt>
+						<dd>defaults to 'general' false will skip logging, true will use general</dd>
+						<dt><var>$sprintf</var></dt>
+						<dd>defaults to empty array()</dd>
+					</dl></div>
+
+
+					<h4>Throws</h4>
+					<div class="list">
+						<code><a href="class-Elk_Exception.html">Elk_Exception</a></code>
+					</div>
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="_setup_fatal_ErrorContext" id="__setup_fatal_ErrorContext">
+
+			<td class="attributes"><code>
+				final protected 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#__setup_fatal_ErrorContext">#</a>
+			<code><a href="source-class-ElkArte.Errors.Errors.html#268-329" title="Go to source code">_setup_fatal_ErrorContext</a>( <span>string <var>$error_message</var></span>, <span>string <var>$error_code</var></span> )</code>
+
+			<div class="description short">
+				<p>It is called by Errors::fatal_error() and Errors::fatal_lang_error().</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>It is called by Errors::fatal_error() and Errors::fatal_lang_error().</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$error_message</var></dt>
+						<dd></dd>
+						<dt><var>$error_code</var></dt>
+						<dd>string or int code</dd>
+					</dl></div>
+
+
+					<h4>Throws</h4>
+					<div class="list">
+						<code><a href="class-Elk_Exception.html">Elk_Exception</a></code>
+					</div>
+
+					<h4>Uses</h4>
+					<div class="list">
+							<code><a href="class-ElkArte.Errors.Errors.html">ElkArte\Errors\Errors</a></code><br>template, fatal_error sub template<br>
+					</div>
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="display_maintenance_message" id="_display_maintenance_message">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_display_maintenance_message">#</a>
+			<code><a href="source-class-ElkArte.Errors.Errors.html#331-360" title="Go to source code">display_maintenance_message</a>( )</code>
+
+			<div class="description short">
+				<p>Show a message for the (full block) maintenance mode.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Show a message for the (full block) maintenance mode.</p>
+
+<p>What it does:</p>
+
+<ul>
+<li>It shows a complete page independent of language files or themes.</li>
+<li>It is used only if $maintenance = 2 in Settings.php.</li>
+<li>It stops further execution of the script.</li>
+</ul>
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="display_db_error" id="_display_db_error">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_display_db_error">#</a>
+			<code><a href="source-class-ElkArte.Errors.Errors.html#362-419" title="Go to source code">display_db_error</a>( )</code>
+
+			<div class="description short">
+				<p>Show an error message for the connection problems.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Show an error message for the connection problems.</p>
+
+<p>What it does:</p>
+
+<ul>
+<li>It shows a complete page independent of language files or themes.</li>
+<li>It is used only if there's no way to connect to the database.</li>
+<li>It stops further execution of the script.</li>
+</ul>
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="display_loadavg_error" id="_display_loadavg_error">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_display_loadavg_error">#</a>
+			<code><a href="source-class-ElkArte.Errors.Errors.html#421-448" title="Go to source code">display_loadavg_error</a>( )</code>
+
+			<div class="description short">
+				<p>Show an error message for load average blocking problems.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Show an error message for load average blocking problems.</p>
+
+<p>What it does:</p>
+
+<ul>
+<li>It shows a complete page independent of language files or themes.</li>
+<li>It is used only if the load averages are too high to continue execution.</li>
+<li>It stops further execution of the script.</li>
+</ul>
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="_set_fatal_error_headers" id="__set_fatal_error_headers">
+
+			<td class="attributes"><code>
+				 private 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#__set_fatal_error_headers">#</a>
+			<code><a href="source-class-ElkArte.Errors.Errors.html#450-467" title="Go to source code">_set_fatal_error_headers</a>( )</code>
+
+			<div class="description short">
+				<p>Small utility function for fatal error pages, sets the headers.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Small utility function for fatal error pages, sets the headers.</p>
+
+<ul>
+<li>Used by display_db_error(), display_loadavg_error(),
+display_maintenance_message()</li>
+</ul>
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="instance" id="_instance">
+
+			<td class="attributes"><code>
+				 public static
+				<code><a href="class-ElkArte.Errors.Errors.html">ElkArte\Errors\Errors</a></code>
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_instance">#</a>
+			<code><a href="source-class-ElkArte.Errors.Errors.html#469-489" title="Go to source code">instance</a>( )</code>
+
+			<div class="description short">
+				<p>Retrieve the sole instance of this class.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Retrieve the sole instance of this class.</p>
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code><a href="class-ElkArte.Errors.Errors.html">ElkArte\Errors\Errors</a></code>
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+			</table>
+		</div>
+
+
+
+
+
+
+
+
+
+
+
+		<div class="panel panel-default">
+            <div class="panel-heading"><h2>Properties summary</h2></div>
+			<table class="summary table table-bordered table-striped properties" id="properties">
+		<tr data-order="_errors" id="$_errors">
+			<td class="attributes"><code>
+				private static 
+				<code><a href="class-ElkArte.Errors.Errors.html">ElkArte\Errors\Errors</a></code>
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-ElkArte.Errors.Errors.html#29-30" title="Go to source code"><var>$_errors</var></a>
+
+				<div class="description short">
+					<p>Sole private Errors instance</p>
+				</div>
+
+				<div class="description detailed hidden">
+					<p>Sole private Errors instance</p>
+
+				</div>
+			</td>
+			<td class="value">
+				<div>
+					<a href="#$_errors" class="anchor">#</a>
+					<code><span class="php-keyword1">null</span></code>
+				</div>
+			</td>
+		</tr>
+		<tr data-order="errorTypes" id="$errorTypes">
+			<td class="attributes"><code>
+				private  
+				string[]
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-ElkArte.Errors.Errors.html#32-41" title="Go to source code"><var>$errorTypes</var></a>
+
+				<div class="description short">
+					<p>The types of categories we have</p>
+				</div>
+
+				<div class="description detailed hidden">
+					<p>The types of categories we have</p>
+
+				</div>
+			</td>
+			<td class="value">
+				<div>
+					<a href="#$errorTypes" class="anchor">#</a>
+					<code><span class="php-keyword1">array</span>(
+    <span class="php-quote">'general'</span>,
+    <span class="php-quote">'critical'</span>,
+    <span class="php-quote">'database'</span>,
+    <span class="php-quote">'undefined_vars'</span>,
+    <span class="php-quote">'user'</span>,
+    <span class="php-quote">'template'</span>,
+    <span class="php-quote">'debug'</span>,
+)</code>
+				</div>
+			</td>
+		</tr>
+			</table>
+		</div>
+
+		<div class="panel panel-default">
+            <div class="panel-heading"><h3>Properties inherited from <a href="class-AbstractModel.html#properties">AbstractModel</a></h3></div>
+			<p class="elementList">
+				<code><a href="class-AbstractModel.html#$_db"><var>$_db</var></a></code>, 
+				<code><a href="class-AbstractModel.html#$_modSettings"><var>$_modSettings</var></a></code>
+			</p>
+		</div>
+
+
+
+
+
+</div>
+	</div>
+
+	<div id="footer">
+		ElkArte 1.1.1 Documentation API documentation generated by <a href="http://apigen.org">ApiGen</a>
+	</div>
+</div>
+<script src="resources/combined.js"></script>
+<script src="elementlist.js?c21fc2991d4a31f2150942d4d7d65ddc98adf4fb"></script>
+</body>
+</html>

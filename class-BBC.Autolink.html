@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>Class BBC\Autolink | ElkArte 1.1.1 Documentation</title>
+
+	<link rel="stylesheet" href="resources/bootstrap.min.css?973e37a8502921d56bc02bb55321f45b072b6f71">
+	<link rel="stylesheet" href="resources/style.css?70c1d062672daa3f906b72e4f5d03d4bc5c4174d">
+
+</head>
+
+<body>
+	<nav id="navigation" class="navbar navbar-default navbar-fixed-top">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<a href="index.html" class="navbar-brand">ElkArte 1.1.1 Documentation</a>
+			</div>
+			<div class="collapse navbar-collapse">
+
+                <form id="search" class="navbar-form navbar-left" role="search">
+                    <input type="hidden" name="cx" value="">
+                    <input type="hidden" name="ie" value="UTF-8">
+                    <div class="form-group">
+                        <input type="text" name="q" class="search-query form-control" placeholder="Search">
+					</div>
+				</form>
+
+				<ul class="nav navbar-nav">
+					<li>
+						<a href="namespace-BBC.html" title="Summary of BBC"><span>Namespace</span></a>
+					</li>
+					<li class="active">
+<span>Class</span>					</li>
+
+					<li class="divider-vertical"></li>
+
+					<li>
+						<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+					</li>
+
+						<li>
+							<a href="annotation-group-todo.html" title="List of elements with todo annotation">
+								<span>Todo</span>
+							</a>
+						</li>
+						<li>
+							<a href="annotation-group-deprecated.html" title="List of elements with deprecated annotation">
+								<span>Deprecated</span>
+							</a>
+						</li>
+
+
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<div id="left">
+	<div id="menu">
+
+		<div id="groups">
+				<h3>Namespaces</h3>
+			<ul>
+					<li class="active">
+						<a href="namespace-BBC.html">
+							BBC						</a>
+							</li>
+					<li>
+						<a href="namespace-ElkArte.html">
+							ElkArte<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-ElkArte.Errors.html">
+							Errors						</a>
+							</li>
+					<li>
+						<a href="namespace-ElkArte.Search.html">
+							Search<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-ElkArte.Search.API.html">
+							API						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-ElkArte.sources.html">
+							sources<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-ElkArte.sources.modules.html">
+							modules						</a>
+							</li>
+					<li>
+						<a href="namespace-ElkArte.sources.subs.html">
+							subs<span></span>
+						</a>
+							<ul>
+					<li>
+						<a href="namespace-ElkArte.sources.subs.CacheMethod.html">
+							CacheMethod						</a>
+							</li>
+					<li>
+						<a href="namespace-ElkArte.sources.subs.MentionType.html">
+							MentionType						</a>
+							</li>
+					<li>
+						<a href="namespace-ElkArte.sources.subs.ScheduledTask.html">
+							ScheduledTask						</a>
+							</li>
+					<li>
+						<a href="namespace-ElkArte.sources.subs.SessionHandler.html">
+							SessionHandler						</a>
+							</li>
+					<li>
+						<a href="namespace-ElkArte.sources.subs.SettingsFormAdapter.html">
+							SettingsFormAdapter						</a>
+							</li>
+								</ul></li></ul></li></ul></li>
+					<li>
+						<a href="namespace-None.html">
+							None						</a>
+							</li>
+			</ul>
+		</div>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li class="active"><a href="class-BBC.Autolink.html">Autolink</a></li>
+				<li><a href="class-BBC.BBCParser.html">BBCParser</a></li>
+				<li><a href="class-BBC.Codes.html">Codes</a></li>
+				<li><a href="class-BBC.HtmlParser.html">HtmlParser</a></li>
+				<li><a href="class-BBC.ParserWrapper.html">ParserWrapper</a></li>
+				<li><a href="class-BBC.PreparseCode.html">PreparseCode</a></li>
+				<li><a href="class-BBC.SmileyParser.html">SmileyParser</a></li>
+			</ul>
+
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+	<div id="rightInner">
+<div id="content" class="class">
+	<h1>Class Autolink</h1>
+
+
+	<div class="description">
+	<p>Class Autolink</p>
+
+<p>Class to change url and email text to BBC link codes [url] [email]</p>
+	</div>
+
+
+
+
+
+
+
+
+
+	<div class="alert alert-info">
+		
+		
+		<b>Namespace:</b> <a href="namespace-BBC.html">BBC</a><br>
+		<b>Package:</b> BBC<br>
+
+			<b>Located at</b> <a href="source-class-BBC.Autolink.html#19-236" title="Go to source code">sources/subs/BBC/Autolink.php</a>
+		<br>
+	</div>
+
+
+
+		<div class="panel panel-default">
+			<div class="panel-heading"><h2>Methods summary</h2></div>
+			<table class="summary table table-bordered table-striped methods" id="methods">
+		<tr data-order="__construct" id="___construct">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#___construct">#</a>
+			<code><a href="source-class-BBC.Autolink.html#47-60" title="Go to source code">__construct</a>( <span><code><a href="class-BBC.Codes.html">BBC\Codes</a></code> <var>$bbc</var></span> )</code>
+
+			<div class="description short">
+				<p>Autolink constructor.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Autolink constructor.</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$bbc</var></dt>
+						<dd></dd>
+					</dl></div>
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="load" id="_load">
+
+			<td class="attributes"><code>
+				 protected 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_load">#</a>
+			<code><a href="source-class-BBC.Autolink.html#62-108" title="Go to source code">load</a>( )</code>
+
+			<div class="description short">
+				<p>Load the autolink regular expressions to be used in autoLink()</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Load the autolink regular expressions to be used in autoLink()</p>
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="parse" id="_parse">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_parse">#</a>
+			<code><a href="source-class-BBC.Autolink.html#110-130" title="Go to source code">parse</a>( <span>string <var>$data</var></span> )</code>
+
+			<div class="description short">
+				<p>Parse links and emails in the data</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Parse links and emails in the data</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$data</var></dt>
+						<dd></dd>
+					</dl></div>
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="hasLinks" id="_hasLinks">
+
+			<td class="attributes"><code>
+				 public 
+				boolean
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_hasLinks">#</a>
+			<code><a href="source-class-BBC.Autolink.html#132-142" title="Go to source code">hasLinks</a>( <span>string <var>$data</var></span> )</code>
+
+			<div class="description short">
+				<p>Checks if the string has links of any form, http:// www.xxx</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Checks if the string has links of any form, http:// www.xxx</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$data</var></dt>
+						<dd></dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						boolean
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="hasPossibleLink" id="_hasPossibleLink">
+
+			<td class="attributes"><code>
+				 public 
+				boolean
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_hasPossibleLink">#</a>
+			<code><a href="source-class-BBC.Autolink.html#144-152" title="Go to source code">hasPossibleLink</a>( )</code>
+
+			<div class="description short">
+				<p>Return if the message has possible urls to autolink</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Return if the message has possible urls to autolink</p>
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						boolean
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="parseLinks" id="_parseLinks">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_parseLinks">#</a>
+			<code><a href="source-class-BBC.Autolink.html#154-176" title="Go to source code">parseLinks</a>( <span> <var>$data</var></span> )</code>
+
+			<div class="description short">
+				<p>Parse any URLs found in the data</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Parse any URLs found in the data</p>
+
+<ul>
+<li>Have to get rid of the @ problems some things cause... stupid email addresses.</li>
+</ul>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$data</var></dt>
+						<dd></dd>
+					</dl></div>
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="hasEmails" id="_hasEmails">
+
+			<td class="attributes"><code>
+				 public 
+				boolean
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_hasEmails">#</a>
+			<code><a href="source-class-BBC.Autolink.html#178-187" title="Go to source code">hasEmails</a>( <span>string <var>$data</var></span> )</code>
+
+			<div class="description short">
+				<p>Validates if the data contains email address that need to be parsed</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Validates if the data contains email address that need to be parsed</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$data</var></dt>
+						<dd></dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						boolean
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="hasPossibleEmail" id="_hasPossibleEmail">
+
+			<td class="attributes"><code>
+				 public 
+				boolean
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_hasPossibleEmail">#</a>
+			<code><a href="source-class-BBC.Autolink.html#189-197" title="Go to source code">hasPossibleEmail</a>( )</code>
+
+			<div class="description short">
+				<p>Return if the message has possible emails to autolink</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Return if the message has possible emails to autolink</p>
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						boolean
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="parseEmails" id="_parseEmails">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_parseEmails">#</a>
+			<code><a href="source-class-BBC.Autolink.html#199-208" title="Go to source code">parseEmails</a>( <span>string <var>$data</var></span> )</code>
+
+			<div class="description short">
+				<p>Search and replace plain email address with bbc [email][/email]</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Search and replace plain email address with bbc [email][/email]</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$data</var></dt>
+						<dd></dd>
+					</dl></div>
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="setPossibleAutolink" id="_setPossibleAutolink">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_setPossibleAutolink">#</a>
+			<code><a href="source-class-BBC.Autolink.html#210-225" title="Go to source code">setPossibleAutolink</a>( <span>string <var>$message</var></span> )</code>
+
+			<div class="description short">
+				<p>Quickly determine if the supplied message has potential linking code</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Quickly determine if the supplied message has potential linking code</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$message</var></dt>
+						<dd></dd>
+					</dl></div>
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="hasPossible" id="_hasPossible">
+
+			<td class="attributes"><code>
+				 public 
+				boolean
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_hasPossible">#</a>
+			<code><a href="source-class-BBC.Autolink.html#227-235" title="Go to source code">hasPossible</a>( )</code>
+
+			<div class="description short">
+				<p>Return if the message has any possible links (email or url)</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Return if the message has any possible links (email or url)</p>
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						boolean
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+			</table>
+		</div>
+
+
+
+
+
+
+
+
+
+
+
+		<div class="panel panel-default">
+            <div class="panel-heading"><h2>Properties summary</h2></div>
+			<table class="summary table table-bordered table-striped properties" id="properties">
+		<tr data-order="bbc" id="$bbc">
+			<td class="attributes"><code>
+				protected  
+				<code><a href="class-BBC.Codes.html">BBC\Codes</a></code>
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-BBC.Autolink.html#28-29" title="Go to source code"><var>$bbc</var></a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+				</div>
+			</td>
+			<td class="value">
+				<div>
+					<a href="#$bbc" class="anchor">#</a>
+					<code></code>
+				</div>
+			</td>
+		</tr>
+		<tr data-order="url_enabled" id="$url_enabled">
+			<td class="attributes"><code>
+				protected  
+				boolean
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-BBC.Autolink.html#30-31" title="Go to source code"><var>$url_enabled</var></a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+				</div>
+			</td>
+			<td class="value">
+				<div>
+					<a href="#$url_enabled" class="anchor">#</a>
+					<code></code>
+				</div>
+			</td>
+		</tr>
+		<tr data-order="email_enabled" id="$email_enabled">
+			<td class="attributes"><code>
+				protected  
+				boolean
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-BBC.Autolink.html#32-33" title="Go to source code"><var>$email_enabled</var></a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+				</div>
+			</td>
+			<td class="value">
+				<div>
+					<a href="#$email_enabled" class="anchor">#</a>
+					<code></code>
+				</div>
+			</td>
+		</tr>
+		<tr data-order="possible_link" id="$possible_link">
+			<td class="attributes"><code>
+				protected  
+				boolean
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-BBC.Autolink.html#34-35" title="Go to source code"><var>$possible_link</var></a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+				</div>
+			</td>
+			<td class="value">
+				<div>
+					<a href="#$possible_link" class="anchor">#</a>
+					<code></code>
+				</div>
+			</td>
+		</tr>
+		<tr data-order="possible_email" id="$possible_email">
+			<td class="attributes"><code>
+				protected  
+				boolean
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-BBC.Autolink.html#36-37" title="Go to source code"><var>$possible_email</var></a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+				</div>
+			</td>
+			<td class="value">
+				<div>
+					<a href="#$possible_email" class="anchor">#</a>
+					<code></code>
+				</div>
+			</td>
+		</tr>
+		<tr data-order="search" id="$search">
+			<td class="attributes"><code>
+				protected  
+				array
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-BBC.Autolink.html#38-39" title="Go to source code"><var>$search</var></a>
+
+				<div class="description short">
+					<p>of search regex for urls</p>
+				</div>
+
+				<div class="description detailed hidden">
+					<p>of search regex for urls</p>
+
+				</div>
+			</td>
+			<td class="value">
+				<div>
+					<a href="#$search" class="anchor">#</a>
+					<code></code>
+				</div>
+			</td>
+		</tr>
+		<tr data-order="replace" id="$replace">
+			<td class="attributes"><code>
+				protected  
+				array
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-BBC.Autolink.html#40-41" title="Go to source code"><var>$replace</var></a>
+
+				<div class="description short">
+					<p>of bbc url coded links</p>
+				</div>
+
+				<div class="description detailed hidden">
+					<p>of bbc url coded links</p>
+
+				</div>
+			</td>
+			<td class="value">
+				<div>
+					<a href="#$replace" class="anchor">#</a>
+					<code></code>
+				</div>
+			</td>
+		</tr>
+		<tr data-order="email_search" id="$email_search">
+			<td class="attributes"><code>
+				protected  
+				array
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-BBC.Autolink.html#42-43" title="Go to source code"><var>$email_search</var></a>
+
+				<div class="description short">
+					<p>of search regex for email</p>
+				</div>
+
+				<div class="description detailed hidden">
+					<p>of search regex for email</p>
+
+				</div>
+			</td>
+			<td class="value">
+				<div>
+					<a href="#$email_search" class="anchor">#</a>
+					<code></code>
+				</div>
+			</td>
+		</tr>
+		<tr data-order="email_replace" id="$email_replace">
+			<td class="attributes"><code>
+				protected  
+				array
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-BBC.Autolink.html#44-45" title="Go to source code"><var>$email_replace</var></a>
+
+				<div class="description short">
+					<p>of bbc email coded links</p>
+				</div>
+
+				<div class="description detailed hidden">
+					<p>of bbc email coded links</p>
+
+				</div>
+			</td>
+			<td class="value">
+				<div>
+					<a href="#$email_replace" class="anchor">#</a>
+					<code></code>
+				</div>
+			</td>
+		</tr>
+			</table>
+		</div>
+
+
+
+
+
+
+</div>
+	</div>
+
+	<div id="footer">
+		ElkArte 1.1.1 Documentation API documentation generated by <a href="http://apigen.org">ApiGen</a>
+	</div>
+</div>
+<script src="resources/combined.js"></script>
+<script src="elementlist.js?c21fc2991d4a31f2150942d4d7d65ddc98adf4fb"></script>
+</body>
+</html>
